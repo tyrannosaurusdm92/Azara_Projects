@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#11191d">
+<title>Aza’raan • Historical Glyph Atelier</title>
+<link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+<div class="shell">
+<header class="topbar">
+ <div class="brand-emblem" aria-hidden="true">✦</div>
+ <div class="brand-copy"><div class="eyebrow">FIVE HISTORICAL HANDS · ONE SCRIPT</div><h1>Aza’raan <em>Glyph Atelier</em></h1><p>Designed artwork · editable layers · a keyboard built from your glyphs</p></div>
+ <div class="top-actions"><a class="quiet app-link" href="keyboard/keyboard.html">Open starter keyboard ↗</a><button id="newProject" class="quiet">Restore originals</button><button id="importProject" class="quiet">Open project</button><input id="projectFile" type="file" accept=".json,application/json" hidden><button id="saveProject" class="gold">Save project ↓</button><button id="exportAll" class="quiet">Fonts only ↓</button><button id="exportComplete" class="bright">Fonts + keyboard ↓</button></div>
+</header>
+<div class="workspace">
+ <aside class="left-stack">
+  <section class="panel"><div class="panel-title"><span>01 · THE FIVE ERAS</span><span class="tiny" id="eraCount">—</span></div><div id="eraTabs" class="era-tabs"></div><div id="eraDescription" class="era-description"></div></section>
+  <section class="panel glyph-panel"><div class="panel-title"><span>02 · GLYPH REGISTER</span><span id="slotCount" class="tiny">—</span></div>
+   <div class="search-row"><input id="glyphFilter" aria-label="Search glyphs" placeholder="Find letter, IPA, Unicode…"><select id="slotCategory" aria-label="Glyph category"><option value="all">All</option><option value="bases">Bases</option><option value="readings">Readings</option><option value="modifiers">Modifiers</option></select></div><div id="glyphGrid" class="glyph-grid"></div>
+  </section>
+  <section class="panel"><div class="panel-title"><span>03 · DONOR SCRIPTS</span><span class="tiny">tap to choose</span></div>
+   <div class="donor-tabs"><button class="donor-tab active" data-bank="georgian">Georgian</button><button class="donor-tab" data-bank="tengwar">Tengwar</button><button class="donor-tab" data-bank="custom">Custom font</button></div><div id="donorGrid" class="donor-grid"></div>
+   <div class="donor-bottom"><button id="addDonor" class="bright small">Add selected donor as layer</button><input id="donorFontFile" type="file" accept=".ttf,.otf,.woff,.woff2,font/*" hidden><button id="uploadDonor" class="quiet small" hidden>Load custom font</button><input id="customDonorText" type="text" maxlength="3" value="A" aria-label="Glyph character in loaded custom font" title="Type the source font character to borrow" hidden></div><div id="donorCredit" class="small-text"></div>
+  </section>
+ </aside>
+ <main class="center-stack">
+  <section class="panel studio-panel"><div class="studio-heading"><div><div class="eyebrow">CENTRAL WORKSPACE · ADAPTED FROM THE MAP VIEWER</div><h2 id="currentGlyphTitle">Modern · A</h2><div id="currentGlyphMeta" class="glyph-meta">Select a glyph to begin</div></div><div class="view-tools"><button id="undo" title="Undo Ctrl+Z">↶ Undo</button><button id="redo" title="Redo Ctrl+Y">↷ Redo</button><button id="fit" title="Fit canvas">Fit</button></div></div>
+  <div class="tools" id="toolBar"><button class="tool active" data-tool="brush" title="Brush (B)">✎ <span>Brush</span></button><button class="tool" data-tool="eraser" title="Eraser (E)">◫ <span>Eraser</span></button><button class="tool" data-tool="stroke-erase" title="Remove entire stroke layer">⌫ <span>Stroke</span></button><button class="tool" data-tool="smudge" title="Smudge pixels">≈ <span>Smudge</span></button><button class="tool" data-tool="blend" title="Soft blend brush">◒ <span>Blend</span></button><button class="tool" data-tool="pinch" title="Pinch/liquify pixels">⌾ <span>Pinch</span></button><button class="tool" data-tool="hand" title="Move view (Space)">✥ <span>Hand</span></button></div>
+  <div class="canvas-outer" id="viewport"><div id="canvasStage" class="canvas-stage"><canvas id="glyphCanvas" width="512" height="512" aria-label="Editable glyph artwork"></canvas><div class="crosshair v"></div><div class="crosshair h"></div><div class="baseline"></div></div><div class="zoom-chip" id="zoomLabel">100%</div><div class="stage-caption">TRANSPARENT WORKSPACE · POINTER / TOUCH / STYLUS</div></div>
+  <div class="bottom-controls"><label>Size <input id="brushSize" type="range" min="1" max="100" value="18"><output id="brushSizeValue">18</output></label><label>Strength <input id="brushPower" type="range" min="1" max="100" value="82"><output id="brushPowerValue">82%</output></label><label>Ink <input id="brushColor" type="color" value="#080b10"></label><label class="switch"><input id="autoStroke" type="checkbox" checked> New stroke layer</label><label class="switch"><input id="showGuides" type="checkbox" checked> Guides</label></div>
+  <div class="zoom-controls"><button id="zoomOut">−</button><input id="zoomRange" type="range" min="30" max="600" value="100" aria-label="Zoom percent"><button id="zoomIn">+</button><span class="small-text">Wheel or two-finger pinch to zoom · right-drag or Space to pan</span></div>
+  </section>
+  <section class="panel"><div class="panel-title"><span>04 · GLYPH ALCHEMY</span><span class="tiny">nondestructive donor layers</span></div>
+   <div class="alchemy-grid"><div class="field"><label for="otherGlyph">Second glyph / target</label><select id="otherGlyph"></select></div><div class="field"><label for="blendOpacity">Fusion opacity <output id="blendOpacityValue">50%</output></label><input id="blendOpacity" type="range" min="1" max="100" value="50"></div></div>
+   <div class="actions-grid"><button id="fuseGlyph" class="bright">Blend two glyphs</button><button id="swapGlyph">Swap glyphs in place</button><button id="copyGlyph">Duplicate into target</button><button id="mergeLayers">Flatten visible layers</button><button id="previousEra">Copy from later era</button><button id="nextEra">Copy to earlier era</button></div><p class="panel-note">Blending creates a separate, editable layer. Swapping exchanges the artwork while keeping each letter’s identity and Unicode assignment.</p>
+  </section>
+  <section class="panel keyboard-panel"><div class="panel-title"><span>04 · THE LIVING KEYBOARD</span><span class="tiny">same artwork, same mappings</span></div>
+   <p class="panel-note">Type or tap a key to insert its capital Latin Unicode spelling. Hold a drawn key for its sound variants; the sign preview uses the edited glyph layers.</p>
+   <div class="actions-row"><button id="writeUndo">↶ Text undo</button><button id="writeRedo">↷ Text redo</button><button id="copyUnicode">Copy Unicode</button><button id="saveWriting">Save text</button></div>
+   <textarea id="writing" class="writing" spellcheck="false" autocapitalize="characters" aria-label="Aza’raan writing"></textarea>
+   <div class="written-art" id="writtenArt" aria-label="Written glyphs"></div>
+   <div class="panel-title"><span>PHYSICAL AND TOUCH KEYS</span><span class="tiny">hold for readings</span></div><div id="liveKeyboard" class="live-keyboard"></div>
+   <div class="panel-title"><span>REASSIGN A KEY</span><span class="tiny">per era</span></div><div class="keyboard-assign"><select id="keyGlyph" aria-label="Glyph to reassign"></select><input id="keyCapture" readonly placeholder="Press a key" aria-label="Physical key"><button id="assignKey">Assign</button></div><p id="keyStatus" class="panel-note"></p>
+   <div id="keyboardVariants" class="keyboard-variants"></div>
+  </section>
+ </main>
+ <aside class="right-stack">
+  <section class="panel"><div class="panel-title"><span>05 · ACTIVE LAYER</span><button id="addLayer" class="mini">+ Layer</button></div><div class="layers" id="layerList"></div><div class="actions-row"><button id="duplicateLayer">Duplicate</button><button id="deleteLayer" class="warn">Remove</button><button id="clearLayer">Clear</button></div></section>
+  <section class="panel"><div class="panel-title"><span>06 · TRANSFORM</span><span class="tiny">per layer</span></div>
+   <div class="transform-grid"><div class="field"><label>Rotate <output id="rotateValue">0°</output></label><input id="rotate" type="range" min="-180" max="180" value="0"></div><div class="field"><label>Skew X <output id="skewXValue">0°</output></label><input id="skewX" type="range" min="-60" max="60" value="0"></div><div class="field"><label>Skew Y <output id="skewYValue">0°</output></label><input id="skewY" type="range" min="-60" max="60" value="0"></div><div class="field"><label>Scale X <output id="scaleXValue">100%</output></label><input id="scaleX" type="range" min="20" max="250" value="100"></div><div class="field"><label>Scale Y <output id="scaleYValue">100%</output></label><input id="scaleY" type="range" min="20" max="250" value="100"></div><div class="field"><label>Opacity <output id="opacityValue">100%</output></label><input id="opacity" type="range" min="0" max="100" value="100"></div></div>
+   <div class="actions-row"><button id="flipH">↔ Flip H</button><button id="flipV">↕ Flip V</button><button id="resetTransform">Reset</button></div><div class="field offsets"><label>Move X <input id="offsetX" type="number" value="0" step="5"></label><label>Move Y <input id="offsetY" type="number" value="0" step="5"></label></div>
+  </section>
+  <section class="panel"><div class="panel-title"><span>07 · LETTER METADATA</span><span class="tiny">from inventory</span></div><div id="letterDetails" class="letter-details"></div></section>
+  <section class="panel"><div class="panel-title"><span>08 · IMPORT / OUTPUT</span></div><div class="actions-grid export-actions"><button id="importImage">Import PNG/SVG</button><input id="imageFile" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp" hidden><button id="exportPng">Glyph PNG</button><button id="exportSvg">Glyph SVG</button><button id="exportEra">Current era TTF + OTF</button><button id="exportJson">Artwork JSON</button><button id="loadJson">Load artwork JSON</button><input id="artFile" type="file" accept=".json,application/json" hidden></div><p class="panel-note">Font export traces the edited outlines into TrueType and OpenType/CFF. The full export includes an offline keyboard programmed with the same glyphs, Unicode readings and physical key layout.</p></section>
+ </aside>
+</div>
+<div class="status-line"><span id="status">Ready. Choose a historical glyph or donor shape.</span><span id="autoSaveLabel">Automatic local backup enabled</span></div>
+</div>
+<script src="js/inventory-data.js"></script>
+<script src="js/design-core.js"></script>
+<script src="js/starter-data.js"></script>
+<script src="js/donor-data.js"></script>
+<script src="js/zip.js"></script>
+<script src="js/font-export.js"></script>
+<script src="js/keyboard-template.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/keyboard.js"></script>
+</body>
+</html>
