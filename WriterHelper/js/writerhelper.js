@@ -115,7 +115,7 @@
   let w,d;
   try{w=frame.contentWindow;d=frame.contentDocument}catch{}
   if(!w||!d){status('Same-origin local server required');return}
-  if(!attached){
+  if(true){
    w.addEventListener('savanski:key',event=>{
     const x=event.detail;
     if(x?.kind==='text')insert(x.value);

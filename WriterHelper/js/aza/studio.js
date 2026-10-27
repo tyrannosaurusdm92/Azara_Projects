@@ -16,7 +16,7 @@ function markAllowed(marks,id){
 
 const keyList=Array.from(C.keyOrder);
 let era='Modern',tokens=[],cursor=0,selected=-1,paletteLetter='T',draft=-1,activeVariant='T';
-const storage='azaaraan_studio_merged_20261027';
+const storage='azaaraan_studio_merged_20261027'+(window.frameElement?.id==='wh-aza-book-frame'?':book':':language');
 function save(){try{localStorage.setItem(storage,JSON.stringify({era,tokens,cursor}))}catch{}}
 function setStatus(s){$('status').textContent=s}
 function fontName(){return 'Az'+era}
