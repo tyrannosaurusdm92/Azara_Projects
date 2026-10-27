@@ -1,0 +1,17 @@
+.launch-controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.launch-controls button{flex:0 0 auto}
+#sad-save-offline{width:100%;margin-top:10px}
+.savanski-native-host body{overflow:hidden;background:#050d18}
+.savanski-native-host .site-header,.savanski-native-host .app-main,
+.savanski-native-host .site-footer,.savanski-native-host .install-overlay{display:none!important}
+.savanski-native-host .sk-keyboard{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;border-radius:0!important}
+.savanski-native-host .sk-resize-handle{display:none!important}
+.savanski-native-host .sk-drag{cursor:move}
+.savanski-native-host .sk-design-panel{max-height:calc(100dvh - 20px)}
+.sk-half-draggers{display:none;gap:8px;margin:2px 0 7px}
+.sk-keyboard.is-split .sk-half-draggers{display:flex}
+.sk-half-drag{flex:1;min-height:28px;touch-action:none;background:#0a3047;color:#fff;border:1px dashed #00ffff;border-radius:7px;font-size:12px}
+.sk-keyboard.is-split .sk-row-half:first-child{transform:translate(var(--sk-left-x,0),var(--sk-left-y,0)) scale(var(--sk-left-scale,1));transform-origin:right center}
+.sk-keyboard.is-split .sk-row-half:last-child{transform:translate(var(--sk-right-x,0),var(--sk-right-y,0)) scale(var(--sk-right-scale,1));transform-origin:left center}
+.sk-keyboard.is-split .sk-keyboard-body{overflow:auto}
+@media(prefers-reduced-motion:reduce){.sad-mapper *, .sad-actions *{transition:none!important}}

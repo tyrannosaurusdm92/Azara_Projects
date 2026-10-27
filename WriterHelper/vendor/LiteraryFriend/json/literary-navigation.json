@@ -1,0 +1,96 @@
+{
+  "primary": [
+    {
+      "id": "projects",
+      "label": "Projects",
+      "projectRequired": false
+    },
+    {
+      "id": "dashboard",
+      "label": "Dashboard",
+      "projectRequired": true
+    },
+    {
+      "id": "manuscript",
+      "label": "Manuscript",
+      "projectRequired": true
+    },
+    {
+      "id": "outline",
+      "label": "Outline",
+      "projectRequired": true
+    },
+    {
+      "id": "characters",
+      "label": "Characters",
+      "projectRequired": true
+    },
+    {
+      "id": "world",
+      "label": "World",
+      "projectRequired": true
+    },
+    {
+      "id": "timeline",
+      "label": "Timeline",
+      "projectRequired": true
+    },
+    {
+      "id": "languages",
+      "label": "Languages",
+      "projectRequired": true
+    },
+    {
+      "id": "continuity",
+      "label": "Continuity",
+      "projectRequired": true
+    },
+    {
+      "id": "editor",
+      "label": "Editor",
+      "projectRequired": true
+    },
+    {
+      "id": "organizer",
+      "label": "Organizer",
+      "projectRequired": true
+    },
+    {
+      "id": "imports",
+      "label": "Imports",
+      "projectRequired": true
+    },
+    {
+      "id": "art-studio",
+      "label": "Art Studio",
+      "projectRequired": true
+    },
+    {
+      "id": "book-builder",
+      "label": "Book Builder",
+      "projectRequired": true
+    },
+    {
+      "id": "search",
+      "label": "Search",
+      "projectRequired": true
+    },
+    {
+      "id": "publish",
+      "label": "Publish",
+      "projectRequired": true
+    },
+    {
+      "id": "settings",
+      "label": "Settings",
+      "projectRequired": false
+    }
+  ],
+  "authentication": [
+    "login",
+    "register",
+    "recovery",
+    "recovery-code",
+    "two-factor"
+  ]
+}

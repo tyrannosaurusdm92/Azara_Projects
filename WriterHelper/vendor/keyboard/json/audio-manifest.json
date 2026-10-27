@@ -1,0 +1,4547 @@
+{
+  "version": 1,
+  "format": "wav",
+  "sampleRate": 32000,
+  "packs": [
+    {
+      "id": "iphone",
+      "label": "iPhone Taps",
+      "original": "assets/audio/iphone/iphone.mp3",
+      "keyMap": {
+        "Escape": 0,
+        "F1": 10,
+        "F2": 41,
+        "F3": 3,
+        "F4": 18,
+        "F5": 19,
+        "F6": 32,
+        "F7": 25,
+        "F8": 49,
+        "F9": 23,
+        "F10": 38,
+        "F11": 16,
+        "F12": 4,
+        "F13": 45,
+        "F14": 14,
+        "F15": 54,
+        "F16": 17,
+        "F17": 34,
+        "F18": 50,
+        "F19": 35,
+        "F20": 8,
+        "F21": 9,
+        "F22": 43,
+        "F23": 52,
+        "F24": 1,
+        "PrintScreen": 40,
+        "ScrollLock": 48,
+        "Pause": 51,
+        "Backquote": 37,
+        "Digit1": 53,
+        "Digit2": 2,
+        "Digit3": 36,
+        "Digit4": 21,
+        "Digit5": 24,
+        "Digit6": 29,
+        "Digit7": 42,
+        "Digit8": 13,
+        "Digit9": 31,
+        "Digit0": 5,
+        "Minus": 6,
+        "Equal": 27,
+        "Backspace": 22,
+        "Tab": 7,
+        "KeyQ": 26,
+        "KeyW": 33,
+        "KeyE": 47,
+        "KeyR": 11,
+        "KeyT": 44,
+        "KeyY": 28,
+        "KeyU": 30,
+        "KeyI": 39,
+        "KeyO": 20,
+        "KeyP": 15,
+        "BracketLeft": 46,
+        "BracketRight": 12,
+        "Backslash": 0,
+        "CapsLock": 10,
+        "KeyA": 41,
+        "KeyS": 3,
+        "KeyD": 18,
+        "KeyF": 19,
+        "KeyG": 32,
+        "KeyH": 25,
+        "KeyJ": 49,
+        "KeyK": 23,
+        "KeyL": 38,
+        "Semicolon": 16,
+        "Quote": 4,
+        "Enter": 45,
+        "ShiftLeft": 14,
+        "KeyZ": 54,
+        "KeyX": 17,
+        "KeyC": 34,
+        "KeyV": 50,
+        "KeyB": 35,
+        "KeyN": 8,
+        "KeyM": 9,
+        "Comma": 43,
+        "Period": 52,
+        "Slash": 1,
+        "ShiftRight": 40,
+        "ControlLeft": 48,
+        "MetaLeft": 51,
+        "AltLeft": 37,
+        "Space": 53,
+        "AltRight": 2,
+        "MetaRight": 36,
+        "ContextMenu": 21,
+        "ControlRight": 24,
+        "Insert": 29,
+        "Home": 42,
+        "PageUp": 13,
+        "Delete": 31,
+        "End": 5,
+        "PageDown": 6,
+        "ArrowUp": 27,
+        "ArrowLeft": 22,
+        "ArrowDown": 7,
+        "ArrowRight": 26,
+        "NumLock": 33,
+        "NumpadDivide": 47,
+        "NumpadMultiply": 11,
+        "NumpadSubtract": 44,
+        "NumpadAdd": 28,
+        "NumpadEnter": 30,
+        "NumpadDecimal": 39,
+        "NumpadEqual": 20,
+        "NumpadComma": 15,
+        "Numpad0": 46,
+        "Numpad1": 12,
+        "Numpad2": 0,
+        "Numpad3": 10,
+        "Numpad4": 41,
+        "Numpad5": 3,
+        "Numpad6": 18,
+        "Numpad7": 19,
+        "Numpad8": 32,
+        "Numpad9": 25,
+        "IntlBackslash": 49,
+        "IntlRo": 23,
+        "IntlYen": 38,
+        "Convert": 16,
+        "NonConvert": 4,
+        "KanaMode": 45,
+        "Lang1": 14,
+        "Lang2": 54
+      },
+      "clips": [
+        {
+          "file": "assets/audio/iphone/key-001.wav",
+          "durationMs": 224,
+          "startMs": 670
+        },
+        {
+          "file": "assets/audio/iphone/key-002.wav",
+          "durationMs": 224,
+          "startMs": 970
+        },
+        {
+          "file": "assets/audio/iphone/key-003.wav",
+          "durationMs": 189,
+          "startMs": 1390
+        },
+        {
+          "file": "assets/audio/iphone/key-004.wav",
+          "durationMs": 224,
+          "startMs": 1575
+        },
+        {
+          "file": "assets/audio/iphone/key-005.wav",
+          "durationMs": 224,
+          "startMs": 2130
+        },
+        {
+          "file": "assets/audio/iphone/key-006.wav",
+          "durationMs": 224,
+          "startMs": 2665
+        },
+        {
+          "file": "assets/audio/iphone/key-007.wav",
+          "durationMs": 224,
+          "startMs": 3060
+        },
+        {
+          "file": "assets/audio/iphone/key-008.wav",
+          "durationMs": 189,
+          "startMs": 3480
+        },
+        {
+          "file": "assets/audio/iphone/key-009.wav",
+          "durationMs": 224,
+          "startMs": 3665
+        },
+        {
+          "file": "assets/audio/iphone/key-010.wav",
+          "durationMs": 224,
+          "startMs": 4220
+        },
+        {
+          "file": "assets/audio/iphone/key-011.wav",
+          "durationMs": 224,
+          "startMs": 4525
+        },
+        {
+          "file": "assets/audio/iphone/key-012.wav",
+          "durationMs": 224,
+          "startMs": 4895
+        },
+        {
+          "file": "assets/audio/iphone/key-013.wav",
+          "durationMs": 224,
+          "startMs": 5195
+        },
+        {
+          "file": "assets/audio/iphone/key-014.wav",
+          "durationMs": 224,
+          "startMs": 5590
+        },
+        {
+          "file": "assets/audio/iphone/key-015.wav",
+          "durationMs": 224,
+          "startMs": 6055
+        },
+        {
+          "file": "assets/audio/iphone/key-016.wav",
+          "durationMs": 224,
+          "startMs": 6360
+        },
+        {
+          "file": "assets/audio/iphone/key-017.wav",
+          "durationMs": 224,
+          "startMs": 6635
+        },
+        {
+          "file": "assets/audio/iphone/key-018.wav",
+          "durationMs": 224,
+          "startMs": 6985
+        },
+        {
+          "file": "assets/audio/iphone/key-019.wav",
+          "durationMs": 169,
+          "startMs": 7355
+        },
+        {
+          "file": "assets/audio/iphone/key-020.wav",
+          "durationMs": 224,
+          "startMs": 7520
+        },
+        {
+          "file": "assets/audio/iphone/key-021.wav",
+          "durationMs": 224,
+          "startMs": 7985
+        },
+        {
+          "file": "assets/audio/iphone/key-022.wav",
+          "durationMs": 224,
+          "startMs": 8980
+        },
+        {
+          "file": "assets/audio/iphone/key-023.wav",
+          "durationMs": 214,
+          "startMs": 9285
+        },
+        {
+          "file": "assets/audio/iphone/key-024.wav",
+          "durationMs": 224,
+          "startMs": 9495
+        },
+        {
+          "file": "assets/audio/iphone/key-025.wav",
+          "durationMs": 224,
+          "startMs": 9795
+        },
+        {
+          "file": "assets/audio/iphone/key-026.wav",
+          "durationMs": 144,
+          "startMs": 10050
+        },
+        {
+          "file": "assets/audio/iphone/key-027.wav",
+          "durationMs": 224,
+          "startMs": 10190
+        },
+        {
+          "file": "assets/audio/iphone/key-028.wav",
+          "durationMs": 224,
+          "startMs": 10585
+        },
+        {
+          "file": "assets/audio/iphone/key-029.wav",
+          "durationMs": 224,
+          "startMs": 11095
+        },
+        {
+          "file": "assets/audio/iphone/key-030.wav",
+          "durationMs": 224,
+          "startMs": 11395
+        },
+        {
+          "file": "assets/audio/iphone/key-031.wav",
+          "durationMs": 224,
+          "startMs": 11675
+        },
+        {
+          "file": "assets/audio/iphone/key-032.wav",
+          "durationMs": 169,
+          "startMs": 12000
+        },
+        {
+          "file": "assets/audio/iphone/key-033.wav",
+          "durationMs": 224,
+          "startMs": 12165
+        },
+        {
+          "file": "assets/audio/iphone/key-034.wav",
+          "durationMs": 224,
+          "startMs": 13670
+        },
+        {
+          "file": "assets/audio/iphone/key-035.wav",
+          "durationMs": 144,
+          "startMs": 13950
+        },
+        {
+          "file": "assets/audio/iphone/key-036.wav",
+          "durationMs": 224,
+          "startMs": 14090
+        },
+        {
+          "file": "assets/audio/iphone/key-037.wav",
+          "durationMs": 169,
+          "startMs": 14345
+        },
+        {
+          "file": "assets/audio/iphone/key-038.wav",
+          "durationMs": 139,
+          "startMs": 14510
+        },
+        {
+          "file": "assets/audio/iphone/key-039.wav",
+          "durationMs": 224,
+          "startMs": 14645
+        },
+        {
+          "file": "assets/audio/iphone/key-040.wav",
+          "durationMs": 224,
+          "startMs": 15365
+        },
+        {
+          "file": "assets/audio/iphone/key-041.wav",
+          "durationMs": 224,
+          "startMs": 15760
+        },
+        {
+          "file": "assets/audio/iphone/key-042.wav",
+          "durationMs": 224,
+          "startMs": 16205
+        },
+        {
+          "file": "assets/audio/iphone/key-043.wav",
+          "durationMs": 224,
+          "startMs": 16665
+        },
+        {
+          "file": "assets/audio/iphone/key-044.wav",
+          "durationMs": 224,
+          "startMs": 17015
+        },
+        {
+          "file": "assets/audio/iphone/key-045.wav",
+          "durationMs": 224,
+          "startMs": 17410
+        },
+        {
+          "file": "assets/audio/iphone/key-046.wav",
+          "durationMs": 224,
+          "startMs": 17760
+        },
+        {
+          "file": "assets/audio/iphone/key-047.wav",
+          "durationMs": 224,
+          "startMs": 18105
+        },
+        {
+          "file": "assets/audio/iphone/key-048.wav",
+          "durationMs": 224,
+          "startMs": 18430
+        },
+        {
+          "file": "assets/audio/iphone/key-049.wav",
+          "durationMs": 224,
+          "startMs": 19150
+        },
+        {
+          "file": "assets/audio/iphone/key-050.wav",
+          "durationMs": 224,
+          "startMs": 19475
+        },
+        {
+          "file": "assets/audio/iphone/key-051.wav",
+          "durationMs": 224,
+          "startMs": 19940
+        },
+        {
+          "file": "assets/audio/iphone/key-052.wav",
+          "durationMs": 144,
+          "startMs": 20335
+        },
+        {
+          "file": "assets/audio/iphone/key-053.wav",
+          "durationMs": 224,
+          "startMs": 20475
+        },
+        {
+          "file": "assets/audio/iphone/key-054.wav",
+          "durationMs": 224,
+          "startMs": 21220
+        },
+        {
+          "file": "assets/audio/iphone/key-055.wav",
+          "durationMs": 224,
+          "startMs": 21685
+        }
+      ]
+    },
+    {
+      "id": "classic",
+      "label": "Classic Keyboard",
+      "original": "assets/audio/classic/classic.mp3",
+      "keyMap": {
+        "Escape": 31,
+        "F1": 5,
+        "F2": 73,
+        "F3": 9,
+        "F4": 41,
+        "F5": 119,
+        "F6": 59,
+        "F7": 8,
+        "F8": 55,
+        "F9": 56,
+        "F10": 84,
+        "F11": 33,
+        "F12": 110,
+        "F13": 3,
+        "F14": 62,
+        "F15": 12,
+        "F16": 14,
+        "F17": 53,
+        "F18": 78,
+        "F19": 63,
+        "F20": 60,
+        "F21": 25,
+        "F22": 77,
+        "F23": 21,
+        "F24": 27,
+        "PrintScreen": 96,
+        "ScrollLock": 15,
+        "Pause": 117,
+        "Backquote": 101,
+        "Digit1": 48,
+        "Digit2": 70,
+        "Digit3": 68,
+        "Digit4": 30,
+        "Digit5": 90,
+        "Digit6": 38,
+        "Digit7": 39,
+        "Digit8": 0,
+        "Digit9": 91,
+        "Digit0": 45,
+        "Minus": 20,
+        "Equal": 11,
+        "Backspace": 97,
+        "Tab": 87,
+        "KeyQ": 120,
+        "KeyW": 121,
+        "KeyE": 81,
+        "KeyR": 22,
+        "KeyT": 105,
+        "KeyY": 54,
+        "KeyU": 51,
+        "KeyI": 107,
+        "KeyO": 112,
+        "KeyP": 109,
+        "BracketLeft": 89,
+        "BracketRight": 74,
+        "Backslash": 28,
+        "CapsLock": 19,
+        "KeyA": 94,
+        "KeyS": 4,
+        "KeyD": 86,
+        "KeyF": 34,
+        "KeyG": 58,
+        "KeyH": 35,
+        "KeyJ": 99,
+        "KeyK": 71,
+        "KeyL": 102,
+        "Semicolon": 44,
+        "Quote": 108,
+        "Enter": 80,
+        "ShiftLeft": 7,
+        "KeyZ": 85,
+        "KeyX": 93,
+        "KeyC": 2,
+        "KeyV": 114,
+        "KeyB": 32,
+        "KeyN": 82,
+        "KeyM": 47,
+        "Comma": 61,
+        "Period": 64,
+        "Slash": 106,
+        "ShiftRight": 88,
+        "ControlLeft": 18,
+        "MetaLeft": 46,
+        "AltLeft": 23,
+        "Space": 83,
+        "AltRight": 42,
+        "MetaRight": 1,
+        "ContextMenu": 50,
+        "ControlRight": 52,
+        "Insert": 49,
+        "Home": 43,
+        "PageUp": 104,
+        "Delete": 98,
+        "End": 57,
+        "PageDown": 113,
+        "ArrowUp": 36,
+        "ArrowLeft": 26,
+        "ArrowDown": 75,
+        "ArrowRight": 66,
+        "NumLock": 79,
+        "NumpadDivide": 115,
+        "NumpadMultiply": 29,
+        "NumpadSubtract": 100,
+        "NumpadAdd": 13,
+        "NumpadEnter": 116,
+        "NumpadDecimal": 40,
+        "NumpadEqual": 37,
+        "NumpadComma": 118,
+        "Numpad0": 6,
+        "Numpad1": 16,
+        "Numpad2": 69,
+        "Numpad3": 76,
+        "Numpad4": 72,
+        "Numpad5": 10,
+        "Numpad6": 95,
+        "Numpad7": 103,
+        "Numpad8": 24,
+        "Numpad9": 67,
+        "IntlBackslash": 65,
+        "IntlRo": 111,
+        "IntlYen": 17,
+        "Convert": 92,
+        "NonConvert": 31,
+        "KanaMode": 5,
+        "Lang1": 73,
+        "Lang2": 9
+      },
+      "clips": [
+        {
+          "file": "assets/audio/classic/key-001.wav",
+          "durationMs": 154,
+          "startMs": 120
+        },
+        {
+          "file": "assets/audio/classic/key-002.wav",
+          "durationMs": 84,
+          "startMs": 270
+        },
+        {
+          "file": "assets/audio/classic/key-003.wav",
+          "durationMs": 84,
+          "startMs": 350
+        },
+        {
+          "file": "assets/audio/classic/key-004.wav",
+          "durationMs": 179,
+          "startMs": 430
+        },
+        {
+          "file": "assets/audio/classic/key-005.wav",
+          "durationMs": 134,
+          "startMs": 605
+        },
+        {
+          "file": "assets/audio/classic/key-006.wav",
+          "durationMs": 79,
+          "startMs": 735
+        },
+        {
+          "file": "assets/audio/classic/key-007.wav",
+          "durationMs": 199,
+          "startMs": 810
+        },
+        {
+          "file": "assets/audio/classic/key-008.wav",
+          "durationMs": 134,
+          "startMs": 1005
+        },
+        {
+          "file": "assets/audio/classic/key-009.wav",
+          "durationMs": 129,
+          "startMs": 1135
+        },
+        {
+          "file": "assets/audio/classic/key-010.wav",
+          "durationMs": 109,
+          "startMs": 1260
+        },
+        {
+          "file": "assets/audio/classic/key-011.wav",
+          "durationMs": 79,
+          "startMs": 1365
+        },
+        {
+          "file": "assets/audio/classic/key-012.wav",
+          "durationMs": 94,
+          "startMs": 1440
+        },
+        {
+          "file": "assets/audio/classic/key-013.wav",
+          "durationMs": 104,
+          "startMs": 1530
+        },
+        {
+          "file": "assets/audio/classic/key-014.wav",
+          "durationMs": 194,
+          "startMs": 1630
+        },
+        {
+          "file": "assets/audio/classic/key-015.wav",
+          "durationMs": 139,
+          "startMs": 1820
+        },
+        {
+          "file": "assets/audio/classic/key-016.wav",
+          "durationMs": 109,
+          "startMs": 1955
+        },
+        {
+          "file": "assets/audio/classic/key-017.wav",
+          "durationMs": 174,
+          "startMs": 2060
+        },
+        {
+          "file": "assets/audio/classic/key-018.wav",
+          "durationMs": 209,
+          "startMs": 2230
+        },
+        {
+          "file": "assets/audio/classic/key-019.wav",
+          "durationMs": 119,
+          "startMs": 2435
+        },
+        {
+          "file": "assets/audio/classic/key-020.wav",
+          "durationMs": 154,
+          "startMs": 2550
+        },
+        {
+          "file": "assets/audio/classic/key-021.wav",
+          "durationMs": 84,
+          "startMs": 2700
+        },
+        {
+          "file": "assets/audio/classic/key-022.wav",
+          "durationMs": 99,
+          "startMs": 2780
+        },
+        {
+          "file": "assets/audio/classic/key-023.wav",
+          "durationMs": 109,
+          "startMs": 2875
+        },
+        {
+          "file": "assets/audio/classic/key-024.wav",
+          "durationMs": 144,
+          "startMs": 2980
+        },
+        {
+          "file": "assets/audio/classic/key-025.wav",
+          "durationMs": 159,
+          "startMs": 3120
+        },
+        {
+          "file": "assets/audio/classic/key-026.wav",
+          "durationMs": 84,
+          "startMs": 3275
+        },
+        {
+          "file": "assets/audio/classic/key-027.wav",
+          "durationMs": 184,
+          "startMs": 3355
+        },
+        {
+          "file": "assets/audio/classic/key-028.wav",
+          "durationMs": 99,
+          "startMs": 3535
+        },
+        {
+          "file": "assets/audio/classic/key-029.wav",
+          "durationMs": 94,
+          "startMs": 3630
+        },
+        {
+          "file": "assets/audio/classic/key-030.wav",
+          "durationMs": 119,
+          "startMs": 3720
+        },
+        {
+          "file": "assets/audio/classic/key-031.wav",
+          "durationMs": 79,
+          "startMs": 3835
+        },
+        {
+          "file": "assets/audio/classic/key-032.wav",
+          "durationMs": 219,
+          "startMs": 3910
+        },
+        {
+          "file": "assets/audio/classic/key-033.wav",
+          "durationMs": 94,
+          "startMs": 4125
+        },
+        {
+          "file": "assets/audio/classic/key-034.wav",
+          "durationMs": 84,
+          "startMs": 4215
+        },
+        {
+          "file": "assets/audio/classic/key-035.wav",
+          "durationMs": 139,
+          "startMs": 4295
+        },
+        {
+          "file": "assets/audio/classic/key-036.wav",
+          "durationMs": 119,
+          "startMs": 4430
+        },
+        {
+          "file": "assets/audio/classic/key-037.wav",
+          "durationMs": 174,
+          "startMs": 4545
+        },
+        {
+          "file": "assets/audio/classic/key-038.wav",
+          "durationMs": 149,
+          "startMs": 4715
+        },
+        {
+          "file": "assets/audio/classic/key-039.wav",
+          "durationMs": 194,
+          "startMs": 4860
+        },
+        {
+          "file": "assets/audio/classic/key-040.wav",
+          "durationMs": 109,
+          "startMs": 5050
+        },
+        {
+          "file": "assets/audio/classic/key-041.wav",
+          "durationMs": 224,
+          "startMs": 5155
+        },
+        {
+          "file": "assets/audio/classic/key-042.wav",
+          "durationMs": 189,
+          "startMs": 5380
+        },
+        {
+          "file": "assets/audio/classic/key-043.wav",
+          "durationMs": 104,
+          "startMs": 5565
+        },
+        {
+          "file": "assets/audio/classic/key-044.wav",
+          "durationMs": 84,
+          "startMs": 5665
+        },
+        {
+          "file": "assets/audio/classic/key-045.wav",
+          "durationMs": 174,
+          "startMs": 5745
+        },
+        {
+          "file": "assets/audio/classic/key-046.wav",
+          "durationMs": 114,
+          "startMs": 5915
+        },
+        {
+          "file": "assets/audio/classic/key-047.wav",
+          "durationMs": 84,
+          "startMs": 6025
+        },
+        {
+          "file": "assets/audio/classic/key-048.wav",
+          "durationMs": 114,
+          "startMs": 6105
+        },
+        {
+          "file": "assets/audio/classic/key-049.wav",
+          "durationMs": 179,
+          "startMs": 6215
+        },
+        {
+          "file": "assets/audio/classic/key-050.wav",
+          "durationMs": 119,
+          "startMs": 6390
+        },
+        {
+          "file": "assets/audio/classic/key-051.wav",
+          "durationMs": 104,
+          "startMs": 6505
+        },
+        {
+          "file": "assets/audio/classic/key-052.wav",
+          "durationMs": 139,
+          "startMs": 6605
+        },
+        {
+          "file": "assets/audio/classic/key-053.wav",
+          "durationMs": 164,
+          "startMs": 6740
+        },
+        {
+          "file": "assets/audio/classic/key-054.wav",
+          "durationMs": 139,
+          "startMs": 6900
+        },
+        {
+          "file": "assets/audio/classic/key-055.wav",
+          "durationMs": 84,
+          "startMs": 7035
+        },
+        {
+          "file": "assets/audio/classic/key-056.wav",
+          "durationMs": 184,
+          "startMs": 7115
+        },
+        {
+          "file": "assets/audio/classic/key-057.wav",
+          "durationMs": 189,
+          "startMs": 7295
+        },
+        {
+          "file": "assets/audio/classic/key-058.wav",
+          "durationMs": 119,
+          "startMs": 7480
+        },
+        {
+          "file": "assets/audio/classic/key-059.wav",
+          "durationMs": 104,
+          "startMs": 7595
+        },
+        {
+          "file": "assets/audio/classic/key-060.wav",
+          "durationMs": 209,
+          "startMs": 7695
+        },
+        {
+          "file": "assets/audio/classic/key-061.wav",
+          "durationMs": 149,
+          "startMs": 7900
+        },
+        {
+          "file": "assets/audio/classic/key-062.wav",
+          "durationMs": 159,
+          "startMs": 8045
+        },
+        {
+          "file": "assets/audio/classic/key-063.wav",
+          "durationMs": 129,
+          "startMs": 8200
+        },
+        {
+          "file": "assets/audio/classic/key-064.wav",
+          "durationMs": 89,
+          "startMs": 8325
+        },
+        {
+          "file": "assets/audio/classic/key-065.wav",
+          "durationMs": 129,
+          "startMs": 8410
+        },
+        {
+          "file": "assets/audio/classic/key-066.wav",
+          "durationMs": 154,
+          "startMs": 8535
+        },
+        {
+          "file": "assets/audio/classic/key-067.wav",
+          "durationMs": 209,
+          "startMs": 8685
+        },
+        {
+          "file": "assets/audio/classic/key-068.wav",
+          "durationMs": 94,
+          "startMs": 8890
+        },
+        {
+          "file": "assets/audio/classic/key-069.wav",
+          "durationMs": 79,
+          "startMs": 8980
+        },
+        {
+          "file": "assets/audio/classic/key-070.wav",
+          "durationMs": 124,
+          "startMs": 9055
+        },
+        {
+          "file": "assets/audio/classic/key-071.wav",
+          "durationMs": 79,
+          "startMs": 9175
+        },
+        {
+          "file": "assets/audio/classic/key-072.wav",
+          "durationMs": 84,
+          "startMs": 9250
+        },
+        {
+          "file": "assets/audio/classic/key-073.wav",
+          "durationMs": 79,
+          "startMs": 9330
+        },
+        {
+          "file": "assets/audio/classic/key-074.wav",
+          "durationMs": 164,
+          "startMs": 9405
+        },
+        {
+          "file": "assets/audio/classic/key-075.wav",
+          "durationMs": 144,
+          "startMs": 9565
+        },
+        {
+          "file": "assets/audio/classic/key-076.wav",
+          "durationMs": 149,
+          "startMs": 9705
+        },
+        {
+          "file": "assets/audio/classic/key-077.wav",
+          "durationMs": 129,
+          "startMs": 9850
+        },
+        {
+          "file": "assets/audio/classic/key-078.wav",
+          "durationMs": 89,
+          "startMs": 9975
+        },
+        {
+          "file": "assets/audio/classic/key-079.wav",
+          "durationMs": 134,
+          "startMs": 10060
+        },
+        {
+          "file": "assets/audio/classic/key-080.wav",
+          "durationMs": 159,
+          "startMs": 10190
+        },
+        {
+          "file": "assets/audio/classic/key-081.wav",
+          "durationMs": 144,
+          "startMs": 10345
+        },
+        {
+          "file": "assets/audio/classic/key-082.wav",
+          "durationMs": 174,
+          "startMs": 10485
+        },
+        {
+          "file": "assets/audio/classic/key-083.wav",
+          "durationMs": 139,
+          "startMs": 10655
+        },
+        {
+          "file": "assets/audio/classic/key-084.wav",
+          "durationMs": 119,
+          "startMs": 10790
+        },
+        {
+          "file": "assets/audio/classic/key-085.wav",
+          "durationMs": 164,
+          "startMs": 10905
+        },
+        {
+          "file": "assets/audio/classic/key-086.wav",
+          "durationMs": 194,
+          "startMs": 11065
+        },
+        {
+          "file": "assets/audio/classic/key-087.wav",
+          "durationMs": 149,
+          "startMs": 11255
+        },
+        {
+          "file": "assets/audio/classic/key-088.wav",
+          "durationMs": 174,
+          "startMs": 11400
+        },
+        {
+          "file": "assets/audio/classic/key-089.wav",
+          "durationMs": 79,
+          "startMs": 11570
+        },
+        {
+          "file": "assets/audio/classic/key-090.wav",
+          "durationMs": 89,
+          "startMs": 11645
+        },
+        {
+          "file": "assets/audio/classic/key-091.wav",
+          "durationMs": 84,
+          "startMs": 11730
+        },
+        {
+          "file": "assets/audio/classic/key-092.wav",
+          "durationMs": 169,
+          "startMs": 11810
+        },
+        {
+          "file": "assets/audio/classic/key-093.wav",
+          "durationMs": 149,
+          "startMs": 11975
+        },
+        {
+          "file": "assets/audio/classic/key-094.wav",
+          "durationMs": 129,
+          "startMs": 12120
+        },
+        {
+          "file": "assets/audio/classic/key-095.wav",
+          "durationMs": 94,
+          "startMs": 12245
+        },
+        {
+          "file": "assets/audio/classic/key-096.wav",
+          "durationMs": 164,
+          "startMs": 12335
+        },
+        {
+          "file": "assets/audio/classic/key-097.wav",
+          "durationMs": 89,
+          "startMs": 12495
+        },
+        {
+          "file": "assets/audio/classic/key-098.wav",
+          "durationMs": 79,
+          "startMs": 12580
+        },
+        {
+          "file": "assets/audio/classic/key-099.wav",
+          "durationMs": 114,
+          "startMs": 12655
+        },
+        {
+          "file": "assets/audio/classic/key-100.wav",
+          "durationMs": 114,
+          "startMs": 12765
+        },
+        {
+          "file": "assets/audio/classic/key-101.wav",
+          "durationMs": 154,
+          "startMs": 12875
+        },
+        {
+          "file": "assets/audio/classic/key-102.wav",
+          "durationMs": 154,
+          "startMs": 13025
+        },
+        {
+          "file": "assets/audio/classic/key-103.wav",
+          "durationMs": 129,
+          "startMs": 13175
+        },
+        {
+          "file": "assets/audio/classic/key-104.wav",
+          "durationMs": 149,
+          "startMs": 13300
+        },
+        {
+          "file": "assets/audio/classic/key-105.wav",
+          "durationMs": 124,
+          "startMs": 13445
+        },
+        {
+          "file": "assets/audio/classic/key-106.wav",
+          "durationMs": 159,
+          "startMs": 13565
+        },
+        {
+          "file": "assets/audio/classic/key-107.wav",
+          "durationMs": 114,
+          "startMs": 13720
+        },
+        {
+          "file": "assets/audio/classic/key-108.wav",
+          "durationMs": 164,
+          "startMs": 13830
+        },
+        {
+          "file": "assets/audio/classic/key-109.wav",
+          "durationMs": 84,
+          "startMs": 13990
+        },
+        {
+          "file": "assets/audio/classic/key-110.wav",
+          "durationMs": 79,
+          "startMs": 14070
+        },
+        {
+          "file": "assets/audio/classic/key-111.wav",
+          "durationMs": 139,
+          "startMs": 14145
+        },
+        {
+          "file": "assets/audio/classic/key-112.wav",
+          "durationMs": 159,
+          "startMs": 14280
+        },
+        {
+          "file": "assets/audio/classic/key-113.wav",
+          "durationMs": 134,
+          "startMs": 14435
+        },
+        {
+          "file": "assets/audio/classic/key-114.wav",
+          "durationMs": 129,
+          "startMs": 14565
+        },
+        {
+          "file": "assets/audio/classic/key-115.wav",
+          "durationMs": 159,
+          "startMs": 14690
+        },
+        {
+          "file": "assets/audio/classic/key-116.wav",
+          "durationMs": 104,
+          "startMs": 14845
+        },
+        {
+          "file": "assets/audio/classic/key-117.wav",
+          "durationMs": 114,
+          "startMs": 14945
+        },
+        {
+          "file": "assets/audio/classic/key-118.wav",
+          "durationMs": 164,
+          "startMs": 15055
+        },
+        {
+          "file": "assets/audio/classic/key-119.wav",
+          "durationMs": 109,
+          "startMs": 15215
+        },
+        {
+          "file": "assets/audio/classic/key-120.wav",
+          "durationMs": 94,
+          "startMs": 15320
+        },
+        {
+          "file": "assets/audio/classic/key-121.wav",
+          "durationMs": 139,
+          "startMs": 15410
+        },
+        {
+          "file": "assets/audio/classic/key-122.wav",
+          "durationMs": 69,
+          "startMs": 15545
+        }
+      ]
+    },
+    {
+      "id": "asmr",
+      "label": "ASMR Clicks",
+      "original": "assets/audio/asmr/asmr.mp3",
+      "keyMap": {
+        "Escape": 29,
+        "F1": 36,
+        "F2": 39,
+        "F3": 45,
+        "F4": 27,
+        "F5": 17,
+        "F6": 51,
+        "F7": 47,
+        "F8": 34,
+        "F9": 1,
+        "F10": 22,
+        "F11": 21,
+        "F12": 31,
+        "F13": 7,
+        "F14": 32,
+        "F15": 0,
+        "F16": 3,
+        "F17": 38,
+        "F18": 8,
+        "F19": 12,
+        "F20": 44,
+        "F21": 19,
+        "F22": 48,
+        "F23": 25,
+        "F24": 20,
+        "PrintScreen": 18,
+        "ScrollLock": 11,
+        "Pause": 23,
+        "Backquote": 42,
+        "Digit1": 53,
+        "Digit2": 52,
+        "Digit3": 33,
+        "Digit4": 40,
+        "Digit5": 13,
+        "Digit6": 6,
+        "Digit7": 46,
+        "Digit8": 5,
+        "Digit9": 15,
+        "Digit0": 50,
+        "Minus": 24,
+        "Equal": 10,
+        "Backspace": 41,
+        "Tab": 26,
+        "KeyQ": 16,
+        "KeyW": 35,
+        "KeyE": 2,
+        "KeyR": 37,
+        "KeyT": 4,
+        "KeyY": 43,
+        "KeyU": 9,
+        "KeyI": 14,
+        "KeyO": 49,
+        "KeyP": 30,
+        "BracketLeft": 28,
+        "BracketRight": 29,
+        "Backslash": 36,
+        "CapsLock": 39,
+        "KeyA": 45,
+        "KeyS": 27,
+        "KeyD": 17,
+        "KeyF": 51,
+        "KeyG": 47,
+        "KeyH": 34,
+        "KeyJ": 1,
+        "KeyK": 22,
+        "KeyL": 21,
+        "Semicolon": 31,
+        "Quote": 7,
+        "Enter": 32,
+        "ShiftLeft": 0,
+        "KeyZ": 3,
+        "KeyX": 38,
+        "KeyC": 8,
+        "KeyV": 12,
+        "KeyB": 44,
+        "KeyN": 19,
+        "KeyM": 48,
+        "Comma": 25,
+        "Period": 20,
+        "Slash": 18,
+        "ShiftRight": 11,
+        "ControlLeft": 23,
+        "MetaLeft": 42,
+        "AltLeft": 53,
+        "Space": 52,
+        "AltRight": 33,
+        "MetaRight": 40,
+        "ContextMenu": 13,
+        "ControlRight": 6,
+        "Insert": 46,
+        "Home": 5,
+        "PageUp": 15,
+        "Delete": 50,
+        "End": 24,
+        "PageDown": 10,
+        "ArrowUp": 41,
+        "ArrowLeft": 26,
+        "ArrowDown": 16,
+        "ArrowRight": 35,
+        "NumLock": 2,
+        "NumpadDivide": 37,
+        "NumpadMultiply": 4,
+        "NumpadSubtract": 43,
+        "NumpadAdd": 9,
+        "NumpadEnter": 14,
+        "NumpadDecimal": 49,
+        "NumpadEqual": 30,
+        "NumpadComma": 28,
+        "Numpad0": 29,
+        "Numpad1": 36,
+        "Numpad2": 39,
+        "Numpad3": 45,
+        "Numpad4": 27,
+        "Numpad5": 17,
+        "Numpad6": 51,
+        "Numpad7": 47,
+        "Numpad8": 34,
+        "Numpad9": 1,
+        "IntlBackslash": 22,
+        "IntlRo": 21,
+        "IntlYen": 31,
+        "Convert": 7,
+        "NonConvert": 32,
+        "KanaMode": 0,
+        "Lang1": 3,
+        "Lang2": 38
+      },
+      "clips": [
+        {
+          "file": "assets/audio/asmr/key-001.wav",
+          "durationMs": 119,
+          "startMs": 220
+        },
+        {
+          "file": "assets/audio/asmr/key-002.wav",
+          "durationMs": 224,
+          "startMs": 335
+        },
+        {
+          "file": "assets/audio/asmr/key-003.wav",
+          "durationMs": 129,
+          "startMs": 665
+        },
+        {
+          "file": "assets/audio/asmr/key-004.wav",
+          "durationMs": 99,
+          "startMs": 790
+        },
+        {
+          "file": "assets/audio/asmr/key-005.wav",
+          "durationMs": 104,
+          "startMs": 885
+        },
+        {
+          "file": "assets/audio/asmr/key-006.wav",
+          "durationMs": 84,
+          "startMs": 985
+        },
+        {
+          "file": "assets/audio/asmr/key-007.wav",
+          "durationMs": 149,
+          "startMs": 1065
+        },
+        {
+          "file": "assets/audio/asmr/key-008.wav",
+          "durationMs": 99,
+          "startMs": 1210
+        },
+        {
+          "file": "assets/audio/asmr/key-009.wav",
+          "durationMs": 84,
+          "startMs": 1305
+        },
+        {
+          "file": "assets/audio/asmr/key-010.wav",
+          "durationMs": 109,
+          "startMs": 1385
+        },
+        {
+          "file": "assets/audio/asmr/key-011.wav",
+          "durationMs": 114,
+          "startMs": 1490
+        },
+        {
+          "file": "assets/audio/asmr/key-012.wav",
+          "durationMs": 149,
+          "startMs": 1600
+        },
+        {
+          "file": "assets/audio/asmr/key-013.wav",
+          "durationMs": 224,
+          "startMs": 1745
+        },
+        {
+          "file": "assets/audio/asmr/key-014.wav",
+          "durationMs": 79,
+          "startMs": 1995
+        },
+        {
+          "file": "assets/audio/asmr/key-015.wav",
+          "durationMs": 124,
+          "startMs": 2070
+        },
+        {
+          "file": "assets/audio/asmr/key-016.wav",
+          "durationMs": 94,
+          "startMs": 2190
+        },
+        {
+          "file": "assets/audio/asmr/key-017.wav",
+          "durationMs": 94,
+          "startMs": 2280
+        },
+        {
+          "file": "assets/audio/asmr/key-018.wav",
+          "durationMs": 209,
+          "startMs": 2370
+        },
+        {
+          "file": "assets/audio/asmr/key-019.wav",
+          "durationMs": 224,
+          "startMs": 2575
+        },
+        {
+          "file": "assets/audio/asmr/key-020.wav",
+          "durationMs": 189,
+          "startMs": 2870
+        },
+        {
+          "file": "assets/audio/asmr/key-021.wav",
+          "durationMs": 119,
+          "startMs": 3055
+        },
+        {
+          "file": "assets/audio/asmr/key-022.wav",
+          "durationMs": 109,
+          "startMs": 3170
+        },
+        {
+          "file": "assets/audio/asmr/key-023.wav",
+          "durationMs": 224,
+          "startMs": 3275
+        },
+        {
+          "file": "assets/audio/asmr/key-024.wav",
+          "durationMs": 129,
+          "startMs": 3495
+        },
+        {
+          "file": "assets/audio/asmr/key-025.wav",
+          "durationMs": 224,
+          "startMs": 3620
+        },
+        {
+          "file": "assets/audio/asmr/key-026.wav",
+          "durationMs": 134,
+          "startMs": 3870
+        },
+        {
+          "file": "assets/audio/asmr/key-027.wav",
+          "durationMs": 99,
+          "startMs": 4000
+        },
+        {
+          "file": "assets/audio/asmr/key-028.wav",
+          "durationMs": 194,
+          "startMs": 4095
+        },
+        {
+          "file": "assets/audio/asmr/key-029.wav",
+          "durationMs": 179,
+          "startMs": 4285
+        },
+        {
+          "file": "assets/audio/asmr/key-030.wav",
+          "durationMs": 224,
+          "startMs": 4460
+        },
+        {
+          "file": "assets/audio/asmr/key-031.wav",
+          "durationMs": 79,
+          "startMs": 4775
+        },
+        {
+          "file": "assets/audio/asmr/key-032.wav",
+          "durationMs": 94,
+          "startMs": 4850
+        },
+        {
+          "file": "assets/audio/asmr/key-033.wav",
+          "durationMs": 84,
+          "startMs": 4940
+        },
+        {
+          "file": "assets/audio/asmr/key-034.wav",
+          "durationMs": 164,
+          "startMs": 5020
+        },
+        {
+          "file": "assets/audio/asmr/key-035.wav",
+          "durationMs": 94,
+          "startMs": 5180
+        },
+        {
+          "file": "assets/audio/asmr/key-036.wav",
+          "durationMs": 99,
+          "startMs": 5270
+        },
+        {
+          "file": "assets/audio/asmr/key-037.wav",
+          "durationMs": 99,
+          "startMs": 5365
+        },
+        {
+          "file": "assets/audio/asmr/key-038.wav",
+          "durationMs": 89,
+          "startMs": 5460
+        },
+        {
+          "file": "assets/audio/asmr/key-039.wav",
+          "durationMs": 224,
+          "startMs": 5545
+        },
+        {
+          "file": "assets/audio/asmr/key-040.wav",
+          "durationMs": 99,
+          "startMs": 5795
+        },
+        {
+          "file": "assets/audio/asmr/key-041.wav",
+          "durationMs": 129,
+          "startMs": 5890
+        },
+        {
+          "file": "assets/audio/asmr/key-042.wav",
+          "durationMs": 154,
+          "startMs": 6015
+        },
+        {
+          "file": "assets/audio/asmr/key-043.wav",
+          "durationMs": 104,
+          "startMs": 6165
+        },
+        {
+          "file": "assets/audio/asmr/key-044.wav",
+          "durationMs": 134,
+          "startMs": 6265
+        },
+        {
+          "file": "assets/audio/asmr/key-045.wav",
+          "durationMs": 224,
+          "startMs": 6395
+        },
+        {
+          "file": "assets/audio/asmr/key-046.wav",
+          "durationMs": 164,
+          "startMs": 6645
+        },
+        {
+          "file": "assets/audio/asmr/key-047.wav",
+          "durationMs": 84,
+          "startMs": 6805
+        },
+        {
+          "file": "assets/audio/asmr/key-048.wav",
+          "durationMs": 94,
+          "startMs": 6885
+        },
+        {
+          "file": "assets/audio/asmr/key-049.wav",
+          "durationMs": 99,
+          "startMs": 6975
+        },
+        {
+          "file": "assets/audio/asmr/key-050.wav",
+          "durationMs": 84,
+          "startMs": 7070
+        },
+        {
+          "file": "assets/audio/asmr/key-051.wav",
+          "durationMs": 119,
+          "startMs": 7150
+        },
+        {
+          "file": "assets/audio/asmr/key-052.wav",
+          "durationMs": 114,
+          "startMs": 7265
+        },
+        {
+          "file": "assets/audio/asmr/key-053.wav",
+          "durationMs": 179,
+          "startMs": 7375
+        },
+        {
+          "file": "assets/audio/asmr/key-054.wav",
+          "durationMs": 224,
+          "startMs": 7550
+        }
+      ]
+    },
+    {
+      "id": "typing",
+      "label": "Typing Rhythm",
+      "original": "assets/audio/typing/typing.mp3",
+      "keyMap": {
+        "Escape": 144,
+        "F1": 165,
+        "F2": 63,
+        "F3": 140,
+        "F4": 73,
+        "F5": 163,
+        "F6": 148,
+        "F7": 97,
+        "F8": 25,
+        "F9": 39,
+        "F10": 111,
+        "F11": 17,
+        "F12": 10,
+        "F13": 142,
+        "F14": 130,
+        "F15": 36,
+        "F16": 151,
+        "F17": 71,
+        "F18": 70,
+        "F19": 4,
+        "F20": 8,
+        "F21": 164,
+        "F22": 150,
+        "F23": 20,
+        "F24": 65,
+        "PrintScreen": 122,
+        "ScrollLock": 30,
+        "Pause": 77,
+        "Backquote": 95,
+        "Digit1": 114,
+        "Digit2": 87,
+        "Digit3": 89,
+        "Digit4": 83,
+        "Digit5": 174,
+        "Digit6": 126,
+        "Digit7": 53,
+        "Digit8": 127,
+        "Digit9": 123,
+        "Digit0": 16,
+        "Minus": 88,
+        "Equal": 82,
+        "Backspace": 7,
+        "Tab": 143,
+        "KeyQ": 31,
+        "KeyW": 138,
+        "KeyE": 141,
+        "KeyR": 137,
+        "KeyT": 72,
+        "KeyY": 145,
+        "KeyU": 170,
+        "KeyI": 19,
+        "KeyO": 115,
+        "KeyP": 58,
+        "BracketLeft": 101,
+        "BracketRight": 14,
+        "Backslash": 46,
+        "CapsLock": 161,
+        "KeyA": 6,
+        "KeyS": 2,
+        "KeyD": 90,
+        "KeyF": 129,
+        "KeyG": 166,
+        "KeyH": 94,
+        "KeyJ": 28,
+        "KeyK": 60,
+        "KeyL": 125,
+        "Semicolon": 105,
+        "Quote": 33,
+        "Enter": 108,
+        "ShiftLeft": 155,
+        "KeyZ": 113,
+        "KeyX": 162,
+        "KeyC": 50,
+        "KeyV": 146,
+        "KeyB": 128,
+        "KeyN": 26,
+        "KeyM": 40,
+        "Comma": 136,
+        "Period": 52,
+        "Slash": 86,
+        "ShiftRight": 169,
+        "ControlLeft": 74,
+        "MetaLeft": 38,
+        "AltLeft": 55,
+        "Space": 66,
+        "AltRight": 34,
+        "MetaRight": 158,
+        "ContextMenu": 15,
+        "ControlRight": 56,
+        "Insert": 96,
+        "Home": 64,
+        "PageUp": 153,
+        "Delete": 147,
+        "End": 93,
+        "PageDown": 175,
+        "ArrowUp": 119,
+        "ArrowLeft": 124,
+        "ArrowDown": 47,
+        "ArrowRight": 69,
+        "NumLock": 11,
+        "NumpadDivide": 62,
+        "NumpadMultiply": 43,
+        "NumpadSubtract": 27,
+        "NumpadAdd": 134,
+        "NumpadEnter": 117,
+        "NumpadDecimal": 103,
+        "NumpadEqual": 176,
+        "NumpadComma": 102,
+        "Numpad0": 24,
+        "Numpad1": 0,
+        "Numpad2": 109,
+        "Numpad3": 85,
+        "Numpad4": 107,
+        "Numpad5": 1,
+        "Numpad6": 21,
+        "Numpad7": 84,
+        "Numpad8": 173,
+        "Numpad9": 135,
+        "IntlBackslash": 92,
+        "IntlRo": 116,
+        "IntlYen": 99,
+        "Convert": 118,
+        "NonConvert": 167,
+        "KanaMode": 152,
+        "Lang1": 157,
+        "Lang2": 154
+      },
+      "clips": [
+        {
+          "file": "assets/audio/typing/key-001.wav",
+          "durationMs": 164,
+          "startMs": 175
+        },
+        {
+          "file": "assets/audio/typing/key-002.wav",
+          "durationMs": 224,
+          "startMs": 335
+        },
+        {
+          "file": "assets/audio/typing/key-003.wav",
+          "durationMs": 224,
+          "startMs": 570
+        },
+        {
+          "file": "assets/audio/typing/key-004.wav",
+          "durationMs": 224,
+          "startMs": 1575
+        },
+        {
+          "file": "assets/audio/typing/key-005.wav",
+          "durationMs": 104,
+          "startMs": 2385
+        },
+        {
+          "file": "assets/audio/typing/key-006.wav",
+          "durationMs": 139,
+          "startMs": 2485
+        },
+        {
+          "file": "assets/audio/typing/key-007.wav",
+          "durationMs": 184,
+          "startMs": 2620
+        },
+        {
+          "file": "assets/audio/typing/key-008.wav",
+          "durationMs": 89,
+          "startMs": 2800
+        },
+        {
+          "file": "assets/audio/typing/key-009.wav",
+          "durationMs": 114,
+          "startMs": 2885
+        },
+        {
+          "file": "assets/audio/typing/key-010.wav",
+          "durationMs": 89,
+          "startMs": 2995
+        },
+        {
+          "file": "assets/audio/typing/key-011.wav",
+          "durationMs": 149,
+          "startMs": 3080
+        },
+        {
+          "file": "assets/audio/typing/key-012.wav",
+          "durationMs": 104,
+          "startMs": 3225
+        },
+        {
+          "file": "assets/audio/typing/key-013.wav",
+          "durationMs": 114,
+          "startMs": 3325
+        },
+        {
+          "file": "assets/audio/typing/key-014.wav",
+          "durationMs": 124,
+          "startMs": 3435
+        },
+        {
+          "file": "assets/audio/typing/key-015.wav",
+          "durationMs": 154,
+          "startMs": 3555
+        },
+        {
+          "file": "assets/audio/typing/key-016.wav",
+          "durationMs": 154,
+          "startMs": 3705
+        },
+        {
+          "file": "assets/audio/typing/key-017.wav",
+          "durationMs": 79,
+          "startMs": 3855
+        },
+        {
+          "file": "assets/audio/typing/key-018.wav",
+          "durationMs": 89,
+          "startMs": 3930
+        },
+        {
+          "file": "assets/audio/typing/key-019.wav",
+          "durationMs": 84,
+          "startMs": 4015
+        },
+        {
+          "file": "assets/audio/typing/key-020.wav",
+          "durationMs": 89,
+          "startMs": 4095
+        },
+        {
+          "file": "assets/audio/typing/key-021.wav",
+          "durationMs": 119,
+          "startMs": 4180
+        },
+        {
+          "file": "assets/audio/typing/key-022.wav",
+          "durationMs": 199,
+          "startMs": 4295
+        },
+        {
+          "file": "assets/audio/typing/key-023.wav",
+          "durationMs": 89,
+          "startMs": 4490
+        },
+        {
+          "file": "assets/audio/typing/key-024.wav",
+          "durationMs": 199,
+          "startMs": 4575
+        },
+        {
+          "file": "assets/audio/typing/key-025.wav",
+          "durationMs": 104,
+          "startMs": 4770
+        },
+        {
+          "file": "assets/audio/typing/key-026.wav",
+          "durationMs": 214,
+          "startMs": 4870
+        },
+        {
+          "file": "assets/audio/typing/key-027.wav",
+          "durationMs": 144,
+          "startMs": 5080
+        },
+        {
+          "file": "assets/audio/typing/key-028.wav",
+          "durationMs": 119,
+          "startMs": 5220
+        },
+        {
+          "file": "assets/audio/typing/key-029.wav",
+          "durationMs": 169,
+          "startMs": 5335
+        },
+        {
+          "file": "assets/audio/typing/key-030.wav",
+          "durationMs": 119,
+          "startMs": 5500
+        },
+        {
+          "file": "assets/audio/typing/key-031.wav",
+          "durationMs": 144,
+          "startMs": 5615
+        },
+        {
+          "file": "assets/audio/typing/key-032.wav",
+          "durationMs": 99,
+          "startMs": 5755
+        },
+        {
+          "file": "assets/audio/typing/key-033.wav",
+          "durationMs": 109,
+          "startMs": 5850
+        },
+        {
+          "file": "assets/audio/typing/key-034.wav",
+          "durationMs": 119,
+          "startMs": 5955
+        },
+        {
+          "file": "assets/audio/typing/key-035.wav",
+          "durationMs": 149,
+          "startMs": 6070
+        },
+        {
+          "file": "assets/audio/typing/key-036.wav",
+          "durationMs": 119,
+          "startMs": 6215
+        },
+        {
+          "file": "assets/audio/typing/key-037.wav",
+          "durationMs": 169,
+          "startMs": 6330
+        },
+        {
+          "file": "assets/audio/typing/key-038.wav",
+          "durationMs": 84,
+          "startMs": 6495
+        },
+        {
+          "file": "assets/audio/typing/key-039.wav",
+          "durationMs": 124,
+          "startMs": 6575
+        },
+        {
+          "file": "assets/audio/typing/key-040.wav",
+          "durationMs": 224,
+          "startMs": 6695
+        },
+        {
+          "file": "assets/audio/typing/key-041.wav",
+          "durationMs": 109,
+          "startMs": 7175
+        },
+        {
+          "file": "assets/audio/typing/key-042.wav",
+          "durationMs": 179,
+          "startMs": 7280
+        },
+        {
+          "file": "assets/audio/typing/key-043.wav",
+          "durationMs": 179,
+          "startMs": 7455
+        },
+        {
+          "file": "assets/audio/typing/key-044.wav",
+          "durationMs": 114,
+          "startMs": 7630
+        },
+        {
+          "file": "assets/audio/typing/key-045.wav",
+          "durationMs": 189,
+          "startMs": 7740
+        },
+        {
+          "file": "assets/audio/typing/key-046.wav",
+          "durationMs": 139,
+          "startMs": 7925
+        },
+        {
+          "file": "assets/audio/typing/key-047.wav",
+          "durationMs": 84,
+          "startMs": 8060
+        },
+        {
+          "file": "assets/audio/typing/key-048.wav",
+          "durationMs": 84,
+          "startMs": 8140
+        },
+        {
+          "file": "assets/audio/typing/key-049.wav",
+          "durationMs": 109,
+          "startMs": 8220
+        },
+        {
+          "file": "assets/audio/typing/key-050.wav",
+          "durationMs": 194,
+          "startMs": 8325
+        },
+        {
+          "file": "assets/audio/typing/key-051.wav",
+          "durationMs": 164,
+          "startMs": 8515
+        },
+        {
+          "file": "assets/audio/typing/key-052.wav",
+          "durationMs": 104,
+          "startMs": 8675
+        },
+        {
+          "file": "assets/audio/typing/key-053.wav",
+          "durationMs": 104,
+          "startMs": 8775
+        },
+        {
+          "file": "assets/audio/typing/key-054.wav",
+          "durationMs": 109,
+          "startMs": 8875
+        },
+        {
+          "file": "assets/audio/typing/key-055.wav",
+          "durationMs": 89,
+          "startMs": 8980
+        },
+        {
+          "file": "assets/audio/typing/key-056.wav",
+          "durationMs": 104,
+          "startMs": 9065
+        },
+        {
+          "file": "assets/audio/typing/key-057.wav",
+          "durationMs": 144,
+          "startMs": 9165
+        },
+        {
+          "file": "assets/audio/typing/key-058.wav",
+          "durationMs": 139,
+          "startMs": 9305
+        },
+        {
+          "file": "assets/audio/typing/key-059.wav",
+          "durationMs": 109,
+          "startMs": 9440
+        },
+        {
+          "file": "assets/audio/typing/key-060.wav",
+          "durationMs": 119,
+          "startMs": 9545
+        },
+        {
+          "file": "assets/audio/typing/key-061.wav",
+          "durationMs": 134,
+          "startMs": 9660
+        },
+        {
+          "file": "assets/audio/typing/key-062.wav",
+          "durationMs": 164,
+          "startMs": 9790
+        },
+        {
+          "file": "assets/audio/typing/key-063.wav",
+          "durationMs": 99,
+          "startMs": 9950
+        },
+        {
+          "file": "assets/audio/typing/key-064.wav",
+          "durationMs": 84,
+          "startMs": 10045
+        },
+        {
+          "file": "assets/audio/typing/key-065.wav",
+          "durationMs": 104,
+          "startMs": 10125
+        },
+        {
+          "file": "assets/audio/typing/key-066.wav",
+          "durationMs": 224,
+          "startMs": 10225
+        },
+        {
+          "file": "assets/audio/typing/key-067.wav",
+          "durationMs": 129,
+          "startMs": 10470
+        },
+        {
+          "file": "assets/audio/typing/key-068.wav",
+          "durationMs": 94,
+          "startMs": 10595
+        },
+        {
+          "file": "assets/audio/typing/key-069.wav",
+          "durationMs": 84,
+          "startMs": 10685
+        },
+        {
+          "file": "assets/audio/typing/key-070.wav",
+          "durationMs": 119,
+          "startMs": 10765
+        },
+        {
+          "file": "assets/audio/typing/key-071.wav",
+          "durationMs": 109,
+          "startMs": 10880
+        },
+        {
+          "file": "assets/audio/typing/key-072.wav",
+          "durationMs": 124,
+          "startMs": 10985
+        },
+        {
+          "file": "assets/audio/typing/key-073.wav",
+          "durationMs": 224,
+          "startMs": 11105
+        },
+        {
+          "file": "assets/audio/typing/key-074.wav",
+          "durationMs": 139,
+          "startMs": 11330
+        },
+        {
+          "file": "assets/audio/typing/key-075.wav",
+          "durationMs": 174,
+          "startMs": 11465
+        },
+        {
+          "file": "assets/audio/typing/key-076.wav",
+          "durationMs": 224,
+          "startMs": 11635
+        },
+        {
+          "file": "assets/audio/typing/key-077.wav",
+          "durationMs": 99,
+          "startMs": 12290
+        },
+        {
+          "file": "assets/audio/typing/key-078.wav",
+          "durationMs": 94,
+          "startMs": 12385
+        },
+        {
+          "file": "assets/audio/typing/key-079.wav",
+          "durationMs": 94,
+          "startMs": 12475
+        },
+        {
+          "file": "assets/audio/typing/key-080.wav",
+          "durationMs": 139,
+          "startMs": 12565
+        },
+        {
+          "file": "assets/audio/typing/key-081.wav",
+          "durationMs": 119,
+          "startMs": 12700
+        },
+        {
+          "file": "assets/audio/typing/key-082.wav",
+          "durationMs": 129,
+          "startMs": 12815
+        },
+        {
+          "file": "assets/audio/typing/key-083.wav",
+          "durationMs": 119,
+          "startMs": 12940
+        },
+        {
+          "file": "assets/audio/typing/key-084.wav",
+          "durationMs": 134,
+          "startMs": 13055
+        },
+        {
+          "file": "assets/audio/typing/key-085.wav",
+          "durationMs": 169,
+          "startMs": 13185
+        },
+        {
+          "file": "assets/audio/typing/key-086.wav",
+          "durationMs": 209,
+          "startMs": 13350
+        },
+        {
+          "file": "assets/audio/typing/key-087.wav",
+          "durationMs": 154,
+          "startMs": 13555
+        },
+        {
+          "file": "assets/audio/typing/key-088.wav",
+          "durationMs": 89,
+          "startMs": 13705
+        },
+        {
+          "file": "assets/audio/typing/key-089.wav",
+          "durationMs": 119,
+          "startMs": 13790
+        },
+        {
+          "file": "assets/audio/typing/key-090.wav",
+          "durationMs": 119,
+          "startMs": 13905
+        },
+        {
+          "file": "assets/audio/typing/key-091.wav",
+          "durationMs": 169,
+          "startMs": 14020
+        },
+        {
+          "file": "assets/audio/typing/key-092.wav",
+          "durationMs": 129,
+          "startMs": 14185
+        },
+        {
+          "file": "assets/audio/typing/key-093.wav",
+          "durationMs": 224,
+          "startMs": 14310
+        },
+        {
+          "file": "assets/audio/typing/key-094.wav",
+          "durationMs": 144,
+          "startMs": 15115
+        },
+        {
+          "file": "assets/audio/typing/key-095.wav",
+          "durationMs": 224,
+          "startMs": 15255
+        },
+        {
+          "file": "assets/audio/typing/key-096.wav",
+          "durationMs": 104,
+          "startMs": 15680
+        },
+        {
+          "file": "assets/audio/typing/key-097.wav",
+          "durationMs": 224,
+          "startMs": 15780
+        },
+        {
+          "file": "assets/audio/typing/key-098.wav",
+          "durationMs": 159,
+          "startMs": 16140
+        },
+        {
+          "file": "assets/audio/typing/key-099.wav",
+          "durationMs": 124,
+          "startMs": 16295
+        },
+        {
+          "file": "assets/audio/typing/key-100.wav",
+          "durationMs": 79,
+          "startMs": 16415
+        },
+        {
+          "file": "assets/audio/typing/key-101.wav",
+          "durationMs": 79,
+          "startMs": 16490
+        },
+        {
+          "file": "assets/audio/typing/key-102.wav",
+          "durationMs": 84,
+          "startMs": 16565
+        },
+        {
+          "file": "assets/audio/typing/key-103.wav",
+          "durationMs": 194,
+          "startMs": 16645
+        },
+        {
+          "file": "assets/audio/typing/key-104.wav",
+          "durationMs": 79,
+          "startMs": 16835
+        },
+        {
+          "file": "assets/audio/typing/key-105.wav",
+          "durationMs": 144,
+          "startMs": 16910
+        },
+        {
+          "file": "assets/audio/typing/key-106.wav",
+          "durationMs": 164,
+          "startMs": 17050
+        },
+        {
+          "file": "assets/audio/typing/key-107.wav",
+          "durationMs": 224,
+          "startMs": 17210
+        },
+        {
+          "file": "assets/audio/typing/key-108.wav",
+          "durationMs": 174,
+          "startMs": 17690
+        },
+        {
+          "file": "assets/audio/typing/key-109.wav",
+          "durationMs": 149,
+          "startMs": 17860
+        },
+        {
+          "file": "assets/audio/typing/key-110.wav",
+          "durationMs": 99,
+          "startMs": 18005
+        },
+        {
+          "file": "assets/audio/typing/key-111.wav",
+          "durationMs": 179,
+          "startMs": 18100
+        },
+        {
+          "file": "assets/audio/typing/key-112.wav",
+          "durationMs": 114,
+          "startMs": 18275
+        },
+        {
+          "file": "assets/audio/typing/key-113.wav",
+          "durationMs": 159,
+          "startMs": 18385
+        },
+        {
+          "file": "assets/audio/typing/key-114.wav",
+          "durationMs": 94,
+          "startMs": 18540
+        },
+        {
+          "file": "assets/audio/typing/key-115.wav",
+          "durationMs": 109,
+          "startMs": 18630
+        },
+        {
+          "file": "assets/audio/typing/key-116.wav",
+          "durationMs": 124,
+          "startMs": 18735
+        },
+        {
+          "file": "assets/audio/typing/key-117.wav",
+          "durationMs": 154,
+          "startMs": 18855
+        },
+        {
+          "file": "assets/audio/typing/key-118.wav",
+          "durationMs": 139,
+          "startMs": 19005
+        },
+        {
+          "file": "assets/audio/typing/key-119.wav",
+          "durationMs": 129,
+          "startMs": 19140
+        },
+        {
+          "file": "assets/audio/typing/key-120.wav",
+          "durationMs": 134,
+          "startMs": 19265
+        },
+        {
+          "file": "assets/audio/typing/key-121.wav",
+          "durationMs": 99,
+          "startMs": 19395
+        },
+        {
+          "file": "assets/audio/typing/key-122.wav",
+          "durationMs": 159,
+          "startMs": 19490
+        },
+        {
+          "file": "assets/audio/typing/key-123.wav",
+          "durationMs": 109,
+          "startMs": 19645
+        },
+        {
+          "file": "assets/audio/typing/key-124.wav",
+          "durationMs": 94,
+          "startMs": 19750
+        },
+        {
+          "file": "assets/audio/typing/key-125.wav",
+          "durationMs": 119,
+          "startMs": 19840
+        },
+        {
+          "file": "assets/audio/typing/key-126.wav",
+          "durationMs": 79,
+          "startMs": 19955
+        },
+        {
+          "file": "assets/audio/typing/key-127.wav",
+          "durationMs": 164,
+          "startMs": 20030
+        },
+        {
+          "file": "assets/audio/typing/key-128.wav",
+          "durationMs": 84,
+          "startMs": 20190
+        },
+        {
+          "file": "assets/audio/typing/key-129.wav",
+          "durationMs": 94,
+          "startMs": 20270
+        },
+        {
+          "file": "assets/audio/typing/key-130.wav",
+          "durationMs": 139,
+          "startMs": 20360
+        },
+        {
+          "file": "assets/audio/typing/key-131.wav",
+          "durationMs": 114,
+          "startMs": 20495
+        },
+        {
+          "file": "assets/audio/typing/key-132.wav",
+          "durationMs": 164,
+          "startMs": 20605
+        },
+        {
+          "file": "assets/audio/typing/key-133.wav",
+          "durationMs": 169,
+          "startMs": 20765
+        },
+        {
+          "file": "assets/audio/typing/key-134.wav",
+          "durationMs": 224,
+          "startMs": 20930
+        },
+        {
+          "file": "assets/audio/typing/key-135.wav",
+          "durationMs": 84,
+          "startMs": 21510
+        },
+        {
+          "file": "assets/audio/typing/key-136.wav",
+          "durationMs": 139,
+          "startMs": 21590
+        },
+        {
+          "file": "assets/audio/typing/key-137.wav",
+          "durationMs": 134,
+          "startMs": 21725
+        },
+        {
+          "file": "assets/audio/typing/key-138.wav",
+          "durationMs": 149,
+          "startMs": 21855
+        },
+        {
+          "file": "assets/audio/typing/key-139.wav",
+          "durationMs": 124,
+          "startMs": 22000
+        },
+        {
+          "file": "assets/audio/typing/key-140.wav",
+          "durationMs": 209,
+          "startMs": 22120
+        },
+        {
+          "file": "assets/audio/typing/key-141.wav",
+          "durationMs": 109,
+          "startMs": 22325
+        },
+        {
+          "file": "assets/audio/typing/key-142.wav",
+          "durationMs": 144,
+          "startMs": 22430
+        },
+        {
+          "file": "assets/audio/typing/key-143.wav",
+          "durationMs": 114,
+          "startMs": 22570
+        },
+        {
+          "file": "assets/audio/typing/key-144.wav",
+          "durationMs": 224,
+          "startMs": 22680
+        },
+        {
+          "file": "assets/audio/typing/key-145.wav",
+          "durationMs": 104,
+          "startMs": 22900
+        },
+        {
+          "file": "assets/audio/typing/key-146.wav",
+          "durationMs": 189,
+          "startMs": 23000
+        },
+        {
+          "file": "assets/audio/typing/key-147.wav",
+          "durationMs": 114,
+          "startMs": 23185
+        },
+        {
+          "file": "assets/audio/typing/key-148.wav",
+          "durationMs": 169,
+          "startMs": 23295
+        },
+        {
+          "file": "assets/audio/typing/key-149.wav",
+          "durationMs": 89,
+          "startMs": 23460
+        },
+        {
+          "file": "assets/audio/typing/key-150.wav",
+          "durationMs": 84,
+          "startMs": 23545
+        },
+        {
+          "file": "assets/audio/typing/key-151.wav",
+          "durationMs": 94,
+          "startMs": 23625
+        },
+        {
+          "file": "assets/audio/typing/key-152.wav",
+          "durationMs": 99,
+          "startMs": 23715
+        },
+        {
+          "file": "assets/audio/typing/key-153.wav",
+          "durationMs": 134,
+          "startMs": 23810
+        },
+        {
+          "file": "assets/audio/typing/key-154.wav",
+          "durationMs": 94,
+          "startMs": 23940
+        },
+        {
+          "file": "assets/audio/typing/key-155.wav",
+          "durationMs": 144,
+          "startMs": 24030
+        },
+        {
+          "file": "assets/audio/typing/key-156.wav",
+          "durationMs": 109,
+          "startMs": 24170
+        },
+        {
+          "file": "assets/audio/typing/key-157.wav",
+          "durationMs": 174,
+          "startMs": 24275
+        },
+        {
+          "file": "assets/audio/typing/key-158.wav",
+          "durationMs": 174,
+          "startMs": 24445
+        },
+        {
+          "file": "assets/audio/typing/key-159.wav",
+          "durationMs": 104,
+          "startMs": 24615
+        },
+        {
+          "file": "assets/audio/typing/key-160.wav",
+          "durationMs": 174,
+          "startMs": 24715
+        },
+        {
+          "file": "assets/audio/typing/key-161.wav",
+          "durationMs": 119,
+          "startMs": 24885
+        },
+        {
+          "file": "assets/audio/typing/key-162.wav",
+          "durationMs": 94,
+          "startMs": 25000
+        },
+        {
+          "file": "assets/audio/typing/key-163.wav",
+          "durationMs": 164,
+          "startMs": 25090
+        },
+        {
+          "file": "assets/audio/typing/key-164.wav",
+          "durationMs": 144,
+          "startMs": 25250
+        },
+        {
+          "file": "assets/audio/typing/key-165.wav",
+          "durationMs": 79,
+          "startMs": 25390
+        },
+        {
+          "file": "assets/audio/typing/key-166.wav",
+          "durationMs": 84,
+          "startMs": 25465
+        },
+        {
+          "file": "assets/audio/typing/key-167.wav",
+          "durationMs": 144,
+          "startMs": 25545
+        },
+        {
+          "file": "assets/audio/typing/key-168.wav",
+          "durationMs": 144,
+          "startMs": 25685
+        },
+        {
+          "file": "assets/audio/typing/key-169.wav",
+          "durationMs": 124,
+          "startMs": 25825
+        },
+        {
+          "file": "assets/audio/typing/key-170.wav",
+          "durationMs": 164,
+          "startMs": 25945
+        },
+        {
+          "file": "assets/audio/typing/key-171.wav",
+          "durationMs": 129,
+          "startMs": 26105
+        },
+        {
+          "file": "assets/audio/typing/key-172.wav",
+          "durationMs": 224,
+          "startMs": 26230
+        },
+        {
+          "file": "assets/audio/typing/key-173.wav",
+          "durationMs": 134,
+          "startMs": 26510
+        },
+        {
+          "file": "assets/audio/typing/key-174.wav",
+          "durationMs": 224,
+          "startMs": 26640
+        },
+        {
+          "file": "assets/audio/typing/key-175.wav",
+          "durationMs": 149,
+          "startMs": 27020
+        },
+        {
+          "file": "assets/audio/typing/key-176.wav",
+          "durationMs": 154,
+          "startMs": 27165
+        },
+        {
+          "file": "assets/audio/typing/key-177.wav",
+          "durationMs": 224,
+          "startMs": 27315
+        }
+      ]
+    },
+    {
+      "id": "laptop",
+      "label": "Laptop Keys",
+      "original": "assets/audio/laptop/laptop.mp3",
+      "keyMap": {
+        "Escape": 76,
+        "F1": 31,
+        "F2": 80,
+        "F3": 9,
+        "F4": 89,
+        "F5": 37,
+        "F6": 71,
+        "F7": 58,
+        "F8": 98,
+        "F9": 90,
+        "F10": 28,
+        "F11": 55,
+        "F12": 77,
+        "F13": 0,
+        "F14": 87,
+        "F15": 104,
+        "F16": 50,
+        "F17": 53,
+        "F18": 47,
+        "F19": 91,
+        "F20": 22,
+        "F21": 5,
+        "F22": 42,
+        "F23": 27,
+        "F24": 44,
+        "PrintScreen": 13,
+        "ScrollLock": 83,
+        "Pause": 61,
+        "Backquote": 35,
+        "Digit1": 74,
+        "Digit2": 60,
+        "Digit3": 93,
+        "Digit4": 103,
+        "Digit5": 66,
+        "Digit6": 49,
+        "Digit7": 105,
+        "Digit8": 119,
+        "Digit9": 43,
+        "Digit0": 20,
+        "Minus": 39,
+        "Equal": 62,
+        "Backspace": 2,
+        "Tab": 97,
+        "KeyQ": 3,
+        "KeyW": 1,
+        "KeyE": 73,
+        "KeyR": 70,
+        "KeyT": 19,
+        "KeyY": 72,
+        "KeyU": 12,
+        "KeyI": 34,
+        "KeyO": 118,
+        "KeyP": 69,
+        "BracketLeft": 26,
+        "BracketRight": 30,
+        "Backslash": 51,
+        "CapsLock": 117,
+        "KeyA": 78,
+        "KeyS": 88,
+        "KeyD": 21,
+        "KeyF": 33,
+        "KeyG": 111,
+        "KeyH": 120,
+        "KeyJ": 41,
+        "KeyK": 100,
+        "KeyL": 36,
+        "Semicolon": 79,
+        "Quote": 112,
+        "Enter": 94,
+        "ShiftLeft": 64,
+        "KeyZ": 11,
+        "KeyX": 65,
+        "KeyC": 38,
+        "KeyV": 57,
+        "KeyB": 59,
+        "KeyN": 25,
+        "KeyM": 40,
+        "Comma": 106,
+        "Period": 113,
+        "Slash": 8,
+        "ShiftRight": 95,
+        "ControlLeft": 108,
+        "MetaLeft": 16,
+        "AltLeft": 4,
+        "Space": 56,
+        "AltRight": 67,
+        "MetaRight": 86,
+        "ContextMenu": 46,
+        "ControlRight": 17,
+        "Insert": 52,
+        "Home": 23,
+        "PageUp": 96,
+        "Delete": 29,
+        "End": 110,
+        "PageDown": 114,
+        "ArrowUp": 92,
+        "ArrowLeft": 10,
+        "ArrowDown": 102,
+        "ArrowRight": 54,
+        "NumLock": 24,
+        "NumpadDivide": 18,
+        "NumpadMultiply": 107,
+        "NumpadSubtract": 63,
+        "NumpadAdd": 84,
+        "NumpadEnter": 48,
+        "NumpadDecimal": 68,
+        "NumpadEqual": 82,
+        "NumpadComma": 115,
+        "Numpad0": 116,
+        "Numpad1": 15,
+        "Numpad2": 7,
+        "Numpad3": 81,
+        "Numpad4": 109,
+        "Numpad5": 75,
+        "Numpad6": 101,
+        "Numpad7": 99,
+        "Numpad8": 14,
+        "Numpad9": 85,
+        "IntlBackslash": 32,
+        "IntlRo": 6,
+        "IntlYen": 45,
+        "Convert": 76,
+        "NonConvert": 31,
+        "KanaMode": 80,
+        "Lang1": 9,
+        "Lang2": 89
+      },
+      "clips": [
+        {
+          "file": "assets/audio/laptop/key-001.wav",
+          "durationMs": 129,
+          "startMs": 1480
+        },
+        {
+          "file": "assets/audio/laptop/key-002.wav",
+          "durationMs": 84,
+          "startMs": 1605
+        },
+        {
+          "file": "assets/audio/laptop/key-003.wav",
+          "durationMs": 89,
+          "startMs": 1685
+        },
+        {
+          "file": "assets/audio/laptop/key-004.wav",
+          "durationMs": 89,
+          "startMs": 1770
+        },
+        {
+          "file": "assets/audio/laptop/key-005.wav",
+          "durationMs": 224,
+          "startMs": 1855
+        },
+        {
+          "file": "assets/audio/laptop/key-006.wav",
+          "durationMs": 169,
+          "startMs": 2300
+        },
+        {
+          "file": "assets/audio/laptop/key-007.wav",
+          "durationMs": 94,
+          "startMs": 2465
+        },
+        {
+          "file": "assets/audio/laptop/key-008.wav",
+          "durationMs": 84,
+          "startMs": 2555
+        },
+        {
+          "file": "assets/audio/laptop/key-009.wav",
+          "durationMs": 114,
+          "startMs": 2635
+        },
+        {
+          "file": "assets/audio/laptop/key-010.wav",
+          "durationMs": 154,
+          "startMs": 2745
+        },
+        {
+          "file": "assets/audio/laptop/key-011.wav",
+          "durationMs": 224,
+          "startMs": 2895
+        },
+        {
+          "file": "assets/audio/laptop/key-012.wav",
+          "durationMs": 79,
+          "startMs": 3565
+        },
+        {
+          "file": "assets/audio/laptop/key-013.wav",
+          "durationMs": 84,
+          "startMs": 3640
+        },
+        {
+          "file": "assets/audio/laptop/key-014.wav",
+          "durationMs": 224,
+          "startMs": 3720
+        },
+        {
+          "file": "assets/audio/laptop/key-015.wav",
+          "durationMs": 84,
+          "startMs": 4160
+        },
+        {
+          "file": "assets/audio/laptop/key-016.wav",
+          "durationMs": 224,
+          "startMs": 4240
+        },
+        {
+          "file": "assets/audio/laptop/key-017.wav",
+          "durationMs": 84,
+          "startMs": 5510
+        },
+        {
+          "file": "assets/audio/laptop/key-018.wav",
+          "durationMs": 169,
+          "startMs": 5590
+        },
+        {
+          "file": "assets/audio/laptop/key-019.wav",
+          "durationMs": 224,
+          "startMs": 5755
+        },
+        {
+          "file": "assets/audio/laptop/key-020.wav",
+          "durationMs": 224,
+          "startMs": 6120
+        },
+        {
+          "file": "assets/audio/laptop/key-021.wav",
+          "durationMs": 94,
+          "startMs": 6600
+        },
+        {
+          "file": "assets/audio/laptop/key-022.wav",
+          "durationMs": 149,
+          "startMs": 6690
+        },
+        {
+          "file": "assets/audio/laptop/key-023.wav",
+          "durationMs": 79,
+          "startMs": 6835
+        },
+        {
+          "file": "assets/audio/laptop/key-024.wav",
+          "durationMs": 134,
+          "startMs": 6910
+        },
+        {
+          "file": "assets/audio/laptop/key-025.wav",
+          "durationMs": 94,
+          "startMs": 7040
+        },
+        {
+          "file": "assets/audio/laptop/key-026.wav",
+          "durationMs": 109,
+          "startMs": 7130
+        },
+        {
+          "file": "assets/audio/laptop/key-027.wav",
+          "durationMs": 134,
+          "startMs": 7235
+        },
+        {
+          "file": "assets/audio/laptop/key-028.wav",
+          "durationMs": 209,
+          "startMs": 7365
+        },
+        {
+          "file": "assets/audio/laptop/key-029.wav",
+          "durationMs": 149,
+          "startMs": 7570
+        },
+        {
+          "file": "assets/audio/laptop/key-030.wav",
+          "durationMs": 179,
+          "startMs": 7715
+        },
+        {
+          "file": "assets/audio/laptop/key-031.wav",
+          "durationMs": 89,
+          "startMs": 7890
+        },
+        {
+          "file": "assets/audio/laptop/key-032.wav",
+          "durationMs": 119,
+          "startMs": 7975
+        },
+        {
+          "file": "assets/audio/laptop/key-033.wav",
+          "durationMs": 224,
+          "startMs": 8090
+        },
+        {
+          "file": "assets/audio/laptop/key-034.wav",
+          "durationMs": 89,
+          "startMs": 8380
+        },
+        {
+          "file": "assets/audio/laptop/key-035.wav",
+          "durationMs": 224,
+          "startMs": 8465
+        },
+        {
+          "file": "assets/audio/laptop/key-036.wav",
+          "durationMs": 89,
+          "startMs": 8695
+        },
+        {
+          "file": "assets/audio/laptop/key-037.wav",
+          "durationMs": 109,
+          "startMs": 8780
+        },
+        {
+          "file": "assets/audio/laptop/key-038.wav",
+          "durationMs": 89,
+          "startMs": 8885
+        },
+        {
+          "file": "assets/audio/laptop/key-039.wav",
+          "durationMs": 204,
+          "startMs": 8970
+        },
+        {
+          "file": "assets/audio/laptop/key-040.wav",
+          "durationMs": 109,
+          "startMs": 9170
+        },
+        {
+          "file": "assets/audio/laptop/key-041.wav",
+          "durationMs": 84,
+          "startMs": 9275
+        },
+        {
+          "file": "assets/audio/laptop/key-042.wav",
+          "durationMs": 159,
+          "startMs": 9355
+        },
+        {
+          "file": "assets/audio/laptop/key-043.wav",
+          "durationMs": 99,
+          "startMs": 9510
+        },
+        {
+          "file": "assets/audio/laptop/key-044.wav",
+          "durationMs": 224,
+          "startMs": 9605
+        },
+        {
+          "file": "assets/audio/laptop/key-045.wav",
+          "durationMs": 224,
+          "startMs": 10025
+        },
+        {
+          "file": "assets/audio/laptop/key-046.wav",
+          "durationMs": 94,
+          "startMs": 10360
+        },
+        {
+          "file": "assets/audio/laptop/key-047.wav",
+          "durationMs": 184,
+          "startMs": 10450
+        },
+        {
+          "file": "assets/audio/laptop/key-048.wav",
+          "durationMs": 224,
+          "startMs": 10630
+        },
+        {
+          "file": "assets/audio/laptop/key-049.wav",
+          "durationMs": 134,
+          "startMs": 10930
+        },
+        {
+          "file": "assets/audio/laptop/key-050.wav",
+          "durationMs": 214,
+          "startMs": 11060
+        },
+        {
+          "file": "assets/audio/laptop/key-051.wav",
+          "durationMs": 224,
+          "startMs": 11270
+        },
+        {
+          "file": "assets/audio/laptop/key-052.wav",
+          "durationMs": 224,
+          "startMs": 11520
+        },
+        {
+          "file": "assets/audio/laptop/key-053.wav",
+          "durationMs": 174,
+          "startMs": 11740
+        },
+        {
+          "file": "assets/audio/laptop/key-054.wav",
+          "durationMs": 224,
+          "startMs": 11910
+        },
+        {
+          "file": "assets/audio/laptop/key-055.wav",
+          "durationMs": 224,
+          "startMs": 12130
+        },
+        {
+          "file": "assets/audio/laptop/key-056.wav",
+          "durationMs": 184,
+          "startMs": 12665
+        },
+        {
+          "file": "assets/audio/laptop/key-057.wav",
+          "durationMs": 94,
+          "startMs": 12845
+        },
+        {
+          "file": "assets/audio/laptop/key-058.wav",
+          "durationMs": 109,
+          "startMs": 12935
+        },
+        {
+          "file": "assets/audio/laptop/key-059.wav",
+          "durationMs": 224,
+          "startMs": 13040
+        },
+        {
+          "file": "assets/audio/laptop/key-060.wav",
+          "durationMs": 224,
+          "startMs": 13260
+        },
+        {
+          "file": "assets/audio/laptop/key-061.wav",
+          "durationMs": 224,
+          "startMs": 13695
+        },
+        {
+          "file": "assets/audio/laptop/key-062.wav",
+          "durationMs": 224,
+          "startMs": 13940
+        },
+        {
+          "file": "assets/audio/laptop/key-063.wav",
+          "durationMs": 224,
+          "startMs": 14240
+        },
+        {
+          "file": "assets/audio/laptop/key-064.wav",
+          "durationMs": 84,
+          "startMs": 14590
+        },
+        {
+          "file": "assets/audio/laptop/key-065.wav",
+          "durationMs": 224,
+          "startMs": 14670
+        },
+        {
+          "file": "assets/audio/laptop/key-066.wav",
+          "durationMs": 154,
+          "startMs": 14925
+        },
+        {
+          "file": "assets/audio/laptop/key-067.wav",
+          "durationMs": 219,
+          "startMs": 15075
+        },
+        {
+          "file": "assets/audio/laptop/key-068.wav",
+          "durationMs": 224,
+          "startMs": 15290
+        },
+        {
+          "file": "assets/audio/laptop/key-069.wav",
+          "durationMs": 89,
+          "startMs": 15575
+        },
+        {
+          "file": "assets/audio/laptop/key-070.wav",
+          "durationMs": 224,
+          "startMs": 15660
+        },
+        {
+          "file": "assets/audio/laptop/key-071.wav",
+          "durationMs": 79,
+          "startMs": 16155
+        },
+        {
+          "file": "assets/audio/laptop/key-072.wav",
+          "durationMs": 224,
+          "startMs": 16230
+        },
+        {
+          "file": "assets/audio/laptop/key-073.wav",
+          "durationMs": 224,
+          "startMs": 16940
+        },
+        {
+          "file": "assets/audio/laptop/key-074.wav",
+          "durationMs": 224,
+          "startMs": 17435
+        },
+        {
+          "file": "assets/audio/laptop/key-075.wav",
+          "durationMs": 89,
+          "startMs": 17805
+        },
+        {
+          "file": "assets/audio/laptop/key-076.wav",
+          "durationMs": 224,
+          "startMs": 17890
+        },
+        {
+          "file": "assets/audio/laptop/key-077.wav",
+          "durationMs": 94,
+          "startMs": 18365
+        },
+        {
+          "file": "assets/audio/laptop/key-078.wav",
+          "durationMs": 224,
+          "startMs": 18455
+        },
+        {
+          "file": "assets/audio/laptop/key-079.wav",
+          "durationMs": 79,
+          "startMs": 18785
+        },
+        {
+          "file": "assets/audio/laptop/key-080.wav",
+          "durationMs": 199,
+          "startMs": 18860
+        },
+        {
+          "file": "assets/audio/laptop/key-081.wav",
+          "durationMs": 224,
+          "startMs": 19055
+        },
+        {
+          "file": "assets/audio/laptop/key-082.wav",
+          "durationMs": 79,
+          "startMs": 19325
+        },
+        {
+          "file": "assets/audio/laptop/key-083.wav",
+          "durationMs": 224,
+          "startMs": 19400
+        },
+        {
+          "file": "assets/audio/laptop/key-084.wav",
+          "durationMs": 84,
+          "startMs": 19620
+        },
+        {
+          "file": "assets/audio/laptop/key-085.wav",
+          "durationMs": 164,
+          "startMs": 19700
+        },
+        {
+          "file": "assets/audio/laptop/key-086.wav",
+          "durationMs": 89,
+          "startMs": 19860
+        },
+        {
+          "file": "assets/audio/laptop/key-087.wav",
+          "durationMs": 224,
+          "startMs": 19945
+        },
+        {
+          "file": "assets/audio/laptop/key-088.wav",
+          "durationMs": 224,
+          "startMs": 20525
+        },
+        {
+          "file": "assets/audio/laptop/key-089.wav",
+          "durationMs": 224,
+          "startMs": 20980
+        },
+        {
+          "file": "assets/audio/laptop/key-090.wav",
+          "durationMs": 84,
+          "startMs": 21230
+        },
+        {
+          "file": "assets/audio/laptop/key-091.wav",
+          "durationMs": 169,
+          "startMs": 21310
+        },
+        {
+          "file": "assets/audio/laptop/key-092.wav",
+          "durationMs": 94,
+          "startMs": 21475
+        },
+        {
+          "file": "assets/audio/laptop/key-093.wav",
+          "durationMs": 224,
+          "startMs": 21565
+        },
+        {
+          "file": "assets/audio/laptop/key-094.wav",
+          "durationMs": 144,
+          "startMs": 21855
+        },
+        {
+          "file": "assets/audio/laptop/key-095.wav",
+          "durationMs": 224,
+          "startMs": 21995
+        },
+        {
+          "file": "assets/audio/laptop/key-096.wav",
+          "durationMs": 84,
+          "startMs": 22245
+        },
+        {
+          "file": "assets/audio/laptop/key-097.wav",
+          "durationMs": 224,
+          "startMs": 22325
+        },
+        {
+          "file": "assets/audio/laptop/key-098.wav",
+          "durationMs": 99,
+          "startMs": 22625
+        },
+        {
+          "file": "assets/audio/laptop/key-099.wav",
+          "durationMs": 224,
+          "startMs": 22720
+        },
+        {
+          "file": "assets/audio/laptop/key-100.wav",
+          "durationMs": 224,
+          "startMs": 23100
+        },
+        {
+          "file": "assets/audio/laptop/key-101.wav",
+          "durationMs": 94,
+          "startMs": 23390
+        },
+        {
+          "file": "assets/audio/laptop/key-102.wav",
+          "durationMs": 224,
+          "startMs": 23480
+        },
+        {
+          "file": "assets/audio/laptop/key-103.wav",
+          "durationMs": 79,
+          "startMs": 23750
+        },
+        {
+          "file": "assets/audio/laptop/key-104.wav",
+          "durationMs": 224,
+          "startMs": 23825
+        },
+        {
+          "file": "assets/audio/laptop/key-105.wav",
+          "durationMs": 224,
+          "startMs": 24095
+        },
+        {
+          "file": "assets/audio/laptop/key-106.wav",
+          "durationMs": 224,
+          "startMs": 24360
+        },
+        {
+          "file": "assets/audio/laptop/key-107.wav",
+          "durationMs": 84,
+          "startMs": 24760
+        },
+        {
+          "file": "assets/audio/laptop/key-108.wav",
+          "durationMs": 144,
+          "startMs": 24840
+        },
+        {
+          "file": "assets/audio/laptop/key-109.wav",
+          "durationMs": 224,
+          "startMs": 24980
+        },
+        {
+          "file": "assets/audio/laptop/key-110.wav",
+          "durationMs": 104,
+          "startMs": 25395
+        },
+        {
+          "file": "assets/audio/laptop/key-111.wav",
+          "durationMs": 224,
+          "startMs": 25495
+        },
+        {
+          "file": "assets/audio/laptop/key-112.wav",
+          "durationMs": 109,
+          "startMs": 25715
+        },
+        {
+          "file": "assets/audio/laptop/key-113.wav",
+          "durationMs": 154,
+          "startMs": 25820
+        },
+        {
+          "file": "assets/audio/laptop/key-114.wav",
+          "durationMs": 219,
+          "startMs": 25970
+        },
+        {
+          "file": "assets/audio/laptop/key-115.wav",
+          "durationMs": 209,
+          "startMs": 26185
+        },
+        {
+          "file": "assets/audio/laptop/key-116.wav",
+          "durationMs": 99,
+          "startMs": 26390
+        },
+        {
+          "file": "assets/audio/laptop/key-117.wav",
+          "durationMs": 219,
+          "startMs": 26485
+        },
+        {
+          "file": "assets/audio/laptop/key-118.wav",
+          "durationMs": 224,
+          "startMs": 26700
+        },
+        {
+          "file": "assets/audio/laptop/key-119.wav",
+          "durationMs": 79,
+          "startMs": 26970
+        },
+        {
+          "file": "assets/audio/laptop/key-120.wav",
+          "durationMs": 224,
+          "startMs": 27045
+        },
+        {
+          "file": "assets/audio/laptop/key-121.wav",
+          "durationMs": 108,
+          "startMs": 27640
+        }
+      ]
+    },
+    {
+      "id": "computer",
+      "label": "Computer Keys",
+      "original": "assets/audio/computer/computer.mp3",
+      "keyMap": {
+        "Escape": 37,
+        "F1": 50,
+        "F2": 30,
+        "F3": 23,
+        "F4": 55,
+        "F5": 33,
+        "F6": 46,
+        "F7": 39,
+        "F8": 13,
+        "F9": 16,
+        "F10": 45,
+        "F11": 24,
+        "F12": 2,
+        "F13": 8,
+        "F14": 44,
+        "F15": 9,
+        "F16": 49,
+        "F17": 42,
+        "F18": 64,
+        "F19": 63,
+        "F20": 48,
+        "F21": 1,
+        "F22": 7,
+        "F23": 43,
+        "F24": 27,
+        "PrintScreen": 12,
+        "ScrollLock": 59,
+        "Pause": 21,
+        "Backquote": 15,
+        "Digit1": 53,
+        "Digit2": 40,
+        "Digit3": 35,
+        "Digit4": 56,
+        "Digit5": 32,
+        "Digit6": 18,
+        "Digit7": 57,
+        "Digit8": 34,
+        "Digit9": 54,
+        "Digit0": 26,
+        "Minus": 61,
+        "Equal": 22,
+        "Backspace": 20,
+        "Tab": 58,
+        "KeyQ": 10,
+        "KeyW": 4,
+        "KeyE": 51,
+        "KeyR": 52,
+        "KeyT": 6,
+        "KeyY": 31,
+        "KeyU": 5,
+        "KeyI": 38,
+        "KeyO": 29,
+        "KeyP": 41,
+        "BracketLeft": 47,
+        "BracketRight": 17,
+        "Backslash": 25,
+        "CapsLock": 60,
+        "KeyA": 3,
+        "KeyS": 28,
+        "KeyD": 11,
+        "KeyF": 36,
+        "KeyG": 0,
+        "KeyH": 19,
+        "KeyJ": 14,
+        "KeyK": 62,
+        "KeyL": 37,
+        "Semicolon": 50,
+        "Quote": 30,
+        "Enter": 23,
+        "ShiftLeft": 55,
+        "KeyZ": 33,
+        "KeyX": 46,
+        "KeyC": 39,
+        "KeyV": 13,
+        "KeyB": 16,
+        "KeyN": 45,
+        "KeyM": 24,
+        "Comma": 2,
+        "Period": 8,
+        "Slash": 44,
+        "ShiftRight": 9,
+        "ControlLeft": 49,
+        "MetaLeft": 42,
+        "AltLeft": 64,
+        "Space": 63,
+        "AltRight": 48,
+        "MetaRight": 1,
+        "ContextMenu": 7,
+        "ControlRight": 43,
+        "Insert": 27,
+        "Home": 12,
+        "PageUp": 59,
+        "Delete": 21,
+        "End": 15,
+        "PageDown": 53,
+        "ArrowUp": 40,
+        "ArrowLeft": 35,
+        "ArrowDown": 56,
+        "ArrowRight": 32,
+        "NumLock": 18,
+        "NumpadDivide": 57,
+        "NumpadMultiply": 34,
+        "NumpadSubtract": 54,
+        "NumpadAdd": 26,
+        "NumpadEnter": 61,
+        "NumpadDecimal": 22,
+        "NumpadEqual": 20,
+        "NumpadComma": 58,
+        "Numpad0": 10,
+        "Numpad1": 4,
+        "Numpad2": 51,
+        "Numpad3": 52,
+        "Numpad4": 6,
+        "Numpad5": 31,
+        "Numpad6": 5,
+        "Numpad7": 38,
+        "Numpad8": 29,
+        "Numpad9": 41,
+        "IntlBackslash": 47,
+        "IntlRo": 17,
+        "IntlYen": 25,
+        "Convert": 60,
+        "NonConvert": 3,
+        "KanaMode": 28,
+        "Lang1": 11,
+        "Lang2": 36
+      },
+      "clips": [
+        {
+          "file": "assets/audio/computer/key-001.wav",
+          "durationMs": 174,
+          "startMs": 300
+        },
+        {
+          "file": "assets/audio/computer/key-002.wav",
+          "durationMs": 224,
+          "startMs": 470
+        },
+        {
+          "file": "assets/audio/computer/key-003.wav",
+          "durationMs": 174,
+          "startMs": 710
+        },
+        {
+          "file": "assets/audio/computer/key-004.wav",
+          "durationMs": 114,
+          "startMs": 880
+        },
+        {
+          "file": "assets/audio/computer/key-005.wav",
+          "durationMs": 89,
+          "startMs": 990
+        },
+        {
+          "file": "assets/audio/computer/key-006.wav",
+          "durationMs": 114,
+          "startMs": 1075
+        },
+        {
+          "file": "assets/audio/computer/key-007.wav",
+          "durationMs": 219,
+          "startMs": 1185
+        },
+        {
+          "file": "assets/audio/computer/key-008.wav",
+          "durationMs": 169,
+          "startMs": 1400
+        },
+        {
+          "file": "assets/audio/computer/key-009.wav",
+          "durationMs": 134,
+          "startMs": 1565
+        },
+        {
+          "file": "assets/audio/computer/key-010.wav",
+          "durationMs": 99,
+          "startMs": 1695
+        },
+        {
+          "file": "assets/audio/computer/key-011.wav",
+          "durationMs": 114,
+          "startMs": 1790
+        },
+        {
+          "file": "assets/audio/computer/key-012.wav",
+          "durationMs": 94,
+          "startMs": 1900
+        },
+        {
+          "file": "assets/audio/computer/key-013.wav",
+          "durationMs": 119,
+          "startMs": 1990
+        },
+        {
+          "file": "assets/audio/computer/key-014.wav",
+          "durationMs": 109,
+          "startMs": 2105
+        },
+        {
+          "file": "assets/audio/computer/key-015.wav",
+          "durationMs": 119,
+          "startMs": 2210
+        },
+        {
+          "file": "assets/audio/computer/key-016.wav",
+          "durationMs": 109,
+          "startMs": 2325
+        },
+        {
+          "file": "assets/audio/computer/key-017.wav",
+          "durationMs": 224,
+          "startMs": 2430
+        },
+        {
+          "file": "assets/audio/computer/key-018.wav",
+          "durationMs": 89,
+          "startMs": 2825
+        },
+        {
+          "file": "assets/audio/computer/key-019.wav",
+          "durationMs": 159,
+          "startMs": 2910
+        },
+        {
+          "file": "assets/audio/computer/key-020.wav",
+          "durationMs": 109,
+          "startMs": 3065
+        },
+        {
+          "file": "assets/audio/computer/key-021.wav",
+          "durationMs": 129,
+          "startMs": 3170
+        },
+        {
+          "file": "assets/audio/computer/key-022.wav",
+          "durationMs": 129,
+          "startMs": 3295
+        },
+        {
+          "file": "assets/audio/computer/key-023.wav",
+          "durationMs": 134,
+          "startMs": 3420
+        },
+        {
+          "file": "assets/audio/computer/key-024.wav",
+          "durationMs": 84,
+          "startMs": 3550
+        },
+        {
+          "file": "assets/audio/computer/key-025.wav",
+          "durationMs": 139,
+          "startMs": 3630
+        },
+        {
+          "file": "assets/audio/computer/key-026.wav",
+          "durationMs": 94,
+          "startMs": 3765
+        },
+        {
+          "file": "assets/audio/computer/key-027.wav",
+          "durationMs": 174,
+          "startMs": 3855
+        },
+        {
+          "file": "assets/audio/computer/key-028.wav",
+          "durationMs": 79,
+          "startMs": 4025
+        },
+        {
+          "file": "assets/audio/computer/key-029.wav",
+          "durationMs": 114,
+          "startMs": 4100
+        },
+        {
+          "file": "assets/audio/computer/key-030.wav",
+          "durationMs": 114,
+          "startMs": 4210
+        },
+        {
+          "file": "assets/audio/computer/key-031.wav",
+          "durationMs": 84,
+          "startMs": 4320
+        },
+        {
+          "file": "assets/audio/computer/key-032.wav",
+          "durationMs": 94,
+          "startMs": 4400
+        },
+        {
+          "file": "assets/audio/computer/key-033.wav",
+          "durationMs": 99,
+          "startMs": 4490
+        },
+        {
+          "file": "assets/audio/computer/key-034.wav",
+          "durationMs": 109,
+          "startMs": 4585
+        },
+        {
+          "file": "assets/audio/computer/key-035.wav",
+          "durationMs": 114,
+          "startMs": 4690
+        },
+        {
+          "file": "assets/audio/computer/key-036.wav",
+          "durationMs": 224,
+          "startMs": 4800
+        },
+        {
+          "file": "assets/audio/computer/key-037.wav",
+          "durationMs": 124,
+          "startMs": 5035
+        },
+        {
+          "file": "assets/audio/computer/key-038.wav",
+          "durationMs": 224,
+          "startMs": 5155
+        },
+        {
+          "file": "assets/audio/computer/key-039.wav",
+          "durationMs": 224,
+          "startMs": 5375
+        },
+        {
+          "file": "assets/audio/computer/key-040.wav",
+          "durationMs": 94,
+          "startMs": 5785
+        },
+        {
+          "file": "assets/audio/computer/key-041.wav",
+          "durationMs": 224,
+          "startMs": 5875
+        },
+        {
+          "file": "assets/audio/computer/key-042.wav",
+          "durationMs": 84,
+          "startMs": 6305
+        },
+        {
+          "file": "assets/audio/computer/key-043.wav",
+          "durationMs": 114,
+          "startMs": 6385
+        },
+        {
+          "file": "assets/audio/computer/key-044.wav",
+          "durationMs": 109,
+          "startMs": 6495
+        },
+        {
+          "file": "assets/audio/computer/key-045.wav",
+          "durationMs": 99,
+          "startMs": 6600
+        },
+        {
+          "file": "assets/audio/computer/key-046.wav",
+          "durationMs": 94,
+          "startMs": 6695
+        },
+        {
+          "file": "assets/audio/computer/key-047.wav",
+          "durationMs": 224,
+          "startMs": 6785
+        },
+        {
+          "file": "assets/audio/computer/key-048.wav",
+          "durationMs": 89,
+          "startMs": 7125
+        },
+        {
+          "file": "assets/audio/computer/key-049.wav",
+          "durationMs": 114,
+          "startMs": 7210
+        },
+        {
+          "file": "assets/audio/computer/key-050.wav",
+          "durationMs": 104,
+          "startMs": 7320
+        },
+        {
+          "file": "assets/audio/computer/key-051.wav",
+          "durationMs": 224,
+          "startMs": 7420
+        },
+        {
+          "file": "assets/audio/computer/key-052.wav",
+          "durationMs": 99,
+          "startMs": 7770
+        },
+        {
+          "file": "assets/audio/computer/key-053.wav",
+          "durationMs": 224,
+          "startMs": 7865
+        },
+        {
+          "file": "assets/audio/computer/key-054.wav",
+          "durationMs": 109,
+          "startMs": 8630
+        },
+        {
+          "file": "assets/audio/computer/key-055.wav",
+          "durationMs": 89,
+          "startMs": 8735
+        },
+        {
+          "file": "assets/audio/computer/key-056.wav",
+          "durationMs": 114,
+          "startMs": 8820
+        },
+        {
+          "file": "assets/audio/computer/key-057.wav",
+          "durationMs": 164,
+          "startMs": 8930
+        },
+        {
+          "file": "assets/audio/computer/key-058.wav",
+          "durationMs": 149,
+          "startMs": 9090
+        },
+        {
+          "file": "assets/audio/computer/key-059.wav",
+          "durationMs": 124,
+          "startMs": 9235
+        },
+        {
+          "file": "assets/audio/computer/key-060.wav",
+          "durationMs": 134,
+          "startMs": 9355
+        },
+        {
+          "file": "assets/audio/computer/key-061.wav",
+          "durationMs": 129,
+          "startMs": 9485
+        },
+        {
+          "file": "assets/audio/computer/key-062.wav",
+          "durationMs": 79,
+          "startMs": 9610
+        },
+        {
+          "file": "assets/audio/computer/key-063.wav",
+          "durationMs": 169,
+          "startMs": 9685
+        },
+        {
+          "file": "assets/audio/computer/key-064.wav",
+          "durationMs": 199,
+          "startMs": 9850
+        },
+        {
+          "file": "assets/audio/computer/key-065.wav",
+          "durationMs": 52,
+          "startMs": 10045
+        }
+      ]
+    },
+    {
+      "id": "studio",
+      "label": "Studio Typing",
+      "original": "assets/audio/studio/studio.mp3",
+      "keyMap": {
+        "Escape": 112,
+        "F1": 9,
+        "F2": 30,
+        "F3": 109,
+        "F4": 65,
+        "F5": 115,
+        "F6": 0,
+        "F7": 123,
+        "F8": 92,
+        "F9": 95,
+        "F10": 6,
+        "F11": 22,
+        "F12": 91,
+        "F13": 52,
+        "F14": 38,
+        "F15": 83,
+        "F16": 86,
+        "F17": 48,
+        "F18": 13,
+        "F19": 122,
+        "F20": 116,
+        "F21": 82,
+        "F22": 3,
+        "F23": 12,
+        "F24": 27,
+        "PrintScreen": 73,
+        "ScrollLock": 50,
+        "Pause": 85,
+        "Backquote": 63,
+        "Digit1": 20,
+        "Digit2": 49,
+        "Digit3": 1,
+        "Digit4": 106,
+        "Digit5": 34,
+        "Digit6": 79,
+        "Digit7": 15,
+        "Digit8": 59,
+        "Digit9": 124,
+        "Digit0": 104,
+        "Minus": 69,
+        "Equal": 93,
+        "Backspace": 17,
+        "Tab": 57,
+        "KeyQ": 4,
+        "KeyW": 99,
+        "KeyE": 28,
+        "KeyR": 58,
+        "KeyT": 47,
+        "KeyY": 105,
+        "KeyU": 64,
+        "KeyI": 114,
+        "KeyO": 88,
+        "KeyP": 40,
+        "BracketLeft": 96,
+        "BracketRight": 7,
+        "Backslash": 81,
+        "CapsLock": 107,
+        "KeyA": 100,
+        "KeyS": 76,
+        "KeyD": 121,
+        "KeyF": 31,
+        "KeyG": 77,
+        "KeyH": 101,
+        "KeyJ": 42,
+        "KeyK": 16,
+        "KeyL": 61,
+        "Semicolon": 70,
+        "Quote": 68,
+        "Enter": 37,
+        "ShiftLeft": 117,
+        "KeyZ": 120,
+        "KeyX": 14,
+        "KeyC": 51,
+        "KeyV": 55,
+        "KeyB": 87,
+        "KeyN": 41,
+        "KeyM": 67,
+        "Comma": 33,
+        "Period": 5,
+        "Slash": 29,
+        "ShiftRight": 21,
+        "ControlLeft": 11,
+        "MetaLeft": 60,
+        "AltLeft": 54,
+        "Space": 89,
+        "AltRight": 94,
+        "MetaRight": 32,
+        "ContextMenu": 75,
+        "ControlRight": 102,
+        "Insert": 25,
+        "Home": 108,
+        "PageUp": 44,
+        "Delete": 71,
+        "End": 23,
+        "PageDown": 10,
+        "ArrowUp": 98,
+        "ArrowLeft": 80,
+        "ArrowDown": 39,
+        "ArrowRight": 35,
+        "NumLock": 18,
+        "NumpadDivide": 62,
+        "NumpadMultiply": 84,
+        "NumpadSubtract": 103,
+        "NumpadAdd": 72,
+        "NumpadEnter": 8,
+        "NumpadDecimal": 53,
+        "NumpadEqual": 97,
+        "NumpadComma": 74,
+        "Numpad0": 2,
+        "Numpad1": 118,
+        "Numpad2": 19,
+        "Numpad3": 119,
+        "Numpad4": 56,
+        "Numpad5": 26,
+        "Numpad6": 78,
+        "Numpad7": 36,
+        "Numpad8": 110,
+        "Numpad9": 111,
+        "IntlBackslash": 113,
+        "IntlRo": 46,
+        "IntlYen": 43,
+        "Convert": 24,
+        "NonConvert": 66,
+        "KanaMode": 45,
+        "Lang1": 90,
+        "Lang2": 112
+      },
+      "clips": [
+        {
+          "file": "assets/audio/studio/key-001.wav",
+          "durationMs": 204,
+          "startMs": 25
+        },
+        {
+          "file": "assets/audio/studio/key-002.wav",
+          "durationMs": 144,
+          "startMs": 225
+        },
+        {
+          "file": "assets/audio/studio/key-003.wav",
+          "durationMs": 104,
+          "startMs": 365
+        },
+        {
+          "file": "assets/audio/studio/key-004.wav",
+          "durationMs": 124,
+          "startMs": 465
+        },
+        {
+          "file": "assets/audio/studio/key-005.wav",
+          "durationMs": 119,
+          "startMs": 585
+        },
+        {
+          "file": "assets/audio/studio/key-006.wav",
+          "durationMs": 189,
+          "startMs": 700
+        },
+        {
+          "file": "assets/audio/studio/key-007.wav",
+          "durationMs": 104,
+          "startMs": 885
+        },
+        {
+          "file": "assets/audio/studio/key-008.wav",
+          "durationMs": 179,
+          "startMs": 985
+        },
+        {
+          "file": "assets/audio/studio/key-009.wav",
+          "durationMs": 114,
+          "startMs": 1160
+        },
+        {
+          "file": "assets/audio/studio/key-010.wav",
+          "durationMs": 224,
+          "startMs": 1270
+        },
+        {
+          "file": "assets/audio/studio/key-011.wav",
+          "durationMs": 144,
+          "startMs": 1545
+        },
+        {
+          "file": "assets/audio/studio/key-012.wav",
+          "durationMs": 214,
+          "startMs": 1685
+        },
+        {
+          "file": "assets/audio/studio/key-013.wav",
+          "durationMs": 109,
+          "startMs": 1895
+        },
+        {
+          "file": "assets/audio/studio/key-014.wav",
+          "durationMs": 174,
+          "startMs": 2000
+        },
+        {
+          "file": "assets/audio/studio/key-015.wav",
+          "durationMs": 104,
+          "startMs": 2170
+        },
+        {
+          "file": "assets/audio/studio/key-016.wav",
+          "durationMs": 224,
+          "startMs": 2270
+        },
+        {
+          "file": "assets/audio/studio/key-017.wav",
+          "durationMs": 149,
+          "startMs": 2595
+        },
+        {
+          "file": "assets/audio/studio/key-018.wav",
+          "durationMs": 224,
+          "startMs": 2740
+        },
+        {
+          "file": "assets/audio/studio/key-019.wav",
+          "durationMs": 109,
+          "startMs": 2965
+        },
+        {
+          "file": "assets/audio/studio/key-020.wav",
+          "durationMs": 99,
+          "startMs": 3070
+        },
+        {
+          "file": "assets/audio/studio/key-021.wav",
+          "durationMs": 154,
+          "startMs": 3165
+        },
+        {
+          "file": "assets/audio/studio/key-022.wav",
+          "durationMs": 204,
+          "startMs": 3315
+        },
+        {
+          "file": "assets/audio/studio/key-023.wav",
+          "durationMs": 169,
+          "startMs": 3515
+        },
+        {
+          "file": "assets/audio/studio/key-024.wav",
+          "durationMs": 224,
+          "startMs": 3680
+        },
+        {
+          "file": "assets/audio/studio/key-025.wav",
+          "durationMs": 94,
+          "startMs": 3915
+        },
+        {
+          "file": "assets/audio/studio/key-026.wav",
+          "durationMs": 104,
+          "startMs": 4005
+        },
+        {
+          "file": "assets/audio/studio/key-027.wav",
+          "durationMs": 114,
+          "startMs": 4105
+        },
+        {
+          "file": "assets/audio/studio/key-028.wav",
+          "durationMs": 189,
+          "startMs": 4215
+        },
+        {
+          "file": "assets/audio/studio/key-029.wav",
+          "durationMs": 119,
+          "startMs": 4400
+        },
+        {
+          "file": "assets/audio/studio/key-030.wav",
+          "durationMs": 124,
+          "startMs": 4515
+        },
+        {
+          "file": "assets/audio/studio/key-031.wav",
+          "durationMs": 129,
+          "startMs": 4635
+        },
+        {
+          "file": "assets/audio/studio/key-032.wav",
+          "durationMs": 224,
+          "startMs": 4760
+        },
+        {
+          "file": "assets/audio/studio/key-033.wav",
+          "durationMs": 119,
+          "startMs": 5050
+        },
+        {
+          "file": "assets/audio/studio/key-034.wav",
+          "durationMs": 224,
+          "startMs": 5165
+        },
+        {
+          "file": "assets/audio/studio/key-035.wav",
+          "durationMs": 189,
+          "startMs": 5390
+        },
+        {
+          "file": "assets/audio/studio/key-036.wav",
+          "durationMs": 129,
+          "startMs": 5575
+        },
+        {
+          "file": "assets/audio/studio/key-037.wav",
+          "durationMs": 79,
+          "startMs": 5700
+        },
+        {
+          "file": "assets/audio/studio/key-038.wav",
+          "durationMs": 144,
+          "startMs": 5775
+        },
+        {
+          "file": "assets/audio/studio/key-039.wav",
+          "durationMs": 104,
+          "startMs": 5915
+        },
+        {
+          "file": "assets/audio/studio/key-040.wav",
+          "durationMs": 224,
+          "startMs": 6015
+        },
+        {
+          "file": "assets/audio/studio/key-041.wav",
+          "durationMs": 129,
+          "startMs": 6340
+        },
+        {
+          "file": "assets/audio/studio/key-042.wav",
+          "durationMs": 184,
+          "startMs": 6465
+        },
+        {
+          "file": "assets/audio/studio/key-043.wav",
+          "durationMs": 109,
+          "startMs": 6645
+        },
+        {
+          "file": "assets/audio/studio/key-044.wav",
+          "durationMs": 179,
+          "startMs": 6750
+        },
+        {
+          "file": "assets/audio/studio/key-045.wav",
+          "durationMs": 154,
+          "startMs": 6925
+        },
+        {
+          "file": "assets/audio/studio/key-046.wav",
+          "durationMs": 79,
+          "startMs": 7075
+        },
+        {
+          "file": "assets/audio/studio/key-047.wav",
+          "durationMs": 199,
+          "startMs": 7150
+        },
+        {
+          "file": "assets/audio/studio/key-048.wav",
+          "durationMs": 224,
+          "startMs": 7345
+        },
+        {
+          "file": "assets/audio/studio/key-049.wav",
+          "durationMs": 99,
+          "startMs": 7640
+        },
+        {
+          "file": "assets/audio/studio/key-050.wav",
+          "durationMs": 129,
+          "startMs": 7735
+        },
+        {
+          "file": "assets/audio/studio/key-051.wav",
+          "durationMs": 79,
+          "startMs": 7860
+        },
+        {
+          "file": "assets/audio/studio/key-052.wav",
+          "durationMs": 174,
+          "startMs": 7935
+        },
+        {
+          "file": "assets/audio/studio/key-053.wav",
+          "durationMs": 129,
+          "startMs": 8105
+        },
+        {
+          "file": "assets/audio/studio/key-054.wav",
+          "durationMs": 144,
+          "startMs": 8230
+        },
+        {
+          "file": "assets/audio/studio/key-055.wav",
+          "durationMs": 149,
+          "startMs": 8370
+        },
+        {
+          "file": "assets/audio/studio/key-056.wav",
+          "durationMs": 224,
+          "startMs": 8515
+        },
+        {
+          "file": "assets/audio/studio/key-057.wav",
+          "durationMs": 109,
+          "startMs": 8740
+        },
+        {
+          "file": "assets/audio/studio/key-058.wav",
+          "durationMs": 174,
+          "startMs": 8845
+        },
+        {
+          "file": "assets/audio/studio/key-059.wav",
+          "durationMs": 109,
+          "startMs": 9015
+        },
+        {
+          "file": "assets/audio/studio/key-060.wav",
+          "durationMs": 134,
+          "startMs": 9120
+        },
+        {
+          "file": "assets/audio/studio/key-061.wav",
+          "durationMs": 209,
+          "startMs": 9250
+        },
+        {
+          "file": "assets/audio/studio/key-062.wav",
+          "durationMs": 99,
+          "startMs": 9455
+        },
+        {
+          "file": "assets/audio/studio/key-063.wav",
+          "durationMs": 99,
+          "startMs": 9550
+        },
+        {
+          "file": "assets/audio/studio/key-064.wav",
+          "durationMs": 114,
+          "startMs": 9645
+        },
+        {
+          "file": "assets/audio/studio/key-065.wav",
+          "durationMs": 189,
+          "startMs": 9755
+        },
+        {
+          "file": "assets/audio/studio/key-066.wav",
+          "durationMs": 139,
+          "startMs": 9940
+        },
+        {
+          "file": "assets/audio/studio/key-067.wav",
+          "durationMs": 144,
+          "startMs": 10075
+        },
+        {
+          "file": "assets/audio/studio/key-068.wav",
+          "durationMs": 184,
+          "startMs": 10215
+        },
+        {
+          "file": "assets/audio/studio/key-069.wav",
+          "durationMs": 114,
+          "startMs": 10395
+        },
+        {
+          "file": "assets/audio/studio/key-070.wav",
+          "durationMs": 194,
+          "startMs": 10505
+        },
+        {
+          "file": "assets/audio/studio/key-071.wav",
+          "durationMs": 104,
+          "startMs": 10695
+        },
+        {
+          "file": "assets/audio/studio/key-072.wav",
+          "durationMs": 179,
+          "startMs": 10795
+        },
+        {
+          "file": "assets/audio/studio/key-073.wav",
+          "durationMs": 94,
+          "startMs": 10970
+        },
+        {
+          "file": "assets/audio/studio/key-074.wav",
+          "durationMs": 224,
+          "startMs": 11060
+        },
+        {
+          "file": "assets/audio/studio/key-075.wav",
+          "durationMs": 139,
+          "startMs": 11345
+        },
+        {
+          "file": "assets/audio/studio/key-076.wav",
+          "durationMs": 224,
+          "startMs": 11480
+        },
+        {
+          "file": "assets/audio/studio/key-077.wav",
+          "durationMs": 194,
+          "startMs": 11745
+        },
+        {
+          "file": "assets/audio/studio/key-078.wav",
+          "durationMs": 114,
+          "startMs": 11935
+        },
+        {
+          "file": "assets/audio/studio/key-079.wav",
+          "durationMs": 224,
+          "startMs": 12045
+        },
+        {
+          "file": "assets/audio/studio/key-080.wav",
+          "durationMs": 154,
+          "startMs": 12340
+        },
+        {
+          "file": "assets/audio/studio/key-081.wav",
+          "durationMs": 189,
+          "startMs": 12490
+        },
+        {
+          "file": "assets/audio/studio/key-082.wav",
+          "durationMs": 224,
+          "startMs": 12675
+        },
+        {
+          "file": "assets/audio/studio/key-083.wav",
+          "durationMs": 169,
+          "startMs": 12960
+        },
+        {
+          "file": "assets/audio/studio/key-084.wav",
+          "durationMs": 129,
+          "startMs": 13125
+        },
+        {
+          "file": "assets/audio/studio/key-085.wav",
+          "durationMs": 79,
+          "startMs": 13250
+        },
+        {
+          "file": "assets/audio/studio/key-086.wav",
+          "durationMs": 144,
+          "startMs": 13325
+        },
+        {
+          "file": "assets/audio/studio/key-087.wav",
+          "durationMs": 144,
+          "startMs": 13465
+        },
+        {
+          "file": "assets/audio/studio/key-088.wav",
+          "durationMs": 194,
+          "startMs": 13605
+        },
+        {
+          "file": "assets/audio/studio/key-089.wav",
+          "durationMs": 129,
+          "startMs": 13795
+        },
+        {
+          "file": "assets/audio/studio/key-090.wav",
+          "durationMs": 224,
+          "startMs": 13920
+        },
+        {
+          "file": "assets/audio/studio/key-091.wav",
+          "durationMs": 99,
+          "startMs": 14180
+        },
+        {
+          "file": "assets/audio/studio/key-092.wav",
+          "durationMs": 99,
+          "startMs": 14275
+        },
+        {
+          "file": "assets/audio/studio/key-093.wav",
+          "durationMs": 114,
+          "startMs": 14370
+        },
+        {
+          "file": "assets/audio/studio/key-094.wav",
+          "durationMs": 189,
+          "startMs": 14480
+        },
+        {
+          "file": "assets/audio/studio/key-095.wav",
+          "durationMs": 134,
+          "startMs": 14665
+        },
+        {
+          "file": "assets/audio/studio/key-096.wav",
+          "durationMs": 224,
+          "startMs": 14795
+        },
+        {
+          "file": "assets/audio/studio/key-097.wav",
+          "durationMs": 224,
+          "startMs": 15125
+        },
+        {
+          "file": "assets/audio/studio/key-098.wav",
+          "durationMs": 109,
+          "startMs": 15400
+        },
+        {
+          "file": "assets/audio/studio/key-099.wav",
+          "durationMs": 164,
+          "startMs": 15505
+        },
+        {
+          "file": "assets/audio/studio/key-100.wav",
+          "durationMs": 84,
+          "startMs": 15665
+        },
+        {
+          "file": "assets/audio/studio/key-101.wav",
+          "durationMs": 119,
+          "startMs": 15745
+        },
+        {
+          "file": "assets/audio/studio/key-102.wav",
+          "durationMs": 224,
+          "startMs": 15860
+        },
+        {
+          "file": "assets/audio/studio/key-103.wav",
+          "durationMs": 154,
+          "startMs": 16085
+        },
+        {
+          "file": "assets/audio/studio/key-104.wav",
+          "durationMs": 154,
+          "startMs": 16235
+        },
+        {
+          "file": "assets/audio/studio/key-105.wav",
+          "durationMs": 224,
+          "startMs": 16385
+        },
+        {
+          "file": "assets/audio/studio/key-106.wav",
+          "durationMs": 154,
+          "startMs": 16605
+        },
+        {
+          "file": "assets/audio/studio/key-107.wav",
+          "durationMs": 79,
+          "startMs": 16755
+        },
+        {
+          "file": "assets/audio/studio/key-108.wav",
+          "durationMs": 174,
+          "startMs": 16830
+        },
+        {
+          "file": "assets/audio/studio/key-109.wav",
+          "durationMs": 79,
+          "startMs": 17000
+        },
+        {
+          "file": "assets/audio/studio/key-110.wav",
+          "durationMs": 109,
+          "startMs": 17075
+        },
+        {
+          "file": "assets/audio/studio/key-111.wav",
+          "durationMs": 169,
+          "startMs": 17180
+        },
+        {
+          "file": "assets/audio/studio/key-112.wav",
+          "durationMs": 104,
+          "startMs": 17345
+        },
+        {
+          "file": "assets/audio/studio/key-113.wav",
+          "durationMs": 224,
+          "startMs": 17445
+        },
+        {
+          "file": "assets/audio/studio/key-114.wav",
+          "durationMs": 139,
+          "startMs": 17825
+        },
+        {
+          "file": "assets/audio/studio/key-115.wav",
+          "durationMs": 224,
+          "startMs": 17960
+        },
+        {
+          "file": "assets/audio/studio/key-116.wav",
+          "durationMs": 114,
+          "startMs": 18225
+        },
+        {
+          "file": "assets/audio/studio/key-117.wav",
+          "durationMs": 189,
+          "startMs": 18335
+        },
+        {
+          "file": "assets/audio/studio/key-118.wav",
+          "durationMs": 104,
+          "startMs": 18520
+        },
+        {
+          "file": "assets/audio/studio/key-119.wav",
+          "durationMs": 179,
+          "startMs": 18620
+        },
+        {
+          "file": "assets/audio/studio/key-120.wav",
+          "durationMs": 204,
+          "startMs": 18795
+        },
+        {
+          "file": "assets/audio/studio/key-121.wav",
+          "durationMs": 149,
+          "startMs": 18995
+        },
+        {
+          "file": "assets/audio/studio/key-122.wav",
+          "durationMs": 224,
+          "startMs": 19140
+        },
+        {
+          "file": "assets/audio/studio/key-123.wav",
+          "durationMs": 104,
+          "startMs": 19420
+        },
+        {
+          "file": "assets/audio/studio/key-124.wav",
+          "durationMs": 224,
+          "startMs": 19520
+        },
+        {
+          "file": "assets/audio/studio/key-125.wav",
+          "durationMs": 129,
+          "startMs": 19890
+        }
+      ]
+    }
+  ]
+}

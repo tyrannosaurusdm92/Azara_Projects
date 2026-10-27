@@ -1,0 +1,6 @@
+const num=v=>{const n=Number(v);return Number.isFinite(n)?n:null;};
+export function orderWorld(events=[]){return [...events].sort((a,b)=>(num(a.sortKey)??Infinity)-(num(b.sortKey)??Infinity)||String(a.startValue||'').localeCompare(String(b.startValue||'')));}
+export function orderNarrative(events=[]){return [...events].sort((a,b)=>(num(a.metadata?.narrativeOrder)??Infinity)-(num(b.metadata?.narrativeOrder)??Infinity));}
+export function orderRevelation(events=[]){return [...events].sort((a,b)=>(num(a.metadata?.revelationOrder)??Infinity)-(num(b.metadata?.revelationOrder)??Infinity));}
+export function buildThreeClockView(events=[]){return {world:orderWorld(events),narrative:orderNarrative(events),revelation:orderRevelation(events)};}
+export function detectOrderConflicts(events=[]){const issues=[];for(const e of events){const w=num(e.sortKey),n=num(e.metadata?.narrativeOrder),r=num(e.metadata?.revelationOrder);if(r!=null&&n!=null&&r<n&&e.metadata?.mustRevealAtOrAfterNarrative)issues.push({eventId:e.id,type:'reveal-order',message:`${e.title} is revealed before its required narrative point.`});if(e.endValue&&String(e.startValue)>String(e.endValue))issues.push({eventId:e.id,type:'temporal',message:`${e.title} ends before it begins.`});}return issues;}

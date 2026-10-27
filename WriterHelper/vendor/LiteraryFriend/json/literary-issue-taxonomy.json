@@ -1,0 +1,35 @@
+{
+  "issueClasses": [
+    "temporal-contradiction",
+    "state-contradiction",
+    "possession-contradiction",
+    "location-contradiction",
+    "knowledge-contradiction",
+    "memory-contradiction",
+    "ability-contradiction",
+    "world-rule-contradiction",
+    "causal-hole",
+    "motivational-hole",
+    "dangling-thread",
+    "setup-payoff-problem",
+    "reveal-order-error",
+    "continuity-detail",
+    "pov-leak"
+  ],
+  "actions": [
+    "fix",
+    "intentional",
+    "update-canon",
+    "false-positive",
+    "review-later"
+  ],
+  "severity": [
+    "info",
+    "low",
+    "medium",
+    "high",
+    "critical"
+  ],
+  "authorConfirmationRequiredForMutation": true,
+  "evidenceRequired": true
+}

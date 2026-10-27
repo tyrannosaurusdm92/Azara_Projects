@@ -1,0 +1,23 @@
+{
+  "package": "Literary Friend",
+  "packedAt": "2026-10-10",
+  "files": 384,
+  "totalUncompressedBytesBeforeReport": 270526019,
+  "largestFileBytes": 14336000,
+  "referenceHtmlConverted": 131,
+  "javascriptSyntaxChecked": 120,
+  "wasmMagicVerified": true,
+  "splitLibrarySha256Verified": true,
+  "entrypointResourcesVerified": true,
+  "structureVerified": true,
+  "runtimeBrowserSmokeTest": "blocked by administrator for loopback HTTP; browser interaction not confirmed",
+  "backendLiveTest": "not verified against authorized website origin",
+  "embeddedBackend": false,
+  "embeddedPython": false,
+  "embeddedAIModel": false,
+  "imageAssets": 3,
+  "imageAssetsRemoved": 2111,
+  "removedImageBytes": 16442500,
+  "imageDependencyVerified": true,
+  "shellSourceUnchangedExceptServiceWorkerVersion": true
+}

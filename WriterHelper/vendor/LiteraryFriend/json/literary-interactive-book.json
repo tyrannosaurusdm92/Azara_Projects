@@ -1,0 +1,24 @@
+{
+  "schema": "literaryfriend-interactive-book/v1",
+  "chapterPackaging": "json-per-chapter",
+  "features": [
+    "page-flip",
+    "optional-page-flip-sound",
+    "page-themes",
+    "responsive-layout",
+    "text-sizing",
+    "contrast-modes",
+    "reduced-motion",
+    "sound-toggle",
+    "keyboard-navigation",
+    "read-aloud-state"
+  ],
+  "metadata": [
+    "title",
+    "author",
+    "cover",
+    "chapter-order",
+    "navigation",
+    "reading-position"
+  ]
+}

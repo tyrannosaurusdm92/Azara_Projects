@@ -1,0 +1,6 @@
+import {backend} from './backend-client.js'; import {store} from '../core/state-store.js';
+const pid=()=>store.get('activeProject')?.id;
+export const ManuscriptService={
+ list(data={}){return backend.call('nodes.list',{projectId:pid(),...data});}, get(id){return backend.call('nodes.get',{id,nodeId:id});}, save(node){return backend.call('nodes.save',{projectId:pid(),...node});}, move(id,parentId,position){return backend.call('nodes.move',{id,nodeId:id,parentId,position});}, remove(id){return backend.call('nodes.delete',{id,nodeId:id});}, restore(id){return backend.call('nodes.restore',{id,nodeId:id});},
+ notes(data={}){return backend.call('notes.list',{projectId:pid(),...data});}, getNote(id){return backend.call('notes.get',{id,noteId:id});}, searchNotes(query,data={}){return backend.call('notes.search',{projectId:pid(),query,...data});}, saveNote(note){return backend.call('notes.save',{projectId:pid(),...note});}, quickCapture(text,metadata={}){return backend.call('notes.quickcapture',{projectId:pid(),text,metadata});}, deleteNote(id){return backend.call('notes.delete',{id,noteId:id});}, deletedNotes(){return backend.call('notes.recentlydeleted',{projectId:pid()});}, restoreNote(id){return backend.call('notes.restore',{id,noteId:id});}
+};

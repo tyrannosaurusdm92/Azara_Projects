@@ -1,0 +1,100 @@
+{
+  "classes": [
+    {
+      "id": "temporal",
+      "label": "Temporal contradiction"
+    },
+    {
+      "id": "state",
+      "label": "State contradiction"
+    },
+    {
+      "id": "possession",
+      "label": "Possession contradiction"
+    },
+    {
+      "id": "location",
+      "label": "Location contradiction"
+    },
+    {
+      "id": "knowledge",
+      "label": "Knowledge contradiction"
+    },
+    {
+      "id": "memory",
+      "label": "Memory contradiction"
+    },
+    {
+      "id": "ability",
+      "label": "Ability contradiction"
+    },
+    {
+      "id": "world-rule",
+      "label": "World-rule contradiction"
+    },
+    {
+      "id": "causal",
+      "label": "Causal gap"
+    },
+    {
+      "id": "motivational",
+      "label": "Motivational gap"
+    },
+    {
+      "id": "dangling-thread",
+      "label": "Dangling plot thread"
+    },
+    {
+      "id": "setup-payoff",
+      "label": "Setup / payoff gap"
+    },
+    {
+      "id": "reveal-order",
+      "label": "Reveal-order problem"
+    },
+    {
+      "id": "continuity-detail",
+      "label": "Continuity detail"
+    },
+    {
+      "id": "pov-leak",
+      "label": "POV / information leak"
+    }
+  ],
+  "actions": [
+    {
+      "id": "fix",
+      "label": "Fix"
+    },
+    {
+      "id": "intentional",
+      "label": "Intentional"
+    },
+    {
+      "id": "update-canon",
+      "label": "Update Canon"
+    },
+    {
+      "id": "false-positive",
+      "label": "False Positive"
+    },
+    {
+      "id": "review-later",
+      "label": "Review Later"
+    }
+  ],
+  "severity": [
+    "info",
+    "low",
+    "medium",
+    "high",
+    "critical"
+  ],
+  "status": [
+    "open",
+    "intentional",
+    "resolved",
+    "false-positive",
+    "review-later"
+  ]
+}

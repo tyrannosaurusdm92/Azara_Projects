@@ -1,0 +1,4569 @@
+{
+  "version": 1,
+  "source": "Unicode character names and canonical decompositions, Python unicodedata",
+  "letters": {
+    "a": [
+      {
+        "value": "á",
+        "name": "Small Letter A With Acute",
+        "cp": "U+00E1"
+      },
+      {
+        "value": "à",
+        "name": "Small Letter A With Grave",
+        "cp": "U+00E0"
+      },
+      {
+        "value": "â",
+        "name": "Small Letter A With Circumflex",
+        "cp": "U+00E2"
+      },
+      {
+        "value": "ä",
+        "name": "Small Letter A With Diaeresis",
+        "cp": "U+00E4"
+      },
+      {
+        "value": "ã",
+        "name": "Small Letter A With Tilde",
+        "cp": "U+00E3"
+      },
+      {
+        "value": "å",
+        "name": "Small Letter A With Ring Above",
+        "cp": "U+00E5"
+      },
+      {
+        "value": "ā",
+        "name": "Small Letter A With Macron",
+        "cp": "U+0101"
+      },
+      {
+        "value": "ă",
+        "name": "Small Letter A With Breve",
+        "cp": "U+0103"
+      },
+      {
+        "value": "ą",
+        "name": "Small Letter A With Ogonek",
+        "cp": "U+0105"
+      },
+      {
+        "value": "ǎ",
+        "name": "Small Letter A With Caron",
+        "cp": "U+01CE"
+      },
+      {
+        "value": "ȧ",
+        "name": "Small Letter A With Dot Above",
+        "cp": "U+0227"
+      },
+      {
+        "value": "ạ",
+        "name": "Small Letter A With Dot Below",
+        "cp": "U+1EA1"
+      },
+      {
+        "value": "ả",
+        "name": "Small Letter A With Hook Above",
+        "cp": "U+1EA3"
+      },
+      {
+        "value": "ấ",
+        "name": "Small Letter A With Circumflex And Acute",
+        "cp": "U+1EA5"
+      },
+      {
+        "value": "ầ",
+        "name": "Small Letter A With Circumflex And Grave",
+        "cp": "U+1EA7"
+      },
+      {
+        "value": "ẩ",
+        "name": "Small Letter A With Circumflex And Hook Above",
+        "cp": "U+1EA9"
+      },
+      {
+        "value": "ẫ",
+        "name": "Small Letter A With Circumflex And Tilde",
+        "cp": "U+1EAB"
+      },
+      {
+        "value": "ậ",
+        "name": "Small Letter A With Circumflex And Dot Below",
+        "cp": "U+1EAD"
+      },
+      {
+        "value": "ắ",
+        "name": "Small Letter A With Breve And Acute",
+        "cp": "U+1EAF"
+      },
+      {
+        "value": "ằ",
+        "name": "Small Letter A With Breve And Grave",
+        "cp": "U+1EB1"
+      },
+      {
+        "value": "ẳ",
+        "name": "Small Letter A With Breve And Hook Above",
+        "cp": "U+1EB3"
+      },
+      {
+        "value": "ẵ",
+        "name": "Small Letter A With Breve And Tilde",
+        "cp": "U+1EB5"
+      },
+      {
+        "value": "ặ",
+        "name": "Small Letter A With Breve And Dot Below",
+        "cp": "U+1EB7"
+      },
+      {
+        "value": "æ",
+        "name": "Latin Small Letter Ae",
+        "cp": "U+00E6"
+      },
+      {
+        "value": "ǟ",
+        "name": "Small Letter A With Diaeresis And Macron",
+        "cp": "U+01DF"
+      },
+      {
+        "value": "ǡ",
+        "name": "Small Letter A With Dot Above And Macron",
+        "cp": "U+01E1"
+      },
+      {
+        "value": "ǻ",
+        "name": "Small Letter A With Ring Above And Acute",
+        "cp": "U+01FB"
+      },
+      {
+        "value": "ȁ",
+        "name": "Small Letter A With Double Grave",
+        "cp": "U+0201"
+      },
+      {
+        "value": "ȃ",
+        "name": "Small Letter A With Inverted Breve",
+        "cp": "U+0203"
+      },
+      {
+        "value": "ɐ",
+        "name": "Latin Small Letter Turned A",
+        "cp": "U+0250"
+      },
+      {
+        "value": "ɑ",
+        "name": "Latin Small Letter Alpha",
+        "cp": "U+0251"
+      },
+      {
+        "value": "ɒ",
+        "name": "Latin Small Letter Turned Alpha",
+        "cp": "U+0252"
+      },
+      {
+        "value": "ḁ",
+        "name": "Small Letter A With Ring Below",
+        "cp": "U+1E01"
+      },
+      {
+        "value": "ẚ",
+        "name": "Small Letter A With Right Half Ring",
+        "cp": "U+1E9A"
+      },
+      {
+        "value": "ⱥ",
+        "name": "Small Letter A With Stroke",
+        "cp": "U+2C65"
+      }
+    ],
+    "b": [
+      {
+        "value": "ḃ",
+        "name": "Small Letter B With Dot Above",
+        "cp": "U+1E03"
+      },
+      {
+        "value": "ḅ",
+        "name": "Small Letter B With Dot Below",
+        "cp": "U+1E05"
+      },
+      {
+        "value": "ḇ",
+        "name": "Small Letter B With Line Below",
+        "cp": "U+1E07"
+      },
+      {
+        "value": "ƀ",
+        "name": "Small Letter B With Stroke",
+        "cp": "U+0180"
+      },
+      {
+        "value": "ƃ",
+        "name": "Small Letter B With Topbar",
+        "cp": "U+0183"
+      },
+      {
+        "value": "ɓ",
+        "name": "Latin Small Letter B With Hook",
+        "cp": "U+0253"
+      },
+      {
+        "value": "ꞗ",
+        "name": "Small Letter B With Flourish",
+        "cp": "U+A797"
+      }
+    ],
+    "c": [
+      {
+        "value": "ç",
+        "name": "Small Letter C With Cedilla",
+        "cp": "U+00E7"
+      },
+      {
+        "value": "ć",
+        "name": "Small Letter C With Acute",
+        "cp": "U+0107"
+      },
+      {
+        "value": "ĉ",
+        "name": "Small Letter C With Circumflex",
+        "cp": "U+0109"
+      },
+      {
+        "value": "ċ",
+        "name": "Small Letter C With Dot Above",
+        "cp": "U+010B"
+      },
+      {
+        "value": "č",
+        "name": "Small Letter C With Caron",
+        "cp": "U+010D"
+      },
+      {
+        "value": "ƈ",
+        "name": "Small Letter C With Hook",
+        "cp": "U+0188"
+      },
+      {
+        "value": "ȼ",
+        "name": "Small Letter C With Stroke",
+        "cp": "U+023C"
+      },
+      {
+        "value": "ḉ",
+        "name": "Small Letter C With Cedilla And Acute",
+        "cp": "U+1E09"
+      },
+      {
+        "value": "ꞓ",
+        "name": "Small Letter C With Bar",
+        "cp": "U+A793"
+      },
+      {
+        "value": "ꞔ",
+        "name": "Small Letter C With Palatal Hook",
+        "cp": "U+A794"
+      }
+    ],
+    "d": [
+      {
+        "value": "ď",
+        "name": "Small Letter D With Caron",
+        "cp": "U+010F"
+      },
+      {
+        "value": "đ",
+        "name": "Small Letter D With Stroke",
+        "cp": "U+0111"
+      },
+      {
+        "value": "ḋ",
+        "name": "Small Letter D With Dot Above",
+        "cp": "U+1E0B"
+      },
+      {
+        "value": "ḍ",
+        "name": "Small Letter D With Dot Below",
+        "cp": "U+1E0D"
+      },
+      {
+        "value": "ḏ",
+        "name": "Small Letter D With Line Below",
+        "cp": "U+1E0F"
+      },
+      {
+        "value": "ḑ",
+        "name": "Small Letter D With Cedilla",
+        "cp": "U+1E11"
+      },
+      {
+        "value": "ð",
+        "name": "Latin Small Letter Eth",
+        "cp": "U+00F0"
+      },
+      {
+        "value": "ƌ",
+        "name": "Small Letter D With Topbar",
+        "cp": "U+018C"
+      },
+      {
+        "value": "ȡ",
+        "name": "Small Letter D With Curl",
+        "cp": "U+0221"
+      },
+      {
+        "value": "ɗ",
+        "name": "Latin Small Letter D With Hook",
+        "cp": "U+0257"
+      },
+      {
+        "value": "ḓ",
+        "name": "Small Letter D With Circumflex Below",
+        "cp": "U+1E13"
+      },
+      {
+        "value": "ꟈ",
+        "name": "Small Letter D With Short Stroke Overlay",
+        "cp": "U+A7C8"
+      }
+    ],
+    "e": [
+      {
+        "value": "é",
+        "name": "Small Letter E With Acute",
+        "cp": "U+00E9"
+      },
+      {
+        "value": "è",
+        "name": "Small Letter E With Grave",
+        "cp": "U+00E8"
+      },
+      {
+        "value": "ê",
+        "name": "Small Letter E With Circumflex",
+        "cp": "U+00EA"
+      },
+      {
+        "value": "ë",
+        "name": "Small Letter E With Diaeresis",
+        "cp": "U+00EB"
+      },
+      {
+        "value": "ē",
+        "name": "Small Letter E With Macron",
+        "cp": "U+0113"
+      },
+      {
+        "value": "ĕ",
+        "name": "Small Letter E With Breve",
+        "cp": "U+0115"
+      },
+      {
+        "value": "ė",
+        "name": "Small Letter E With Dot Above",
+        "cp": "U+0117"
+      },
+      {
+        "value": "ę",
+        "name": "Small Letter E With Ogonek",
+        "cp": "U+0119"
+      },
+      {
+        "value": "ě",
+        "name": "Small Letter E With Caron",
+        "cp": "U+011B"
+      },
+      {
+        "value": "ẹ",
+        "name": "Small Letter E With Dot Below",
+        "cp": "U+1EB9"
+      },
+      {
+        "value": "ẻ",
+        "name": "Small Letter E With Hook Above",
+        "cp": "U+1EBB"
+      },
+      {
+        "value": "ẽ",
+        "name": "Small Letter E With Tilde",
+        "cp": "U+1EBD"
+      },
+      {
+        "value": "ế",
+        "name": "Small Letter E With Circumflex And Acute",
+        "cp": "U+1EBF"
+      },
+      {
+        "value": "ề",
+        "name": "Small Letter E With Circumflex And Grave",
+        "cp": "U+1EC1"
+      },
+      {
+        "value": "ể",
+        "name": "Small Letter E With Circumflex And Hook Above",
+        "cp": "U+1EC3"
+      },
+      {
+        "value": "ễ",
+        "name": "Small Letter E With Circumflex And Tilde",
+        "cp": "U+1EC5"
+      },
+      {
+        "value": "ệ",
+        "name": "Small Letter E With Circumflex And Dot Below",
+        "cp": "U+1EC7"
+      },
+      {
+        "value": "œ",
+        "name": "Latin Small Ligature Oe",
+        "cp": "U+0153"
+      },
+      {
+        "value": "ȅ",
+        "name": "Small Letter E With Double Grave",
+        "cp": "U+0205"
+      },
+      {
+        "value": "ȇ",
+        "name": "Small Letter E With Inverted Breve",
+        "cp": "U+0207"
+      },
+      {
+        "value": "ȩ",
+        "name": "Small Letter E With Cedilla",
+        "cp": "U+0229"
+      },
+      {
+        "value": "ɇ",
+        "name": "Small Letter E With Stroke",
+        "cp": "U+0247"
+      },
+      {
+        "value": "ə",
+        "name": "Latin Small Letter Schwa",
+        "cp": "U+0259"
+      },
+      {
+        "value": "ɛ",
+        "name": "Latin Small Letter Open E",
+        "cp": "U+025B"
+      },
+      {
+        "value": "ḕ",
+        "name": "Small Letter E With Macron And Grave",
+        "cp": "U+1E15"
+      },
+      {
+        "value": "ḗ",
+        "name": "Small Letter E With Macron And Acute",
+        "cp": "U+1E17"
+      },
+      {
+        "value": "ḙ",
+        "name": "Small Letter E With Circumflex Below",
+        "cp": "U+1E19"
+      },
+      {
+        "value": "ḛ",
+        "name": "Small Letter E With Tilde Below",
+        "cp": "U+1E1B"
+      },
+      {
+        "value": "ḝ",
+        "name": "Small Letter E With Cedilla And Breve",
+        "cp": "U+1E1D"
+      },
+      {
+        "value": "ⱸ",
+        "name": "Small Letter E With Notch",
+        "cp": "U+2C78"
+      }
+    ],
+    "f": [
+      {
+        "value": "ḟ",
+        "name": "Small Letter F With Dot Above",
+        "cp": "U+1E1F"
+      },
+      {
+        "value": "ƒ",
+        "name": "Small Letter F With Hook",
+        "cp": "U+0192"
+      },
+      {
+        "value": "ꞙ",
+        "name": "Small Letter F With Stroke",
+        "cp": "U+A799"
+      }
+    ],
+    "g": [
+      {
+        "value": "ĝ",
+        "name": "Small Letter G With Circumflex",
+        "cp": "U+011D"
+      },
+      {
+        "value": "ğ",
+        "name": "Small Letter G With Breve",
+        "cp": "U+011F"
+      },
+      {
+        "value": "ġ",
+        "name": "Small Letter G With Dot Above",
+        "cp": "U+0121"
+      },
+      {
+        "value": "ģ",
+        "name": "Small Letter G With Cedilla",
+        "cp": "U+0123"
+      },
+      {
+        "value": "ḡ",
+        "name": "Small Letter G With Macron",
+        "cp": "U+1E21"
+      },
+      {
+        "value": "ǥ",
+        "name": "Small Letter G With Stroke",
+        "cp": "U+01E5"
+      },
+      {
+        "value": "ǧ",
+        "name": "Small Letter G With Caron",
+        "cp": "U+01E7"
+      },
+      {
+        "value": "ǵ",
+        "name": "Small Letter G With Acute",
+        "cp": "U+01F5"
+      },
+      {
+        "value": "ɡ",
+        "name": "Latin Small Letter Script G",
+        "cp": "U+0261"
+      },
+      {
+        "value": "ɣ",
+        "name": "Latin Small Letter Gamma",
+        "cp": "U+0263"
+      },
+      {
+        "value": "ꞡ",
+        "name": "Small Letter G With Oblique Stroke",
+        "cp": "U+A7A1"
+      }
+    ],
+    "h": [
+      {
+        "value": "ĥ",
+        "name": "Small Letter H With Circumflex",
+        "cp": "U+0125"
+      },
+      {
+        "value": "ħ",
+        "name": "Small Letter H With Stroke",
+        "cp": "U+0127"
+      },
+      {
+        "value": "ḣ",
+        "name": "Small Letter H With Dot Above",
+        "cp": "U+1E23"
+      },
+      {
+        "value": "ḥ",
+        "name": "Small Letter H With Dot Below",
+        "cp": "U+1E25"
+      },
+      {
+        "value": "ḧ",
+        "name": "Small Letter H With Diaeresis",
+        "cp": "U+1E27"
+      },
+      {
+        "value": "ȟ",
+        "name": "Small Letter H With Caron",
+        "cp": "U+021F"
+      },
+      {
+        "value": "ɦ",
+        "name": "Latin Small Letter H With Hook",
+        "cp": "U+0266"
+      },
+      {
+        "value": "ḩ",
+        "name": "Small Letter H With Cedilla",
+        "cp": "U+1E29"
+      },
+      {
+        "value": "ḫ",
+        "name": "Small Letter H With Breve Below",
+        "cp": "U+1E2B"
+      },
+      {
+        "value": "ẖ",
+        "name": "Small Letter H With Line Below",
+        "cp": "U+1E96"
+      },
+      {
+        "value": "ⱨ",
+        "name": "Small Letter H With Descender",
+        "cp": "U+2C68"
+      },
+      {
+        "value": "ꞕ",
+        "name": "Small Letter H With Palatal Hook",
+        "cp": "U+A795"
+      }
+    ],
+    "i": [
+      {
+        "value": "í",
+        "name": "Small Letter I With Acute",
+        "cp": "U+00ED"
+      },
+      {
+        "value": "ì",
+        "name": "Small Letter I With Grave",
+        "cp": "U+00EC"
+      },
+      {
+        "value": "î",
+        "name": "Small Letter I With Circumflex",
+        "cp": "U+00EE"
+      },
+      {
+        "value": "ï",
+        "name": "Small Letter I With Diaeresis",
+        "cp": "U+00EF"
+      },
+      {
+        "value": "ī",
+        "name": "Small Letter I With Macron",
+        "cp": "U+012B"
+      },
+      {
+        "value": "ĭ",
+        "name": "Small Letter I With Breve",
+        "cp": "U+012D"
+      },
+      {
+        "value": "į",
+        "name": "Small Letter I With Ogonek",
+        "cp": "U+012F"
+      },
+      {
+        "value": "ǐ",
+        "name": "Small Letter I With Caron",
+        "cp": "U+01D0"
+      },
+      {
+        "value": "ị",
+        "name": "Small Letter I With Dot Below",
+        "cp": "U+1ECB"
+      },
+      {
+        "value": "ỉ",
+        "name": "Small Letter I With Hook Above",
+        "cp": "U+1EC9"
+      },
+      {
+        "value": "ĩ",
+        "name": "Small Letter I With Tilde",
+        "cp": "U+0129"
+      },
+      {
+        "value": "ı",
+        "name": "Latin Small Letter Dotless I",
+        "cp": "U+0131"
+      },
+      {
+        "value": "ĳ",
+        "name": "Latin Small Ligature Ij",
+        "cp": "U+0133"
+      },
+      {
+        "value": "ȉ",
+        "name": "Small Letter I With Double Grave",
+        "cp": "U+0209"
+      },
+      {
+        "value": "ȋ",
+        "name": "Small Letter I With Inverted Breve",
+        "cp": "U+020B"
+      },
+      {
+        "value": "ḭ",
+        "name": "Small Letter I With Tilde Below",
+        "cp": "U+1E2D"
+      },
+      {
+        "value": "ḯ",
+        "name": "Small Letter I With Diaeresis And Acute",
+        "cp": "U+1E2F"
+      }
+    ],
+    "j": [
+      {
+        "value": "ĵ",
+        "name": "Small Letter J With Circumflex",
+        "cp": "U+0135"
+      },
+      {
+        "value": "ǰ",
+        "name": "Small Letter J With Caron",
+        "cp": "U+01F0"
+      },
+      {
+        "value": "ȷ",
+        "name": "Latin Small Letter Dotless J",
+        "cp": "U+0237"
+      },
+      {
+        "value": "ɉ",
+        "name": "Small Letter J With Stroke",
+        "cp": "U+0249"
+      },
+      {
+        "value": "ɟ",
+        "name": "Latin Small Letter Dotless J With Stroke",
+        "cp": "U+025F"
+      }
+    ],
+    "k": [
+      {
+        "value": "ķ",
+        "name": "Small Letter K With Cedilla",
+        "cp": "U+0137"
+      },
+      {
+        "value": "ḱ",
+        "name": "Small Letter K With Acute",
+        "cp": "U+1E31"
+      },
+      {
+        "value": "ḳ",
+        "name": "Small Letter K With Dot Below",
+        "cp": "U+1E33"
+      },
+      {
+        "value": "ĸ",
+        "name": "Latin Small Letter Kra",
+        "cp": "U+0138"
+      },
+      {
+        "value": "ƙ",
+        "name": "Small Letter K With Hook",
+        "cp": "U+0199"
+      },
+      {
+        "value": "ǩ",
+        "name": "Small Letter K With Caron",
+        "cp": "U+01E9"
+      },
+      {
+        "value": "ḵ",
+        "name": "Small Letter K With Line Below",
+        "cp": "U+1E35"
+      },
+      {
+        "value": "ⱪ",
+        "name": "Small Letter K With Descender",
+        "cp": "U+2C6A"
+      },
+      {
+        "value": "ꝁ",
+        "name": "Small Letter K With Stroke",
+        "cp": "U+A741"
+      },
+      {
+        "value": "ꝃ",
+        "name": "Small Letter K With Diagonal Stroke",
+        "cp": "U+A743"
+      },
+      {
+        "value": "ꝅ",
+        "name": "Small Letter K With Stroke And Diagonal Stroke",
+        "cp": "U+A745"
+      },
+      {
+        "value": "ꞣ",
+        "name": "Small Letter K With Oblique Stroke",
+        "cp": "U+A7A3"
+      }
+    ],
+    "l": [
+      {
+        "value": "ĺ",
+        "name": "Small Letter L With Acute",
+        "cp": "U+013A"
+      },
+      {
+        "value": "ļ",
+        "name": "Small Letter L With Cedilla",
+        "cp": "U+013C"
+      },
+      {
+        "value": "ľ",
+        "name": "Small Letter L With Caron",
+        "cp": "U+013E"
+      },
+      {
+        "value": "ł",
+        "name": "Small Letter L With Stroke",
+        "cp": "U+0142"
+      },
+      {
+        "value": "ḷ",
+        "name": "Small Letter L With Dot Below",
+        "cp": "U+1E37"
+      },
+      {
+        "value": "ŀ",
+        "name": "Small Letter L With Middle Dot",
+        "cp": "U+0140"
+      },
+      {
+        "value": "ƚ",
+        "name": "Small Letter L With Bar",
+        "cp": "U+019A"
+      },
+      {
+        "value": "ȴ",
+        "name": "Small Letter L With Curl",
+        "cp": "U+0234"
+      },
+      {
+        "value": "ḹ",
+        "name": "Small Letter L With Dot Below And Macron",
+        "cp": "U+1E39"
+      },
+      {
+        "value": "ḻ",
+        "name": "Small Letter L With Line Below",
+        "cp": "U+1E3B"
+      },
+      {
+        "value": "ḽ",
+        "name": "Small Letter L With Circumflex Below",
+        "cp": "U+1E3D"
+      },
+      {
+        "value": "ⱡ",
+        "name": "Small Letter L With Double Bar",
+        "cp": "U+2C61"
+      },
+      {
+        "value": "ꝉ",
+        "name": "Small Letter L With High Stroke",
+        "cp": "U+A749"
+      },
+      {
+        "value": "ꞎ",
+        "name": "Small Letter L With Retroflex Hook And Belt",
+        "cp": "U+A78E"
+      }
+    ],
+    "m": [
+      {
+        "value": "ḿ",
+        "name": "Small Letter M With Acute",
+        "cp": "U+1E3F"
+      },
+      {
+        "value": "ṁ",
+        "name": "Small Letter M With Dot Above",
+        "cp": "U+1E41"
+      },
+      {
+        "value": "ṃ",
+        "name": "Small Letter M With Dot Below",
+        "cp": "U+1E43"
+      },
+      {
+        "value": "ɱ",
+        "name": "Latin Small Letter M With Hook",
+        "cp": "U+0271"
+      }
+    ],
+    "n": [
+      {
+        "value": "ñ",
+        "name": "Small Letter N With Tilde",
+        "cp": "U+00F1"
+      },
+      {
+        "value": "ń",
+        "name": "Small Letter N With Acute",
+        "cp": "U+0144"
+      },
+      {
+        "value": "ņ",
+        "name": "Small Letter N With Cedilla",
+        "cp": "U+0146"
+      },
+      {
+        "value": "ň",
+        "name": "Small Letter N With Caron",
+        "cp": "U+0148"
+      },
+      {
+        "value": "ṅ",
+        "name": "Small Letter N With Dot Above",
+        "cp": "U+1E45"
+      },
+      {
+        "value": "ṇ",
+        "name": "Small Letter N With Dot Below",
+        "cp": "U+1E47"
+      },
+      {
+        "value": "ŋ",
+        "name": "Latin Small Letter Eng",
+        "cp": "U+014B"
+      },
+      {
+        "value": "ƞ",
+        "name": "Small Letter N With Long Right Leg",
+        "cp": "U+019E"
+      },
+      {
+        "value": "ǹ",
+        "name": "Small Letter N With Grave",
+        "cp": "U+01F9"
+      },
+      {
+        "value": "ȵ",
+        "name": "Small Letter N With Curl",
+        "cp": "U+0235"
+      },
+      {
+        "value": "ɲ",
+        "name": "Latin Small Letter N With Left Hook",
+        "cp": "U+0272"
+      },
+      {
+        "value": "ṉ",
+        "name": "Small Letter N With Line Below",
+        "cp": "U+1E49"
+      },
+      {
+        "value": "ṋ",
+        "name": "Small Letter N With Circumflex Below",
+        "cp": "U+1E4B"
+      },
+      {
+        "value": "ꞑ",
+        "name": "Small Letter N With Descender",
+        "cp": "U+A791"
+      },
+      {
+        "value": "ꞥ",
+        "name": "Small Letter N With Oblique Stroke",
+        "cp": "U+A7A5"
+      }
+    ],
+    "o": [
+      {
+        "value": "ó",
+        "name": "Small Letter O With Acute",
+        "cp": "U+00F3"
+      },
+      {
+        "value": "ò",
+        "name": "Small Letter O With Grave",
+        "cp": "U+00F2"
+      },
+      {
+        "value": "ô",
+        "name": "Small Letter O With Circumflex",
+        "cp": "U+00F4"
+      },
+      {
+        "value": "ö",
+        "name": "Small Letter O With Diaeresis",
+        "cp": "U+00F6"
+      },
+      {
+        "value": "õ",
+        "name": "Small Letter O With Tilde",
+        "cp": "U+00F5"
+      },
+      {
+        "value": "ø",
+        "name": "Small Letter O With Stroke",
+        "cp": "U+00F8"
+      },
+      {
+        "value": "ō",
+        "name": "Small Letter O With Macron",
+        "cp": "U+014D"
+      },
+      {
+        "value": "ŏ",
+        "name": "Small Letter O With Breve",
+        "cp": "U+014F"
+      },
+      {
+        "value": "ő",
+        "name": "Small Letter O With Double Acute",
+        "cp": "U+0151"
+      },
+      {
+        "value": "ǒ",
+        "name": "Small Letter O With Caron",
+        "cp": "U+01D2"
+      },
+      {
+        "value": "ọ",
+        "name": "Small Letter O With Dot Below",
+        "cp": "U+1ECD"
+      },
+      {
+        "value": "ỏ",
+        "name": "Small Letter O With Hook Above",
+        "cp": "U+1ECF"
+      },
+      {
+        "value": "ố",
+        "name": "Small Letter O With Circumflex And Acute",
+        "cp": "U+1ED1"
+      },
+      {
+        "value": "ồ",
+        "name": "Small Letter O With Circumflex And Grave",
+        "cp": "U+1ED3"
+      },
+      {
+        "value": "ớ",
+        "name": "Small Letter O With Horn And Acute",
+        "cp": "U+1EDB"
+      },
+      {
+        "value": "ờ",
+        "name": "Small Letter O With Horn And Grave",
+        "cp": "U+1EDD"
+      },
+      {
+        "value": "ở",
+        "name": "Small Letter O With Horn And Hook Above",
+        "cp": "U+1EDF"
+      },
+      {
+        "value": "ỡ",
+        "name": "Small Letter O With Horn And Tilde",
+        "cp": "U+1EE1"
+      },
+      {
+        "value": "ợ",
+        "name": "Small Letter O With Horn And Dot Below",
+        "cp": "U+1EE3"
+      },
+      {
+        "value": "œ",
+        "name": "Latin Small Ligature Oe",
+        "cp": "U+0153"
+      },
+      {
+        "value": "ơ",
+        "name": "Small Letter O With Horn",
+        "cp": "U+01A1"
+      },
+      {
+        "value": "ǫ",
+        "name": "Small Letter O With Ogonek",
+        "cp": "U+01EB"
+      },
+      {
+        "value": "ǭ",
+        "name": "Small Letter O With Ogonek And Macron",
+        "cp": "U+01ED"
+      },
+      {
+        "value": "ǿ",
+        "name": "Small Letter O With Stroke And Acute",
+        "cp": "U+01FF"
+      },
+      {
+        "value": "ȍ",
+        "name": "Small Letter O With Double Grave",
+        "cp": "U+020D"
+      },
+      {
+        "value": "ȏ",
+        "name": "Small Letter O With Inverted Breve",
+        "cp": "U+020F"
+      },
+      {
+        "value": "ȫ",
+        "name": "Small Letter O With Diaeresis And Macron",
+        "cp": "U+022B"
+      },
+      {
+        "value": "ȭ",
+        "name": "Small Letter O With Tilde And Macron",
+        "cp": "U+022D"
+      },
+      {
+        "value": "ȯ",
+        "name": "Small Letter O With Dot Above",
+        "cp": "U+022F"
+      },
+      {
+        "value": "ȱ",
+        "name": "Small Letter O With Dot Above And Macron",
+        "cp": "U+0231"
+      },
+      {
+        "value": "ɔ",
+        "name": "Latin Small Letter Open O",
+        "cp": "U+0254"
+      },
+      {
+        "value": "ṍ",
+        "name": "Small Letter O With Tilde And Acute",
+        "cp": "U+1E4D"
+      },
+      {
+        "value": "ṏ",
+        "name": "Small Letter O With Tilde And Diaeresis",
+        "cp": "U+1E4F"
+      },
+      {
+        "value": "ṑ",
+        "name": "Small Letter O With Macron And Grave",
+        "cp": "U+1E51"
+      },
+      {
+        "value": "ṓ",
+        "name": "Small Letter O With Macron And Acute",
+        "cp": "U+1E53"
+      },
+      {
+        "value": "ổ",
+        "name": "Small Letter O With Circumflex And Hook Above",
+        "cp": "U+1ED5"
+      },
+      {
+        "value": "ỗ",
+        "name": "Small Letter O With Circumflex And Tilde",
+        "cp": "U+1ED7"
+      },
+      {
+        "value": "ộ",
+        "name": "Small Letter O With Circumflex And Dot Below",
+        "cp": "U+1ED9"
+      },
+      {
+        "value": "ⱺ",
+        "name": "Small Letter O With Low Ring Inside",
+        "cp": "U+2C7A"
+      },
+      {
+        "value": "ꝋ",
+        "name": "Small Letter O With Long Stroke Overlay",
+        "cp": "U+A74B"
+      },
+      {
+        "value": "ꝍ",
+        "name": "Small Letter O With Loop",
+        "cp": "U+A74D"
+      }
+    ],
+    "p": [
+      {
+        "value": "ṕ",
+        "name": "Small Letter P With Acute",
+        "cp": "U+1E55"
+      },
+      {
+        "value": "ṗ",
+        "name": "Small Letter P With Dot Above",
+        "cp": "U+1E57"
+      },
+      {
+        "value": "ƥ",
+        "name": "Small Letter P With Hook",
+        "cp": "U+01A5"
+      },
+      {
+        "value": "ꝑ",
+        "name": "Small Letter P With Stroke Through Descender",
+        "cp": "U+A751"
+      },
+      {
+        "value": "ꝓ",
+        "name": "Small Letter P With Flourish",
+        "cp": "U+A753"
+      },
+      {
+        "value": "ꝕ",
+        "name": "Small Letter P With Squirrel Tail",
+        "cp": "U+A755"
+      }
+    ],
+    "q": [
+      {
+        "value": "ɋ",
+        "name": "Small Letter Q With Hook Tail",
+        "cp": "U+024B"
+      },
+      {
+        "value": "ꝗ",
+        "name": "Small Letter Q With Stroke Through Descender",
+        "cp": "U+A757"
+      },
+      {
+        "value": "ꝙ",
+        "name": "Small Letter Q With Diagonal Stroke",
+        "cp": "U+A759"
+      }
+    ],
+    "r": [
+      {
+        "value": "ŕ",
+        "name": "Small Letter R With Acute",
+        "cp": "U+0155"
+      },
+      {
+        "value": "ŗ",
+        "name": "Small Letter R With Cedilla",
+        "cp": "U+0157"
+      },
+      {
+        "value": "ř",
+        "name": "Small Letter R With Caron",
+        "cp": "U+0159"
+      },
+      {
+        "value": "ṙ",
+        "name": "Small Letter R With Dot Above",
+        "cp": "U+1E59"
+      },
+      {
+        "value": "ṛ",
+        "name": "Small Letter R With Dot Below",
+        "cp": "U+1E5B"
+      },
+      {
+        "value": "ȑ",
+        "name": "Small Letter R With Double Grave",
+        "cp": "U+0211"
+      },
+      {
+        "value": "ȓ",
+        "name": "Small Letter R With Inverted Breve",
+        "cp": "U+0213"
+      },
+      {
+        "value": "ɍ",
+        "name": "Small Letter R With Stroke",
+        "cp": "U+024D"
+      },
+      {
+        "value": "ɽ",
+        "name": "Latin Small Letter R With Tail",
+        "cp": "U+027D"
+      },
+      {
+        "value": "ɾ",
+        "name": "Latin Small Letter R With Fishhook",
+        "cp": "U+027E"
+      },
+      {
+        "value": "ṝ",
+        "name": "Small Letter R With Dot Below And Macron",
+        "cp": "U+1E5D"
+      },
+      {
+        "value": "ṟ",
+        "name": "Small Letter R With Line Below",
+        "cp": "U+1E5F"
+      },
+      {
+        "value": "ꞧ",
+        "name": "Small Letter R With Oblique Stroke",
+        "cp": "U+A7A7"
+      }
+    ],
+    "s": [
+      {
+        "value": "ś",
+        "name": "Small Letter S With Acute",
+        "cp": "U+015B"
+      },
+      {
+        "value": "ŝ",
+        "name": "Small Letter S With Circumflex",
+        "cp": "U+015D"
+      },
+      {
+        "value": "ş",
+        "name": "Small Letter S With Cedilla",
+        "cp": "U+015F"
+      },
+      {
+        "value": "š",
+        "name": "Small Letter S With Caron",
+        "cp": "U+0161"
+      },
+      {
+        "value": "ṣ",
+        "name": "Small Letter S With Dot Below",
+        "cp": "U+1E63"
+      },
+      {
+        "value": "ß",
+        "name": "Latin Small Letter Sharp S",
+        "cp": "U+00DF"
+      },
+      {
+        "value": "ſ",
+        "name": "Latin Small Letter Long S",
+        "cp": "U+017F"
+      },
+      {
+        "value": "ș",
+        "name": "Small Letter S With Comma Below",
+        "cp": "U+0219"
+      },
+      {
+        "value": "ȿ",
+        "name": "Small Letter S With Swash Tail",
+        "cp": "U+023F"
+      },
+      {
+        "value": "ʃ",
+        "name": "Latin Small Letter Esh",
+        "cp": "U+0283"
+      },
+      {
+        "value": "ṡ",
+        "name": "Small Letter S With Dot Above",
+        "cp": "U+1E61"
+      },
+      {
+        "value": "ṥ",
+        "name": "Small Letter S With Acute And Dot Above",
+        "cp": "U+1E65"
+      },
+      {
+        "value": "ṧ",
+        "name": "Small Letter S With Caron And Dot Above",
+        "cp": "U+1E67"
+      },
+      {
+        "value": "ṩ",
+        "name": "Small Letter S With Dot Below And Dot Above",
+        "cp": "U+1E69"
+      },
+      {
+        "value": "ꞩ",
+        "name": "Small Letter S With Oblique Stroke",
+        "cp": "U+A7A9"
+      },
+      {
+        "value": "ꟊ",
+        "name": "Small Letter S With Short Stroke Overlay",
+        "cp": "U+A7CA"
+      }
+    ],
+    "t": [
+      {
+        "value": "ţ",
+        "name": "Small Letter T With Cedilla",
+        "cp": "U+0163"
+      },
+      {
+        "value": "ť",
+        "name": "Small Letter T With Caron",
+        "cp": "U+0165"
+      },
+      {
+        "value": "ṫ",
+        "name": "Small Letter T With Dot Above",
+        "cp": "U+1E6B"
+      },
+      {
+        "value": "ṭ",
+        "name": "Small Letter T With Dot Below",
+        "cp": "U+1E6D"
+      },
+      {
+        "value": "ṯ",
+        "name": "Small Letter T With Line Below",
+        "cp": "U+1E6F"
+      },
+      {
+        "value": "ŧ",
+        "name": "Small Letter T With Stroke",
+        "cp": "U+0167"
+      },
+      {
+        "value": "ƫ",
+        "name": "Small Letter T With Palatal Hook",
+        "cp": "U+01AB"
+      },
+      {
+        "value": "ƭ",
+        "name": "Small Letter T With Hook",
+        "cp": "U+01AD"
+      },
+      {
+        "value": "ț",
+        "name": "Small Letter T With Comma Below",
+        "cp": "U+021B"
+      },
+      {
+        "value": "ȶ",
+        "name": "Small Letter T With Curl",
+        "cp": "U+0236"
+      },
+      {
+        "value": "ṱ",
+        "name": "Small Letter T With Circumflex Below",
+        "cp": "U+1E71"
+      },
+      {
+        "value": "ẗ",
+        "name": "Small Letter T With Diaeresis",
+        "cp": "U+1E97"
+      },
+      {
+        "value": "ⱦ",
+        "name": "Small Letter T With Diagonal Stroke",
+        "cp": "U+2C66"
+      }
+    ],
+    "u": [
+      {
+        "value": "ú",
+        "name": "Small Letter U With Acute",
+        "cp": "U+00FA"
+      },
+      {
+        "value": "ù",
+        "name": "Small Letter U With Grave",
+        "cp": "U+00F9"
+      },
+      {
+        "value": "û",
+        "name": "Small Letter U With Circumflex",
+        "cp": "U+00FB"
+      },
+      {
+        "value": "ü",
+        "name": "Small Letter U With Diaeresis",
+        "cp": "U+00FC"
+      },
+      {
+        "value": "ũ",
+        "name": "Small Letter U With Tilde",
+        "cp": "U+0169"
+      },
+      {
+        "value": "ū",
+        "name": "Small Letter U With Macron",
+        "cp": "U+016B"
+      },
+      {
+        "value": "ŭ",
+        "name": "Small Letter U With Breve",
+        "cp": "U+016D"
+      },
+      {
+        "value": "ů",
+        "name": "Small Letter U With Ring Above",
+        "cp": "U+016F"
+      },
+      {
+        "value": "ű",
+        "name": "Small Letter U With Double Acute",
+        "cp": "U+0171"
+      },
+      {
+        "value": "ų",
+        "name": "Small Letter U With Ogonek",
+        "cp": "U+0173"
+      },
+      {
+        "value": "ǔ",
+        "name": "Small Letter U With Caron",
+        "cp": "U+01D4"
+      },
+      {
+        "value": "ụ",
+        "name": "Small Letter U With Dot Below",
+        "cp": "U+1EE5"
+      },
+      {
+        "value": "ủ",
+        "name": "Small Letter U With Hook Above",
+        "cp": "U+1EE7"
+      },
+      {
+        "value": "ứ",
+        "name": "Small Letter U With Horn And Acute",
+        "cp": "U+1EE9"
+      },
+      {
+        "value": "ữ",
+        "name": "Small Letter U With Horn And Tilde",
+        "cp": "U+1EEF"
+      },
+      {
+        "value": "ự",
+        "name": "Small Letter U With Horn And Dot Below",
+        "cp": "U+1EF1"
+      },
+      {
+        "value": "ư",
+        "name": "Small Letter U With Horn",
+        "cp": "U+01B0"
+      },
+      {
+        "value": "ǖ",
+        "name": "Small Letter U With Diaeresis And Macron",
+        "cp": "U+01D6"
+      },
+      {
+        "value": "ǘ",
+        "name": "Small Letter U With Diaeresis And Acute",
+        "cp": "U+01D8"
+      },
+      {
+        "value": "ǚ",
+        "name": "Small Letter U With Diaeresis And Caron",
+        "cp": "U+01DA"
+      },
+      {
+        "value": "ǜ",
+        "name": "Small Letter U With Diaeresis And Grave",
+        "cp": "U+01DC"
+      },
+      {
+        "value": "ȕ",
+        "name": "Small Letter U With Double Grave",
+        "cp": "U+0215"
+      },
+      {
+        "value": "ȗ",
+        "name": "Small Letter U With Inverted Breve",
+        "cp": "U+0217"
+      },
+      {
+        "value": "ʉ",
+        "name": "Latin Small Letter U Bar",
+        "cp": "U+0289"
+      },
+      {
+        "value": "ṳ",
+        "name": "Small Letter U With Diaeresis Below",
+        "cp": "U+1E73"
+      },
+      {
+        "value": "ṵ",
+        "name": "Small Letter U With Tilde Below",
+        "cp": "U+1E75"
+      },
+      {
+        "value": "ṷ",
+        "name": "Small Letter U With Circumflex Below",
+        "cp": "U+1E77"
+      },
+      {
+        "value": "ṹ",
+        "name": "Small Letter U With Tilde And Acute",
+        "cp": "U+1E79"
+      },
+      {
+        "value": "ṻ",
+        "name": "Small Letter U With Macron And Diaeresis",
+        "cp": "U+1E7B"
+      },
+      {
+        "value": "ừ",
+        "name": "Small Letter U With Horn And Grave",
+        "cp": "U+1EEB"
+      },
+      {
+        "value": "ử",
+        "name": "Small Letter U With Horn And Hook Above",
+        "cp": "U+1EED"
+      },
+      {
+        "value": "ꞹ",
+        "name": "Small Letter U With Stroke",
+        "cp": "U+A7B9"
+      }
+    ],
+    "v": [
+      {
+        "value": "ṽ",
+        "name": "Small Letter V With Tilde",
+        "cp": "U+1E7D"
+      },
+      {
+        "value": "ṿ",
+        "name": "Small Letter V With Dot Below",
+        "cp": "U+1E7F"
+      },
+      {
+        "value": "ʋ",
+        "name": "Latin Small Letter V With Hook",
+        "cp": "U+028B"
+      },
+      {
+        "value": "ⱱ",
+        "name": "Small Letter V With Right Hook",
+        "cp": "U+2C71"
+      },
+      {
+        "value": "ⱴ",
+        "name": "Small Letter V With Curl",
+        "cp": "U+2C74"
+      },
+      {
+        "value": "ꝟ",
+        "name": "Small Letter V With Diagonal Stroke",
+        "cp": "U+A75F"
+      }
+    ],
+    "w": [
+      {
+        "value": "ẁ",
+        "name": "Small Letter W With Grave",
+        "cp": "U+1E81"
+      },
+      {
+        "value": "ẃ",
+        "name": "Small Letter W With Acute",
+        "cp": "U+1E83"
+      },
+      {
+        "value": "ŵ",
+        "name": "Small Letter W With Circumflex",
+        "cp": "U+0175"
+      },
+      {
+        "value": "ẅ",
+        "name": "Small Letter W With Diaeresis",
+        "cp": "U+1E85"
+      },
+      {
+        "value": "ẇ",
+        "name": "Small Letter W With Dot Above",
+        "cp": "U+1E87"
+      },
+      {
+        "value": "ẉ",
+        "name": "Small Letter W With Dot Below",
+        "cp": "U+1E89"
+      },
+      {
+        "value": "ʍ",
+        "name": "Latin Small Letter Turned W",
+        "cp": "U+028D"
+      },
+      {
+        "value": "ẘ",
+        "name": "Small Letter W With Ring Above",
+        "cp": "U+1E98"
+      },
+      {
+        "value": "ⱳ",
+        "name": "Small Letter W With Hook",
+        "cp": "U+2C73"
+      }
+    ],
+    "x": [
+      {
+        "value": "ẋ",
+        "name": "Small Letter X With Dot Above",
+        "cp": "U+1E8B"
+      },
+      {
+        "value": "ẍ",
+        "name": "Small Letter X With Diaeresis",
+        "cp": "U+1E8D"
+      },
+      {
+        "value": "χ",
+        "name": "Greek Small Letter Chi",
+        "cp": "U+03C7"
+      }
+    ],
+    "y": [
+      {
+        "value": "ý",
+        "name": "Small Letter Y With Acute",
+        "cp": "U+00FD"
+      },
+      {
+        "value": "ÿ",
+        "name": "Small Letter Y With Diaeresis",
+        "cp": "U+00FF"
+      },
+      {
+        "value": "ŷ",
+        "name": "Small Letter Y With Circumflex",
+        "cp": "U+0177"
+      },
+      {
+        "value": "ỳ",
+        "name": "Small Letter Y With Grave",
+        "cp": "U+1EF3"
+      },
+      {
+        "value": "ỵ",
+        "name": "Small Letter Y With Dot Below",
+        "cp": "U+1EF5"
+      },
+      {
+        "value": "ỷ",
+        "name": "Small Letter Y With Hook Above",
+        "cp": "U+1EF7"
+      },
+      {
+        "value": "ỹ",
+        "name": "Small Letter Y With Tilde",
+        "cp": "U+1EF9"
+      },
+      {
+        "value": "ƴ",
+        "name": "Small Letter Y With Hook",
+        "cp": "U+01B4"
+      },
+      {
+        "value": "ȳ",
+        "name": "Small Letter Y With Macron",
+        "cp": "U+0233"
+      },
+      {
+        "value": "ɏ",
+        "name": "Small Letter Y With Stroke",
+        "cp": "U+024F"
+      },
+      {
+        "value": "ʏ",
+        "name": "Latin Letter Small Capital Y",
+        "cp": "U+028F"
+      },
+      {
+        "value": "ẏ",
+        "name": "Small Letter Y With Dot Above",
+        "cp": "U+1E8F"
+      },
+      {
+        "value": "ẙ",
+        "name": "Small Letter Y With Ring Above",
+        "cp": "U+1E99"
+      },
+      {
+        "value": "ỿ",
+        "name": "Small Letter Y With Loop",
+        "cp": "U+1EFF"
+      }
+    ],
+    "z": [
+      {
+        "value": "ź",
+        "name": "Small Letter Z With Acute",
+        "cp": "U+017A"
+      },
+      {
+        "value": "ż",
+        "name": "Small Letter Z With Dot Above",
+        "cp": "U+017C"
+      },
+      {
+        "value": "ž",
+        "name": "Small Letter Z With Caron",
+        "cp": "U+017E"
+      },
+      {
+        "value": "ẓ",
+        "name": "Small Letter Z With Dot Below",
+        "cp": "U+1E93"
+      },
+      {
+        "value": "ƶ",
+        "name": "Small Letter Z With Stroke",
+        "cp": "U+01B6"
+      },
+      {
+        "value": "ȥ",
+        "name": "Small Letter Z With Hook",
+        "cp": "U+0225"
+      },
+      {
+        "value": "ɀ",
+        "name": "Small Letter Z With Swash Tail",
+        "cp": "U+0240"
+      },
+      {
+        "value": "ʒ",
+        "name": "Latin Small Letter Ezh",
+        "cp": "U+0292"
+      },
+      {
+        "value": "ẑ",
+        "name": "Small Letter Z With Circumflex",
+        "cp": "U+1E91"
+      },
+      {
+        "value": "ẕ",
+        "name": "Small Letter Z With Line Below",
+        "cp": "U+1E95"
+      },
+      {
+        "value": "ⱬ",
+        "name": "Small Letter Z With Descender",
+        "cp": "U+2C6C"
+      }
+    ],
+    "A": [
+      {
+        "value": "Á",
+        "name": "Capital Letter A With Acute",
+        "cp": "U+00C1"
+      },
+      {
+        "value": "À",
+        "name": "Capital Letter A With Grave",
+        "cp": "U+00C0"
+      },
+      {
+        "value": "Â",
+        "name": "Capital Letter A With Circumflex",
+        "cp": "U+00C2"
+      },
+      {
+        "value": "Ä",
+        "name": "Capital Letter A With Diaeresis",
+        "cp": "U+00C4"
+      },
+      {
+        "value": "Ã",
+        "name": "Capital Letter A With Tilde",
+        "cp": "U+00C3"
+      },
+      {
+        "value": "Å",
+        "name": "Capital Letter A With Ring Above",
+        "cp": "U+00C5"
+      },
+      {
+        "value": "Ā",
+        "name": "Capital Letter A With Macron",
+        "cp": "U+0100"
+      },
+      {
+        "value": "Ă",
+        "name": "Capital Letter A With Breve",
+        "cp": "U+0102"
+      },
+      {
+        "value": "Ą",
+        "name": "Capital Letter A With Ogonek",
+        "cp": "U+0104"
+      },
+      {
+        "value": "Ǎ",
+        "name": "Capital Letter A With Caron",
+        "cp": "U+01CD"
+      },
+      {
+        "value": "Ȧ",
+        "name": "Capital Letter A With Dot Above",
+        "cp": "U+0226"
+      },
+      {
+        "value": "Ạ",
+        "name": "Capital Letter A With Dot Below",
+        "cp": "U+1EA0"
+      },
+      {
+        "value": "Ả",
+        "name": "Capital Letter A With Hook Above",
+        "cp": "U+1EA2"
+      },
+      {
+        "value": "Ấ",
+        "name": "Capital Letter A With Circumflex And Acute",
+        "cp": "U+1EA4"
+      },
+      {
+        "value": "Ầ",
+        "name": "Capital Letter A With Circumflex And Grave",
+        "cp": "U+1EA6"
+      },
+      {
+        "value": "Ẩ",
+        "name": "Capital Letter A With Circumflex And Hook Above",
+        "cp": "U+1EA8"
+      },
+      {
+        "value": "Ẫ",
+        "name": "Capital Letter A With Circumflex And Tilde",
+        "cp": "U+1EAA"
+      },
+      {
+        "value": "Ậ",
+        "name": "Capital Letter A With Circumflex And Dot Below",
+        "cp": "U+1EAC"
+      },
+      {
+        "value": "Ắ",
+        "name": "Capital Letter A With Breve And Acute",
+        "cp": "U+1EAE"
+      },
+      {
+        "value": "Ằ",
+        "name": "Capital Letter A With Breve And Grave",
+        "cp": "U+1EB0"
+      },
+      {
+        "value": "Ẳ",
+        "name": "Capital Letter A With Breve And Hook Above",
+        "cp": "U+1EB2"
+      },
+      {
+        "value": "Ẵ",
+        "name": "Capital Letter A With Breve And Tilde",
+        "cp": "U+1EB4"
+      },
+      {
+        "value": "Ặ",
+        "name": "Capital Letter A With Breve And Dot Below",
+        "cp": "U+1EB6"
+      },
+      {
+        "value": "Æ",
+        "name": "Latin Capital Letter Ae",
+        "cp": "U+00C6"
+      },
+      {
+        "value": "Ǟ",
+        "name": "Capital Letter A With Diaeresis And Macron",
+        "cp": "U+01DE"
+      },
+      {
+        "value": "Ǡ",
+        "name": "Capital Letter A With Dot Above And Macron",
+        "cp": "U+01E0"
+      },
+      {
+        "value": "Ǻ",
+        "name": "Capital Letter A With Ring Above And Acute",
+        "cp": "U+01FA"
+      },
+      {
+        "value": "Ȁ",
+        "name": "Capital Letter A With Double Grave",
+        "cp": "U+0200"
+      },
+      {
+        "value": "Ȃ",
+        "name": "Capital Letter A With Inverted Breve",
+        "cp": "U+0202"
+      },
+      {
+        "value": "Ⱥ",
+        "name": "Capital Letter A With Stroke",
+        "cp": "U+023A"
+      },
+      {
+        "value": "Ḁ",
+        "name": "Capital Letter A With Ring Below",
+        "cp": "U+1E00"
+      },
+      {
+        "value": "Ɑ",
+        "name": "Latin Capital Letter Alpha",
+        "cp": "U+2C6D"
+      }
+    ],
+    "B": [
+      {
+        "value": "Ḃ",
+        "name": "Capital Letter B With Dot Above",
+        "cp": "U+1E02"
+      },
+      {
+        "value": "Ḅ",
+        "name": "Capital Letter B With Dot Below",
+        "cp": "U+1E04"
+      },
+      {
+        "value": "Ḇ",
+        "name": "Capital Letter B With Line Below",
+        "cp": "U+1E06"
+      },
+      {
+        "value": "Ɓ",
+        "name": "Capital Letter B With Hook",
+        "cp": "U+0181"
+      },
+      {
+        "value": "Ƃ",
+        "name": "Capital Letter B With Topbar",
+        "cp": "U+0182"
+      },
+      {
+        "value": "Ƀ",
+        "name": "Capital Letter B With Stroke",
+        "cp": "U+0243"
+      },
+      {
+        "value": "Ꞗ",
+        "name": "Capital Letter B With Flourish",
+        "cp": "U+A796"
+      }
+    ],
+    "C": [
+      {
+        "value": "Ç",
+        "name": "Capital Letter C With Cedilla",
+        "cp": "U+00C7"
+      },
+      {
+        "value": "Ć",
+        "name": "Capital Letter C With Acute",
+        "cp": "U+0106"
+      },
+      {
+        "value": "Ĉ",
+        "name": "Capital Letter C With Circumflex",
+        "cp": "U+0108"
+      },
+      {
+        "value": "Ċ",
+        "name": "Capital Letter C With Dot Above",
+        "cp": "U+010A"
+      },
+      {
+        "value": "Č",
+        "name": "Capital Letter C With Caron",
+        "cp": "U+010C"
+      },
+      {
+        "value": "Ƈ",
+        "name": "Capital Letter C With Hook",
+        "cp": "U+0187"
+      },
+      {
+        "value": "Ȼ",
+        "name": "Capital Letter C With Stroke",
+        "cp": "U+023B"
+      },
+      {
+        "value": "Ḉ",
+        "name": "Capital Letter C With Cedilla And Acute",
+        "cp": "U+1E08"
+      },
+      {
+        "value": "Ꞓ",
+        "name": "Capital Letter C With Bar",
+        "cp": "U+A792"
+      },
+      {
+        "value": "Ꞔ",
+        "name": "Capital Letter C With Palatal Hook",
+        "cp": "U+A7C4"
+      }
+    ],
+    "D": [
+      {
+        "value": "Ď",
+        "name": "Capital Letter D With Caron",
+        "cp": "U+010E"
+      },
+      {
+        "value": "Đ",
+        "name": "Capital Letter D With Stroke",
+        "cp": "U+0110"
+      },
+      {
+        "value": "Ḋ",
+        "name": "Capital Letter D With Dot Above",
+        "cp": "U+1E0A"
+      },
+      {
+        "value": "Ḍ",
+        "name": "Capital Letter D With Dot Below",
+        "cp": "U+1E0C"
+      },
+      {
+        "value": "Ḏ",
+        "name": "Capital Letter D With Line Below",
+        "cp": "U+1E0E"
+      },
+      {
+        "value": "Ḑ",
+        "name": "Capital Letter D With Cedilla",
+        "cp": "U+1E10"
+      },
+      {
+        "value": "Ð",
+        "name": "Latin Capital Letter Eth",
+        "cp": "U+00D0"
+      },
+      {
+        "value": "Ɗ",
+        "name": "Capital Letter D With Hook",
+        "cp": "U+018A"
+      },
+      {
+        "value": "Ƌ",
+        "name": "Capital Letter D With Topbar",
+        "cp": "U+018B"
+      },
+      {
+        "value": "ǅ",
+        "name": "Capital Letter D With Small Letter Z With Caron",
+        "cp": "U+01C5"
+      },
+      {
+        "value": "ǲ",
+        "name": "Capital Letter D With Small Letter Z",
+        "cp": "U+01F2"
+      },
+      {
+        "value": "Ḓ",
+        "name": "Capital Letter D With Circumflex Below",
+        "cp": "U+1E12"
+      },
+      {
+        "value": "Ꟈ",
+        "name": "Capital Letter D With Short Stroke Overlay",
+        "cp": "U+A7C7"
+      }
+    ],
+    "E": [
+      {
+        "value": "É",
+        "name": "Capital Letter E With Acute",
+        "cp": "U+00C9"
+      },
+      {
+        "value": "È",
+        "name": "Capital Letter E With Grave",
+        "cp": "U+00C8"
+      },
+      {
+        "value": "Ê",
+        "name": "Capital Letter E With Circumflex",
+        "cp": "U+00CA"
+      },
+      {
+        "value": "Ë",
+        "name": "Capital Letter E With Diaeresis",
+        "cp": "U+00CB"
+      },
+      {
+        "value": "Ē",
+        "name": "Capital Letter E With Macron",
+        "cp": "U+0112"
+      },
+      {
+        "value": "Ĕ",
+        "name": "Capital Letter E With Breve",
+        "cp": "U+0114"
+      },
+      {
+        "value": "Ė",
+        "name": "Capital Letter E With Dot Above",
+        "cp": "U+0116"
+      },
+      {
+        "value": "Ę",
+        "name": "Capital Letter E With Ogonek",
+        "cp": "U+0118"
+      },
+      {
+        "value": "Ě",
+        "name": "Capital Letter E With Caron",
+        "cp": "U+011A"
+      },
+      {
+        "value": "Ẹ",
+        "name": "Capital Letter E With Dot Below",
+        "cp": "U+1EB8"
+      },
+      {
+        "value": "Ẻ",
+        "name": "Capital Letter E With Hook Above",
+        "cp": "U+1EBA"
+      },
+      {
+        "value": "Ẽ",
+        "name": "Capital Letter E With Tilde",
+        "cp": "U+1EBC"
+      },
+      {
+        "value": "Ế",
+        "name": "Capital Letter E With Circumflex And Acute",
+        "cp": "U+1EBE"
+      },
+      {
+        "value": "Ề",
+        "name": "Capital Letter E With Circumflex And Grave",
+        "cp": "U+1EC0"
+      },
+      {
+        "value": "Ể",
+        "name": "Capital Letter E With Circumflex And Hook Above",
+        "cp": "U+1EC2"
+      },
+      {
+        "value": "Ễ",
+        "name": "Capital Letter E With Circumflex And Tilde",
+        "cp": "U+1EC4"
+      },
+      {
+        "value": "Ệ",
+        "name": "Capital Letter E With Circumflex And Dot Below",
+        "cp": "U+1EC6"
+      },
+      {
+        "value": "Œ",
+        "name": "Latin Capital Ligature Oe",
+        "cp": "U+0152"
+      },
+      {
+        "value": "Ə",
+        "name": "Latin Capital Letter Schwa",
+        "cp": "U+018F"
+      },
+      {
+        "value": "Ɛ",
+        "name": "Latin Capital Letter Open E",
+        "cp": "U+0190"
+      },
+      {
+        "value": "Ȅ",
+        "name": "Capital Letter E With Double Grave",
+        "cp": "U+0204"
+      },
+      {
+        "value": "Ȇ",
+        "name": "Capital Letter E With Inverted Breve",
+        "cp": "U+0206"
+      },
+      {
+        "value": "Ȩ",
+        "name": "Capital Letter E With Cedilla",
+        "cp": "U+0228"
+      },
+      {
+        "value": "Ɇ",
+        "name": "Capital Letter E With Stroke",
+        "cp": "U+0246"
+      },
+      {
+        "value": "Ḕ",
+        "name": "Capital Letter E With Macron And Grave",
+        "cp": "U+1E14"
+      },
+      {
+        "value": "Ḗ",
+        "name": "Capital Letter E With Macron And Acute",
+        "cp": "U+1E16"
+      },
+      {
+        "value": "Ḙ",
+        "name": "Capital Letter E With Circumflex Below",
+        "cp": "U+1E18"
+      },
+      {
+        "value": "Ḛ",
+        "name": "Capital Letter E With Tilde Below",
+        "cp": "U+1E1A"
+      },
+      {
+        "value": "Ḝ",
+        "name": "Capital Letter E With Cedilla And Breve",
+        "cp": "U+1E1C"
+      }
+    ],
+    "F": [
+      {
+        "value": "Ḟ",
+        "name": "Capital Letter F With Dot Above",
+        "cp": "U+1E1E"
+      },
+      {
+        "value": "Ƒ",
+        "name": "Capital Letter F With Hook",
+        "cp": "U+0191"
+      },
+      {
+        "value": "Ꞙ",
+        "name": "Capital Letter F With Stroke",
+        "cp": "U+A798"
+      }
+    ],
+    "G": [
+      {
+        "value": "Ĝ",
+        "name": "Capital Letter G With Circumflex",
+        "cp": "U+011C"
+      },
+      {
+        "value": "Ğ",
+        "name": "Capital Letter G With Breve",
+        "cp": "U+011E"
+      },
+      {
+        "value": "Ġ",
+        "name": "Capital Letter G With Dot Above",
+        "cp": "U+0120"
+      },
+      {
+        "value": "Ģ",
+        "name": "Capital Letter G With Cedilla",
+        "cp": "U+0122"
+      },
+      {
+        "value": "Ḡ",
+        "name": "Capital Letter G With Macron",
+        "cp": "U+1E20"
+      },
+      {
+        "value": "Ɠ",
+        "name": "Capital Letter G With Hook",
+        "cp": "U+0193"
+      },
+      {
+        "value": "Ǥ",
+        "name": "Capital Letter G With Stroke",
+        "cp": "U+01E4"
+      },
+      {
+        "value": "Ǧ",
+        "name": "Capital Letter G With Caron",
+        "cp": "U+01E6"
+      },
+      {
+        "value": "Ǵ",
+        "name": "Capital Letter G With Acute",
+        "cp": "U+01F4"
+      },
+      {
+        "value": "Ꞡ",
+        "name": "Capital Letter G With Oblique Stroke",
+        "cp": "U+A7A0"
+      }
+    ],
+    "H": [
+      {
+        "value": "Ĥ",
+        "name": "Capital Letter H With Circumflex",
+        "cp": "U+0124"
+      },
+      {
+        "value": "Ħ",
+        "name": "Capital Letter H With Stroke",
+        "cp": "U+0126"
+      },
+      {
+        "value": "Ḣ",
+        "name": "Capital Letter H With Dot Above",
+        "cp": "U+1E22"
+      },
+      {
+        "value": "Ḥ",
+        "name": "Capital Letter H With Dot Below",
+        "cp": "U+1E24"
+      },
+      {
+        "value": "Ḧ",
+        "name": "Capital Letter H With Diaeresis",
+        "cp": "U+1E26"
+      },
+      {
+        "value": "Ȟ",
+        "name": "Capital Letter H With Caron",
+        "cp": "U+021E"
+      },
+      {
+        "value": "Ḩ",
+        "name": "Capital Letter H With Cedilla",
+        "cp": "U+1E28"
+      },
+      {
+        "value": "Ḫ",
+        "name": "Capital Letter H With Breve Below",
+        "cp": "U+1E2A"
+      },
+      {
+        "value": "Ⱨ",
+        "name": "Capital Letter H With Descender",
+        "cp": "U+2C67"
+      },
+      {
+        "value": "Ɦ",
+        "name": "Capital Letter H With Hook",
+        "cp": "U+A7AA"
+      }
+    ],
+    "I": [
+      {
+        "value": "Í",
+        "name": "Capital Letter I With Acute",
+        "cp": "U+00CD"
+      },
+      {
+        "value": "Ì",
+        "name": "Capital Letter I With Grave",
+        "cp": "U+00CC"
+      },
+      {
+        "value": "Î",
+        "name": "Capital Letter I With Circumflex",
+        "cp": "U+00CE"
+      },
+      {
+        "value": "Ï",
+        "name": "Capital Letter I With Diaeresis",
+        "cp": "U+00CF"
+      },
+      {
+        "value": "Ī",
+        "name": "Capital Letter I With Macron",
+        "cp": "U+012A"
+      },
+      {
+        "value": "Ĭ",
+        "name": "Capital Letter I With Breve",
+        "cp": "U+012C"
+      },
+      {
+        "value": "Į",
+        "name": "Capital Letter I With Ogonek",
+        "cp": "U+012E"
+      },
+      {
+        "value": "Ǐ",
+        "name": "Capital Letter I With Caron",
+        "cp": "U+01CF"
+      },
+      {
+        "value": "Ị",
+        "name": "Capital Letter I With Dot Below",
+        "cp": "U+1ECA"
+      },
+      {
+        "value": "Ỉ",
+        "name": "Capital Letter I With Hook Above",
+        "cp": "U+1EC8"
+      },
+      {
+        "value": "Ĩ",
+        "name": "Capital Letter I With Tilde",
+        "cp": "U+0128"
+      },
+      {
+        "value": "İ",
+        "name": "Capital Letter I With Dot Above",
+        "cp": "U+0130"
+      },
+      {
+        "value": "Ĳ",
+        "name": "Latin Capital Ligature Ij",
+        "cp": "U+0132"
+      },
+      {
+        "value": "Ɨ",
+        "name": "Capital Letter I With Stroke",
+        "cp": "U+0197"
+      },
+      {
+        "value": "Ȉ",
+        "name": "Capital Letter I With Double Grave",
+        "cp": "U+0208"
+      },
+      {
+        "value": "Ȋ",
+        "name": "Capital Letter I With Inverted Breve",
+        "cp": "U+020A"
+      },
+      {
+        "value": "Ḭ",
+        "name": "Capital Letter I With Tilde Below",
+        "cp": "U+1E2C"
+      },
+      {
+        "value": "Ḯ",
+        "name": "Capital Letter I With Diaeresis And Acute",
+        "cp": "U+1E2E"
+      }
+    ],
+    "J": [
+      {
+        "value": "Ĵ",
+        "name": "Capital Letter J With Circumflex",
+        "cp": "U+0134"
+      },
+      {
+        "value": "Ɉ",
+        "name": "Capital Letter J With Stroke",
+        "cp": "U+0248"
+      },
+      {
+        "value": "Ʝ",
+        "name": "Capital Letter J With Crossed-Tail",
+        "cp": "U+A7B2"
+      }
+    ],
+    "K": [
+      {
+        "value": "Ķ",
+        "name": "Capital Letter K With Cedilla",
+        "cp": "U+0136"
+      },
+      {
+        "value": "Ḱ",
+        "name": "Capital Letter K With Acute",
+        "cp": "U+1E30"
+      },
+      {
+        "value": "Ḳ",
+        "name": "Capital Letter K With Dot Below",
+        "cp": "U+1E32"
+      },
+      {
+        "value": "Ƙ",
+        "name": "Capital Letter K With Hook",
+        "cp": "U+0198"
+      },
+      {
+        "value": "Ǩ",
+        "name": "Capital Letter K With Caron",
+        "cp": "U+01E8"
+      },
+      {
+        "value": "Ḵ",
+        "name": "Capital Letter K With Line Below",
+        "cp": "U+1E34"
+      },
+      {
+        "value": "Ⱪ",
+        "name": "Capital Letter K With Descender",
+        "cp": "U+2C69"
+      },
+      {
+        "value": "Ꝁ",
+        "name": "Capital Letter K With Stroke",
+        "cp": "U+A740"
+      },
+      {
+        "value": "Ꝃ",
+        "name": "Capital Letter K With Diagonal Stroke",
+        "cp": "U+A742"
+      },
+      {
+        "value": "Ꝅ",
+        "name": "Capital Letter K With Stroke And Diagonal Stroke",
+        "cp": "U+A744"
+      },
+      {
+        "value": "Ꞣ",
+        "name": "Capital Letter K With Oblique Stroke",
+        "cp": "U+A7A2"
+      }
+    ],
+    "L": [
+      {
+        "value": "Ĺ",
+        "name": "Capital Letter L With Acute",
+        "cp": "U+0139"
+      },
+      {
+        "value": "Ļ",
+        "name": "Capital Letter L With Cedilla",
+        "cp": "U+013B"
+      },
+      {
+        "value": "Ľ",
+        "name": "Capital Letter L With Caron",
+        "cp": "U+013D"
+      },
+      {
+        "value": "Ł",
+        "name": "Capital Letter L With Stroke",
+        "cp": "U+0141"
+      },
+      {
+        "value": "Ḷ",
+        "name": "Capital Letter L With Dot Below",
+        "cp": "U+1E36"
+      },
+      {
+        "value": "Ŀ",
+        "name": "Capital Letter L With Middle Dot",
+        "cp": "U+013F"
+      },
+      {
+        "value": "ǈ",
+        "name": "Capital Letter L With Small Letter J",
+        "cp": "U+01C8"
+      },
+      {
+        "value": "Ƚ",
+        "name": "Capital Letter L With Bar",
+        "cp": "U+023D"
+      },
+      {
+        "value": "Ḹ",
+        "name": "Capital Letter L With Dot Below And Macron",
+        "cp": "U+1E38"
+      },
+      {
+        "value": "Ḻ",
+        "name": "Capital Letter L With Line Below",
+        "cp": "U+1E3A"
+      },
+      {
+        "value": "Ḽ",
+        "name": "Capital Letter L With Circumflex Below",
+        "cp": "U+1E3C"
+      },
+      {
+        "value": "Ⱡ",
+        "name": "Capital Letter L With Double Bar",
+        "cp": "U+2C60"
+      },
+      {
+        "value": "Ɫ",
+        "name": "Capital Letter L With Middle Tilde",
+        "cp": "U+2C62"
+      },
+      {
+        "value": "Ꝉ",
+        "name": "Capital Letter L With High Stroke",
+        "cp": "U+A748"
+      },
+      {
+        "value": "Ɬ",
+        "name": "Capital Letter L With Belt",
+        "cp": "U+A7AD"
+      }
+    ],
+    "M": [
+      {
+        "value": "Ḿ",
+        "name": "Capital Letter M With Acute",
+        "cp": "U+1E3E"
+      },
+      {
+        "value": "Ṁ",
+        "name": "Capital Letter M With Dot Above",
+        "cp": "U+1E40"
+      },
+      {
+        "value": "Ṃ",
+        "name": "Capital Letter M With Dot Below",
+        "cp": "U+1E42"
+      },
+      {
+        "value": "Ɱ",
+        "name": "Capital Letter M With Hook",
+        "cp": "U+2C6E"
+      }
+    ],
+    "N": [
+      {
+        "value": "Ñ",
+        "name": "Capital Letter N With Tilde",
+        "cp": "U+00D1"
+      },
+      {
+        "value": "Ń",
+        "name": "Capital Letter N With Acute",
+        "cp": "U+0143"
+      },
+      {
+        "value": "Ņ",
+        "name": "Capital Letter N With Cedilla",
+        "cp": "U+0145"
+      },
+      {
+        "value": "Ň",
+        "name": "Capital Letter N With Caron",
+        "cp": "U+0147"
+      },
+      {
+        "value": "Ṅ",
+        "name": "Capital Letter N With Dot Above",
+        "cp": "U+1E44"
+      },
+      {
+        "value": "Ṇ",
+        "name": "Capital Letter N With Dot Below",
+        "cp": "U+1E46"
+      },
+      {
+        "value": "Ŋ",
+        "name": "Latin Capital Letter Eng",
+        "cp": "U+014A"
+      },
+      {
+        "value": "Ɲ",
+        "name": "Capital Letter N With Left Hook",
+        "cp": "U+019D"
+      },
+      {
+        "value": "ǋ",
+        "name": "Capital Letter N With Small Letter J",
+        "cp": "U+01CB"
+      },
+      {
+        "value": "Ǹ",
+        "name": "Capital Letter N With Grave",
+        "cp": "U+01F8"
+      },
+      {
+        "value": "Ƞ",
+        "name": "Capital Letter N With Long Right Leg",
+        "cp": "U+0220"
+      },
+      {
+        "value": "Ṉ",
+        "name": "Capital Letter N With Line Below",
+        "cp": "U+1E48"
+      },
+      {
+        "value": "Ṋ",
+        "name": "Capital Letter N With Circumflex Below",
+        "cp": "U+1E4A"
+      },
+      {
+        "value": "Ꞑ",
+        "name": "Capital Letter N With Descender",
+        "cp": "U+A790"
+      },
+      {
+        "value": "Ꞥ",
+        "name": "Capital Letter N With Oblique Stroke",
+        "cp": "U+A7A4"
+      }
+    ],
+    "O": [
+      {
+        "value": "Ó",
+        "name": "Capital Letter O With Acute",
+        "cp": "U+00D3"
+      },
+      {
+        "value": "Ò",
+        "name": "Capital Letter O With Grave",
+        "cp": "U+00D2"
+      },
+      {
+        "value": "Ô",
+        "name": "Capital Letter O With Circumflex",
+        "cp": "U+00D4"
+      },
+      {
+        "value": "Ö",
+        "name": "Capital Letter O With Diaeresis",
+        "cp": "U+00D6"
+      },
+      {
+        "value": "Õ",
+        "name": "Capital Letter O With Tilde",
+        "cp": "U+00D5"
+      },
+      {
+        "value": "Ø",
+        "name": "Capital Letter O With Stroke",
+        "cp": "U+00D8"
+      },
+      {
+        "value": "Ō",
+        "name": "Capital Letter O With Macron",
+        "cp": "U+014C"
+      },
+      {
+        "value": "Ŏ",
+        "name": "Capital Letter O With Breve",
+        "cp": "U+014E"
+      },
+      {
+        "value": "Ő",
+        "name": "Capital Letter O With Double Acute",
+        "cp": "U+0150"
+      },
+      {
+        "value": "Ǒ",
+        "name": "Capital Letter O With Caron",
+        "cp": "U+01D1"
+      },
+      {
+        "value": "Ọ",
+        "name": "Capital Letter O With Dot Below",
+        "cp": "U+1ECC"
+      },
+      {
+        "value": "Ỏ",
+        "name": "Capital Letter O With Hook Above",
+        "cp": "U+1ECE"
+      },
+      {
+        "value": "Ố",
+        "name": "Capital Letter O With Circumflex And Acute",
+        "cp": "U+1ED0"
+      },
+      {
+        "value": "Ồ",
+        "name": "Capital Letter O With Circumflex And Grave",
+        "cp": "U+1ED2"
+      },
+      {
+        "value": "Ớ",
+        "name": "Capital Letter O With Horn And Acute",
+        "cp": "U+1EDA"
+      },
+      {
+        "value": "Ờ",
+        "name": "Capital Letter O With Horn And Grave",
+        "cp": "U+1EDC"
+      },
+      {
+        "value": "Ở",
+        "name": "Capital Letter O With Horn And Hook Above",
+        "cp": "U+1EDE"
+      },
+      {
+        "value": "Ỡ",
+        "name": "Capital Letter O With Horn And Tilde",
+        "cp": "U+1EE0"
+      },
+      {
+        "value": "Ợ",
+        "name": "Capital Letter O With Horn And Dot Below",
+        "cp": "U+1EE2"
+      },
+      {
+        "value": "Œ",
+        "name": "Latin Capital Ligature Oe",
+        "cp": "U+0152"
+      },
+      {
+        "value": "Ɔ",
+        "name": "Latin Capital Letter Open O",
+        "cp": "U+0186"
+      },
+      {
+        "value": "Ɵ",
+        "name": "Capital Letter O With Middle Tilde",
+        "cp": "U+019F"
+      },
+      {
+        "value": "Ơ",
+        "name": "Capital Letter O With Horn",
+        "cp": "U+01A0"
+      },
+      {
+        "value": "Ǫ",
+        "name": "Capital Letter O With Ogonek",
+        "cp": "U+01EA"
+      },
+      {
+        "value": "Ǭ",
+        "name": "Capital Letter O With Ogonek And Macron",
+        "cp": "U+01EC"
+      },
+      {
+        "value": "Ǿ",
+        "name": "Capital Letter O With Stroke And Acute",
+        "cp": "U+01FE"
+      },
+      {
+        "value": "Ȍ",
+        "name": "Capital Letter O With Double Grave",
+        "cp": "U+020C"
+      },
+      {
+        "value": "Ȏ",
+        "name": "Capital Letter O With Inverted Breve",
+        "cp": "U+020E"
+      },
+      {
+        "value": "Ȫ",
+        "name": "Capital Letter O With Diaeresis And Macron",
+        "cp": "U+022A"
+      },
+      {
+        "value": "Ȭ",
+        "name": "Capital Letter O With Tilde And Macron",
+        "cp": "U+022C"
+      },
+      {
+        "value": "Ȯ",
+        "name": "Capital Letter O With Dot Above",
+        "cp": "U+022E"
+      },
+      {
+        "value": "Ȱ",
+        "name": "Capital Letter O With Dot Above And Macron",
+        "cp": "U+0230"
+      },
+      {
+        "value": "Ṍ",
+        "name": "Capital Letter O With Tilde And Acute",
+        "cp": "U+1E4C"
+      },
+      {
+        "value": "Ṏ",
+        "name": "Capital Letter O With Tilde And Diaeresis",
+        "cp": "U+1E4E"
+      },
+      {
+        "value": "Ṑ",
+        "name": "Capital Letter O With Macron And Grave",
+        "cp": "U+1E50"
+      },
+      {
+        "value": "Ṓ",
+        "name": "Capital Letter O With Macron And Acute",
+        "cp": "U+1E52"
+      },
+      {
+        "value": "Ổ",
+        "name": "Capital Letter O With Circumflex And Hook Above",
+        "cp": "U+1ED4"
+      },
+      {
+        "value": "Ỗ",
+        "name": "Capital Letter O With Circumflex And Tilde",
+        "cp": "U+1ED6"
+      },
+      {
+        "value": "Ộ",
+        "name": "Capital Letter O With Circumflex And Dot Below",
+        "cp": "U+1ED8"
+      },
+      {
+        "value": "Ꝋ",
+        "name": "Capital Letter O With Long Stroke Overlay",
+        "cp": "U+A74A"
+      },
+      {
+        "value": "Ꝍ",
+        "name": "Capital Letter O With Loop",
+        "cp": "U+A74C"
+      }
+    ],
+    "P": [
+      {
+        "value": "Ṕ",
+        "name": "Capital Letter P With Acute",
+        "cp": "U+1E54"
+      },
+      {
+        "value": "Ṗ",
+        "name": "Capital Letter P With Dot Above",
+        "cp": "U+1E56"
+      },
+      {
+        "value": "Ƥ",
+        "name": "Capital Letter P With Hook",
+        "cp": "U+01A4"
+      },
+      {
+        "value": "Ᵽ",
+        "name": "Capital Letter P With Stroke",
+        "cp": "U+2C63"
+      },
+      {
+        "value": "Ꝑ",
+        "name": "Capital Letter P With Stroke Through Descender",
+        "cp": "U+A750"
+      },
+      {
+        "value": "Ꝓ",
+        "name": "Capital Letter P With Flourish",
+        "cp": "U+A752"
+      },
+      {
+        "value": "Ꝕ",
+        "name": "Capital Letter P With Squirrel Tail",
+        "cp": "U+A754"
+      }
+    ],
+    "Q": [
+      {
+        "value": "Ɋ",
+        "name": "Latin Capital Letter Small Q With Hook Tail",
+        "cp": "U+024A"
+      },
+      {
+        "value": "Ꝗ",
+        "name": "Capital Letter Q With Stroke Through Descender",
+        "cp": "U+A756"
+      },
+      {
+        "value": "Ꝙ",
+        "name": "Capital Letter Q With Diagonal Stroke",
+        "cp": "U+A758"
+      }
+    ],
+    "R": [
+      {
+        "value": "Ŕ",
+        "name": "Capital Letter R With Acute",
+        "cp": "U+0154"
+      },
+      {
+        "value": "Ŗ",
+        "name": "Capital Letter R With Cedilla",
+        "cp": "U+0156"
+      },
+      {
+        "value": "Ř",
+        "name": "Capital Letter R With Caron",
+        "cp": "U+0158"
+      },
+      {
+        "value": "Ṙ",
+        "name": "Capital Letter R With Dot Above",
+        "cp": "U+1E58"
+      },
+      {
+        "value": "Ṛ",
+        "name": "Capital Letter R With Dot Below",
+        "cp": "U+1E5A"
+      },
+      {
+        "value": "Ʀ",
+        "name": "Latin Letter Yr",
+        "cp": "U+01A6"
+      },
+      {
+        "value": "Ȑ",
+        "name": "Capital Letter R With Double Grave",
+        "cp": "U+0210"
+      },
+      {
+        "value": "Ȓ",
+        "name": "Capital Letter R With Inverted Breve",
+        "cp": "U+0212"
+      },
+      {
+        "value": "Ɍ",
+        "name": "Capital Letter R With Stroke",
+        "cp": "U+024C"
+      },
+      {
+        "value": "Ṝ",
+        "name": "Capital Letter R With Dot Below And Macron",
+        "cp": "U+1E5C"
+      },
+      {
+        "value": "Ṟ",
+        "name": "Capital Letter R With Line Below",
+        "cp": "U+1E5E"
+      },
+      {
+        "value": "Ɽ",
+        "name": "Capital Letter R With Tail",
+        "cp": "U+2C64"
+      },
+      {
+        "value": "Ꞧ",
+        "name": "Capital Letter R With Oblique Stroke",
+        "cp": "U+A7A6"
+      }
+    ],
+    "S": [
+      {
+        "value": "Ś",
+        "name": "Capital Letter S With Acute",
+        "cp": "U+015A"
+      },
+      {
+        "value": "Ŝ",
+        "name": "Capital Letter S With Circumflex",
+        "cp": "U+015C"
+      },
+      {
+        "value": "Ş",
+        "name": "Capital Letter S With Cedilla",
+        "cp": "U+015E"
+      },
+      {
+        "value": "Š",
+        "name": "Capital Letter S With Caron",
+        "cp": "U+0160"
+      },
+      {
+        "value": "Ṣ",
+        "name": "Capital Letter S With Dot Below",
+        "cp": "U+1E62"
+      },
+      {
+        "value": "Ṡ",
+        "name": "Capital Letter S With Dot Above",
+        "cp": "U+1E60"
+      },
+      {
+        "value": "Ʃ",
+        "name": "Latin Capital Letter Esh",
+        "cp": "U+01A9"
+      },
+      {
+        "value": "Ș",
+        "name": "Capital Letter S With Comma Below",
+        "cp": "U+0218"
+      },
+      {
+        "value": "Ṥ",
+        "name": "Capital Letter S With Acute And Dot Above",
+        "cp": "U+1E64"
+      },
+      {
+        "value": "Ṧ",
+        "name": "Capital Letter S With Caron And Dot Above",
+        "cp": "U+1E66"
+      },
+      {
+        "value": "Ṩ",
+        "name": "Capital Letter S With Dot Below And Dot Above",
+        "cp": "U+1E68"
+      },
+      {
+        "value": "ẞ",
+        "name": "Latin Capital Letter Sharp S",
+        "cp": "U+1E9E"
+      },
+      {
+        "value": "Ȿ",
+        "name": "Capital Letter S With Swash Tail",
+        "cp": "U+2C7E"
+      },
+      {
+        "value": "Ꞩ",
+        "name": "Capital Letter S With Oblique Stroke",
+        "cp": "U+A7A8"
+      },
+      {
+        "value": "Ʂ",
+        "name": "Capital Letter S With Hook",
+        "cp": "U+A7C5"
+      },
+      {
+        "value": "Ꟊ",
+        "name": "Capital Letter S With Short Stroke Overlay",
+        "cp": "U+A7C9"
+      }
+    ],
+    "T": [
+      {
+        "value": "Ţ",
+        "name": "Capital Letter T With Cedilla",
+        "cp": "U+0162"
+      },
+      {
+        "value": "Ť",
+        "name": "Capital Letter T With Caron",
+        "cp": "U+0164"
+      },
+      {
+        "value": "Ṫ",
+        "name": "Capital Letter T With Dot Above",
+        "cp": "U+1E6A"
+      },
+      {
+        "value": "Ṭ",
+        "name": "Capital Letter T With Dot Below",
+        "cp": "U+1E6C"
+      },
+      {
+        "value": "Ṯ",
+        "name": "Capital Letter T With Line Below",
+        "cp": "U+1E6E"
+      },
+      {
+        "value": "Ŧ",
+        "name": "Capital Letter T With Stroke",
+        "cp": "U+0166"
+      },
+      {
+        "value": "Ƭ",
+        "name": "Capital Letter T With Hook",
+        "cp": "U+01AC"
+      },
+      {
+        "value": "Ʈ",
+        "name": "Capital Letter T With Retroflex Hook",
+        "cp": "U+01AE"
+      },
+      {
+        "value": "Ț",
+        "name": "Capital Letter T With Comma Below",
+        "cp": "U+021A"
+      },
+      {
+        "value": "Ⱦ",
+        "name": "Capital Letter T With Diagonal Stroke",
+        "cp": "U+023E"
+      },
+      {
+        "value": "Ṱ",
+        "name": "Capital Letter T With Circumflex Below",
+        "cp": "U+1E70"
+      }
+    ],
+    "U": [
+      {
+        "value": "Ú",
+        "name": "Capital Letter U With Acute",
+        "cp": "U+00DA"
+      },
+      {
+        "value": "Ù",
+        "name": "Capital Letter U With Grave",
+        "cp": "U+00D9"
+      },
+      {
+        "value": "Û",
+        "name": "Capital Letter U With Circumflex",
+        "cp": "U+00DB"
+      },
+      {
+        "value": "Ü",
+        "name": "Capital Letter U With Diaeresis",
+        "cp": "U+00DC"
+      },
+      {
+        "value": "Ũ",
+        "name": "Capital Letter U With Tilde",
+        "cp": "U+0168"
+      },
+      {
+        "value": "Ū",
+        "name": "Capital Letter U With Macron",
+        "cp": "U+016A"
+      },
+      {
+        "value": "Ŭ",
+        "name": "Capital Letter U With Breve",
+        "cp": "U+016C"
+      },
+      {
+        "value": "Ů",
+        "name": "Capital Letter U With Ring Above",
+        "cp": "U+016E"
+      },
+      {
+        "value": "Ű",
+        "name": "Capital Letter U With Double Acute",
+        "cp": "U+0170"
+      },
+      {
+        "value": "Ų",
+        "name": "Capital Letter U With Ogonek",
+        "cp": "U+0172"
+      },
+      {
+        "value": "Ǔ",
+        "name": "Capital Letter U With Caron",
+        "cp": "U+01D3"
+      },
+      {
+        "value": "Ụ",
+        "name": "Capital Letter U With Dot Below",
+        "cp": "U+1EE4"
+      },
+      {
+        "value": "Ủ",
+        "name": "Capital Letter U With Hook Above",
+        "cp": "U+1EE6"
+      },
+      {
+        "value": "Ứ",
+        "name": "Capital Letter U With Horn And Acute",
+        "cp": "U+1EE8"
+      },
+      {
+        "value": "Ữ",
+        "name": "Capital Letter U With Horn And Tilde",
+        "cp": "U+1EEE"
+      },
+      {
+        "value": "Ự",
+        "name": "Capital Letter U With Horn And Dot Below",
+        "cp": "U+1EF0"
+      },
+      {
+        "value": "Ư",
+        "name": "Capital Letter U With Horn",
+        "cp": "U+01AF"
+      },
+      {
+        "value": "Ǖ",
+        "name": "Capital Letter U With Diaeresis And Macron",
+        "cp": "U+01D5"
+      },
+      {
+        "value": "Ǘ",
+        "name": "Capital Letter U With Diaeresis And Acute",
+        "cp": "U+01D7"
+      },
+      {
+        "value": "Ǚ",
+        "name": "Capital Letter U With Diaeresis And Caron",
+        "cp": "U+01D9"
+      },
+      {
+        "value": "Ǜ",
+        "name": "Capital Letter U With Diaeresis And Grave",
+        "cp": "U+01DB"
+      },
+      {
+        "value": "Ȕ",
+        "name": "Capital Letter U With Double Grave",
+        "cp": "U+0214"
+      },
+      {
+        "value": "Ȗ",
+        "name": "Capital Letter U With Inverted Breve",
+        "cp": "U+0216"
+      },
+      {
+        "value": "Ʉ",
+        "name": "Latin Capital Letter U Bar",
+        "cp": "U+0244"
+      },
+      {
+        "value": "Ṳ",
+        "name": "Capital Letter U With Diaeresis Below",
+        "cp": "U+1E72"
+      },
+      {
+        "value": "Ṵ",
+        "name": "Capital Letter U With Tilde Below",
+        "cp": "U+1E74"
+      },
+      {
+        "value": "Ṷ",
+        "name": "Capital Letter U With Circumflex Below",
+        "cp": "U+1E76"
+      },
+      {
+        "value": "Ṹ",
+        "name": "Capital Letter U With Tilde And Acute",
+        "cp": "U+1E78"
+      },
+      {
+        "value": "Ṻ",
+        "name": "Capital Letter U With Macron And Diaeresis",
+        "cp": "U+1E7A"
+      },
+      {
+        "value": "Ừ",
+        "name": "Capital Letter U With Horn And Grave",
+        "cp": "U+1EEA"
+      },
+      {
+        "value": "Ử",
+        "name": "Capital Letter U With Horn And Hook Above",
+        "cp": "U+1EEC"
+      },
+      {
+        "value": "Ꞹ",
+        "name": "Capital Letter U With Stroke",
+        "cp": "U+A7B8"
+      }
+    ],
+    "V": [
+      {
+        "value": "Ṽ",
+        "name": "Capital Letter V With Tilde",
+        "cp": "U+1E7C"
+      },
+      {
+        "value": "Ṿ",
+        "name": "Capital Letter V With Dot Below",
+        "cp": "U+1E7E"
+      },
+      {
+        "value": "Ʋ",
+        "name": "Capital Letter V With Hook",
+        "cp": "U+01B2"
+      },
+      {
+        "value": "Ꝟ",
+        "name": "Capital Letter V With Diagonal Stroke",
+        "cp": "U+A75E"
+      }
+    ],
+    "W": [
+      {
+        "value": "Ẁ",
+        "name": "Capital Letter W With Grave",
+        "cp": "U+1E80"
+      },
+      {
+        "value": "Ẃ",
+        "name": "Capital Letter W With Acute",
+        "cp": "U+1E82"
+      },
+      {
+        "value": "Ŵ",
+        "name": "Capital Letter W With Circumflex",
+        "cp": "U+0174"
+      },
+      {
+        "value": "Ẅ",
+        "name": "Capital Letter W With Diaeresis",
+        "cp": "U+1E84"
+      },
+      {
+        "value": "Ẇ",
+        "name": "Capital Letter W With Dot Above",
+        "cp": "U+1E86"
+      },
+      {
+        "value": "Ẉ",
+        "name": "Capital Letter W With Dot Below",
+        "cp": "U+1E88"
+      },
+      {
+        "value": "Ⱳ",
+        "name": "Capital Letter W With Hook",
+        "cp": "U+2C72"
+      }
+    ],
+    "X": [
+      {
+        "value": "Ẋ",
+        "name": "Capital Letter X With Dot Above",
+        "cp": "U+1E8A"
+      },
+      {
+        "value": "Ẍ",
+        "name": "Capital Letter X With Diaeresis",
+        "cp": "U+1E8C"
+      }
+    ],
+    "Y": [
+      {
+        "value": "Ý",
+        "name": "Capital Letter Y With Acute",
+        "cp": "U+00DD"
+      },
+      {
+        "value": "Ÿ",
+        "name": "Capital Letter Y With Diaeresis",
+        "cp": "U+0178"
+      },
+      {
+        "value": "Ŷ",
+        "name": "Capital Letter Y With Circumflex",
+        "cp": "U+0176"
+      },
+      {
+        "value": "Ỳ",
+        "name": "Capital Letter Y With Grave",
+        "cp": "U+1EF2"
+      },
+      {
+        "value": "Ỵ",
+        "name": "Capital Letter Y With Dot Below",
+        "cp": "U+1EF4"
+      },
+      {
+        "value": "Ỷ",
+        "name": "Capital Letter Y With Hook Above",
+        "cp": "U+1EF6"
+      },
+      {
+        "value": "Ỹ",
+        "name": "Capital Letter Y With Tilde",
+        "cp": "U+1EF8"
+      },
+      {
+        "value": "Ƴ",
+        "name": "Capital Letter Y With Hook",
+        "cp": "U+01B3"
+      },
+      {
+        "value": "Ȳ",
+        "name": "Capital Letter Y With Macron",
+        "cp": "U+0232"
+      },
+      {
+        "value": "Ɏ",
+        "name": "Capital Letter Y With Stroke",
+        "cp": "U+024E"
+      },
+      {
+        "value": "Ẏ",
+        "name": "Capital Letter Y With Dot Above",
+        "cp": "U+1E8E"
+      },
+      {
+        "value": "Ỿ",
+        "name": "Capital Letter Y With Loop",
+        "cp": "U+1EFE"
+      }
+    ],
+    "Z": [
+      {
+        "value": "Ź",
+        "name": "Capital Letter Z With Acute",
+        "cp": "U+0179"
+      },
+      {
+        "value": "Ż",
+        "name": "Capital Letter Z With Dot Above",
+        "cp": "U+017B"
+      },
+      {
+        "value": "Ž",
+        "name": "Capital Letter Z With Caron",
+        "cp": "U+017D"
+      },
+      {
+        "value": "Ẓ",
+        "name": "Capital Letter Z With Dot Below",
+        "cp": "U+1E92"
+      },
+      {
+        "value": "Ƶ",
+        "name": "Capital Letter Z With Stroke",
+        "cp": "U+01B5"
+      },
+      {
+        "value": "Ʒ",
+        "name": "Latin Capital Letter Ezh",
+        "cp": "U+01B7"
+      },
+      {
+        "value": "Ȥ",
+        "name": "Capital Letter Z With Hook",
+        "cp": "U+0224"
+      },
+      {
+        "value": "Ẑ",
+        "name": "Capital Letter Z With Circumflex",
+        "cp": "U+1E90"
+      },
+      {
+        "value": "Ẕ",
+        "name": "Capital Letter Z With Line Below",
+        "cp": "U+1E94"
+      },
+      {
+        "value": "Ⱬ",
+        "name": "Capital Letter Z With Descender",
+        "cp": "U+2C6B"
+      },
+      {
+        "value": "Ɀ",
+        "name": "Capital Letter Z With Swash Tail",
+        "cp": "U+2C7F"
+      },
+      {
+        "value": "Ᶎ",
+        "name": "Capital Letter Z With Palatal Hook",
+        "cp": "U+A7C6"
+      }
+    ]
+  },
+  "symbols": {
+    "'": [
+      {
+        "value": "’",
+        "name": "Right Single Quotation Mark",
+        "cp": "U+2019"
+      },
+      {
+        "value": "‘",
+        "name": "Left Single Quotation Mark",
+        "cp": "U+2018"
+      },
+      {
+        "value": "ʼ",
+        "name": "Modifier Letter Apostrophe",
+        "cp": "U+02BC"
+      },
+      {
+        "value": "ʻ",
+        "name": "Modifier Letter Turned Comma",
+        "cp": "U+02BB"
+      },
+      {
+        "value": "′",
+        "name": "Prime",
+        "cp": "U+2032"
+      },
+      {
+        "value": "‛",
+        "name": "Single High-Reversed-9 Quotation Mark",
+        "cp": "U+201B"
+      },
+      {
+        "value": "ʹ",
+        "name": "Modifier Letter Prime",
+        "cp": "U+02B9"
+      },
+      {
+        "value": "ˈ",
+        "name": "Modifier Letter Vertical Line",
+        "cp": "U+02C8"
+      },
+      {
+        "value": "ˌ",
+        "name": "Modifier Letter Low Vertical Line",
+        "cp": "U+02CC"
+      },
+      {
+        "value": "´",
+        "name": "Acute Accent",
+        "cp": "U+00B4"
+      },
+      {
+        "value": "`",
+        "name": "Grave Accent",
+        "cp": "U+0060"
+      }
+    ],
+    "\"": [
+      {
+        "value": "“",
+        "name": "Left Double Quotation Mark",
+        "cp": "U+201C"
+      },
+      {
+        "value": "”",
+        "name": "Right Double Quotation Mark",
+        "cp": "U+201D"
+      },
+      {
+        "value": "„",
+        "name": "Double Low-9 Quotation Mark",
+        "cp": "U+201E"
+      },
+      {
+        "value": "«",
+        "name": "Left-Pointing Double Angle Quotation Mark",
+        "cp": "U+00AB"
+      },
+      {
+        "value": "»",
+        "name": "Right-Pointing Double Angle Quotation Mark",
+        "cp": "U+00BB"
+      },
+      {
+        "value": "″",
+        "name": "Double Prime",
+        "cp": "U+2033"
+      },
+      {
+        "value": "〝",
+        "name": "Reversed Double Prime Quotation Mark",
+        "cp": "U+301D"
+      },
+      {
+        "value": "〞",
+        "name": "Double Prime Quotation Mark",
+        "cp": "U+301E"
+      }
+    ],
+    ".": [
+      {
+        "value": "…",
+        "name": "Horizontal Ellipsis",
+        "cp": "U+2026"
+      },
+      {
+        "value": "·",
+        "name": "Middle Dot",
+        "cp": "U+00B7"
+      },
+      {
+        "value": "•",
+        "name": "Bullet",
+        "cp": "U+2022"
+      },
+      {
+        "value": "‧",
+        "name": "Hyphenation Point",
+        "cp": "U+2027"
+      },
+      {
+        "value": "。",
+        "name": "Ideographic Full Stop",
+        "cp": "U+3002"
+      },
+      {
+        "value": "．",
+        "name": "Fullwidth Full Stop",
+        "cp": "U+FF0E"
+      },
+      {
+        "value": "․",
+        "name": "One Dot Leader",
+        "cp": "U+2024"
+      }
+    ],
+    ",": [
+      {
+        "value": "‚",
+        "name": "Single Low-9 Quotation Mark",
+        "cp": "U+201A"
+      },
+      {
+        "value": "،",
+        "name": "Arabic Comma",
+        "cp": "U+060C"
+      },
+      {
+        "value": "؛",
+        "name": "Arabic Semicolon",
+        "cp": "U+061B"
+      },
+      {
+        "value": "﹐",
+        "name": "Small Comma",
+        "cp": "U+FE50"
+      }
+    ],
+    "?": [
+      {
+        "value": "¿",
+        "name": "Inverted Question Mark",
+        "cp": "U+00BF"
+      },
+      {
+        "value": "⁇",
+        "name": "Double Question Mark",
+        "cp": "U+2047"
+      },
+      {
+        "value": "⁈",
+        "name": "Question Exclamation Mark",
+        "cp": "U+2048"
+      },
+      {
+        "value": "⁉",
+        "name": "Exclamation Question Mark",
+        "cp": "U+2049"
+      },
+      {
+        "value": "﹖",
+        "name": "Small Question Mark",
+        "cp": "U+FE56"
+      }
+    ],
+    "!": [
+      {
+        "value": "¡",
+        "name": "Inverted Exclamation Mark",
+        "cp": "U+00A1"
+      },
+      {
+        "value": "‼",
+        "name": "Double Exclamation Mark",
+        "cp": "U+203C"
+      },
+      {
+        "value": "❢",
+        "name": "Heavy Exclamation Mark Ornament",
+        "cp": "U+2762"
+      },
+      {
+        "value": "﹗",
+        "name": "Small Exclamation Mark",
+        "cp": "U+FE57"
+      }
+    ],
+    "-": [
+      {
+        "value": "–",
+        "name": "En Dash",
+        "cp": "U+2013"
+      },
+      {
+        "value": "—",
+        "name": "Em Dash",
+        "cp": "U+2014"
+      },
+      {
+        "value": "−",
+        "name": "Minus Sign",
+        "cp": "U+2212"
+      },
+      {
+        "value": "‐",
+        "name": "Hyphen",
+        "cp": "U+2010"
+      },
+      {
+        "value": "‑",
+        "name": "Non-Breaking Hyphen",
+        "cp": "U+2011"
+      },
+      {
+        "value": "‒",
+        "name": "Figure Dash",
+        "cp": "U+2012"
+      },
+      {
+        "value": "―",
+        "name": "Horizontal Bar",
+        "cp": "U+2015"
+      },
+      {
+        "value": "〜",
+        "name": "Wave Dash",
+        "cp": "U+301C"
+      }
+    ],
+    "_": [
+      {
+        "value": "¯",
+        "name": "Macron",
+        "cp": "U+00AF"
+      },
+      {
+        "value": "‾",
+        "name": "Overline",
+        "cp": "U+203E"
+      },
+      {
+        "value": "＿",
+        "name": "Fullwidth Low Line",
+        "cp": "U+FF3F"
+      }
+    ],
+    "/": [
+      {
+        "value": "⁄",
+        "name": "Fraction Slash",
+        "cp": "U+2044"
+      },
+      {
+        "value": "∕",
+        "name": "Division Slash",
+        "cp": "U+2215"
+      },
+      {
+        "value": "÷",
+        "name": "Division Sign",
+        "cp": "U+00F7"
+      },
+      {
+        "value": "⧸",
+        "name": "Big Solidus",
+        "cp": "U+29F8"
+      }
+    ],
+    "\\": [
+      {
+        "value": "∖",
+        "name": "Set Minus",
+        "cp": "U+2216"
+      },
+      {
+        "value": "⧹",
+        "name": "Big Reverse Solidus",
+        "cp": "U+29F9"
+      }
+    ],
+    ":": [
+      {
+        "value": "∶",
+        "name": "Ratio",
+        "cp": "U+2236"
+      },
+      {
+        "value": "ː",
+        "name": "Modifier Letter Triangular Colon",
+        "cp": "U+02D0"
+      }
+    ],
+    ";": [
+      {
+        "value": "؛",
+        "name": "Arabic Semicolon",
+        "cp": "U+061B"
+      },
+      {
+        "value": "⁏",
+        "name": "Reversed Semicolon",
+        "cp": "U+204F"
+      }
+    ],
+    "(": [
+      {
+        "value": "（",
+        "name": "Fullwidth Left Parenthesis",
+        "cp": "U+FF08"
+      },
+      {
+        "value": "❨",
+        "name": "Medium Left Parenthesis Ornament",
+        "cp": "U+2768"
+      },
+      {
+        "value": "❪",
+        "name": "Medium Flattened Left Parenthesis Ornament",
+        "cp": "U+276A"
+      },
+      {
+        "value": "⟮",
+        "name": "Mathematical Left Flattened Parenthesis",
+        "cp": "U+27EE"
+      }
+    ],
+    ")": [
+      {
+        "value": "）",
+        "name": "Fullwidth Right Parenthesis",
+        "cp": "U+FF09"
+      },
+      {
+        "value": "❩",
+        "name": "Medium Right Parenthesis Ornament",
+        "cp": "U+2769"
+      },
+      {
+        "value": "❫",
+        "name": "Medium Flattened Right Parenthesis Ornament",
+        "cp": "U+276B"
+      },
+      {
+        "value": "⟯",
+        "name": "Mathematical Right Flattened Parenthesis",
+        "cp": "U+27EF"
+      }
+    ],
+    "[": [
+      {
+        "value": "【",
+        "name": "Left Black Lenticular Bracket",
+        "cp": "U+3010"
+      },
+      {
+        "value": "〔",
+        "name": "Left Tortoise Shell Bracket",
+        "cp": "U+3014"
+      },
+      {
+        "value": "［",
+        "name": "Fullwidth Left Square Bracket",
+        "cp": "U+FF3B"
+      }
+    ],
+    "]": [
+      {
+        "value": "】",
+        "name": "Right Black Lenticular Bracket",
+        "cp": "U+3011"
+      },
+      {
+        "value": "〕",
+        "name": "Right Tortoise Shell Bracket",
+        "cp": "U+3015"
+      },
+      {
+        "value": "］",
+        "name": "Fullwidth Right Square Bracket",
+        "cp": "U+FF3D"
+      }
+    ],
+    "{": [
+      {
+        "value": "❴",
+        "name": "Medium Left Curly Bracket Ornament",
+        "cp": "U+2774"
+      },
+      {
+        "value": "｛",
+        "name": "Fullwidth Left Curly Bracket",
+        "cp": "U+FF5B"
+      }
+    ],
+    "}": [
+      {
+        "value": "❵",
+        "name": "Medium Right Curly Bracket Ornament",
+        "cp": "U+2775"
+      },
+      {
+        "value": "｝",
+        "name": "Fullwidth Right Curly Bracket",
+        "cp": "U+FF5D"
+      }
+    ],
+    "+": [
+      {
+        "value": "±",
+        "name": "Plus-Minus Sign",
+        "cp": "U+00B1"
+      },
+      {
+        "value": "∓",
+        "name": "Minus-Or-Plus Sign",
+        "cp": "U+2213"
+      },
+      {
+        "value": "⊕",
+        "name": "Circled Plus",
+        "cp": "U+2295"
+      }
+    ],
+    "=": [
+      {
+        "value": "≠",
+        "name": "Not Equal To",
+        "cp": "U+2260"
+      },
+      {
+        "value": "≈",
+        "name": "Almost Equal To",
+        "cp": "U+2248"
+      },
+      {
+        "value": "≡",
+        "name": "Identical To",
+        "cp": "U+2261"
+      },
+      {
+        "value": "≤",
+        "name": "Less-Than Or Equal To",
+        "cp": "U+2264"
+      },
+      {
+        "value": "≥",
+        "name": "Greater-Than Or Equal To",
+        "cp": "U+2265"
+      }
+    ],
+    "*": [
+      {
+        "value": "×",
+        "name": "Multiplication Sign",
+        "cp": "U+00D7"
+      },
+      {
+        "value": "∗",
+        "name": "Asterisk Operator",
+        "cp": "U+2217"
+      },
+      {
+        "value": "✱",
+        "name": "Heavy Asterisk",
+        "cp": "U+2731"
+      },
+      {
+        "value": "※",
+        "name": "Reference Mark",
+        "cp": "U+203B"
+      }
+    ],
+    "&": [
+      {
+        "value": "⁊",
+        "name": "Tironian Sign Et",
+        "cp": "U+204A"
+      },
+      {
+        "value": "∧",
+        "name": "Logical And",
+        "cp": "U+2227"
+      },
+      {
+        "value": "∩",
+        "name": "Intersection",
+        "cp": "U+2229"
+      }
+    ],
+    "%": [
+      {
+        "value": "‰",
+        "name": "Per Mille Sign",
+        "cp": "U+2030"
+      },
+      {
+        "value": "‱",
+        "name": "Per Ten Thousand Sign",
+        "cp": "U+2031"
+      }
+    ],
+    "$": [
+      {
+        "value": "€",
+        "name": "Euro Sign",
+        "cp": "U+20AC"
+      },
+      {
+        "value": "£",
+        "name": "Pound Sign",
+        "cp": "U+00A3"
+      },
+      {
+        "value": "¥",
+        "name": "Yen Sign",
+        "cp": "U+00A5"
+      },
+      {
+        "value": "₹",
+        "name": "Indian Rupee Sign",
+        "cp": "U+20B9"
+      },
+      {
+        "value": "₩",
+        "name": "Won Sign",
+        "cp": "U+20A9"
+      },
+      {
+        "value": "₿",
+        "name": "Bitcoin Sign",
+        "cp": "U+20BF"
+      },
+      {
+        "value": "¢",
+        "name": "Cent Sign",
+        "cp": "U+00A2"
+      }
+    ],
+    "@": [
+      {
+        "value": "Ⓐ",
+        "name": "Circled Latin Capital Letter A",
+        "cp": "U+24B6"
+      },
+      {
+        "value": "©",
+        "name": "Copyright Sign",
+        "cp": "U+00A9"
+      },
+      {
+        "value": "®",
+        "name": "Registered Sign",
+        "cp": "U+00AE"
+      },
+      {
+        "value": "℗",
+        "name": "Sound Recording Copyright",
+        "cp": "U+2117"
+      }
+    ],
+    "#": [
+      {
+        "value": "№",
+        "name": "Numero Sign",
+        "cp": "U+2116"
+      },
+      {
+        "value": "♯",
+        "name": "Music Sharp Sign",
+        "cp": "U+266F"
+      },
+      {
+        "value": "♮",
+        "name": "Music Natural Sign",
+        "cp": "U+266E"
+      }
+    ],
+    "^": [
+      {
+        "value": "ˆ",
+        "name": "Modifier Letter Circumflex Accent",
+        "cp": "U+02C6"
+      },
+      {
+        "value": "˄",
+        "name": "Modifier Letter Up Arrowhead",
+        "cp": "U+02C4"
+      },
+      {
+        "value": "↑",
+        "name": "Upwards Arrow",
+        "cp": "U+2191"
+      },
+      {
+        "value": "⇧",
+        "name": "Upwards White Arrow",
+        "cp": "U+21E7"
+      }
+    ],
+    "~": [
+      {
+        "value": "∼",
+        "name": "Tilde Operator",
+        "cp": "U+223C"
+      },
+      {
+        "value": "≈",
+        "name": "Almost Equal To",
+        "cp": "U+2248"
+      },
+      {
+        "value": "˜",
+        "name": "Small Tilde",
+        "cp": "U+02DC"
+      },
+      {
+        "value": "〜",
+        "name": "Wave Dash",
+        "cp": "U+301C"
+      }
+    ],
+    "|": [
+      {
+        "value": "¦",
+        "name": "Broken Bar",
+        "cp": "U+00A6"
+      },
+      {
+        "value": "∣",
+        "name": "Divides",
+        "cp": "U+2223"
+      },
+      {
+        "value": "‖",
+        "name": "Double Vertical Line",
+        "cp": "U+2016"
+      },
+      {
+        "value": "∥",
+        "name": "Parallel To",
+        "cp": "U+2225"
+      }
+    ],
+    "<": [
+      {
+        "value": "≤",
+        "name": "Less-Than Or Equal To",
+        "cp": "U+2264"
+      },
+      {
+        "value": "≪",
+        "name": "Much Less-Than",
+        "cp": "U+226A"
+      },
+      {
+        "value": "‹",
+        "name": "Single Left-Pointing Angle Quotation Mark",
+        "cp": "U+2039"
+      },
+      {
+        "value": "«",
+        "name": "Left-Pointing Double Angle Quotation Mark",
+        "cp": "U+00AB"
+      },
+      {
+        "value": "←",
+        "name": "Leftwards Arrow",
+        "cp": "U+2190"
+      }
+    ],
+    ">": [
+      {
+        "value": "≥",
+        "name": "Greater-Than Or Equal To",
+        "cp": "U+2265"
+      },
+      {
+        "value": "≫",
+        "name": "Much Greater-Than",
+        "cp": "U+226B"
+      },
+      {
+        "value": "›",
+        "name": "Single Right-Pointing Angle Quotation Mark",
+        "cp": "U+203A"
+      },
+      {
+        "value": "»",
+        "name": "Right-Pointing Double Angle Quotation Mark",
+        "cp": "U+00BB"
+      },
+      {
+        "value": "→",
+        "name": "Rightwards Arrow",
+        "cp": "U+2192"
+      }
+    ],
+    "0": [
+      {
+        "value": "⁰",
+        "name": "Superscript Zero",
+        "cp": "U+2070"
+      },
+      {
+        "value": "₀",
+        "name": "Subscript Zero",
+        "cp": "U+2080"
+      },
+      {
+        "value": "⓪",
+        "name": "Circled Digit Zero",
+        "cp": "U+24EA"
+      },
+      {
+        "value": "０",
+        "name": "Fullwidth Digit Zero",
+        "cp": "U+FF10"
+      },
+      {
+        "value": "½",
+        "name": "Vulgar Fraction One Half",
+        "cp": "U+00BD"
+      }
+    ],
+    "1": [
+      {
+        "value": "¹",
+        "name": "Superscript One",
+        "cp": "U+00B9"
+      },
+      {
+        "value": "₁",
+        "name": "Subscript One",
+        "cp": "U+2081"
+      },
+      {
+        "value": "①",
+        "name": "Circled Digit One",
+        "cp": "U+2460"
+      },
+      {
+        "value": "１",
+        "name": "Fullwidth Digit One",
+        "cp": "U+FF11"
+      },
+      {
+        "value": "⅟",
+        "name": "Fraction Numerator One",
+        "cp": "U+215F"
+      }
+    ],
+    "2": [
+      {
+        "value": "²",
+        "name": "Superscript Two",
+        "cp": "U+00B2"
+      },
+      {
+        "value": "₂",
+        "name": "Subscript Two",
+        "cp": "U+2082"
+      },
+      {
+        "value": "②",
+        "name": "Circled Digit Two",
+        "cp": "U+2461"
+      },
+      {
+        "value": "２",
+        "name": "Fullwidth Digit Two",
+        "cp": "U+FF12"
+      },
+      {
+        "value": "½",
+        "name": "Vulgar Fraction One Half",
+        "cp": "U+00BD"
+      }
+    ],
+    "3": [
+      {
+        "value": "³",
+        "name": "Superscript Three",
+        "cp": "U+00B3"
+      },
+      {
+        "value": "₃",
+        "name": "Subscript Three",
+        "cp": "U+2083"
+      },
+      {
+        "value": "③",
+        "name": "Circled Digit Three",
+        "cp": "U+2462"
+      },
+      {
+        "value": "３",
+        "name": "Fullwidth Digit Three",
+        "cp": "U+FF13"
+      },
+      {
+        "value": "⅓",
+        "name": "Vulgar Fraction One Third",
+        "cp": "U+2153"
+      }
+    ],
+    "4": [
+      {
+        "value": "⁴",
+        "name": "Superscript Four",
+        "cp": "U+2074"
+      },
+      {
+        "value": "₄",
+        "name": "Subscript Four",
+        "cp": "U+2084"
+      },
+      {
+        "value": "④",
+        "name": "Circled Digit Four",
+        "cp": "U+2463"
+      },
+      {
+        "value": "４",
+        "name": "Fullwidth Digit Four",
+        "cp": "U+FF14"
+      },
+      {
+        "value": "¼",
+        "name": "Vulgar Fraction One Quarter",
+        "cp": "U+00BC"
+      }
+    ],
+    "5": [
+      {
+        "value": "⁵",
+        "name": "Superscript Five",
+        "cp": "U+2075"
+      },
+      {
+        "value": "₅",
+        "name": "Subscript Five",
+        "cp": "U+2085"
+      },
+      {
+        "value": "⑤",
+        "name": "Circled Digit Five",
+        "cp": "U+2464"
+      },
+      {
+        "value": "５",
+        "name": "Fullwidth Digit Five",
+        "cp": "U+FF15"
+      },
+      {
+        "value": "⅕",
+        "name": "Vulgar Fraction One Fifth",
+        "cp": "U+2155"
+      }
+    ],
+    "6": [
+      {
+        "value": "⁶",
+        "name": "Superscript Six",
+        "cp": "U+2076"
+      },
+      {
+        "value": "₆",
+        "name": "Subscript Six",
+        "cp": "U+2086"
+      },
+      {
+        "value": "⑥",
+        "name": "Circled Digit Six",
+        "cp": "U+2465"
+      },
+      {
+        "value": "６",
+        "name": "Fullwidth Digit Six",
+        "cp": "U+FF16"
+      },
+      {
+        "value": "⅙",
+        "name": "Vulgar Fraction One Sixth",
+        "cp": "U+2159"
+      }
+    ],
+    "7": [
+      {
+        "value": "⁷",
+        "name": "Superscript Seven",
+        "cp": "U+2077"
+      },
+      {
+        "value": "₇",
+        "name": "Subscript Seven",
+        "cp": "U+2087"
+      },
+      {
+        "value": "⑦",
+        "name": "Circled Digit Seven",
+        "cp": "U+2466"
+      },
+      {
+        "value": "７",
+        "name": "Fullwidth Digit Seven",
+        "cp": "U+FF17"
+      },
+      {
+        "value": "⅐",
+        "name": "Vulgar Fraction One Seventh",
+        "cp": "U+2150"
+      }
+    ],
+    "8": [
+      {
+        "value": "⁸",
+        "name": "Superscript Eight",
+        "cp": "U+2078"
+      },
+      {
+        "value": "₈",
+        "name": "Subscript Eight",
+        "cp": "U+2088"
+      },
+      {
+        "value": "⑧",
+        "name": "Circled Digit Eight",
+        "cp": "U+2467"
+      },
+      {
+        "value": "８",
+        "name": "Fullwidth Digit Eight",
+        "cp": "U+FF18"
+      },
+      {
+        "value": "⅛",
+        "name": "Vulgar Fraction One Eighth",
+        "cp": "U+215B"
+      }
+    ],
+    "9": [
+      {
+        "value": "⁹",
+        "name": "Superscript Nine",
+        "cp": "U+2079"
+      },
+      {
+        "value": "₉",
+        "name": "Subscript Nine",
+        "cp": "U+2089"
+      },
+      {
+        "value": "⑨",
+        "name": "Circled Digit Nine",
+        "cp": "U+2468"
+      },
+      {
+        "value": "９",
+        "name": "Fullwidth Digit Nine",
+        "cp": "U+FF19"
+      },
+      {
+        "value": "⅑",
+        "name": "Vulgar Fraction One Ninth",
+        "cp": "U+2151"
+      }
+    ]
+  }
+}

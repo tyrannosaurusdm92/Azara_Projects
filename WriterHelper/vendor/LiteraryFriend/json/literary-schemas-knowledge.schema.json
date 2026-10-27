@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Character Knowledge",
+  "type": "object",
+  "required": [
+    "characterId",
+    "factId",
+    "knowledgeState"
+  ],
+  "properties": {
+    "characterId": {
+      "type": "string"
+    },
+    "factId": {
+      "type": "string"
+    },
+    "knowledgeState": {
+      "enum": [
+        "knows",
+        "believes",
+        "suspects",
+        "disbelieves",
+        "unknown"
+      ]
+    },
+    "learnedAtEventId": {
+      "type": "string"
+    },
+    "learnedAtNodeId": {
+      "type": "string"
+    },
+    "reliability": {
+      "type": "number"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "identity": [
+    "sign-in",
+    "register",
+    "google-auth",
+    "password-reveal",
+    "forgot-password",
+    "verification",
+    "optional-2fa",
+    "recovery-contacts",
+    "recovery-codes",
+    "sessions",
+    "drive-link"
+  ],
+  "projects": [
+    "hub",
+    "switcher",
+    "universe-series-relations",
+    "archive-restore",
+    "project-isolation",
+    "dashboard"
+  ],
+  "imports": [
+    "drag-drop",
+    "classification",
+    "routing-review",
+    "duplicate-detection",
+    "consolidation",
+    "snapshot",
+    "mass-propagation"
+  ],
+  "manuscript": [
+    "tree",
+    "rich-editor-host",
+    "scene-metadata",
+    "autosave",
+    "split-view",
+    "search",
+    "recently-deleted",
+    "read-aloud-state"
+  ],
+  "storyIntelligence": [
+    "codex",
+    "provenance",
+    "temporal-facts",
+    "state-ledger",
+    "knowledge-belief",
+    "world-chronology",
+    "narrative-order",
+    "reader-revelation",
+    "plot-threads",
+    "setup-payoff",
+    "causal-graph",
+    "rules-engine",
+    "thread-matrix",
+    "character-view",
+    "issue-center"
+  ],
+  "world": [
+    "entities",
+    "relationships",
+    "aliases",
+    "temporal-attributes",
+    "evidence"
+  ],
+  "language": [
+    "phonology",
+    "orthography",
+    "grammar",
+    "morphology",
+    "lexicon",
+    "dictionary",
+    "generation",
+    "consistency"
+  ],
+  "book": [
+    "trim-presets",
+    "custom-size",
+    "page-layout",
+    "front-back-matter",
+    "preview",
+    "cover-spec",
+    "interactive-html"
+  ],
+  "art": [
+    "canvas",
+    "layers",
+    "painting",
+    "transforms",
+    "clipboard",
+    "color",
+    "ai-imagery",
+    "cover-workflow"
+  ],
+  "publish": [
+    "project-json",
+    "account-json",
+    "interactive-html",
+    "backup",
+    "history"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "literaryfriend-runtime/v2",
+  "entry": "literaryfriend-login.html",
+  "application": "literaryfriend.html",
+  "accessModes": [
+    "account",
+    "guest-local"
+  ],
+  "guestStorage": "IndexedDB + localStorage",
+  "projectScopes": [
+    "universe",
+    "series",
+    "project",
+    "section",
+    "scene"
+  ],
+  "majorSystems": [
+    "Project Hub",
+    "Manuscript Studio",
+    "Outline & Matrix",
+    "Characters",
+    "World Codex",
+    "Timeline Studio",
+    "Language Lab",
+    "Continuity Center",
+    "AI Editor Suite",
+    "Organizer",
+    "Import & Consolidation Center",
+    "Art Studio",
+    "Book Builder",
+    "Search",
+    "Publish Center",
+    "Settings"
+  ],
+  "storyIntelligence": [
+    "automatic-story-codex",
+    "provenance",
+    "temporal-facts",
+    "character-state-ledger",
+    "knowledge-belief-ledger",
+    "world-chronology",
+    "narrative-order",
+    "reader-knowledge",
+    "plot-thread-lifecycle",
+    "setup-payoff",
+    "causal-graph",
+    "rules-engine",
+    "scene-thread-matrix",
+    "character-view",
+    "evidence-issue-center"
+  ]
+}

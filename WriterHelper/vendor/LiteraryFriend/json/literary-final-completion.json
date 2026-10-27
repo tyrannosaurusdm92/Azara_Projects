@@ -1,0 +1,87 @@
+{
+  "schema": "literaryfriend-final-completion/v1",
+  "version": "2026.08.09-final",
+  "entry": "literaryfriend-login.html",
+  "application": "literaryfriend.html",
+  "applicationHtmlFiles": [
+    "literaryfriend-login.html",
+    "literaryfriend.html"
+  ],
+  "designedShell": {
+    "preserved": true,
+    "baseStylesheets": [
+      "css/app.css",
+      "css/accessibility.css",
+      "css/retro.css",
+      "css/print.css"
+    ],
+    "scopedCompletionStylesheet": "css/final-completion.css"
+  },
+  "storyIntelligence": {
+    "modelParts": [
+      "automatic-story-codex",
+      "provenance",
+      "temporal-facts",
+      "character-state-ledger",
+      "knowledge-belief-ledger",
+      "world-chronology",
+      "narrative-order",
+      "reader-revelation-order",
+      "plot-thread-lifecycle",
+      "setup-payoff-links",
+      "causal-graph",
+      "world-rules",
+      "scene-thread-matrix",
+      "character-view-reconstruction",
+      "evidence-based-issue-center"
+    ],
+    "localEngines": [
+      "js/engines/continuity-engine.js",
+      "js/engines/timeline-engine.js",
+      "js/engines/thread-matrix.js",
+      "js/engines/character-view.js"
+    ],
+    "frontend": "js/final-completion.js",
+    "backend": "backend/LiteraryFriend_Backend_v2.gs"
+  },
+  "editorTypes": [
+    "continuity",
+    "plot",
+    "character",
+    "world",
+    "timeline",
+    "developmental",
+    "line",
+    "copy",
+    "pov",
+    "series"
+  ],
+  "studio": {
+    "delivery": "JavaScript-generated internal document",
+    "template": "js/studio-shell-template.js",
+    "protectedCss": [
+      "css/base-studio.css",
+      "css/project-hub-studio.css",
+      "css/studio-shell.css",
+      "css/ribbon-studio.css",
+      "css/responsive-studio.css",
+      "css/art-studio.css",
+      "css/book-studio.css"
+    ],
+    "projectTypes": [
+      "book-cover",
+      "book-building"
+    ]
+  },
+  "pwa": {
+    "manifest": "json/literaryfriend.webmanifest",
+    "serviceWorker": "service-worker.js",
+    "installEntry": "literaryfriend-login.html"
+  },
+  "backend": {
+    "apiVersion": "2026-08-09-v1",
+    "webAppEndpointConfigured": true,
+    "appsScriptLibraryReferenceConfigured": true,
+    "secretsIncluded": false
+  }
+}

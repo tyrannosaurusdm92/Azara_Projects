@@ -1,0 +1,49 @@
+{
+  "schema": "literaryfriend.book-studio.backend-config.v1",
+  "service": "LiteraryFriend Backend 1.0.1",
+  "webAppUrl": "https://script.google.com/macros/s/AKfycbyzbjqonkGubp-g2XnLr5vSgDc6EnYreGBS-hSBRGIdMRPFarQxeGTmOdSN9nBRp3eF/exec",
+  "appsScriptLibraryUrl": "https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2",
+  "appsScriptLibraryId": "1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC",
+  "appsScriptLibraryVersion": 1,
+  "apiVersion": "2026-08-09-v1",
+  "modules": {
+    "bookBuilder": {
+      "cloudActions": [
+        "auth.login",
+        "auth.register",
+        "auth.me",
+        "projects.list",
+        "projects.create",
+        "projects.update",
+        "projects.get",
+        "nodes.save",
+        "nodes.list",
+        "nodes.get",
+        "nodes.delete",
+        "books.formats",
+        "books.save",
+        "books.get",
+        "books.list",
+        "books.editions.save",
+        "books.editions.list",
+        "books.chapters.save",
+        "books.chapters.list",
+        "books.chapters.format",
+        "books.cover.spec",
+        "books.export.html"
+      ]
+    },
+    "artStudio": {
+      "cloudActions": [
+        "art.save",
+        "art.get",
+        "art.list",
+        "art.delete",
+        "art.asset.upload",
+        "art.ai.generate",
+        "ai.request"
+      ]
+    }
+  },
+  "notes": "Shared safe frontend configuration for the merged LiteraryFriend Book Studio. Authentication secrets and provider credentials are never embedded in this file."
+}
