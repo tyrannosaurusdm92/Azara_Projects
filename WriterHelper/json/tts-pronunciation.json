@@ -1,0 +1,451 @@
+{
+  "version": "3.0-ipa-voice-upgrade",
+  "language": "Aza’raan",
+  "targetLocale": "en-US",
+  "voicePolicy": {
+    "mode": "one-hidden-browser-voice-variable-depth",
+    "language": "en-US",
+    "namePriority": [
+      "Microsoft Zira",
+      "Microsoft Jenny",
+      "Microsoft Aria",
+      "Microsoft Ava",
+      "Samantha"
+    ],
+    "neverUseUnverifiedDefaultVoice": true,
+    "displayName": "Aza’raan Voice",
+    "fallback": "First installed English voice, then keep the same voice for the session.",
+    "soundCue": "Web Audio transient for IPA glottal stop and click events."
+  },
+  "canonicalNames": {
+    "aza’raan": {
+      "ipa": "æzʌʔr͡ræn",
+      "speech": "azz uh, rran"
+    },
+    "aza’ra": {
+      "ipa": "æzʌʔr͡rʌ",
+      "speech": "azz uh, rruh"
+    }
+  },
+  "latinTokens": [
+    {
+      "letters": "rr",
+      "ipa": "r͡r",
+      "speech": "rr"
+    },
+    {
+      "letters": "sh",
+      "ipa": "ʃ",
+      "speech": "sh"
+    },
+    {
+      "letters": "zh",
+      "ipa": "ʒ",
+      "speech": "zh"
+    },
+    {
+      "letters": "ch",
+      "ipa": "tʃ",
+      "speech": "ch"
+    },
+    {
+      "letters": "ng",
+      "ipa": "ŋ",
+      "speech": "ng"
+    },
+    {
+      "letters": "ae",
+      "ipa": "æ",
+      "speech": "a"
+    },
+    {
+      "letters": "ah",
+      "ipa": "ɑː",
+      "speech": "ah"
+    },
+    {
+      "letters": "oh",
+      "ipa": "oʊ",
+      "speech": "oh"
+    },
+    {
+      "letters": "uh",
+      "ipa": "ʌ",
+      "speech": "uh"
+    },
+    {
+      "letters": "eh",
+      "ipa": "ɛ",
+      "speech": "eh"
+    },
+    {
+      "letters": "ee",
+      "ipa": "iː",
+      "speech": "ee"
+    },
+    {
+      "letters": "ih",
+      "ipa": "ɪ",
+      "speech": "ih"
+    },
+    {
+      "letters": "oo",
+      "ipa": "uː",
+      "speech": "oo"
+    },
+    {
+      "letters": "aw",
+      "ipa": "ɑʊ",
+      "speech": "ow"
+    },
+    {
+      "letters": "ay",
+      "ipa": "eɪ",
+      "speech": "ay"
+    },
+    {
+      "letters": "ks",
+      "ipa": "ks",
+      "speech": "ks"
+    },
+    {
+      "letters": "a",
+      "ipa": "æ",
+      "speech": "a"
+    },
+    {
+      "letters": "b",
+      "ipa": "b",
+      "speech": "b"
+    },
+    {
+      "letters": "d",
+      "ipa": "d",
+      "speech": "d"
+    },
+    {
+      "letters": "e",
+      "ipa": "ɛ",
+      "speech": "eh"
+    },
+    {
+      "letters": "f",
+      "ipa": "f",
+      "speech": "f"
+    },
+    {
+      "letters": "g",
+      "ipa": "g",
+      "speech": "g"
+    },
+    {
+      "letters": "h",
+      "ipa": "h",
+      "speech": "h"
+    },
+    {
+      "letters": "i",
+      "ipa": "ɪ",
+      "speech": "ih"
+    },
+    {
+      "letters": "j",
+      "ipa": "dʒ",
+      "speech": "j"
+    },
+    {
+      "letters": "k",
+      "ipa": "k",
+      "speech": "k"
+    },
+    {
+      "letters": "l",
+      "ipa": "l",
+      "speech": "l"
+    },
+    {
+      "letters": "m",
+      "ipa": "m",
+      "speech": "m"
+    },
+    {
+      "letters": "n",
+      "ipa": "n",
+      "speech": "n"
+    },
+    {
+      "letters": "o",
+      "ipa": "oʊ",
+      "speech": "oh"
+    },
+    {
+      "letters": "p",
+      "ipa": "p",
+      "speech": "p"
+    },
+    {
+      "letters": "r",
+      "ipa": "r͡r",
+      "speech": "r"
+    },
+    {
+      "letters": "s",
+      "ipa": "s",
+      "speech": "s"
+    },
+    {
+      "letters": "t",
+      "ipa": "t",
+      "speech": "t"
+    },
+    {
+      "letters": "u",
+      "ipa": "ʌ",
+      "speech": "uh"
+    },
+    {
+      "letters": "v",
+      "ipa": "v",
+      "speech": "v"
+    },
+    {
+      "letters": "w",
+      "ipa": "w",
+      "speech": "w"
+    },
+    {
+      "letters": "x",
+      "ipa": "ks",
+      "speech": "ks"
+    },
+    {
+      "letters": "y",
+      "ipa": "j",
+      "speech": "y"
+    },
+    {
+      "letters": "z",
+      "ipa": "z",
+      "speech": "z"
+    },
+    {
+      "letters": "'",
+      "ipa": "ʔ",
+      "speech": ", "
+    }
+  ],
+  "keyIpa": {
+    "A": "æ",
+    "B": "b",
+    "D": "d",
+    "E": "ɛ",
+    "G": "g",
+    "H": "h",
+    "I": "ɪ",
+    "J": "dʒ",
+    "K": "k",
+    "L": "l",
+    "M": "m",
+    "N": "n",
+    "O": "oʊ",
+    "P": "p",
+    "R": "r",
+    "S": "s",
+    "T": "t",
+    "U": "ʌ",
+    "W": "w",
+    "Y": "j",
+    "Z": "z"
+  },
+  "keySpeech": {
+    "A": "a",
+    "B": "b",
+    "D": "d",
+    "E": "eh",
+    "G": "g",
+    "H": "h",
+    "I": "ih",
+    "J": "j",
+    "K": "k",
+    "L": "l",
+    "M": "m",
+    "N": "n",
+    "O": "oh",
+    "P": "p",
+    "R": "r",
+    "S": "s",
+    "T": "t",
+    "U": "uh",
+    "W": "w",
+    "Y": "y",
+    "Z": "z"
+  },
+  "vowelMarks": {
+    "C01": {
+      "ipa": "æ",
+      "speech": "a"
+    },
+    "C02": {
+      "ipa": "ɛ",
+      "speech": "e"
+    },
+    "C03": {
+      "ipa": "ɪ",
+      "speech": "i"
+    },
+    "C04": {
+      "ipa": "ʌ",
+      "speech": "uh"
+    },
+    "C05": {
+      "ipa": "ɑː",
+      "speech": "ah"
+    },
+    "C06": {
+      "ipa": "iː",
+      "speech": "ee"
+    },
+    "C07": {
+      "ipa": "uː",
+      "speech": "oo"
+    }
+  },
+  "accents": {
+    "C01": {
+      "type": "vowel",
+      "ipa": "æ"
+    },
+    "C02": {
+      "type": "vowel",
+      "ipa": "ɛ"
+    },
+    "C03": {
+      "type": "vowel",
+      "ipa": "ɪ"
+    },
+    "C04": {
+      "type": "vowel",
+      "ipa": "ʌ"
+    },
+    "C05": {
+      "type": "vowel",
+      "ipa": "ɑː"
+    },
+    "C06": {
+      "type": "vowel",
+      "ipa": "iː"
+    },
+    "C07": {
+      "type": "vowel",
+      "ipa": "uː"
+    },
+    "C08": {
+      "type": "consonant",
+      "ipa": "g",
+      "special": {
+        "N": "ŋ"
+      }
+    },
+    "C09": {
+      "type": "glide",
+      "ipa": "w",
+      "special": {
+        "B": "v",
+        "K": "kw"
+      }
+    },
+    "C10": {
+      "type": "glide",
+      "ipa": "j",
+      "special": {
+        "N": "ɲ",
+        "O": "ɔɪ"
+      }
+    },
+    "C11": {
+      "type": "consonant",
+      "ipa": "f",
+      "special": {
+        "B": "f"
+      }
+    },
+    "C12": {
+      "type": "consonant",
+      "ipa": "b",
+      "special": {
+        "W": "b"
+      }
+    },
+    "K01": {
+      "type": "coda",
+      "ipa": "z"
+    },
+    "K02": {
+      "type": "coda",
+      "ipa": "s"
+    },
+    "K03": {
+      "type": "affricate",
+      "ipa": "tʃ",
+      "special": {
+        "T": "tʃ",
+        "D": "dʒ"
+      }
+    },
+    "K04": {
+      "type": "modifier",
+      "special": {
+        "T": "θ",
+        "S": "ʃ",
+        "O": "oʊ"
+      }
+    },
+    "K05": {
+      "type": "base",
+      "ipa": ""
+    },
+    "K06": {
+      "type": "coda",
+      "ipa": "d"
+    },
+    "K07": {
+      "type": "coda",
+      "ipa": "k"
+    },
+    "K08": {
+      "type": "coda",
+      "ipa": "l"
+    },
+    "K09": {
+      "type": "coda",
+      "ipa": "m"
+    },
+    "K10": {
+      "type": "coda",
+      "ipa": "n"
+    },
+    "K11": {
+      "type": "coda",
+      "ipa": "r",
+      "articulation": "rolled"
+    },
+    "K12": {
+      "type": "coda",
+      "ipa": "t"
+    }
+  },
+  "baseSlider": {
+    "min": 0,
+    "mid": 50,
+    "max": 100,
+    "default": 100,
+    "pitchMin": 0.6,
+    "pitchMax": 1.6,
+    "labels": [
+      "Masculine",
+      "Androgynous",
+      "Feminine"
+    ],
+    "affects": "SpeechSynthesisUtterance.pitch only; phonemes and browser voice choice remain fixed."
+  }
+}

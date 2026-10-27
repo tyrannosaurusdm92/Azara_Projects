@@ -1,0 +1,455 @@
+{
+  "version": "Khmer-only-v2",
+  "description": "Aza’raan: Latin-key appearances; Khmer-only encoded bases and all 28 core sound/structural marks. The 96 additional variant mappings remain the original keyboard assignments.",
+  "bases": {
+    "A": "ឯ",
+    "B": "ប",
+    "D": "ដ",
+    "E": "ឥ",
+    "G": "ខ",
+    "H": "ហ",
+    "I": "ឰ",
+    "J": "ច",
+    "K": "គ",
+    "L": "ឡ",
+    "M": "ម",
+    "N": "ន",
+    "O": "ឧ",
+    "P": "ព",
+    "R": "រ",
+    "S": "ស",
+    "T": "ត",
+    "U": "ឩ",
+    "W": "ឆ",
+    "Y": "យ",
+    "Z": "ជ",
+    "F": "ផ",
+    "V": "វ"
+  },
+  "letterCount": 21,
+  "markCount": 28,
+  "vowelSubstitutionWhenMarked": {
+    "A": "អ",
+    "E": "ង",
+    "I": "ញ",
+    "O": "ឋ",
+    "U": "ឌ"
+  },
+  "coreLatinAppearancesKhmerEncoding": [
+    {
+      "display": "◌́",
+      "cp": "U+17CA",
+      "latinMark": "́",
+      "output": "៊",
+      "name": "Acute",
+      "meaning": "Raise/front the sound; A gives /eɪ/, K can give /kiː/.",
+      "id": "C01",
+      "soundName": "High/front glide",
+      "example": "Á /eɪ/, Ḱ /kiː/",
+      "latinCp": "U+0301",
+      "family": "core"
+    },
+    {
+      "display": "◌̀",
+      "cp": "U+17CE",
+      "latinMark": "̀",
+      "output": "៎",
+      "name": "Grave",
+      "meaning": "Lower/back the base sound; W gives /wɑ/, G can become /ɣ/.",
+      "id": "C02",
+      "soundName": "Low/back quality",
+      "example": "Ẁ /wɑ/, G̀ /ɣ/",
+      "latinCp": "U+0300",
+      "family": "core"
+    },
+    {
+      "display": "◌̂",
+      "cp": "U+17CF",
+      "latinMark": "̂",
+      "output": "៏",
+      "name": "Circumflex",
+      "meaning": "Open or broaden the vowel into a diphthong; A gives Aw /ɑu̯/.",
+      "id": "C03",
+      "soundName": "Broad diphthong",
+      "example": "Â /ɑu̯/, Î /aɪ/",
+      "latinCp": "U+0302",
+      "family": "core"
+    },
+    {
+      "display": "◌̌",
+      "cp": "U+17D0",
+      "latinMark": "̌",
+      "output": "័",
+      "name": "Caron",
+      "meaning": "Make a compound or affricated articulation; D can be /dz/, T /tʃ/.",
+      "id": "C04",
+      "soundName": "Affrication",
+      "example": "Ď /dz/, Ť /tʃ/",
+      "latinCp": "U+030C",
+      "family": "core"
+    },
+    {
+      "display": "◌̄",
+      "cp": "U+17CD",
+      "latinMark": "̄",
+      "output": "៍",
+      "name": "Macron",
+      "meaning": "Lengthen the vowel; A has the Ah /ɑː/ reading.",
+      "id": "C05",
+      "soundName": "Long vowel / AH",
+      "example": "Ā /ɑː/, Ē /iː/",
+      "latinCp": "U+0304",
+      "family": "core"
+    },
+    {
+      "display": "◌̆",
+      "cp": "U+17DD",
+      "latinMark": "̆",
+      "output": "៝",
+      "name": "Breve",
+      "meaning": "Shorten or reduce duration and vowel quality.",
+      "id": "C06",
+      "soundName": "Short / reduced",
+      "example": "W̆ /wɪ/",
+      "latinCp": "U+0306",
+      "family": "core"
+    },
+    {
+      "display": "◌̈",
+      "cp": "U+17C8",
+      "latinMark": "̈",
+      "output": "ៈ",
+      "name": "Diaeresis",
+      "meaning": "Add or separate a rounded/gliding segment.",
+      "id": "C07",
+      "soundName": "Rounded glide",
+      "example": "K̈ /kʷ/",
+      "latinCp": "U+0308",
+      "family": "core"
+    },
+    {
+      "display": "◌̃",
+      "cp": "U+17B9",
+      "latinMark": "̃",
+      "output": "ឹ",
+      "name": "Tilde",
+      "meaning": "Nasalize the sound; N acquires /ŋ/ through its merged family.",
+      "id": "C08",
+      "soundName": "Nasal quality",
+      "example": "Ñ /ŋ/",
+      "latinCp": "U+0303",
+      "family": "core"
+    },
+    {
+      "display": "◌̨",
+      "cp": "U+17BA",
+      "latinMark": "̨",
+      "output": "ឺ",
+      "name": "Ogonek",
+      "meaning": "Select or add an Eh-quality /ɛ/ to the reading.",
+      "id": "C09",
+      "soundName": "Eh /ɛ/ quality",
+      "example": "Ę /ɛ/, Y̨ /jɛ/",
+      "latinCp": "U+0328",
+      "family": "core"
+    },
+    {
+      "display": "◌̧",
+      "cp": "U+17BE",
+      "latinMark": "̧",
+      "output": "ើ",
+      "name": "Cedilla",
+      "meaning": "Palatalize or soften consonants: S /ʃ/, J /ʒ/, N /ɲ/.",
+      "id": "C10",
+      "soundName": "Soft / sibilant",
+      "example": "Ş /ʃ/, J̧ /ʒ/",
+      "latinCp": "U+0327",
+      "family": "core"
+    },
+    {
+      "display": "◌̇",
+      "cp": "U+17C3",
+      "latinMark": "̇",
+      "output": "ៃ",
+      "name": "Dot above",
+      "meaning": "Voice or brighten a family articulation; B becomes /v/.",
+      "id": "C11",
+      "soundName": "Voiced / bright",
+      "example": "Ḃ /v/",
+      "latinCp": "U+0307",
+      "family": "core"
+    },
+    {
+      "display": "◌̵",
+      "cp": "U+17D2 + U+1780",
+      "latinMark": "̵",
+      "output": "្ក",
+      "name": "Stroke overlay",
+      "meaning": "Harden or devoice the articulation; B /f/, T /θ/. The Unicode is a Khmer coeng subscript pair.",
+      "id": "C12",
+      "soundName": "Fortis / devoiced",
+      "example": "B̵ /f/, T̵ /θ/",
+      "latinCp": "U+0335",
+      "family": "core"
+    }
+  ],
+  "reservedKhmerMarks": [
+    {
+      "display": "◌ា",
+      "cp": "U+17B6",
+      "output": "ា",
+      "name": "AA",
+      "meaning": "Set the vowel nucleus to /ɑː/ (ah), particularly consonant + AH.",
+      "id": "K01",
+      "soundName": "AH",
+      "example": "K + AH → /kɑː/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ិ",
+      "cp": "U+17B7",
+      "output": "ិ",
+      "name": "I",
+      "meaning": "Set vowel to /ɪ/ (ih).",
+      "id": "K02",
+      "soundName": "IH",
+      "example": "K + IH → /kɪ/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ី",
+      "cp": "U+17B8",
+      "output": "ី",
+      "name": "II",
+      "meaning": "Set vowel to /iː/ (ee).",
+      "id": "K03",
+      "soundName": "EE",
+      "example": "K + EE → /kiː/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ុ",
+      "cp": "U+17BB",
+      "output": "ុ",
+      "name": "U",
+      "meaning": "Set vowel to /ʌ/ (uh).",
+      "id": "K04",
+      "soundName": "UH",
+      "example": "K + UH → /kʌ/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ូ",
+      "cp": "U+17BC",
+      "output": "ូ",
+      "name": "UU",
+      "meaning": "Set vowel to /uː/ (oo).",
+      "id": "K05",
+      "soundName": "OO",
+      "example": "K + OO → /kuː/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ួ",
+      "cp": "U+17BD",
+      "output": "ួ",
+      "name": "UA",
+      "meaning": "Select /wɑ/ glide-vowel. W + WAH gives /wɑ/ without repeating /w/.",
+      "id": "K06",
+      "soundName": "WAH",
+      "example": "W + WAH → /wɑ/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌េ",
+      "cp": "U+17C1",
+      "output": "េ",
+      "name": "E",
+      "meaning": "Set vowel nucleus to /ɛ/ (eh).",
+      "id": "K07",
+      "soundName": "EH",
+      "example": "K + EH → /kɛ/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ែ",
+      "cp": "U+17C2",
+      "output": "ែ",
+      "name": "AE",
+      "meaning": "Set vowel nucleus to /æ/ (a in apple).",
+      "id": "K08",
+      "soundName": "AE",
+      "example": "K + AE → /kæ/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ោ",
+      "cp": "U+17C4",
+      "output": "ោ",
+      "name": "OO",
+      "meaning": "One two-sided Khmer vowel sign. In Aza’raan, its left visual component denotes /æ/ and right /z/. T + sign → /tæz/.",
+      "id": "K09",
+      "soundName": "AEZ / Tz",
+      "example": "T + AEZ → /tæz/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ំ",
+      "cp": "U+17C6",
+      "output": "ំ",
+      "name": "NIKAHIT",
+      "meaning": "Add final /m/ after a vowel; differs from general nasalization.",
+      "id": "K10",
+      "soundName": "Final M",
+      "example": "K + AH + M → /kɑːm/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌ះ",
+      "cp": "U+17C7",
+      "output": "ះ",
+      "name": "REAHMUK",
+      "meaning": "Add a breathy /h/ ending or aspirated /ʰ/ consonant release.",
+      "id": "K11",
+      "soundName": "H / aspiration",
+      "example": "K + H-release → /kʰ/",
+      "family": "khmer"
+    },
+    {
+      "display": "◌់",
+      "cp": "U+17CB",
+      "output": "់",
+      "name": "BANTOC",
+      "meaning": "Force the usual/standard sound of the base, e.g. N /n/. Adds no phoneme.",
+      "id": "K12",
+      "soundName": "Normalized sound",
+      "example": "N + normalized → /n/",
+      "family": "khmer"
+    }
+  ],
+  "specialKhmerMarkers": [
+    {
+      "display": "◌̓",
+      "name": "Glottal stop",
+      "latinMark": "̓",
+      "output": "៉",
+      "meaning": "Add /ʔ/ within the current logical letter, typically before its vowel.",
+      "id": "S01",
+      "soundName": "Glottal stop",
+      "example": "A + glottal + AH → /ʔɑː/",
+      "cp": "U+17C9",
+      "family": "special"
+    },
+    {
+      "display": "◌̩",
+      "name": "Click",
+      "latinMark": "̩",
+      "output": "្ឃ",
+      "meaning": "Add click articulation /ǃ/ to the current logical letter.",
+      "id": "S02",
+      "soundName": "Click",
+      "example": "Base + click → click articulation",
+      "cp": "U+17D2 + U+1783",
+      "family": "special"
+    },
+    {
+      "display": "◌͔",
+      "name": "Previous syllable",
+      "latinMark": "͔",
+      "output": "៌",
+      "meaning": "Emphasize the preceding syllable; no independent phoneme.",
+      "id": "S03",
+      "soundName": "Previous syllable emphasis",
+      "example": "Emphasis ◌͔",
+      "cp": "U+17CC",
+      "family": "special"
+    },
+    {
+      "display": "◌͕",
+      "name": "Next syllable",
+      "latinMark": "͕",
+      "output": "៑",
+      "meaning": "Emphasize the following syllable; no independent phoneme.",
+      "id": "S04",
+      "soundName": "Next syllable emphasis",
+      "example": "Emphasis ◌͕",
+      "cp": "U+17D1",
+      "family": "special"
+    }
+  ],
+  "tokenRule": "One semantic base plus 0 or more modifiers = one Aza’raan letter. Some mixed Khmer vowel-sign stacks are non-standard for ordinary Khmer rendering. Source Unicode letters are never Latin in serialized keyboard output.",
+  "examples": [
+    {
+      "label": "Ka",
+      "base": "K",
+      "marks": [
+        "K01"
+      ],
+      "ipa": "/kɑː/",
+      "unicode": "គា",
+      "codepoints": "U+1782 + U+17B6"
+    },
+    {
+      "label": "ʻah",
+      "base": "A",
+      "marks": [
+        "S01",
+        "K01"
+      ],
+      "ipa": "/ʔɑː/",
+      "unicode": "អ៉ា",
+      "codepoints": "U+17A2 + U+17C9 + U+17B6"
+    },
+    {
+      "label": "eh",
+      "base": "E",
+      "marks": [
+        "C09"
+      ],
+      "ipa": "/ɛ/",
+      "unicode": "ងឺ",
+      "codepoints": "U+1784 + U+17BA"
+    },
+    {
+      "label": "ʻaw",
+      "base": "A",
+      "marks": [
+        "S01",
+        "C03"
+      ],
+      "ipa": "/ʔɑu̯/",
+      "unicode": "អ៉៏",
+      "codepoints": "U+17A2 + U+17C9 + U+17CF"
+    },
+    {
+      "label": "n (standard)",
+      "base": "N",
+      "marks": [
+        "K12"
+      ],
+      "ipa": "/n/",
+      "unicode": "ន់",
+      "codepoints": "U+1793 + U+17CB"
+    },
+    {
+      "label": "ua / wah",
+      "base": "W",
+      "marks": [
+        "K06"
+      ],
+      "ipa": "/wɑ/",
+      "unicode": "ឆួ",
+      "codepoints": "U+1786 + U+17BD"
+    },
+    {
+      "label": "Tz",
+      "base": "T",
+      "marks": [
+        "K09"
+      ],
+      "ipa": "/tæz/",
+      "unicode": "តោ",
+      "codepoints": "U+178F + U+17C4"
+    }
+  ]
+}

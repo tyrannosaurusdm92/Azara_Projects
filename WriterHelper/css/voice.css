@@ -1,0 +1,48 @@
+/* Voice and pronunciation workshop, inside the writing desk tab. */
+.voice-studio{--gold:#e6c17e;--aqua:#a8d5cc;--muted:#bac0b9;--text:#f3e9d6;--line:#6f604b;margin-top:24px;color:var(--text)}
+.voice-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;padding:18px 21px;margin-bottom:17px;border:1px solid #8c6e43;border-radius:12px;background:#302e29}
+.voice-heading h2{font:650 clamp(1.5rem,2.5vw,2.25rem) Georgia,serif;margin:4px 0}.voice-heading p{font-size:.85rem;color:var(--muted);max-width:740px;margin:0}
+.voice-studio .panel{min-width:0;padding:21px;background:linear-gradient(145deg,#243239,#14232a);border:1px solid #786342;border-radius:12px;box-shadow:0 12px 30px #0005}
+.voice-studio .panel-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.voice-studio .panel-heading h3{font:650 1.32rem Georgia,serif;margin:0}
+.voice-studio .label-chip{color:var(--gold);border:1px solid #a0804f;border-radius:30px;font-size:.7rem;letter-spacing:.07em;padding:5px 9px;white-space:nowrap}
+.voice-studio .aside-caption{color:var(--muted);font-size:.82rem}
+.voice-studio .gold-btn{background:#a47c45!important;color:#151d23!important;border-color:#e9c783!important;font-weight:800}
+.voice-studio .gold-btn:hover{background:#e2bf76!important}
+.voice-studio button[aria-pressed="true"]{background:#725d3c!important;border-color:var(--gold)!important;color:#fff3d8!important}
+.composition-voice{border-top:1px solid #745c3f;padding:11px 16px;display:flex;align-items:center;gap:15px;flex-wrap:wrap;background:#222b30}
+.composition-reading{display:flex;align-items:baseline;gap:13px;flex:1;min-width:230px;overflow-wrap:anywhere}.composition-reading strong{color:#eed09a;font:1.15rem Georgia,serif}.composition-voice-actions{display:flex;gap:7px;flex-wrap:wrap}
+.composition-voice .speech-warning{flex-basis:100%}
+@media(max-width:650px){.voice-heading{display:block}.voice-seal{margin-top:10px;width:max-content}.voice-studio .panel{padding:15px}.composition-reading{display:block}.composition-reading>*{display:block;margin:3px 0}}
+.tabs{flex-wrap:wrap}.speech-workspace{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:18px;align-items:start}.speech-field-label{font-weight:700;font-size:.81rem;color:var(--gold);display:block;margin:14px 0 7px}#speechText{display:block;min-height:220px;resize:vertical;width:100%;border:1px solid #59757a;border-radius:9px;background:#091922;color:#f2dfbd;padding:17px 19px;font:1.27rem/1.7 Georgia,'Trebuchet MS',serif}.speech-preset-bar{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0}.speech-preset-bar button{font-size:.82rem}.speech-transcription{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}.speech-transcription>div{background:#091e29;border:1px solid #3b555a;border-radius:8px;padding:11px;min-width:0}.speech-transcription .tiny{display:block;margin-bottom:7px}.speech-transcription strong,.speech-transcription #speechPreview{display:block;font-family:Georgia,serif;color:var(--gold);overflow-wrap:anywhere;font-size:1.15rem}.speech-buttons{display:flex;gap:10px;flex-wrap:wrap}.speech-buttons button{padding:12px 18px;font-weight:800}.speech-status{margin:14px 0 0;color:var(--aqua);font-size:.82rem;min-height:22px}.voice-seal{display:flex;flex-direction:column;border:1px double var(--gold);padding:11px 18px;letter-spacing:.09em;color:var(--gold);font:700 .85rem Georgia,serif;white-space:nowrap}.voice-seal span{font:.71rem system-ui,sans-serif;color:var(--muted)}.voice-identity{background:#0c222d;padding:12px 15px;border:1px solid #57694d;border-radius:8px;margin-bottom:20px}.voice-identity strong,.voice-identity small{display:block}.voice-identity strong{color:var(--gold)}.voice-identity small{color:var(--muted);font-size:.71rem;margin-top:3px}.speech-dial{margin:18px 0 25px}.speech-dial label{display:flex;justify-content:space-between;gap:12px;font-weight:bold;font-size:.9rem}.speech-dial output{color:var(--gold);font-variant-numeric:tabular-nums}.speech-dial input{display:block;width:100%;accent-color:var(--gold);cursor:pointer;margin:12px 0 4px}.speech-dial p{font-size:.72rem;color:var(--muted);margin:0}.dial-reset{width:100%;padding:11px}.tts-note{margin-top:17px;border-top:1px solid #8a7750;padding-top:15px;color:var(--muted);font-size:.79rem;line-height:1.55}.tts-note strong{color:var(--gold)}
+@media(max-width:900px){.speech-workspace{grid-template-columns:1fr}}@media(max-width:620px){.speech-transcription{grid-template-columns:1fr}.tabs button{font-size:.82rem;flex:1;padding:10px 7px}.speech-workspace{gap:10px}}
+
+/* Voice-base pitch spectrum and accent-conflict guidance. */
+.base-labels{display:flex;justify-content:space-between;gap:6px;color:var(--aqua);font-weight:650;font-size:.72rem;margin:4px 0 10px}
+.base-labels span:nth-child(2){text-align:center}.base-labels span:last-child{text-align:right}
+.voice-base-control input{height:20px;accent-color:var(--gold)}
+.speech-warning{min-height:0;color:#f2bc7c;font-size:.8rem;margin:8px 0 0;line-height:1.45}
+.speech-warning:empty{display:none}
+
+@media(min-width:701px){.sample-units{grid-template-columns:repeat(7,minmax(0,1fr))}}
+
+/* Pronunciation workshop: requested Aza’raan sounds only; reference data stays internal. */
+.practice-panel{margin-top:20px}.practice-panel>.aside-caption{margin-bottom:16px;max-width:900px}
+.practice-filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px}.practice-filters button{font-size:.78rem;padding:8px 11px}
+.practice-filters button[aria-pressed="true"],.practice-sound-list button[aria-pressed="true"]{background:#725d3c;border-color:var(--gold);color:#fff3d8}
+.practice-layout{display:grid;grid-template-columns:minmax(265px,.83fr) minmax(0,1.4fr);gap:20px}
+.practice-browser label{display:block;color:var(--gold);font-weight:700;font-size:.8rem;margin-bottom:7px}
+#practiceSearch{background:#091e29;border:1px solid #536b70;border-radius:8px;padding:10px;color:var(--text);width:100%;margin-bottom:10px}
+.practice-sound-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-height:440px;overflow:auto;padding:2px;align-content:start}
+.practice-sound-list button{min-height:55px;padding:7px 4px;text-align:center;overflow-wrap:anywhere}
+.practice-sound-list button strong{font:1.12rem Georgia,serif;color:var(--gold);display:block}.practice-sound-list button small{display:block;color:var(--muted);font-size:.65rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.practice-detail{min-width:0}.practice-current{display:flex;align-items:center;gap:17px;border:1px solid #56654e;background:#0c222b;border-radius:9px;padding:13px;margin-bottom:12px}
+.practice-ipa{min-width:95px;max-width:180px;overflow-wrap:anywhere;text-align:center;color:var(--gold);font:clamp(1.4rem,2.7vw,2.1rem) Georgia,serif}
+.practice-current strong{color:var(--gold)}.practice-current p{font-size:.8rem;color:var(--muted);margin:5px 0 0}
+.practice-controls{display:flex;flex-wrap:wrap;gap:7px}.practice-controls button,.practice-controls a{font-size:.79rem;padding:9px 11px}
+.practice-recording,.practice-reference{border-top:1px solid #625438;margin-top:17px;padding-top:13px}.practice-recording canvas{display:block;width:100%;height:92px;margin:12px 0;background:#081a23;border:1px solid #3d5a60;border-radius:8px}
+#practicePlayback{width:100%;margin:0 0 8px}.practice-recording .hint{margin-top:7px}
+#practiceDownload{display:inline-flex;align-items:center;text-decoration:none;border:1px solid #6e745f;background:#203541;border-radius:8px;color:var(--gold)}
+.practice-reference strong{color:var(--gold)}.practice-reference p{color:var(--muted);font-size:.79rem;margin:5px 0 9px}.practice-reference small{display:block;color:var(--aqua);font-size:.73rem;margin-top:7px}
+.practice-world{border-top:1px solid #625438;margin-top:16px;padding-top:13px}.practice-world strong{color:var(--gold)}.practice-world .hint{margin:5px 0 10px}.practice-world-inputs{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:center}.practice-world-inputs label{font-size:.76rem;color:var(--aqua)}.practice-world-inputs select,.practice-world-inputs input{background:#091e29;border:1px solid #536b70;border-radius:8px;padding:9px;color:var(--text);min-width:0;width:100%}.practice-world-inputs button{grid-column:2;justify-self:start;font-size:.79rem}
+@media(max-width:850px){.practice-layout{grid-template-columns:1fr}.practice-sound-list{max-height:230px;grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:570px){.practice-sound-list{grid-template-columns:repeat(3,minmax(0,1fr))}.practice-current{align-items:flex-start}.practice-ipa{min-width:72px}}

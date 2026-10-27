@@ -1,0 +1,7 @@
+/* Complete typing + phonetic + voice + evolution merge */
+.composition-voice{margin-top:1rem}
+.voice-studio{margin-top:1.3rem}
+#panel-typing .voice-studio .panel{scroll-margin-top:1.5rem}
+#panel-typing .sound-lab{scroll-margin-top:1.5rem}
+.speech-transcription strong{overflow-wrap:anywhere}
+@media(max-width:760px){.voice-studio{padding:.25rem}.composition-voice{display:flex;flex-wrap:wrap;gap:12px}.composition-voice-actions{display:flex;flex-wrap:wrap}}

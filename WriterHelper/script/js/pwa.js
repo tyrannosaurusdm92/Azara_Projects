@@ -1,0 +1,2 @@
+/* Single WriterHelper service worker scope. */
+if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost'||location.hostname==='127.0.0.1'))window.addEventListener('load',()=>navigator.serviceWorker.register(new URL('./service-worker.js',location.href),{scope:new URL('./',location.href).pathname}).catch(console.warn));
