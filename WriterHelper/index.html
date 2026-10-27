@@ -1,36 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <base href="./sources/LiteraryFriend/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#10362D">
   <meta name="description" content="Literary Friend: channel-based writing rooms, multi-draft studio, tasks, reminders and movable Unicode keyboard.">
   <title>Aza’ra WriterHelper — Language and Eight Books</title>
-  <link rel="manifest" href="sources/LiteraryFriend/manifest.webmanifest">
-  <link rel="icon" href="sources/LiteraryFriend/assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="sources/LiteraryFriend/css/luxury-editor.css">
-  <link rel="stylesheet" href="sources/LiteraryFriend/css/keyboard.css">
-  <link rel="stylesheet" href="sources/LiteraryFriend/css/literary-friend.css">
-  <script defer src="sources/LiteraryFriend/script/js/languages.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/unicode-data.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/storage.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/keyboard.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/app.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/literary-core.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/literary-writer-tools.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/helper-safe.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/helper-chunks.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/wasm-diagnostics.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/wasm-preload.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/resize-panels.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/literary-friend.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/backend-bridge.js"></script>
-  <script defer src="sources/LiteraryFriend/script/js/pwa.js"></script>
-<link rel="stylesheet" href="css/writerhelper.css"><script defer src="js/writerhelper.js"></script></head>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/luxury-editor.css">
+  <link rel="stylesheet" href="css/keyboard.css">
+  <link rel="stylesheet" href="css/literary-friend.css">
+  <script defer src="script/js/languages.js"></script>
+  <script defer src="script/js/unicode-data.js"></script>
+  <script defer src="script/js/storage.js"></script>
+  <script defer src="script/js/keyboard.js"></script>
+  <script defer src="script/js/app.js"></script>
+  <script defer src="script/js/literary-core.js"></script>
+  <script defer src="script/js/literary-writer-tools.js"></script>
+  <script defer src="script/js/helper-safe.js"></script>
+  <script defer src="script/js/helper-chunks.js"></script>
+  <script defer src="script/js/wasm-diagnostics.js"></script>
+  <script defer src="script/js/wasm-preload.js"></script>
+  <script defer src="script/js/resize-panels.js"></script>
+  <script defer src="script/js/literary-friend.js"></script>
+  <script defer src="script/js/backend-bridge.js"></script>
+  <script defer src="script/js/pwa.js"></script>
+<link rel="stylesheet" href="../../css/writerhelper.css"><script defer src="../../js/writerhelper.js"></script></head>
 <body>
   <div class="app" id="app">
     <aside class="workspace-rail" aria-label="Workspaces">
-      <div class="rail-head" title="Literary Friend"><img src="sources/LiteraryFriend/assets/mark.svg" width="34" height="34" alt="Literary Friend"></div>
+      <div class="rail-head" title="Literary Friend"><img src="assets/mark.svg" width="34" height="34" alt="Literary Friend"></div>
       <div class="workspace-list" id="workspace-list" aria-label="Project workspaces"></div>
       <button class="rail-add" id="new-workspace" title="New workspace" aria-label="New workspace">+</button>
       <div class="rail-spacer"></div>
@@ -122,5 +123,5 @@
     <div class="keyboard-header" id="keyboard-handle"><div class="keyboard-brand"><span>⌨</span> Unicode keyboard <small id="keyboard-mode-label">Letters</small></div><div class="keyboard-actions"><button id="keyboard-split" class="keyboard-control" title="Split keyboard" aria-label="Split keyboard">◫</button><button id="keyboard-collapse" class="keyboard-control" title="Collapse keyboard" aria-label="Collapse keyboard">−</button><button id="keyboard-close" class="keyboard-control" title="Close keyboard" aria-label="Close keyboard">×</button></div></div>
     <div class="keyboard-body" id="keyboard-body"><div class="keyboard-options"><select id="keyboard-language" aria-label="Keyboard language"></select><select id="keyboard-layout" aria-label="Keyboard layout"><option value="letters">Letters</option><option value="extended">Latin Extended</option><option value="combining">Combining marks</option></select><input id="keyboard-search" type="search" placeholder="Find character or U+ code" aria-label="Search Unicode characters" hidden><label class="shift-label"><input id="keyboard-shift" type="checkbox"> Shift</label></div><div id="keyboard-keys" class="keyboard-keys"></div><div class="keyboard-foot"><span id="keyboard-hint">Type into the active writing page.</span><button id="keyboard-nfc" class="keyboard-small" title="Normalize selected text to NFC">NFC</button><span class="resize-hint">↘ resize</span></div></div>
   </section>
-<section id="wh-keyboard-panel" class="wh-kb" aria-label="Savanski keyboard on every book page"><header class="wh-kb-bar"><strong>⌨ Savanski Keyboard</strong><span id="wh-kb-status" role="status">Loading keyboard…</span><label>Height <input type="range" id="wh-kb-height" min="240" max="650" value="365" step="10"></label><button id="wh-library" type="button">Unicode library</button><button id="wh-kb-close" type="button" aria-label="Close keyboard">×</button></header><iframe id="wh-kb-frame" title="Full Savanski keyboard" src="sources/PersonalProjects/keyboard/keyboard.html"></iframe></section></body>
+<section id="wh-keyboard-panel" class="wh-kb" aria-label="Savanski keyboard on every book page"><header class="wh-kb-bar"><strong>⌨ Savanski Keyboard</strong><span id="wh-kb-status" role="status">Loading keyboard…</span><label>Height <input type="range" id="wh-kb-height" min="240" max="650" value="365" step="10"></label><button id="wh-library" type="button">Unicode library</button><button id="wh-kb-close" type="button" aria-label="Close keyboard">×</button></header><iframe id="wh-kb-frame" title="Full Savanski keyboard" src="../../sources/PersonalProjects/keyboard/keyboard.html"></iframe></section></body>
 </html>
