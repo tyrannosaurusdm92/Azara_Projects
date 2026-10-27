@@ -1,0 +1,61 @@
+name: Vendor complete WriterHelper sources
+on:
+  push:
+    paths:
+      - .github/workflows/vendor-writerhelper.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  vendor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout WriterHelper with pinned source submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Copy complete original frontend trees
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f WriterHelper/sources/LiteraryFriend/index.html
+          test -f WriterHelper/sources/PersonalProjects/keyboard/keyboard.html
+          mkdir -p WriterHelper/vendor/LiteraryFriend WriterHelper/vendor/keyboard
+          rsync -a --delete --exclude='.git' \
+            WriterHelper/sources/LiteraryFriend/ WriterHelper/vendor/LiteraryFriend/
+          rsync -a --delete --exclude='.git' \
+            WriterHelper/sources/PersonalProjects/keyboard/ WriterHelper/vendor/keyboard/
+          python3 - <<'PY'
+          from pathlib import Path
+          page = Path('WriterHelper/index.html')
+          html = page.read_text(encoding='utf-8')
+          html = html.replace('./sources/LiteraryFriend/', './vendor/LiteraryFriend/')
+          html = html.replace('../../sources/PersonalProjects/keyboard/keyboard.html', '../../vendor/keyboard/keyboard.html')
+          page.write_text(html, encoding='utf-8')
+          PY
+
+      - name: Verify source-file completeness
+        shell: bash
+        run: |
+          set -euo pipefail
+          diff -qr --exclude=.git WriterHelper/sources/LiteraryFriend WriterHelper/vendor/LiteraryFriend
+          diff -qr --exclude=.git WriterHelper/sources/PersonalProjects/keyboard WriterHelper/vendor/keyboard
+          test -s WriterHelper/vendor/keyboard/json/unicode-characters.json
+          test -s WriterHelper/vendor/LiteraryFriend/script/js/app.js
+
+      - name: Commit complete sources to WriterHelper
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add WriterHelper/vendor WriterHelper/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Vendor complete LiteraryFriend and Savanski keyboard source trees'
+            git push origin HEAD:main
+          fi
