@@ -1,5 +1,7 @@
 # Aza’raan Language Studio — Best-of-Both Merge
 
+**Source history:** This document describes the original Language package. For the current WriterHelper entry point, folder layout, audio, and font workshop, see the [root README](../README.md) and [integration map](WRITERHELPER_INTEGRATION.md). Run WriterHelper through HTTP or HTTPS so embedded module scripts and the service worker can load.
+
 **Start here:** Extract the ZIP, keep its folders together, and open `index.html` in a modern browser. This is the **only HTML file**. It operates locally, without a web service or installation. The full writing desk and six-stage Evolution Atlas share two tabs.
 
 ## What was combined
@@ -51,7 +53,7 @@ assets/
   svg/marks/               original visible accent artwork for each supported era
   svg/refined-contrast/    canonical contrasting (black) revisions, preserved
   images/evolution/        52 root images and historical contact sheets
-js/
+script/js/aza/
   config.js                keyboard, era and 24 mark metadata (offline mirror)
   studio.js                unicode/keyboard/palette/manuscript runtime
   data.js                  canonical phonetics input metadata
@@ -59,7 +61,7 @@ js/
   phonetic.js              pronunciation conversion engine
   phonetic-ui.js           bridges phonetics to the interactive writing desk
   evolution.js             six-era historical graph runtime
-css/
+style/css/aza/
   studio.css, phonetic.css, evolution.css
 json/                     editable configuration and original source registers
 docs/                     examples, reference chart, merge history and test notes

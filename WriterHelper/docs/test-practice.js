@@ -43,7 +43,7 @@ const window={AZA_PRACTICE_DATA:practice,AZA_IPA_DATA:inventory,AzaaraanTTS:tts,
 const URL={createObjectURL(){return 'blob:test-practice'},revokeObjectURL(){revoked++}};
 const context={window,document,navigator,URL,Blob,Intl,setTimeout(){},requestAnimationFrame(){return 1},cancelAnimationFrame(){},console};
 vm.createContext(context);
-vm.runInContext(fs.readFileSync(path.join(root,'js/pronunciation-lab.js'),'utf8'),context);
+vm.runInContext(fs.readFileSync(path.join(root,'script/js/aza/pronunciation-lab.js'),'utf8'),context);
 const lab=window.AzaaraanPractice;
 function check(ok,message){if(!ok)throw Error(message);}
 (async()=>{

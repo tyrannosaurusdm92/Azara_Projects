@@ -24,7 +24,7 @@ const window={speechSynthesis:synth,AudioContext:AudioContextMock,
  SpeechSynthesisUtterance:function(text){this.text=text;},addEventListener(){}};
 const document={getElementById:element,querySelectorAll(){return []},querySelector(){return {click(){}}}};
 const context={window,document,console,setTimeout,queueMicrotask};vm.createContext(context);
-for(const file of ['js/config.js','js/voice-adapter.js','js/tts-data.js','js/ipa-data.js','js/ipa.js','js/tts.js'])
+for(const file of ['script/js/aza/config.js','script/js/aza/voice-adapter.js','script/js/aza/tts-data.js','script/js/aza/ipa-data.js','script/js/aza/ipa.js','script/js/aza/tts.js'])
  vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
 const {plan}=window.AZA_IPA,{transcribe}=window.AzaaraanTTS;
 function check(ok,description){if(!ok)throw Error(description);}

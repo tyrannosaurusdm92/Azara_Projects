@@ -21,7 +21,7 @@ const window={speechSynthesis:synth,SpeechSynthesisUtterance:function(text){this
 const document={getElementById:element,querySelectorAll(){return []}};
 const context={window,document,console,setTimeout,queueMicrotask};vm.createContext(context);
 for(const name of ['config','voice-adapter','tts-data','ipa-data','ipa','tts'])
- vm.runInContext(read('js/'+name+'.js'),context);
+ vm.runInContext(read('script/js/aza/'+name+'.js'),context);
 const T=window.AzaaraanTTS;
 assert.deepStrictEqual(JSON.parse(JSON.stringify(window.AZA_CONFIG)),config);
 assert.deepStrictEqual(JSON.parse(JSON.stringify(window.AZA_TTS_DATA)),pronunciation);

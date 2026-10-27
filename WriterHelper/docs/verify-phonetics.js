@@ -3,7 +3,7 @@
  */
 const fs=require('node:fs');const path=require('node:path');const vm=require('node:vm');
 const root=path.resolve(__dirname,'..');const env={};env.window=env;env.globalThis=env;vm.createContext(env);
-for(const p of ['js/config.js','js/data.js','js/phonetic-data.js','js/phonetic.js'])vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),env,{filename:p});
+for(const p of ['script/js/aza/config.js','script/js/aza/data.js','script/js/aza/phonetic-data.js','script/js/aza/phonetic.js'])vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),env,{filename:p});
 const P=env.AzaaraanPhonetics;
 const checks={
  'T+SHORT_A+Z':'/tæz/', 'B+W+LONG_A':'/vɑː/',

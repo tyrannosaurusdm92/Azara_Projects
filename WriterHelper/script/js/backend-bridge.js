@@ -1,5 +1,4 @@
-/* Secure cross-origin iframe RPC for the user's existing Literary Friend Apps Script deployment.
-   No new backend or generative service. The server must allow this exact frontend origin. */
+/* Public endpoint and AWS_RPC iframe adapter. Backend source and secrets stay server-side. */
 (()=>{'use strict';
  const ENDPOINT='https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec';
  const $=id=>document.getElementById(id),set=text=>{const s=$('bridge-status');if(s)s.textContent=text};
@@ -23,6 +22,7 @@
  async function request(action,data={}){await ready();return new Promise((resolve,reject)=>{
    const id='lf_'+Date.now().toString(36)+'_'+(++counter);const t=setTimeout(()=>{pending.delete(id);reject(Error('Account request timed out.'))},60000);pending.set(id,{resolve,reject,t});frame.contentWindow.postMessage({type:'AWS_RPC_REQUEST',id,payload:{action,data,token,client:'literaryfriend-web',version:'2026-10-10'}},remoteOrigin)
  })}
+ window.WriterHelperBridge=Object.freeze({request,get signedIn(){return !!token},get user(){return sessionUser}});
  async function login(){const l=$('bridge-login')?.value.trim(),p=$('bridge-password')?.value;if(!l||!p){set('Enter your email/username and password.');return}try{set('Signing in securely…');const r=await request('auth.login',{login:l,password:p,platform:navigator.platform||'browser',deviceName:'Literary Friend web'});$('bridge-password').value='';if(r.twoFactorRequired){challenge=r.challengeToken||r.challenge?.challengeToken||'';set('Enter the two-factor code to finish sign-in.');return}signedIn(r)}catch(err){set(err.message)}}
  function signedIn(r){if(!r.token){set('Backend did not return a session token.');return}token=r.token;sessionUser=r.user?.username||r.user?.primaryEmail||'';try{sessionStorage.setItem(authKey,token)}catch{}set('Connected'+(sessionUser?' as '+sessionUser:'')+'. Cloud sync is available.');}
  async function verify(){if(!challenge){set('Sign in first to request a two-factor code.');return}const code=$('bridge-2fa')?.value.trim();if(!code){set('Enter the verification code.');return}try{const r=await request('auth.2fa.verify',{challengeToken:challenge,code});challenge='';$('bridge-2fa').value='';signedIn(r)}catch(e){set(e.message)}}
@@ -50,7 +50,25 @@
    const snapshot=JSON.parse(json);await window.LiteraryFriendApp.replaceSnapshot(snapshot);set('Cloud snapshot restored and saved locally.')
    }catch(err){set('Restore failed: '+err.message+' Existing local work was left unchanged unless a restore completed.')}
  }
+ function keyboardUI(){return $('wh-kb-frame')?.contentWindow?.SavanskiUI}
+ async function keyboardPush(){
+  if(!token){set('Sign in to save keyboard preferences.');return}
+  const ui=keyboardUI();if(!ui){set('Open the QWERTY keyboard before saving its settings.');return}
+  try{const current=await request('keyboard.get',{});const profile=ui.syncIntoProfile(current.profile);
+    await request('keyboard.save',{expectedRevision:current.revision,profile});
+    set('Keyboard preferences saved to your private account. Typed text was not uploaded.');
+  }catch(err){set('Keyboard save failed: '+err.message)}
+ }
+ async function keyboardPull(){
+  if(!token){set('Sign in to load keyboard preferences.');return}
+  const ui=keyboardUI();if(!ui){set('Open the QWERTY keyboard before loading its settings.');return}
+  try{const current=await request('keyboard.get',{});ui.applySyncedProfile(current.profile);
+    set('Keyboard preferences loaded from your private account.');
+  }catch(err){set('Keyboard load failed: '+err.message)}
+ }
  window.addEventListener('literaryfriend:ready',()=>{if(token)request('auth.me',{}).then(r=>{sessionUser=r.user?.username||'';set('Connected'+(sessionUser?' as '+sessionUser:'')+'.')}).catch(()=>{token='';sessionStorage.removeItem(authKey);set('Local-only. Sign in to connect.')})});
  $('bridge-connect')?.addEventListener('click',login);$('bridge-verify')?.addEventListener('click',verify);$('bridge-push')?.addEventListener('click',push);$('bridge-pull')?.addEventListener('click',pull);$('bridge-signout')?.addEventListener('click',logout);
+ $('bridge-keyboard-push')?.addEventListener('click',keyboardPush);
+ $('bridge-keyboard-pull')?.addEventListener('click',keyboardPull);
  window.LiteraryFriendCloud={request,login,push,pull,logout,get connected(){return!!token},endpoint:ENDPOINT};
 })();

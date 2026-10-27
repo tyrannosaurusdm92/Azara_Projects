@@ -1,22 +1,29 @@
 {
   "name": "Aza’raan WriterHelper",
   "short_name": "WriterHelper",
+  "id": "./index.html",
   "description": "Eight books and the full Aza’raan language studio with selectable audio keyboards",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "theme_color": "#21453a",
-  "background_color": "#101a24",
+  "theme_color": "#0c141d",
+  "background_color": "#091217",
   "icons": [
     {
-      "src": "./vendor/LiteraryFriend/assets/literary-icon-192.png",
+      "src": "./assets/images/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./vendor/LiteraryFriend/assets/literary-icon-512.png",
+      "src": "./assets/images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "./assets/images/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

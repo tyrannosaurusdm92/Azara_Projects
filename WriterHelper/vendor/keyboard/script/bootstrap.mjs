@@ -22,13 +22,7 @@ async function start() {
   await import('./unicode-studio.mjs');
   await import('./keyboard-ui.mjs');
   await import('./floating-controls.mjs');
-  await import('./cloud-sync.mjs');
-
-  if ('serviceWorker' in navigator &&
-      (location.protocol === 'https:' || ['localhost','127.0.0.1'].includes(location.hostname))) {
-    navigator.serviceWorker.register('./service-worker.js', {scope:'./'})
-      .catch(() => { document.getElementById('cloudStatus').textContent = 'Keyboard works online. Offline caching could not be registered.'; });
-  }
+  // WriterHelper owns the sole service worker and authenticated keyboard sync.
 }
 
 start().catch(error => {
