@@ -1,0 +1,53 @@
+﻿slot,ancestral hieroglyph,original sound,modern family,merges at entry to,parent hieroglyph,ancient,archaic,classical,traditional,modern
+1,𓃪,uh-oh break,special signs,modern,𓃪,images/ancient/ancient_1.svg,images/archaic/archaic_1.svg,images/classical/classical_1.svg,images/traditional/traditional_1.svg,—
+2,𓎱,Taz / taahzi,T,traditional,𓆠,images/ancient/ancient_2.svg,images/archaic/archaic_2.svg,images/classical/classical_2.svg,—,—
+3,𓆠,tch / ch (aspirated),T,not_applicable_parent,𓆠,images/ancient/ancient_3.svg,images/archaic/archaic_3.svg,images/classical/classical_3.svg,images/traditional/traditional_3.svg,images/modern/modern_3.svg
+4,𓆷,ng / ngg,N,traditional,𓋜,images/ancient/ancient_4.svg,images/archaic/archaic_4.svg,images/classical/classical_4.svg,—,—
+5,𓌎,b / soft v-like b,B,archaic,𓈌,images/ancient/ancient_5.svg,—,—,—,—
+6,𓀃,d / tapped r-like d,D,not_applicable_parent,𓀃,images/ancient/ancient_6.svg,images/archaic/archaic_6.svg,images/classical/classical_6.svg,images/traditional/traditional_6.svg,images/modern/modern_6.svg
+7,𓆫,f / v,B,traditional,𓈌,images/ancient/ancient_7.svg,images/archaic/archaic_7.svg,images/classical/classical_7.svg,—,—
+8,𓋑,g / soft gh,G,not_applicable_parent,𓋑,images/ancient/ancient_8.svg,images/archaic/archaic_8.svg,images/classical/classical_8.svg,images/traditional/traditional_8.svg,images/modern/modern_8.svg
+9,𓇢,j / zh,J,not_applicable_parent,𓇢,images/ancient/ancient_9.svg,images/archaic/archaic_9.svg,images/classical/classical_9.svg,images/traditional/traditional_9.svg,images/modern/modern_9.svg
+10,𓉸,k / kh,K,classical,𓇰,images/ancient/ancient_10.svg,images/archaic/archaic_10.svg,—,—,—
+11,𓋝,m / syllabic m,M,not_applicable_parent,𓋝,images/ancient/ancient_11.svg,images/archaic/archaic_11.svg,images/classical/classical_11.svg,images/traditional/traditional_11.svg,images/modern/modern_11.svg
+12,𓇲,p / ph,P,not_applicable_parent,𓇲,images/ancient/ancient_12.svg,images/archaic/archaic_12.svg,images/classical/classical_12.svg,images/traditional/traditional_12.svg,images/modern/modern_12.svg
+13,𓍞,n / syllabic n,N,archaic,𓋜,images/ancient/ancient_13.svg,—,—,—,—
+14,𓈊,rolled r / tap r,R,not_applicable_parent,𓈊,images/ancient/ancient_14.svg,images/archaic/archaic_14.svg,images/classical/classical_14.svg,images/traditional/traditional_14.svg,images/modern/modern_14.svg
+15,𓎴,s / z,S,archaic,𓆇,images/ancient/ancient_15.svg,—,—,—,—
+16,𓌅,th / voiced th,T,traditional,𓆠,images/ancient/ancient_16.svg,images/archaic/archaic_16.svg,images/classical/classical_16.svg,—,—
+17,𓏏,t / th (aspirated),T,classical,𓆠,images/ancient/ancient_17.svg,images/archaic/archaic_17.svg,—,—,—
+18,𓈌,v / soft v glide,B,not_applicable_parent,𓈌,images/ancient/ancient_18.svg,images/archaic/archaic_18.svg,images/classical/classical_18.svg,images/traditional/traditional_18.svg,images/modern/modern_18.svg
+19,𓀁,z / zn affricated,Z,not_applicable_parent,𓀁,images/ancient/ancient_19.svg,images/archaic/archaic_19.svg,images/classical/classical_19.svg,images/traditional/traditional_19.svg,images/modern/modern_19.svg
+20,𓋜,ny / n+y cluster,N,not_applicable_parent,𓋜,images/ancient/ancient_20.svg,images/archaic/archaic_20.svg,images/classical/classical_20.svg,images/traditional/traditional_20.svg,images/modern/modern_20.svg
+21,𓆇,sh / soft sh,S,not_applicable_parent,𓆇,images/ancient/ancient_21.svg,images/archaic/archaic_21.svg,images/classical/classical_21.svg,images/traditional/traditional_21.svg,images/modern/modern_21.svg
+22,𓊓,h / voiced h,H,not_applicable_parent,𓊓,images/ancient/ancient_22.svg,images/archaic/archaic_22.svg,images/classical/classical_22.svg,images/traditional/traditional_22.svg,images/modern/modern_22.svg
+23,𓍋,l / dark l,L,not_applicable_parent,𓍋,images/ancient/ancient_23.svg,images/archaic/archaic_23.svg,images/classical/classical_23.svg,images/traditional/traditional_23.svg,images/modern/modern_23.svg
+24,𓇰,Qw / aspirated kw,K,not_applicable_parent,𓇰,images/ancient/ancient_24.svg,images/archaic/archaic_24.svg,images/classical/classical_24.svg,images/traditional/traditional_24.svg,images/modern/modern_24.svg
+25,𓏌,ks/x fricative,K,traditional,𓇰,images/ancient/ancient_25.svg,images/archaic/archaic_25.svg,images/classical/classical_25.svg,—,—
+26,𓏋,Aa as in father,A,traditional,𓄣,images/ancient/ancient_26.svg,images/archaic/archaic_26.svg,images/classical/classical_26.svg,—,—
+27,𓐍,ay,A,traditional,𓄣,images/ancient/ancient_27.svg,images/archaic/archaic_27.svg,images/classical/classical_27.svg,—,—
+28,𓆺,aw,A,modern,𓄣,images/ancient/ancient_28.svg,images/archaic/archaic_28.svg,images/classical/classical_28.svg,images/traditional/traditional_28.svg,—
+29,𓍝,oo,O,traditional,𓊲,images/ancient/ancient_29.svg,images/archaic/archaic_29.svg,images/classical/classical_29.svg,—,—
+30,𓄷,eh,E,classical,𓆣,images/ancient/ancient_30.svg,images/archaic/archaic_30.svg,—,—,—
+31,𓇖,ay-eh,A,traditional,𓄣,images/ancient/ancient_31.svg,images/archaic/archaic_31.svg,images/classical/classical_31.svg,—,—
+32,𓄔,Eu like Fued,Y,modern,𓈐,images/ancient/ancient_32.svg,images/archaic/archaic_32.svg,images/classical/classical_32.svg,images/traditional/traditional_32.svg,—
+33,𓊲,oy,O,not_applicable_parent,𓊲,images/ancient/ancient_33.svg,images/archaic/archaic_33.svg,images/classical/classical_33.svg,images/traditional/traditional_33.svg,images/modern/modern_33.svg
+34,𓄣,A like apple,A,not_applicable_parent,𓄣,images/ancient/ancient_34.svg,images/archaic/archaic_34.svg,images/classical/classical_34.svg,images/traditional/traditional_34.svg,images/modern/modern_34.svg
+35,𓈚,eye,I,not_applicable_parent,𓈚,images/ancient/ancient_35.svg,images/archaic/archaic_35.svg,images/classical/classical_35.svg,images/traditional/traditional_35.svg,images/modern/modern_35.svg
+36,𓆣,ee,E,not_applicable_parent,𓆣,images/ancient/ancient_36.svg,images/archaic/archaic_36.svg,images/classical/classical_36.svg,images/traditional/traditional_36.svg,images/modern/modern_36.svg
+37,𓃚,uh,U,not_applicable_parent,𓃚,images/ancient/ancient_37.svg,images/archaic/archaic_37.svg,images/classical/classical_37.svg,images/traditional/traditional_37.svg,images/modern/modern_37.svg
+38,𓈍,ih,I,classical,𓈚,images/ancient/ancient_38.svg,images/archaic/archaic_38.svg,—,—,—
+39,𓈘,oh,O,classical,𓊲,images/ancient/ancient_39.svg,images/archaic/archaic_39.svg,—,—,—
+40,𓏅,ow,O,traditional,𓊲,images/ancient/ancient_40.svg,images/archaic/archaic_40.svg,images/classical/classical_40.svg,—,—
+41,𓇶,wa,W,modern,𓋧,images/ancient/ancient_41.svg,images/archaic/archaic_41.svg,images/classical/classical_41.svg,images/traditional/traditional_41.svg,—
+42,𓆰,we,W,traditional,𓋧,images/ancient/ancient_42.svg,images/archaic/archaic_42.svg,images/classical/classical_42.svg,—,—
+43,𓈏,wih,W,modern,𓋧,images/ancient/ancient_43.svg,images/archaic/archaic_43.svg,images/classical/classical_43.svg,images/traditional/traditional_43.svg,—
+44,𓋧,woo,W,not_applicable_parent,𓋧,images/ancient/ancient_44.svg,images/archaic/archaic_44.svg,images/classical/classical_44.svg,images/traditional/traditional_44.svg,images/modern/modern_44.svg
+45,𓎯,woe,W,modern,𓋧,images/ancient/ancient_45.svg,images/archaic/archaic_45.svg,images/classical/classical_45.svg,images/traditional/traditional_45.svg,—
+46,𓃿,ya,Y,modern,𓈐,images/ancient/ancient_46.svg,images/archaic/archaic_46.svg,images/classical/classical_46.svg,images/traditional/traditional_46.svg,—
+47,𓏇,yeh,Y,modern,𓈐,images/ancient/ancient_47.svg,images/archaic/archaic_47.svg,images/classical/classical_47.svg,images/traditional/traditional_47.svg,—
+48,𓄯,yih,Y,modern,𓈐,images/ancient/ancient_48.svg,images/archaic/archaic_48.svg,images/classical/classical_48.svg,images/traditional/traditional_48.svg,—
+49,𓍁,yee,Y,traditional,𓈐,images/ancient/ancient_49.svg,images/archaic/archaic_49.svg,images/classical/classical_49.svg,—,—
+50,𓈐,you,Y,not_applicable_parent,𓈐,images/ancient/ancient_50.svg,images/archaic/archaic_50.svg,images/classical/classical_50.svg,images/traditional/traditional_50.svg,images/modern/modern_50.svg
+51,𓊵,yo,Y,modern,𓈐,images/ancient/ancient_51.svg,images/archaic/archaic_51.svg,images/classical/classical_51.svg,images/traditional/traditional_51.svg,—
+52,𓐎,click (sharp),special signs,modern,𓐎,images/ancient/ancient_52.svg,images/archaic/archaic_52.svg,images/classical/classical_52.svg,images/traditional/traditional_52.svg,—
