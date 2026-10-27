@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   const CONFIG = Object.freeze({
-    execUrl: 'https://script.google.com/macros/s/AKfycbyzbjqonkGubp-g2XnLr5vSgDc6EnYreGBS-hSBRGIdMRPFarQxeGTmOdSN9nBRp3eF/exec',
+    execUrl: 'https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec',
     libraryUrl: 'https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2'
   });
   const PUBLIC_ACTIONS = new Set(['health','manifest','client.config','auth.login','auth.register','auth.google','auth.password.reset.request','auth.password.reset.complete','auth.recovery.code.login','auth.contact.code.verify','auth.2fa.verify','auth.2fa.resend']);

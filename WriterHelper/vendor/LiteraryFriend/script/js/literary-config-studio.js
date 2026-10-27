@@ -6,7 +6,7 @@
   SB.VERSION = '2026.08.09-final';
   SB.CONFIG = Object.freeze({
     appName: 'LiteraryFriend SuperBot',
-    backendUrl: 'https://script.google.com/macros/s/AKfycbyzbjqonkGubp-g2XnLr5vSgDc6EnYreGBS-hSBRGIdMRPFarQxeGTmOdSN9nBRp3eF/exec',
+    backendUrl: 'https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec',
     backendLibrary: 'https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2',
     defaultProjectId: 'literaryfriend-studio',
     defaultRepository: '',

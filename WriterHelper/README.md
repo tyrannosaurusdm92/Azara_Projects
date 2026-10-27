@@ -1,49 +1,39 @@
-# Aza’ra WriterHelper
+# Aza’raan WriterHelper
 
-A frontend-only merge of LiteraryFriend and the **complete Savanski Keyboard** from
-`PersonalProjects/keyboard`. Source histories and all binary/audio/reference files
-are preserved as pinned Git submodules.
+Single-entrypoint frontend merging all LiteraryFriend book-writing tools, the complete Aza’raan Language Studio, and Savanski QWERTY keyboard. **Open `index.html` via an HTTP(S) static host**; the language studio's JavaScript, JSON files and fonts must load from the same origin.
 
-## Clone and run
+## Included project sections
 
-**Do not use GitHub's Download ZIP:** that omits submodule contents.
+01 Language: Proto, Ancient, Archaic, Classical, Traditional, Modern. Language channels open the complete original language atelier (keyboard, voiced pronunciation, and interactive evolution chart).
 
-```sh
-git clone --recurse-submodules https://github.com/tyrannosaurusdm92/Azara_Projects.git
-cd Azara_Projects/WriterHelper
-python -m http.server 8000
-```
+02 Book One: The Door In The Tree  
+03 Book Two: The Drowned Queen  
+04 Book Three: The Unwilling Spy  
+05 Book Four: The Hollow Throne  
+06 Book Five: Never-Ending Loss  
+07 Book Six: Threats Of Space  
+08 Book Seven: Collision Of Worlds  
+09 Book Eight: Unraveled
 
-Open http://localhost:8000/. Static HTTP hosting is necessary for keyboard ES
-modules and JSON. The requested backend is not part of this pass.
+Every book has Manuscript, Outline, Character Notes, Continuity Notes, and Drafting Table starter pages; create more channels using **+ New page**. The fixed keyboard panel supports **Aza’raan / QWERTY** toggle, the four font eras, optional key sounds, and Speak/Stop.
 
-## Workspace layout
+## Architecture
 
-**01 Language** — Proto, Ancient, Archaic, Classical, Traditional and Modern.
+- `index.html`: **only .html file** in WriterHelper.
+- `script/js/aza-language-document.js`: original Language Studio's HTML embedded as JS string (not a second HTML file).
+- `script/js/savanski-document.js`: full original Savanski HTML embedded as JS string.
+- `js/aza/`, `css/`, `json/`, `docs/`, `assets/`: complete version-matched language sources, 4 TTF fonts, original sound files/graphics.
+- `script/js/aza-integration.js`: language workspace, editor input, keyboard switching, audio and era integration.
+- `vendor/LiteraryFriend/`, `vendor/keyboard/`: other upstream source scripts, assets and authoring helpers.
+- `manifest.webmanifest`, `service-worker.js`: PWA entrypoint and **static-only** offline caching.
+- `script/js/backend-bridge.js`: frontend browser bridge pointing at the public current Apps Script deployment.
 
-**02–09** — The Door In The Tree; The Drowned Queen; The Unwilling Spy;
-The Hollow Throne; Never-Ending Loss; Threats Of Space; Collision Of Worlds;
-Unraveled. Each book has Manuscript, Outline, Character Notes,
-Continuity Notes and Drafting Table pages. Create additional book pages using
-the **+ New page** button. All pages support the complete Savanski on-screen keyboard.
+## Backend and storage
 
-LiteraryFriend's writing features, page formatting, helper, planner, tasks, local
-save, and data export remain. The original LiteraryFriend Unicode keyboard also
-remains accessible. The Savanski Unicode studio is opened with its **Unicode library**
-button; its standalone character-editor selections do not automatically mirror
-back into manuscripts, while on-screen Savanski key events are bridged.
+Backend source code was **not copied, published, modified or bundled**. The frontend uses only the user-supplied public Google Apps Script `/exec` deployment URL; the newer `AWS_RPC_*` message names are configured in the bridge. The backend's existing allowed-origin configuration must include the hosting origin for cloud sign-in and storage to work. Browser-local drafts continue working independently of cloud connectivity; export manuscript backups regularly.
 
-## Important
+## Operational notes
 
-- The frontend uses browser-local storage. Export backups regularly.
-- This is a same-origin iframe integration; use localhost or an HTTP(S) static host.
-- The keyboard does not type into operating-system applications from a browser.
-- Both upstream source trees are pinned rather than copied; you must fetch submodules.
-- `sources/PersonalProjects` contains the full upstream repository, because Git
-  cannot mount only its `keyboard` subfolder as a submodule.
-- The merged frontend has not been GUI-tested in a browser here.
+The original `Language/` Git subtrees and their glyph/sound/font content were reused byte-for-byte. Upstream projects are retained; the entire expanded frontend is committed directly to WriterHelper. Loading the original studio and keyboard through same-origin `iframe srcdoc` allows one HTML file without stripping their independent frontend functionality.
 
-## Sources
-
-- https://github.com/tyrannosaurusdm92/LiteraryFriend
-- https://github.com/tyrannosaurusdm92/PersonalProjects/tree/main/keyboard
+Manual checks recommended: Language era switching, QWERTY/Aza switching on every book page, long-press accents and Unicode stacks, pronunciations, saving across project switches, keyboard audio, offline reloading, cloud connection and export/restore. Full interactive browser and live cloud-endpoint tests were not completed here.

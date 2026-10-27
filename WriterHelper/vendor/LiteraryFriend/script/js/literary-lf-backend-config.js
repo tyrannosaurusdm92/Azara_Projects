@@ -2,7 +2,7 @@
   'use strict';
   const LF = global.LiteraryFriend = global.LiteraryFriend || {};
   LF.backend = Object.freeze({
-    endpoint: 'https://script.google.com/macros/s/AKfycbyzbjqonkGubp-g2XnLr5vSgDc6EnYreGBS-hSBRGIdMRPFarQxeGTmOdSN9nBRp3eF/exec',
+    endpoint: 'https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec',
     library: 'https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2',
     apiVersion: '2026-08-09-v1',
     maxUploadBytes: 20 * 1024 * 1024,

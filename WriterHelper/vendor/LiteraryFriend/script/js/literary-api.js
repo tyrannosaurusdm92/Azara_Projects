@@ -1,7 +1,7 @@
 (function(global){
   'use strict';
   const LF=global.LF;
-  const DEFAULT_ENDPOINT='https://script.google.com/macros/s/AKfycbyzbjqonkGubp-g2XnLr5vSgDc6EnYreGBS-hSBRGIdMRPFarQxeGTmOdSN9nBRp3eF/exec';
+  const DEFAULT_ENDPOINT='https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec';
   const LIBRARY_URL='https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2';
 
   class ApiClient{
