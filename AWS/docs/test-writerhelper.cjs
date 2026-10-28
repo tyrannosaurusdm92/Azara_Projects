@@ -145,6 +145,8 @@ async function main(){
     pass('Proto glyph creation, SVG import and portable font project round trip');
     await page.screenshot({path:path.join(output,'font-workshop.png')});
     await page.locator('#wh-font-close').click();
+    await page.locator('#keyboard-bubble').click();
+    await page.locator('#keyboard-era-select').selectOption('modern');
 
     for(let book=1;book<=8;book++){
       await page.locator('#workspace-list .workspace-pill').nth(book).click();
@@ -162,13 +164,13 @@ async function main(){
         range.setStart(node,start);range.setEnd(node,start+selection.length);const selected=getSelection();selected.removeAllRanges();selected.addRange(range);
       },selection);
       await page.waitForFunction(selection=>getSelection().toString()===selection,selection);
-      await page.locator('#wh-input-mode').selectOption('qwerty');
+      await page.locator('#keyboard-era-select').selectOption('standard');
       await page.locator('#wh-aza-speak').click();
       assert.equal(await page.frameLocator('#wh-aza-book-frame').locator('#speechText').inputValue(),selection,'Speak must read exactly the selected Aza’raan sentence in QWERTY mode');
       await page.locator('#wh-aza-stop').click();
     }
     pass('Selected Aza’raan sentences, excluding surrounding English, reach TTS in all eight books even in QWERTY mode');
-    await page.locator('#wh-input-mode').selectOption('qwerty');
+    await page.locator('#keyboard-era-select').selectOption('standard');
     const q=page.frameLocator('#wh-kb-frame');
     await q.locator('.sk-key[data-key="a"]').click();
     await page.waitForFunction(()=>document.querySelector('.rich-editor').textContent.includes('a'));
@@ -179,7 +181,7 @@ async function main(){
     assert.equal(await page.evaluate(()=>document.getElementById('wh-kb-frame').contentWindow.SavanskiKeyboardAudio.muted),true);
     await page.locator('#wh-audio-on').check();
     pass('QWERTY insertion, decoded key audio and the shared mute control');
-    await page.locator('#wh-input-mode').selectOption('aza');
+    await page.locator('#keyboard-era-select').selectOption('modern');
     await page.locator('#new-studio').click();
     await page.locator('#dialog-fields input').first().fill('QA two pane');await page.locator('#dialog-submit').click();
     await page.locator('.rich-editor').nth(1).click({position:{x:20,y:20}});
@@ -233,7 +235,8 @@ async function main(){
     pass('Manuscripts and applied fonts survive reload');
     await page.waitForFunction(()=>navigator.serviceWorker.controller,{timeout:60000});
     await context.setOffline(true);await page.reload();await ready();
-    await page.locator('#wh-input-mode').selectOption('qwerty');
+    await page.locator('#keyboard-bubble').click();
+    await page.locator('#keyboard-era-select').selectOption('standard');
     await page.locator('.rich-editor').click({position:{x:20,y:20}});
     await page.frameLocator('#wh-kb-frame').locator('.sk-key[data-key="c"]').click();
     await page.waitForFunction(()=>document.querySelector('.rich-editor').textContent.includes('c'));

@@ -385,7 +385,6 @@
     $('insert-divider').onclick=()=>editorCommand('insertHorizontalRule');
     $('upload-font').onclick=()=>$('font-upload-input').click();
     $('font-upload-input').onchange=async e=>{await addFonts(e.target.files);e.target.value=''};
-    $('top-keyboard').onclick=()=>window.LuxuryKeyboard.toggle();
     $('show-keyboard').onclick=()=>window.LuxuryKeyboard.open();
     $('print-doc').onclick=()=>window.print();$('export-doc').onclick=exportDocument;
     $('toggle-inspector').onclick=()=>{state.inspectorOpen=!state.inspectorOpen;renderInspector();scheduleSave()};

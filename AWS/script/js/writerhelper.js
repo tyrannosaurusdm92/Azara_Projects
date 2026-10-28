@@ -43,7 +43,7 @@
   catch(err){console.error('WriterHelper project initialization failed',err)}
  }
  let currentEditor=null,caret=null,guard=false,attached=false,attempts=0;
- const panel=$('wh-keyboard-panel'),frame=$('wh-kb-frame');
+ const frame=$('wh-kb-frame');
  function closestEditor(node){
   const el=node?.nodeType===1?node:node?.parentElement;
   return el?.closest?.('.rich-editor')||null;
@@ -146,34 +146,15 @@
   launch();
  }
  frame.addEventListener('load',onFrameLoad);
- function show(open){
-  panel.hidden=!open;
-  document.body.classList.toggle('wh-kb-open',open);
-  $('wh-toggle').textContent=open?'⌨ Hide keyboard':'⌨ Writing keyboard';
-  $('wh-toggle').setAttribute('aria-pressed',String(open));
-  localStorage.setItem('wh:open',String(open));
- }
  const actions=document.querySelector('.topbar-actions');
- const btn=document.createElement('button');btn.id='wh-toggle';btn.type='button';btn.className='btn tiny light';
- btn.onclick=()=>show(panel.hidden);actions.insertBefore(btn,$('top-keyboard'));
  const add=document.createElement('button');add.type='button';add.className='btn tiny light';
  add.textContent='+ New page';add.title='Add a writing channel to this section';
  add.onclick=()=>$('new-writing')?.click();actions.insertBefore(add,actions.firstChild);
- const size=$('wh-kb-height');
- size.value=Math.min(650,Math.max(240,Number(localStorage.getItem('wh:height'))||365));
- function resize(){
-  document.documentElement.style.setProperty('--wh-height',(Number(size.value)+39)+'px');
-  localStorage.setItem('wh:height',size.value);
- }
- size.addEventListener('input',resize);resize();
- $('wh-kb-close').onclick=()=>show(false);
  $('wh-library').onclick=()=>{
   const body=frame.contentDocument?.body;if(!body)return;
   const full=body.classList.toggle('wh-full');
   $('wh-library').textContent=full?'Keyboard only':'Unicode library';
-  if(full&&Number(size.value)<520){size.value=610;resize()}
  };
- show(localStorage.getItem('wh:open')!=='false');
  window.addEventListener('literaryfriend:ready',()=>{void seed()},{once:true});
  window.addEventListener('load',()=>{try{if(window.LiteraryFriendApp?.getSnapshot())void seed()}catch{}},{once:true});
 })();

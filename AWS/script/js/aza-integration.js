@@ -2,7 +2,7 @@
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
 const language=$('wh-language-frame'),aza=$('wh-aza-book-frame'),savanski=$('wh-kb-frame');
-const overlay=$('wh-language-overlay'),panel=$('wh-keyboard-panel');
+const overlay=$('wh-language-overlay');
 // Keep the studio inside the main column so the six era channels remain reachable.
 document.querySelector('.shell-main').append(overlay);
 const topbar=document.querySelector('.app-topbar');
@@ -127,8 +127,15 @@ function selectMode(){
  currentSpan=null;previous='';
  if(azaMode&&bookReady)aza.contentWindow.AZA_STUDIO.replace([]);
  message(azaMode?'Aza’raan · source keyboard, phonemes and voice':'QWERTY · Savanski keyboard with key audio');
+ syncKeyboardStyle();
 }
-mode.value=localStorage.getItem('wh:book-keyboard')==='qwerty'?'qwerty':'aza';
+function syncKeyboardStyle(){
+ const select=$('keyboard-era-select');if(!select)return;
+ const value=mode.value==='qwerty'?'standard':String(era.value||'Modern').toLowerCase();
+ if([...select.options].some(option=>option.value===value))select.value=value;
+}
+const savedKeyboardStyle=localStorage.getItem('aws:keyboard-style:v1');
+mode.value=savedKeyboardStyle? savedKeyboardStyle==='standard'?'qwerty':'aza':localStorage.getItem('wh:book-keyboard')==='qwerty'?'qwerty':'aza';
 if([...era.options].some(option=>option.value===localStorage.getItem('wh:book-era')))era.value=localStorage.getItem('wh:book-era');
 audio.checked=localStorage.getItem('wh:key-sounds')!=='off';
 audio.onchange=()=>{
@@ -150,6 +157,7 @@ era.onchange=()=>{
  const box=aza.contentDocument?.getElementById('era');
  if(box){box.value=era.value;box.dispatchEvent(new Event('change',{bubbles:true}))}
  if(bookReady)aza.contentWindow.AZA_STUDIO.replace([]);
+ syncKeyboardStyle();
 };
 function speechText(){
  const rangeIsCurrent=savedEditor?.isConnected&&savedRange&&savedEditor.contains(savedRange.commonAncestorContainer);
@@ -206,7 +214,6 @@ function syncView(){
  const doc=selected(),isLanguage=!!doc?.workspace?.startsWith('01 Language');
  overlay.hidden=!isLanguage;
  document.body.classList.toggle('wh-language-active',isLanguage);
- panel.style.visibility=isLanguage?'hidden':'';
  if(isLanguage){
   if(languageReady){
    const eraName=doc?.title;

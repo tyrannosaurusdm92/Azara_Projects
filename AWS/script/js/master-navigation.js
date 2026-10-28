@@ -12,7 +12,10 @@
  function dropdown(label){const details=make('details'),summary=make('summary','',label),menu=make('div','aws-nav-menu');details.append(summary,menu);return{details,menu}}
  const sections=dropdown('Sections'),pages=dropdown('Pages'),tools=dropdown('Tools');
  const collapse=make('button','aws-nav-collapse','Collapse');collapse.type='button';collapse.setAttribute('aria-label','Collapse master navigation');
- bar.append(handle,emblem,title,sections.details,pages.details,tools.details,collapse);nav.append(bar);document.body.append(nav);
+ const install=make('button','aws-nav-install');install.type='button';install.setAttribute('aria-label','Download app');install.title='Install Aza’raan Writing Studio on this device';
+ install.append(make('span','aws-nav-install-icon','↓'),make('span','aws-nav-install-label','Download app'));
+ install.addEventListener('click',()=>window.AWSInstall?.download());
+ bar.append(handle,emblem,title,sections.details,pages.details,tools.details,install,collapse);nav.append(bar);document.body.append(nav);
  const bubble=make('button','aws-nav-bubble');bubble.id='aws-nav-bubble';bubble.type='button';bubble.setAttribute('aria-label','Restore master navigation');bubble.title='Open navigation · drag to move';
  bubble.append(emblem.cloneNode(),make('span','','AWS'));document.body.append(bubble);
  const save=()=>{try{localStorage.setItem(key,JSON.stringify(state))}catch{}};
@@ -89,7 +92,7 @@
   }
   action(pages.menu,'+ New writing page',()=>document.getElementById('new-writing').click());
   action(tools.menu,'Font workshop',()=>document.getElementById('wh-open-font-workshop').click());
-  action(tools.menu,'Writing keyboard',()=>{const panel=document.getElementById('wh-keyboard-panel');if(panel.hidden)document.getElementById('wh-toggle').click()});
+  action(tools.menu,'Open keyboard bubble',()=>window.LuxuryKeyboard?.open());
   const language=selected==='wh-language';
   action(tools.menu,language?'Read language desk':'Read selection / page',()=>{
    if(language)document.getElementById('wh-language-frame').contentDocument?.getElementById('speakComposition')?.click();
@@ -97,6 +100,10 @@
   });
   action(tools.menu,'Stop speech',()=>document.getElementById('wh-aza-stop').click());
   action(tools.menu,'Back up / restore',()=>document.getElementById('open-backup').click());
+  action(tools.menu,'Sync devices / restore cloud',()=>{
+   document.getElementById('sidebar-settings').click();
+   setTimeout(()=>document.getElementById('bridge-box')?.scrollIntoView({behavior:'smooth',block:'center'}),100);
+  });
   action(tools.menu,'Settings / account',()=>document.getElementById('sidebar-settings').click());
   action(tools.menu,'Reset navigation position',()=>{state={collapsed:false,bar:null,bubble:null};nav.style.left='12px';nav.style.top='10px';bubble.style.left='14px';bubble.style.top='auto';bubble.style.bottom='14px';layout();save()});
   title.lastElementChild.textContent=snapshot.workspaces.find(w=>w.id===selected)?.name||'Language · Eight books';

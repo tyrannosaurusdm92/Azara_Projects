@@ -14,10 +14,12 @@ body{--aws-nav-reserve:70px}
 .aws-nav-link:hover{border-color:#00ffffa6;background:#00ffff1f}.aws-nav-link[aria-current=page]{border-color:#d7aa63;color:#ffe7a6;background:#d7aa631a}
 .aws-nav-eras{padding-left:12px;border-left:1px solid #b07a3a;margin:6px 0 10px 8px;display:grid;grid-template-columns:1fr 1fr;gap:4px}.aws-nav-eras .aws-nav-link{margin:0}
 .aws-nav-collapse{border:1px solid #00ffff6b;border-radius:12px;background:#00ffff1a;color:#eff;font-size:12px;font-weight:750;padding:8px 10px;cursor:pointer;min-height:36px;white-space:nowrap}
+.aws-nav-install{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:36px;padding:8px 10px;border:1px solid #dfbd70;border-radius:12px;background:linear-gradient(180deg,#4a351d,#21180f);color:#ffe8b5;font:750 12px/1 system-ui,sans-serif;white-space:nowrap;cursor:pointer}.aws-nav-install:hover{background:linear-gradient(180deg,#6a4b27,#302115);box-shadow:0 0 14px #dfbd703d}.aws-nav-install-icon{font-size:16px}.aws-nav-install-label{font-size:11px}
 .aws-nav-bubble{position:fixed;left:14px;bottom:14px;z-index:6002;display:flex;align-items:center;gap:7px;border:1px solid #00ffff8c;border-radius:999px;background:radial-gradient(circle at 35% 30%,#00ffff61,#00323cf5 42%,#03090efa);box-shadow:0 0 28px #00ffff3d,0 10px 28px #0007;padding:8px 12px;color:#f3e9db;font:800 13px system-ui;cursor:grab;user-select:none}
 .aws-nav-bubble img{width:32px;height:32px;border-radius:50%}#wh-font-workshop{top:max(2.5vh,calc(var(--aws-nav-reserve) + 8px))}
 @media(max-width:1080px){.inspector{top:var(--aws-nav-reserve)}}
 @media(max-width:940px){.aws-nav-title{display:none}}
 @media(max-width:760px){.channels-pane{top:var(--aws-nav-reserve)}#wh-font-workshop{top:var(--aws-nav-reserve)}}
 @media(max-width:450px){.aws-nav-bar{gap:5px;padding:6px}.aws-nav-logo{display:none}.aws-master-nav summary,.aws-nav-collapse{font-size:11px;padding:8px}}
+@media(max-width:560px){.aws-nav-install{width:38px;padding:6px}.aws-nav-install-label{display:none}}
 @media print{.aws-master-nav,.aws-nav-bubble{display:none!important}.app{padding-top:0}}
