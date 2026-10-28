@@ -197,6 +197,18 @@
     const next={...saved,metadata,layers:Array.isArray(saved.layers)?saved.layers:[]};drawingDrafts.set(key,next);
     void persistDrawingDraft(key,next).then(()=>status('Glyph metadata saved locally.')).catch(error=>status('Glyph metadata save failed: '+error.message));
   }
+  async function hydrateDrawingDrafts(era=model.era){
+    const database=await db();
+    return new Promise((resolve,reject)=>{
+      const tx=database.transaction('fonts'),range=IDBKeyRange.bound('artwork:'+era+':','artwork:'+era+':\uffff');
+      const request=tx.objectStore('fonts').openCursor(range);
+      request.onsuccess=()=>{const cursor=request.result;if(!cursor)return;drawingDrafts.set(String(cursor.key).slice('artwork:'.length),cursor.value);cursor.continue()};
+      request.onerror=()=>reject(request.error);
+      tx.oncomplete=()=>{database.close();resolve()};
+      tx.onerror=()=>{database.close();reject(tx.error)};
+      tx.onabort=()=>{database.close();reject(tx.error)};
+    });
+  }
   function invalidatePackageVector(index=model.selected){
     const key=drawingKey(index),saved=drawingDrafts.get(key);
     if(!saved?.metadata?.vectorContours?.length)return;
@@ -655,12 +667,12 @@
     ctx.fill('nonzero');return canvas.toDataURL('image/png');
   }
   async function exportGlyphStudioProject(){
+    try{await hydrateDrawingDrafts(model.era)}catch(error){console.warn('Could not read saved Glyph Studio layers:',error)}
     const eraIds={Proto:'proto',Ancient:'ancient',Archaic:'preclassical',Classical:'classical',Traditional:'traditional',Modern:'modern'};
     const eraId=eraIds[model.era]||model.era.toLowerCase(),font=data(),glyphs=[];
     for(let index=0;index<font.glyf.length;index++){
       const glyph=font.glyf[index],key=drawingKey(index);
-      let saved=drawingDrafts.get(key);
-      if(!saved)try{saved=await readDrawingDraft(key,index)}catch(error){console.warn('Could not include glyph artwork:',error)}
+      const saved=drawingDrafts.get(key)||drawingDrafts.get(model.era+':'+index);
       const metadata=saved?.metadata||{},cp=Number.isInteger(glyph.unicode?.[0])?glyph.unicode[0]:null;
       const layers=Array.isArray(saved?.layers)?saved.layers.slice():[];
       if(!layers.length){const artwork=rasterGlyphArtwork(glyph);if(artwork)layers.push({id:'aws-outline-preview-'+index,name:'Font outline artwork',visible:true,opacity:100,blendMode:'source-over',artwork})}
