@@ -1,6 +1,0 @@
-[submodule "WriterHelper/sources/LiteraryFriend"]
-	path = WriterHelper/sources/LiteraryFriend
-	url = https://github.com/tyrannosaurusdm92/LiteraryFriend.git
-[submodule "WriterHelper/sources/PersonalProjects"]
-	path = WriterHelper/sources/PersonalProjects
-	url = https://github.com/tyrannosaurusdm92/PersonalProjects.git

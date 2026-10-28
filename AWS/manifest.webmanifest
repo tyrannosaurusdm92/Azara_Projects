@@ -1,0 +1,29 @@
+{
+  "name": "Aza’raan Writing Studio",
+  "short_name": "AWS",
+  "id": "./index.html",
+  "description": "Aza’raan language creation and eight book workspaces with font editing and selected-text speech",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#0c141d",
+  "background_color": "#091217",
+  "icons": [
+    {
+      "src": "./assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/images/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

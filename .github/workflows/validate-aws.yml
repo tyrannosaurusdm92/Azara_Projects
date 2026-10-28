@@ -1,0 +1,38 @@
+name: Validate Azaaraan Writing Studio
+on:
+  push:
+    paths:
+      - AWS/**
+      - .github/workflows/validate-aws.yml
+  pull_request:
+    paths:
+      - AWS/**
+      - .github/workflows/validate-aws.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate source structure and static asset manifest
+        run: |
+          python AWS/docs/build-offline-manifest.py
+          git diff --exit-code -- AWS/service-worker.js AWS/json/offline-assets.json
+          python AWS/docs/validate-frontend.py
+      - name: Run language, font and keyboard checks
+        run: |
+          node AWS/docs/test-font-core.cjs
+          node AWS/docs/test-merge.js
+          node AWS/docs/test-ipa.js
+          node AWS/docs/test-practice.js
+          node AWS/docs/verify-phonetics.js
+          node AWS/script/vendor/keyboard/docs/keyboard-model.test.mjs
+          node AWS/script/vendor/keyboard/docs/workflow-model.test.mjs
