@@ -1,5 +1,5 @@
 {
-  "version": "aws-sound-aware-keyboard-20261028",
+  "version": "aws-free-floating-resizable-keyboard-20261028",
   "core": [
     "assets/audio/azaaraan-click-synthetic-cue.wav",
     "assets/audio/azaaraan-glottal-release-synthetic-cue.wav",

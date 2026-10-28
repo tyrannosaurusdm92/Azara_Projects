@@ -78,6 +78,7 @@ function isUsableBox(value) {
 
 const state = loadSettings();
 let currentLayout = '';
+let hostScale = 1;
 let symbols = false;
 let shift = false;
 let caps = false;
@@ -249,8 +250,10 @@ function updateMetrics() {
     keyHeight = Math.max(52,keyHeight);
     font = Math.max(22,font);
   }
-  keyHeight = Math.round(keyHeight * state.keyScale / 100);
-  font = Math.round(font * state.keyScale / 100);
+  keyHeight = Math.round(keyHeight * state.keyScale / 100 * hostScale);
+  font = Math.round(font * state.keyScale / 100 * hostScale);
+  gap = Math.max(1,Math.round(gap * hostScale));
+  radius = Math.max(2,Math.round(radius * hostScale));
   keyboard.style.setProperty('--sk-key-h', `${keyHeight}px`);
   keyboard.style.setProperty('--sk-key-gap', `${gap}px`);
   keyboard.style.setProperty('--sk-key-font', `${font}px`);
@@ -258,6 +261,12 @@ function updateMetrics() {
   // The body scrolls on particularly short screens rather than cutting keys off.
   body.setAttribute('aria-label', `${currentLayout} layout; ${Math.round(bounds.width)} by ${Math.round(bounds.height)} pixels`);
 }
+
+window.SavanskiSetHostScale = value => {
+  hostScale = clamp(Number(value) || 1, .38, 1.35);
+  keyboard.style.setProperty('--aws-host-scale', String(hostScale));
+  updateMetrics();
+};
 
 function updateCase() {
   for (const key of grid.querySelectorAll('[data-case-letter="true"]')) {

@@ -154,3 +154,18 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 }
 @media(prefers-reduced-motion:reduce){.sk-row-divider,.sk-key,.sk-tool{transition:none!important}}
 @media(forced-colors:active){.sk-key,.sk-tool,.sk-keyboard{border:2px solid CanvasText}.sk-key:focus-visible{outline:3px solid Highlight}}
+
+/* The parent floating keyboard scales every key and toolbar control on drag-resize. */
+.sk-keyboard{--aws-host-scale:1}
+.sk-key{transform:scaleX(var(--aws-host-scale,1));transform-origin:center}
+.sk-toolbar{min-height:calc(54px * var(--aws-host-scale,1));gap:calc(5px * var(--aws-host-scale,1));padding:calc(6px * var(--aws-host-scale,1)) calc(9px * var(--aws-host-scale,1))}
+.sk-drag{min-height:calc(38px * var(--aws-host-scale,1));font-size:calc(15px * var(--aws-host-scale,1))}
+.sk-toolbar-select{font-size:calc(11px * var(--aws-host-scale,1))}
+.sk-toolbar-select select{min-height:calc(37px * var(--aws-host-scale,1));font-size:calc(12px * var(--aws-host-scale,1));padding:calc(4px * var(--aws-host-scale,1))}
+.sk-tool{min-height:calc(38px * var(--aws-host-scale,1));min-width:calc(39px * var(--aws-host-scale,1));padding:calc(5px * var(--aws-host-scale,1)) calc(8px * var(--aws-host-scale,1));font-size:calc(12px * var(--aws-host-scale,1))}
+.sk-emoji-picker{gap:calc(4px * var(--aws-host-scale,1));max-height:calc(180px * var(--aws-host-scale,1));padding:calc(6px * var(--aws-host-scale,1))}
+.sk-emoji-option{min-height:calc(38px * var(--aws-host-scale,1));font-size:calc(20px * var(--aws-host-scale,1))}
+.sk-status{font-size:calc(11px * var(--aws-host-scale,1));min-height:calc(16px * var(--aws-host-scale,1))}
+.sk-design-panel .sk-tool{transform:scale(var(--aws-host-scale,1));transform-origin:center}
+.sk-accent-popup{gap:calc(4px * var(--aws-host-scale,1));padding:calc(6px * var(--aws-host-scale,1))}
+.sk-accent-option{transform:scale(var(--aws-host-scale,1));transform-origin:center}

@@ -33,7 +33,7 @@ window.LuxuryKeyboard = (() => {
         const rect=p.getBoundingClientRect();
         panelWidth=rect.width;panelHeight=rect.height;panelLeft=rect.left;panelTop=rect.top;
       }
-      localStorage.setItem('luxury-editor-keyboard',JSON.stringify({language,split,mode,panelWidth,panelHeight,panelLeft,panelTop,bubbleLeft,bubbleTop,keyboardStyle}));
+      localStorage.setItem('luxury-editor-keyboard',JSON.stringify({language,split,mode,panelWidth,panelHeight,panelLeft,panelTop,bubbleLeft,bubbleTop,keyboardStyle,placementVersion:2}));
       localStorage.setItem('aws:keyboard-style:v1',keyboardStyle);
     } catch {}
   }
@@ -83,9 +83,16 @@ window.LuxuryKeyboard = (() => {
   }
   function syncFrameScale(scale) {
     for(const id of ['wh-kb-frame','wh-aza-book-frame']){
-      const frame=$(id);let doc;try{doc=frame?.contentDocument}catch{}
+      const frame=$(id);let doc,win;try{doc=frame?.contentDocument;win=frame?.contentWindow}catch{}
       if(!doc)continue;
-      const target=id==='wh-kb-frame'?(doc.getElementById('savanskiKeyboard')||doc.body):(doc.getElementById('keyboard')||doc.querySelector('.keyboard')||doc.body);
+      if(id==='wh-kb-frame'){
+        doc.documentElement.style.setProperty('--aws-host-scale',String(scale));
+        const target=doc.getElementById('savanskiKeyboard');
+        target?.style.setProperty('--aws-host-scale',String(scale));
+        win?.SavanskiSetHostScale?.(scale);
+        continue;
+      }
+      const target=doc.getElementById('keyboard')||doc.querySelector('.keyboard')||doc.body;
       if(target)target.style.zoom=String(scale);
     }
   }
@@ -94,7 +101,7 @@ window.LuxuryKeyboard = (() => {
     const rect=p.getBoundingClientRect();
     const baseWidth=Math.min(840,Math.max(280,innerWidth-16));
     const baseHeight=defaultPanelHeight();
-    const scale=clamp(Math.min(rect.width/baseWidth,rect.height/baseHeight),.48,1);
+    const scale=clamp(Math.min(rect.width/baseWidth,rect.height/baseHeight),.38,1.35);
     p.style.setProperty('--keyboard-scale',scale.toFixed(3));syncFrameScale(scale);
   }
   function placeOpenPanel() {
@@ -103,8 +110,8 @@ window.LuxuryKeyboard = (() => {
     const minHeight=Math.min(190,Math.max(120,innerHeight-16));
     panelWidth=clamp(Number(panelWidth)||Math.min(840,innerWidth-16),minWidth,Math.max(minWidth,innerWidth-16));
     panelHeight=clamp(Number(panelHeight)||defaultPanelHeight(),minHeight,Math.max(minHeight,innerHeight-16));
-    const x=Number.isFinite(panelLeft)?panelLeft:innerWidth-panelWidth-16;
-    const y=Number.isFinite(panelTop)?panelTop:innerHeight-panelHeight-16;
+    const x=Number.isFinite(panelLeft)?panelLeft:(innerWidth-panelWidth)/2;
+    const y=Number.isFinite(panelTop)?panelTop:(innerHeight-panelHeight)/2;
     p.style.left=clamp(x,8,Math.max(8,innerWidth-panelWidth-8))+'px';
     p.style.top=clamp(y,8,Math.max(8,innerHeight-panelHeight-8))+'px';
     p.style.right='auto';p.style.bottom='auto';p.style.width=panelWidth+'px';p.style.height=panelHeight+'px';
@@ -211,8 +218,12 @@ window.LuxuryKeyboard = (() => {
     const prefs=getPreferences();language=prefs.language||'en';split=!!prefs.split;mode=prefs.mode||'letters';
     if(!['letters','extended','combining'].includes(mode))mode='letters';
     panelWidth=Number(prefs.panelWidth||prefs.width)||840;panelHeight=Number(prefs.panelHeight||prefs.height)||0;
-    panelLeft=Number.isFinite(prefs.panelLeft)?prefs.panelLeft:(Number.isFinite(prefs.left)?prefs.left:null);
-    panelTop=Number.isFinite(prefs.panelTop)?prefs.panelTop:(Number.isFinite(prefs.top)?prefs.top:null);
+    const savedLeft=Number.isFinite(prefs.panelLeft)?prefs.panelLeft:(Number.isFinite(prefs.left)?prefs.left:null);
+    const savedTop=Number.isFinite(prefs.panelTop)?prefs.panelTop:(Number.isFinite(prefs.top)?prefs.top:null);
+    const savedRightGap=savedLeft==null?Infinity:innerWidth-savedLeft-panelWidth;
+    const savedBottomGap=savedTop==null?Infinity:innerHeight-savedTop-(panelHeight||defaultPanelHeight());
+    const legacyBottomRight=savedRightGap>=0&&savedRightGap<=24&&savedBottomGap>=0&&savedBottomGap<=24;
+    panelLeft=legacyBottomRight?null:savedLeft;panelTop=legacyBottomRight?null:savedTop;
     bubbleLeft=Number.isFinite(prefs.bubbleLeft)?prefs.bubbleLeft:null;bubbleTop=Number.isFinite(prefs.bubbleTop)?prefs.bubbleTop:null;
     const savedStyle=localStorage.getItem('aws:keyboard-style:v1');
     const formerMode=localStorage.getItem('wh:book-keyboard'),formerEra=String(localStorage.getItem('wh:book-era')||'Modern').toLowerCase();

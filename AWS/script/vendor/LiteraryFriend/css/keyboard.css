@@ -24,3 +24,28 @@
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 @media(max-width:600px){#floating-keyboard.is-open{left:8px;right:auto;width:calc(100vw - 16px);height:clamp(250px,34dvh,300px)}.keyboard-brand strong{max-width:23vw}.keyboard-header{gap:4px;padding:4px}.keyboard-era-control select{max-width:25vw}.keyboard-options select{max-width:125px}}
 @media print{#floating-keyboard{display:none!important}}
+
+/* Clear drag and resize affordances for the floating writing keyboard. */
+.keyboard-header{touch-action:none;cursor:move}
+.keyboard-brand .keyboard-drag-grip{display:inline-grid;place-items:center;color:#f0c675;font:700 20px/1 ui-monospace,monospace;text-shadow:0 0 6px #e4b35c99;cursor:move}
+.keyboard-resize-handle{z-index:12}
+.keyboard-resize-handle:after{opacity:1;background:#f0c675;border-color:#2d2417;box-shadow:0 0 0 2px #07131b,0 0 9px #e0ad55}
+.keyboard-resize-handle.north:after,.keyboard-resize-handle.south:after{left:calc(50% - 32px);top:4px;width:64px;height:6px}
+.keyboard-resize-handle.east:after,.keyboard-resize-handle.west:after{left:4px;top:calc(50% - 32px);width:6px;height:64px}
+.keyboard-resize-handle.north-east:after,.keyboard-resize-handle.north-west:after,.keyboard-resize-handle.south-east:after,.keyboard-resize-handle.south-west:after{inset:4px;border-radius:4px}
+.keyboard-resize-handle:focus-visible{outline:2px solid #fff2d3;outline-offset:1px;border-radius:5px}
+
+/* Keep the top-right collapse control above its resize grip. */
+.keyboard-close{position:relative;z-index:13}
+.keyboard-resize-handle.north-east{top:-12px;right:-12px;width:36px;height:36px}
+
+/* Make the free-floating shell and every resize handle easy to find and touch. */
+#floating-keyboard{z-index:8500}
+.keyboard-header{position:relative;touch-action:none;cursor:move}
+.keyboard-brand .keyboard-drag-grip{display:inline-grid;place-items:center;color:#f0c675;font:700 20px/1 ui-monospace,monospace;text-shadow:0 0 6px #e4b35c99;cursor:move}
+.keyboard-resize-handle{z-index:12}
+.keyboard-resize-handle:after{opacity:1;background:#f0c675;border-color:#2d2417;box-shadow:0 0 0 2px #07131b,0 0 9px #e0ad55}
+.keyboard-resize-handle.north:after,.keyboard-resize-handle.south:after{left:calc(50% - 32px);top:4px;width:64px;height:6px}
+.keyboard-resize-handle.east:after,.keyboard-resize-handle.west:after{left:4px;top:calc(50% - 32px);width:6px;height:64px}
+.keyboard-resize-handle.north-east:after,.keyboard-resize-handle.north-west:after,.keyboard-resize-handle.south-east:after,.keyboard-resize-handle.south-west:after{inset:4px;border-radius:4px}
+.keyboard-resize-handle:focus-visible{outline:2px solid #fff2d3;outline-offset:1px;border-radius:5px}

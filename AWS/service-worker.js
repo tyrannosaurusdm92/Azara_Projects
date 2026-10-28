@@ -1,5 +1,5 @@
 /* Only explicitly listed frontend files enter the offline cache. Never intercept RPC. */
-const VERSION='aws-sound-aware-keyboard-20261028';
+const VERSION='aws-free-floating-resizable-keyboard-20261028';
 const BASE=new URL('./',self.location.href);
 const MANIFEST=new URL('json/offline-assets.json',BASE).href;
 let manifestPromise;
