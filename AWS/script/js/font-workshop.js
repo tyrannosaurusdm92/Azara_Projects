@@ -48,6 +48,70 @@
   window.WriterHelperFonts = Object.freeze({family:era=>applied[era]||'Az'+era,installInto,exportCSS});
   window.addEventListener('writerhelper:fonts-ready',()=>restoreApplied().catch(error=>status(error.message)));
   const status = message => { $('wh-font-status').textContent=message; };
+  const drawingCanvas=$('wh-font-draw-canvas');
+  const drawingContext=drawingCanvas?.getContext('2d',{willReadFrequently:true});
+  const drawingDrafts=new Map();
+  let drawingPointer=false,drawingLastPoint=null;
+  let drawingUndo=[],drawingRedo=[];
+  const drawingKey=index=>model.era+':'+index;
+  function saveDrawingDraft(index=model.selected){
+    if(!drawingContext||!data()?.glyf[index])return;
+    const pixels=drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height).data;
+    for(let i=3;i<pixels.length;i+=4)if(pixels[i]){drawingDrafts.set(drawingKey(index),drawingCanvas.toDataURL('image/png'));return}
+    drawingDrafts.delete(drawingKey(index));
+  }
+  function clearDrawingDrafts(era){for(const key of drawingDrafts.keys())if(key.startsWith(era+':'))drawingDrafts.delete(key)}
+  function loadDrawingDraft(index){
+    if(!drawingContext)return;
+    drawingContext.clearRect(0,0,drawingCanvas.width,drawingCanvas.height);
+    drawingUndo=[];drawingRedo=[];
+    const url=drawingDrafts.get(drawingKey(index));if(!url)return;
+    const era=model.era,image=new Image();
+    image.onload=()=>{if(model.selected===index&&model.era===era)drawingContext.drawImage(image,0,0,drawingCanvas.width,drawingCanvas.height)};
+    image.src=url;
+  }
+  function drawingSnapshot(){
+    if(!drawingContext)return;
+    drawingUndo.push(drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height));
+    if(drawingUndo.length>30)drawingUndo.shift();
+    drawingRedo=[];
+  }
+  function drawingPosition(event){
+    const rect=drawingCanvas.getBoundingClientRect();
+    return {x:(event.clientX-rect.left)*drawingCanvas.width/rect.width,y:(event.clientY-rect.top)*drawingCanvas.height/rect.height};
+  }
+  function drawInk(from,to){
+    const size=number($('wh-font-brush-size').value,14),ctx=drawingContext;
+    ctx.save();ctx.lineWidth=size;ctx.lineCap='round';ctx.lineJoin='round';
+    ctx.strokeStyle=$('wh-font-brush-color').value;ctx.fillStyle=$('wh-font-brush-color').value;
+    ctx.globalCompositeOperation=$('wh-font-draw-tool').value==='erase'?'destination-out':'source-over';
+    ctx.beginPath();
+    if(from===to){ctx.arc(from.x,from.y,size/2,0,Math.PI*2);ctx.fill()}
+    else{ctx.moveTo(from.x,from.y);ctx.lineTo(to.x,to.y);ctx.stroke()}
+    ctx.restore();
+  }
+  function undoDrawing(){
+    if(!drawingContext||!drawingUndo.length)return;
+    drawingRedo.push(drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height));
+    drawingContext.putImageData(drawingUndo.pop(),0,0);saveDrawingDraft();
+  }
+  function redoDrawing(){
+    if(!drawingContext||!drawingRedo.length)return;
+    drawingUndo.push(drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height));
+    drawingContext.putImageData(drawingRedo.pop(),0,0);saveDrawingDraft();
+  }
+  function clearDrawing(){
+    if(!drawingContext)return;
+    drawingSnapshot();drawingContext.clearRect(0,0,drawingCanvas.width,drawingCanvas.height);saveDrawingDraft();
+  }
+  function traceDrawing(){
+    if(!drawingContext||!current())return;
+    try{
+      const pixels=drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height).data;
+      const svg=geometry.traceMask(geometry.rasterMask(pixels,drawingCanvas.width,drawingCanvas.height,'alpha',number($('wh-font-threshold').value,170)),drawingCanvas.width,drawingCanvas.height);
+      svgImport(svg);status('Drawing traced into editable font outlines. Adjust the outline or draw more and trace again.');
+    }catch(error){status('Drawing trace failed: '+error.message)}
+  }
   const fileBase = new URL('./', location.href);
   const familyInput = $('wh-font-family');
   const fields = {fontFamily:'wh-font-family',fontSubFamily:'wh-font-style',version:'wh-font-version',designer:'wh-font-designer',description:'wh-font-description',copyright:'wh-font-copyright',manufacturer:'wh-font-manufacturer',licence:'wh-font-license',urlOfLicence:'wh-font-license-url',urlOfFontDesigner:'wh-font-designer-url'};
@@ -153,7 +217,9 @@
     database.close();model.dirty=false;
     if(!silent)status(era+' font saved in this browser. Export a TTF or project JSON for a portable copy.');
   }
-  async function loadBuffer(bytes,era){
+  async function loadBuffer(bytes,era,discardDrawing=false){
+    saveDrawingDraft(model.selected);
+    if(discardDrawing)clearDrawingDrafts(era);
     const fontType=String.fromCharCode(...bytes.slice(0,4))==='OTTO'?'otf':'ttf';
     const font=F.createFont(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),
       {type:fontType,kerning:true,hinting:true,compound2simple:true});
@@ -168,6 +234,7 @@
     model.busy=true;
     $('wh-font-era').disabled=true;
     try{
+      saveDrawingDraft(model.selected);
       if(model.dirty)await saveDraft(true);
       let stored=null;try{stored=await getDraft(era)}catch(error){status('Local draft storage is unavailable: '+error.message)}
       let bytes=stored&&new Uint8Array(stored);
@@ -208,7 +275,9 @@
   }
   function select(index){
     const glyph=data()?.glyf[index];if(!glyph)return;
+    if(model.selected!==index)saveDrawingDraft(model.selected);
     model.selected=index;
+    loadDrawingDraft(index);
     $('wh-font-codepoint').value=(glyph.unicode||[]).map(hex).join(', ');
     $('wh-font-glyph-name').value=glyph.name||'';
     $('wh-font-advance').value=glyph.advanceWidth??0;
@@ -314,6 +383,79 @@
     const text=/\.png$/i.test(file.name)?await pngToSvg(file):await file.text();
     svgImport(text);status('Glyph outline imported. Inspect the preview and export a TTF when ready.');
   }
+  const glyphStudioEraName=id=>({proto:'Proto',ancient:'Ancient',preclassical:'Archaic',archaic:'Archaic',classical:'Classical',traditional:'Traditional',modern:'Modern'})[String(id||'').toLowerCase()];
+  function glyphStudioContours(source){
+    if(!Array.isArray(source.vectorContours)||!source.vectorContours.length)return [];
+    const font=data(),upm=(font.head.unitsPerEm||1000)/1000;
+    const width=Math.max(100,number(source.advanceWidth,600));
+    const sideBearings=number(source.leftSpacing)+number(source.rightSpacing);
+    const scale=.78*Math.max(80,width-sideBearings)/512*(number(source.size,100)/100)*upm;
+    const baseline=Number.isFinite(Number(source.baseline))?Number(source.baseline):72;
+    const baseY=512*baseline/100,leftPad=number(source.leftSpacing);
+    const result=[];
+    for(const contour of source.vectorContours.slice(0,500)){
+      const raw=Array.isArray(contour?.points)?contour.points:[];
+      if(raw.length<3||raw.length>12000)continue;
+      const points=raw.map(pair=>{
+        const x=Number(pair?.[0]),y=Number(pair?.[1]);
+        if(!Number.isFinite(x)||!Number.isFinite(y)||Math.abs(x)>20||Math.abs(y)>20)throw Error('The glyph project contains invalid vector points.');
+        return {x:Math.round(leftPad+x*512*scale),y:Math.round((baseY-y*512)*scale),onCurve:true};
+      });
+      let area=0;
+      for(let i=0;i<points.length;i++){const a=points[i],b=points[(i+1)%points.length];area+=a.x*b.y-b.x*a.y}
+      if((area>0)!==!contour.hole)points.reverse();
+      result.push(points);
+    }
+    return result;
+  }
+  async function traceGlyphStudioArtwork(dataUrl){
+    const response=await fetch(dataUrl);if(!response.ok)throw Error('Could not read glyph artwork.');
+    const blob=await response.blob();if(blob.size>8*1024*1024)throw Error('A glyph artwork image exceeds the 8 MB limit.');
+    const bitmap=await createImageBitmap(blob),scale=Math.min(512/bitmap.width,512/bitmap.height,1);
+    const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(bitmap.width*scale));canvas.height=Math.max(1,Math.round(bitmap.height*scale));
+    const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);bitmap.close();
+    const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+    return geometry.traceMask(geometry.rasterMask(pixels,canvas.width,canvas.height,$('wh-font-ink').value,number($('wh-font-threshold').value,170)),canvas.width,canvas.height);
+  }
+  async function importGlyphStudioProject(project){
+    if(project?.schemaVersion!==2||!project.eras||typeof project.eras!=='object')throw Error('This is not an Aza’raan Glyph Studio .azglyph.json project.');
+    const entries=Object.entries(project.eras).filter(([,era])=>Array.isArray(era?.glyphs));
+    if(!entries.length)throw Error('The glyph project has no era inventories.');
+    let chosen=entries.find(([id])=>glyphStudioEraName(id)===model.era);
+    if(!chosen)chosen=entries.find(([id])=>id===project.activeEra)||entries[0];
+    const sourceEraId=chosen[0],sourceEra=chosen[1],targetEra=glyphStudioEraName(sourceEraId)||model.era;
+    if(targetEra!==model.era){$('wh-font-era').value=targetEra;await loadEra(targetEra)}
+    const settings=project.settings||{};
+    if(settings.fontFamily){data().name.fontFamily=String(settings.fontFamily).slice(0,80);$('wh-font-family').value=data().name.fontFamily}
+    if(settings.fontVersion){data().name.version=String(settings.fontVersion).slice(0,60);$('wh-font-version').value=data().name.version}
+    if(Number.isFinite(Number(settings.ascender))&&Number(settings.ascender)>0){data().hhea.ascent=number(settings.ascender);$('wh-font-ascender').value=data().hhea.ascent}
+    if(Number.isFinite(Number(settings.descender))&&Number(settings.descender)>0){data().hhea.descent=-Math.abs(number(settings.descender));$('wh-font-descender').value=data().hhea.descent}
+    updateMetadata();
+    const seen=new Set();let added=0,updated=0,traced=0,skipped=0;
+    for(const source of sourceEra.glyphs.slice(0,2000)){
+      const chars=Array.from(String(source.character||''));
+      const cp=Number.isInteger(source.codepoint)?source.codepoint:(chars.length===1?chars[0].codePointAt(0):NaN);
+      if(!Number.isInteger(cp)||cp<0||cp>0x10ffff||cp>=0xd800&&cp<=0xdfff||seen.has(cp)){skipped++;continue}
+      let vector=[];try{vector=glyphStudioContours(source)}catch(error){skipped++;continue}
+      const artwork=String(source.artwork||source.layers?.find(layer=>layer?.visible!==false&&layer?.artwork)?.artwork||'');
+      if(!vector.length&&!artwork){skipped++;continue}
+      seen.add(cp);
+      let index=data().glyf.findIndex(glyph=>glyph.unicode?.includes(cp));
+      if(index<0){index=data().glyf.length;data().glyf.push({name:'glyph_'+cp.toString(16).toUpperCase(),unicode:[cp],advanceWidth:Math.max(100,number(source.advanceWidth,600)),contours:[]});added++}
+      else updated++;
+      const target=data().glyf[index];
+      target.name=String(source.name||'glyph_'+cp.toString(16).toUpperCase()).slice(0,80);
+      target.unicode=[cp];
+      target.advanceWidth=Math.max(100,Math.min(4000,number(source.advanceWidth,target.advanceWidth||600)));
+      if(vector.length){target.contours=vector;geometry.bounds(target)}
+      else{
+        try{select(index);svgImport(await traceGlyphStudioArtwork(artwork));traced++}
+        catch(error){skipped++;status('One glyph could not be traced: '+error.message)}
+      }
+    }
+    render();select(Math.min(model.selected,data().glyf.length-1));renderKerning();markDirty();
+    status('Imported '+targetEra+' Glyph Studio project: '+added+' added, '+updated+' updated, '+traced+' raster artwork traced, '+skipped+' skipped.');
+  }
   async function proof(useInBooks=false){
     const bytes=serialize();
     if(model.proofFace)document.fonts.delete(model.proofFace);
@@ -378,12 +520,29 @@
         list();select(data().glyf.length-1);$('wh-font-new-codepoint').value='';markDirty();
       }catch(error){status(error.message)}
     };
+    $('wh-font-draw-canvas').addEventListener('pointerdown',event=>{
+      if(!model.font||event.button!==0)return;
+      event.preventDefault();drawingPointer=true;drawingCanvas.setPointerCapture(event.pointerId);
+      drawingSnapshot();drawingLastPoint=drawingPosition(event);drawInk(drawingLastPoint,drawingLastPoint);
+    });
+    $('wh-font-draw-canvas').addEventListener('pointermove',event=>{
+      if(!drawingPointer)return;
+      event.preventDefault();const next=drawingPosition(event);drawInk(drawingLastPoint,next);drawingLastPoint=next;
+    });
+    const endDrawing=()=>{if(!drawingPointer)return;drawingPointer=false;drawingLastPoint=null;saveDrawingDraft()};
+    $('wh-font-draw-canvas').addEventListener('pointerup',endDrawing);
+    $('wh-font-draw-canvas').addEventListener('pointercancel',endDrawing);
+    $('wh-font-brush-size').oninput=e=>$('wh-font-brush-size-value').textContent=number(e.target.value,14)+' px';
+    $('wh-font-draw-undo').onclick=undoDrawing;
+    $('wh-font-draw-redo').onclick=redoDrawing;
+    $('wh-font-draw-clear').onclick=clearDrawing;
+    $('wh-font-draw-trace').onclick=traceDrawing;
     $('wh-font-glyph-upload').onchange=e=>{
       const file=e.target.files?.[0];if(file)uploadGlyph(file).catch(error=>status('Glyph import failed: '+error.message));e.target.value='';
     };
     $('wh-font-import').onchange=async e=>{
       const file=e.target.files?.[0];if(!file)return;
-      try{const bytes=new Uint8Array(await file.arrayBuffer());await loadBuffer(bytes,model.era);markDirty();status('Imported '+file.name+'. Export a TTF to keep your changes.')}
+      try{const bytes=new Uint8Array(await file.arrayBuffer());await loadBuffer(bytes,model.era,true);markDirty();status('Imported '+file.name+'. Export a TTF to keep your changes.')}
       catch(error){status('Font import failed: '+error.message)}e.target.value='';
     };
     $('wh-font-save').onclick=()=>saveDraft().catch(error=>status('Save failed: '+error.message));
@@ -404,10 +563,13 @@
     };
     $('wh-font-import-json').onchange=async e=>{
       const file=e.target.files?.[0];if(!file)return;
-      try{const project=JSON.parse(await file.text());
-        if(project.format!=='WriterHelper-font-project/v1'||!eras.includes(project.era)||typeof project.ttf!=='string')throw Error('Not an Aza’raan Writing Studio font project.');
-        const raw=atob(project.ttf),bytes=Uint8Array.from(raw,c=>c.charCodeAt(0));
-        $('wh-font-era').value=project.era;await loadBuffer(bytes,project.era);markDirty();status('Imported '+project.era+' font project.');
+      try{
+        if(file.size>40*1024*1024)throw Error('Project JSON is too large (40 MB maximum).');
+        const project=JSON.parse(await file.text());
+        if(project.format==='WriterHelper-font-project/v1'&&eras.includes(project.era)&&typeof project.ttf==='string'){
+          const raw=atob(project.ttf),bytes=Uint8Array.from(raw,c=>c.charCodeAt(0));
+          $('wh-font-era').value=project.era;await loadBuffer(bytes,project.era,true);markDirty();status('Imported '+project.era+' font project.');
+        }else await importGlyphStudioProject(project);
       }catch(error){status('Project import failed: '+error.message)}e.target.value='';
     };
   }
