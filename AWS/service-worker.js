@@ -1,5 +1,5 @@
 /* Only explicitly listed frontend files enter the offline cache. Never intercept RPC. */
-const VERSION='aws-0f68d623d3df4f4a';
+const VERSION='aws-39d7a4b2c1e8605f';
 const BASE=new URL('./',self.location.href);
 const MANIFEST=new URL('json/offline-assets.json',BASE).href;
 let manifestPromise;
