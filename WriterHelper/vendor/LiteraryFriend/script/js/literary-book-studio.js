@@ -2,7 +2,7 @@
   'use strict';
 
   const API_URL = 'https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec';
-  const LIBRARY_URL = 'https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2';
+  const LIBRARY_URL = '';
   const APP_SCHEMA = 'literaryfriend.interactive-book.v1';
   const PAGE_SCHEMA = 'literaryfriend.interactive-book.page.v1';
   const DB_NAME = 'literaryfriend-interactive-book-studio';
@@ -1390,7 +1390,7 @@
         result = await apiPost('health', {}, '');
       }
       setBackendStatus(result.ok === false ? 'Backend replied with an error' : 'Backend online', result.ok === false);
-      setStatus(`LiteraryFriend backend is reachable. Library reference: ${LIBRARY_URL}`);
+      setStatus('Aza’raan Writing Studio backend is reachable.');
     } catch (error) {
       setBackendStatus('Backend unavailable', true);
       setStatus(`Backend check failed: ${error.message}`, true);
@@ -1783,19 +1783,8 @@
   }
 
   async function apiPost(action, data, token = cloudToken) {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      redirect: 'follow',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({ action, token: token || '', data: data || {} })
-    });
-    const text = await response.text();
-    let result;
-    try { result = JSON.parse(text); } catch (_) { throw new Error(`Backend returned non-JSON (HTTP ${response.status}).`); }
-    if (!response.ok || result.ok === false) {
-      throw new Error(result.error?.message || result.message || result.error || `Backend request failed (HTTP ${response.status}).`);
-    }
-    return result;
+    if(!window.WriterHelperBridge)throw new Error('Open WriterHelper to connect to the account bridge.');
+    return window.WriterHelperBridge.request(action,data||{});
   }
 
   function setBackendStatus(message, isError = false) {

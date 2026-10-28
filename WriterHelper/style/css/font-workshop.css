@@ -11,7 +11,7 @@
 #wh-font-workshop button:hover,.wh-font-upload-button:hover{background:#3d9fa0!important;color:#071319!important}
 #wh-font-workshop input[type=range]{padding:0;width:100%;accent-color:#00ffff}
 #wh-font-workshop input[type=file]{background:none;border:0;padding:5px 0;font-size:12px}
-#wh-font-glyph-list{overflow:auto;min-height:60px;display:grid;align-content:start;gap:4px}
+#wh-font-glyph-list{overflow:auto;overscroll-behavior:contain;min-height:60px;flex:1;display:grid;grid-auto-rows:minmax(34px,max-content);align-content:start;gap:4px}
 #wh-font-glyph-list button{text-align:left;padding:6px 8px!important;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #wh-font-glyph-list button[aria-selected=true]{background:#a6753a!important;color:#101923!important}
 .wh-font-main{min-height:0;overflow:auto;padding:20px 24px 60px;display:grid;align-content:start;gap:18px}
@@ -21,6 +21,14 @@
 .wh-font-glyph-editor,.wh-font-preview{padding:14px;border:1px solid #5b696b;border-radius:10px;background:#10242d}
 .wh-font-glyph-editor h3{margin:0 0 12px;color:#8de0dc;font:700 19px Georgia,serif}
 .wh-font-glyph-controls{display:grid;grid-template-columns:repeat(4,minmax(100px,1fr)) auto;gap:9px;align-items:end}
+.wh-font-transforms,.wh-font-import-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin-top:12px}
+.wh-font-transforms label,.wh-font-import-controls label{flex:1 1 115px;min-width:0}
+.wh-font-transforms input,.wh-font-import-controls input{width:100%}
+.wh-font-kerning{padding:14px;border:1px solid #5b696b;border-radius:10px;background:#10242d}
+.wh-font-kerning h3{margin:0;color:#8de0dc}.wh-font-kerning p{font-size:12px;color:#d4c6b6}
+#wh-font-kern-list{margin-top:12px;display:grid;gap:5px;font-size:12px}
+#wh-font-kern-list>div{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#wh-font-proof{font-kerning:normal}
 #wh-font-canvas{width:100%;height:310px;background:#f2e8d8;border-radius:9px;border:1px solid #b07a3a;margin-top:12px}
 .wh-font-glyph-editor p{font-size:12px;color:#d4c6b6}
 .wh-font-preview{display:grid;gap:10px}#wh-font-proof{min-height:65px;padding:14px;background:#f2e8d8;color:#16272c;border-radius:8px;font-size:32px;overflow-wrap:anywhere}

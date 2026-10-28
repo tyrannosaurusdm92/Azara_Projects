@@ -2,7 +2,8 @@
 @font-face{font-family:AzClassical;src:url('../../assets/ttf/Azaaraan-Classical.ttf') format('truetype');font-display:swap}
 @font-face{font-family:AzTraditional;src:url('../../assets/ttf/Azaaraan-Traditional.ttf') format('truetype');font-display:swap}
 @font-face{font-family:AzModern;src:url('../../assets/ttf/Azaaraan-Modern.ttf') format('truetype');font-display:swap}
-#wh-language-overlay{position:fixed;z-index:1200;top:64px;bottom:0;left:90px;right:0;background:#131e22;display:flex;flex-direction:column}
+.shell-main{position:relative}
+#wh-language-overlay{position:absolute;z-index:40;top:var(--wh-topbar-height,64px);bottom:0;left:0;right:0;background:#131e22;display:flex;flex-direction:column}
 #wh-language-overlay[hidden]{display:none!important}
 #wh-language-overlay>header{flex:none;background:linear-gradient(90deg,#29493e,#453521);color:#fce7bf;font:700 14px Georgia,serif;text-align:center;padding:8px}
 #wh-language-overlay iframe{flex:1;min-height:0;width:100%;border:0;background:#161b24}
@@ -13,5 +14,5 @@ body.wh-language-active #wh-keyboard-panel{display:none!important}
 .wh-audio-toggle{white-space:nowrap;display:inline-flex;align-items:center;gap:4px;font:12px system-ui,sans-serif}
 #wh-kb-frame[hidden],#wh-aza-book-frame[hidden]{display:none!important}
 #wh-aza-book-frame{height:100%;width:100%;flex:1;min-height:0;background:#141c24;border:0}
-@media(max-width:780px){#wh-language-overlay{top:56px;left:0}#wh-aza-speak,#wh-aza-stop{padding:4px}#wh-input-mode,#wh-aza-era{min-width:72px}#wh-kb-status{display:none}} 
+@media(max-width:780px){#wh-aza-speak,#wh-aza-stop{padding:4px}#wh-input-mode,#wh-aza-era{min-width:72px}#wh-kb-status{display:none}}
 @media print{#wh-language-overlay,#wh-keyboard-panel{display:none!important}}

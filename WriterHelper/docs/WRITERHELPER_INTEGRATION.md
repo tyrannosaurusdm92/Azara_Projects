@@ -1,25 +1,51 @@
-# WriterHelper integration map — 27 October 2026
+# WriterHelper integration and validation
 
-| Area | Source | Integration |
-| --- | --- | --- |
-| Writing rooms, helper, tasks, local drafts, export | LiteraryFriend | Existing application runtime retained in `vendor/LiteraryFriend/`; WriterHelper seeds nine named workspaces and their pages. |
-| Language keyboard, phonetics, speech, evolution | `Azara_Projects/Language` | Original studio document embedded in `script/js/aza-language-document.js`; active scripts and CSS live in `script/js/aza/` and `style/css/aza/`. Four supplied era TTFs, Khmer mappings, WAV cues, and image/SVG assets remain present. |
-| QWERTY, long-press Unicode, split keys and sound packs | `PersonalProjects/keyboard` | Embedded Savanski document and `vendor/keyboard/` scripts/assets. Its former anonymous cloud adapter and nested PWA registration are removed; authenticated keyboard settings use WriterHelper's account bridge. |
-| Font editing | `fonteditor-core` 2.6.3 (MIT) | Bundled browser library and WriterHelper workshop. The original Khmer GDEF/GSUB/GPOS tables are retained when exporting edits of supplied TTFs. License is in `FONTEDITOR_CORE_LICENSE.txt`. |
-| App identity | Attached Aza’ra Universe emblem | 32/64/180/192/512 PNG exports, maskable 512 icon, full-size logo, and embedded SVG mark. Root manifest supplies installed-app icons. |
-| Theme | Prior supplied Aza’raan Language Program theme | Palette and steampunk background image URL only, in `style/css/writerhelper-theme.css`. |
-| Backend | Existing user deployment | Root `script/js/backend-bridge.js` uses the user-confirmed `AWS_RPC_*` protocol and only the public `/exec` URL. No `.gs` or private backend material is included. |
+The frontend combines the complete current Language, LiteraryFriend and Keyboard source editions under `index.html`. The six historical language sections and the eight requested book titles remain intact. The original projects outside WriterHelper were not edited.
 
-## Functional checks
+| Source | Files accounted for | Treatment |
+| --- | ---: | --- |
+| Azara_Projects/Language | 549 | 540 identical files, 8 adaptations and the studio HTML embedded in JavaScript. |
+| LiteraryFriend | 384 | 369 identical files, 11 adaptations and 4 replacements for the unified entry, PWA and backend transport. |
+| PersonalProjects/keyboard | 764 | 752 identical files, 7 adaptations and 5 replacements for the embedded entry, PWA and cloud transport. |
 
-- Only one `.html`, one `.webmanifest`, and one `service-worker.js` remain within `WriterHelper`.
-- The service worker's core static paths and the embedded documents' script, stylesheet, and image paths resolve within the project.
-- JavaScript syntax and JSON parsing pass; the bundled four era TTFs parse with their Khmer cmap. A font workshop round-trip of the Modern font with a new glyph produced a valid TrueType file, preserved all original glyph indices, kept GDEF/GSUB/GPOS, and passed fontTools checksum/table inspection.
-- Keyboard model tests, the language merge/IPA/practice/phonetics suites, and a DOM smoke check for nine workspaces, book drafting, and Modern/Proto font export pass.
-- Live browser UI and deployed account/TTS calls could not be executed in this environment. Verify those flows on the final HTTPS origin, including repeated book/page switches and keyboard insertion at a moved caret.
+The full per-file comparison, source revisions and hashes are in `SOURCE_COVERAGE.json`. Reproduce it with `audit-source-coverage.py --literaryfriend <checkout> --keyboard <keyboard-folder>`. Historical documentation stays with its source; the current configuration and runtime use the supplied deployment.
 
-## Deployment notes
+## Integration fixes
 
-The backend must authorize the exact frontend origin and support the confirmed `AWS_RPC_*` iframe messages. Server-side owner registration, Drive privacy, and Google Cloud TTS configuration remain backend deployment responsibilities. Keyboard settings use authenticated `keyboard.get` and `keyboard.save`; manuscript snapshots use authenticated `notes.*`; Cloud MP3 uses `aza.tts.generate` and `aza.tts.audio.chunk`. The client never calls old anonymous Savanski endpoints.
+- The Language studio sits inside the main column. Its overlay leaves the six era channels and section rail accessible, including on mobile.
+- Every book, new page and either drafting pane accepts input from the shared Aza’raan/QWERTY keyboard. Caret restoration preserves the selected writing surface. The keyboard bar provides a sound-pack selector, shared mute, voice depth and Speak/Stop controls.
+- The celestial tree emblem is used in the shell, Language studio, keyboard, favicon, Apple touch icon, installed-app icons and maskable icon. The master image exactly matches the attachment. The theme copies only the reference package's palette and exact steampunk wallpaper URL.
+- The font workshop supports names and metadata, Unicode mapping, SVG/PNG import, glyph positioning and scaling, baseline, advance widths, global spacing, pair spacing, preview, portable projects and real TTF export. White PNG backgrounds are excluded from traced outlines; counters/holes remain intact.
+- Font exports preserve existing glyph IDs and names and the original Khmer GDEF/GSUB/GPOS tables. Applying a font saves it in the writing library, restores it after reload and includes it in complete backups. HTML document export embeds the used fonts.
+- The root service worker installs the full startup dependency set and the default sound pack. Its generated allowlist excludes private responses and query requests. Optional audio and large modules are cached on demand. The single root manifest and worker own the app scope.
+- Both the active adapter and retained clients use the confirmed `AWS_RPC_REQUEST`, `AWS_RPC_RESPONSE` and `AWS_RPC_READY` contract. Obsolete runtime Apps Script library URLs were removed. The attached backend was not edited, copied into WriterHelper or committed.
 
-The theme image is an external URL supplied in the reference and may expire. Its CSS has a dark fallback. Browser voice output is an approximation for phonemes that the device voice cannot pronounce; click/glottal cues are supplied by the language studio.
+## Verification
+
+`test-writerhelper.cjs` passed 15 browser checks in Chromium 153:
+
+1. Nine sections and 46 starter pages.
+2. All six era channels remain clickable beside the studio.
+3. Actual B-key long press exposes B/F/V/W and permits three marks.
+4. Font metadata, baseline, global/pair spacing, PNG import and TTF download.
+5. Proto glyph creation, SVG import and font project export/import.
+6. Aza’raan insertion into each of the eight books.
+7. QWERTY insertion, decoded audio clips and the shared mute control.
+8. Input reaches the selected right-hand drafting pane.
+9. New pages use the applied font and HTML export embeds it.
+10. Book Speak/Stop reaches the canonical language voice engine.
+11. AWS_RPC contract and sign-in/sign-out session lifecycle against a local fixture.
+12. Drafts and fonts survive a reload.
+13. Offline reload initializes both keyboards, Language and saved font projects.
+14. Mobile era navigation works at 390 × 844.
+15. No uncaught page errors or missing local resources.
+
+`test-font-core.cjs` passed raster-background detection, transparent glyphs, holes, kerning and glyph transformations. `verify-font-exports.py` passed TrueType checksum, original glyph ID/name order, Khmer layout, metadata, kerning, PNG counter, new Proto font and embedded-font inspections. The four existing language checks also passed: merge, IPA, pronunciation practice and phonetic rules. JavaScript syntax, JSON, source coverage and file structure checks passed.
+
+For the browser suite, install Playwright locally and run `node docs/test-writerhelper.cjs` from WriterHelper. An existing browser can be supplied with `CHROME_BINARY`; `PLAYWRIGHT_MODULE` can select an existing Playwright installation. `TEST_ARTIFACT_DIR` controls temporary screenshots and exported test files. Inspect those outputs with `python docs/verify-font-exports.py <artifact-directory>` using fontTools.
+
+## Practical limits
+
+Live Google account authentication and Cloud MP3 synthesis were not exercised. The contract test uses a fixture, not the deployed backend. The existing backend must authorize the final HTTPS origin and have its server-side TTS configuration. Device voice quality depends on installed voices; the language mappings and click/glottal cues remain canonical.
+
+Proto and Ancient retain the supplied historical chart images and start as editable blank font projects because no source TTFs exist for those eras. New Unicode glyphs do not automatically receive contextual substitution or combining-mark anchors. Original TTF shaping is retained; advanced OTF shaping and GPOS kerning require inspection after conversion or geometry changes.

@@ -34,7 +34,7 @@
     constructor(options = {}) {
       this.baseUrl = options.baseUrl || inferredRoot;
       this.manifestUrl = options.manifestUrl || new URL("json/audio-manifest.json", this.baseUrl).href;
-      this.packId = getStored(storageKey, "off");
+      this.packId = getStored(storageKey, "classic");
       this.volume = Math.max(0, Math.min(1, Number(getStored(volumeKey, "50")) / 100 || 0));
       this.muted = getStored(muteKey, "false") === "true";
       this.manifest = null;

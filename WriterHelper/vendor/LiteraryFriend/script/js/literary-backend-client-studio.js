@@ -2,7 +2,7 @@
   'use strict';
   const CONFIG = Object.freeze({
     execUrl: 'https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec',
-    libraryUrl: 'https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2'
+    libraryUrl: ''
   });
   const PUBLIC_ACTIONS = new Set(['health','manifest','client.config','auth.login','auth.register','auth.google','auth.password.reset.request','auth.password.reset.complete','auth.recovery.code.login','auth.contact.code.verify','auth.2fa.verify','auth.2fa.resend']);
   let sessionToken = '';
@@ -47,16 +47,10 @@
     if (!Object.prototype.hasOwnProperty.call(envelope, 'data')) envelope.data = {};
     if (!Object.prototype.hasOwnProperty.call(envelope, 'token') && !PUBLIC_ACTIONS.has(action)) envelope.token = token();
     try {
-      const response = await fetch(CONFIG.execUrl, {
-        method: options.method || 'POST',
-        headers: {'Content-Type': 'text/plain;charset=UTF-8'},
-        body: JSON.stringify(envelope),
-        signal: controller.signal,
-        redirect: 'follow',
-        cache: 'no-store',
-        credentials: 'omit'
-      });
-      return await decode(response);
+      if(!window.WriterHelperBridge)throw new Error('Open WriterHelper to connect to the account bridge.');
+      const result=await window.WriterHelperBridge.request(action,envelope.data);
+      if(result.token)setSession(result.token,result.user||sessionUser);
+      return result;
     } catch (error) {
       if (error?.name === 'AbortError') throw new Error('LiteraryFriend backend request timed out.');
       throw error;

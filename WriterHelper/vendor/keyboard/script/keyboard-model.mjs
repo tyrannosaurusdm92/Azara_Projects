@@ -101,11 +101,11 @@ export const THEME_ROLES = Object.freeze({
 });
 
 export const DEFAULT_THEME = Object.freeze({
-  shell: '#050D18', frame: '#00FFFF', toolbar: '#081D36',
-  toolbarText: '#FFFFFF', key: '#102840', keyText: '#FFFFFF',
-  keyBorder: '#1E90FF', action: '#092C3A', actionText: '#A3E635',
-  pressed: '#EC5800', accent: '#081D36', accentText: '#FFFFFF',
-  accentBorder: '#FFF600', split: '#FFF600', focus: '#00FFFF'
+  shell: '#0C1017', frame: '#B07A3A', toolbar: '#122B32',
+  toolbarText: '#F3E9DB', key: '#172932', keyText: '#F3E9DB',
+  keyBorder: '#3D9FA0', action: '#19343D', actionText: '#E8C76E',
+  pressed: '#B07A3A', accent: '#111720', accentText: '#F3E9DB',
+  accentBorder: '#D7AA63', split: '#8DE0DC', focus: '#00FFFF'
 });
 
 export function accentOptions(symbol, uppercase = false) {

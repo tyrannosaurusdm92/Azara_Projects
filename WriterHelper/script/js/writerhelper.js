@@ -149,7 +149,7 @@
  function show(open){
   panel.hidden=!open;
   document.body.classList.toggle('wh-kb-open',open);
-  $('wh-toggle').textContent=open?'⌨ Hide Savanski':'⌨ Savanski Keyboard';
+  $('wh-toggle').textContent=open?'⌨ Hide keyboard':'⌨ Writing keyboard';
   $('wh-toggle').setAttribute('aria-pressed',String(open));
   localStorage.setItem('wh:open',String(open));
  }

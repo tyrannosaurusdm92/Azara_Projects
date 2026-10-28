@@ -2,7 +2,7 @@
   'use strict';
   const LF=global.LF;
   const DEFAULT_ENDPOINT='https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec';
-  const LIBRARY_URL='https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2';
+  const LIBRARY_URL='';
 
   class ApiClient{
     constructor(){const S=global.LiteraryFriendStorage;this.endpoint=DEFAULT_ENDPOINT;this.libraryUrl=LIBRARY_URL;let sessionToken='';try{sessionToken=sessionStorage.getItem('literaryfriend.session.token.v2')||sessionStorage.getItem('literaryfriend.session.token')||sessionStorage.getItem('literaryfriend-book-token')||sessionStorage.getItem('lf.auth.token')||'';}catch(_){}this.token=sessionToken||S?.get('lf.auth.token')||'';this.user=LF.safeJsonParse(S?.get('lf.auth.user')||'null',null);this.online=navigator.onLine;this.queue=LF.safeJsonParse(S?.get('lf.sync.queue')||'[]',[]);this._mirrorSession();}
@@ -13,9 +13,9 @@
       const body={action,data,token:opts.token===undefined?this.token:opts.token,client:{name:'LiteraryFriend',version:LF.VERSION,platform:navigator.platform||''}};
       const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),opts.timeout||20000);
       try{
-        const res=await fetch(this.endpoint,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body),signal:controller.signal,redirect:'follow'});
-        const text=await res.text(); const json=LF.safeJsonParse(text,{ok:false,error:{message:text||`HTTP ${res.status}`}});
-        if(!res.ok||json.ok===false) throw new Error(json.error?.message||json.message||`LiteraryFriend backend error ${res.status}`);
+        if(!global.WriterHelperBridge)throw Error('Open WriterHelper to connect to the account bridge.');
+        const json=await global.WriterHelperBridge.request(action,data);
+        if(json.ok===false)throw Error(json.error?.message||json.message||'Backend request failed.');
         if(json.token){this.token=String(json.token);this._mirrorSession();}if(json.user)this.user=json.user;
         this.online=true; LF.events.emit('api:online',json); return json;
       } catch(err){ this.online=false; LF.events.emit('api:offline',err); throw err; } finally{clearTimeout(timer);}

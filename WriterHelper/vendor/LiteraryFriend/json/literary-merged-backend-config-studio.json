@@ -2,7 +2,7 @@
   "schema": "literaryfriend.book-studio.backend-config.v1",
   "service": "LiteraryFriend Backend 1.0.1",
   "webAppUrl": "https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec",
-  "appsScriptLibraryUrl": "https://script.google.com/macros/library/d/1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC/2",
+  "appsScriptLibraryUrl": "",
   "appsScriptLibraryId": "1uq9wTJuIWNphZvGN_QGR3CGlBSWIRMhdD2i-PwcmHCJWTLOVoGKa_PyC",
   "appsScriptLibraryVersion": 1,
   "apiVersion": "2026-08-09-v1",

@@ -8,19 +8,21 @@
  const noteMap=()=>{try{return JSON.parse(localStorage.getItem(mapKey)||'{}')}catch{return {}}};
  const saveMap=m=>{try{localStorage.setItem(mapKey,JSON.stringify(m))}catch{}};
  function connect(){if(frame)return;frame=document.createElement('iframe');frame.src=ENDPOINT+'?action=bridge';frame.title='Literary Friend account connection';frame.hidden=true;frame.referrerPolicy='strict-origin-when-cross-origin';frame.setAttribute('sandbox','allow-scripts allow-same-origin allow-forms');document.body.append(frame)}
- function incoming(event){if(event.source!==frame?.contentWindow)return;const host=new URL(event.origin).hostname;
+ function incoming(event){if(event.source!==frame?.contentWindow)return;let host;try{host=new URL(event.origin).hostname}catch{return}
    if(!(host==='script.google.com'||host==='script.googleusercontent.com'||host.endsWith('.googleusercontent.com')))return;
    const data=event.data||{};
    if(data.type==='AWS_RPC_READY'){remoteOrigin=event.origin;isReady=true;set(token?'Connected bridge; validating session…':'Account bridge ready. Sign in to sync.');return}
    if(data.type!=='AWS_RPC_RESPONSE')return;const p=pending.get(data.id);if(!p)return;pending.delete(data.id);clearTimeout(p.t);
    const res=data.result||{ok:false,error:{message:'No response from server.'}};
    if(res.ok===false)p.reject(Error(res.error?.message||res.message||'Backend refused the request.'));
-   else p.resolve(res);
+   else{if(['auth.login','auth.2fa.verify'].includes(p.action)&&res.token)signedIn(res);p.resolve(res)}
  }
  window.addEventListener('message',incoming);
  async function ready(timeout=13000){connect();if(isReady)return;await new Promise((resolve,reject)=>{const start=Date.now(),timer=setInterval(()=>{if(isReady){clearInterval(timer);resolve()}else if(Date.now()-start>timeout){clearInterval(timer);reject(Error('Connection unavailable. The existing backend may not be deployed or may not authorize this website origin.'))}},100)})}
- async function request(action,data={}){await ready();return new Promise((resolve,reject)=>{
-   const id='lf_'+Date.now().toString(36)+'_'+(++counter);const t=setTimeout(()=>{pending.delete(id);reject(Error('Account request timed out.'))},60000);pending.set(id,{resolve,reject,t});frame.contentWindow.postMessage({type:'AWS_RPC_REQUEST',id,payload:{action,data,token,client:'literaryfriend-web',version:'2026-10-10'}},remoteOrigin)
+ async function request(action,data={}){
+   if(action==='auth.login')data={...data,login:data.login||data.email||data.username||''};
+   await ready();return new Promise((resolve,reject)=>{
+   const id='wh_'+Date.now().toString(36)+'_'+(++counter);const t=setTimeout(()=>{pending.delete(id);reject(Error('Account request timed out.'))},60000);pending.set(id,{resolve,reject,t,action});frame.contentWindow.postMessage({type:'AWS_RPC_REQUEST',id,payload:{action,data,token,client:'writerhelper-web',version:'2026-10-27'}},remoteOrigin)
  })}
  window.WriterHelperBridge=Object.freeze({request,get signedIn(){return !!token},get user(){return sessionUser}});
  async function login(){const l=$('bridge-login')?.value.trim(),p=$('bridge-password')?.value;if(!l||!p){set('Enter your email/username and password.');return}try{set('Signing in securely…');const r=await request('auth.login',{login:l,password:p,platform:navigator.platform||'browser',deviceName:'Literary Friend web'});$('bridge-password').value='';if(r.twoFactorRequired){challenge=r.challengeToken||r.challenge?.challengeToken||'';set('Enter the two-factor code to finish sign-in.');return}signedIn(r)}catch(err){set(err.message)}}

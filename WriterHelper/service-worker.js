@@ -1,31 +1,39 @@
-/* WriterHelper owns this scope. Cache static files only; keep manuscripts and RPC private. */
-const VERSION='writerhelper-aza-v4';
+/* Only explicitly listed frontend files enter the offline cache. Never intercept RPC. */
+const VERSION='writerhelper-a7609b61b602f1c5';
 const BASE=new URL('./',self.location.href);
-const CORE=[
-  'index.html','manifest.webmanifest',
-  'assets/images/icon-192.png','assets/images/icon-512.png',
-  'assets/ttf/Azaaraan-Archaic.ttf','assets/ttf/Azaaraan-Classical.ttf',
-  'assets/ttf/Azaaraan-Traditional.ttf','assets/ttf/Azaaraan-Modern.ttf',
-  'style/css/writerhelper.css','style/css/aza-integration.css',
-  'style/css/writerhelper-theme.css','style/css/font-workshop.css',
-  'script/js/writerhelper.js','script/js/aza-integration.js',
-  'script/js/aza-language-document.js','script/js/savanski-document.js',
-  'script/js/font-workshop.js','script/js/fonteditor-core.min.js',
-  'script/js/backend-bridge.js','script/js/pwa.js',
-  'vendor/LiteraryFriend/css/luxury-editor.css',
-  'vendor/LiteraryFriend/css/keyboard.css',
-  'vendor/LiteraryFriend/css/literary-friend.css',
-  'vendor/LiteraryFriend/script/js/app.js',
-  'vendor/LiteraryFriend/script/js/storage.js',
-  'vendor/LiteraryFriend/script/js/keyboard.js',
-  'vendor/keyboard/script/bootstrap.mjs',
-  'vendor/keyboard/json/unicode-characters.json',
-  'vendor/keyboard/json/accent-variants.json'
-].map(path=>new URL(path,BASE).href);
-
+const MANIFEST=new URL('json/offline-assets.json',BASE).href;
+let manifestPromise;
+async function manifest(){
+  if(!manifestPromise)manifestPromise=(async()=>{
+    const cache=await caches.open(VERSION),response=await cache.match(MANIFEST);
+    if(!response)throw Error('Offline asset manifest is unavailable.');
+    const data=await response.json();
+    return new Set(data.static.map(path=>new URL(path,BASE).pathname));
+  })().catch(error=>{manifestPromise=null;throw error});
+  return manifestPromise;
+}
 self.addEventListener('install',event=>{
-  event.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(CORE)));
-  self.skipWaiting();
+  event.waitUntil((async()=>{
+    const response=await fetch(MANIFEST,{cache:'no-store'});
+    if(!response.ok)throw Error('Cannot load offline asset manifest.');
+    const data=await response.clone().json();
+    if(data.version!==VERSION)throw Error('The offline manifest and worker versions differ.');
+    const cache=await caches.open(VERSION);
+    try{
+      let cursor=0;
+      // Keep installation bounded instead of opening hundreds of requests at once.
+      await Promise.all(Array.from({length:8},async()=>{
+        while(cursor<data.core.length){
+          const url=new URL(data.core[cursor++],BASE).href;
+          const item=await fetch(url,{cache:'reload'});
+          if(!item.ok)throw Error('Offline file is missing: '+url);
+          await cache.put(url,item);
+        }
+      }));
+      await cache.put(MANIFEST,response);
+    }catch(error){await caches.delete(VERSION);throw error}
+    // Activate updates after existing tabs close so a page never mixes old and new scripts.
+  })());
 });
 self.addEventListener('activate',event=>{
   event.waitUntil(caches.keys().then(keys=>Promise.all(keys
@@ -35,18 +43,21 @@ self.addEventListener('activate',event=>{
 self.addEventListener('fetch',event=>{
   const request=event.request,url=new URL(request.url);
   if(request.method!=='GET'||url.origin!==BASE.origin||!url.pathname.startsWith(BASE.pathname))return;
-  if(request.headers.has('Authorization')||url.searchParams.has('action')||url.searchParams.has('token'))return;
-  if(/\.(?:gs|pt\d*)$/i.test(url.pathname)||/\/(?:api|auth|backend)\//i.test(url.pathname))return;
+  if(url.search||request.headers.has('Authorization'))return;
   if(request.mode==='navigate'){
-    event.respondWith(fetch(request).catch(()=>caches.match(new URL('index.html',BASE))));
+    if(![BASE.pathname,new URL('index.html',BASE).pathname].includes(url.pathname))return;
+    event.respondWith(caches.open(VERSION).then(cache=>cache.match(new URL('index.html',BASE).href)).then(cached=>cached||fetch(request)));
     return;
   }
-  if(!/\.(?:js|mjs|css|json|svg|png|jpg|jpeg|webp|wav|mp3|ttf|woff2?|webmanifest)$/i.test(url.pathname))return;
-  event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{
+  event.respondWith((async()=>{
+    const allowed=await manifest();
+    if(!allowed.has(url.pathname))return fetch(request);
+    const cache=await caches.open(VERSION),cached=await cache.match(request);
+    if(cached)return cached;
+    const response=await fetch(request);
     if(response.ok&&response.type==='basic'){
-      const copy=response.clone();
-      event.waitUntil(caches.open(VERSION).then(cache=>cache.put(request,copy)));
+      const write=cache.put(request,response.clone());event.waitUntil(write);await write;
     }
     return response;
-  })));
+  })());
 });

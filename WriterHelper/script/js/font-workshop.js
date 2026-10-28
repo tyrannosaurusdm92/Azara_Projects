@@ -3,16 +3,54 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const F = window.FontEditorCore;
+  const geometry = window.WriterHelperFontCore;
   if (!F?.createFont) { $('wh-font-status').textContent = 'The font editor could not load.'; return; }
   const eras = ['Proto','Ancient','Archaic','Classical','Traditional','Modern'];
   const model = {era:'Modern',font:null,source:null,selected:0,baseline:0,spacing:0,busy:false,proofFace:null,proofUrl:null,dirty:false};
-  const applied = Object.create(null);
-  const appliedUrls = new Set();
-  window.WriterHelperFonts = Object.freeze({family:era=>applied[era]||'Az'+era});
+  const appliedKey='writerhelper-era-fonts-v1';
+  let applied={};try{applied=JSON.parse(localStorage.getItem(appliedKey)||'{}')}catch{}
+  const installed=new WeakMap();
+  async function restoreApplied(){
+    const records=await window.LuxuryStore.allFonts();
+    for(const era of eras){
+      if(!records.some(f=>f.family===applied[era])){
+        const matching=records.filter(f=>f.era===era);applied[era]=matching.at(-1)?.family;
+      }
+    }
+    localStorage.setItem(appliedKey,JSON.stringify(applied));
+    window.dispatchEvent(new Event('writerhelper:font-applied'));
+  }
+  async function installInto(doc){
+    if(!doc?.defaultView)return;
+    const records=await window.LuxuryStore.allFonts();
+    let seen=installed.get(doc);if(!seen){seen=new Set();installed.set(doc,seen)}
+    for(const [era,family] of Object.entries(applied)){
+      if(seen.has(family))continue;
+      const record=records.find(f=>f.family===family);if(!record)continue;
+      const bytes=await record.blob.arrayBuffer();
+      // The studio's existing selectors use AzModern etc.; install the edited era there.
+      const face=new doc.defaultView.FontFace('Az'+era,bytes);
+      await face.load();doc.fonts.add(face);seen.add(family);
+    }
+  }
+  async function exportCSS(markup,channelFont){
+    let css='';
+    for(const era of ['Archaic','Classical','Traditional','Modern']){
+      const family='Az'+era;if(!markup.includes(family)&&!String(channelFont).includes(family))continue;
+      const response=await fetch(new URL('assets/ttf/Azaaraan-'+era+'.ttf',location.href));
+      if(!response.ok)throw Error('The '+era+' font could not be embedded in the export.');
+      const bytes=new Uint8Array(await response.arrayBuffer());let raw='';
+      for(let i=0;i<bytes.length;i+=8192)raw+=String.fromCharCode(...bytes.subarray(i,i+8192));
+      css+=`@font-face{font-family:${family};src:url(data:font/ttf;base64,${btoa(raw)}) format('truetype')}\n`;
+    }
+    return css;
+  }
+  window.WriterHelperFonts = Object.freeze({family:era=>applied[era]||'Az'+era,installInto,exportCSS});
+  window.addEventListener('writerhelper:fonts-ready',()=>restoreApplied().catch(error=>status(error.message)));
   const status = message => { $('wh-font-status').textContent=message; };
   const fileBase = new URL('./', location.href);
   const familyInput = $('wh-font-family');
-  const fields = {fontFamily:'wh-font-family',fontSubFamily:'wh-font-style',version:'wh-font-version',designer:'wh-font-designer',description:'wh-font-description',copyright:'wh-font-copyright'};
+  const fields = {fontFamily:'wh-font-family',fontSubFamily:'wh-font-style',version:'wh-font-version',designer:'wh-font-designer',description:'wh-font-description',copyright:'wh-font-copyright',manufacturer:'wh-font-manufacturer',licence:'wh-font-license',urlOfLicence:'wh-font-license-url',urlOfFontDesigner:'wh-font-designer-url'};
   const number = (value,fallback=0) => Number.isFinite(+value)?Math.round(+value):fallback;
   const data = () => model.font?.get();
   const current = () => data()?.glyf[model.selected] || null;
@@ -80,8 +118,14 @@
   }
   function serialize(){
     if(!model.font)throw Error('No font has loaded.');
+    const font=data();
+    // The library otherwise assigns the .null name to unencoded shaping glyphs.
+    for(const glyph of font.glyf)if(!Array.isArray(glyph.unicode))glyph.unicode=[];
+    font['OS/2'].sTypoAscender=font.hhea.ascent;font['OS/2'].sTypoDescender=font.hhea.descent;
+    font['OS/2'].usWinAscent=Math.max(font.hhea.ascent,...font.glyf.map(g=>g.yMax||0));
+    font['OS/2'].usWinDescent=Math.max(-font.hhea.descent,...font.glyf.map(g=>-(g.yMin||0)));
     // Keep every glyph index stable: Khmer GSUB/GDEF/GPOS refer to those indices.
-    const exported=model.font.write({type:'ttf',kerning:true,hinting:true});
+    const exported=model.font.write({type:'ttf',kerning:true,hinting:false});
     const bytes=new Uint8Array(exported);
     const complete=preserveKhmerLayout(bytes,model.source);
     const check=F.createFont(complete.buffer.slice(complete.byteOffset,complete.byteOffset+complete.byteLength),{type:'ttf'});
@@ -117,11 +161,12 @@
     model.era=era;model.baseline=0;model.spacing=0;model.dirty=false;
     $('wh-font-baseline').value=0;$('wh-font-spacing').value=0;
     $('wh-font-baseline-value').textContent='0';$('wh-font-spacing-value').textContent='0';
-    render();
+    render();renderKerning();
   }
   async function loadEra(era){
     if(!eras.includes(era)||model.busy)return;
     model.busy=true;
+    $('wh-font-era').disabled=true;
     try{
       if(model.dirty)await saveDraft(true);
       let stored=null;try{stored=await getDraft(era)}catch(error){status('Local draft storage is unavailable: '+error.message)}
@@ -136,11 +181,11 @@
         model.font=F.createFont();model.source=null;model.era=era;model.selected=0;
         model.baseline=0;model.spacing=0;model.dirty=false;
         const f=data();f.head.unitsPerEm=1024;f.hhea.ascent=812;f.hhea.descent=-212;
-        f.name.fontFamily='Aza’raan '+era;f.name.fontSubFamily='Regular';render();
+        f.name.fontFamily='Aza’raan '+era;f.name.fontSubFamily='Regular';render();renderKerning();
       }
       status(stored?era+' draft restored.':era+' font ready. '+(bytes?'Original era glyphs loaded.':'Upload glyphs to start this era.'));
     }catch(error){status('Font load failed: '+error.message);console.error(error)}
-    finally{model.busy=false}
+    finally{model.busy=false;$('wh-font-era').disabled=false}
   }
   function render(){
     if(!data())return;
@@ -199,11 +244,27 @@
     ctx.fill('nonzero');ctx.stroke();ctx.restore();
     if(!glyph.contours?.length){ctx.fillStyle='#65594d';ctx.font='16px Georgia';ctx.fillText('No outline yet — upload an SVG or PNG.',left,baseline-70)}
   }
+  function renderKerning(){
+    const list=$('wh-font-kern-list');list.replaceChildren();
+    const pairs=geometry.kerningPairs(data().kern);
+    if(!pairs.size){list.textContent='No custom pairs. Negative values bring two letters closer.';return}
+    for(const [key,amount] of pairs){
+      const row=document.createElement('div'),indices=key.split(',').map(Number);
+      const label=document.createElement('span');
+      label.textContent=indices.map(i=>data().glyf[i]?.unicode?.map(hex).join('/')||data().glyf[i]?.name||i).join(' + ')+' : '+amount;
+      const remove=document.createElement('button');remove.type='button';remove.textContent='Remove';
+      remove.onclick=()=>{pairs.delete(key);data().kern=geometry.writeKerning(pairs);renderKerning();markDirty()};
+      row.append(label,remove);list.append(row);
+    }
+  }
   function updateMetadata(){
     if(!data())return;
     for(const [key,id] of Object.entries(fields))data().name[key]=$(id).value.trim();
     const name=(data().name.fontFamily||'Azaaraan')+' '+(data().name.fontSubFamily||'Regular');
     data().name.fullName=name;
+    data().name.preferredFamily=data().name.fontFamily;
+    data().name.preferredSubFamily=data().name.fontSubFamily;
+    data().name.uniqueSubFamily=name+' '+(data().name.version||'Version 1.0');
     data().name.postScriptName=name.normalize('NFKD').replace(/[^A-Za-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,63)||'AzaaraanFont';
     markDirty();
   }
@@ -211,8 +272,7 @@
     const next=number(value),delta=next-model.baseline;if(!delta)return;
     for(const glyph of data().glyf){
       for(const contour of glyph.contours||[])for(const point of contour)point.y+=delta;
-      if(Number.isFinite(glyph.yMin))glyph.yMin+=delta;
-      if(Number.isFinite(glyph.yMax))glyph.yMax+=delta;
+      geometry.bounds(glyph);
     }
     model.baseline=next;$('wh-font-baseline-value').textContent=String(next);draw(current());markDirty();
   }
@@ -235,46 +295,18 @@
     target.xMin=Math.min(...points.map(p=>p.x));target.xMax=Math.max(...points.map(p=>p.x));
     target.yMin=Math.min(...points.map(p=>p.y));target.yMax=Math.max(...points.map(p=>p.y));
     target.leftSideBearing=target.xMin;
-    target.compound=false;delete target.glyfs;
+    target.compound=false;delete target.glyfs;delete target.instructions;
     if(!target.advanceWidth)target.advanceWidth=Math.max(350,Math.ceil((outline.xMax-outline.xMin)*ratio+100));
     select(model.selected);markDirty();
   }
   async function pngToSvg(file){
     const bitmap=await createImageBitmap(file),canvas=document.createElement('canvas');
-    canvas.width=canvas.height=96;const ctx=canvas.getContext('2d',{willReadFrequently:true});
-    ctx.clearRect(0,0,96,96);
-    const scale=Math.min(88/bitmap.width,88/bitmap.height);
-    const width=bitmap.width*scale,height=bitmap.height*scale;
-    ctx.drawImage(bitmap,(96-width)/2,(96-height)/2,width,height);bitmap.close();
-    const pixels=ctx.getImageData(0,0,96,96).data;
-    let opaque=0;for(let i=0;i<pixels.length;i+=4)if(pixels[i+3]===255)opaque++;
-    const transparent=opaque<96*96*.9;
-    const fill=new Uint8Array(96*96);
-    for(let i=0;i<fill.length;i++){
-      const k=i*4,a=pixels[k+3];
-      fill[i]=transparent?a>110:(.2126*pixels[k]+.7152*pixels[k+1]+.0722*pixels[k+2]<170)?1:0;
-    }
-    const active=(x,y)=>x>=0&&x<96&&y>=0&&y<96&&!!fill[y*96+x];
-    const edges=new Map(),add=(x,y,xx,yy)=>{const key=x+','+y;const v=edges.get(key)||[];v.push([xx,yy]);edges.set(key,v)};
-    for(let y=0;y<96;y++)for(let x=0;x<96;x++)if(active(x,y)){
-      if(!active(x,y-1))add(x,y,x+1,y);
-      if(!active(x+1,y))add(x+1,y,x+1,y+1);
-      if(!active(x,y+1))add(x+1,y+1,x,y+1);
-      if(!active(x-1,y))add(x,y+1,x,y);
-    }
-    if(!edges.size)throw Error('The image has no visible dark or opaque glyph pixels.');
-    const paths=[];let guard=0;
-    while(edges.size){
-      const key=edges.keys().next().value,[sx,sy]=key.split(',').map(Number);
-      let at=[sx,sy],path=`M${sx} ${sy}`;
-      do{
-        const nexts=edges.get(at.join(','));if(!nexts?.length)break;
-        const next=nexts.pop();if(!nexts.length)edges.delete(at.join(','));
-        path+=` L${next[0]} ${next[1]}`;at=next;
-      }while((at[0]!==sx||at[1]!==sy)&&++guard<100000);
-      if(path.length>12)paths.push(path+' Z');
-    }
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96"><path d="${paths.join(' ')}"/></svg>`;
+    const scale=Math.min(256/bitmap.width,256/bitmap.height,1);
+    canvas.width=Math.max(1,Math.round(bitmap.width*scale));canvas.height=Math.max(1,Math.round(bitmap.height*scale));
+    const ctx=canvas.getContext('2d',{willReadFrequently:true});
+    ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);bitmap.close();
+    const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+    return geometry.traceMask(geometry.rasterMask(pixels,canvas.width,canvas.height,$('wh-font-ink').value,number($('wh-font-threshold').value,170)),canvas.width,canvas.height);
   }
   async function uploadGlyph(file){
     if(!file||!current())return;
@@ -284,19 +316,29 @@
   }
   async function proof(useInBooks=false){
     const bytes=serialize();
-    if(model.proofFace&&!Object.values(applied).includes(model.proofFace.family))document.fonts.delete(model.proofFace);
-    if(model.proofUrl&&!appliedUrls.has(model.proofUrl))URL.revokeObjectURL(model.proofUrl);
+    if(model.proofFace)document.fonts.delete(model.proofFace);
+    if(model.proofUrl)URL.revokeObjectURL(model.proofUrl);
     model.proofUrl=URL.createObjectURL(new Blob([bytes],{type:'font/ttf'}));
     const family=useInBooks?'WH-'+model.era+'-'+Date.now():'WH-Proof-'+Date.now();
     const face=new FontFace(family,`url("${model.proofUrl}")`);
     await face.load();document.fonts.add(face);model.proofFace=face;
     $('wh-font-proof').style.fontFamily=`"${family}",Georgia,serif`;
     $('wh-font-proof').textContent=$('wh-font-proof-input').value;
-    if(useInBooks){applied[model.era]=family;appliedUrls.add(model.proofUrl);status(model.era+' font now applies to newly typed Aza’raan passages in books.');}
+    if(useInBooks){
+      await window.LiteraryFriendApp.registerFont({id:family,name:(data().name.fontFamily||model.era)+' · '+model.era,family,era:model.era,blob:new Blob([bytes],{type:'font/ttf'})});
+      applied[model.era]=family;localStorage.setItem(appliedKey,JSON.stringify(applied));
+      window.dispatchEvent(new Event('writerhelper:font-applied'));
+      await saveDraft(true);
+      status(model.era+' font saved for books, reloads, document exports and complete backups.');
+    }
     else status('Proof preview updated from the current TTF.');
   }
   function bind(){
-    $('wh-open-font-workshop').onclick=()=>{$('wh-font-workshop').hidden=false;};
+    $('wh-open-font-workshop').onclick=()=>{
+      $('wh-font-workshop').hidden=false;
+      const era=window.LiteraryFriendApp?.currentDocument()?.title;
+      if(eras.includes(era)&&era!==model.era){$('wh-font-era').value=era;void loadEra(era)}
+    };
     $('wh-font-close').onclick=()=>{$('wh-font-workshop').hidden=true;};
     $('wh-font-era').onchange=event=>{void loadEra(event.target.value)};
     $('wh-font-search').oninput=list;
@@ -307,15 +349,31 @@
       $(id).onchange=e=>{data().hhea[key]=number(e.target.value);markDirty()};
     }
     $('wh-font-codepoint').onchange=e=>{
-      try{const glyph=current();glyph.unicode=e.target.value.trim()?e.target.value.split(',').map(code):[];list();markDirty()}
+      try{const glyph=current(),points=e.target.value.trim()?e.target.value.split(',').map(code):[];
+        if(data().glyf.some(g=>g!==glyph&&g.unicode?.some(cp=>points.includes(cp))))throw Error('That Unicode slot belongs to another glyph.');
+        glyph.unicode=[...new Set(points)];list();markDirty()}
       catch(error){status(error.message);select(model.selected)}
     };
     $('wh-font-glyph-name').onchange=e=>{current().name=e.target.value.trim();list();markDirty()};
     $('wh-font-advance').onchange=e=>{current().advanceWidth=Math.max(0,number(e.target.value));draw(current());markDirty()};
+    $('wh-font-transform').onclick=()=>{
+      const glyph=current();if(!glyph)return;
+      geometry.transform(glyph,{x:number($('wh-font-offset-x').value),y:number($('wh-font-offset-y').value),scaleX:number($('wh-font-scale-x').value,100)/100,scaleY:number($('wh-font-scale-y').value,100)/100});
+      select(model.selected);markDirty();
+      $('wh-font-offset-x').value=0;$('wh-font-offset-y').value=0;$('wh-font-scale-x').value=100;$('wh-font-scale-y').value=100;
+    };
+    $('wh-font-kern-save').onclick=()=>{
+      try{
+        const slot=id=>{const input=$(id).value.trim(),cp=[...input].length===1?input.codePointAt(0):code(input);
+          const index=data().glyf.findIndex(g=>g.unicode?.includes(cp));if(index<0)throw Error('No glyph is mapped to '+hex(cp));return index};
+        const pairs=geometry.kerningPairs(data().kern);pairs.set(slot('wh-font-kern-left')+','+slot('wh-font-kern-right'),Math.max(-2000,Math.min(2000,number($('wh-font-kern-value').value))));
+        data().kern=geometry.writeKerning(pairs);renderKerning();markDirty();
+      }catch(error){status(error.message)}
+    };
     $('wh-font-add-glyph').onclick=()=>{
       try{const cp=code($('wh-font-new-codepoint').value);
         if(data().glyf.some(g=>g.unicode?.includes(cp)))throw Error('That Unicode slot already exists. Select it from the list to replace its outline.');
-        const name=$('wh-font-glyph-name').value.trim()||'glyph_'+cp.toString(16).toUpperCase();
+        const name='glyph_'+cp.toString(16).toUpperCase();
         data().glyf.push({name,unicode:[cp],advanceWidth:Math.max(1,number($('wh-font-advance').value,800)),contours:[]});
         list();select(data().glyf.length-1);$('wh-font-new-codepoint').value='';markDirty();
       }catch(error){status(error.message)}

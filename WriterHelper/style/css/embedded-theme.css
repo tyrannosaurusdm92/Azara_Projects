@@ -1,0 +1,10 @@
+/* The supplied package contributes its palette and wallpaper link only. */
+@import url('./writerhelper-theme.css');
+:root{--ink:#f3e9db;--brass:#b07a3a;--brass-light:#e8c76e;--muted:#d4c6b6;--edge:rgba(124,231,255,.29);--panel:#111720;--panel-deep:#0c1017;--focus:#00ffff}
+.mast,.workbench-top,.keyboard-top,.palette-top{background:linear-gradient(100deg,#122b32,#4d3658);border-color:#b07a3a}
+.mast-inner .sigil{flex:none;object-fit:contain;border-radius:50%}
+.tabs .tab.active,.copper-btn{background:linear-gradient(180deg,#d7aa63,#b07a3a)!important;color:#101923!important}
+.controls,.keyboard-section,.voice-panel,.voice-workshop,.reference,.workbench,.palette{background:rgba(12,16,23,.94);border-color:#b07a3a}
+.key,.palette button,button{border-color:#b07a3a;background:#15313a;color:#f3e9db}
+.key:hover,.palette button:hover,button:hover{background:#27515a}
+.composition{color:#16272c}

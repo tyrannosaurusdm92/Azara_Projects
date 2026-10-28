@@ -3,8 +3,13 @@
 const $=id=>document.getElementById(id);
 const language=$('wh-language-frame'),aza=$('wh-aza-book-frame'),savanski=$('wh-kb-frame');
 const overlay=$('wh-language-overlay'),panel=$('wh-keyboard-panel');
+// Keep the studio inside the main column so the six era channels remain reachable.
+document.querySelector('.shell-main').append(overlay);
+const topbar=document.querySelector('.app-topbar');
+new ResizeObserver(()=>overlay.style.setProperty('--wh-topbar-height',topbar.getBoundingClientRect().height+'px')).observe(topbar);
 const mode=$('wh-input-mode'),era=$('wh-aza-era'),speaker=$('wh-aza-speak'),stop=$('wh-aza-stop');
 const audio=$('wh-audio-on');
+const soundPack=$('wh-sound-pack');
 const voiceBase=$('wh-voice-base');
 let bookReady=false,languageReady=false,lastDoc='',currentSpan=null,previous='',savedEditor=null,savedRange=null,suppress=false,audioCtx=null,cloudAudio=null;
 const originBase=new URL('./',location.href);
@@ -88,9 +93,24 @@ function readiness(frame,kind){
  });
 }
 readiness(language,'language');readiness(aza,'book');
+function reflectMute(player){
+ player.muted=!audio.checked;
+ const button=savanski.contentDocument?.getElementById('sad-mute');
+ if(button){button.textContent=player.muted?'Unmute sounds':'Mute sounds';button.setAttribute('aria-pressed',String(player.muted))}
+}
 savanski.addEventListener('load',()=>{
- const player=savanski.contentWindow?.SavanskiKeyboardAudio;
- if(player)player.muted=!audio.checked;
+ const poll=async n=>{
+  const player=savanski.contentWindow?.SavanskiKeyboardAudio;
+  if(!player){if(n<65)setTimeout(()=>poll(n+1),150);return}
+  try{
+   const manifest=await player.load();
+   soundPack.replaceChildren(new Option('Off','off'),...manifest.packs.map(pack=>new Option(pack.label,pack.id)));
+   soundPack.value=player.packId;reflectMute(player);
+   soundPack.onchange=()=>player.setPack(soundPack.value);
+   savanski.contentDocument.getElementById('sad-sound')?.addEventListener('change',event=>{soundPack.value=event.target.value});
+   savanski.contentDocument.getElementById('sad-mute')?.addEventListener('click',()=>{audio.checked=!player.muted;localStorage.setItem('wh:key-sounds',audio.checked?'on':'off')});
+  }catch(error){message('Sound packs could not load: '+error.message)}
+ };void poll(0);
 });
 const originalAza=window.WRITERHELPER_AZA_LANGUAGE_HTML,originalQ=window.WRITERHELPER_SAVANSKI_HTML;
 if(originalAza){
@@ -101,6 +121,7 @@ if(originalQ)savanski.srcdoc=srcdoc(originalQ,'./vendor/keyboard/',false);
 function selectMode(){
  const azaMode=mode.value==='aza';aza.hidden=!azaMode;savanski.hidden=azaMode;
  era.disabled=!azaMode;
+ soundPack.disabled=azaMode;
  const library=$('wh-library');if(library)library.hidden=azaMode;
  localStorage.setItem('wh:book-keyboard',mode.value);
  currentSpan=null;previous='';
@@ -108,10 +129,11 @@ function selectMode(){
  message(azaMode?'Aza’raan · source keyboard, phonemes and voice':'QWERTY · Savanski keyboard with key audio');
 }
 mode.value=localStorage.getItem('wh:book-keyboard')==='qwerty'?'qwerty':'aza';
+if([...era.options].some(option=>option.value===localStorage.getItem('wh:book-era')))era.value=localStorage.getItem('wh:book-era');
 audio.checked=localStorage.getItem('wh:key-sounds')!=='off';
 audio.onchange=()=>{
  localStorage.setItem('wh:key-sounds',audio.checked?'on':'off');
- const player=savanski.contentWindow?.SavanskiKeyboardAudio;if(player)player.muted=!audio.checked;
+ const player=savanski.contentWindow?.SavanskiKeyboardAudio;if(player)reflectMute(player);
 };
 voiceBase.value=localStorage.getItem('wh:voice-base')||'100';
 voiceBase.oninput=()=>{
@@ -123,6 +145,7 @@ voiceBase.oninput=()=>{
 };
 mode.onchange=selectMode;
 era.onchange=()=>{
+ localStorage.setItem('wh:book-era',era.value);
  currentSpan=null;previous='';
  const box=aza.contentDocument?.getElementById('era');
  if(box){box.value=era.value;box.dispatchEvent(new Event('change',{bubbles:true}))}
@@ -199,6 +222,12 @@ function syncView(){
    if(bookReady)aza.contentWindow.AZA_STUDIO.replace([]);
  }
 }
+window.addEventListener('writerhelper:font-applied',()=>{
+ for(const frame of [aza,language])window.WriterHelperFonts?.installInto(frame.contentDocument).catch(error=>message(error.message));
+});
+for(const frame of [aza,language])frame.addEventListener('load',()=>{
+ window.WriterHelperFonts?.installInto(frame.contentDocument).catch(error=>message(error.message));
+});
 function watch(id){const e=$(id);if(e)new MutationObserver(syncView).observe(e,{childList:true,subtree:true,characterData:true})}
 watch('crumb-workspace');watch('crumb-channel');
 window.addEventListener('literaryfriend:ready',syncView,{once:true});

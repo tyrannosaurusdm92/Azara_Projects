@@ -310,10 +310,20 @@
   function contentForExport(ch){captureEditor();return ch.type==='studio'?
     '<h1>Draft</h1>'+ch.leftHtml+'<hr><h1>Reference / alternate draft</h1>'+ch.rightHtml:ch.html;}
   function exportDocument(){
-    openDialog('Export document',[{name:'format',type:'select',label:'File format',options:[{value:'html',label:'HTML (preserves formatting)'},{value:'txt',label:'Plain text'},{value:'md',label:'Markdown (simple)'}]}],'Download',values=>{
+    openDialog('Export document',[{name:'format',type:'select',label:'File format',options:[{value:'html',label:'HTML (preserves formatting and embeds fonts)'},{value:'txt',label:'Plain text'},{value:'md',label:'Markdown (simple)'}]}],'Download',async values=>{
       const ch=currentChannel(),markup=contentForExport(ch),name=safeFilename(ch.name);
       if(values.format==='html'){
-        const html='<!doctype html><html lang="'+ch.lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escapeHTML(ch.name)+'</title><style>body{max-width:800px;margin:5rem auto;padding:0 2rem;color:#19251e;font:18px/1.85 Georgia,serif}h1,h2,h3{color:#10362d;font-family:Georgia,serif}blockquote{border-left:3px solid #c7a35b;padding-left:1em}</style></head><body>'+markup+'</body></html>';
+        let fontCSS='';
+        try{
+          fontCSS=await window.WriterHelperFonts?.exportCSS(markup,ch.font)||'';
+          for(const font of fonts){
+            if(!markup.includes(font.family)&&!ch.font.includes(font.family))continue;
+            if(!/^[A-Za-z0-9_-]+$/.test(font.family))continue;
+            fontCSS+=`@font-face{font-family:${font.family};src:url(data:${font.blob.type||'font/ttf'};base64,${await toBase64(font.blob)})}\n`;
+          }
+        }catch(error){toast('Export failed: '+error.message);return}
+        const cssFamily=String(ch.font||'Georgia').replace(/[<>;{}\\]/g,'');
+        const html='<!doctype html><html lang="'+ch.lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escapeHTML(ch.name)+'</title><style>'+fontCSS+'body{max-width:800px;margin:5rem auto;padding:0 2rem;color:#19251e;font:18px/1.85 Georgia,serif;font-family:'+cssFamily+'}h1,h2,h3{color:#10362d}blockquote{border-left:3px solid #c7a35b;padding-left:1em}</style></head><body>'+markup+'</body></html>';
         download(name+'.html',html,'text/html;charset=utf-8');
       }else{
         const doc=new DOMParser().parseFromString('<body>'+markup+'</body>','text/html');
@@ -330,7 +340,7 @@
     return btoa(result);
   };
   async function exportBackup(){captureEditor();await persist();const fontData=[];
-    for(const f of fonts)fontData.push({id:f.id,name:f.name,family:f.family,type:f.blob.type,data:await toBase64(f.blob)});
+    for(const f of fonts)fontData.push({id:f.id,name:f.name,family:f.family,era:f.era,type:f.blob.type,data:await toBase64(f.blob)});
     download('literary-friend-backup-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify({format:'luxury-editor-backup',version:1,exportedAt:nowDate(),state,fonts:fontData},null,2),'application/json');toast('Backup exported');
   }
   async function importBackup(file){
@@ -341,10 +351,10 @@
     for(const f of Array.isArray(data.fonts)?data.fonts.slice(0,100):[]){
       if(!f.data||typeof f.data!=='string'||f.data.length>12*1024*1024)continue;
       try{const binary=atob(f.data),array=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)array[i]=binary.charCodeAt(i);
-        const font={id:f.id,name:f.name,family:f.family,blob:new Blob([array],{type:f.type||'font/ttf'})};await loadFont(font);await store.putFont(font)
+        const font={id:f.id,name:f.name,family:f.family,era:['Proto','Ancient','Archaic','Classical','Traditional','Modern'].includes(f.era)?f.era:undefined,blob:new Blob([array],{type:f.type||'font/ttf'})};await loadFont(font);await store.putFont(font)
       }catch(err){toast('Skipped an unreadable font: '+String(f.name||''))}
     }
-    fonts=await store.allFonts();state=restored;renderAll();await persist();toast('Library restored');
+    fonts=await store.allFonts();state=restored;renderAll();await persist();window.dispatchEvent(new Event('writerhelper:fonts-ready'));toast('Library restored');
   }
   async function importDocument(file){
     if(file.size>5*1024*1024)throw Error('Document exceeds 5 MB.');const ch=currentChannel();const raw=await file.text();
@@ -416,6 +426,10 @@
     document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkReminders()});
   }
   window.LiteraryFriendApp={
+    async registerFont(font){
+      if(!font?.blob||font.blob.size>8*1024*1024||!/^[A-Za-z0-9_-]+$/.test(font.family))throw Error('Invalid font or font exceeds 8 MB.');
+      await loadFont(font);await store.putFont(font);fonts=fonts.filter(f=>f.id!==font.id);fonts.push(font);fontOptions();renderFonts();
+    },
     getSnapshot(){captureEditor();return JSON.parse(JSON.stringify(state))},
     currentDocument(){captureEditor();const c=currentChannel();if(!c)return null;return {id:c.id,title:c.name,html:c.type==='studio'?c.leftHtml:c.html,notes:c.notes,type:c.type,lang:c.lang,workspace:currentWorkspace()?.name||''}},
     updateCurrent(html){const c=currentChannel();if(!c)throw Error('No selected document');if(c.type==='studio')c.leftHtml=cleanHTML(html);else c.html=cleanHTML(html);renderDoc();scheduleSave()},
@@ -432,7 +446,7 @@
     for(const f of fonts){try{await loadFont(f)}catch(error){console.warn('Font could not be loaded:',f.name,error)}}
     window.LuxuryKeyboard.init({onInsert:keyboardInsert});renderAll();
     if(state.inspectorOpen!==true){renderInspector()}
-    checkReminders();setInterval(checkReminders,20000);window.dispatchEvent(new Event('literaryfriend:ready'));
+    checkReminders();setInterval(checkReminders,20000);window.dispatchEvent(new Event('writerhelper:fonts-ready'));window.dispatchEvent(new Event('literaryfriend:ready'));
   }
   init().catch(err=>{console.error(err);toast('Initialization error: '+err.message)});
 })();
