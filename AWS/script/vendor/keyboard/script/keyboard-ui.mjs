@@ -11,6 +11,7 @@ const $ = id => document.getElementById(id);
 const keyboard = $('savanskiKeyboard');
 const grid = $('keyboardGrid');
 const numpad = $('numpad');
+const emojiPicker = $('emojiPicker');
 const popup = $('accentPopup');
 const keyPreview = $('keyPreview');
 const suggestionsBar = $('wordSuggestions');
@@ -29,7 +30,7 @@ function mergedVariants(symbol, uppercase = false) {
   return candidates?.length ? candidates : accentOptions(symbol,uppercase).map(value => ({value,name:`Variant of ${symbol}`,cp:''}));
 }
 const defaultSettings = () => ({
-  split: false, floating: false, minimized: false, numpad: false,
+  split: false, floating: false, minimized: false, numpad: true, numLock: true,
   layout: 'auto', task: 'typing', language: 'en',
   predict: true, doubleSpace: false, longPress: 430, splitGap: 26,
   dockHeight: 390, floatingBox: null, colors: { ...DEFAULT_THEME }
@@ -46,7 +47,8 @@ function loadSettings() {
       split: stored.split === true,
       floating: stored.floating === true,
       minimized: stored.minimized === true,
-      numpad: stored.numpad === true,
+      numpad: stored.extendedKeysEnabled === true ? stored.numpad !== false : true,
+      numLock: stored.numLock !== false,
       layout: ['auto','compact','standard','desktop'].includes(stored.layout) ? stored.layout : 'auto',
       task: Object.hasOwn(TASK_MODES,stored.task) ? stored.task : 'typing',
       language: Object.hasOwn(LANGUAGES,stored.language) ? stored.language : 'en',
@@ -91,7 +93,7 @@ let lastSpaceAt = 0;
 let halfPointer = null;
 
 function save() {
-  try { localStorage.setItem(STORAGE, JSON.stringify(state)); }
+  try { localStorage.setItem(STORAGE, JSON.stringify({ ...state, extendedKeysEnabled: true })); }
   catch { /* Private mode or storage disabled: UI still works. */ }
 }
 
@@ -137,7 +139,7 @@ function setSizingMode() {
   keyboard.classList.toggle('is-floating', state.floating);
   keyboard.classList.toggle('is-minimized', state.minimized);
   keyboard.classList.toggle('is-split', state.split);
-  keyboard.classList.toggle('has-numpad', state.numpad && currentLayout === 'desktop' && !symbols);
+  keyboard.classList.toggle('has-numpad', state.numpad && !symbols);
   keyboard.style.setProperty('--sk-dock-height', `${clamp(state.dockHeight, 175, viewport().h * .83)}px`);
   keyboard.style.setProperty('--sk-split-gap', `${state.splitGap}px`);
   keyboard.style.setProperty('--sk-key-scale', String(state.keyScale / 100));
@@ -166,7 +168,9 @@ function paintTheme() {
 function labelFor(symbol) {
   if (symbol === 'Space') return 'Space';
   if (symbol === 'Backspace') return 'Backspace';
-  if (symbol === 'PrintScreen') return 'Print Screen (native host required)';
+  if (symbol === 'PrintScreen') return 'Print Screen; choose a screen or window in the browser prompt';
+  if (symbol === 'Emoji') return 'Choose an emoji to insert';
+  if (symbol === 'NumLock') return `Num Lock ${state.numLock ? 'on' : 'off'}`;
   if (isAction(symbol)) return symbol;
   return `Type ${symbol}`;
 }
@@ -213,12 +217,13 @@ function draw() {
     grid.append(wrapper);
   }
   numpad.replaceChildren();
-  if (chosen === 'desktop' && state.numpad && !symbols && state.task === 'typing') {
-    for (const [ri, row] of NUMPAD.entries()) {
-      const wrapper = document.createElement('div');
-      wrapper.className = 'sk-numpad-row';
-      row.forEach((symbol, i) => wrapper.append(makeKey(symbol, ri, i)));
-      numpad.append(wrapper);
+  if (state.numpad && !symbols) {
+    for (const [symbol,row,column,rowSpan=1,columnSpan=1] of NUMPAD) {
+      const key = makeKey(symbol,row-1,column-1);
+      key.dataset.numpad = 'true';
+      key.style.gridRow = `${row} / span ${rowSpan}`;
+      key.style.gridColumn = `${column} / span ${columnSpan}`;
+      numpad.append(key);
     }
     numpad.hidden = false;
   } else numpad.hidden = true;
@@ -233,8 +238,11 @@ function updateMetrics() {
   const body = $('keyboardBody');
   const toolbarHeight = keyboard.querySelector('.sk-toolbar').getBoundingClientRect().height;
   const h = Math.max(160, bounds.height - toolbarHeight);
+  const narrow = bounds.width <= 740;
+  keyboard.classList.toggle('is-narrow', narrow);
+  const keyWidth = numpad.hidden || narrow ? bounds.width : bounds.width * .78;
   let { keyHeight, gap, font, radius } = metricsFor(
-    bounds.width * (numpad.hidden ? 1 : .78), h, currentLayout || 'compact', state.split,
+    keyWidth, h, currentLayout || 'compact', state.split,
     grid.childElementCount
   );
   if (state.task === 'big' && !symbols) {
@@ -260,6 +268,12 @@ function updateCase() {
   }
   for (const key of grid.querySelectorAll('[data-key="Control"],[data-key="Alt"],[data-key="Meta"],[data-key="AltGraph"]')) {
     key.setAttribute('aria-pressed', String(modifier[key.dataset.key]));
+  }
+  const numLockKey = numpad.querySelector('[data-key="NumLock"]');
+  if (numLockKey) {
+    numLockKey.setAttribute('aria-pressed', String(state.numLock));
+    numLockKey.setAttribute('aria-label', `Num Lock ${state.numLock ? 'on' : 'off'}`);
+    numLockKey.title = `Num Lock ${state.numLock ? 'on' : 'off'}`;
   }
 }
 
@@ -472,12 +486,22 @@ function performKey(symbol) {
 
 function press(symbol, fromNumpad = false) {
   if (window.SavanskiInputState?.paused) return;
+  if (fromNumpad && !state.numLock && (/^[0-9]$/.test(symbol) || symbol === '.')) {
+    const navigation = NUMPAD_NAVIGATION[symbol];
+    if (!navigation) { say('Num Lock is off; the centre key has no navigation action.'); return; }
+    performKey(navigation);
+    return;
+  }
   hideAccent();
   soundForKey(symbol, fromNumpad);
   if (!isAction(symbol)) { commitText(characterFor(symbol)); return; }
   switch (symbol) {
     case 'Shift': shift = !shift; updateCase(); break;
     case 'CapsLock': caps = !caps; updateCase(); break;
+    case 'NumLock':
+      state.numLock = !state.numLock; updateCase(); save();
+      say(`Num Lock ${state.numLock ? 'on' : 'off'}.`);
+      break;
     case 'Space': commitText(' '); break;
     case 'Enter': case 'Tab':
       if (nativeHost()) performKey(symbol);
@@ -494,7 +518,7 @@ function press(symbol, fromNumpad = false) {
       dispatchKey('action', symbol);
       break;
     }
-    case 'Emoji': say('Emoji selection requires a host or an extended emoji layout.'); dispatchKey('action', symbol); break;
+    case 'Emoji': toggleEmojiPicker(); break;
     case 'PrintScreen':
       dispatchKey('action', symbol);
       if (nativeHost()?.screenshot) nativeHost().screenshot();
@@ -508,6 +532,44 @@ function press(symbol, fromNumpad = false) {
     default: performKey(symbol);
   }
 }
+
+const NUMPAD_NAVIGATION = Object.freeze({
+  '7':'Home','8':'ArrowUp','9':'PageUp','4':'ArrowLeft',
+  '6':'ArrowRight','1':'End','2':'ArrowDown','3':'PageDown',
+  '0':'Insert','.':'Delete'
+});
+const EMOJI_CHOICES = [
+  '😀','😃','😄','😁','😆','😅','😂','🤣','😊','😇','🙂','🙃','😉','😍','🥰','😘',
+  '😎','🤔','🤗','🥳','😴','😭','😡','🤯','👋','👍','👎','👏','🙏','💪','❤️','🧡',
+  '💛','💚','💙','💜','🖤','🤍','💔','✨','⭐','🌙','☀️','🌧️','🌊','🔥','🌿','🌸',
+  '🌳','🍎','🍓','🍞','☕','🎵','🎶','📚','✍️','🖋️','🗝️','🚪','🧭','🕰️','⚙️','🛠️'
+];
+
+function toggleEmojiPicker(forceOpen) {
+  const open = typeof forceOpen === 'boolean' ? forceOpen : emojiPicker.hidden;
+  if (open && !emojiPicker.childElementCount) {
+    for (const emoji of EMOJI_CHOICES) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'sk-emoji-option';
+      button.dataset.emoji = emoji;
+      button.textContent = emoji;
+      button.setAttribute('aria-label', `Insert ${emoji}`);
+      button.title = `Insert ${emoji}`;
+      emojiPicker.append(button);
+    }
+  }
+  emojiPicker.hidden = !open;
+  $('toggleEmoji').setAttribute('aria-expanded', String(open));
+  if (open) say('Choose an emoji to insert.');
+}
+
+emojiPicker.addEventListener('click', event => {
+  const option = event.target.closest('[data-emoji]');
+  if (!option || !emojiPicker.contains(option)) return;
+  commitText(option.dataset.emoji);
+  toggleEmojiPicker(false);
+});
 
 function hideAccent() {
   popup.hidden = true;
@@ -824,13 +886,14 @@ $('toggleSplit').addEventListener('click',() => {
   state.split = !state.split; setSizingMode(); updateMetrics(); save();
 });
 $('toolbarPrintScreen').addEventListener('click',() => press('PrintScreen'));
+$('toggleEmoji').addEventListener('click',() => toggleEmojiPicker());
 $('toggleDock').addEventListener('click',() => {
   if (nativeHost()) {say('The Windows host stays floating. Resize by dragging its edge or use S / M / L.');return;}
   state.floating = !state.floating; setSizingMode(); draw(); save();
 });
 $('toggleNumpad').addEventListener('click',() => {
   state.numpad = !state.numpad; currentLayout=''; setSizingMode(); draw(); save();
-  if (currentLayout !== 'desktop') say('Numpad will appear when the full desktop layout is active.');
+  say(state.numpad ? 'Full numeric keypad shown.' : 'Numeric keypad hidden.');
 });
 $('toggleMinimize').addEventListener('click',() => {
   state.minimized = !state.minimized; setSizingMode(); if (!state.minimized) draw(); save();
