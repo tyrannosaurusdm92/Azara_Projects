@@ -92,6 +92,8 @@
   }
   action(pages.menu,'+ New writing page',()=>document.getElementById('new-writing').click());
   action(tools.menu,'Font workshop',()=>document.getElementById('wh-open-font-workshop').click());
+  action(tools.menu,'Library organizer',()=>app().openOrganizer());
+  action(tools.menu,'Library organizer',()=>app().openOrganizer());
   action(tools.menu,'Open keyboard bubble',()=>window.LuxuryKeyboard?.open());
   const language=selected==='wh-language';
   action(tools.menu,language?'Read language desk':'Read selection / page',()=>{

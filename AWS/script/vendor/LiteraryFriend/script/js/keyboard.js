@@ -20,6 +20,7 @@ window.LuxuryKeyboard = (() => {
   let bubbleTop = null;
   const panel = () => $('floating-keyboard');
   const clamp = (value,min,max) => Math.max(min,Math.min(value,max));
+  const defaultPanelHeight=()=>clamp(innerHeight*.34,250,innerWidth<=760?300:360);
 
   function getPreferences() {
     try { return JSON.parse(localStorage.getItem('luxury-editor-keyboard') || '{}'); }
@@ -92,7 +93,7 @@ window.LuxuryKeyboard = (() => {
     const p=panel();if(!p?.classList.contains('is-open'))return;
     const rect=p.getBoundingClientRect();
     const baseWidth=Math.min(840,Math.max(280,innerWidth-16));
-    const baseHeight=clamp(innerHeight*.34,250,360);
+    const baseHeight=defaultPanelHeight();
     const scale=clamp(Math.min(rect.width/baseWidth,rect.height/baseHeight),.48,1);
     p.style.setProperty('--keyboard-scale',scale.toFixed(3));syncFrameScale(scale);
   }
@@ -101,7 +102,7 @@ window.LuxuryKeyboard = (() => {
     const minWidth=Math.min(280,Math.max(200,innerWidth-16));
     const minHeight=Math.min(190,Math.max(120,innerHeight-16));
     panelWidth=clamp(Number(panelWidth)||Math.min(840,innerWidth-16),minWidth,Math.max(minWidth,innerWidth-16));
-    panelHeight=clamp(Number(panelHeight)||Math.min(360,Math.max(250,innerHeight*.34)),minHeight,Math.max(minHeight,innerHeight-16));
+    panelHeight=clamp(Number(panelHeight)||defaultPanelHeight(),minHeight,Math.max(minHeight,innerHeight-16));
     const x=Number.isFinite(panelLeft)?panelLeft:innerWidth-panelWidth-16;
     const y=Number.isFinite(panelTop)?panelTop:innerHeight-panelHeight-16;
     p.style.left=clamp(x,8,Math.max(8,innerWidth-panelWidth-8))+'px';

@@ -1,5 +1,5 @@
 {
-  "version": "aws-9e3656abc084e722",
+  "version": "aws-0f68d623d3df4f4a",
   "core": [
     "assets/audio/azaaraan-click-synthetic-cue.wav",
     "assets/audio/azaaraan-glottal-release-synthetic-cue.wav",
@@ -2481,5 +2481,5 @@
     "style/css/writerhelper-theme.css",
     "style/css/writerhelper.css"
   ],
-  "coreBytes": 16990115
+  "coreBytes": 17042689
 }

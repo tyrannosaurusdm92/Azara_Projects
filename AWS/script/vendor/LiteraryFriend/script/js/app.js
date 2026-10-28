@@ -7,10 +7,11 @@
   const uid = () => (globalThis.crypto && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));
   const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const cleanName = (s,fallback='Untitled') => String(s||'').trim().slice(0,100)||fallback;
+  const cleanTags = value => [...new Set((Array.isArray(value)?value:String(value||'').split(',')).map(x=>String(x||'').trim().replace(/^#+/,'').slice(0,40)).filter(Boolean))].slice(0,20);
   const safeFilename = s => String(s||'document').replace(/[^\p{L}\p{N}._ -]+/gu,'-').slice(0,90).trim()||'document';
   const nowDate = () => new Date().toISOString();
-  const defaultChannel = (workspaceId,name='Manuscript',type='document') => ({id:uid(),workspaceId,name,type,html:'',leftHtml:'',rightHtml:'',notes:'',lang:'en',font:'Georgia',size:18,updatedAt:nowDate()});
-  function initialState(){const w={id:uid(),name:'My Library'};const a=defaultChannel(w.id,'Manuscript');const b=defaultChannel(w.id,'Character Notes');const c=defaultChannel(w.id,'Drafting Table','studio');return {version:1,workspaces:[w],channels:[a,b,c],tasks:[],selectedWorkspaceId:w.id,selectedChannelId:a.id,inspectorOpen:window.innerWidth>1080}}
+  const defaultChannel = (workspaceId,name='Manuscript',type='document') => ({id:uid(),workspaceId,name,type,html:'',leftHtml:'',rightHtml:'',notes:'',lang:'en',font:'Georgia',size:18,tags:[],updatedAt:nowDate()});
+  function initialState(){const w={id:uid(),name:'My Library'};const a=defaultChannel(w.id,'Manuscript');const b=defaultChannel(w.id,'Character Notes');const c=defaultChannel(w.id,'Drafting Table','studio');return {version:1,workspaces:[{...w,tags:[]}],channels:[a,b,c],tasks:[],trash:[],selectedWorkspaceId:w.id,selectedChannelId:a.id,inspectorOpen:window.innerWidth>1080}}
   let state,activeEditor=null,lastRange=null,lastBookmark=null,savingTimer=null,saveQueue=Promise.resolve(),fonts=[],dialogCallback=null,notificationChecking=false;
   const currentWorkspace=()=>state.workspaces.find(x=>x.id===state.selectedWorkspaceId);
   const currentChannel=()=>state.channels.find(x=>x.id===state.selectedChannelId);
@@ -54,18 +55,45 @@
     }
     sanitize(dom.body);return dom.body.innerHTML;
   }
+  function normalizeWorkspace(record){
+    if(!record||typeof record.id!=='string')return null;
+    return {id:record.id.slice(0,150),name:cleanName(record.name,'Workspace'),tags:cleanTags(record.tags),updatedAt:String(record.updatedAt||nowDate()).slice(0,40)};
+  }
+  function normalizeChannel(record,workspaceId=record?.workspaceId){
+    if(!record||typeof record.id!=='string')return null;
+    return {id:record.id.slice(0,150),workspaceId:String(workspaceId||'').slice(0,150),name:cleanName(record.name),type:record.type==='studio'?'studio':'document',html:cleanHTML(record.html),leftHtml:cleanHTML(record.leftHtml),rightHtml:cleanHTML(record.rightHtml),notes:String(record.notes||'').slice(0,20000),lang:langs[record.lang]?record.lang:'en',font:String(record.font||'Georgia').slice(0,150),size:Math.max(12,Math.min(28,Number(record.size)||18)),tags:cleanTags(record.tags),updatedAt:String(record.updatedAt||nowDate()).slice(0,40)};
+  }
+  function normalizeTask(record,workspaceIds=null,channelIds=null){
+    if(!record||typeof record.id!=='string'||workspaceIds&&!workspaceIds.has(record.workspaceId))return null;
+    const channelId=typeof record.channelId==='string'?record.channelId:null;
+    return {id:record.id.slice(0,150),workspaceId:String(record.workspaceId||'').slice(0,150),channelId:channelIds?(channelIds.has(channelId)?channelId:null):channelId,title:cleanName(record.title),details:String(record.details||'').slice(0,2000),due:String(record.due||'').slice(0,40),remindAt:String(record.remindAt||'').slice(0,40),done:!!record.done,notified:!!record.notified};
+  }
+  function normalizeTrashEntry(item){
+    if(!item||!['channel','workspace'].includes(item.kind))return null;
+    const base={id:String(item.id||uid()).slice(0,150),kind:item.kind,deletedAt:String(item.deletedAt||nowDate()).slice(0,40)};
+    if(item.kind==='channel'){
+      const channel=normalizeChannel(item.channel);if(!channel)return null;
+      base.channel=channel;base.tasks=(Array.isArray(item.tasks)?item.tasks:[]).slice(0,10000).map(task=>normalizeTask(task)).filter(Boolean);
+      return base;
+    }
+    const workspace=normalizeWorkspace(item.workspace);if(!workspace)return null;
+    base.workspace=workspace;base.channels=(Array.isArray(item.channels)?item.channels:[]).slice(0,3000).map(channel=>normalizeChannel(channel,workspace.id)).filter(Boolean);
+    base.tasks=(Array.isArray(item.tasks)?item.tasks:[]).slice(0,10000).map(task=>normalizeTask(task)).filter(Boolean);
+    return base;
+  }
   function validateState(input){
     if(!input||!Array.isArray(input.workspaces)||!Array.isArray(input.channels)||!Array.isArray(input.tasks))throw Error('Not a Literary Friend backup.');
-    const workspaces=input.workspaces.slice(0,150).filter(x=>x&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),name:cleanName(x.name,'Workspace')}));
+    const workspaces=input.workspaces.slice(0,150).map(normalizeWorkspace).filter(Boolean);
     if(!workspaces.length)throw Error('No valid workspaces in backup.');
-    const wsIds=new Set(workspaces.map(w=>w.id));
-    let channels=input.channels.slice(0,3000).filter(x=>x&&wsIds.has(x.workspaceId)&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),workspaceId:x.workspaceId,name:cleanName(x.name),type:x.type==='studio'?'studio':'document',html:cleanHTML(x.html),leftHtml:cleanHTML(x.leftHtml),rightHtml:cleanHTML(x.rightHtml),notes:String(x.notes||'').slice(0,20000),lang:langs[x.lang]?x.lang:'en',font:String(x.font||'Georgia').slice(0,150),size:Math.max(12,Math.min(28,Number(x.size)||18)),updatedAt:x.updatedAt||nowDate()}));
-    for(const w of workspaces){if(!channels.some(c=>c.workspaceId===w.id))channels.push(defaultChannel(w.id))}
-    const channelIds=new Set(channels.map(c=>c.id));
-    const tasks=input.tasks.slice(0,10000).filter(t=>t&&typeof t.id==='string'&&wsIds.has(t.workspaceId)).map(t=>({id:t.id.slice(0,150),workspaceId:t.workspaceId,channelId:channelIds.has(t.channelId)?t.channelId:null,title:cleanName(t.title),details:String(t.details||'').slice(0,2000),due:String(t.due||'').slice(0,40),remindAt:String(t.remindAt||'').slice(0,40),done:!!t.done,notified:!!t.notified}));
-    const selectedWorkspaceId=wsIds.has(input.selectedWorkspaceId)?input.selectedWorkspaceId:workspaces[0].id;
-    const selectedChannelId=channelIds.has(input.selectedChannelId)&&channels.find(c=>c.id===input.selectedChannelId)?.workspaceId===selectedWorkspaceId?input.selectedChannelId:channels.find(c=>c.workspaceId===selectedWorkspaceId).id;
-    return {version:1,workspaces,channels,tasks,selectedWorkspaceId,selectedChannelId,inspectorOpen:input.inspectorOpen!==false};
+    const workspaceIds=new Set(workspaces.map(workspace=>workspace.id));
+    const channels=input.channels.slice(0,3000).map(record=>normalizeChannel(record)).filter(channel=>channel&&workspaceIds.has(channel.workspaceId));
+    for(const workspace of workspaces)if(!channels.some(channel=>channel.workspaceId===workspace.id))channels.push(defaultChannel(workspace.id));
+    const channelIds=new Set(channels.map(channel=>channel.id));
+    const tasks=input.tasks.slice(0,10000).map(task=>normalizeTask(task,workspaceIds,channelIds)).filter(Boolean);
+    const trash=(Array.isArray(input.trash)?input.trash:[]).slice(0,1000).map(normalizeTrashEntry).filter(Boolean);
+    const selectedWorkspaceId=workspaceIds.has(input.selectedWorkspaceId)?input.selectedWorkspaceId:workspaces[0].id;
+    const selectedChannelId=channelIds.has(input.selectedChannelId)&&channels.find(channel=>channel.id===input.selectedChannelId)?.workspaceId===selectedWorkspaceId?input.selectedChannelId:channels.find(channel=>channel.workspaceId===selectedWorkspaceId).id;
+    return {version:1,workspaces,channels,tasks,trash,selectedWorkspaceId,selectedChannelId,inspectorOpen:input.inspectorOpen!==false};
   }
   function make(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el}
   function renderRail(){const holder=$('workspace-list');holder.replaceChildren();state.workspaces.forEach(w=>{
@@ -149,27 +177,228 @@
   }
   function openDialog(title,fields,submitText,onSubmit){dialogCallback=onSubmit;$('dialog-title').textContent=title;$('dialog-submit').textContent=submitText;$('dialog-fields').replaceChildren(...fields.map(inputField));$('main-dialog').showModal();setTimeout(()=>$('dialog-fields').querySelector('input,select,textarea')?.focus(),0)}
   function workspaceCreate(){openDialog('New workspace',[{name:'name',label:'Workspace name',placeholder:'Novel, research project, journal…'}],'Create workspace',values=>{
-    const w={id:uid(),name:cleanName(values.name,'New Workspace')};state.workspaces.push(w);const ch=defaultChannel(w.id);state.channels.push(ch);selectWorkspace(w.id);toast('Workspace created')
+    const w={id:uid(),name:cleanName(values.name,'New Workspace'),tags:[],updatedAt:nowDate()};state.workspaces.push(w);const ch=defaultChannel(w.id);state.channels.push(ch);selectWorkspace(w.id);toast('Workspace created')
   })}
-  function workspaceRename(){openDialog('Rename workspace',[{name:'name',label:'Workspace name',value:currentWorkspace().name}],'Save name',values=>{currentWorkspace().name=cleanName(values.name);renderAll();scheduleSave()})}
-  function channelCreate(type='document'){
+  function workspaceRename(){openDialog('Rename workspace',[{name:'name',label:'Workspace name',value:currentWorkspace().name}],'Save name',values=>{currentWorkspace().name=cleanName(values.name);currentWorkspace().updatedAt=nowDate();renderAll();scheduleSave()})}
+  function channelCreate(type='document',workspaceId=state.selectedWorkspaceId){
     openDialog(type==='studio'?'New writing studio':'New writing channel',[{name:'name',label:type==='studio'?'Studio name':'Channel name',placeholder:type==='studio'?'Parallel drafts':'Chapter 01'}],'Create channel',values=>{
-      const ch=defaultChannel(state.selectedWorkspaceId,cleanName(values.name),type);state.channels.push(ch);selectChannel(ch.id);toast('Channel created')
+      const ch=defaultChannel(workspaceId,cleanName(values.name),type);state.channels.push(ch);selectChannel(ch.id);toast('Channel created')
     })
   }
+  function stashTrash(entry){state.trash=Array.isArray(state.trash)?state.trash:[];state.trash.unshift(entry);state.trash=state.trash.slice(0,1000)}
+  function duplicateChannel(ch){
+    captureEditor();const copy=JSON.parse(JSON.stringify(ch));copy.id=uid();copy.name=cleanName(ch.name+' Copy');copy.updatedAt=nowDate();
+    state.channels.push(copy);selectChannel(copy.id);toast('Page duplicated');renderOrganizer();
+  }
+  function duplicateWorkspace(workspace){
+    captureEditor();const copy={...JSON.parse(JSON.stringify(workspace)),id:uid(),name:cleanName(workspace.name+' Copy'),updatedAt:nowDate()};
+    const originals=state.channels.filter(channel=>channel.workspaceId===workspace.id),idMap=new Map();
+    const channels=originals.map(channel=>{const next={...JSON.parse(JSON.stringify(channel)),id:uid(),workspaceId:copy.id,updatedAt:nowDate()};idMap.set(channel.id,next.id);return next});
+    const tasks=state.tasks.filter(task=>task.workspaceId===workspace.id).map(task=>({...JSON.parse(JSON.stringify(task)),id:uid(),workspaceId:copy.id,channelId:idMap.get(task.channelId)||null,done:false,remindAt:'',notified:false}));
+    state.workspaces.push(copy);state.channels.push(...(channels.length?channels:[defaultChannel(copy.id)]));state.tasks.push(...tasks);
+    selectWorkspace(copy.id);toast('Workspace duplicated');renderOrganizer();
+  }
+  function softDeleteChannel(ch){
+    captureEditor();const tasks=state.tasks.filter(task=>task.channelId===ch.id);
+    stashTrash({id:uid(),kind:'channel',deletedAt:nowDate(),channel:JSON.parse(JSON.stringify(ch)),tasks:JSON.parse(JSON.stringify(tasks))});
+    state.channels=state.channels.filter(channel=>channel.id!==ch.id);state.tasks=state.tasks.filter(task=>task.channelId!==ch.id);
+    let remaining=state.channels.filter(channel=>channel.workspaceId===ch.workspaceId);
+    if(!remaining.length){const fallback=defaultChannel(ch.workspaceId);state.channels.push(fallback);remaining=[fallback]}
+    if(state.selectedChannelId===ch.id){state.selectedWorkspaceId=ch.workspaceId;state.selectedChannelId=remaining[0].id}
+    renderAll();scheduleSave();renderOrganizer();toast('Page moved to Trash · it can be restored from the Library organizer');
+  }
+  function softDeleteWorkspace(workspace){
+    captureEditor();const channels=state.channels.filter(channel=>channel.workspaceId===workspace.id),tasks=state.tasks.filter(task=>task.workspaceId===workspace.id);
+    stashTrash({id:uid(),kind:'workspace',deletedAt:nowDate(),workspace:JSON.parse(JSON.stringify(workspace)),channels:JSON.parse(JSON.stringify(channels)),tasks:JSON.parse(JSON.stringify(tasks))});
+    state.workspaces=state.workspaces.filter(item=>item.id!==workspace.id);state.channels=state.channels.filter(channel=>channel.workspaceId!==workspace.id);state.tasks=state.tasks.filter(task=>task.workspaceId!==workspace.id);
+    if(!state.workspaces.length){const fallback={id:uid(),name:'My Library',tags:[],updatedAt:nowDate()};state.workspaces.push(fallback);state.channels.push(defaultChannel(fallback.id))}
+    if(state.selectedWorkspaceId===workspace.id){
+      const fallback=state.workspaces[0];state.selectedWorkspaceId=fallback.id;
+      let fallbackChannel=state.channels.find(channel=>channel.workspaceId===fallback.id);
+      if(!fallbackChannel){fallbackChannel=defaultChannel(fallback.id);state.channels.push(fallbackChannel)}
+      state.selectedChannelId=fallbackChannel.id;
+    }
+    renderAll();scheduleSave();renderOrganizer();toast('Workspace moved to Trash · it can be restored from the Library organizer');
+  }
+  function moveChannelToWorkspace(channelId,workspaceId){
+    const channel=state.channels.find(item=>item.id===channelId),target=state.workspaces.find(item=>item.id===workspaceId);
+    if(!channel||!target||channel.workspaceId===workspaceId)return false;
+    captureEditor();const sourceId=channel.workspaceId;channel.workspaceId=workspaceId;channel.updatedAt=nowDate();
+    if(!state.channels.some(item=>item.workspaceId===sourceId))state.channels.push(defaultChannel(sourceId));
+    if(state.selectedChannelId===channel.id)state.selectedWorkspaceId=workspaceId;
+    renderAll();scheduleSave();renderOrganizer();toast('Page moved to '+target.name);return true;
+  }
+  function moveChannelDialog(channel){
+    const choices=state.workspaces.filter(workspace=>workspace.id!==channel.workspaceId);
+    if(!choices.length){toast('Create another workspace before moving this page.');return}
+    openDialog('Move page to workspace',[{name:'workspaceId',label:'Destination workspace',type:'select',value:choices[0].id,options:choices.map(workspace=>({value:workspace.id,label:workspace.name}))}],'Move page',values=>moveChannelToWorkspace(channel.id,values.workspaceId));
+  }
+  function editCatalogLabels(record,label){
+    openDialog('Edit '+label+' labels',[{name:'labels',label:'Comma-separated catalog labels',value:(record.tags||[]).join(', '),required:false}],'Save labels',values=>{
+      record.tags=cleanTags(values.labels);record.updatedAt=nowDate();renderAll();scheduleSave();renderOrganizer();
+    });
+  }
   function openChannelActions(ch){
-    openDialog('Manage channel',[{name:'action',label:'What would you like to do?',type:'select',options:[{value:'rename',label:'Rename channel'},{value:'duplicate',label:'Duplicate channel'},{value:'delete',label:'Delete channel'}]}],'Continue',v=>{
-      if(v.action==='rename')openDialog('Rename channel',[{name:'name',label:'Channel name',value:ch.name}],'Rename',x=>{ch.name=cleanName(x.name);renderAll();scheduleSave()});
-      else if(v.action==='duplicate'){captureEditor();const cp={...ch,id:uid(),name:ch.name+' Copy',updatedAt:nowDate()};state.channels.push(cp);selectChannel(cp.id);toast('Channel duplicated')}
-      else if(v.action==='delete'){
-        if(!confirm('Delete channel "'+ch.name+'" and its attached tasks? This cannot be undone without a backup.'))return;
-        state.channels=state.channels.filter(c=>c.id!==ch.id);state.tasks=state.tasks.filter(t=>t.channelId!==ch.id);
-        const list=state.channels.filter(c=>c.workspaceId===ch.workspaceId);
-        if(!list.length){const fallback=defaultChannel(ch.workspaceId);state.channels.push(fallback);list.push(fallback)}
-        if(state.selectedChannelId===ch.id)state.selectedChannelId=list[0].id;
-        renderAll();scheduleSave();toast('Channel deleted');
-      }
+    openDialog('Manage page',[{name:'action',label:'Page actions',type:'select',options:[{value:'rename',label:'Rename page'},{value:'duplicate',label:'Duplicate page'},{value:'move',label:'Move to workspace'},{value:'labels',label:'Edit catalog labels'},{value:'delete',label:'Move to Trash'}]}],'Continue',v=>{
+      if(v.action==='rename')openDialog('Rename page',[{name:'name',label:'Page name',value:ch.name}],'Rename',x=>{ch.name=cleanName(x.name);ch.updatedAt=nowDate();renderAll();scheduleSave();renderOrganizer()});
+      else if(v.action==='duplicate')duplicateChannel(ch);
+      else if(v.action==='move')moveChannelDialog(ch);
+      else if(v.action==='labels')editCatalogLabels(ch,'page');
+      else if(v.action==='delete'&&confirm('Move "'+ch.name+'" and its attached tasks to Trash? You can restore it from the Library organizer.'))softDeleteChannel(ch);
     })
+  }
+  let organizerView='library',organizerSort='recent',organizerQuery='';
+  function ensureOrganizer(){
+    let overlay=$('library-organizer-overlay');if(overlay)return overlay;
+    overlay=make('div','library-organizer-overlay');overlay.id='library-organizer-overlay';overlay.hidden=true;
+    const panel=make('section','library-organizer');panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-labelledby','library-organizer-title');
+    const header=make('header','library-organizer-header'),heading=make('div','library-organizer-heading');
+    heading.append(make('span','eyebrow','YOUR WRITING LIBRARY'),make('h2','','Library organizer'),make('p','','Catalog every language era, book, page and studio. Move pages between workspaces, add labels, and restore deleted work from Trash.'));
+    const close=make('button','library-organizer-close','×');close.type='button';close.setAttribute('aria-label','Close Library organizer');close.onclick=closeOrganizer;header.append(heading,close);
+    const toolbar=make('div','library-organizer-toolbar'),search=make('input','library-organizer-search'),view=make('select','library-organizer-view'),sort=make('select','library-organizer-sort');
+    search.type='search';search.placeholder='Search workspaces, pages, and labels';search.setAttribute('aria-label','Search Library organizer');
+    view.add(new Option('My library','library'));view.add(new Option('Trash','trash'));view.setAttribute('aria-label','Library view');
+    sort.add(new Option('Recently changed','recent'));sort.add(new Option('Name A–Z','az'));sort.add(new Option('Name Z–A','za'));sort.setAttribute('aria-label','Sort library items');
+    const newWorkspace=make('button','library-organizer-primary','+ Workspace');newWorkspace.type='button';newWorkspace.onclick=()=>{closeOrganizer();workspaceCreate()};
+    const newPage=make('button','library-organizer-secondary','+ Page');newPage.type='button';newPage.onclick=()=>{closeOrganizer();channelCreate('document')};
+    toolbar.append(search,sort,view,newWorkspace,newPage);
+    const summary=make('p','library-organizer-summary');summary.id='library-organizer-summary';summary.setAttribute('role','status');
+    const content=make('div','library-organizer-content');content.id='library-organizer-content';
+    panel.append(header,toolbar,summary,content);overlay.append(panel);document.body.append(overlay);
+    search.value=organizerQuery;search.addEventListener('input',()=>{organizerQuery=search.value.trim().toLowerCase();renderOrganizer()});
+    view.value=organizerView;view.addEventListener('change',()=>{organizerView=view.value;renderOrganizer()});
+    sort.value=organizerSort;sort.addEventListener('change',()=>{organizerSort=sort.value;renderOrganizer()});
+    content.addEventListener('dragover',event=>{const target=event.target.closest('[data-drop-workspace]');if(target){event.preventDefault();target.classList.add('is-drop-target')}});
+    content.addEventListener('dragleave',event=>{const target=event.target.closest('[data-drop-workspace]');if(target&&!target.contains(event.relatedTarget))target.classList.remove('is-drop-target')});
+    content.addEventListener('drop',event=>{
+      const target=event.target.closest('[data-drop-workspace]');if(!target)return;
+      event.preventDefault();target.classList.remove('is-drop-target');
+      const id=event.dataTransfer?.getData('application/x-aws-page')||event.dataTransfer?.getData('text/plain');
+      if(id)moveChannelToWorkspace(id,target.dataset.dropWorkspace);
+    });
+    overlay.addEventListener('click',event=>{if(event.target===overlay)closeOrganizer()});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!overlay.hidden)closeOrganizer()});
+    return overlay;
+  }
+  function closeOrganizer(){const overlay=$('library-organizer-overlay');if(overlay)overlay.hidden=true;document.body.classList.remove('library-organizer-open')}
+  function organizerAction(label,handler,kind=''){
+    const button=make('button','library-organizer-action'+(kind?' '+kind:''),label);button.type='button';button.addEventListener('click',handler);return button;
+  }
+  function compareCatalogItems(a,b){
+    if(organizerSort==='az')return a.name.localeCompare(b.name,undefined,{sensitivity:'base'});
+    if(organizerSort==='za')return b.name.localeCompare(a.name,undefined,{sensitivity:'base'});
+    return (Date.parse(b.updatedAt||b.deletedAt||'')||0)-(Date.parse(a.updatedAt||a.deletedAt||'')||0);
+  }
+  function organizerLabels(record){
+    const tags=cleanTags(record.tags),host=make('div','library-organizer-labels');
+    if(!tags.length){host.append(make('span','library-organizer-no-labels','No labels'));return host}
+    for(const tag of tags)host.append(make('span','library-organizer-label',tag));
+    return host;
+  }
+  function organizerTimestamp(value){
+    const time=Date.parse(value||'');return Number.isFinite(time)?new Intl.DateTimeFormat(undefined,{month:'short',day:'numeric',year:'numeric'}).format(time):'Not edited yet';
+  }
+  function organizerPageRow(channel,workspace){
+    const row=make('article','library-organizer-page');row.draggable=true;row.dataset.organizerChannel=channel.id;
+    row.addEventListener('dragstart',event=>{event.dataTransfer?.setData('application/x-aws-page',channel.id);event.dataTransfer.effectAllowed='move';row.classList.add('is-dragging')});
+    row.addEventListener('dragend',()=>row.classList.remove('is-dragging'));
+    const details=make('div','library-organizer-page-details'),title=make('strong','',channel.name),meta=make('span','library-organizer-meta',(channel.type==='studio'?'Writing studio':'Writing page')+' · Edited '+organizerTimestamp(channel.updatedAt));
+    details.append(title,meta,organizerLabels(channel));
+    const actions=make('div','library-organizer-page-actions');
+    actions.append(organizerAction('Open',()=>{closeOrganizer();selectChannel(channel.id)}));
+    actions.append(organizerAction('Rename',()=>openDialog('Rename page',[{name:'name',label:'Page name',value:channel.name}],'Rename',values=>{channel.name=cleanName(values.name);channel.updatedAt=nowDate();renderAll();scheduleSave();renderOrganizer()})));
+    actions.append(organizerAction('Move',()=>moveChannelDialog(channel)));
+    actions.append(organizerAction('Labels',()=>editCatalogLabels(channel,'page')));
+    actions.append(organizerAction('Duplicate',()=>duplicateChannel(channel)));
+    actions.append(organizerAction('Trash',()=>{if(confirm('Move “'+channel.name+'” and its attached tasks to Trash?'))softDeleteChannel(channel)},'danger'));
+    row.append(details,actions);return row;
+  }
+  function renderOrganizer(){
+    const overlay=ensureOrganizer(),content=$('library-organizer-content'),summary=$('library-organizer-summary');
+    const search=$('library-organizer-overlay').querySelector('.library-organizer-search'),view=$('library-organizer-view'),sort=$('library-organizer-sort');
+    if(search&&search.value!==organizerQuery)search.value=organizerQuery;
+    if(view)view.value=organizerView;if(sort)sort.value=organizerSort;
+    content.replaceChildren();
+    if(organizerView==='trash'){
+      const records=state.trash.filter(item=>{
+        const names=item.kind==='workspace'?[item.workspace.name,...item.channels.map(channel=>channel.name)]:[item.channel.name];
+        const labels=item.kind==='workspace'?[...cleanTags(item.workspace.tags),...item.channels.flatMap(channel=>cleanTags(channel.tags))]:cleanTags(item.channel.tags);
+        return !organizerQuery||([...names,...labels].join(' ').toLowerCase().includes(organizerQuery));
+      }).sort(compareCatalogItems);
+      summary.textContent=records.length+' item'+(records.length===1?'':'s')+' in Trash. Restoring a workspace brings its pages and saved tasks back.';
+      if(!records.length){content.append(make('p','library-organizer-empty','Trash is empty. Deleted workspaces, pages and their tasks will appear here.'));return}
+      for(const entry of records){
+        const name=entry.kind==='workspace'?entry.workspace.name:entry.channel.name;
+        const row=make('article','library-organizer-page library-organizer-trash-row'),details=make('div','library-organizer-page-details');
+        details.append(make('strong','',name),make('span','library-organizer-meta',(entry.kind==='workspace'?'Workspace':'Page')+' · Deleted '+organizerTimestamp(entry.deletedAt)));
+        const actions=make('div','library-organizer-page-actions');
+        actions.append(organizerAction('Restore',()=>restoreTrashItem(entry.id),'primary'));
+        actions.append(organizerAction('Delete permanently',()=>permanentlyDeleteTrashItem(entry.id),'danger'));
+        row.append(details,actions);content.append(row);
+      }
+      return;
+    }
+    const query=organizerQuery,allChannels=state.channels;
+    let workspaces=state.workspaces.slice().sort((a,b)=>{
+      if(organizerSort==='az'||organizerSort==='za')return compareCatalogItems(a,b);
+      const latest=ws=>Math.max(0,...allChannels.filter(c=>c.workspaceId===ws.id).map(c=>Date.parse(c.updatedAt||'')||0));
+      return latest(b)-latest(a);
+    });
+    let visiblePages=0;
+    for(const workspace of workspaces){
+      const workspaceMatches=!query||(workspace.name+' '+cleanTags(workspace.tags).join(' ')).toLowerCase().includes(query);
+      let channels=allChannels.filter(channel=>channel.workspaceId===workspace.id&&(!query||workspaceMatches||(channel.name+' '+cleanTags(channel.tags).join(' ')).toLowerCase().includes(query))).sort(compareCatalogItems);
+      if(query&&!workspaceMatches&&!channels.length)continue;
+      const folder=make('section','library-organizer-folder');folder.dataset.dropWorkspace=workspace.id;
+      const heading=make('header','library-organizer-folder-header'),title=make('div','library-organizer-folder-title');
+      title.append(make('span','library-organizer-folder-icon','▰'),make('div','',workspace.name),make('span','library-organizer-folder-count',channels.length+' pages'));
+      title.children[1].title='Drop a page here to move it into this workspace';
+      heading.append(title,organizerLabels(workspace));
+      const actions=make('div','library-organizer-page-actions');
+      actions.append(organizerAction('+ Page',()=>{closeOrganizer();channelCreate('document',workspace.id)}));
+      actions.append(organizerAction('Open',()=>{closeOrganizer();selectWorkspace(workspace.id)}));
+      actions.append(organizerAction('Rename',()=>openDialog('Rename workspace',[{name:'name',label:'Workspace name',value:workspace.name}],'Save name',values=>{workspace.name=cleanName(values.name);workspace.updatedAt=nowDate();renderAll();scheduleSave();renderOrganizer()})));
+      actions.append(organizerAction('Labels',()=>editCatalogLabels(workspace,'workspace')));
+      actions.append(organizerAction('Duplicate',()=>duplicateWorkspace(workspace)));
+      actions.append(organizerAction('Trash',()=>{if(confirm('Move workspace “'+workspace.name+'”, its pages and tasks to Trash?'))softDeleteWorkspace(workspace)},'danger'));
+      heading.append(actions);folder.append(heading);
+      const nested=make('div','library-organizer-pages');
+      for(const channel of channels){nested.append(organizerPageRow(channel,workspace));visiblePages++}
+      if(!channels.length)nested.append(make('p','library-organizer-empty','No pages match this search.'));
+      folder.append(nested);content.append(folder);
+    }
+    summary.textContent=state.workspaces.length+' workspaces · '+visiblePages+' matching pages · '+state.trash.length+' items in Trash';
+    if(!content.children.length)content.append(make('p','library-organizer-empty','No workspaces or pages match this search.'));
+  }
+  function openOrganizer(){
+    const overlay=ensureOrganizer();overlay.hidden=false;document.body.classList.add('library-organizer-open');renderOrganizer();
+    setTimeout(()=>overlay.querySelector('.library-organizer-search')?.focus({preventScroll:true}),0);
+  }
+  function restoreTrashItem(id){
+    const index=state.trash.findIndex(item=>item.id===id);if(index<0)return;
+    const item=state.trash[index];
+    if(item.kind==='channel'){
+      let channel=normalizeChannel(item.channel);if(!state.workspaces.some(workspace=>workspace.id===channel.workspaceId)){toast('Restore the parent workspace first.');return}
+      const previousId=channel.id;if(state.channels.some(existing=>existing.id===previousId))channel.id=uid();
+      state.channels.push(channel);
+      for(const task of item.tasks||[]){const copy={...task,id:state.tasks.some(existing=>existing.id===task.id)?uid():task.id,workspaceId:channel.workspaceId,channelId:channel.id};state.tasks.push(copy)}
+      state.selectedWorkspaceId=channel.workspaceId;state.selectedChannelId=channel.id;
+    }else{
+      let workspace=normalizeWorkspace(item.workspace),oldWorkspaceId=workspace.id;
+      if(state.workspaces.some(existing=>existing.id===workspace.id))workspace={...workspace,id:uid(),name:cleanName(workspace.name+' Restored')};
+      const idMap=new Map();const channels=(item.channels||[]).map(record=>{const channel=normalizeChannel(record,workspace.id),oldId=channel.id;if(state.channels.some(existing=>existing.id===oldId))channel.id=uid();idMap.set(oldId,channel.id);return channel});
+      state.workspaces.push(workspace);
+      if(channels.length)state.channels.push(...channels);else state.channels.push(defaultChannel(workspace.id));
+      for(const task of item.tasks||[]){state.tasks.push({...task,id:state.tasks.some(existing=>existing.id===task.id)?uid():task.id,workspaceId:workspace.id,channelId:idMap.get(task.channelId)||null})}
+      state.selectedWorkspaceId=workspace.id;state.selectedChannelId=channels[0]?.id||state.channels.find(channel=>channel.workspaceId===workspace.id).id;
+    }
+    state.trash.splice(index,1);renderAll();scheduleSave();renderOrganizer();toast('Item restored from Trash');
+  }
+  function permanentlyDeleteTrashItem(id){
+    const item=state.trash.find(record=>record.id===id);if(!item)return;
+    const name=item.kind==='workspace'?item.workspace.name:item.channel.name;
+    if(!confirm('Permanently delete “'+name+'” and its saved tasks? This cannot be undone.'))return;
+    state.trash=state.trash.filter(record=>record.id!==id);scheduleSave();renderOrganizer();toast('Item permanently deleted');
   }
   function taskCreate(existing=null){const t=existing||{title:'',details:'',due:'',remindAt:'',channelId:currentChannel().id};
     openDialog(existing?'Edit task':'New task / reminder',[
@@ -425,6 +654,7 @@
     document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkReminders()});
   }
   window.LiteraryFriendApp={
+    openOrganizer,
     navigate(workspaceId,channelId){
       const workspace=state.workspaces.find(w=>w.id===workspaceId);if(!workspace)return false;
       const channel=state.channels.find(c=>c.workspaceId===workspaceId&&c.id===channelId)||state.channels.find(c=>c.workspaceId===workspaceId);

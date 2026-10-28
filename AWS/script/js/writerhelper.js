@@ -126,7 +126,7 @@
   const style=d.createElement('style');
   style.textContent=[
    'html,body{margin:0!important;height:100%!important;min-height:0!important;overflow:hidden!important}',
-   'body:not(.wh-full) > .site-header,body:not(.wh-full) > .app-main,body:not(.wh-full) > .site-footer,body:not(.wh-full) > .install-overlay{display:none!important}',
+   'body:not(.wh-full) > .site-header,body:not(.wh-full) > .app-main,body:not(.wh-full) > .site-footer,body > .install-overlay{display:none!important}',
    '#savanskiKeyboard{inset:0!important;left:0!important;top:0!important;width:100%!important;height:100%!important;max-height:none!important;max-width:none!important;border-radius:0!important}',
    '.sk-resize-handle{display:none!important}',
    'body.wh-full{overflow:auto!important;height:auto!important}',

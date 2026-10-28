@@ -22,5 +22,5 @@
 .keyboard-window .keyboard-control,.keyboard-window .keyboard-close,.keyboard-window .wh-kb-bar button,.keyboard-window .keyboard-body .keyboard-small{min-height:calc(30px * var(--keyboard-scale,1))!important;font-size:calc(12px * var(--keyboard-scale,1))!important}
 .keyboard-window .keyboard-resize-handle{min-height:0!important;font-size:0!important}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-@media(max-width:600px){#floating-keyboard.is-open{left:8px;right:auto;width:calc(100vw - 16px);height:clamp(250px,34dvh,330px)}.keyboard-brand strong{max-width:23vw}.keyboard-header{gap:4px;padding:4px}.keyboard-era-control select{max-width:25vw}.keyboard-options select{max-width:125px}}
+@media(max-width:600px){#floating-keyboard.is-open{left:8px;right:auto;width:calc(100vw - 16px);height:clamp(250px,34dvh,300px)}.keyboard-brand strong{max-width:23vw}.keyboard-header{gap:4px;padding:4px}.keyboard-era-control select{max-width:25vw}.keyboard-options select{max-width:125px}}
 @media print{#floating-keyboard{display:none!important}}

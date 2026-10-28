@@ -51,65 +51,217 @@
   const drawingCanvas=$('wh-font-draw-canvas');
   const drawingContext=drawingCanvas?.getContext('2d',{willReadFrequently:true});
   const drawingDrafts=new Map();
-  let drawingPointer=false,drawingLastPoint=null;
-  let drawingUndo=[],drawingRedo=[];
-  const drawingKey=index=>model.era+':'+index;
+  let drawingLayers=[],activeDrawingLayerId='',drawingPointer=false,drawingLastPoint=null;
+  let drawingUndo=[],drawingRedo=[],drawingLoadToken=0,drawingPersistQueue=Promise.resolve();
+  const drawingKey=index=>{const glyph=data()?.glyf[index],cp=glyph?.unicode?.[0];return model.era+':'+(Number.isInteger(cp)?'u'+cp.toString(16):'g'+index)};
+  const newDrawingLayer=(name='Artwork')=>({id:globalThis.crypto?.randomUUID?.()||'layer-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7),name:String(name||'Artwork').slice(0,80),visible:true,opacity:100,blendMode:'source-over',canvas:Object.assign(document.createElement('canvas'),{width:512,height:512})});
+  const activeDrawingLayer=()=>drawingLayers.find(layer=>layer.id===activeDrawingLayerId)||drawingLayers[drawingLayers.length-1]||null;
+  const layerContext=layer=>layer?.canvas.getContext('2d',{willReadFrequently:true});
+  function persistDrawingDraft(key,value){
+    drawingPersistQueue=drawingPersistQueue.catch(()=>{}).then(async()=>{
+      const database=await db();
+      await new Promise((resolve,reject)=>{
+        const tx=database.transaction('fonts','readwrite'),store=tx.objectStore('fonts'),recordKey='artwork:'+key;
+        if(value)store.put(value,recordKey);else store.delete(recordKey);
+        tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);
+      });
+      database.close();
+    });
+    return drawingPersistQueue;
+  }
+  async function readDrawingDraft(key,index=null,era=model.era){
+    async function read(recordKey){
+      const database=await db();
+      return new Promise((resolve,reject)=>{
+        const tx=database.transaction('fonts'),request=tx.objectStore('fonts').get('artwork:'+recordKey);
+        request.onsuccess=()=>resolve(request.result||null);request.onerror=()=>reject(request.error);
+        tx.oncomplete=()=>database.close();tx.onerror=()=>{database.close();reject(tx.error)};
+      });
+    }
+    const saved=await read(key);
+    return saved||(Number.isInteger(index)?read(era+':'+index):null);
+  }
+  function clearDrawingDrafts(era){
+    for(const key of drawingDrafts.keys())if(key.startsWith(era+':'))drawingDrafts.delete(key);
+    drawingPersistQueue=drawingPersistQueue.catch(()=>{}).then(async()=>{
+      const database=await db();
+      await new Promise((resolve,reject)=>{
+        const tx=database.transaction('fonts','readwrite'),store=tx.objectStore('fonts'),request=store.getAllKeys();
+        request.onsuccess=()=>{for(const key of request.result)if(String(key).startsWith('artwork:'+era+':'))store.delete(key)};
+        tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);
+      });
+      database.close();
+    });
+  }
   function saveDrawingDraft(index=model.selected){
     if(!drawingContext||!data()?.glyf[index])return;
-    const pixels=drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height).data;
-    for(let i=3;i<pixels.length;i+=4)if(pixels[i]){drawingDrafts.set(drawingKey(index),drawingCanvas.toDataURL('image/png'));return}
-    drawingDrafts.delete(drawingKey(index));
+    let hasInk=false;
+    for(const layer of drawingLayers){
+      const pixels=layerContext(layer).getImageData(0,0,512,512).data;
+      for(let i=3;i<pixels.length;i+=4)if(pixels[i]){hasInk=true;break}
+      if(hasInk)break;
+    }
+    const key=drawingKey(index);
+    const metadata=drawingDrafts.get(key)?.metadata||null;
+    if(!hasInk&&!metadata){drawingDrafts.delete(key);void persistDrawingDraft(key,null).catch(error=>console.warn('Could not save glyph layers:',error));return}
+    const snapshot={activeLayerId:activeDrawingLayerId,metadata,layers:hasInk?drawingLayers.map(layer=>({id:layer.id,name:layer.name,visible:layer.visible,opacity:layer.opacity,blendMode:layer.blendMode,artwork:layer.canvas.toDataURL('image/png')})):[]};
+    drawingDrafts.set(key,snapshot);void persistDrawingDraft(key,snapshot).catch(error=>console.warn('Could not save glyph layers:',error));
   }
-  function clearDrawingDrafts(era){for(const key of drawingDrafts.keys())if(key.startsWith(era+':'))drawingDrafts.delete(key)}
-  function loadDrawingDraft(index){
+  async function loadLayerArtwork(layer,dataUrl){
+    if(!dataUrl)return;
+    const response=await fetch(dataUrl);if(!response.ok)throw Error('Could not load a saved glyph layer.');
+    const bitmap=await createImageBitmap(await response.blob()),ctx=layerContext(layer);
+    ctx.clearRect(0,0,512,512);
+    if(bitmap.width===512&&bitmap.height===512)ctx.drawImage(bitmap,0,0);
+    else{const scale=Math.min(430/bitmap.width,430/bitmap.height),width=bitmap.width*scale,height=bitmap.height*scale;ctx.drawImage(bitmap,(512-width)/2,(512-height)/2,width,height)}
+    bitmap.close();
+  }
+  function renderLayerControls(){
+    const host=$('wh-font-layer-list');if(!host)return;host.replaceChildren();
+    if(!drawingLayers.length){host.append(Object.assign(document.createElement('p'),{className:'wh-font-layer-empty',textContent:'No artwork layers.'}));return}
+    for(const layer of drawingLayers.slice().reverse()){
+      const row=document.createElement('div');row.className='wh-font-layer-row';row.setAttribute('role','listitem');row.setAttribute('aria-current',String(layer.id===activeDrawingLayerId));
+      const select=document.createElement('button');select.type='button';select.textContent='✎';select.title='Edit '+layer.name;select.setAttribute('aria-label','Edit layer '+layer.name);select.onclick=()=>{activeDrawingLayerId=layer.id;renderLayerControls()};
+      const visibility=document.createElement('button');visibility.type='button';visibility.textContent=layer.visible?'◉':'○';visibility.title=layer.visible?'Hide layer':'Show layer';visibility.setAttribute('aria-label',visibility.title+' '+layer.name);visibility.onclick=()=>{layer.visible=!layer.visible;renderDrawingLayers();saveDrawingDraft()};
+      const name=document.createElement('input');name.type='text';name.maxLength=80;name.value=layer.name;name.setAttribute('aria-label','Layer name');name.onchange=()=>{layer.name=name.value.trim().slice(0,80)||'Artwork';renderLayerControls();saveDrawingDraft()};
+      const opacity=document.createElement('input');opacity.type='range';opacity.min='0';opacity.max='100';opacity.value=String(layer.opacity);opacity.setAttribute('aria-label','Layer opacity');opacity.oninput=()=>{layer.opacity=Number(opacity.value);renderDrawingLayers();saveDrawingDraft()};
+      const blend=document.createElement('select');blend.setAttribute('aria-label','Layer blend mode');
+      for(const [value,label] of [['source-over','Normal'],['multiply','Multiply'],['screen','Screen']])blend.add(new Option(label,value));
+      blend.value=layer.blendMode;blend.onchange=()=>{layer.blendMode=blend.value;renderDrawingLayers();saveDrawingDraft()};
+      const up=document.createElement('button');up.type='button';up.textContent='↑';up.title='Move layer up';up.setAttribute('aria-label','Move '+layer.name+' up');up.onclick=()=>moveDrawingLayer(layer.id,1);
+      const down=document.createElement('button');down.type='button';down.textContent='↓';down.title='Move layer down';down.setAttribute('aria-label','Move '+layer.name+' down');down.onclick=()=>moveDrawingLayer(layer.id,-1);
+      const remove=document.createElement('button');remove.type='button';remove.textContent='×';remove.title='Delete layer';remove.dataset.layerDelete='true';remove.setAttribute('aria-label','Delete '+layer.name);remove.onclick=()=>deleteDrawingLayer(layer.id);
+      row.append(select,visibility,name,opacity,blend,up,down,remove);host.append(row);
+    }
+  }
+  function renderDrawingLayers(){
     if(!drawingContext)return;
-    drawingContext.clearRect(0,0,drawingCanvas.width,drawingCanvas.height);
-    drawingUndo=[];drawingRedo=[];
-    const url=drawingDrafts.get(drawingKey(index));if(!url)return;
-    const era=model.era,image=new Image();
-    image.onload=()=>{if(model.selected===index&&model.era===era)drawingContext.drawImage(image,0,0,drawingCanvas.width,drawingCanvas.height)};
-    image.src=url;
+    drawingContext.clearRect(0,0,512,512);
+    for(const layer of drawingLayers){
+      if(!layer.visible)continue;
+      drawingContext.globalAlpha=layer.opacity/100;drawingContext.globalCompositeOperation=layer.blendMode||'source-over';drawingContext.drawImage(layer.canvas,0,0);
+    }
+    drawingContext.globalAlpha=1;drawingContext.globalCompositeOperation='source-over';renderLayerControls();
+  }
+  async function loadDrawingDraft(index){
+    if(!drawingContext)return;
+    const token=++drawingLoadToken,era=model.era,key=drawingKey(index);
+    drawingLayers=[newDrawingLayer('Artwork')];activeDrawingLayerId=drawingLayers[0].id;drawingUndo=[];drawingRedo=[];renderDrawingLayers();
+    let saved=drawingDrafts.get(key);
+    if(!saved)try{saved=await readDrawingDraft(key,index,era);if(saved)drawingDrafts.set(key,saved)}catch(error){console.warn('Could not restore glyph layers:',error)}
+    if(token!==drawingLoadToken||model.selected!==index||model.era!==era||!Array.isArray(saved?.layers))return;
+    const restored=[];
+    for(const source of saved.layers.slice(0,24)){
+      const layer=newDrawingLayer(source.name||'Artwork');layer.id=String(source.id||layer.id);layer.name=String(source.name||'Artwork').slice(0,80);
+      layer.visible=source.visible!==false;layer.opacity=Math.max(0,Math.min(100,Number.isFinite(Number(source.opacity))?Number(source.opacity):100));
+      layer.blendMode=['source-over','multiply','screen'].includes(source.blendMode)?source.blendMode:'source-over';
+      try{await loadLayerArtwork(layer,String(source.artwork||''))}catch(error){console.warn('A glyph layer could not be restored:',error)}
+      restored.push(layer);
+    }
+    if(token!==drawingLoadToken||model.selected!==index||model.era!==era)return;
+    if(restored.length)drawingLayers=restored;
+    activeDrawingLayerId=drawingLayers.some(layer=>layer.id===saved.activeLayerId)?saved.activeLayerId:drawingLayers[drawingLayers.length-1].id;
+    renderDrawingLayers();
+  }
+  async function savePackageDrawing(index,source){
+    const inputs=Array.isArray(source.layers)&&source.layers.length?source.layers.filter(layer=>layer&&typeof layer.artwork==='string'&&layer.artwork.startsWith('data:image/')).slice(0,24):[];
+    const layers=inputs.map(layer=>({id:String(layer.id||'').slice(0,120),name:String(layer.name||'Artwork').slice(0,80),visible:layer.visible!==false,opacity:Math.max(0,Math.min(100,Number.isFinite(Number(layer.opacity))?Number(layer.opacity):100)),blendMode:['source-over','multiply','screen'].includes(layer.blendMode)?layer.blendMode:'source-over',artwork:layer.artwork}));
+    if(!layers.length&&typeof source.artwork==='string'&&source.artwork.startsWith('data:image/'))layers.push({id:'imported-artwork',name:'Imported artwork',visible:true,opacity:100,blendMode:'source-over',artwork:source.artwork});
+    const metadata={};
+    for(const field of ['id','name','meaning','category','key','ipa','sound','pronunciation','transliteration','latinSubstitute','notes','lineageNote'])if(source[field]!=null)metadata[field]=String(source[field]).slice(0,12000);
+    if(Array.isArray(source.parents))metadata.parents=source.parents.slice(0,100).map(parent=>String(parent).slice(0,200));
+    if(Number.isFinite(Number(source.confidence)))metadata.confidence=Math.max(0,Math.min(1,Number(source.confidence)));
+    for(const field of ['size','baseline','leftSpacing','rightSpacing','advanceWidth','ascender','descender'])if(Number.isFinite(Number(source[field])))metadata[field]=Number(source[field]);
+    if(Array.isArray(source.vectorContours))metadata.vectorContours=source.vectorContours.slice(0,500).map(contour=>({hole:!!contour?.hole,points:(Array.isArray(contour?.points)?contour.points:[]).slice(0,12000).map(pair=>[Number(pair?.[0])||0,Number(pair?.[1])||0])})).filter(contour=>contour.points.length>=3);
+    if(!layers.length&&!Object.keys(metadata).length)return;
+    const key=drawingKey(index),snapshot={activeLayerId:layers[layers.length-1]?.id||'',layers,metadata};
+    drawingDrafts.set(key,snapshot);await persistDrawingDraft(key,snapshot);
+    if(model.selected===index)await loadDrawingDraft(index);
+  }
+  const glyphDetailFields={meaning:'wh-font-glyph-meaning',category:'wh-font-glyph-category',key:'wh-font-glyph-key',ipa:'wh-font-glyph-ipa',sound:'wh-font-glyph-sound',pronunciation:'wh-font-glyph-pronunciation',transliteration:'wh-font-glyph-transliteration',latinSubstitute:'wh-font-glyph-latin',notes:'wh-font-glyph-notes',lineageNote:'wh-font-glyph-lineage'};
+  async function loadGlyphStudioDetails(index){
+    const era=model.era,key=drawingKey(index);let saved=drawingDrafts.get(key);
+    if(!saved)try{saved=await readDrawingDraft(key,index,era);if(saved)drawingDrafts.set(key,saved)}catch(error){console.warn('Could not load glyph research details:',error)}
+    if(model.era!==era||model.selected!==index)return;
+    const metadata=saved?.metadata||{};
+    for(const [field,id] of Object.entries(glyphDetailFields))$(id).value=String(metadata[field]||'');
+    $('wh-font-glyph-parents').value=Array.isArray(metadata.parents)?metadata.parents.join(', '):'';
+    $('wh-font-glyph-confidence').value=Number.isFinite(metadata.confidence)?String(metadata.confidence):'0';
+  }
+  function saveGlyphStudioDetails(){
+    if(!current())return;
+    const key=drawingKey(model.selected),saved=drawingDrafts.get(key)||{activeLayerId:activeDrawingLayerId,layers:[]},metadata={...(saved.metadata||{})};
+    for(const [field,id] of Object.entries(glyphDetailFields))metadata[field]=$(id).value.trim().slice(0,field==='notes'?12000:field==='lineageNote'?4000:240);
+    metadata.parents=$('wh-font-glyph-parents').value.split(',').map(value=>value.trim().slice(0,200)).filter(Boolean).slice(0,100);
+    metadata.confidence=Math.max(0,Math.min(1,Number($('wh-font-glyph-confidence').value)||0));
+    const next={...saved,metadata,layers:Array.isArray(saved.layers)?saved.layers:[]};drawingDrafts.set(key,next);
+    void persistDrawingDraft(key,next).then(()=>status('Glyph metadata saved locally.')).catch(error=>status('Glyph metadata save failed: '+error.message));
+  }
+  function invalidatePackageVector(index=model.selected){
+    const key=drawingKey(index),saved=drawingDrafts.get(key);
+    if(!saved?.metadata?.vectorContours?.length)return;
+    const next={...saved,metadata:{...saved.metadata,vectorContours:[]}};
+    drawingDrafts.set(key,next);void persistDrawingDraft(key,next).catch(error=>console.warn('Could not update Glyph Studio project metadata:',error));
   }
   function drawingSnapshot(){
-    if(!drawingContext)return;
-    drawingUndo.push(drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height));
-    if(drawingUndo.length>30)drawingUndo.shift();
-    drawingRedo=[];
+    const layer=activeDrawingLayer();if(!layer)return;
+    drawingUndo.push({layerId:layer.id,pixels:layerContext(layer).getImageData(0,0,512,512)});
+    if(drawingUndo.length>30)drawingUndo.shift();drawingRedo=[];
   }
   function drawingPosition(event){
     const rect=drawingCanvas.getBoundingClientRect();
-    return {x:(event.clientX-rect.left)*drawingCanvas.width/rect.width,y:(event.clientY-rect.top)*drawingCanvas.height/rect.height};
+    return {x:(event.clientX-rect.left)*512/rect.width,y:(event.clientY-rect.top)*512/rect.height};
   }
   function drawInk(from,to){
-    const size=number($('wh-font-brush-size').value,14),ctx=drawingContext;
-    ctx.save();ctx.lineWidth=size;ctx.lineCap='round';ctx.lineJoin='round';
-    ctx.strokeStyle=$('wh-font-brush-color').value;ctx.fillStyle=$('wh-font-brush-color').value;
-    ctx.globalCompositeOperation=$('wh-font-draw-tool').value==='erase'?'destination-out':'source-over';
-    ctx.beginPath();
-    if(from===to){ctx.arc(from.x,from.y,size/2,0,Math.PI*2);ctx.fill()}
-    else{ctx.moveTo(from.x,from.y);ctx.lineTo(to.x,to.y);ctx.stroke()}
-    ctx.restore();
+    const layer=activeDrawingLayer();if(!layer)return;
+    invalidatePackageVector();
+    const size=number($('wh-font-brush-size').value,14),ctx=layerContext(layer);
+    ctx.save();ctx.lineWidth=size;ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle=$('wh-font-brush-color').value;ctx.fillStyle=$('wh-font-brush-color').value;
+    ctx.globalCompositeOperation=$('wh-font-draw-tool').value==='erase'?'destination-out':'source-over';ctx.beginPath();
+    if(from===to){ctx.arc(from.x,from.y,size/2,0,Math.PI*2);ctx.fill()}else{ctx.moveTo(from.x,from.y);ctx.lineTo(to.x,to.y);ctx.stroke()}
+    ctx.restore();renderDrawingLayers();
   }
   function undoDrawing(){
-    if(!drawingContext||!drawingUndo.length)return;
-    drawingRedo.push(drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height));
-    drawingContext.putImageData(drawingUndo.pop(),0,0);saveDrawingDraft();
+    const action=drawingUndo.pop(),layer=action&&drawingLayers.find(item=>item.id===action.layerId);if(!layer)return;
+    drawingRedo.push({layerId:layer.id,pixels:layerContext(layer).getImageData(0,0,512,512)});layerContext(layer).putImageData(action.pixels,0,0);renderDrawingLayers();saveDrawingDraft();
   }
   function redoDrawing(){
-    if(!drawingContext||!drawingRedo.length)return;
-    drawingUndo.push(drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height));
-    drawingContext.putImageData(drawingRedo.pop(),0,0);saveDrawingDraft();
+    const action=drawingRedo.pop(),layer=action&&drawingLayers.find(item=>item.id===action.layerId);if(!layer)return;
+    drawingUndo.push({layerId:layer.id,pixels:layerContext(layer).getImageData(0,0,512,512)});layerContext(layer).putImageData(action.pixels,0,0);renderDrawingLayers();saveDrawingDraft();
   }
   function clearDrawing(){
-    if(!drawingContext)return;
-    drawingSnapshot();drawingContext.clearRect(0,0,drawingCanvas.width,drawingCanvas.height);saveDrawingDraft();
+    const layer=activeDrawingLayer();if(!layer)return;drawingSnapshot();layerContext(layer).clearRect(0,0,512,512);renderDrawingLayers();saveDrawingDraft();
+  }
+  function addDrawingLayer(){
+    const layer=newDrawingLayer('Layer '+(drawingLayers.length+1));drawingLayers.push(layer);activeDrawingLayerId=layer.id;renderDrawingLayers();saveDrawingDraft();
+  }
+  function duplicateDrawingLayer(){
+    const source=activeDrawingLayer();if(!source)return;
+    const layer=newDrawingLayer(source.name+' copy');layer.visible=source.visible;layer.opacity=source.opacity;layer.blendMode=source.blendMode;layerContext(layer).drawImage(source.canvas,0,0);
+    drawingLayers.splice(drawingLayers.indexOf(source)+1,0,layer);activeDrawingLayerId=layer.id;renderDrawingLayers();saveDrawingDraft();
+  }
+  function mergeDrawingLayer(){
+    const index=drawingLayers.findIndex(layer=>layer.id===activeDrawingLayerId);if(index<=0)return;
+    const above=drawingLayers[index],below=drawingLayers[index-1],ctx=layerContext(below);
+    if(above.visible){ctx.globalAlpha=above.opacity/100;ctx.globalCompositeOperation=above.blendMode||'source-over';ctx.drawImage(above.canvas,0,0)}
+    ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';drawingLayers.splice(index,1);activeDrawingLayerId=below.id;renderDrawingLayers();saveDrawingDraft();
+  }
+  function deleteDrawingLayer(id){
+    const index=drawingLayers.findIndex(layer=>layer.id===id);if(index<0)return;
+    if(drawingLayers.length===1){layerContext(drawingLayers[0]).clearRect(0,0,512,512)}
+    else{drawingLayers.splice(index,1);activeDrawingLayerId=drawingLayers[Math.max(0,index-1)].id}
+    renderDrawingLayers();saveDrawingDraft();
+  }
+  function moveDrawingLayer(id,direction){
+    const index=drawingLayers.findIndex(layer=>layer.id===id),next=index+direction;if(index<0||next<0||next>=drawingLayers.length)return;
+    [drawingLayers[index],drawingLayers[next]]=[drawingLayers[next],drawingLayers[index]];renderDrawingLayers();saveDrawingDraft();
   }
   function traceDrawing(){
     if(!drawingContext||!current())return;
     try{
-      const pixels=drawingContext.getImageData(0,0,drawingCanvas.width,drawingCanvas.height).data;
-      const svg=geometry.traceMask(geometry.rasterMask(pixels,drawingCanvas.width,drawingCanvas.height,'alpha',number($('wh-font-threshold').value,170)),drawingCanvas.width,drawingCanvas.height);
-      svgImport(svg);status('Drawing traced into editable font outlines. Adjust the outline or draw more and trace again.');
+      renderDrawingLayers();const pixels=drawingContext.getImageData(0,0,512,512).data;
+      const svg=geometry.traceMask(geometry.rasterMask(pixels,512,512,'alpha',number($('wh-font-threshold').value,170)),512,512);
+      svgImport(svg);status('Layer composite traced into editable font outlines. Adjust the outline or keep editing artwork layers.');
     }catch(error){status('Drawing trace failed: '+error.message)}
   }
   const fileBase = new URL('./', location.href);
@@ -219,7 +371,7 @@
   }
   async function loadBuffer(bytes,era,discardDrawing=false){
     saveDrawingDraft(model.selected);
-    if(discardDrawing)clearDrawingDrafts(era);
+    // Artwork stays keyed by Unicode so imported font tables do not orphan editable glyph layers.
     const fontType=String.fromCharCode(...bytes.slice(0,4))==='OTTO'?'otf':'ttf';
     const font=F.createFont(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),
       {type:fontType,kerning:true,hinting:true,compound2simple:true});
@@ -277,7 +429,7 @@
     const glyph=data()?.glyf[index];if(!glyph)return;
     if(model.selected!==index)saveDrawingDraft(model.selected);
     model.selected=index;
-    loadDrawingDraft(index);
+    loadDrawingDraft(index);void loadGlyphStudioDetails(index);
     $('wh-font-codepoint').value=(glyph.unicode||[]).map(hex).join(', ');
     $('wh-font-glyph-name').value=glyph.name||'';
     $('wh-font-advance').value=glyph.advanceWidth??0;
@@ -358,6 +510,7 @@
     const imported=F.createFont(svg,{type:'svg',combinePath:true}).get();
     const outline=imported.glyf.find(g=>g.contours?.length);
     if(!outline)throw Error('The SVG has no supported vector outlines. Convert text or strokes to paths first.');
+    invalidatePackageVector();
     const target=current(),ratio=(data().head.unitsPerEm||1000)/(imported.head.unitsPerEm||1024);
     target.contours=outline.contours.map(contour=>contour.map(p=>({x:Math.round(p.x*ratio),y:Math.round(p.y*ratio),onCurve:p.onCurve!==false})));
     const points=target.contours.flat();
@@ -381,7 +534,13 @@
     if(!file||!current())return;
     if(file.size>8*1024*1024)throw Error('Glyph image is too large (8 MB maximum).');
     const text=/\.png$/i.test(file.name)?await pngToSvg(file):await file.text();
-    svgImport(text);status('Glyph outline imported. Inspect the preview and export a TTF when ready.');
+    try{
+      const bitmap=await createImageBitmap(file),layer=newDrawingLayer('Imported '+file.name.slice(0,40)),ctx=layerContext(layer);
+      const scale=Math.min(430/bitmap.width,430/bitmap.height),width=bitmap.width*scale,height=bitmap.height*scale;
+      ctx.drawImage(bitmap,(512-width)/2,(512-height)/2,width,height);bitmap.close();
+      drawingLayers.push(layer);activeDrawingLayerId=layer.id;renderDrawingLayers();saveDrawingDraft();
+    }catch(error){console.warn('Could not keep an editable raster copy of this glyph file:',error)}
+    svgImport(text);status('Glyph outline imported; available artwork is kept as a separate layer.');
   }
   const glyphStudioEraName=id=>({proto:'Proto',ancient:'Ancient',preclassical:'Archaic',archaic:'Archaic',classical:'Classical',traditional:'Traditional',modern:'Modern'})[String(id||'').toLowerCase()];
   function glyphStudioContours(source){
@@ -437,8 +596,11 @@
       const cp=Number.isInteger(source.codepoint)?source.codepoint:(chars.length===1?chars[0].codePointAt(0):NaN);
       if(!Number.isInteger(cp)||cp<0||cp>0x10ffff||cp>=0xd800&&cp<=0xdfff||seen.has(cp)){skipped++;continue}
       let vector=[];try{vector=glyphStudioContours(source)}catch(error){skipped++;continue}
-      const artwork=String(source.artwork||source.layers?.find(layer=>layer?.visible!==false&&layer?.artwork)?.artwork||'');
-      if(!vector.length&&!artwork){skipped++;continue}
+      const visibleArtwork=source.layers?.find(layer=>layer?.visible!==false&&typeof layer?.artwork==='string'&&layer.artwork.startsWith('data:image/'))?.artwork;
+      const artworkCandidate=source.artwork||visibleArtwork;
+      const artwork=typeof artworkCandidate==='string'&&artworkCandidate.startsWith('data:image/')?artworkCandidate:'';
+      const hasLayers=Array.isArray(source.layers)&&source.layers.some(layer=>typeof layer?.artwork==='string'&&layer.artwork.startsWith('data:image/'));
+      if(!vector.length&&!artwork&&!hasLayers){skipped++;continue}
       seen.add(cp);
       let index=data().glyf.findIndex(glyph=>glyph.unicode?.includes(cp));
       if(index<0){index=data().glyf.length;data().glyf.push({name:'glyph_'+cp.toString(16).toUpperCase(),unicode:[cp],advanceWidth:Math.max(100,number(source.advanceWidth,600)),contours:[]});added++}
@@ -448,10 +610,11 @@
       target.unicode=[cp];
       target.advanceWidth=Math.max(100,Math.min(4000,number(source.advanceWidth,target.advanceWidth||600)));
       if(vector.length){target.contours=vector;geometry.bounds(target)}
-      else{
+      else if(artwork){
         try{select(index);svgImport(await traceGlyphStudioArtwork(artwork));traced++}
         catch(error){skipped++;status('One glyph could not be traced: '+error.message)}
       }
+      await savePackageDrawing(index,source);
     }
     render();select(Math.min(model.selected,data().glyf.length-1));renderKerning();markDirty();
     status('Imported '+targetEra+' Glyph Studio project: '+added+' added, '+updated+' updated, '+traced+' raster artwork traced, '+skipped+' skipped.');
@@ -475,6 +638,59 @@
     }
     else status('Proof preview updated from the current TTF.');
   }
+  function rasterGlyphArtwork(glyph){
+    const canvas=document.createElement('canvas');canvas.width=512;canvas.height=512;
+    const ctx=canvas.getContext('2d'),contours=glyph.contours||[];let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+    for(const contour of contours)for(const point of contour){minX=Math.min(minX,point.x);minY=Math.min(minY,point.y);maxX=Math.max(maxX,point.x);maxY=Math.max(maxY,point.y)}
+    if(!Number.isFinite(minX))return '';
+    const scale=Math.min(432/Math.max(1,maxX-minX),432/Math.max(1,maxY-minY));
+    ctx.translate(256-(minX+maxX)/2*scale,256+(minY+maxY)/2*scale);ctx.scale(scale,-scale);ctx.fillStyle='#000';ctx.beginPath();
+    for(const points of contours){
+      if(!points?.length)continue;
+      const n=points.length,first=points[0],last=points[n-1],mid=(a,b)=>({x:(a.x+b.x)/2,y:(a.y+b.y)/2});
+      const start=first.onCurve?first:last.onCurve?last:mid(first,last);ctx.moveTo(start.x,start.y);
+      for(let i=0;i<n;i++){const point=points[i],next=points[(i+1)%n];if(point.onCurve)ctx.lineTo(point.x,point.y);else if(next.onCurve){ctx.quadraticCurveTo(point.x,point.y,next.x,next.y);i++}else{const join=mid(point,next);ctx.quadraticCurveTo(point.x,point.y,join.x,join.y)}}
+      ctx.closePath();
+    }
+    ctx.fill('nonzero');return canvas.toDataURL('image/png');
+  }
+  async function exportGlyphStudioProject(){
+    const eraIds={Proto:'proto',Ancient:'ancient',Archaic:'preclassical',Classical:'classical',Traditional:'traditional',Modern:'modern'};
+    const eraId=eraIds[model.era]||model.era.toLowerCase(),font=data(),glyphs=[];
+    for(let index=0;index<font.glyf.length;index++){
+      const glyph=font.glyf[index],key=drawingKey(index);
+      let saved=drawingDrafts.get(key);
+      if(!saved)try{saved=await readDrawingDraft(key,index)}catch(error){console.warn('Could not include glyph artwork:',error)}
+      const metadata=saved?.metadata||{},cp=Number.isInteger(glyph.unicode?.[0])?glyph.unicode[0]:null;
+      const layers=Array.isArray(saved?.layers)?saved.layers.slice():[];
+      if(!layers.length){const artwork=rasterGlyphArtwork(glyph);if(artwork)layers.push({id:'aws-outline-preview-'+index,name:'Font outline artwork',visible:true,opacity:100,blendMode:'source-over',artwork})}
+      glyphs.push({
+        id:String(metadata.id||'aws-'+eraId+'-'+index).slice(0,150),era:eraId,order:index,
+        character:cp==null?'':String.fromCodePoint(cp),codepoint:cp,name:String(metadata.name||glyph.name||'glyph_'+index).slice(0,100),
+        meaning:String(metadata.meaning||''),category:String(metadata.category||''),key:String(metadata.key||''),
+        ipa:String(metadata.ipa||''),sound:String(metadata.sound||''),pronunciation:String(metadata.pronunciation||''),
+        transliteration:String(metadata.transliteration||''),latinSubstitute:String(metadata.latinSubstitute||''),
+        notes:String(metadata.notes||''),parents:Array.isArray(metadata.parents)?metadata.parents:[],
+        confidence:Number.isFinite(metadata.confidence)?metadata.confidence:0,lineageNote:String(metadata.lineageNote||''),
+        size:Number.isFinite(metadata.size)?metadata.size:100,baseline:Number.isFinite(metadata.baseline)?metadata.baseline:72,
+        leftSpacing:Number.isFinite(metadata.leftSpacing)?metadata.leftSpacing:0,rightSpacing:Number.isFinite(metadata.rightSpacing)?metadata.rightSpacing:0,
+        advanceWidth:Number(glyph.advanceWidth)||600,ascender:Number(metadata.ascender)||font.hhea.ascent,descender:Number(metadata.descender)||Math.abs(font.hhea.descent),
+        vectorContours:Array.isArray(metadata.vectorContours)?metadata.vectorContours:[],
+        layers,
+        artwork:layers.find(layer=>layer.visible&&layer.artwork)?.artwork||''
+      });
+    }
+    const project={
+      schemaVersion:2,projectId:'aws-'+eraId+'-'+Date.now().toString(36),name:String(font.name.fontFamily||'Aza’raan Glyph Studio'),
+      language:'Aza’raan',activeEra:eraId,eraOrder:[eraId],
+      eras:{[eraId]:{id:eraId,label:model.era,backendEra:eraId==='preclassical'?'archaic':eraId,targetCount:glyphs.length,glyphs}},
+      settings:{fontFamily:String(font.name.fontFamily||'Aza’raan '+model.era),fontVersion:String(font.name.version||'1.0'),
+        ascender:Number(font.hhea.ascent)||800,descender:Math.abs(Number(font.hhea.descent)||200),
+        letterSpacing:Number(model.spacing)||0,baselineShift:Number(model.baseline)||0,lineSpacing:1.45,glyphSize:100}
+    };
+    download(JSON.stringify(project),model.era+'-glyph-studio.azglyph.json','application/json');
+    status('Exported this era as a portable .azglyph.json project with glyph metadata and saved artwork layers.');
+  }
   function bind(){
     $('wh-open-font-workshop').onclick=()=>{
       $('wh-font-workshop').hidden=false;
@@ -490,16 +706,28 @@
     for(const [id,key] of [['wh-font-ascender','ascent'],['wh-font-descender','descent']]){
       $(id).onchange=e=>{data().hhea[key]=number(e.target.value);markDirty()};
     }
-    $('wh-font-codepoint').onchange=e=>{
-      try{const glyph=current(),points=e.target.value.trim()?e.target.value.split(',').map(code):[];
+    $('wh-font-codepoint').onchange=async e=>{
+      try{
+        const glyph=current(),points=e.target.value.trim()?e.target.value.split(',').map(code):[];
         if(data().glyf.some(g=>g!==glyph&&g.unicode?.some(cp=>points.includes(cp))))throw Error('That Unicode slot belongs to another glyph.');
-        glyph.unicode=[...new Set(points)];list();markDirty()}
-      catch(error){status(error.message);select(model.selected)}
+        const oldKey=drawingKey(model.selected);let saved=drawingDrafts.get(oldKey);
+        if(!saved)try{saved=await readDrawingDraft(oldKey,model.selected)}catch(error){console.warn('Could not migrate glyph artwork:',error)}
+        glyph.unicode=[...new Set(points)];
+        const newKey=drawingKey(model.selected);
+        if(saved&&oldKey!==newKey){drawingDrafts.set(newKey,saved);drawingDrafts.delete(oldKey);await persistDrawingDraft(newKey,saved);await persistDrawingDraft(oldKey,null)}
+        list();markDirty()
+      }catch(error){status(error.message);select(model.selected)}
     };
-    $('wh-font-glyph-name').onchange=e=>{current().name=e.target.value.trim();list();markDirty()};
+    $('wh-font-glyph-name').onchange=e=>{
+      const glyph=current();glyph.name=e.target.value.trim();
+      const key=drawingKey(model.selected),saved=drawingDrafts.get(key);
+      if(saved?.metadata){const next={...saved,metadata:{...saved.metadata,name:glyph.name}};drawingDrafts.set(key,next);void persistDrawingDraft(key,next).catch(error=>console.warn('Could not save glyph name:',error))}
+      list();markDirty();
+    };
     $('wh-font-advance').onchange=e=>{current().advanceWidth=Math.max(0,number(e.target.value));draw(current());markDirty()};
     $('wh-font-transform').onclick=()=>{
       const glyph=current();if(!glyph)return;
+      invalidatePackageVector();
       geometry.transform(glyph,{x:number($('wh-font-offset-x').value),y:number($('wh-font-offset-y').value),scaleX:number($('wh-font-scale-x').value,100)/100,scaleY:number($('wh-font-scale-y').value,100)/100});
       select(model.selected);markDirty();
       $('wh-font-offset-x').value=0;$('wh-font-offset-y').value=0;$('wh-font-scale-x').value=100;$('wh-font-scale-y').value=100;
@@ -537,6 +765,14 @@
     $('wh-font-draw-redo').onclick=redoDrawing;
     $('wh-font-draw-clear').onclick=clearDrawing;
     $('wh-font-draw-trace').onclick=traceDrawing;
+    $('wh-font-glyph-details-save').onclick=saveGlyphStudioDetails;
+    for(const id of [...Object.values(glyphDetailFields),'wh-font-glyph-parents','wh-font-glyph-confidence'])$(id).addEventListener('change',saveGlyphStudioDetails);
+    $('wh-font-layer-add').onclick=addDrawingLayer;
+    $('wh-font-layer-duplicate').onclick=duplicateDrawingLayer;
+    $('wh-font-layer-merge').onclick=mergeDrawingLayer;
+    $('wh-font-layer-delete').onclick=()=>deleteDrawingLayer(activeDrawingLayerId);
+    $('wh-font-layer-up').onclick=()=>moveDrawingLayer(activeDrawingLayerId,1);
+    $('wh-font-layer-down').onclick=()=>moveDrawingLayer(activeDrawingLayerId,-1);
     $('wh-font-glyph-upload').onchange=e=>{
       const file=e.target.files?.[0];if(file)uploadGlyph(file).catch(error=>status('Glyph import failed: '+error.message));e.target.value='';
     };
@@ -554,6 +790,7 @@
     $('wh-font-update-preview').onclick=()=>proof().catch(error=>status('Preview failed: '+error.message));
     $('wh-font-use').onclick=()=>proof(true).catch(error=>status('Book font failed: '+error.message));
     $('wh-font-proof-input').oninput=e=>$('wh-font-proof').textContent=e.target.value;
+    $('wh-font-export-azglyph').onclick=()=>exportGlyphStudioProject().catch(error=>status('Glyph project export failed: '+error.message));
     $('wh-font-export-json').onclick=()=>{
       try{const bytes=serialize();let binary='';for(const b of bytes)binary+=String.fromCharCode(b);
         const project={format:'WriterHelper-font-project/v1',era:model.era,ttf:btoa(binary)};

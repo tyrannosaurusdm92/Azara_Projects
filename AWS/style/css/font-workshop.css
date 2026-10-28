@@ -48,3 +48,21 @@
 .wh-font-baseline-guide{position:absolute;left:0;right:0;top:72%;border-top:1px dashed #a44230;pointer-events:none;opacity:.85}
 .wh-font-draw-panel>p{margin:0;color:#d4c6b6;font-size:12px}
 @media(max-width:600px){.wh-font-draw-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.wh-font-draw-tools label{min-width:0}}
+
+.wh-font-layer-list{display:grid;gap:5px;max-height:190px;overflow:auto;padding:5px;border:1px solid #405a60;border-radius:8px;background:#081820}
+.wh-font-layer-row{display:grid;grid-template-columns:auto minmax(80px,1fr) minmax(90px,140px) minmax(95px,135px) auto auto;align-items:center;gap:5px;padding:5px;border:1px solid #ffffff12;border-radius:7px;background:#10242d}
+.wh-font-layer-row[aria-current=true]{border-color:#8de0dc;background:#133640}
+.wh-font-layer-row button{min-width:30px;padding:5px!important}
+.wh-font-layer-row input[type=text]{min-width:0;width:100%}
+.wh-font-layer-row input[type=range]{width:100%;padding:0!important}
+.wh-font-layer-row select{min-width:0;width:100%;font-size:11px!important}
+.wh-font-layer-empty{margin:0;padding:6px;color:#9bb2b3;font-size:11px}
+@media(max-width:760px){.wh-font-layer-row{grid-template-columns:auto minmax(70px,1fr) minmax(80px,1fr)}.wh-font-layer-row select{grid-column:2}.wh-font-layer-row input[type=range]{grid-column:3}.wh-font-layer-row button[data-layer-delete]{grid-column:1}}
+
+.wh-font-glyph-notes{grid-column:1/-1;margin:.55rem 0 1rem;padding:.65rem .8rem;border:1px solid #8a623e;border-radius:9px;background:#201912}
+.wh-font-glyph-notes summary{cursor:pointer;font-weight:700;color:#dfb96e}
+.wh-font-glyph-metadata{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:.65rem;margin:.7rem 0}
+.wh-font-glyph-metadata label{display:grid;gap:.28rem;font-size:.84rem;color:#e8d4b1}
+.wh-font-glyph-metadata input,.wh-font-glyph-metadata textarea{width:100%;min-width:0;box-sizing:border-box}
+.wh-font-glyph-metadata textarea{resize:vertical}
+@media(max-width:600px){.wh-font-glyph-notes{grid-column:1/-1}.wh-font-glyph-metadata{grid-template-columns:1fr}}
