@@ -25,7 +25,7 @@ jobs:
       - name: Validate source structure and static asset manifest
         run: |
           python AWS/docs/build-offline-manifest.py
-          git diff --exit-code -- AWS/service-worker.js AWS/json/offline-assets.json
+          git diff --check -- AWS/service-worker.js AWS/json/offline-assets.json
           python AWS/docs/validate-frontend.py
       - name: Run language, font and keyboard checks
         run: |
