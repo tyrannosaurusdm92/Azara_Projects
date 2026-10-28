@@ -32,8 +32,8 @@ export const ACTIONS = Object.freeze({
   Control: 'Ctrl', Alt: 'Alt', Meta: 'Win / ⌘', AltGraph: 'AltGr',
   ArrowLeft: '←', ArrowRight: '→', ArrowUp: '↑', ArrowDown: '↓',
   Home: 'Home', End: 'End', PageUp: 'PgUp', PageDown: 'PgDn',
-  Insert: 'Ins', PrintScreen: 'PrtSc', Symbols: '?123', Letters: 'ABC',
-  Globe: '🌐', Emoji: '☺', Hide: '⌄', Numpad: '#',
+  Insert: 'Ins', NumLock: 'Num', PrintScreen: 'PrtSc', Symbols: '?123', Letters: 'ABC',
+  Globe: '🌐', Emoji: '😊', Hide: '⌄', Numpad: '#',
   Copy:'Copy',Paste:'Paste',Cut:'Cut',SelectAll:'Select all',
   Undo:'Undo',Redo:'Redo',Find:'Find',Save:'Save'
 });
@@ -42,17 +42,23 @@ const keys = line => line.split(' ').filter(Boolean);
 
 export const LAYOUTS = Object.freeze({
   compact: [
-    keys('q w e r t y u i o p'),
-    keys('a s d f g h j k l'),
-    keys('Shift z x c v b n m Backspace'),
-    keys('Symbols Globe , Space . Enter')
+    keys('Escape F1 F2 F3 F4 F5 F6'),
+    keys('F7 F8 F9 F10 F11 F12 PrintScreen'),
+    keys('` 1 2 3 4 5 6 7 8 9 0 - = Backspace'),
+    keys('Tab q w e r t y u i o p [ ] \\'),
+    keys('CapsLock a s d f g h j k l ; \' Enter'),
+    keys('Shift z x c v b n m , . / Shift'),
+    keys('Insert Home PageUp Delete End PageDown'),
+    keys('Control Meta Alt Emoji Symbols Globe Space AltGraph ArrowLeft ArrowDown ArrowUp ArrowRight')
   ],
   standard: [
-    keys('1 2 3 4 5 6 7 8 9 0 Backspace'),
-    keys('Tab q w e r t y u i o p [ ]'),
-    keys('CapsLock a s d f g h j k l ; \''),
-    keys('Shift z x c v b n m , . / Enter'),
-    keys('Control Meta Alt Globe Space AltGraph ArrowLeft ArrowDown ArrowUp ArrowRight')
+    keys('Escape F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 PrintScreen'),
+    keys('` 1 2 3 4 5 6 7 8 9 0 - = Backspace'),
+    keys('Tab q w e r t y u i o p [ ] \\'),
+    keys('CapsLock a s d f g h j k l ; \' Enter'),
+    keys('Shift z x c v b n m , . / Shift'),
+    keys('Insert Home PageUp Delete End PageDown'),
+    keys('Control Meta Alt Emoji Globe Space AltGraph ArrowLeft ArrowDown ArrowUp ArrowRight')
   ],
   desktop: [
     keys('Escape F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 PrintScreen'),
@@ -60,26 +66,30 @@ export const LAYOUTS = Object.freeze({
     keys('Tab q w e r t y u i o p [ ] \\'),
     keys('CapsLock a s d f g h j k l ; \' Enter'),
     keys('Shift z x c v b n m , . / Shift'),
-    keys('Control Meta Alt Space AltGraph Control ArrowLeft ArrowDown ArrowUp ArrowRight'),
-    keys('Insert Home PageUp Delete End PageDown')
+    keys('Insert Home PageUp Delete End PageDown'),
+    keys('Control Meta Alt Emoji Space AltGraph Control ArrowLeft ArrowDown ArrowUp ArrowRight')
   ],
   symbols: [
     keys('1 2 3 4 5 6 7 8 9 0'),
     keys('@ # $ % & - + ( ) /'),
-    keys('= * \" \' : ; ! ? Backspace'),
+    keys('= * " \' : ; ! ? Backspace'),
     keys('Letters Globe , Space . Enter')
   ]
 });
 
 export const NUMPAD = Object.freeze([
-  keys('7 8 9 /'), keys('4 5 6 *'), keys('1 2 3 -'), keys('0 . Enter +')
+  ['NumLock',1,1], ['/',1,2], ['*',1,3], ['-',1,4],
+  ['7',2,1], ['8',2,2], ['9',2,3], ['+',2,4,2],
+  ['4',3,1], ['5',3,2], ['6',3,3],
+  ['1',4,1], ['2',4,2], ['3',4,3], ['Enter',4,4,2],
+  ['0',5,1,1,2], ['.',5,3]
 ]);
 
 export const WIDE_KEYS = Object.freeze({
   Space: 5.0, Backspace: 1.7, Enter: 1.65, Shift: 1.55,
   CapsLock: 1.65, Tab: 1.4, Control: 1.45, Alt: 1.3,
   Meta: 1.35, AltGraph: 1.3, Symbols: 1.65, Letters: 1.65,
-  Globe: 1.1, PrintScreen: 1.7
+  Globe: 1.1, Emoji: 1.1, NumLock: 1.2, PrintScreen: 1.7
 });
 
 export const THEME_ROLES = Object.freeze({
@@ -127,7 +137,7 @@ export function layoutFor(width, override = 'auto', symbols = false) {
 
 export function metricsFor(width, height, layout = 'compact', split = false, rowCount = null) {
   const rows = rowCount || LAYOUTS[layout].length;
-  const approxColumns = layout === 'desktop' ? 15 : layout === 'standard' ? 14 : 10;
+  const approxColumns = ['compact','standard'].includes(layout) ? 14 : layout === 'desktop' ? 15 : 10;
   const availableHeight = Math.max(120, height - 112);
   const byHeight = (availableHeight - (rows - 1) * 4) / rows;
   const byWidth = Math.max(25, (width - 26 - (split ? 18 : 0)) / approxColumns);
