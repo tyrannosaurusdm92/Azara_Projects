@@ -80,12 +80,18 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .sk-key.is-pressed,.sk-key[aria-pressed="true"],.sk-keyboard.is-picking .sk-key.is-target{background:var(--sk-pressed)!important;color:#fff!important}
 .sk-key:focus-visible,.sk-tool:focus-visible,.sk-accent-option:focus-visible{outline:3px solid var(--sk-focus);outline-offset:-3px}
 .sk-keyboard-grid .sk-row-divider:last-child{display:none}
-.sk-numpad{display:grid;grid-template-rows:repeat(4,var(--sk-key-h));gap:var(--sk-key-gap);min-width:0}
-.sk-numpad-row{display:flex;gap:var(--sk-key-gap)}
-.sk-numpad-row .sk-key{flex:1 1 0}
+.sk-numpad{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(5,var(--sk-key-h));gap:var(--sk-key-gap);min-width:0}
+.sk-numpad .sk-key{min-width:0}
 .sk-keys-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--sk-key-gap)}
 .sk-keyboard.has-numpad .sk-keys-layout{grid-template-columns:minmax(0,1fr) minmax(160px,22%)}
+.sk-keyboard.is-narrow.has-numpad .sk-keys-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto}
+.sk-keyboard.is-narrow.has-numpad .sk-numpad{width:min(100%,320px);justify-self:center;grid-template-columns:repeat(4,minmax(42px,1fr))}
 .sk-numpad[hidden]{display:none!important}
+.sk-emoji-picker{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px;max-height:180px;overflow:auto;margin-top:6px;padding:6px;border:1.5px solid var(--sk-accent-border);border-radius:10px;background:var(--sk-accent);color:var(--sk-accent-text)}
+.sk-emoji-picker[hidden]{display:none!important}
+.sk-emoji-option{min-width:0;min-height:38px;border:1px solid var(--sk-key-border);border-radius:8px;background:var(--sk-key);color:var(--sk-key-text);font-size:clamp(17px,4vw,23px);line-height:1}
+.sk-emoji-option:hover{background:var(--sk-pressed)}
+.sk-emoji-option:focus-visible{outline:3px solid var(--sk-focus);outline-offset:1px}
 .sk-status{font-size:11px;color:var(--sk-toolbar-text);opacity:.9;padding:3px 4px 0;min-height:16px}
 .sk-keyboard.is-docked .sk-resize-handle:not([data-edge="n"]){display:none}
 .sk-resize-handle{position:absolute;z-index:20;display:block;pointer-events:auto;touch-action:none;user-select:none;-webkit-user-select:none}
@@ -138,7 +144,9 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
   .sk-tool{min-width:35px;min-height:34px;padding:3px 5px;font-size:12px}
   .sk-keyboard-body{padding:4px 3px 7px}
   .sk-design-panel{top:4px;right:4px;width:calc(100vw - 8px);max-height:53dvh}
+  .sk-keyboard.is-narrow.has-numpad .sk-numpad{max-width:min(100%,320px)}
 }
+@media(max-width:400px){.sk-emoji-picker{grid-template-columns:repeat(6,minmax(0,1fr))}}
 @media(max-height:570px) and (orientation:landscape){
   .sk-keyboard.is-docked{max-height:84dvh}
   .sk-keyboard-body{padding:3px}
