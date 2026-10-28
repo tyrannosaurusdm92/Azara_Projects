@@ -2,7 +2,7 @@
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
 const language=$('wh-language-frame'),aza=$('wh-aza-book-frame'),savanski=$('wh-kb-frame');
-const overlay=$('wh-language-overlay');
+const overlay=$('wh-language-overlay'),panel=$('wh-keyboard-panel');
 // Keep the studio inside the main column so the six era channels remain reachable.
 document.querySelector('.shell-main').append(overlay);
 const topbar=document.querySelector('.app-topbar');

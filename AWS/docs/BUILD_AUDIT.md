@@ -1,7 +1,7 @@
 # Merged package QA summary
 
 - Exactly **one HTML entry point** (`index.html`), with 2 accessible tabs.
-- **21 visible letter keys**, exact order `ABDEGHIJKLMNOPRSTUWYZ`, and no X.
+- **23 visible letter keys**, exact order `ABDEFGHIJKLMNOPRSTUVWYZ`, and no X.
 - **24 corrected accents**, 4 special marks, **3 per-letter maximum** (shared accent/special count).
 - 4 original TTF fonts included byte-identical; no unsupported Ancient TTF fabricated.
 - **323** original evolution artwork images/SVGs included byte-identical (all present).

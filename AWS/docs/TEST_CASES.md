@@ -2,7 +2,7 @@
 
 ## Tab 1 / Canonical accent meanings
 
-1. Exactly 21 visible keys: `ABDEGHIJKLMNOPRSTUWYZ`, with no standalone X key.
+1. Exactly 23 visible keys: `ABDEFGHIJKLMNOPRSTUVWYZ`, with no standalone X key; F and V use their B-family Khmer glyph-plus-accent mappings.
 2. Accent table contains exactly 24 main accents and four distinct structural markers.
 3. Hold B offers B, F, V and plain W. The W key offers **only accented W**.
 4. All Modern base letters may receive all 24 accent choices, subject to sound compatibility rules.

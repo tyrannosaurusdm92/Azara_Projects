@@ -1,13 +1,13 @@
 {
   "title": "Aza'raan Language Studio",
-  "version": "2026.10.27-best-of-both",
+  "version": "2026.10.28-sound-choice-keyboard",
   "eras": [
     "Archaic",
     "Classical",
     "Traditional",
     "Modern"
   ],
-  "keyOrder": "ABDEGHIJKLMNOPRSTUWYZ",
+  "keyOrder": "ABDEFGHIJKLMNOPRSTUVWYZ",
   "letterMap": {
     "A": "ឯ",
     "B": "ប",

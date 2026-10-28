@@ -9,6 +9,11 @@
   const model = {era:'Modern',font:null,source:null,selected:0,baseline:0,spacing:0,busy:false,proofFace:null,proofUrl:null,dirty:false};
   const appliedKey='writerhelper-era-fonts-v1';
   let applied={};try{applied=JSON.parse(localStorage.getItem(appliedKey)||'{}')}catch{}
+  const glyphRegistryKey='writerhelper-glyph-sound-registry-v1';
+  let glyphRegistry={version:1,slots:{}};
+  try{glyphRegistry=JSON.parse(localStorage.getItem(glyphRegistryKey)||'{"version":1,"slots":{}}')}catch{}
+  if(!glyphRegistry||typeof glyphRegistry!=='object')glyphRegistry={version:1,slots:{}};
+  if(!glyphRegistry.slots||typeof glyphRegistry.slots!=='object')glyphRegistry.slots={};
   const installed=new WeakMap();
   async function restoreApplied(){
     const records=await window.LuxuryStore.allFonts();
@@ -283,6 +288,27 @@
   const data = () => model.font?.get();
   const current = () => data()?.glyf[model.selected] || null;
   const hex = cp => Number.isInteger(cp)?'U+'+cp.toString(16).toUpperCase().padStart(4,'0'):'';
+  const slotKey=(cp,era=model.era)=>era+'|'+hex(cp);
+  const saveGlyphRegistry=()=>localStorage.setItem(glyphRegistryKey,JSON.stringify(glyphRegistry));
+  const assignmentForGlyph=glyph=>{
+    const cp=glyph?.unicode?.[0];return Number.isInteger(cp)?glyphRegistry.slots[slotKey(cp)]||null:null;
+  };
+  function fillGlyphAssignment(glyph){
+    const cp=glyph?.unicode?.[0],saved=assignmentForGlyph(glyph);
+    $('wh-glyph-category').value=saved?.category||((cp>=0x17b4&&cp<=0x17dd)?'accent':'letter');
+    $('wh-glyph-sound').value=saved?.sound||'';$('wh-glyph-ipa').value=saved?.ipa||'';
+    $('wh-glyph-family').value=saved?.family||'A';
+  }
+  function assignmentFromFields(glyph=current()){
+    return {era:model.era,unicode:[...(glyph?.unicode||[])],fontIndex:model.selected,glyphName:glyph?.name||'',category:$('wh-glyph-category').value,
+      sound:$('wh-glyph-sound').value.trim(),ipa:$('wh-glyph-ipa').value.trim(),family:$('wh-glyph-family').value,retired:false};
+  }
+  function storeAssignment(glyph=current(),record=assignmentFromFields(glyph)){
+    if(!glyph?.unicode?.length)throw Error('Assign a Unicode code point to this glyph first.');
+    for(const cp of glyph.unicode)glyphRegistry.slots[slotKey(cp)]={...record,unicode:[...glyph.unicode],fontIndex:model.selected,glyphName:glyph.name||'',era:model.era};
+    saveGlyphRegistry();
+  }
+  function retiredAt(index){return Object.values(glyphRegistry.slots).some(record=>record?.era===model.era&&record.retired&&record.fontIndex===index);}
   const code = value => {
     const clean=String(value||'').trim().replace(/^U\+/i,'');
     const cp=parseInt(clean,16);
@@ -430,12 +456,14 @@
     const host=$('wh-font-glyph-list'),search=$('wh-font-search').value.trim().toLowerCase();
     host.replaceChildren();
     data().glyf.forEach((glyph,index)=>{
+      if(retiredAt(index))return;
       const label=(glyph.name||'glyph '+index)+' '+(glyph.unicode||[]).map(hex).join(' ');
       if(search&&!label.toLowerCase().includes(search))return;
       const button=document.createElement('button');button.type='button';button.textContent=label;
       button.setAttribute('role','option');button.setAttribute('aria-selected',String(index===model.selected));
       button.onclick=()=>select(index);host.append(button);
     });
+    renderRetiredSlots();
   }
   function select(index){
     const glyph=data()?.glyf[index];if(!glyph)return;
@@ -445,8 +473,33 @@
     $('wh-font-codepoint').value=(glyph.unicode||[]).map(hex).join(', ');
     $('wh-font-glyph-name').value=glyph.name||'';
     $('wh-font-advance').value=glyph.advanceWidth??0;
+    fillGlyphAssignment(glyph);
     [...$('wh-font-glyph-list').children].forEach(b=>b.setAttribute('aria-selected',String(b.textContent===(glyph.name||'glyph '+index)+' '+(glyph.unicode||[]).map(hex).join(' '))));
     draw(glyph);
+  }
+  function renderRetiredSlots(){
+    const host=$('wh-font-retired-list');if(!host)return;
+    host.replaceChildren();const records=new Map();
+    for(const record of Object.values(glyphRegistry.slots)){
+      if(record?.era===model.era&&record.retired&&Number.isInteger(record.fontIndex))records.set(record.fontIndex,record);
+    }
+    if(!records.size){host.textContent='No retired glyph slots.';return}
+    for(const record of [...records.values()].sort((a,b)=>(a.unicode?.[0]||0)-(b.unicode?.[0]||0))){
+      const button=document.createElement('button');button.type='button';
+      button.textContent=(record.unicode||[]).map(hex).join(' ')+(record.sound?' · '+record.sound:'')+' · Restore';
+      button.title=[record.category,record.ipa,record.family+' family'].filter(Boolean).join(' · ');
+      button.onclick=()=>restoreRetiredSlot(record);host.append(button);
+    }
+  }
+  function restoreRetiredSlot(record){
+    const glyph=data()?.glyf[record.fontIndex];if(!glyph){status('This retired slot no longer exists in the current font.');return}
+    const points=record.unicode||[];
+    if(data().glyf.some((other,index)=>index!==record.fontIndex&&other.unicode?.some(cp=>points.includes(cp)))){
+      status('That Unicode slot is already assigned to another glyph.');return;
+    }
+    glyph.unicode=[...points];glyph.name=record.glyphName||glyph.name;
+    for(const cp of points){const key=slotKey(cp);if(glyphRegistry.slots[key])glyphRegistry.slots[key]={...glyphRegistry.slots[key],retired:false,fontIndex:record.fontIndex};}
+    saveGlyphRegistry();list();select(record.fontIndex);markDirty();status('Restored '+points.map(hex).join(' ')+' with its saved sound assignment.');
   }
   function draw(glyph){
     const canvas=$('wh-font-canvas'),ctx=canvas.getContext('2d');
@@ -514,7 +567,7 @@
     for(const glyph of data().glyf){if(glyph.advanceWidth>0)glyph.advanceWidth=Math.max(1,glyph.advanceWidth+delta)}
     model.spacing=next;$('wh-font-spacing-value').textContent=String(next);select(model.selected);markDirty();
   }
-  function svgImport(text){
+  function prepareSvg(text){
     const doc=new DOMParser().parseFromString(text,'image/svg+xml');
     if(doc.querySelector('parsererror')||doc.documentElement.localName!=='svg')throw Error('Upload a valid SVG with outlined paths.');
     for(const node of [...doc.querySelectorAll('script,foreignObject,image,use,text,style')])node.remove();
@@ -522,8 +575,12 @@
     const imported=F.createFont(svg,{type:'svg',combinePath:true}).get();
     const outline=imported.glyf.find(g=>g.contours?.length);
     if(!outline)throw Error('The SVG has no supported vector outlines. Convert text or strokes to paths first.');
+    return {svg,outline,upm:imported.head.unitsPerEm||1024};
+  }
+  function svgImport(text){
+    const {outline,upm}=prepareSvg(text);
     invalidatePackageVector();
-    const target=current(),ratio=(data().head.unitsPerEm||1000)/(imported.head.unitsPerEm||1024);
+    const target=current(),ratio=(data().head.unitsPerEm||1000)/upm;
     target.contours=outline.contours.map(contour=>contour.map(p=>({x:Math.round(p.x*ratio),y:Math.round(p.y*ratio),onCurve:p.onCurve!==false})));
     const points=target.contours.flat();
     target.xMin=Math.min(...points.map(p=>p.x));target.xMax=Math.max(...points.map(p=>p.x));
@@ -542,17 +599,79 @@
     const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
     return geometry.traceMask(geometry.rasterMask(pixels,canvas.width,canvas.height,$('wh-font-ink').value,number($('wh-font-threshold').value,170)),canvas.width,canvas.height);
   }
+  function matchingRetiredSlot(){
+    const category=$('wh-glyph-category').value,family=$('wh-glyph-family').value;
+    const sound=$('wh-glyph-sound').value.trim().toLocaleLowerCase();
+    const unique=new Map();
+    for(const record of Object.values(glyphRegistry.slots)){
+      if(record?.era!==model.era||!record.retired||record.category!==category||record.family!==family)continue;
+      if(sound&&String(record.sound||'').trim().toLocaleLowerCase()!==sound)continue;
+      unique.set(record.fontIndex,record);
+    }
+    return [...unique.values()].sort((a,b)=>(a.unicode?.[0]||0)-(b.unicode?.[0]||0))[0]||null;
+  }
   async function uploadGlyph(file){
     if(!file||!current())return;
     if(file.size>8*1024*1024)throw Error('Glyph image is too large (8 MB maximum).');
     const text=/\.png$/i.test(file.name)?await pngToSvg(file):await file.text();
+    const parsed=prepareSvg(text);model.stagedSvg=parsed.svg;model.stagedFile=file.name;model.stagedFileObject=file;model.stagedTargetIndex=model.selected;
+    const retired=matchingRetiredSlot();model.stagedRetired=retired;
+    const review=$('wh-glyph-upload-review');review.hidden=false;
+    $('wh-glyph-upload-status').textContent=retired?
+      file.name+' is ready to replace '+(retired.unicode||[]).map(hex).join(' ')+' ('+retired.category+', '+retired.family+' family). Review the sound and IPA, then approve or cancel.':
+      file.name+' is ready for '+(current().unicode||[]).map(hex).join(' ')+' ('+$('wh-glyph-category').value+', '+$('wh-glyph-family').value+' family). Review the sound and IPA, then approve or cancel.';
+    status('Glyph staged for review. No outline or Unicode slot has changed yet.');
+  }
+  async function approveGlyphUpload(){
+    if(!model.stagedSvg){status('Choose a glyph file before approving.');return}
+    const form=assignmentFromFields(),retired=matchingRetiredSlot(),index=retired?.fontIndex??model.stagedTargetIndex;
+    const target=data()?.glyf[index];if(!target){status('The glyph target is no longer available.');return}
+    if(retired){
+      const points=retired.unicode||[];
+      if(data().glyf.some((glyph,i)=>i!==index&&glyph.unicode?.some(cp=>points.includes(cp)))){status('The saved Unicode slot is already assigned elsewhere.');return}
+      target.unicode=[...points];target.name=retired.glyphName||target.name||('glyph_'+hex(points[0]));
+    }
+    model.selected=index;
     try{
-      const bitmap=await createImageBitmap(file),layer=newDrawingLayer('Imported '+file.name.slice(0,40)),ctx=layerContext(layer);
-      const scale=Math.min(430/bitmap.width,430/bitmap.height),width=bitmap.width*scale,height=bitmap.height*scale;
-      ctx.drawImage(bitmap,(512-width)/2,(512-height)/2,width,height);bitmap.close();
-      drawingLayers.push(layer);activeDrawingLayerId=layer.id;renderDrawingLayers();saveDrawingDraft();
-    }catch(error){console.warn('Could not keep an editable raster copy of this glyph file:',error)}
-    svgImport(text);status('Glyph outline imported; available artwork is kept as a separate layer.');
+      svgImport(model.stagedSvg);
+      try{
+        const stagedFile=model.stagedFileObject;
+        if(stagedFile){
+          const bitmap=await createImageBitmap(stagedFile),layer=newDrawingLayer('Imported '+model.stagedFile.slice(0,40)),ctx=layerContext(layer);
+          const scale=Math.min(430/bitmap.width,430/bitmap.height),width=bitmap.width*scale,height=bitmap.height*scale;
+          ctx.drawImage(bitmap,(512-width)/2,(512-height)/2,width,height);bitmap.close();
+          drawingLayers.push(layer);activeDrawingLayerId=layer.id;renderDrawingLayers();saveDrawingDraft();
+        }
+      }catch(error){console.warn('Could not keep an editable raster copy of this glyph file:',error)}
+      storeAssignment(target,{...form,unicode:[...(target.unicode||[])],fontIndex:index,glyphName:target.name||'',era:model.era,retired:false});
+      model.stagedSvg=null;model.stagedFile='';model.stagedFileObject=null;model.stagedRetired=null;$('wh-glyph-upload-review').hidden=true;
+      list();select(index);markDirty();status('Approved glyph upload and sound assignment. Its existing Khmer Unicode slot is unchanged.');
+    }catch(error){status('Glyph approval failed: '+error.message)}
+  }
+  function cancelGlyphUpload(){model.stagedSvg=null;model.stagedFile='';model.stagedFileObject=null;model.stagedRetired=null;$('wh-glyph-upload-review').hidden=true;status('Glyph upload cancelled; the current outline and Unicode slot remain unchanged.')}
+  function deleteSelectedGlyph(){
+    const glyph=current(),points=[...(glyph?.unicode||[])];
+    if(!points.length){status('The selected glyph has no assigned Unicode slot.');return}
+    const nonstandard=points.every(cp=>cp>=0xe000&&cp<=0xf8ff||cp>=0xf0000&&cp<=0xffffd||cp>=0x100000&&cp<=0x10fffd);
+    if(!nonstandard){status('Only created non-standard private-use glyph slots can be deleted here. Standard Khmer characters and accents stay assigned.');return}
+    const record={...assignmentFromFields(glyph),retired:true,unicode:points,fontIndex:model.selected,glyphName:glyph.name||'',retiredAt:new Date().toISOString()};
+    for(const cp of points)glyphRegistry.slots[slotKey(cp)]={...record};
+    saveGlyphRegistry();glyph.unicode=[];list();markDirty();
+    const next=data().glyf.findIndex((item,index)=>index!==model.selected&&!retiredAt(index)&&item.unicode?.length);
+    if(next>=0)select(next);else{draw(glyph);fillGlyphAssignment(glyph)}
+    status('Deleted the glyph mapping and preserved its '+points.map(hex).join(' ')+' '+record.category+' slot, sound, IPA and family for upload or restore.');
+  }
+  function duplicateSelectedGlyph(){
+    const source=current();if(!source){status('Select a glyph to duplicate.');return}
+    try{
+      const cp=code($('wh-font-new-codepoint').value);
+      if(data().glyf.some(g=>g.unicode?.includes(cp)))throw Error('That Unicode slot already exists.');
+      const clone=JSON.parse(JSON.stringify(source));clone.unicode=[cp];clone.name=(source.name||'glyph')+'_'+cp.toString(16).toUpperCase();
+      data().glyf.push(clone);model.selected=data().glyf.length-1;
+      const saved={...assignmentFromFields(source),unicode:[cp],fontIndex:model.selected,glyphName:clone.name,era:model.era,retired:false};
+      glyphRegistry.slots[slotKey(cp)]=saved;saveGlyphRegistry();list();select(model.selected);$('wh-font-new-codepoint').value='';markDirty();
+      status('Duplicated the glyph outline and its sound assignment to '+hex(cp)+'.');
+    }catch(error){status(error.message)}
   }
   const glyphStudioEraName=id=>({proto:'Proto',ancient:'Ancient',preclassical:'Archaic',archaic:'Archaic',classical:'Classical',traditional:'Traditional',modern:'Modern'})[String(id||'').toLowerCase()];
   function glyphStudioContours(source){
@@ -712,6 +831,14 @@
     $('wh-font-close').onclick=()=>{$('wh-font-workshop').hidden=true;};
     $('wh-font-era').onchange=event=>{void loadEra(event.target.value)};
     $('wh-font-search').oninput=list;
+    $('wh-glyph-assignment-save').onclick=()=>{
+      try{storeAssignment();status('Saved the glyph sound, IPA, slot type and grammar family without changing its Unicode.');}
+      catch(error){status(error.message)}
+    };
+    $('wh-font-delete-glyph').onclick=deleteSelectedGlyph;
+    $('wh-font-duplicate-glyph').onclick=duplicateSelectedGlyph;
+    $('wh-glyph-upload-approve').onclick=approveGlyphUpload;
+    $('wh-glyph-upload-cancel').onclick=cancelGlyphUpload;
     for(const id of Object.values(fields))$(id).oninput=updateMetadata;
     $('wh-font-baseline').oninput=e=>shiftBaseline(e.target.value);
     $('wh-font-spacing').oninput=e=>changeSpacing(e.target.value);
@@ -722,19 +849,19 @@
       try{
         const glyph=current(),points=e.target.value.trim()?e.target.value.split(',').map(code):[];
         if(data().glyf.some(g=>g!==glyph&&g.unicode?.some(cp=>points.includes(cp))))throw Error('That Unicode slot belongs to another glyph.');
-        const oldKey=drawingKey(model.selected);let saved=drawingDrafts.get(oldKey);
-        if(!saved)try{saved=await readDrawingDraft(oldKey,model.selected)}catch(error){console.warn('Could not migrate glyph artwork:',error)}
-        glyph.unicode=[...new Set(points)];
+        const previous=[...(glyph.unicode||[])],savedAssignment=assignmentForGlyph(glyph),unique=[...new Set(points)];
+        const oldKey=drawingKey(model.selected);let drawingSaved=drawingDrafts.get(oldKey);
+        if(!drawingSaved)try{drawingSaved=await readDrawingDraft(oldKey,model.selected)}catch(error){console.warn('Could not migrate glyph artwork:',error)}
+        for(const cp of previous){const key=slotKey(cp),record=glyphRegistry.slots[key];if(record?.fontIndex===model.selected)delete glyphRegistry.slots[key]}
+        glyph.unicode=unique;
         const newKey=drawingKey(model.selected);
-        if(saved&&oldKey!==newKey){drawingDrafts.set(newKey,saved);drawingDrafts.delete(oldKey);await persistDrawingDraft(newKey,saved);await persistDrawingDraft(oldKey,null)}
-        list();markDirty()
-      }catch(error){status(error.message);select(model.selected)}
-    };
-    $('wh-font-glyph-name').onchange=e=>{
-      const glyph=current();glyph.name=e.target.value.trim();
-      const key=drawingKey(model.selected),saved=drawingDrafts.get(key);
-      if(saved?.metadata){const next={...saved,metadata:{...saved.metadata,name:glyph.name}};drawingDrafts.set(key,next);void persistDrawingDraft(key,next).catch(error=>console.warn('Could not save glyph name:',error))}
-      list();markDirty();
+        if(drawingSaved&&oldKey!==newKey){drawingDrafts.set(newKey,drawingSaved);drawingDrafts.delete(oldKey);await persistDrawingDraft(newKey,drawingSaved);await persistDrawingDraft(oldKey,null)}
+        if(unique.length&&(savedAssignment||$('wh-glyph-sound').value.trim()||$('wh-glyph-ipa').value.trim())){
+          const record={...(savedAssignment||{}),...assignmentFromFields(glyph),unicode:unique,fontIndex:model.selected,glyphName:glyph.name||'',era:model.era,retired:false};
+          for(const cp of unique)glyphRegistry.slots[slotKey(cp)]={...record};saveGlyphRegistry();
+        }
+        list();fillGlyphAssignment(glyph);markDirty()}
+      catch(error){status(error.message);select(model.selected)}
     };
     $('wh-font-advance').onchange=e=>{current().advanceWidth=Math.max(0,number(e.target.value));draw(current());markDirty()};
     $('wh-font-transform').onclick=()=>{
@@ -805,9 +932,10 @@
     $('wh-font-export-azglyph').onclick=()=>exportGlyphStudioProject().catch(error=>status('Glyph project export failed: '+error.message));
     $('wh-font-export-json').onclick=()=>{
       try{const bytes=serialize();let binary='';for(const b of bytes)binary+=String.fromCharCode(b);
-        const project={format:'WriterHelper-font-project/v1',era:model.era,ttf:btoa(binary)};
+        const glyphAssignments=Object.fromEntries(Object.entries(glyphRegistry.slots).filter(([,record])=>record?.era===model.era));
+        const project={format:'WriterHelper-font-project/v1',era:model.era,ttf:btoa(binary),glyphAssignments};
         download(JSON.stringify(project),`${model.era}-font-project.json`,'application/json');
-        status('Exported a portable font project with metadata, outlines, and layout tables.');
+        status('Exported a portable font project with metadata, Unicode slots, glyph sound assignments and layout tables.');
       }catch(error){status('Project export failed: '+error.message)}
     };
     $('wh-font-import-json').onchange=async e=>{
@@ -817,7 +945,9 @@
         const project=JSON.parse(await file.text());
         if(project.format==='WriterHelper-font-project/v1'&&eras.includes(project.era)&&typeof project.ttf==='string'){
           const raw=atob(project.ttf),bytes=Uint8Array.from(raw,c=>c.charCodeAt(0));
-          $('wh-font-era').value=project.era;await loadBuffer(bytes,project.era,true);markDirty();status('Imported '+project.era+' font project.');
+          $('wh-font-era').value=project.era;await loadBuffer(bytes,project.era,true);
+          if(project.glyphAssignments&&typeof project.glyphAssignments==='object')glyphRegistry.slots={...glyphRegistry.slots,...project.glyphAssignments};
+          saveGlyphRegistry();list();markDirty();status('Imported '+project.era+' font project and its sound/IPA assignments.');
         }else await importGlyphStudioProject(project);
       }catch(error){status('Project import failed: '+error.message)}e.target.value='';
     };

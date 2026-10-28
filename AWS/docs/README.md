@@ -6,9 +6,9 @@
 
 ## What was combined
 
-This package combines the **Complete** edition's interactive six-row evolution chart, 52 pictorial roots, historic glyphs, era-specific custom letter fonts, physical 21-key keyboard, B/W hold selector, overlay-based visual accent composer, Khmer copy/paste, and saved manuscript, with the **Canonical 24 Accents** edition's sound-to-script transcriber, exact phonetic recipes, character-name dictionary, pronunciation teaching, sound previews, and pronunciation rules. Both originals' artwork and source records are retained.
+This package combines the **Complete** edition's interactive six-row evolution chart, 52 pictorial roots, historic glyphs, era-specific custom letter fonts, physical 23-key keyboard, B/W hold selector, overlay-based visual accent composer, Khmer copy/paste, and saved manuscript, with the **Canonical 24 Accents** edition's sound-to-script transcriber, exact phonetic recipes, character-name dictionary, pronunciation teaching, sound previews, and pronunciation rules. Both originals' artwork and source records are retained.
 
-* **Typing:** `ABDEGHIJKLMNOPRSTUWYZ` (21 visible keys, no X). Hold or right-click a key to select visual accent variants. B offers B/F/V/plain W, while the W key only produces accented W. Enter/Space on a focused letter also opens the composer.
+* **Typing:** `ABDEFGHIJKLMNOPRSTUVWYZ` (23 visible keys, no X). Hold or right-click a key to choose its Letter Evolution Table sounds and accent variants. F and V are direct keys; B-family choices also include B/F/V/W. Enter/Space on a focused letter also opens the composer.
 * **Four input fonts:** Archaic, Classical, Traditional, Modern. All standard era font files are at `assets/ttf`.
 * **24 canonical accents:** Same Khmer codepoints, new sound meanings. The 24-row chart in the Typing tab uses `json/azaaraan-config.json`; `json/active-accent-meanings.json` and `json/phonetics.json` document the same definitions. The core descriptions are in `docs/ACCENTS.md`.
 * **Up to three stacked marks** per letter, including attached structural marks. There is at most **one Short/Long vowel accent** per letter: choosing a different one replaces the previous vowel. **Base** excludes other ordinary accents. The three-mark visual composer uses authentic custom accent outline SVGs, not the native Khmer appearance.

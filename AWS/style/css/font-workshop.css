@@ -31,6 +31,16 @@
 #wh-font-proof{font-kerning:normal}
 #wh-font-canvas{width:100%;height:310px;background:#f2e8d8;border-radius:9px;border:1px solid #b07a3a;margin-top:12px}
 .wh-font-glyph-editor p{font-size:12px;color:#d4c6b6}
+.wh-glyph-sound-assignment{margin-top:16px;padding:14px;border:1px solid #81653f;border-radius:10px;background:#162b31}
+.wh-glyph-sound-assignment h4{margin:0 0 6px;color:#f0cc8a;font:700 16px Georgia,serif}
+.wh-glyph-sound-assignment>p{margin:5px 0 12px;color:#d4c6b6;font-size:12px;line-height:1.45}
+.wh-glyph-upload-review{margin-top:12px;padding:12px;border:1px solid #c49b5b;border-radius:8px;background:#243a3b}
+.wh-glyph-upload-review[hidden]{display:none}
+.wh-glyph-upload-review strong,.wh-glyph-retired>strong{color:#f0cc8a}
+.wh-glyph-retired{display:grid;gap:7px;margin-top:12px;padding-top:10px;border-top:1px solid #56666b;font-size:12px}
+#wh-font-retired-list{display:flex;flex-wrap:wrap;gap:7px}
+#wh-font-retired-list button{font-size:12px}
+.wh-glyph-sound-assignment button:disabled{opacity:.55;cursor:not-allowed}
 .wh-font-preview{display:grid;gap:10px}#wh-font-proof{min-height:65px;padding:14px;background:#f2e8d8;color:#16272c;border-radius:8px;font-size:32px;overflow-wrap:anywhere}
 .wh-font-actions{display:flex;flex-wrap:wrap;gap:9px;align-items:center}.wh-font-upload-button{padding:7px 9px;border-radius:7px}.wh-font-upload-button input{display:none}
 #wh-font-status{margin:0;color:#8de0dc;min-height:20px}

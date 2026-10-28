@@ -5,18 +5,63 @@ const ACC=new Map(C.accents.map(a=>[a.id,a]));
 const SPEC=new Map(C.specials.map(a=>[a.id,a]));
 const MARKS=new Map([...ACC,...SPEC]);
 const VOWELS=new Set(['C01','C02','C03','C04','C05','C06','C07']);
+const STRUCTURAL=new Set(['S01','S02','S03','S04']);
+const EMPHASIS=new Set(['S03','S04']);
+const EVOLUTION=(()=>{try{return JSON.parse($('letterData')?.textContent||'{}')}catch{return {roots:[]}}})();
+const GLYPH_REGISTRY_KEY='writerhelper-glyph-sound-registry-v1';
+const SOUND_SLOTS={B:[5],F:[7],V:[18]};
+const SOUND_RECIPES={
+ 2:['T',['C01','K01']],3:['T',['K03']],4:['N',['C08']],5:['B',[]],6:['D',[]],7:['B',['C11']],
+ 8:['G',[]],9:['J',[]],10:['K',[]],11:['M',[]],12:['P',[]],13:['N',[]],14:['R',[]],15:['S',[]],
+ 16:['T',['K04']],17:['T',[]],18:['B',['C09']],19:['Z',[]],20:['N',['C10']],21:['S',['K04']],22:['H',[]],23:['L',[]],
+ 24:['K',['C09']],25:['K',['K02']],26:['A',['C05']],27:['A',['C10']],28:['A',['C09']],29:['O',['C07']],30:['E',['C02']],
+ 31:['A',['C10','C02']],32:['Y',['C07']],33:['O',['C10']],34:['A',['C01']],35:['I',['C10']],36:['E',['C06']],37:['U',['C04']],
+ 38:['I',['C03']],39:['O',['K04']],40:['O',['C09']],41:['W',['C05']],42:['W',['C02']],43:['W',['C03']],44:['W',['C07']],
+ 45:['W',['K05']],46:['Y',['C05']],47:['Y',['C02']],48:['Y',['C03']],49:['Y',['C06']],50:['Y',['C07']],51:['Y',['K05']]
+};
 const isOrdinary=id=>ACC.has(id);
 function markAllowed(marks,id){
  if(marks.includes(id))return {allowed:false,reason:'Mark already attached'};
  const others=marks.filter(x=>x!==id);
+ if(STRUCTURAL.has(id)&&others.filter(x=>STRUCTURAL.has(x)).length>=2)return {allowed:false,reason:'A glyph can carry at most two special signs.'};
+ if(EMPHASIS.has(id)&&others.some(x=>EMPHASIS.has(x)))return {allowed:false,reason:'Choose either previous-syllable or next-syllable emphasis.'};
  if(id==='K05'&&others.some(isOrdinary))return {allowed:false,reason:'Base must be the only ordinary accent'};
  if(id!=='K05'&&isOrdinary(id)&&others.includes('K05'))return {allowed:false,reason:'Remove Base before adding other ordinary accents'};
  return {allowed:true};
+}
+function canApplyMark(marks,id){
+ if(marks.includes(id))return false;
+ if(era==='Archaic'&&SPEC.has(id))return false;
+ const effective=VOWELS.has(id)?marks.filter(x=>!VOWELS.has(x)):marks;
+ if(effective.length>=C.maxMainAndSpecialStack)return false;
+ return markAllowed(effective,id).allowed;
 }
 
 const keyList=Array.from(C.keyOrder);
 let era='Modern',tokens=[],cursor=0,selected=-1,paletteLetter='T',draft=-1,activeVariant='T';
 const storage='azaaraan_studio_merged_20261027'+(window.frameElement?.id==='wh-aza-book-frame'?':book':':language');
+function glyphAssignmentForUnicode(unicode){
+ try{
+  const registry=JSON.parse(localStorage.getItem(GLYPH_REGISTRY_KEY)||'{}'),slots=registry.slots||{};
+  const characters=[...String(unicode||'')],rawKeys=[];
+  if(characters.length)rawKeys.push(characters.map(ch=>'U+'+ch.codePointAt(0).toString(16).toUpperCase().padStart(4,'0')).join(' '));
+  for(const ch of characters)rawKeys.push('U+'+ch.codePointAt(0).toString(16).toUpperCase().padStart(4,'0'));
+  const keys=rawKeys.flatMap(key=>[era+'|'+key,key]);
+  return keys.map(key=>slots[key]).find(record=>record&&!record.retired&&(record.sound||record.ipa))||null;
+ }catch{return null}
+}
+function assignmentForToken(token){
+ const marks=(token.marks||[]).slice().reverse();
+ for(const id of marks){const record=glyphAssignmentForUnicode(MARKS.get(id)?.khmer);if(record)return record}
+ return glyphAssignmentForUnicode(C.letterMap[token.base]);
+}
+function applyCustomAssignment(token){
+ const record=assignmentForToken(token);if(!record)return false;
+ if(record.ipa)token.ipa='/'+String(record.ipa).replace(/^\/+|\/+$/g,'')+'/';
+ if(record.sound)token.sound=record.sound;
+ if(record.family)token.soundFamily=record.family;
+ return Boolean(record.ipa||record.sound);
+}
 function save(){try{localStorage.setItem(storage,JSON.stringify({era,tokens,cursor}))}catch{}}
 function setStatus(s){$('status').textContent=s}
 function fontName(){return 'Az'+era}
@@ -80,9 +125,9 @@ function switchEra(next){if(!C.eras.includes(next))return;era=next;$('era').valu
   // Archaic whole-glyph signs may remain in already composed writing to preserve history.
  }
  buildKeyboard();buildSpecials();render();setStatus('Switched to '+era+' glyphs. Stored Khmer Unicode remains unchanged.');}
-function keyboardKey(label){const btn=mk('button','key era-'+era.toLowerCase());btn.type='button';btn.dataset.letter=label;btn.setAttribute('aria-label',label+' — press and hold for accents');
- btn.append(mk('span','key-label',label));const font=mk('span','key-art',C.letterMap[label]);btn.append(font);
- btn.append(mk('span','key-hint',label==='B'?'B F V W':label==='W'?'accent only':'hold ✦'));
+function keyboardKey(label){const btn=mk('button','key era-'+era.toLowerCase());btn.type='button';btn.dataset.letter=label;btn.setAttribute('aria-label',label+' — press and hold for sounds and accents');
+ btn.append(mk('span','key-label',label));const soundGlyph=label==='F'?tokenUnicode({type:'glyph',base:'B',marks:['C11']}):label==='V'?tokenUnicode({type:'glyph',base:'B',marks:['C09']}):C.letterMap[label];const font=mk('span','key-art',soundGlyph);btn.append(font);
+ btn.append(mk('span','key-hint',C.familyVariants.B.includes(label)?'B · F · V · W':label==='W'?'accented glide':'hold for sounds'));
  let longTimer=null,wasHold=false,startX=0,startY=0;
  const clean=()=>{clearTimeout(longTimer);longTimer=null;btn.classList.remove('is-held')};
  btn.addEventListener('pointerdown',e=>{if(e.button!==0&&e.pointerType==='mouse')return;wasHold=false;startX=e.clientX;startY=e.clientY;btn.classList.add('is-held');longTimer=setTimeout(()=>{wasHold=true;openPalette(label)},400)});
@@ -94,7 +139,7 @@ function keyboardKey(label){const btn=mk('button','key era-'+era.toLowerCase());
 }
 function buildKeyboard(){const host=$('keyboard');host.replaceChildren();keyList.forEach(label=>host.append(keyboardKey(label)));}
 function addPlain(label){if(label==='W'){openPalette('W');return}
- const t=(label==='F'?{type:'glyph',base:'B',marks:['C11']}:label==='V'?{type:'glyph',base:'B',marks:['C09']}:{type:'glyph',base:label,marks:[]});
+ const t=(label==='F'?{type:'glyph',base:'B',marks:['C11']}:label==='V'?{type:'glyph',base:'B',marks:['C09']}:{type:'glyph',base:label,marks:[]});applyCustomAssignment(t);
  insert(t);setStatus('Added '+label+'. Hold the key to add accents.');$('composition').focus({preventScroll:true});}
 function buildSpecials(){const host=$('special-keys');host.replaceChildren();
  if(era==='Archaic'){
@@ -114,19 +159,20 @@ function renderDraft(){
  $('draft-label').textContent='Letter: '+((t.base==='B'&&t.marks?.includes('C11'))?'F (B + F)':(t.base==='B'&&t.marks?.includes('C09'))?'V (B + W)':(t.base||paletteLetter));$('draft-count').textContent=(t.marks?.length||0)+'/3 stacked marks';
  $('remove-mark').disabled=!t.marks?.length;
  for(const opt of $('family-options').querySelectorAll('.family-option'))opt.classList.toggle('active',opt.dataset.base===activeVariant);
- for(const preview of $('palette').querySelectorAll('.mini-core')){preview.textContent=C.letterMap[activeVariant];preview.style.fontFamily=fontName()}
+ const variantGlyph=activeVariant==='F'?tokenUnicode({type:'glyph',base:'B',marks:['C11']}):activeVariant==='V'?tokenUnicode({type:'glyph',base:'B',marks:['C09']}):C.letterMap[activeVariant];
+ for(const preview of $('palette').querySelectorAll('.mini-core')){preview.textContent=variantGlyph;preview.style.fontFamily=fontName()}
  for(const visual of $('palette').querySelectorAll('.mini-composite'))visual.className='mini-composite era-'+era.toLowerCase();
- for(const opt of $('mark-choices').querySelectorAll('button')){opt.disabled=t.marks?.includes(opt.dataset.id)||((t.marks?.length||0)>=3&&!(VOWELS.has(opt.dataset.id)&&t.marks?.some(x=>VOWELS.has(x))))||(opt.dataset.id==='K05'&&t.marks.some(x=>isOrdinary(x)))||(isOrdinary(opt.dataset.id)&&opt.dataset.id!=='K05'&&t.marks.includes('K05'));opt.classList.toggle('selected-accent',t.marks?.includes(opt.dataset.id))}
- for(const opt of $('special-choices').querySelectorAll('button')){opt.disabled=t.marks?.includes(opt.dataset.id)||((t.marks?.length||0)>=3&&!(VOWELS.has(opt.dataset.id)&&t.marks?.some(x=>VOWELS.has(x))))||(opt.dataset.id==='K05'&&t.marks.some(x=>isOrdinary(x)))||(isOrdinary(opt.dataset.id)&&opt.dataset.id!=='K05'&&t.marks.includes('K05'));opt.classList.toggle('selected-accent',t.marks?.includes(opt.dataset.id))}
+ for(const opt of $('mark-choices').querySelectorAll('button')){opt.disabled=!canApplyMark(t.marks||[],opt.dataset.id);opt.classList.toggle('selected-accent',t.marks?.includes(opt.dataset.id))}
+ for(const opt of $('special-choices').querySelectorAll('button')){opt.disabled=!canApplyMark(t.marks||[],opt.dataset.id);opt.classList.toggle('selected-accent',t.marks?.includes(opt.dataset.id))}
 }
 function setVariant(base){
  const familyAcc=base==='F'?'C11':base==='V'?'C09':null;
  const canonicalBase=familyAcc?'B':base;
  if(draft>=0&&tokens[draft]?.type==='glyph'){
   const t=tokens[draft];const remains=(t.marks||[]).filter(id=>id!=='C11'&&id!=='C09');
-  t.base=canonicalBase;t.marks=(base==='W'?[]:familyAcc?[familyAcc,...remains.filter(x=>x!==familyAcc)]:base==='B'?remains:t.marks||[]).slice(0,3);
+  t.base=canonicalBase;t.marks=(base==='W'?[]:familyAcc?[familyAcc,...remains.filter(x=>x!==familyAcc)]:base==='B'?remains:t.marks||[]).slice(0,3);delete t.ipa;delete t.sound;
   selected=draft;render();
- } else {insert({type:'glyph',base:canonicalBase,marks:familyAcc?[familyAcc]:[]});draft=cursor-1;}
+ } else {const token={type:'glyph',base:canonicalBase,marks:familyAcc?[familyAcc]:[]};applyCustomAssignment(token);insert(token);draft=cursor-1;}
  activeVariant=base;renderDraft();
 }
 function applyMark(id){
@@ -138,25 +184,72 @@ function applyMark(id){
  const allowed=markAllowed(t.marks,id);
  if(!allowed.allowed){setStatus(allowed.reason);renderDraft();return}
  if(t.marks.length>=3){setStatus('Maximum three marks per letter, including attached structural signs.');renderDraft();return}
- t.marks.push(id);selected=draft;cursor=draft+1;render();renderDraft();setStatus('Added '+(mark.name||mark.label)+' — '+t.marks.length+'/3 marks.');
+ t.marks.push(id);if(!SPEC.has(id)){delete t.ipa;delete t.sound;applyCustomAssignment(t)}selected=draft;cursor=draft+1;render();renderDraft();setStatus('Added '+(mark.name||mark.label)+' — '+t.marks.length+'/3 marks.');
 }
-function chooseOption(mark){const button=mk('button','mark-choice');button.type='button';button.dataset.id=mark.id;button.title=mark.name||mark.label;
- const visual=mk('span','mini-composite era-'+era.toLowerCase());const miniature=mk('span','mini-core',C.letterMap[activeVariant]);miniature.style.fontFamily=fontName();visual.append(miniature);const img=mk('img','mini-mark '+(mark.placement||'top'));img.src=glyphURL(mark.id);img.alt='';visual.append(img);button.append(visual);
- button.append(mk('span','variant-label',(mark.name||mark.label)));
- button.append(mk('span','mark-meta',(mark.display||'')+' · '+mark.khmer));button.addEventListener('click',()=>applyMark(mark.id));return button;
+function chooseOption(mark){const assigned=glyphAssignmentForUnicode(mark.khmer);const button=mk('button','mark-choice');button.type='button';button.dataset.id=mark.id;button.title=(assigned?.sound||mark.name||mark.label)+(assigned?.ipa?' · '+assigned.ipa:'');
+ const variantGlyph=activeVariant==='F'?tokenUnicode({type:'glyph',base:'B',marks:['C11']}):activeVariant==='V'?tokenUnicode({type:'glyph',base:'B',marks:['C09']}):C.letterMap[activeVariant];
+ const visual=mk('span','mini-composite era-'+era.toLowerCase());const miniature=mk('span','mini-core',variantGlyph);miniature.style.fontFamily=fontName();visual.append(miniature);const img=mk('img','mini-mark '+(mark.placement||'top'));img.src=glyphURL(mark.id);img.alt='';visual.append(img);button.append(visual);
+ button.append(mk('span','variant-label',assigned?.sound||mark.name||mark.label));
+ button.append(mk('span','mark-meta',assigned?.ipa?'IPA '+assigned.ipa+' · '+mark.khmer:(mark.display||'')+' · '+mark.khmer));button.addEventListener('click',()=>applyMark(mark.id));return button;
+}
+function familyVariant(t){return t?.base==='B'&&t.marks?.includes('C11')?'F':t?.base==='B'&&t.marks?.includes('C09')?'V':t?.base||''}
+function ipaVariants(value){return String(value||'').replace(/^\/+|\/+$/g,'').split(/\s*~\s*/).map(x=>x.trim()).filter(Boolean)}
+function soundRecipe(label,root,ipa,index){
+ let [base,marks]=SOUND_RECIPES[root.slot]||[label,[]];marks=marks.slice();
+ if(root.slot===6&&index===1)base='R';
+ if(root.slot===7&&index===1){base='B';marks=['C09'];}
+ if(root.slot===15&&index===1){base='Z';marks=[];}
+ if(root.slot===5&&index===1)ipa='β';
+ if(root.slot===18&&index===1)ipa='ʋ';
+ return {base,marks,ipa:'/'+ipa+'/',family:label,sound:root.sound,rootSlot:root.slot};
+}
+function makeSoundChoices(label){
+ const host=$('sound-choices');host.replaceChildren();
+ const family=label==='F'||label==='V'?'B':label;
+ const slots=SOUND_SLOTS[label];
+ let roots=(EVOLUTION.roots||[]).filter(root=>!root.special&&root.family===family&&(!slots||slots.includes(root.slot)));
+ const choices=[];
+ for(const root of roots){
+  const alternatives=ipaVariants(root.ipa);alternatives.forEach((ipa,index)=>choices.push(soundRecipe(label,root,ipa,index)));
+ }
+ if(label==='A')choices.push({base:'A',marks:['C04'],ipa:'/ʌ/',family:'A',sound:'A (uh)',rootSlot:37,extra:true});
+ if(label==='R')choices.push({base:'R',marks:['K11'],ipa:'/r͡r/',family:'R',sound:'Rolled R (R + R)',rootSlot:14,extra:true});
+ $('sound-choice-source').textContent='Letter Evolution Table · '+choices.length+' sound choices';
+ $('sound-choices').setAttribute('aria-label',label+' sound choices');
+ for(const choice of choices){
+  const button=mk('button','sound-choice');button.type='button';
+  const choiceUnicode=(C.letterMap[choice.base]||'')+choice.marks.map(id=>MARKS.get(id)?.khmer||'').join('');
+  const assigned=glyphAssignmentForUnicode(choice.marks.map(id=>MARKS.get(id)?.khmer||'').join(''))||glyphAssignmentForUnicode(choiceUnicode)||glyphAssignmentForUnicode(C.letterMap[choice.base]);
+  button.append(mk('strong',null,assigned?.sound||choice.sound));
+  button.append(mk('span','sound-choice-ipa','/'+(assigned?.ipa||choice.ipa.replace(/^\/+|\/+$/g,''))+'/'));
+  const recipe=[choice.base,...choice.marks.map(id=>MARKS.get(id)?.name||id)].join(' + ');
+  button.append(mk('small',null,recipe+(assigned?.family?' · '+assigned.family+' family':'')));
+  button.title=(assigned?.sound||choice.sound)+' · '+(assigned?.ipa||choice.ipa)+' · '+recipe;
+  button.addEventListener('click',()=>applySoundChoice({...choice,sound:assigned?.sound||choice.sound,ipa:assigned?.ipa?'/'+assigned.ipa.replace(/^\/+|\/+$/g,'')+'/':choice.ipa,family:assigned?.family||choice.family}));
+  host.append(button);
+ }
+}
+function applySoundChoice(choice){
+ const next={type:'glyph',base:choice.base,marks:choice.marks.slice(),sound:choice.sound,ipa:choice.ipa,soundFamily:choice.family,rootSlot:choice.rootSlot};
+ if(draft>=0&&tokens[draft]?.type==='glyph'){tokens[draft]=next;selected=draft;cursor=draft+1;render()}
+ else{insert(next);draft=cursor-1}
+ activeVariant=choice.base==='B'&&choice.marks.includes('C11')?'F':choice.base==='B'&&choice.marks.includes('C09')?'V':choice.base;
+ renderDraft();setStatus('Applied '+choice.sound+' ('+choice.ipa+') using the existing Khmer glyph and accent mapping. Add a special sign or continue typing.');
 }
 function openPalette(label){
  paletteLetter=label;activeVariant=label;
- const t=tokens[selected];draft=t?.type==='glyph'&&(label===t.base||(label==='B'&&C.familyVariants.B.includes(t.base)))?selected:-1;
- if(draft>=0)activeVariant=(t.base==='B'&&t.marks?.includes('C11'))?'F':(t.base==='B'&&t.marks?.includes('C09'))?'V':t.base;
- $('palette-title').textContent=label==='B'?'B family — B, F, V & plain W':label==='W'?'W — accented forms only':label+' — Aza’raan marks';
- $('palette-hint').textContent=label==='W'?'Choose any accent. Plain W is only available under B.':'Choose a letterform, then build a single glyph with up to three stacked marks.';
+ const t=tokens[selected],variant=familyVariant(t),familyKeys=C.familyVariants.B||[];
+ draft=t?.type==='glyph'&&(label===variant||(familyKeys.includes(label)&&familyKeys.includes(variant)))?selected:-1;
+ if(draft>=0)activeVariant=variant;
+ $('palette-title').textContent=familyKeys.includes(label)?'B family — B, F, V & W':label+' — Aza’raan sounds and marks';
+ $('palette-hint').textContent='Choose a sound from the Letter Evolution Table, then add up to two special signs or other accents.';
  const families=$('family-options');families.replaceChildren();
- if(label==='B'){
+ if(familyKeys.includes(label)){
   for(const base of C.familyVariants.B){const b=mk('button','family-option');b.type='button';b.dataset.base=base;b.append(mk('strong',null,base));const line=mk('span',null,base==='W'?'Plain W':base+' letter');b.append(line);b.addEventListener('click',()=>setVariant(base));families.append(b)}
  }else if(label!=='W'){
   const b=mk('button','family-option',label+' (base)');b.type='button';b.dataset.base=label;b.addEventListener('click',()=>setVariant(label));families.append(b)
  }else families.append(mk('span','subnote','Plain W is unavailable here. Choose a mark to create accented W.'));
+ makeSoundChoices(label);
  const a=$('mark-choices');a.replaceChildren();for(const mark of C.accents)a.append(chooseOption(mark));
  const sp=$('special-choices');sp.replaceChildren();
  const allow=era!=='Archaic';$('special-heading').hidden=!allow;sp.hidden=!allow;
@@ -187,7 +280,7 @@ function parseUnicode(text){
   if(ch==='៉'){result.push({type:'sign',sign:'ʔ'});i++;continue}
   if(cp.slice(i,i+2).join('')==='្ឃ'){result.push({type:'sign',sign:'¡'});i+=2;continue}
   result.push({type:'literal',value:ch});i++;
- }return result;
+ }for(const token of result)if(token.type==='glyph')applyCustomAssignment(token);return result;
 }
 async function copyOutput(){const s=output();if(!s){setStatus('Nothing to copy yet.');return}
  try{await navigator.clipboard.writeText(s);setStatus('Copied '+[...s].length+' Khmer Unicode characters.')}catch{
@@ -209,7 +302,7 @@ function init(){
   if(paletteLetter==='W'&&draft>=0&&tokens[draft].base==='W'&&tokens[draft].marks.length===0){setStatus('W requires an accent; pick at least one.');return}
   closePalette()
  });$('palette-backdrop').addEventListener('pointerdown',e=>{if(e.target===$('palette-backdrop'))closePalette()});
- $('remove-mark').addEventListener('click',()=>{if(draft>=0&&tokens[draft]?.marks?.length){tokens[draft].marks.pop();render();renderDraft()}});
+ $('remove-mark').addEventListener('click',()=>{if(draft>=0&&tokens[draft]?.marks?.length){tokens[draft].marks.pop();delete tokens[draft].ipa;delete tokens[draft].sound;render();renderDraft()}});
  document.addEventListener('keydown',e=>{
   if(e.key==='Escape'&&!$('palette-backdrop').hidden){closePalette();return}
   if(!$('palette-backdrop').hidden)return;

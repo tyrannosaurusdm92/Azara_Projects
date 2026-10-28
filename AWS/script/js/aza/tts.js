@@ -200,8 +200,13 @@ function transcribeTokens(source){
   if(token.type==='literal'){literal+=token.value||'';continue;}
   flushLiteral();
   if(token.type==='glyph'){
-   const r=canonicalCompound(token.base,token.marks||[]);
-   ipa+=r.ipa;warnings.push(...r.warnings);
+   const marks=token.marks||[],r=canonicalCompound(token.base,marks);
+   let sound=String(token.ipa||'').replace(/^\/+|\/+$/g,'')||r.ipa;
+   // Sound choices and workshop assignments are metadata: the Khmer code points
+   // remain canonical while the explicitly assigned IPA drives speech.
+   if(marks.includes('S01')&&!sound.includes('ʔ'))sound='ʔ'+sound;
+   if(marks.includes('S02')&&!sound.includes('ǃ'))sound='ǃ'+sound;
+   ipa+=sound;warnings.push(...r.warnings);
   }else if(token.type==='sign'){
    if(token.sign==='ʔ')ipa+='ʔ';
    else if(token.sign==='¡'||token.sign==='ǃ')ipa+='ǃ';
