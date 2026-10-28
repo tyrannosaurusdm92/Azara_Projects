@@ -111,7 +111,7 @@ window.LuxuryKeyboard = (() => {
     panelWidth=clamp(Number(panelWidth)||Math.min(840,innerWidth-16),minWidth,Math.max(minWidth,innerWidth-16));
     panelHeight=clamp(Number(panelHeight)||defaultPanelHeight(),minHeight,Math.max(minHeight,innerHeight-16));
     const x=Number.isFinite(panelLeft)?panelLeft:(innerWidth-panelWidth)/2;
-    const y=Number.isFinite(panelTop)?panelTop:(innerHeight-panelHeight)/2;
+    const y=Number.isFinite(panelTop)?panelTop:innerHeight-panelHeight-16;
     p.style.left=clamp(x,8,Math.max(8,innerWidth-panelWidth-8))+'px';
     p.style.top=clamp(y,8,Math.max(8,innerHeight-panelHeight-8))+'px';
     p.style.right='auto';p.style.bottom='auto';p.style.width=panelWidth+'px';p.style.height=panelHeight+'px';

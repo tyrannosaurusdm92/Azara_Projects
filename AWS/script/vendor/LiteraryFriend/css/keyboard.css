@@ -39,8 +39,12 @@
 .keyboard-close{position:relative;z-index:13}
 .keyboard-resize-handle.north-east{top:-12px;right:-12px;width:36px;height:36px}
 
+/* Let the master navigation remain clickable if the collapsed bubbles overlap. */
+#floating-keyboard.is-bubble{z-index:7599}
+#floating-keyboard.is-open{z-index:7500}
+
 /* Make the free-floating shell and every resize handle easy to find and touch. */
-#floating-keyboard{z-index:8500}
+#floating-keyboard{z-index:7500}
 .keyboard-header{position:relative;touch-action:none;cursor:move}
 .keyboard-brand .keyboard-drag-grip{display:inline-grid;place-items:center;color:#f0c675;font:700 20px/1 ui-monospace,monospace;text-shadow:0 0 6px #e4b35c99;cursor:move}
 .keyboard-resize-handle{z-index:12}
