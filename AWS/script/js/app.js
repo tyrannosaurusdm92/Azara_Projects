@@ -156,6 +156,8 @@
     const ch=currentChannel();if(!ch)return;
     const ws=currentWorkspace();$('crumb-workspace').textContent=ws.name;$('crumb-channel').textContent=ch.name;
     const rulesPage=ch.role==='rules'||ch.name==='Language Rules & Orthography';
+    const languageHub=ch.role==='section'&&ch.name==='Language';
+    const languageHubPanel=$('aws-language-hub-panel');if(languageHubPanel)languageHubPanel.hidden=!languageHub;
     const special=rulesPage||['library','glyph','glyph-evolution','language-evolution','tts','dictionary','source-library'].includes(ch.role);
     $('aws-evolution-panel').hidden=ch.role!=='language-evolution';$('panel-evolution').hidden=ch.role!=='language-evolution';window.dispatchEvent(new CustomEvent('aws:keyboard-visibility',{detail:{hidden:ch.role==='language-evolution'}}));
     $('aws-library-panel').hidden=ch.role!=='library';$('aws-glyph-panel').hidden=!['glyph','glyph-evolution'].includes(ch.role);$('aws-tts-panel').hidden=ch.role!=='tts';$('aws-dictionary-panel').hidden=ch.role!=='dictionary';$('aws-rules-panel').hidden=!rulesPage;$('aws-source-library-panel').hidden=ch.role!=='source-library';if(ch.role==='glyph-evolution')window.AWSGlyphStudio?.setView?.('evolution');if(ch.role==='glyph')window.AWSGlyphStudio?.setView?.('glyphs');
@@ -208,7 +210,7 @@
     $('toggle-inspector').setAttribute('aria-expanded',String(state.inspectorOpen));
     $('date-label').textContent=new Intl.DateTimeFormat(undefined,{weekday:'long',month:'long',day:'numeric'}).format(new Date());
   }
-  function selectWorkspace(id){if(!state.workspaces.some(w=>w.id===id))return;captureEditor();state.selectedWorkspaceId=id;let ch=state.channels.find(x=>x.workspaceId===id&&!x.deletedAt);if(!ch){ch=defaultChannel(id);state.channels.push(ch)}state.selectedChannelId=ch.id;renderAll();scheduleSave();$('app').classList.remove('show-channels')}
+  function selectWorkspace(id){if(!state.workspaces.some(w=>w.id===id))return;captureEditor();if(ensureLanguageTools(state))scheduleSave();state.selectedWorkspaceId=id;let ch=state.channels.find(x=>x.workspaceId===id&&!x.deletedAt);if(!ch){ch=defaultChannel(id);state.channels.push(ch)}state.selectedChannelId=ch.id;renderAll();scheduleSave();$('app').classList.remove('show-channels')}
   function selectChannel(id){const ch=state.channels.find(x=>x.id===id);if(!ch)return;captureEditor();state.selectedWorkspaceId=ch.workspaceId;state.selectedChannelId=id;renderAll();scheduleSave();$('app').classList.remove('show-channels')}
   function inputField({name,label,type='text',value='',placeholder='',required=true,options=[]}){
     const wrapper=make('label');wrapper.append(make('span','',label));let ctl;
@@ -511,7 +513,7 @@
     renameWorkspace(){workspaceRename()},
     managePage(id){const c=state.channels.find(x=>x.id===id&&!x.deletedAt);if(c)openChannelActions(c)},
     newStudio(parentId){channelCreate('studio',parentId)},
-    goToRole(role){ensureLanguageTools(state);const ch=state.channels.find(c=>c.role===role&&!c.deletedAt&&c.workspaceId===state.selectedWorkspaceId);if(ch){selectChannel(ch.id);return true}return false},
+    goToRole(role){if(ensureLanguageTools(state))scheduleSave();const ch=state.channels.find(c=>c.role===role&&!c.deletedAt&&c.workspaceId===state.selectedWorkspaceId);if(ch){selectChannel(ch.id);return true}return false},
     openPage(id){selectChannel(id)},
     newPage(parentId){channelCreate('document',parentId)},
     createPageFromText(name,html,parentId){const ch=defaultChannel(state.selectedWorkspaceId,cleanName(name),'document',parentId||null,'page');ch.html=cleanHTML(html);state.channels.push(ch);renderAll();scheduleSave();return ch.id},

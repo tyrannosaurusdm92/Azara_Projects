@@ -458,6 +458,18 @@
     getSnapshot(){return project ? JSON.parse(JSON.stringify(project)) : null;},
     async replaceSnapshot(input){if(!input||typeof input!=='object')return;project=StudioModel.normalizeProject(input);ensureUnicodeVault();await StudioStorage.save(project);selectedId=orderedGlyphs()[0]?.id||null;lineageId=selectedId;renderAll(true);}
   };
+  // Keep the glyph view synchronized after asynchronous saved project initialization.
+  function syncAWSLanguageView(){
+   const snapshot=window.LiteraryFriendApp?.getSnapshot?.();
+   const selected=snapshot?.channels?.find(ch=>ch.id===snapshot.selectedChannelId);
+   if(selected?.role==='glyph-evolution')setView('evolution');
+   else if(selected?.role==='glyph')setView('glyphs');
+  }
+  window.addEventListener('aws:view',e=>{
+   if(!project)return;
+   if(e.detail?.role==='glyph-evolution')setView('evolution');
+   else if(e.detail?.role==='glyph')setView('glyphs');
+  });
   async function initialize() {
     try {
       const [template, eraData, aws] = await Promise.all(['assets/glyph/azaraan-character-set.json', 'assets/glyph/era-data.json', 'assets/glyph/aws-language-data.json'].map(path => fetch(path).then(response => { if (!response.ok) throw new Error(`Could not load ${path}`); return response.json(); })));
@@ -489,7 +501,7 @@
 
       project.updatedAt = new Date().toISOString();
       await StudioStorage.save(project);
-      selectedId = orderedGlyphs()[0]?.id || null; lineageId = selectedId; bindEvents(); renderAll(true);
+      selectedId = orderedGlyphs()[0]?.id || null; lineageId = selectedId; bindEvents(); renderAll(true); syncAWSLanguageView();
       GlyphScanner.configure({ getProject: () => project, updateGlyph: (id, patch, eraId) => updateGlyph(id, Object.assign({ vectorContours: [] }, patch), { eraId, noCards: true, noDetails: true }) });
       window.addEventListener('beforeunload', () => { if (saveTimer) { clearTimeout(saveTimer); try { localStorage.setItem('azaraan-glyph-studio-project', JSON.stringify(project)); } catch (_) {} } });
     } catch (error) { toast(error.message || 'Could not start the glyph studio.', true); }

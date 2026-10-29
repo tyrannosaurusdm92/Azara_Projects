@@ -9,6 +9,8 @@ const safeName=name=>String(name||'File').replace(/[\\/:*?"<>|]+/g,'_').slice(0,
 function downloadBlob(name,blob){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=safeName(name);document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),20000)}
 const uid=()=>id();
 function escapeHTML(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+const awsCollapsedSections=new Set((()=>{try{return JSON.parse(localStorage.getItem('aws-collapsed-language-sections')||'[]')}catch{return []}})());
+function persistSectionFolds(){try{localStorage.setItem('aws-collapsed-language-sections',JSON.stringify([...awsCollapsedSections]))}catch{}}
 function nav(){
  const state=app()?.getSnapshot?.();if(!state)return;
  const host=$('aws-master-links');host.replaceChildren();
@@ -27,17 +29,33 @@ function nav(){
   for(const c of visible.filter(x=>(x.parentId||null)===(parentId||null))){
    if(seen.has(c.id))continue;seen.add(c.id);
    const row=line('div','aws-nav-row');
+   const hasChildren=visible.some(x=>x.parentId===c.id);
+   if(hasChildren){
+    const fold=line('button','aws-nav-fold',awsCollapsedSections.has(c.id)?'▸':'▾');fold.type='button';
+    fold.title=(awsCollapsedSections.has(c.id)?'Expand ':'Collapse ')+c.name;
+    fold.setAttribute('aria-expanded',String(!awsCollapsedSections.has(c.id)));
+    fold.onclick=()=>{if(awsCollapsedSections.has(c.id))awsCollapsedSections.delete(c.id);else awsCollapsedSections.add(c.id);persistSectionFolds();nav()};
+    row.append(fold);
+   }
    const b=line('button','aws-nav-item'+(c.id===state.selectedChannelId?' active':''),(depth?'↳ ':'')+c.name);
    b.type='button';b.style.paddingLeft=(12+Math.min(depth,7)*12)+'px';b.onclick=()=>{app().openPage(c.id);if(window.innerWidth<760)setExpanded(false)};
    const menu=line('button','aws-nav-manage','⋯');menu.type='button';menu.title='Manage '+c.name;
    menu.setAttribute('aria-label','Manage '+c.name);menu.onclick=()=>app()?.managePage?.(c.id);
    row.append(b,menu);host.append(row);
-   append(c.id,depth+1);
+   if(!awsCollapsedSections.has(c.id))append(c.id,depth+1);
   }
  }
  append(null);
  for(const c of visible.filter(c=>!seen.has(c.id))){
   item('↳ '+c.name,()=>app().openPage(c.id),c.id===state.selectedChannelId?'active':'',1);
+ }
+ // Language section access remains visible even when its subsection is collapsed.
+ const languageParent=visible.find(c=>c.role==='section'&&c.name==='Language');
+ if(languageParent){
+  title('Language tools');
+  for(const [label,role] of [['Glyph Studio','glyph'],['Alphabet Evolution','glyph-evolution'],['Language Evolution Breakdown','language-evolution'],['Language Rules & Orthography','rules'],['Dictionary','dictionary'],['Pronunciation & TTS','tts']]){
+   item('◈ '+label,()=>{app()?.goToRole?.(role);if(window.innerWidth<760)setExpanded(false)},'aws-nav-language-tool'+(visible.find(c=>c.id===state.selectedChannelId)?.role===role?' active':''),1);
+  }
  }
  const selected=visible.find(c=>c.id===state.selectedChannelId);
  if(selected?.role==='glyph'||selected?.role==='glyph-evolution'){
@@ -61,6 +79,7 @@ function initNav(){nav();setExpanded(false);
  $('aws-master-tasks').onclick=()=>{app()?.showTasks?.();setExpanded(false)};
  $('aws-master-settings').onclick=()=>{$('settings-dialog')?.showModal()};
  window.addEventListener('aws:navigation',nav);
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&expanded&&!event.defaultPrevented)setExpanded(false)});
  const handle=$('aws-master-handle'),navBox=$('aws-master-nav');let drag=null;
  handle.addEventListener('pointerdown',e=>{if(e.target.closest('button')||e.button!==0)return;drag={x:e.clientX,y:e.clientY,left:navBox.offsetLeft,top:navBox.offsetTop};handle.setPointerCapture(e.pointerId)});
  handle.addEventListener('pointermove',e=>{if(!drag)return;const x=Math.max(0,Math.min(innerWidth-navBox.offsetWidth,drag.left+e.clientX-drag.x));const y=Math.max(0,Math.min(innerHeight-48,drag.top+e.clientY-drag.y));navBox.style.left=x+'px';navBox.style.top=y+'px';navBox.style.right='auto';});

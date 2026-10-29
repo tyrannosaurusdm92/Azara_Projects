@@ -41,7 +41,7 @@
 <script defer="" src="script/js/pwa.js"></script>
 <link href="style/keyboard/keyboard.css" rel="stylesheet"/><link href="style/keyboard/evolution.css" rel="stylesheet"/><link href="style/keyboard/aza-merge.css" rel="stylesheet"/><link href="style/aws-draft2-theme.css" rel="stylesheet"/><script defer="" src="script/js/keyboard/keyboard-data.js"></script><script defer="" src="script/js/keyboard/html2canvas.min.js"></script><script defer="" src="script/js/keyboard/aza-config.js"></script><script defer="" src="script/js/keyboard/aza-data.js"></script><script defer="" src="script/js/keyboard/aza-phonetic-data.js"></script><script defer="" src="script/js/keyboard/aza-phonetic.js"></script><script defer="" src="script/js/keyboard/aza-sound-data.js"></script><script defer="" src="script/js/keyboard/aza-tts-data.js"></script><script defer="" src="script/js/keyboard/aza-ipa-data.js"></script><script defer="" src="script/js/keyboard/aza-ipa.js"></script><script defer="" src="script/js/keyboard/aza-tts.js"></script><script defer="" src="script/js/keyboard/aza-evolution.js"></script><script defer="" src="script/js/keyboard/notes.js"></script><script defer="" src="script/js/keyboard/azaaraan-bridge.js"></script><script defer="" src="script/js/keyboard/keyboard.js"></script><script defer="" src="script/js/keyboard/capture.js"></script><script defer="" src="script/js/keyboard/aws-keyboard-app.js"></script><link href="style/aws-map-steampunk.css" rel="stylesheet"/>
 <script defer src="script/js/aws-language-rules.js"></script>
-<link href="style/aws-source-library.css" rel="stylesheet"/><script defer src="script/js/aws-source-library.js"></script><link rel="apple-touch-icon" href="assets/azara-universe-logo.svg"/><meta name="theme-color" content="#071b29"/><link href="style/aws-authentic-steampunk.css" rel="stylesheet"/></head>
+<link href="style/aws-source-library.css" rel="stylesheet"/><script defer src="script/js/aws-source-library.js"></script><link rel="apple-touch-icon" href="assets/azara-universe-logo.svg"/><meta name="theme-color" content="#071b29"/><link href="style/aws-authentic-steampunk.css" rel="stylesheet"/><script defer src="script/js/aws-language-restoration.js"></script></head>
 <body class="aws-single-nav">
 <nav aria-label="Movable master navigation" class="aws-master-nav" id="aws-master-nav">
 <header class="aws-master-handle" id="aws-master-handle"><button aria-expanded="false" aria-label="Expand master navigation" id="aws-menu-toggle" type="button">☰</button><img class="aws-master-logo aws-menu-content" src="assets/azara-universe-logo.svg" alt="Aza’ra Universe emblem" width="42" height="42"/><strong class="aws-menu-content">Aza'raan Writing Studio</strong><span class="aws-menu-content aws-drag-hint">Drag here to move</span></header>
@@ -126,6 +126,16 @@
 <div class="aws-feature-actions"><button class="btn outline" id="aws-tts-plan">Analyze pronunciation</button><button class="btn green" id="aws-tts-generate">Generate &amp; play speech</button><button class="btn outline" id="aws-tts-save">Save to pronunciation notes</button></div>
 <div aria-live="polite" class="aws-tts-result" id="aws-tts-result">Connect to AWS using Settings to use its language-aware TTS endpoint.</div><audio controls="" hidden="" id="aws-tts-audio"></audio>
 </section>
+<section id="aws-language-hub-panel" class="aws-language-hub" aria-label="Language tools" hidden>
+<header class="aws-language-hub-heading"><div class="aws-language-kicker">AZA'RAAN LANGUAGE WORKSHOP</div><h2>Language tools</h2><p>Original Glyph Studio and both evolution views. Open a tool without losing your writing or stored glyph projects.</p></header>
+<div class="aws-language-tool-grid">
+<button type="button" data-aws-open-role="glyph" class="aws-language-tool"><strong>◈ Glyph Studio</strong><span>Draw, edit, scan, space, layer and export glyphs, accents, fonts and writing sheets.</span></button>
+<button type="button" data-aws-open-role="glyph-evolution" class="aws-language-tool"><strong>⇢ Alphabet Evolution</strong><span>Editable visual glyph ancestry and original lineage map.</span></button>
+<button type="button" data-aws-open-role="language-evolution" class="aws-language-tool"><strong>⟡ Language Evolution Breakdown</strong><span>Historical six-era 52-slot chart with tracing and original source artwork.</span></button>
+<button type="button" data-aws-open-role="rules" class="aws-language-tool"><strong>▤ Language Rules &amp; Orthography</strong><span>Letter families, phonology and grammar by era.</span></button>
+<button type="button" data-aws-open-role="dictionary" class="aws-language-tool"><strong>▣ Dictionary</strong><span>Historical word lineages and modern lexicon.</span></button>
+<button type="button" data-aws-open-role="tts" class="aws-language-tool"><strong>♫ Pronunciation &amp; TTS</strong><span>Era-aware pronunciations and voice tools.</span></button>
+</div></section>
 <section aria-label="Integrated Aza'raan glyph studio" class="aws-glyph-panel" hidden="" id="aws-glyph-panel">
 <div class="app-shell">
 <header class="topbar">
