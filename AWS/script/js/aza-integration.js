@@ -1,245 +1,138 @@
-/* WriterHelper integration: full original Aza'raan + Savanski documents, one HTML entrypoint. */
-(()=>{'use strict';
-const $=id=>document.getElementById(id);
-const language=$('wh-language-frame'),aza=$('wh-aza-book-frame'),savanski=$('wh-kb-frame');
-const overlay=$('wh-language-overlay'),panel=$('wh-keyboard-panel');
-// Keep the studio inside the main column so the six era channels remain reachable.
-document.querySelector('.shell-main').append(overlay);
-const topbar=document.querySelector('.app-topbar');
-new ResizeObserver(()=>overlay.style.setProperty('--wh-topbar-height',topbar.getBoundingClientRect().height+'px')).observe(topbar);
-const mode=$('wh-input-mode'),era=$('wh-aza-era'),speaker=$('wh-aza-speak'),stop=$('wh-aza-stop');
-const audio=$('wh-audio-on');
-const soundPack=$('wh-sound-pack');
-const voiceBase=$('wh-voice-base');
-let bookReady=false,languageReady=false,lastDoc='',currentSpan=null,previous='',savedEditor=null,savedRange=null,suppress=false,audioCtx=null,cloudAudio=null;
-const originBase=new URL('./',location.href);
-function srcdoc(source,path,book){
- const href=new URL(path,originBase).href;
- const base='<base href="'+href+'">';
- const css=book?'<style>html,body{height:100%!important;min-height:0!important;overflow:hidden!important;background:#141c24!important}header.mast,nav.tabs,.studio-shell>:not(.keyboard-section),#panel-evolution,.evolution-pane{display:none!important}main{padding:0!important;margin:0!important;max-width:none!important;height:100vh!important;overflow:auto!important}#panel-typing{display:block!important;padding:0!important;margin:0!important}.studio-shell{display:block!important;max-width:none!important;width:100%!important;padding:2px!important}.keyboard-section{display:block!important;max-width:none!important;width:100%!important;padding:3px!important;margin:0!important}.keyboard{margin:0!important;max-width:none!important}.palette{max-height:90vh!important}</style>':'';
- return source.replace('<head>','<head>'+base+css);
-}
-function message(s){const el=$('wh-kb-status');if(el)el.textContent=s}
-function closest(range){const n=range?.commonAncestorContainer;const el=n?.nodeType===1?n:n?.parentElement;return el?.closest?.('.rich-editor')||null}
-document.addEventListener('selectionchange',()=>{if(suppress)return;const sel=getSelection();if(!sel?.rangeCount)return;const r=sel.getRangeAt(0);const e=closest(r);if(e){savedEditor=e;savedRange=r.cloneRange()}});
-document.addEventListener('focusin',e=>{if(e.target?.classList?.contains('rich-editor'))savedEditor=e.target});
-function editor(){
- const e=savedEditor?.isConnected?savedEditor:document.querySelector('.rich-editor');
- if(!e)return null;savedEditor=e;
- suppress=true;try{
- e.focus({preventScroll:true});const sel=getSelection();sel.removeAllRanges();
- if(savedRange&&e.contains(savedRange.commonAncestorContainer))sel.addRange(savedRange.cloneRange());
- else{const r=document.createRange();r.selectNodeContents(e);r.collapse(false);sel.addRange(r)}
- }finally{suppress=false}return e;
-}
-function saveAfter(e,value){
- e.dispatchEvent(new InputEvent('input',{bubbles:true,inputType:'insertText',data:value}));
- const sel=getSelection();if(sel?.rangeCount)savedRange=sel.getRangeAt(0).cloneRange();
-}
-function updateManuscript(text){
- if(mode.value!=='aza'||panel.hidden||document.body.classList.contains('wh-language-active'))return;
- if(text===previous)return;
- const e=editor();if(!e)return;
- if(currentSpan&&!currentSpan.isConnected)currentSpan=null;
- if(!currentSpan){
-   if(!text){previous='';return}
-   const selection=getSelection();if(!selection?.rangeCount)return;const r=selection.getRangeAt(0);
-   const span=document.createElement('span');span.style.fontFamily=window.WriterHelperFonts?.family(era.value)||'Az'+era.value;span.style.fontSize='1.3em';span.textContent=text;
-   r.deleteContents();r.insertNode(span);r.setStartAfter(span);r.collapse(true);
-   selection.removeAllRanges();selection.addRange(r);currentSpan=span;
- }else{
-   currentSpan.textContent=text;currentSpan.style.fontFamily=window.WriterHelperFonts?.family(era.value)||'Az'+era.value;
-   if(!text){currentSpan.remove();currentSpan=null}
- }
- previous=text;saveAfter(e,text);
-}
-function tone(){
- if(!audio.checked)return;
- try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
- const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();
- osc.type='triangle';osc.frequency.value=430;
- gain.gain.setValueAtTime(.025,audioCtx.currentTime);
- gain.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+.045);
- osc.connect(gain);gain.connect(audioCtx.destination);osc.start();osc.stop(audioCtx.currentTime+.05)}catch{}
-}
-function readiness(frame,kind){
- frame.addEventListener('load',()=>{
-  const win=frame.contentWindow,doc=frame.contentDocument;
-  if(!win||!doc)return;
-  if(kind==='savanski')return;
-  const poll=n=>{
-    if(win.AZA_STUDIO&&win.AzaaraanStudio){
-      if(kind==='language'){languageReady=true;syncView();return}
-      bookReady=true;
-      let previousFrameText=win.AZA_STUDIO.text;
-      const composition=doc.getElementById('composition');
-      if(composition){
-        new MutationObserver(()=>{
-          const next=win.AZA_STUDIO.text;
-          if(previousFrameText!==next){previousFrameText=next;updateManuscript(next)}
-        }).observe(composition,{subtree:true,childList:true,characterData:true,attributes:true});
-      }
-      doc.addEventListener('pointerup',e=>{if(e.target?.closest?.('#keyboard,#special-keys,.keyboard-footer,.palette'))tone()});
-      const select=doc.getElementById('era');
-      if(select){select.value=era.value;select.dispatchEvent(new Event('change',{bubbles:true}))}
-      const voice=doc.getElementById('voiceBase');if(voice){voice.value=voiceBase.value;voice.dispatchEvent(new Event('input',{bubbles:true}))}
-      win.AZA_STUDIO.replace([]);
-      message('Aza’raan keyboard connected · 24 marks · three-mark stacks · voice ready');
-      return;
-    }
-    if(n<65)setTimeout(()=>poll(n+1),150);
-    else message('Keyboard modules could not initialize. Serve over HTTP or HTTPS.');
-  };poll(0);
- });
-}
-readiness(language,'language');readiness(aza,'book');
-function reflectMute(player){
- player.muted=!audio.checked;
- const button=savanski.contentDocument?.getElementById('sad-mute');
- if(button){button.textContent=player.muted?'Unmute sounds':'Mute sounds';button.setAttribute('aria-pressed',String(player.muted))}
-}
-savanski.addEventListener('load',()=>{
- const poll=async n=>{
-  const player=savanski.contentWindow?.SavanskiKeyboardAudio;
-  if(!player){if(n<65)setTimeout(()=>poll(n+1),150);return}
-  try{
-   const manifest=await player.load();
-   soundPack.replaceChildren(new Option('Off','off'),...manifest.packs.map(pack=>new Option(pack.label,pack.id)));
-   soundPack.value=player.packId;reflectMute(player);
-   soundPack.onchange=()=>player.setPack(soundPack.value);
-   savanski.contentDocument.getElementById('sad-sound')?.addEventListener('change',event=>{soundPack.value=event.target.value});
-   savanski.contentDocument.getElementById('sad-mute')?.addEventListener('click',()=>{audio.checked=!player.muted;localStorage.setItem('wh:key-sounds',audio.checked?'on':'off')});
-  }catch(error){message('Sound packs could not load: '+error.message)}
- };void poll(0);
-});
-const originalAza=window.WRITERHELPER_AZA_LANGUAGE_HTML,originalQ=window.WRITERHELPER_SAVANSKI_HTML;
-if(originalAza){
- language.srcdoc=srcdoc(originalAza,'./',false);
- aza.srcdoc=srcdoc(originalAza,'./',true);
-}else message('Aza’raan document missing');
-if(originalQ)savanski.srcdoc=srcdoc(originalQ,'./script/vendor/keyboard/',false);
-function selectMode(){
- const azaMode=mode.value==='aza';aza.hidden=!azaMode;savanski.hidden=azaMode;
- era.disabled=!azaMode;
- soundPack.disabled=azaMode;
- const library=$('wh-library');if(library)library.hidden=azaMode;
- localStorage.setItem('wh:book-keyboard',mode.value);
- currentSpan=null;previous='';
- if(azaMode&&bookReady)aza.contentWindow.AZA_STUDIO.replace([]);
- message(azaMode?'Aza’raan · source keyboard, phonemes and voice':'QWERTY · Savanski keyboard with key audio');
- syncKeyboardStyle();
-}
-function syncKeyboardStyle(){
- const select=$('keyboard-era-select');if(!select)return;
- const value=mode.value==='qwerty'?'standard':String(era.value||'Modern').toLowerCase();
- if([...select.options].some(option=>option.value===value))select.value=value;
-}
-const savedKeyboardStyle=localStorage.getItem('aws:keyboard-style:v1');
-mode.value=savedKeyboardStyle? savedKeyboardStyle==='standard'?'qwerty':'aza':localStorage.getItem('wh:book-keyboard')==='qwerty'?'qwerty':'aza';
-if([...era.options].some(option=>option.value===localStorage.getItem('wh:book-era')))era.value=localStorage.getItem('wh:book-era');
-audio.checked=localStorage.getItem('wh:key-sounds')!=='off';
-audio.onchange=()=>{
- localStorage.setItem('wh:key-sounds',audio.checked?'on':'off');
- const player=savanski.contentWindow?.SavanskiKeyboardAudio;if(player)reflectMute(player);
-};
-voiceBase.value=localStorage.getItem('wh:voice-base')||'100';
-voiceBase.oninput=()=>{
- localStorage.setItem('wh:voice-base',voiceBase.value);
- for(const frame of [aza,language]){
-  const dial=frame.contentDocument?.getElementById('voiceBase');
-  if(dial){dial.value=voiceBase.value;dial.dispatchEvent(new Event('input',{bubbles:true}))}
- }
-};
-mode.onchange=selectMode;
-era.onchange=()=>{
- localStorage.setItem('wh:book-era',era.value);
- currentSpan=null;previous='';
- const box=aza.contentDocument?.getElementById('era');
- if(box){box.value=era.value;box.dispatchEvent(new Event('change',{bubbles:true}))}
- if(bookReady)aza.contentWindow.AZA_STUDIO.replace([]);
- syncKeyboardStyle();
-};
-function speechText(){
- const rangeIsCurrent=savedEditor?.isConnected&&savedRange&&savedEditor.contains(savedRange.commonAncestorContainer);
- const selected=rangeIsCurrent?savedRange.toString().trim():'';
- if(selected)return selected;
- const live=getSelection();
- if(live?.rangeCount&&closest(live.getRangeAt(0)))return live.toString().trim()||closest(live.getRangeAt(0)).textContent.trim();
- const active=savedEditor?.isConnected?savedEditor:document.querySelector('.rich-editor');
- return active?.textContent?.trim()||'';
-}
-speaker.onclick=()=>{
- const content=speechText();if(!content){message('Write or select text before speaking.');return}
- if(mode.value==='aza'||/[\u1780-\u17ff]/.test(content)){
-  const field=aza.contentDocument?.getElementById('speechText');
-  if(field){field.value=content;field.dispatchEvent(new Event('input',{bubbles:true}));aza.contentDocument.getElementById('speakText')?.click()}
-  else message('Aza’raan speech is still loading.');
-  return;
- }
- if(window.speechSynthesis){speechSynthesis.cancel();const msg=new SpeechSynthesisUtterance(content);msg.lang='en-US';speechSynthesis.speak(msg)}
-};
-$('wh-cloud-speak').onclick=async()=>{
- const bridge=window.WriterHelperBridge,content=speechText();
- if(!content){message('Write or select text before generating an MP3.');return}
- if(!bridge?.signedIn){message('Sign in through Settings to generate a private MP3.');return}
- if(content.length>3000){message('Select up to 3,000 characters for one MP3.');return}
- const button=$('wh-cloud-speak');button.disabled=true;
- try{
-  message('Generating private Aza’raan MP3…');
-  const result=await bridge.request('aza.tts.generate',{text:content,voiceSlider:Number(voiceBase.value)});
-  if(!result.driveFileId)throw Error('The backend returned no audio file.');
-  const chunks=[];let offset=0,complete=false;
-  do{
-   const part=await bridge.request('aza.tts.audio.chunk',{driveFileId:result.driveFileId,offset});
-   if(!part.base64||part.nextOffset<=offset)throw Error('Audio transfer stopped unexpectedly.');
-   const raw=atob(part.base64);chunks.push(Uint8Array.from(raw,c=>c.charCodeAt(0)));
-   offset=part.nextOffset;
-   if(part.done){complete=true;break}
-  }while(offset<20*1024*1024);
-  if(!complete)throw Error('Audio is larger than the safe browser transfer limit.');
-  if(cloudAudio){cloudAudio.pause();URL.revokeObjectURL(cloudAudio.src)}
-  cloudAudio=new Audio(URL.createObjectURL(new Blob(chunks,{type:'audio/mpeg'})));
-  await cloudAudio.play();message(result.warnings?.length?'Playing MP3 · review pronunciation warnings in the language studio.':'Playing private Aza’raan MP3.');
- }catch(error){message('MP3 unavailable: '+error.message)}finally{button.disabled=false}
-};
-stop.onclick=()=>{try{speechSynthesis.cancel()}catch{}for(const frame of [aza,language])try{frame.contentWindow?.AzaaraanTTS?.stop?.()}catch{}if(cloudAudio){cloudAudio.pause();cloudAudio.currentTime=0}};
-document.addEventListener('pointerdown',event=>{
- if(!event.target.closest?.('.rich-editor'))return;
- if(currentSpan){currentSpan=null;previous='';if(bookReady)aza.contentWindow.AZA_STUDIO.replace([])}
-});
-selectMode();
-function selected(){try{return window.LiteraryFriendApp?.currentDocument?.()||null}catch{return null}}
-function syncView(){
- if(!window.LiteraryFriendApp)return;
- const doc=selected(),isLanguage=!!doc?.workspace?.startsWith('01 Language');
- overlay.hidden=!isLanguage;
- document.body.classList.toggle('wh-language-active',isLanguage);
- if(isLanguage){
-  if(languageReady){
-   const eraName=doc?.title;
-   const d=language.contentDocument;
-   if(eraName==='Proto'||eraName==='Ancient')d.getElementById('tab-evolution')?.click();
-   else{
-     d.getElementById('tab-typing')?.click();
-     const select=d.getElementById('era');
-     if(select&&['Archaic','Classical','Traditional','Modern'].includes(eraName)){
-       select.value=eraName;select.dispatchEvent(new Event('change',{bubbles:true}))
-     }
-   }
+/* Keep the original Language Studio and font-workshop destination. Hide its
+   former keyboard so the AWS floating shell is the sole keyboard surface. */
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const language = $('wh-language-frame'), overlay = $('wh-language-overlay');
+  const keyboard = $('wh-unified-keyboard-frame');
+  const cloudButton = $('wh-cloud-speak');
+  document.querySelector('.shell-main')?.append(overlay);
+  const topbar = document.querySelector('.app-topbar');
+  if (topbar && 'ResizeObserver' in window) {
+    new ResizeObserver(() => overlay.style.setProperty('--wh-topbar-height', topbar.getBoundingClientRect().height + 'px')).observe(topbar);
   }
- }else if(doc?.id!==lastDoc){
-   lastDoc=doc?.id||'';savedEditor=null;savedRange=null;currentSpan=null;previous='';
-   if(bookReady)aza.contentWindow.AZA_STUDIO.replace([]);
- }
-}
-window.addEventListener('writerhelper:font-applied',()=>{
- for(const frame of [aza,language])window.WriterHelperFonts?.installInto(frame.contentDocument).catch(error=>message(error.message));
-});
-for(const frame of [aza,language])frame.addEventListener('load',()=>{
- window.WriterHelperFonts?.installInto(frame.contentDocument).catch(error=>message(error.message));
-});
-function watch(id){const e=$(id);if(e)new MutationObserver(syncView).observe(e,{childList:true,subtree:true,characterData:true})}
-watch('crumb-workspace');watch('crumb-channel');
-window.addEventListener('literaryfriend:ready',syncView,{once:true});
-if(window.LiteraryFriendApp)syncView();
+  let languageReady = false, lastDoc = '', savedEditor = null, savedRange = null, cloudAudio = null;
+  const originBase = new URL('./', location.href);
+  function srcdoc(source, path) {
+    const href = new URL(path, originBase).href;
+    const base = '<base href="' + href + '">';
+    const css = '<style>.keyboard-section,#keyboard,#keyboardBubble,.floating-keyboard{display:none!important}</style>';
+    return source.replace('<head>', '<head>' + base + css);
+  }
+  function message(text) { const live = $('autosave-status'); if (live) live.textContent = text; }
+  function closest(range) {
+    const node = range?.commonAncestorContainer;
+    const element = node?.nodeType === 1 ? node : node?.parentElement;
+    return element?.closest?.('.rich-editor') || null;
+  }
+  document.addEventListener('selectionchange', () => {
+    const selection = getSelection();
+    if (!selection?.rangeCount) return;
+    const range = selection.getRangeAt(0), editor = closest(range);
+    if (editor) { savedEditor = editor; savedRange = range.cloneRange(); }
+  });
+  document.addEventListener('focusin', event => { if (event.target?.classList?.contains('rich-editor')) savedEditor = event.target; });
+  function speechText() {
+    if (document.body.classList.contains('wh-language-active')) {
+      try { return language.contentWindow.AZA_STUDIO?.text?.trim() || ''; } catch { return ''; }
+    }
+    const selected = savedEditor?.isConnected && savedRange && savedEditor.contains(savedRange.commonAncestorContainer) ? savedRange.toString().trim() : '';
+    if (selected) return selected;
+    const live = getSelection();
+    if (live?.rangeCount && closest(live.getRangeAt(0))) return live.toString().trim() || closest(live.getRangeAt(0)).textContent.trim();
+    const editor = savedEditor?.isConnected ? savedEditor : document.querySelector('.rich-editor');
+    return editor?.textContent?.trim() || '';
+  }
+  function updateKeyboardEra(name) {
+    if (!['Archaic', 'Classical', 'Traditional', 'Modern', 'Proto', 'Ancient'].includes(name)) return;
+    try {
+      const doc = keyboard.contentDocument, languageSelect = doc.getElementById('languageSelect'), eraSelect = doc.getElementById('eraSelect');
+      if (!languageSelect || !eraSelect) return;
+      languageSelect.value = 'azaaraan'; languageSelect.dispatchEvent(new Event('change', { bubbles: true }));
+      eraSelect.value = ['Proto', 'Ancient'].includes(name) ? 'Archaic' : name;
+      eraSelect.dispatchEvent(new Event('change', { bubbles: true }));
+    } catch {}
+  }
+  function setLanguageView() {
+    if (!window.LiteraryFriendApp) return;
+    let doc;
+    try { doc = window.LiteraryFriendApp.currentDocument?.() || null; } catch {}
+    const isLanguage = !!doc?.workspace?.startsWith('01 Language');
+    overlay.hidden = !isLanguage;
+    document.body.classList.toggle('wh-language-active', isLanguage);
+    if (isLanguage) {
+      if (languageReady) {
+        const eraName = doc?.title;
+        const inner = language.contentDocument;
+        if (eraName === 'Proto' || eraName === 'Ancient') inner.getElementById('tab-evolution')?.click();
+        else {
+          inner.getElementById('tab-typing')?.click();
+          const select = inner.getElementById('era');
+          if (select && ['Archaic', 'Classical', 'Traditional', 'Modern'].includes(eraName)) {
+            select.value = eraName; select.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        }
+        updateKeyboardEra(eraName);
+      }
+    } else if (doc?.id !== lastDoc) {
+      lastDoc = doc?.id || ''; savedEditor = null; savedRange = null;
+    }
+    window.AWSKeyboardHost?.sync?.();
+  }
+  function waitForLanguage(n=0) {
+    try {
+      const win = language.contentWindow;
+      if (win?.AZA_STUDIO && win?.AzaaraanStudio) {
+        languageReady = true;
+        window.dispatchEvent(new Event('aws:language-ready'));
+        setLanguageView();
+        return;
+      }
+    } catch {}
+    if (n < 80) setTimeout(() => waitForLanguage(n + 1), 150);
+    else message('Language Studio could not initialize; serve AWS over HTTP or HTTPS.');
+  }
+  const source = window.WRITERHELPER_AZA_LANGUAGE_HTML;
+  if (source) {
+    language.srcdoc = srcdoc(source, './');
+    language.addEventListener('load', () => waitForLanguage());
+  } else message('Language Studio source is missing.');
+  function voiceSlider() {
+    try { return Number(keyboard.contentDocument.getElementById('voiceBase')?.value || 100); } catch { return 100; }
+  }
+  cloudButton?.addEventListener('click', async () => {
+    const bridge = window.WriterHelperBridge, content = speechText();
+    if (!content) { message('Write or select text before generating an MP3.'); return; }
+    if (!bridge?.signedIn) { message('Sign in through Settings to generate a private MP3.'); return; }
+    if (content.length > 3000) { message('Select up to 3,000 characters for one MP3.'); return; }
+    cloudButton.disabled = true;
+    try {
+      message('Generating private Aza’raan MP3…');
+      const result = await bridge.request('aza.tts.generate', { text: content, voiceSlider: voiceSlider() });
+      if (!result.driveFileId) throw Error('The backend returned no audio file.');
+      const chunks = []; let offset = 0, complete = false;
+      do {
+        const part = await bridge.request('aza.tts.audio.chunk', { driveFileId: result.driveFileId, offset });
+        if (!part.base64 || part.nextOffset <= offset) throw Error('Audio transfer stopped unexpectedly.');
+        const raw = atob(part.base64); chunks.push(Uint8Array.from(raw, c => c.charCodeAt(0)));
+        offset = part.nextOffset;
+        if (part.done) { complete = true; break; }
+      } while (offset < 20 * 1024 * 1024);
+      if (!complete) throw Error('Audio is larger than the safe browser transfer limit.');
+      if (cloudAudio) { cloudAudio.pause(); URL.revokeObjectURL(cloudAudio.src); }
+      cloudAudio = new Audio(URL.createObjectURL(new Blob(chunks, { type: 'audio/mpeg' })));
+      await cloudAudio.play();
+      message(result.warnings?.length ? 'Playing MP3 · review pronunciation warnings in the Language Studio.' : 'Playing private Aza’raan MP3.');
+    } catch (error) { message('MP3 unavailable: ' + error.message); }
+    finally { cloudButton.disabled = false; }
+  });
+  window.addEventListener('writerhelper:font-applied', () => {
+    window.WriterHelperFonts?.installInto(language.contentDocument).catch(error => message(error.message));
+  });
+  language.addEventListener('load', () => window.WriterHelperFonts?.installInto(language.contentDocument).catch(error => message(error.message)));
+  function watch(id) { const element = $(id); if (element) new MutationObserver(setLanguageView).observe(element, { childList: true, subtree: true, characterData: true }); }
+  watch('crumb-workspace'); watch('crumb-channel');
+  window.addEventListener('literaryfriend:ready', setLanguageView, { once: true });
+  if (window.LiteraryFriendApp) setLanguageView();
+  window.addEventListener('pagehide', () => { if (cloudAudio) cloudAudio.pause(); });
 })();

@@ -1,5 +1,5 @@
 /* Only explicitly listed frontend files enter the offline cache. Never intercept RPC. */
-const VERSION='aws-free-floating-resizable-keyboard-20261028';
+const VERSION='aws-unified-keyboard-20261029';
 const BASE=new URL('./',self.location.href);
 const MANIFEST=new URL('json/offline-assets.json',BASE).href;
 let manifestPromise;
@@ -45,6 +45,12 @@ self.addEventListener('fetch',event=>{
   if(request.method!=='GET'||url.origin!==BASE.origin||!url.pathname.startsWith(BASE.pathname))return;
   if(url.search||request.headers.has('Authorization'))return;
   if(request.mode==='navigate'){
+    const embeddedKeyboard=new URL('script/vendor/unified-keyboard/embed.html',BASE).pathname;
+    if(url.pathname===embeddedKeyboard){
+      const keyboardURL=new URL('script/vendor/unified-keyboard/embed.html',BASE).href;
+      event.respondWith(caches.open(VERSION).then(cache=>cache.match(keyboardURL)).then(cached=>cached||fetch(request)));
+      return;
+    }
     if(![BASE.pathname,new URL('index.html',BASE).pathname].includes(url.pathname))return;
     event.respondWith(caches.open(VERSION).then(cache=>cache.match(new URL('index.html',BASE).href)).then(cached=>cached||fetch(request)));
     return;

@@ -40,7 +40,6 @@
   <script defer src="../../../script/js/master-navigation.js"></script>
   <script defer src="../../../script/js/fonteditor-core.min.js"></script>
   <script defer src="../../../script/js/aza-language-document.js"></script>
-  <script defer src="../../../script/js/savanski-document.js"></script>
   <script defer src="../../../script/js/aza-integration.js"></script>
   <script defer src="../../../script/js/font-workshop-core.js"></script>
   <script defer src="../../../script/js/font-workshop.js"></script>
@@ -96,7 +95,7 @@
       <div class="inspector-content"><div class="planner-card planner-date"><div class="eyebrow">YOUR WRITING DAY</div><div class="today-line" id="date-label">Today</div><div class="today-summary" id="task-summary">No tasks yet.</div><button class="btn green full" id="new-task">+ New task / reminder</button></div>
         <div class="planner-section"><div class="planner-section-title"><h3>Tasks & reminders</h3><select id="task-filter" aria-label="Task filter"><option value="current">Channel</option><option value="workspace">Workspace</option><option value="all">All</option></select></div><div id="task-list" class="tasks"></div></div>
         <div class="planner-section"><div class="planner-section-title"><h3>Channel notes</h3><span class="eyebrow">PRIVATE</span></div><textarea id="channel-notes" placeholder="Ideas, continuity notes, next steps…" aria-label="Channel notes" rows="5"></textarea><small>Notes save with this channel.</small></div>
-        <div class="planner-section"><div class="planner-section-title"><h3>Project tools</h3></div><div class="tool-stacks"><button class="btn outline full" id="new-channel-shortcut">+ Create channel</button><button class="btn outline full" id="open-backup">Back up / restore workspace</button><button class="btn outline full" id="show-keyboard">Open keyboard bubble</button><button class="btn outline full" id="inspector-helper">Open writing Helper</button></div></div>
+        <div class="planner-section"><div class="planner-section-title"><h3>Project tools</h3></div><div class="tool-stacks"><button class="btn outline full" id="new-channel-shortcut">+ Create channel</button><button class="btn outline full" id="open-backup">Back up / restore workspace</button><button class="btn outline full" id="inspector-helper">Open writing Helper</button></div></div>
       </div>
     </aside>
   </div>
@@ -136,21 +135,16 @@
   <small>To use this library on another device, connect the same account on both devices. On the current device choose “Sync local → cloud”; on the other choose “Restore cloud → local”. Each upload creates a new cloud snapshot and does not delete earlier copies. Restore replaces that device’s local library after confirmation.</small>
 </div><h3>Uploaded fonts</h3><div id="uploaded-fonts-list">No uploaded fonts.</div><h3>Selected workspace</h3><button class="btn danger" id="delete-workspace">Delete selected workspace</button><p class="fine-print">Reminders are checked while this app is open. Browser notifications require permission and a supported context. Cloud synchronization works only after successful connection to the existing backend bridge.</p></div></dialog>
 
-  <section id="floating-keyboard" class="keyboard-window is-bubble" aria-label="Movable studio keyboard">
+  <section id="floating-keyboard" class="keyboard-window is-bubble" aria-label="Aza’raan Writing Studio floating keyboard">
     <button id="keyboard-bubble" class="keyboard-bubble" type="button" aria-label="Open studio keyboard" title="Drag to move · tap to open"><span aria-hidden="true">⌨️</span><small>Keyboard</small></button>
     <div id="keyboard-dock" class="keyboard-dock" hidden>
-      <header class="keyboard-header" id="keyboard-handle" title="Drag this bar to move the keyboard. Drag a highlighted side or corner to resize it.">
-        <div class="keyboard-brand"><span class="keyboard-drag-grip" aria-hidden="true">⠿</span><span aria-hidden="true">⌨️</span><strong>Writing keyboard</strong></div>
-        <label class="keyboard-era-control"><span class="sr-only">Keyboard layout</span><select id="keyboard-era-select" aria-label="Keyboard layout"><option value="standard">Standard</option><option value="archaic">Archaic</option><option value="classical">Classical</option><option value="traditional">Traditional</option><option value="modern">Modern</option></select></label>
-        <button id="keyboard-unicode-toggle" class="keyboard-control" type="button" aria-expanded="false" title="Open the Unicode character map">Ω</button>
+      <header class="keyboard-header" id="keyboard-handle" title="Drag this bar to move the keyboard. Drag a side or corner to resize it.">
+        <div class="keyboard-brand"><span class="keyboard-drag-grip" aria-hidden="true">⠿</span><span aria-hidden="true">⌨️</span><strong>Aza’raan Writing Studio</strong></div>
+        <button id="wh-cloud-speak" class="keyboard-control" type="button" title="Generate a private MP3 from the selected text">♫ Cloud MP3</button>
         <button id="keyboard-close" class="keyboard-close" type="button" aria-label="Collapse keyboard to the movable 150 by 150 pixel button" title="Collapse keyboard">❌</button>
       </header>
       <div class="keyboard-content" id="keyboard-content">
-        <section id="wh-keyboard-panel" class="wh-kb" aria-label="Writing keyboard with QWERTY, Aza’raan and audio tools">
-          <header class="wh-kb-bar"><strong>⌨ Writing Keyboard</strong><select id="wh-input-mode" aria-label="Writing keyboard mode"><option value="aza">Aza’raan</option><option value="qwerty">QWERTY</option></select><select id="wh-aza-era" aria-label="Aza’raan font era"><option>Archaic</option><option>Classical</option><option>Traditional</option><option selected>Modern</option></select><button id="wh-aza-speak" type="button" title="Read selected Aza’raan words or sentences; with no selection, read the active page">▶ Speak</button><button id="wh-cloud-speak" type="button" title="Generate a private MP3 using your configured backend">♫ Cloud MP3</button><button id="wh-aza-stop" type="button">■ Stop</button><label class="wh-audio-toggle"><input id="wh-audio-on" type="checkbox" checked> Key sounds</label><label class="wh-voice-control">Voice <input id="wh-voice-base" type="range" min="0" max="100" value="100" aria-label="Voice depth: 0 masculine, 50 androgynous, 100 feminine"></label><select id="wh-sound-pack" aria-label="QWERTY key sound pack" disabled><option value="classic">Classic key sounds</option></select><span id="wh-kb-status" role="status">Loading keyboard…</span><button id="wh-library" type="button">Unicode library</button></header>
-          <iframe id="wh-kb-frame" title="Savanski QWERTY keyboard" allow="display-capture"></iframe><iframe id="wh-aza-book-frame" title="Aza’raan book keyboard" hidden></iframe>
-        </section>
-        <div class="keyboard-body" id="keyboard-body" hidden><div class="keyboard-options"><select id="keyboard-language" aria-label="Keyboard language"></select><select id="keyboard-layout" aria-label="Character map layout"><option value="letters">Letters</option><option value="extended">Latin Extended</option><option value="combining">Combining marks</option></select><input id="keyboard-search" type="search" placeholder="Find character or U+ code" aria-label="Search Unicode characters" hidden><label class="shift-label"><input id="keyboard-shift" type="checkbox"> Shift</label></div><div id="keyboard-keys" class="keyboard-keys"></div><div class="keyboard-foot"><span id="keyboard-hint">Type into the active writing page.</span><button id="keyboard-split" class="keyboard-small" title="Split the character map">Split</button><button id="keyboard-nfc" class="keyboard-small" title="Normalize selected text to NFC">NFC</button><span class="resize-hint">↘ resize</span></div></div>
+        <iframe id="wh-unified-keyboard-frame" title="Unified QWERTY and Aza’raan keyboard" src="../../../script/vendor/unified-keyboard/embed.html" allow="clipboard-read; clipboard-write; display-capture" loading="lazy"></iframe>
       </div>
     </div>
     <button class="keyboard-resize-handle north" type="button" data-resize-edge="n" aria-label="Resize keyboard from top edge" title="Drag top edge to resize"></button>

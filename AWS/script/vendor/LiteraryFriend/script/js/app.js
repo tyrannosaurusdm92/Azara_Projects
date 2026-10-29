@@ -130,7 +130,7 @@
     }
     $('channel-notes').value=ch.notes||'';
     activeEditor=document.querySelector('.rich-editor');lastRange=null;lastBookmark=null;
-    updateWordCount();window.LuxuryKeyboard.setLanguage(ch.lang);
+    updateWordCount();
   }
   function createRichEditor(ch,part,html){
     const ed=make('div','rich-editor');ed.dataset.part=part;ed.contentEditable='true';ed.spellcheck=true;
@@ -492,17 +492,6 @@
     document.execCommand(command,false,value);
     saveSelection();captureEditor();updateWordCount();scheduleSave();
   }
-  function keyboardInsert(key){
-    if(!focusEditor())return;
-    const sel=window.getSelection();
-    if(key==='Shift'){return}if(key==='NFC'){
-      if(sel.rangeCount){const range=sel.getRangeAt(0);const str=range.toString();if(str)document.execCommand('insertText',false,str.normalize('NFC'))}
-    }else if(key==='Backspace'){document.execCommand('delete',false)}
-    else if(key==='Enter'){document.execCommand('insertParagraph',false)}
-    else if(key==='Tab'){document.execCommand('insertText',false,'\u00a0\u00a0\u00a0\u00a0')}
-    else document.execCommand('insertText',false,key==='Space'?' ':key);
-    saveSelection();captureEditor();updateWordCount();scheduleSave();
-  }
   function fontOptions(){
     const select=$('font-select');
     Array.from(select.options).filter(o=>o.dataset.uploaded).forEach(o=>o.remove());
@@ -604,7 +593,7 @@
     $('language-select').onchange=e=>{
       const ch=currentChannel();ch.lang=e.target.value;
       document.querySelectorAll('.rich-editor').forEach(ed=>{ed.lang=ch.lang;ed.dir=langs[ch.lang].dir});
-      $('current-language').textContent=langs[ch.lang].name;window.LuxuryKeyboard.setLanguage(ch.lang);scheduleSave();
+      $('current-language').textContent=langs[ch.lang].name;scheduleSave();
     };
     $('font-select').onchange=e=>{const ch=currentChannel();ch.font=e.target.value;document.querySelectorAll('.rich-editor').forEach(el=>el.style.fontFamily=ch.font);scheduleSave()};
     $('font-size').onchange=e=>{const ch=currentChannel();ch.size=Number(e.target.value);document.querySelectorAll('.rich-editor').forEach(el=>el.style.fontSize=ch.size+'px');scheduleSave()};
@@ -614,7 +603,6 @@
     $('insert-divider').onclick=()=>editorCommand('insertHorizontalRule');
     $('upload-font').onclick=()=>$('font-upload-input').click();
     $('font-upload-input').onchange=async e=>{await addFonts(e.target.files);e.target.value=''};
-    $('show-keyboard').onclick=()=>window.LuxuryKeyboard.open();
     $('print-doc').onclick=()=>window.print();$('export-doc').onclick=exportDocument;
     $('toggle-inspector').onclick=()=>{state.inspectorOpen=!state.inspectorOpen;renderInspector();scheduleSave()};
     $('close-inspector').onclick=()=>{state.inspectorOpen=false;renderInspector();scheduleSave()};
@@ -679,7 +667,7 @@
     try{state=validateState((await store.readState())||initialState())}catch(e){state=initialState();toast('Started a new local library because saved data could not be loaded.')}
     fonts=await store.allFonts();
     for(const f of fonts){try{await loadFont(f)}catch(error){console.warn('Font could not be loaded:',f.name,error)}}
-    window.LuxuryKeyboard.init({onInsert:keyboardInsert});renderAll();
+    window.LuxuryKeyboard.init();renderAll();
     if(state.inspectorOpen!==true){renderInspector()}
     checkReminders();setInterval(checkReminders,20000);window.dispatchEvent(new Event('writerhelper:fonts-ready'));window.dispatchEvent(new Event('literaryfriend:ready'));
   }

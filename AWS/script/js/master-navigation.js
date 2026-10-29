@@ -94,11 +94,10 @@
   action(tools.menu,'Font workshop',()=>document.getElementById('wh-open-font-workshop').click());
   action(tools.menu,'Library organizer',()=>app().openOrganizer());
   action(tools.menu,'Library organizer',()=>app().openOrganizer());
-  action(tools.menu,'Open keyboard bubble',()=>window.LuxuryKeyboard?.open());
   const language=selected==='wh-language';
   action(tools.menu,language?'Read language desk':'Read selection / page',()=>{
    if(language)document.getElementById('wh-language-frame').contentDocument?.getElementById('speakComposition')?.click();
-   else document.getElementById('wh-aza-speak').click();
+   else document.getElementById('wh-unified-keyboard-frame').contentWindow?.AzaaraanBridge?.speakSelection?.();
   });
   action(tools.menu,'Stop speech',()=>document.getElementById('wh-aza-stop').click());
   action(tools.menu,'Back up / restore',()=>document.getElementById('open-backup').click());
