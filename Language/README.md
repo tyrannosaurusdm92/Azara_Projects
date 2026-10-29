@@ -9,3 +9,5 @@ Each ancestral hieroglyph keeps its fixed slot from 1 to 52. The five **images/<
 The copyable table uses modern Unicode readings. The custom historical era glyphs are SVG artwork without assigned Unicode codepoints. Special signs remain outside the 21 modern letters; the click sign is **¡ (U+00A1)**.
 
 The merger schedule contains provisional stage placements where the source register labels them as working proposals.
+
+On-screen letter keyboards were removed. The writing desk, phonetic tools, voice and evolution chart remain.

@@ -39,7 +39,7 @@ if('serviceWorker' in navigator && (location.protocol==='https:' || ['localhost'
     try{
       await navigator.serviceWorker.register(new URL('service-worker.js',base),{scope:base.pathname,updateViaCache:'none'});
       for(const registration of await navigator.serviceWorker.getRegistrations()){
-        if(['vendor/keyboard/','vendor/LiteraryFriend/','script/vendor/keyboard/','script/vendor/LiteraryFriend/','../Aza’raan Writing Studio/','../Aza’raan Writing Studio/vendor/keyboard/','../Aza’raan Writing Studio/vendor/LiteraryFriend/'].some(path=>registration.scope===new URL(path,base).href))
+        if(['vendor/LiteraryFriend/','script/vendor/LiteraryFriend/','../Aza’raan Writing Studio/','../Aza’raan Writing Studio/vendor/LiteraryFriend/'].some(path=>registration.scope===new URL(path,base).href))
           await registration.unregister();
       }
     }catch(error){console.warn('Aza’raan Writing Studio offline setup:',error)}

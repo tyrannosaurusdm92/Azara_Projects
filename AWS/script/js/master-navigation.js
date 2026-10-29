@@ -93,13 +93,12 @@
   action(pages.menu,'+ New writing page',()=>document.getElementById('new-writing').click());
   action(tools.menu,'Font workshop',()=>document.getElementById('wh-open-font-workshop').click());
   action(tools.menu,'Library organizer',()=>app().openOrganizer());
-  action(tools.menu,'Library organizer',()=>app().openOrganizer());
   const language=selected==='wh-language';
   action(tools.menu,language?'Read language desk':'Read selection / page',()=>{
    if(language)document.getElementById('wh-language-frame').contentDocument?.getElementById('speakComposition')?.click();
-   else document.getElementById('wh-unified-keyboard-frame').contentWindow?.AzaaraanBridge?.speakSelection?.();
+   else {const str=window.getSelection()?.toString()?.trim()||document.querySelector('.rich-editor')?.textContent?.trim()||'';if(str&&'speechSynthesis' in window){speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(str))}}
   });
-  action(tools.menu,'Stop speech',()=>document.getElementById('wh-aza-stop').click());
+  action(tools.menu,'Stop speech',()=>{window.speechSynthesis?.cancel();document.getElementById('wh-language-frame')?.contentDocument?.getElementById('stopComposition')?.click()});
   action(tools.menu,'Back up / restore',()=>document.getElementById('open-backup').click());
   action(tools.menu,'Sync devices / restore cloud',()=>{
    document.getElementById('sidebar-settings').click();

@@ -1,44 +1,11 @@
-# Aza’raan Writing Studio (AWS)
+# Aza’raan Writing Studio
 
-Aza’raan Writing Studio combines the LiteraryFriend writing rooms and helper, the complete Aza’raan Language Studio, and Savanski’s on-screen QWERTY keyboard under one `index.html`. Serve the directory over HTTPS (or a local HTTP server). Opening `index.html` from `file://` cannot load the module scripts, JSON, fonts, or service worker reliably.
+The AWS app provides eight book workspaces, a language writing desk, IPA and sound-to-script tools, a glyph/font workshop, interactive language evolution, audio playback, local backups, PWA installation, and authenticated cloud sync.
 
-## Workspaces
+All on-screen keyboard implementations, floating bubbles, buttons, keyboard preference sync, and keyboard vendor packages have been removed from this deployment. Native operating-system typing remains available in editable fields.
 
-- **01 Language:** Proto, Ancient, Archaic, Classical, Traditional, Modern. Each is a writing channel. The language overlay provides the canonical Aza’raan keyboard, audio/pronunciation lab, and interactive evolution chart. Proto and Ancient open the historical chart because the supplied project has no TTFs for those eras.
-- **02–09 Books:** The Door In The Tree; The Drowned Queen; The Unwilling Spy; The Hollow Throne; Never-Ending Loss; Threats Of Space; Collision Of Worlds; Unraveled. Each book starts with Manuscript, Outline, Character Notes, Continuity Notes, and Drafting Table. New pages can be added.
+Open index.html over HTTP or HTTPS. The frontend retains the existing public AWS backend endpoint; credentials remain server-side.
 
-The 150×150 keyboard bubble stays on screen across Language and all book pages on desktop and mobile. Drag it to move it and tap it to open a resizable keyboard panel. The panel opens at roughly 34% of the viewport height, with a 250–300 px default range on phone-sized screens. Drag any edge or corner to resize; the keys and controls scale with the panel. Tap **×** to collapse it back to the movable bubble. Its layout menu switches between **Standard** QWERTY and **Archaic**, **Classical**, **Traditional** or **Modern** Aza’raan. The Unicode character map remains available in Standard mode. Choose a QWERTY sound pack directly in the shared keyboard bar; Classic is the initial default. The key-sounds checkbox mutes either on-screen keyboard. Input follows the selected editor, including either side of a drafting table and newly created pages. **Speak** reads selected text or the active draft. Khmer-encoded Aza’raan selections use the canonical language voice engine even while QWERTY is selected; **Cloud MP3** explicitly asks the configured private backend to synthesize the selected text. The latter requires sign-in and a configured Cloud TTS key on the server.
+The single HTML app entry uses script/js and script/vendor/LiteraryFriend (without its on-screen keyboard), json, assets, and the offline service worker.
 
-## Master navigation
-
-The movable navigation bar is adapted from the supplied player-map package. **Sections** opens the language eras and eight books; **Pages** lists the current section’s pages and creates new pages; **Tools** opens fonts, the **Library organizer**, speech, keyboard, backups, device sync and settings. The **Download app** button installs the manifest icon on the current device; each phone or desktop installs its own app shortcut. Drag the grip to move the bar, or use its arrow keys. **Collapse** switches to a draggable emblem bubble; click the bubble to restore the bar. Positions and collapsed state persist. Menus stay within the viewport when the bar is moved.
-
-## Library organizer
-
-Open **Tools → Library organizer** to see every workspace and page in one catalog. Search names and labels, sort by recent activity or name, rename and label folders or pages, create new items, and move pages between workspaces by dragging them on desktop or using **Move** on touch screens. Duplicate pages or whole workspaces. **Trash** keeps removed pages, workspaces and their writing tasks recoverable; restore them later or permanently delete them.
-
-## Font Workshop
-
-Open **01 Language → Font workshop**. The four bundled TTF eras load with their real Khmer glyphs. Proto and Ancient start as blank font projects because the supplied source has historical images rather than TTFs. Edit family/style names, version, designer, manufacturer, copyright, description, license and website metadata; import TTF/OTF; add or remap Unicode glyphs; draw, erase and undo/redo artwork; and trace it into editable contours. The artwork editor supports named layers, duplicate, merge, delete, reorder, visibility, opacity, blend modes and clear. Layers persist locally by Unicode glyph, so importing a font with a different glyph order does not attach art to the wrong character. Upload SVG outlines or trace PNGs; position and scale glyphs; set advance widths, global spacing and pair spacing; shift the baseline; adjust ascender/descender; preview and export standard TrueType `.ttf` files. Import and export both the font project JSON and the current era in Glyph Studio `.azglyph.json` format. Glyph Studio projects retain and let you edit glyph names, meanings, categories, key mappings, IPA, pronunciation, transliteration, research notes, parent glyphs, lineage and confidence, along with per-glyph metrics, vector outlines and editable artwork layers; raster-only art can be traced with the current ink and threshold settings. PNG import supports dark ink, light ink and transparent silhouettes with an adjustable threshold.
-
-**Use in books** saves a font version to the writing library and selects it for newly typed passages of that era. The applied font survives reloads, appears in the editor font selector and is included in complete backups. HTML manuscript exports embed the fonts used by the document so Aza’raan passages remain readable away from Aza’raan Writing Studio. Existing passages keep the font version used when they were written.
-
-The bundled TTFs contain contextual Khmer shaping. TTF export keeps original glyph indices and glyph names and copies the original GDEF/GSUB/GPOS layout tables so existing stacked marks keep their rules. Edited outlines are exported without obsolete point hinting. New Unicode glyphs do not automatically gain contextual substitutions or mark anchors. Pair spacing writes a standard `kern` table; an imported font's advanced GPOS kerning may take precedence. Inspect major changes to combining-mark geometry in the proof and a dedicated font editor. Imported OTF fonts can be converted to TTF, but their advanced shaping cannot be promised by that conversion.
-
-Font drafts and artwork layers use IndexedDB in this browser. Export the font project JSON or `.azglyph.json` project for portable glyph work, and export a TTF for the built font. These font files are not part of the cloud manuscript snapshot.
-
-## Files and backend
-
-- `index.html`: the sole HTML file, with the source Language and Savanski documents embedded as `srcdoc` data in `script/js/`.
-- `script/js/`, `style/css/`, `json/`, `docs/`, `assets/`: integrated code, theme, language data, documentation, era TTFs, logo/icon exports, and audio.
-- `script/vendor/LiteraryFriend/` and `script/vendor/keyboard/`: retained source features and assets; the root has the sole active web manifest and service worker.
-
-The frontend holds only the public Apps Script URL and `AWS_RPC_*` browser message adapter. No backend source, API key, or credential is bundled. The retained legacy clients use the same authenticated bridge and no longer point to the former Apps Script library. Sign-in, keyboard preference sync, cloud manuscript snapshots, and generated audio require an authorized deployment/origin. Local writing and backup export work independently of that connection. Each device has its own local library: use **Tools → Sync devices / restore cloud** to upload a new snapshot from the device with current work, then restore that snapshot on the other device with the same account. This is a user-triggered snapshot and restore; it does not stream each edit automatically. Earlier cloud snapshots are retained. Earlier cloud snapshots are retained. Cloud manuscript snapshots contain document state; use the complete backup to transfer custom fonts too.
-
-The service worker installs about 16 MiB of required frontend resources, including both keyboards, the four era fonts, historical chart artwork and the default Classic sound pack. Other sound packs and large optional source modules are cached when requested. It only caches exact paths from the generated static allowlist, never query requests, authenticated replies or manuscripts. Updated caches activate after existing app tabs close. Rebuild the allowlist after runtime changes with `python docs/build-offline-manifest.py` from this directory. Supported browsers show **Download app** in the master navigation; other browsers can use their own installation controls.
-
-The attached player-map package contributes its palette, exact steampunk wallpaper URL and repurposed movable/collapsible master navigation. Its map, world and settlement features are excluded. The wallpaper has a dark fallback. The attached celestial tree logo appears in the shell, language studio, keyboard and all app icon assets.
-
-The project moved from `/WriterHelper/` to `/AWS/`. Existing browser draft, font and preference storage keys are preserved for compatibility on the same hosting origin. The old source-copying workflow and source submodule pointers were replaced by a read-only validation workflow and the complete retained runtime files.
-
-See `docs/WRITERHELPER_INTEGRATION.md` for validation and `docs/SOURCE_COVERAGE.json` for the complete source comparison.
+The removal does not delete language charts, fonts, pronunciation data, or manuscripts. It does not rewrite remote backend records or Git history. Older local PWA caches are discarded when the updated worker activates.

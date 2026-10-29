@@ -667,7 +667,7 @@
     try{state=validateState((await store.readState())||initialState())}catch(e){state=initialState();toast('Started a new local library because saved data could not be loaded.')}
     fonts=await store.allFonts();
     for(const f of fonts){try{await loadFont(f)}catch(error){console.warn('Font could not be loaded:',f.name,error)}}
-    window.LuxuryKeyboard.init();renderAll();
+    renderAll();
     if(state.inspectorOpen!==true){renderInspector()}
     checkReminders();setInterval(checkReminders,20000);window.dispatchEvent(new Event('writerhelper:fonts-ready'));window.dispatchEvent(new Event('literaryfriend:ready'));
   }

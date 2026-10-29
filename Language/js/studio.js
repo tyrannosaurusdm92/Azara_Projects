@@ -53,7 +53,7 @@ function makeGlyph(t,index=-1){
 }
 function render(){
  const host=$('composition');host.className='composition era-'+era.toLowerCase();host.replaceChildren();
- if(!tokens.length){host.append(mk('div','placeholder','Type Aza’raan with the keys below…'))}
+ if(!tokens.length){host.append(mk('div','placeholder','Compose Aza’raan with the phonetic tools.'))}
  for(let i=0;i<tokens.length;i++){
   const t=tokens[i];let node;
   if(t.type==='glyph')node=makeGlyph(t,i);
@@ -79,30 +79,7 @@ function switchEra(next){if(!C.eras.includes(next))return;era=next;$('era').valu
  if(era!=='Archaic'){
   // Archaic whole-glyph signs may remain in already composed writing to preserve history.
  }
- buildKeyboard();buildSpecials();render();setStatus('Switched to '+era+' glyphs. Stored Khmer Unicode remains unchanged.');}
-function keyboardKey(label){const btn=mk('button','key era-'+era.toLowerCase());btn.type='button';btn.dataset.letter=label;btn.setAttribute('aria-label',label+' — press and hold for accents');
- btn.append(mk('span','key-label',label));const font=mk('span','key-art',C.letterMap[label]);btn.append(font);
- btn.append(mk('span','key-hint',label==='B'?'B F V W':label==='W'?'accent only':'hold ✦'));
- let longTimer=null,wasHold=false,startX=0,startY=0;
- const clean=()=>{clearTimeout(longTimer);longTimer=null;btn.classList.remove('is-held')};
- btn.addEventListener('pointerdown',e=>{if(e.button!==0&&e.pointerType==='mouse')return;wasHold=false;startX=e.clientX;startY=e.clientY;btn.classList.add('is-held');longTimer=setTimeout(()=>{wasHold=true;openPalette(label)},400)});
- btn.addEventListener('pointermove',e=>{if(Math.abs(e.clientX-startX)>18||Math.abs(e.clientY-startY)>18)clean()});
- btn.addEventListener('pointerup',e=>{if(e.button!==0){clean();return}const held=wasHold;clean();if(!held){if(label==='W')openPalette('W');else addPlain(label)}});
- btn.addEventListener('pointercancel',clean);btn.addEventListener('contextmenu',e=>{e.preventDefault();clean();openPalette(label)});
- btn.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPalette(label)}});
- return btn;
-}
-function buildKeyboard(){const host=$('keyboard');host.replaceChildren();keyList.forEach(label=>host.append(keyboardKey(label)));}
-function addPlain(label){if(label==='W'){openPalette('W');return}
- const t=(label==='F'?{type:'glyph',base:'B',marks:['C11']}:label==='V'?{type:'glyph',base:'B',marks:['C09']}:{type:'glyph',base:label,marks:[]});
- insert(t);setStatus('Added '+label+'. Hold the key to add accents.');$('composition').focus({preventScroll:true});}
-function buildSpecials(){const host=$('special-keys');host.replaceChildren();
- if(era==='Archaic'){
-  for(const sign of ['¡','ʔ']){const b=mk('button','special-key',sign);b.type='button';b.title='Original full Archaic glyph, Khmer encoded';b.addEventListener('click',()=>{insert({type:'sign',sign});setStatus('Inserted original Archaic '+sign+' glyph.');});host.append(b)}
- }else{
-  const btn=mk('button','special-key','ʔ · ¡ · ‹ · ›');btn.type='button';btn.title='Attach four special marks to the chosen letter';btn.addEventListener('click',()=>openPalette(tokens[selected]?.type==='glyph'?tokens[selected].base:'T'));host.append(btn);
- }
-}
+ render();setStatus('Switched to '+era+' glyphs. Stored Khmer Unicode remains unchanged.');}
 function closePalette(){ $('palette-backdrop').hidden=true;$('composition').focus({preventScroll:true});}
 function ensureDraft(){
  if(draft>=0&&tokens[draft]?.type==='glyph')return;
@@ -199,35 +176,15 @@ function init(){
  for(const name of ['typing','evolution'])$('tab-'+name).addEventListener('click',()=>{
   for(const other of ['typing','evolution']){const active=other===name;$('tab-'+other).classList.toggle('active',active);$('tab-'+other).setAttribute('aria-selected',String(active));$('panel-'+other).hidden=!active}
  });
- buildReference();buildKeyboard();buildSpecials();$('era').addEventListener('change',e=>switchEra(e.target.value));
+ buildReference();$('era').addEventListener('change',e=>switchEra(e.target.value));
  $('composition').addEventListener('click',e=>{if(e.target===$('composition')){selected=-1;cursor=tokens.length;render();$('composition').focus()}});
  $('copy').addEventListener('click',copyOutput);$('clear').addEventListener('click',()=>{tokens=[];cursor=0;selected=-1;render();setStatus('Writing desk cleared.')});
- $('backspace').addEventListener('click',erase);$('space').addEventListener('click',()=>insert({type:'space'}));$('enter').addEventListener('click',()=>insert({type:'break'}));
- $('accent-last').addEventListener('click',()=>{const target=tokens[selected]?.type==='glyph'?selected:tokens.map((x,i)=>x.type==='glyph'?i:-1).filter(x=>x>=0).at(-1);if(target===undefined||target===-1){setStatus('Insert a letter before editing its marks.');return}selected=target;openPalette(tokens[target].base)});
- $('paste').addEventListener('click',pasteUnicode);
+ $('backspace').addEventListener('click',erase);
  $('palette-close').addEventListener('click',closePalette);$('palette-done').addEventListener('click',()=>{
   if(paletteLetter==='W'&&draft>=0&&tokens[draft].base==='W'&&tokens[draft].marks.length===0){setStatus('W requires an accent; pick at least one.');return}
   closePalette()
  });$('palette-backdrop').addEventListener('pointerdown',e=>{if(e.target===$('palette-backdrop'))closePalette()});
  $('remove-mark').addEventListener('click',()=>{if(draft>=0&&tokens[draft]?.marks?.length){tokens[draft].marks.pop();render();renderDraft()}});
- document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'&&!$('palette-backdrop').hidden){closePalette();return}
-  if(!$('palette-backdrop').hidden)return;
-  const node=e.target;if(node instanceof Element&&node.closest('input,textarea,select,button,summary'))return;
-  if(e.ctrlKey||e.metaKey){if(e.key.toLowerCase()==='c'&&document.activeElement===$('composition')){e.preventDefault();copyOutput()}return}
-  if(e.altKey)return;
-  if(/^[a-z]$/i.test(e.key)){
-   const k=e.key.toUpperCase();e.preventDefault();if(k==='F'||k==='V')addPlain(k);
-   else if(keyList.includes(k)){if(k==='W')openPalette(k);else addPlain(k)}
-   else setStatus(k+' is not in the Aza’raan alphabet.');
-  }else if(e.key==='Backspace'){e.preventDefault();erase()}
-  else if(e.key===' '){e.preventDefault();insert({type:'space'})}
-  else if(e.key==='Enter'){e.preventDefault();insert({type:'break'})}
-  else if(e.key==='ArrowLeft'){cursor=Math.max(0,cursor-1);selected=cursor-1;render()}
-  else if(e.key==='ArrowRight'){cursor=Math.min(tokens.length,cursor+1);selected=cursor-1;render()}
-  else if(era==='Archaic'&&(e.key==='¡'||e.key==='ʔ')){e.preventDefault();insert({type:'sign',sign:e.key})}
-  else if(e.key.length===1&&!e.ctrlKey&&!e.metaKey&&'.,!?;:-\'"()'.includes(e.key)){e.preventDefault();insert({type:'literal',value:e.key})}
- });
  $('composition').addEventListener('paste',e=>{const str=e.clipboardData?.getData('text/plain');if(!str)return;e.preventDefault();const x=parseUnicode(str);tokens.splice(cursor,0,...x);cursor+=x.length;selected=cursor-1;render()});
  try{const s=localStorage.getItem(storage);if(s){const t=JSON.parse(s);if(Array.isArray(t.tokens))tokens=t.tokens.filter(x=>x&&['glyph','sign','literal','space','break'].includes(x.type)).slice(0,3000);cursor=Math.min(tokens.length,Math.max(0,t.cursor||tokens.length));if(C.eras.includes(t.era))era=t.era;}}
  catch{}switchEra(era);render();

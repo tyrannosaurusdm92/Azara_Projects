@@ -52,25 +52,7 @@
    const snapshot=JSON.parse(json);await window.LiteraryFriendApp.replaceSnapshot(snapshot);set('Cloud snapshot restored and saved locally.')
    }catch(err){set('Restore failed: '+err.message+' Existing local work was left unchanged unless a restore completed.')}
  }
- function keyboardUI(){return $('wh-kb-frame')?.contentWindow?.SavanskiUI}
- async function keyboardPush(){
-  if(!token){set('Sign in to save keyboard preferences.');return}
-  const ui=keyboardUI();if(!ui){set('Open the QWERTY keyboard before saving its settings.');return}
-  try{const current=await request('keyboard.get',{});const profile=ui.syncIntoProfile(current.profile);
-    await request('keyboard.save',{expectedRevision:current.revision,profile});
-    set('Keyboard preferences saved to your private account. Typed text was not uploaded.');
-  }catch(err){set('Keyboard save failed: '+err.message)}
- }
- async function keyboardPull(){
-  if(!token){set('Sign in to load keyboard preferences.');return}
-  const ui=keyboardUI();if(!ui){set('Open the QWERTY keyboard before loading its settings.');return}
-  try{const current=await request('keyboard.get',{});ui.applySyncedProfile(current.profile);
-    set('Keyboard preferences loaded from your private account.');
-  }catch(err){set('Keyboard load failed: '+err.message)}
- }
  window.addEventListener('literaryfriend:ready',()=>{if(token)request('auth.me',{}).then(r=>{sessionUser=r.user?.username||'';set('Connected'+(sessionUser?' as '+sessionUser:'')+'.')}).catch(()=>{token='';sessionStorage.removeItem(authKey);set('Local-only. Sign in to connect.')})});
  $('bridge-connect')?.addEventListener('click',login);$('bridge-verify')?.addEventListener('click',verify);$('bridge-push')?.addEventListener('click',push);$('bridge-pull')?.addEventListener('click',pull);$('bridge-signout')?.addEventListener('click',logout);
- $('bridge-keyboard-push')?.addEventListener('click',keyboardPush);
- $('bridge-keyboard-pull')?.addEventListener('click',keyboardPull);
  window.LiteraryFriendCloud={request,login,push,pull,logout,get connected(){return!!token},endpoint:ENDPOINT};
 })();

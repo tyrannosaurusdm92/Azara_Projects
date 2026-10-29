@@ -8,11 +8,6 @@
 #wh-language-overlay>header{flex:none;background:linear-gradient(90deg,#29493e,#453521);color:#fce7bf;font:700 14px Georgia,serif;text-align:center;padding:8px}
 #wh-language-overlay iframe{flex:1;min-height:0;width:100%;border:0;background:#161b24}
 body.wh-language-active .editor-section{visibility:hidden}
-body.wh-language-active #wh-keyboard-panel{display:none!important}
-#wh-input-mode,#wh-aza-era{color:#f9edd7;background:#18343a;border:1px solid #bd935c;border-radius:6px;padding:5px 7px;min-width:88px;max-width:130px}
 #wh-aza-speak,#wh-aza-stop{white-space:nowrap}
 .wh-audio-toggle{white-space:nowrap;display:inline-flex;align-items:center;gap:4px;font:12px system-ui,sans-serif}
-#wh-kb-frame[hidden],#wh-aza-book-frame[hidden]{display:none!important}
 #wh-aza-book-frame{height:100%;width:100%;flex:1;min-height:0;background:#141c24;border:0}
-@media(max-width:780px){#wh-aza-speak,#wh-aza-stop{padding:4px}#wh-input-mode,#wh-aza-era{min-width:72px}#wh-kb-status{display:none}}
-@media print{#wh-language-overlay,#wh-keyboard-panel{display:none!important}}
