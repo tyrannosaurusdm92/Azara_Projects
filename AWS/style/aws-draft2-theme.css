@@ -12,6 +12,7 @@ body{background-image:linear-gradient(115deg,rgba(8,20,26,.94),rgba(19,29,33,.91
 .rich-editor,.rich-editor[contenteditable=true],#channel-notes,.document-title{color:#f3e9db!important;background:transparent!important;caret-color:#8de0dc}
 .rich-editor::selection,.rich-editor *::selection{background:#4c8b8a;color:#fff}
 .channels-pane button,.app button,.aws-master-nav button{color:#f3e9db}
+.app .toolbar-text-button{color:#203c40}
 .app button:not(.keyboard button):not(.keyboard-bubble),.aws-master-nav button{border-color:#94734c}
 .app input,.app textarea,.app select,.aws-master-nav input{background-color:#0f2429;color:#f3e9db;border-color:#8e7150}
 .app input:focus,.app textarea:focus,.app select:focus{outline-color:#8de0dc}
