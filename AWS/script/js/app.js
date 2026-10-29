@@ -87,7 +87,10 @@
     let changed=false;
     for(const ws of st.workspaces){
       const active=()=>st.channels.filter(c=>c.workspaceId===ws.id&&!c.deletedAt);
-      let parent=active().find(c=>c.name==='Language'&&c.role==='section');
+      let parent=active().find(c=>c.name?.trim().toLowerCase()==='language'&&c.role==='section')
+        ||active().find(c=>c.name?.trim().toLowerCase()==='language');
+      // Reuse a preexisting Language page. Change its section role without touching its text.
+      if(parent&&parent.role!=='section'){parent.role='section';changed=true;}
       if(!parent){
         parent=defaultChannel(ws.id,'Language','document',null,'section');
         st.channels.push(parent);changed=true;
