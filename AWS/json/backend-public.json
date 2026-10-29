@@ -1,5 +1,0 @@
-{
-  "endpoint": "https://script.google.com/macros/s/AKfycbyvpUn2_fADmOAOMqh1pHatTlegwZKYloWRPSSrM1kBkSwP2l5LzADQ7jKMr7TCJJP2/exec",
-  "protocol": "AWS_RPC",
-  "implementation": "Frontend URL and message protocol only; source and private credentials are not included"
-}
