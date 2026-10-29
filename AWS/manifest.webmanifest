@@ -2,7 +2,7 @@
   "name": "Aza’raan Writing Studio",
   "short_name": "AWS",
   "id": "./index.html",
-  "description": "Aza’raan language creation and eight book workspaces with font editing and selected-text speech",
+  "description": "Read-only Aza’raan historical evolution and preserved manuscript archive. No typing, editing, keyboard or speech features.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
