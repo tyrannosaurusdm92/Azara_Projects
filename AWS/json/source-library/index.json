@@ -128,7 +128,7 @@
       "title": "Non-Aza'raan Naming Atlas",
       "category": "language",
       "path": "./naming-atlas.json",
-      "sections": 1,
+      "sections": 18,
       "removed_superseded_paragraphs": 0,
       "source_url": "https://drive.google.com/file/d/1q0ncQptdV9an5RR5DowYKCcwZp6zhu_1/view",
       "status": "reference_only"
@@ -138,7 +138,7 @@
       "title": "Aza'ra Peoples Interactive Atlas",
       "category": "peoples",
       "path": "./peoples-atlas.json",
-      "sections": 1,
+      "sections": 22,
       "removed_superseded_paragraphs": 0,
       "source_url": "https://drive.google.com/file/d/1WyP1WigsHT4O0LwTU59jPDWO3bZWSqXk/view",
       "status": "reference_only"

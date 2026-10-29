@@ -11,10 +11,10 @@
   ],
   "sections": [
     {
-      "title": "Canon decisions applied",
-      "text": "# Canon decisions applied",
-      "original_order": 1,
-      "status": "reference_only"
+      "title": "Historical continuity decisions that do not contradict current AWS canon",
+      "text": "# Canon decisions applied\n\n2. Proto-Oceanic-inspired Kaʻaheʻanua and Uxrowoiye form Aza'raan. Other peoples contribute through contact and mixed communities. Conjectural sounds remain tagged as experiments.\n3. The old MMORPG includes eighteen race entries. The strict supplied species JSON currently approves twelve named species. Some older entries are mixed-ancestry groups. Source-backed but unauthorised species remain candidates rather than automatically added.\n4. Ampharils are merged into Dril'thar. Ampharil is not an extra species, and names associated with it are historical labels only.\n5. Bilqis is canonical spelling. 2082 temporal law, 3013 queen, 3021 displacement, and ancient Sheba/Atlantis story are preserved. The Galaxy Era game has no separate Bilqis clue ledger.\n6. The Iron Dominion destroys Belavadös. The 1351 BCE Uxrowo Cataclysm is tracked distinctly unless an exact canon source dates the later bombing at 1351 BCE.\n7. The Belavadös_MOL archives contain D&D and other externally derived race names among historical assets. This source-only package does not promote them into the Aza'ra playable roster.\n8. The Unmarked Sky is supporting influence. Its Detroit plot and unrelated names have not replaced the existing eight-book Threads of Fate story.\n9. All four guidebooks are 24-section worldbuilding and prototype reference guides, not complete 240-chapter manuscripts or a production MMORPG.\n",
+      "status": "audit_source_only",
+      "original_order": 1
     }
   ],
   "removed_superseded_paragraphs": 1,
