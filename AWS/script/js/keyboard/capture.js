@@ -62,5 +62,20 @@
     try { await navigator.share({ files: [new File([lastBlob], filename, { type: 'image/png' })], title: 'Keyboard notes' }); }
     catch (error) { if (error.name !== 'AbortError') window.Notes.toast('Sharing is unavailable. Use Save PNG.'); }
   };
+  // The preview X was rendered but was never wired to close the modal.
+  const screenshotDialog = $('captureDialog');
+  screenshotDialog?.querySelectorAll('[data-close-dialog]').forEach(button=>{
+    button.type='button';
+    button.addEventListener('click',event=>{
+      event.preventDefault();event.stopPropagation();
+      if(screenshotDialog.open) screenshotDialog.close();
+      else screenshotDialog.removeAttribute('open');
+    });
+  });
+  screenshotDialog?.addEventListener('click',event=>{
+    if(event.target!==screenshotDialog)return;
+    const rect=screenshotDialog.getBoundingClientRect();
+    if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)screenshotDialog.close();
+  });
   window.PrintScreen = { capture };
 })();

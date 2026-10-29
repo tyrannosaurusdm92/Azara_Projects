@@ -15,7 +15,7 @@
     function page(name,parent=null,role='page',type='document') {const c=defaultChannel(w.id,name,type,parent?.id||null,role);channels.push(c);return c}
     const language=page('Language',null,'section');
     page('Language Overview',language);page('Dictionary & Lexicon',language,'dictionary');page('Grammar & Syntax',language);
-    page('Language Rules & Orthography',language);page('Pronunciation & TTS',language,'tts');
+    page('Language Rules & Orthography',language,'rules');page('Pronunciation & TTS',language,'tts');
     page('Glyph Studio',language,'glyph');page('Language Evolution Breakdown',language,'language-evolution');
     const library=page('Library',null,'library');
     const series=page('Full Series',null,'section');
@@ -73,7 +73,7 @@
     const workspaces=input.workspaces.slice(0,150).filter(x=>x&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),name:cleanName(x.name,'Workspace')}));
     if(!workspaces.length)throw Error('No valid workspaces in backup.');
     const wsIds=new Set(workspaces.map(w=>w.id));
-    let channels=input.channels.slice(0,3000).filter(x=>x&&wsIds.has(x.workspaceId)&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),workspaceId:x.workspaceId,name:cleanName(x.name),type:x.type==='studio'?'studio':'document',parentId:typeof x.parentId==='string'?x.parentId.slice(0,150):null,role:['page','section','library','glyph','glyph-evolution','language-evolution','tts','dictionary'].includes(x.role)?x.role:'page',deletedAt:String(x.deletedAt||'').slice(0,40),html:cleanHTML(x.html),leftHtml:cleanHTML(x.leftHtml),rightHtml:cleanHTML(x.rightHtml),notes:String(x.notes||'').slice(0,20000),lang:langs[x.lang]?x.lang:'en',font:String(x.font||'Georgia').slice(0,150),size:Math.max(12,Math.min(28,Number(x.size)||18)),updatedAt:x.updatedAt||nowDate()}));
+    let channels=input.channels.slice(0,3000).filter(x=>x&&wsIds.has(x.workspaceId)&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),workspaceId:x.workspaceId,name:cleanName(x.name),type:x.type==='studio'?'studio':'document',parentId:typeof x.parentId==='string'?x.parentId.slice(0,150):null,role:['page','section','library','glyph','glyph-evolution','language-evolution','tts','dictionary','rules'].includes(x.role)?x.role:'page',deletedAt:String(x.deletedAt||'').slice(0,40),html:cleanHTML(x.html),leftHtml:cleanHTML(x.leftHtml),rightHtml:cleanHTML(x.rightHtml),notes:String(x.notes||'').slice(0,20000),lang:langs[x.lang]?x.lang:'en',font:String(x.font||'Georgia').slice(0,150),size:Math.max(12,Math.min(28,Number(x.size)||18)),updatedAt:x.updatedAt||nowDate()}));
     for(const w of workspaces){if(!channels.some(c=>c.workspaceId===w.id && !c.deletedAt))channels.push(defaultChannel(w.id))}
     const channelIds=new Set(channels.map(c=>c.id));
     const tasks=input.tasks.slice(0,10000).filter(t=>t&&typeof t.id==='string'&&wsIds.has(t.workspaceId)).map(t=>({id:t.id.slice(0,150),workspaceId:t.workspaceId,channelId:channelIds.has(t.channelId)?t.channelId:null,title:cleanName(t.title),details:String(t.details||'').slice(0,2000),due:String(t.due||'').slice(0,40),remindAt:String(t.remindAt||'').slice(0,40),done:!!t.done,notified:!!t.notified}));
@@ -124,11 +124,12 @@
   function renderDoc(){
     const ch=currentChannel();if(!ch)return;
     const ws=currentWorkspace();$('crumb-workspace').textContent=ws.name;$('crumb-channel').textContent=ch.name;
-    const special=['library','glyph','glyph-evolution','language-evolution','tts','dictionary'].includes(ch.role);
+    const rulesPage=ch.role==='rules'||ch.name==='Language Rules & Orthography';
+    const special=rulesPage||['library','glyph','glyph-evolution','language-evolution','tts','dictionary'].includes(ch.role);
     $('aws-evolution-panel').hidden=ch.role!=='language-evolution';$('panel-evolution').hidden=ch.role!=='language-evolution';window.dispatchEvent(new CustomEvent('aws:keyboard-visibility',{detail:{hidden:ch.role==='language-evolution'}}));
-    $('aws-library-panel').hidden=ch.role!=='library';$('aws-glyph-panel').hidden=!['glyph','glyph-evolution'].includes(ch.role);$('aws-tts-panel').hidden=ch.role!=='tts';$('aws-dictionary-panel').hidden=ch.role!=='dictionary';if(ch.role==='glyph-evolution')window.AWSGlyphStudio?.setView?.('evolution');if(ch.role==='glyph')window.AWSGlyphStudio?.setView?.('glyphs');
+    $('aws-library-panel').hidden=ch.role!=='library';$('aws-glyph-panel').hidden=!['glyph','glyph-evolution'].includes(ch.role);$('aws-tts-panel').hidden=ch.role!=='tts';$('aws-dictionary-panel').hidden=ch.role!=='dictionary';$('aws-rules-panel').hidden=!rulesPage;if(ch.role==='glyph-evolution')window.AWSGlyphStudio?.setView?.('evolution');if(ch.role==='glyph')window.AWSGlyphStudio?.setView?.('glyphs');
     document.querySelector('.editor-section').hidden=special;
-    if(special){$('writing-surface').replaceChildren();$('channel-notes').value=ch.notes||'';activeEditor=null;lastRange=null;lastBookmark=null;window.dispatchEvent(new CustomEvent('aws:view',{detail:{role:ch.role}}));return;}
+    if(special){$('writing-surface').replaceChildren();$('channel-notes').value=ch.notes||'';activeEditor=null;lastRange=null;lastBookmark=null;window.dispatchEvent(new CustomEvent('aws:view',{detail:{role:rulesPage?'rules':ch.role}}));return;}
     $('document-title').value=ch.name;$('channel-type').textContent=ch.type==='studio'?'TWO-PANE WRITING STUDIO':'DOCUMENT CHANNEL';
     $('document-subtitle').textContent=ch.type==='studio'?'Draft alongside notes, references or another version.':'A quiet place for the next chapter.';
     $('type-mark').textContent=ch.type==='studio'?'◫':'✒';
@@ -474,6 +475,11 @@
     appendCurrent(html){const c=currentChannel();if(!c)throw Error('No selected document');if(c.type==='studio')c.leftHtml+=cleanHTML(html);else c.html+=cleanHTML(html);renderDoc();scheduleSave()},
     async replaceSnapshot(input){captureEditor();state=validateState(input);renderAll();await persist();if(input.glyphProject)await window.AWSGlyphStudio?.replaceSnapshot?.(input.glyphProject)},
     getSelectedWorkspace(){return currentWorkspace()?.name||''},
+    switchWorkspace(id){selectWorkspace(id)},
+    newWorkspace(){workspaceCreate()},
+    renameWorkspace(){workspaceRename()},
+    managePage(id){const c=state.channels.find(x=>x.id===id&&!x.deletedAt);if(c)openChannelActions(c)},
+    newStudio(parentId){channelCreate('studio',parentId)},
     goToRole(role){const ch=state.channels.find(c=>c.role===role&&!c.deletedAt&&c.workspaceId===state.selectedWorkspaceId);if(ch){selectChannel(ch.id);return true}return false},
     openPage(id){selectChannel(id)},
     newPage(parentId){channelCreate('document',parentId)},

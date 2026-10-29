@@ -1,0 +1,112 @@
+/* AWS Steampunk 2026: inspired by the attached player map CSS palette only.
+   No maps, game UI, TTRPG code, or gameplay assets are copied.
+   Every writing surface keeps WHITE paper. */
+:root{
+ color-scheme:dark;
+ --aws-ink:#f3e9db;--aws-muted:#d4c6b6;
+ --aws-teal:#3d9fa0;--aws-light-teal:#8de0dc;
+ --aws-bronze:#b07a3a;--aws-brass:#d7aa63;
+ --aws-gold:#e8c76e;--aws-plum:#4d3658;
+ --aws-night:#0c1017;--aws-panel:#111720;
+ --aws-cyan:#00ffff;
+}
+html body.aws-single-nav{
+ background:
+ radial-gradient(ellipse at 15% 7%,rgba(0,190,188,.17),transparent 39%),
+ radial-gradient(ellipse at 91% 17%,rgba(176,122,58,.18),transparent 37%),
+ repeating-linear-gradient(90deg,transparent 0 79px,rgba(215,170,99,.025) 80px 81px),
+ linear-gradient(150deg,#060c12,#13232a 51%,#10151b)!important;
+ color:var(--aws-ink);
+ font-family:Georgia,"Times New Roman",serif;
+}
+body.aws-single-nav .app{display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;max-width:none!important;min-width:0!important;margin:0!important}
+body.aws-single-nav .workspace-rail,
+body.aws-single-nav #channels-pane,
+body.aws-single-nav #toggle-sidebar,
+body.aws-single-nav #aws-glyph-panel .nav-list{display:none!important}
+body.aws-single-nav .shell-main{grid-column:1 / -1!important;width:100%!important;min-width:0!important;margin:0!important;max-width:none!important}
+body.aws-single-nav #aws-master-nav{z-index:2147481000;left:14px;top:12px;background:linear-gradient(165deg,rgba(5,20,27,.98),rgba(14,42,45,.98))!important;border:2px ridge rgba(215,170,99,.82)!important;box-shadow:0 14px 40px #000a,0 0 19px #00ffff1c!important;border-radius:16px!important;max-height:min(88dvh,900px)}
+body.aws-single-nav #aws-master-nav.expanded{width:min(375px,calc(100vw - 20px))!important}
+body.aws-single-nav #aws-master-handle{background:linear-gradient(95deg,#063740,#186768 57%,#6b4624)!important;border-bottom:1px solid #d7aa63!important;min-height:52px}
+body.aws-single-nav #aws-menu-toggle{background:linear-gradient(180deg,#e8c76e,#b07a3a)!important;border:1px solid #ffe8a2!important;color:#061b20!important;text-shadow:none;box-shadow:inset 0 2px #fff4,0 3px 8px #0008}
+body.aws-single-nav .aws-master-links{max-height:min(56dvh,630px);overflow-y:auto}
+body.aws-single-nav .aws-nav-section-title{color:#e8c76e;font:bold 12px Georgia,serif;text-transform:uppercase;letter-spacing:.09em;margin:10px 3px 4px;border-bottom:1px solid #a57b49;padding:6px 2px}
+body.aws-single-nav .aws-nav-row{display:flex;align-items:center;gap:2px;min-width:0}
+body.aws-single-nav .aws-nav-item{flex:1;min-width:0;color:#e8f8f8!important;text-align:left!important;background:rgba(0,255,255,.045)!important;border:1px solid transparent!important;border-radius:8px;min-height:33px;font:600 12px Georgia,serif;box-shadow:none;word-break:break-word}
+body.aws-single-nav .aws-nav-item:hover,body.aws-single-nav .aws-nav-item.active{background:linear-gradient(90deg,rgba(26,134,137,.55),rgba(174,122,58,.2))!important;border-color:#d7aa63!important;color:#fff8d9!important}
+body.aws-single-nav .aws-nav-manage{flex:none;min-width:26px;width:28px;padding:2px;border:1px solid #a57b49!important;border-radius:8px;background:#143138;color:#e8c76e!important;cursor:pointer}
+body.aws-single-nav #aws-master-nav .aws-menu-tools button{background:linear-gradient(180deg,#163f48,#0b252e);border:1px solid #b07a3a;color:#f3e9db;border-radius:9px;box-shadow:inset 0 1px #fff2}
+body.aws-single-nav #aws-master-nav .aws-menu-tools .aws-install{color:#071b20!important;background:linear-gradient(180deg,#f7e3a0,#b98839)!important}
+body.aws-single-nav .app-topbar,body.aws-single-nav .editor-top,body.aws-single-nav .editor-toolbar,body.aws-single-nav .writing-footer,
+body.aws-single-nav #inspector,body.aws-single-nav .aws-feature-panel,body.aws-single-nav #aws-glyph-panel,
+body.aws-single-nav .modal,body.aws-single-nav dialog,body.aws-single-nav .settings-panel{
+ color:var(--aws-ink);
+ background:linear-gradient(170deg,rgba(18,35,42,.98),rgba(8,15,22,.98))!important;
+ border-color:rgba(215,170,99,.56)!important;
+ box-shadow:inset 0 1px #8de0dc20,0 8px 23px #0005;
+}
+body.aws-single-nav .shell-main{background:transparent!important}
+body.aws-single-nav .app-topbar{padding-left:clamp(67px,7vw,104px)!important;border-bottom:2px solid #b07a3a!important}
+body.aws-single-nav .editor-top h1,body.aws-single-nav .aws-feature-head h2,body.aws-single-nav #aws-glyph-panel h1{color:#f8eddb!important;text-shadow:0 1px 3px #000}
+body.aws-single-nav .eyebrow,body.aws-single-nav .aws-feature-head small,body.aws-single-nav .field-label{color:#8de0dc!important;letter-spacing:.07em}
+body.aws-single-nav .app button:not(.key):not(.keyboard-bubble):not(.round-tool),body.aws-single-nav .aws-feature-panel .btn{
+ border-color:rgba(215,170,99,.7)!important;border-radius:9px;
+ box-shadow:inset 0 1px #ffffff15,0 2px 7px #0005;
+}
+body.aws-single-nav button:focus-visible,body.aws-single-nav a:focus-visible,body.aws-single-nav select:focus-visible{outline:2px solid #00ffff!important;outline-offset:2px}
+body.aws-single-nav .aws-feature-panel header.aws-feature-head{
+ background:linear-gradient(90deg,rgba(16,79,88,.55),rgba(64,42,51,.46))!important;
+ border-bottom:2px ridge #b07a3a!important;
+ padding:16px!important;border-radius:12px;
+}
+body.aws-single-nav .aws-library-item,body.aws-single-nav .aws-rules-card,
+body.aws-single-nav #aws-glyph-panel .panel,body.aws-single-nav #aws-glyph-panel .card{
+ background:linear-gradient(135deg,rgba(25,55,60,.87),rgba(10,18,25,.93))!important;
+ color:#f3e9db!important;border:1px solid rgba(141,224,220,.28)!important;border-radius:13px;
+}
+body.aws-single-nav .aws-library-item p,body.aws-single-nav .aws-library-item strong{color:#f3e9db!important}
+body.aws-single-nav .aws-library-controls select,body.aws-single-nav #aws-rules-era{
+ background:#17333a!important;color:#f3e9db!important;border:1px solid #b07a3a!important}
+body.aws-single-nav .paper,body.aws-single-nav .studio-pane{background:#fff!important;color:#20262e!important;box-shadow:0 8px 34px #0009!important;border:2px ridge #b07a3a!important}
+body.aws-single-nav .rich-editor,body.aws-single-nav [contenteditable="true"],body.aws-single-nav textarea,
+body.aws-single-nav input:is([type="text"],[type="search"],[type="email"],[type="url"],[type="password"]),body.aws-single-nav #channel-notes{
+ background:#fff!important;color:#20262e!important;caret-color:#11363a!important;color-scheme:light!important;
+}
+body.aws-single-nav textarea::placeholder,body.aws-single-nav input::placeholder{color:#647078!important}
+body.aws-single-nav #aws-glyph-panel .main-area{min-width:0}
+body.aws-single-nav #aws-rules-panel[hidden]{display:none!important}
+body.aws-single-nav #aws-rules-panel{min-height:60vh}
+body.aws-single-nav .aws-rules-toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:18px 0}
+body.aws-single-nav .aws-rules-toolbar label{display:grid;gap:5px;color:#8de0dc}
+body.aws-single-nav .aws-rules-era-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+body.aws-single-nav .aws-rules-era-tab{color:#f3e9db!important;background:#204950!important;border:1px solid #b07a3a!important;padding:9px 13px;cursor:pointer}
+body.aws-single-nav .aws-rules-era-tab.active{background:linear-gradient(180deg,#e8c76e,#b07a3a)!important;color:#092329!important}
+body.aws-single-nav .aws-rules-era-intro{padding:17px;background:linear-gradient(90deg,#163c44,#2c2931)!important;border:2px ridge #d7aa63;border-radius:13px}
+body.aws-single-nav .aws-rules-era-intro h2{color:#e8c76e;font-size:clamp(23px,3vw,33px);margin:6px 0}
+body.aws-single-nav .aws-rules-kicker{color:#8de0dc;text-transform:uppercase;font-size:11px;letter-spacing:.1em}
+body.aws-single-nav .aws-rules-years{color:#8de0dc;font-weight:bold}
+body.aws-single-nav .aws-rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin:12px 0}
+body.aws-single-nav .aws-rules-card{padding:16px;margin:12px 0;line-height:1.5}
+body.aws-single-nav .aws-rules-card h3{color:#e8c76e!important;margin:0 0 10px;font-size:18px}
+body.aws-single-nav .aws-rules-bullets{padding-left:19px;margin:0}
+body.aws-single-nav .aws-rules-bullets li{margin:0 0 9px}
+body.aws-single-nav .aws-rules-letters{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:9px}
+body.aws-single-nav .aws-rules-letter{padding:9px;border:1px solid #3d9fa0;border-radius:9px}
+body.aws-single-nav .aws-rules-letter summary{font-size:21px;color:#8de0dc;cursor:pointer}
+body.aws-single-nav .aws-rules-letter p{overflow-wrap:anywhere;font-size:12px}
+body.aws-single-nav .aws-rule-example{padding:8px;border-bottom:1px solid #3d9fa058}
+body.aws-single-nav .aws-rules-lexemes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,255px),1fr));gap:7px}
+body.aws-single-nav .aws-rules-lexeme{display:grid;gap:4px;padding:9px;background:#0c252b;border:1px solid #3d9fa067;border-radius:9px}
+body.aws-single-nav .aws-rules-lexeme strong{color:#e8c76e;font-size:20px}
+body.aws-single-nav .aws-rules-lexeme small{color:#8de0dc;line-height:1.5;overflow-wrap:anywhere}
+body.aws-single-nav .aws-dictionary-origin{display:block;color:#e8c76e}
+body.aws-single-nav .aws-dictionary-lineage{border-top:1px solid #3d9fa044;padding:7px 0}
+body.aws-single-nav .aws-dictionary-lineage summary{color:#8de0dc;cursor:pointer}
+body.aws-single-nav .aws-dictionary-lineage div{font-size:12px;line-height:1.7}
+body.aws-single-nav .aws-feature-panel[hidden]{display:none!important}
+@media(max-width:700px){
+ body.aws-single-nav .app-topbar{padding-left:66px!important;flex-wrap:wrap}
+ body.aws-single-nav #aws-master-nav.expanded{max-height:88dvh}
+ body.aws-single-nav .aws-rules-card{padding:11px}
+}
+@media print{body.aws-single-nav #aws-master-nav{display:none!important}body.aws-single-nav .paper{border:0!important;box-shadow:none!important}}

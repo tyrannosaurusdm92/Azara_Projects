@@ -9,15 +9,47 @@ const safeName=name=>String(name||'File').replace(/[\\/:*?"<>|]+/g,'_').slice(0,
 function downloadBlob(name,blob){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=safeName(name);document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),20000)}
 const uid=()=>id();
 function escapeHTML(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function nav(){const state=app()?.getSnapshot?.();if(!state)return;
- const host=$('aws-master-links');host.replaceChildren();const visible=state.channels.filter(c=>c.workspaceId===state.selectedWorkspaceId&&!c.deletedAt);
- function append(parentId,depth=0,seen=new Set()){
-  for(const c of visible.filter(x=>(x.parentId||null)===(parentId||null))){if(seen.has(c.id))continue;
-   const b=line('button','aws-nav-item'+(c.id===state.selectedChannelId?' active':''),(depth?'↳ ':'')+c.name);b.style.paddingLeft=(12+Math.min(depth,7)*12)+'px';b.onclick=()=>{app().openPage(c.id);if(window.innerWidth<760)setExpanded(false)};host.append(b);
-   if(!state.collapsed?.[c.id])append(c.id,depth+1,new Set([...seen,c.id]));
+function nav(){
+ const state=app()?.getSnapshot?.();if(!state)return;
+ const host=$('aws-master-links');host.replaceChildren();
+ const title=txt=>host.append(line('h3','aws-nav-section-title',txt));
+ const item=(label,click,cls='',depth=0)=>{
+  const b=line('button','aws-nav-item '+cls,label);b.type='button';b.style.paddingLeft=(12+Math.min(depth,7)*12)+'px';b.onclick=click;host.append(b);return b;
+ };
+ title('Workspaces');
+ for(const w of state.workspaces){
+  item('◧ '+w.name,()=>app()?.switchWorkspace?.(w.id),(w.id===state.selectedWorkspaceId?'active aws-workspace-current':''),0);
+ }
+ item('+ New workspace',()=>app()?.newWorkspace?.(),'aws-nav-action');
+ title('Sections, channels and categories');
+ const visible=state.channels.filter(c=>c.workspaceId===state.selectedWorkspaceId&&!c.deletedAt),seen=new Set();
+ function append(parentId,depth=0){
+  for(const c of visible.filter(x=>(x.parentId||null)===(parentId||null))){
+   if(seen.has(c.id))continue;seen.add(c.id);
+   const row=line('div','aws-nav-row');
+   const b=line('button','aws-nav-item'+(c.id===state.selectedChannelId?' active':''),(depth?'↳ ':'')+c.name);
+   b.type='button';b.style.paddingLeft=(12+Math.min(depth,7)*12)+'px';b.onclick=()=>{app().openPage(c.id);if(window.innerWidth<760)setExpanded(false)};
+   const menu=line('button','aws-nav-manage','⋯');menu.type='button';menu.title='Manage '+c.name;
+   menu.setAttribute('aria-label','Manage '+c.name);menu.onclick=()=>app()?.managePage?.(c.id);
+   row.append(b,menu);host.append(row);
+   append(c.id,depth+1);
   }
  }
  append(null);
+ for(const c of visible.filter(c=>!seen.has(c.id))){
+  item('↳ '+c.name,()=>app().openPage(c.id),c.id===state.selectedChannelId?'active':'',1);
+ }
+ const selected=visible.find(c=>c.id===state.selectedChannelId);
+ if(selected?.role==='glyph'||selected?.role==='glyph-evolution'){
+  title('Glyph Studio views');
+  document.querySelectorAll('#aws-glyph-panel .nav-item[data-view]').forEach(b=>{
+   const v=b.dataset.view;item('◈ '+b.textContent.trim(),()=>{
+    app()?.openPage?.(selected.id);
+    window.AWSGlyphStudio?.setView?.(v);
+    if(window.innerWidth<760)setExpanded(false);
+   },'aws-nav-glyph');
+  });
+ }
 }
 let expanded=false,installEvent=null;
 function setExpanded(next){expanded=!!next;$('aws-master-nav').classList.toggle('expanded',expanded);$('aws-master-content').hidden=!expanded;$('aws-menu-toggle').setAttribute('aria-expanded',String(expanded));}
@@ -138,13 +170,27 @@ function initDictionary(){
  const search=$('aws-dictionary-search'),era=$('aws-dictionary-era'),list=$('aws-dictionary-list'),dialog=$('aws-dictionary-dialog'),form=$('aws-dictionary-form');
  const fields=['id','word','ipa','meaning','era','partOfSpeech','notes'];
  const render=()=>{
-  list.replaceChildren();const entries=app()?.getDictionary?.()||[],q=search.value.trim().toLowerCase(),filter=era.value;
+  list.replaceChildren();const entries=[...(app()?.getDictionary?.()||[]),...(window.AWSHistoricalLexicon?.entries||[])],q=search.value.trim().toLowerCase(),filter=era.value;
   for(const word of entries.filter(x=>(!filter||x.era===filter)&&(!q||[x.word,x.meaning,x.ipa,x.notes,x.era,x.partOfSpeech].some(s=>String(s||'').toLowerCase().includes(q)))).sort((a,b)=>a.word.localeCompare(b.word))){
    const item=line('article','aws-library-item'),info=line('div','aws-dictionary-entry'),head=line('strong','',word.word),meta=line('span','',`${word.era} · ${word.partOfSpeech||'unclassified'} · ${word.ipa||'no IPA'}`);
    info.append(head,meta,line('p','',word.meaning||'No definition yet.'));
    const actions=line('div','aws-library-item-actions'),edit=line('button','','Edit'),remove=line('button','','Delete');
-   edit.onclick=()=>open(word);remove.onclick=()=>{if(confirm('Delete this dictionary entry?'))app().deleteDictionaryEntry(word.id)};
-   actions.append(edit,remove);item.append(info,actions);list.append(item);
+   if(word.builtin){
+    edit.textContent='Copy to my dictionary';edit.onclick=()=>open({...word,id:'',notes:(word.notes||'')+' Copied from historical reconstruction.'});
+    const tag=line('small','aws-dictionary-origin',word.status==='proposed'?'Proposed historical reconstruction':'Source example');
+    info.append(tag);actions.append(edit);
+   }else{
+    edit.onclick=()=>open(word);remove.onclick=()=>{if(confirm('Delete this dictionary entry?'))app().deleteDictionaryEntry(word.id)};
+    actions.append(edit,remove);
+   }
+   if(word.lineageId){
+    const family=window.AWSHistoricalLexicon?.lineages?.find(x=>x.id===word.lineageId);
+    if(family){const detail=line('details','aws-dictionary-lineage'),sum=line('summary','','Full six-era word lineage');
+     detail.append(sum);for(const e of ['proto','ancient','archaic','classical','traditional','modern'])detail.append(line('div','',e+': '+family.forms[e]));
+     info.append(detail);
+    }
+   }
+   item.append(info,actions);list.append(item);
   }
   if(!list.children.length)list.append(line('p','aws-hint','No dictionary entries match. Choose + Add word to create one.'));
  };
@@ -154,7 +200,7 @@ function initDictionary(){
   if(values.id)app().updateDictionaryEntry(values.id,values);else app().addDictionaryEntry(values);dialog.close();render();});
  search.addEventListener('input',render);era.addEventListener('change',render);
  window.addEventListener('aws:dictionary-changed',render);window.addEventListener('aws:view',render);
- $('aws-dictionary-export').onclick=()=>{const rows=[['Word','IPA','Meaning','Era','Part of speech','Notes'],...(app()?.getDictionary?.()||[]).map(x=>[x.word,x.ipa,x.meaning,x.era,x.partOfSpeech,x.notes])];const csv=rows.map(r=>r.map(v=>'"'+String(v||'').replace(/"/g,'""')+'"').join(',')).join('\r\n');downloadBlob('azaaraan-dictionary.csv',new Blob(['\ufeff'+csv],{type:'text/csv'}))};
+ $('aws-dictionary-export').onclick=()=>{const rows=[['Word','IPA','Meaning','Era','Part of speech','Notes'],...[...(app()?.getDictionary?.()||[]),...(window.AWSHistoricalLexicon?.entries||[])].map(x=>[x.word,x.ipa,x.meaning,x.era,x.partOfSpeech,x.notes])];const csv=rows.map(r=>r.map(v=>'"'+String(v||'').replace(/"/g,'""')+'"').join(',')).join('\r\n');downloadBlob('azaaraan-dictionary.csv',new Blob(['\ufeff'+csv],{type:'text/csv'}))};
  render();
 }
 
