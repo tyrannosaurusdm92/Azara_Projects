@@ -1,0 +1,53 @@
+{
+  "title": "The four continents of Aza'ra",
+  "status": "author-confirmed names and pronunciations",
+  "source": "User corrections October 29, 2026",
+  "continent_count": 4,
+  "continents": [
+    {
+      "name": "Tzaphaer",
+      "pronunciation": "taz-uh-fear",
+      "pronunciation_ipa_approx": "/ˈtɑz.ə.fɪər/",
+      "origin": "Named on Uxrowo",
+      "single_canonical_pronunciation": true,
+      "alternate_pronunciations": [],
+      "note": "Do not apply hypothetical modern epenthesis to this historically named continent."
+    },
+    {
+      "name": "Belavados",
+      "pronunciation": "bell-ah-vuh-doe-s",
+      "pronunciation_ipa_approx": "/ˌbɛl.ə.və.ˈdoʊs/",
+      "origin": "Named on Uxrowo",
+      "status": "destroyed",
+      "destroyed_by": "Iron Dominion",
+      "destroyer_name_is_english_translation": true,
+      "azaaraan_destroyer_name": null,
+      "proposed_doe_accent": "ó",
+      "proposed_accented_display": "Belavadós",
+      "historical_spellings": [
+        "Belavadös",
+        "Belavados"
+      ],
+      "note": "Final part sounds like the English doe plus s, not English does (/dʌz/). Accent ó is an author-suggested sound notation."
+    },
+    {
+      "name": "Arzuhan",
+      "pronunciation": "are-zoo-hahn",
+      "pronunciation_ipa_approx": "/ˈɑr.zuː.hɑn/",
+      "origin": "Named on Uxrowo"
+    },
+    {
+      "name": "Dakaroth",
+      "pronunciation": "dack-uh-rawth",
+      "pronunciation_ipa_approx": "/ˈdæk.ə.rɔθ/",
+      "origin": "Named on Uxrowo"
+    }
+  ],
+  "notes": [
+    "These are four names given by the people of Uxrowo.",
+    "Belavados was destroyed by the Iron Dominion.",
+    "Iron Dominion is an approximate English translation; its Aza'raan equivalent is undecided.",
+    "Historical romanized names can retain U spelling; no independent modern U glyph exists.",
+    "A more modern hypothetical newly coined name would not retroactively change Tzaphaer's original pronunciation."
+  ]
+}

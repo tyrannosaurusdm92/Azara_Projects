@@ -1,6 +1,6 @@
 {
-  "alphabet": "ABDEGHIJKLMNOPRSTUYZ",
-  "count": 20,
+  "alphabet": "ABDEGHIJKLMNOPRSTYZ",
+  "count": 19,
   "case": "Case is a Latin transliteration aid, not a claim about native glyph casing",
   "sound_source": "The IPA values in the Letter Evolution Table are preserved, including unconventional notation used by that table.",
   "independent_letters": [
@@ -14,7 +14,7 @@
         "/eɪ/",
         "/aw/"
       ],
-      "notes": "All A-family vowels require an accent from Classical onward"
+      "notes": "A always uses a vowel quality accent. The uh /ʌ/ sound is A-family, not an independent U."
     },
     {
       "letter": "B",
@@ -142,7 +142,7 @@
         "/ɔɪ/",
         "/uː/"
       ],
-      "notes": "Oh, ow, oy, historic oo; oo can be modern U as a graphic migration"
+      "notes": "O holds the o/ow/oy family and inherited long oo /uː/; the old independent U is retired."
     },
     {
       "letter": "P",
@@ -187,14 +187,6 @@
         "/taːhzi/"
       ],
       "notes": "T, TH, TCH and TAZ remain"
-    },
-    {
-      "letter": "U",
-      "type": "vowel",
-      "ipa": [
-        "/uː/"
-      ],
-      "notes": "Independent modern U for the inherited oo quality; short /u/ is not asserted by the source table"
     },
     {
       "letter": "Y",
@@ -370,7 +362,8 @@
     "X": "K accent or compound for ks/x",
     "C": "Use K, S or T-family reading according to historical word, not automatic C replacement",
     "glottal": "Independent in early script; subscript from Classical",
-    "click": "Independent in early script; subscript from Classical"
+    "click": "Independent in early script; subscript from Classical",
+    "U": "Long oo is marked on O; uh is marked on A. No independent U in modern."
   },
   "standalone_consonant_default": {
     "B": "Must carry an explicit b/f/v/w selector accent",

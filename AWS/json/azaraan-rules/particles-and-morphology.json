@@ -41,17 +41,21 @@
     },
     {
       "id": "GOAL",
-      "proposed_form": "yu",
+      "proposed_form": "yo",
       "semantics": "Direction toward a goal",
       "status": "proposal",
-      "requires_lexicon_collision_check": true
+      "requires_lexicon_collision_check": true,
+      "historical_latin_spelling": "yu",
+      "script_mapping_note": "Native O with oo accent represents inherited /uː/; this is not a plain O sound."
     },
     {
       "id": "SOURCE",
-      "proposed_form": "mu",
+      "proposed_form": "mo",
       "semantics": "Movement away from source",
       "status": "proposal",
-      "requires_lexicon_collision_check": true
+      "requires_lexicon_collision_check": true,
+      "historical_latin_spelling": "mu",
+      "script_mapping_note": "Native O with oo accent represents inherited /uː/; this is not a plain O sound."
     },
     {
       "id": "TAM_PAST",

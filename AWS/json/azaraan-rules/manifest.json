@@ -1,6 +1,6 @@
 {
   "title": "Aza'raan Historical Language Rules",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "created": "2026-10-29",
   "status": "Supplemental language specification. Proposed vocabulary and orthographic placeholders are flagged. Existing AWS files are not replaced.",
   "source_priority": [
@@ -22,10 +22,11 @@
     "historical-sound-changes.json",
     "examples-and-tests.json",
     "integration-notes.json",
-    "historical-dictionary.json"
+    "historical-dictionary.json",
+    "continents.json"
   ],
-  "base_letters": "ABDEGHIJKLMNOPRSTUYZ",
-  "base_letter_count": 20,
+  "base_letters": "ABDEGHIJKLMNOPRSTYZ",
+  "base_letter_count": 19,
   "eras": [
     "proto",
     "ancient",
@@ -44,7 +45,9 @@
     "No independent F, V, W, Q, X, C, or glottal/click letter in modern base alphabet",
     "Retain every phoneme family from the authoritative letter evolution tables",
     "Do not assign unknown Khmer code points",
-    "Keep existing AWS application assets, keyboard, and backend untouched"
+    "Keep existing AWS application assets, keyboard, and backend untouched",
+    "U is not an independent letter. Uh is accented A; long oo is accented O.",
+    "Tzaphaer always has the sole pronunciation taz-uh-fear."
   ],
   "compatibility": {
     "repository": "tyrannosaurusdm92/Azara_Projects",

@@ -22,7 +22,7 @@
     {
       "transition": "archaic_to_classical",
       "changes": [
-        "Exactly 20 independent base letters established",
+        "Exactly 19 independent base letters established",
         "B becomes the written host for B, F, V and W readings, selected by an accent",
         "A no longer has a plain default pronunciation; every A phoneme has a quality accent",
         "Clicks and glottal stops cease to be standard independent letters and become subscripts",
@@ -47,7 +47,7 @@
         "Default spoken syllables V, VV, CV, CVV",
         "Preferred SVO remains while VSO becomes productive in marked constructions",
         "Automatic epenthesis repairs new adjacent consonant pairs without rewriting inherited place names",
-        "Modern 20-letter base and stacked subscript writing applied consistently",
+        "Modern 19-letter base and stacked subscript writing applied consistently",
         "Preserve historic proper name pronunciations alongside hypothetical modern readings"
       ]
     }
@@ -68,15 +68,10 @@
     {
       "spelling": "Tzaphaer",
       "era": "ancient inherited",
-      "pronunciation_english": "Taz-uh-fear",
-      "status": "user specified attested name pronunciation",
-      "do_not_replace": true
-    },
-    {
-      "spelling": "Tzaphaer",
-      "era": "hypothetical modern naming",
-      "pronunciation_english": "Tæz-ahp-hah-err",
-      "status": "user specified counterfactual only, not renaming"
+      "pronunciation_english": "taz-uh-fear",
+      "status": "only canonical reading at every era",
+      "do_not_replace": true,
+      "notes": "The author's hypothetical later naming comment was not an alternate pronunciation."
     },
     {
       "spelling": "Nzra",

@@ -89,18 +89,8 @@
       "source": "Tzaphaer",
       "type": "historical_pronunciation",
       "era": "ancient",
-      "expected_english": "Taz-uh-fear",
-      "status": "user specified"
-    },
-    {
-      "id": "tzaphaer_modern_hypothesis",
-      "source": "Tzaphaer",
-      "type": "counterfactual_pronunciation",
-      "era": "modern",
-      "expected_english": "Tæz-ahp-hah-err",
-      "initial_written_pair": "Tz",
-      "initial_ipa": "tæz",
-      "status": "user specified hypothetical"
+      "expected_english": "taz-uh-fear",
+      "status": "only canonical pronunciation in every era"
     },
     {
       "id": "glottal_click",
@@ -131,9 +121,9 @@
   ],
   "invariants": [
     {
-      "id": "alphabet_exactly_20",
-      "expect": "ABDEGHIJKLMNOPRSTUYZ",
-      "count": 20
+      "id": "alphabet_exactly_19",
+      "expect": "ABDEGHIJKLMNOPRSTYZ",
+      "count": 19
     },
     {
       "id": "no_modern_independent_w",
@@ -199,6 +189,18 @@
     {
       "id": "no_guessed_khmer_unicode",
       "expect": true
+    },
+    {
+      "id": "no_independent_u",
+      "expect": false
+    },
+    {
+      "id": "uh_is_a_family",
+      "expect": "a_uh"
+    },
+    {
+      "id": "tzaphaer_only_one_pronunciation",
+      "expect": "taz-uh-fear"
     }
   ]
 }

@@ -95,5 +95,6 @@
   "differentiation": {
     "independent_letter_count": 20,
     "spoken_syllable_phonemes": "Can be 1 or more, independently of written cluster count"
-  }
+  },
+  "orthography": "The roman letter u can remain in historical or English transliterations, but the modern native letter inventory has no independent U."
 }

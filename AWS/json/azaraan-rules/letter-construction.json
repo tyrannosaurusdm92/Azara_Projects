@@ -22,7 +22,7 @@
       "stress_target",
       "reading_override"
     ],
-    "base_allowed": "ABDEGHIJKLMNOPRSTUYZ",
+    "base_allowed": "ABDEGHIJKLMNOPRSTYZ",
     "max_subscripts": 2,
     "max_accents_per_atomic": 1,
     "subscript_order": [

@@ -26,7 +26,8 @@
     "All older source IPA variants persist as sound slots or contextual realizations",
     "Aza'raan origin remains Kaʻaheʻanua plus Uxrowoiye",
     "Do not silently import entire Māori verb system or Khmer inherent-vowel values",
-    "Keep unassigned Khmer Unicode entries unassigned"
+    "Keep unassigned Khmer Unicode entries unassigned",
+    "User's current alphabet has 19 letters and no independent U. Belavados, Tzaphaer, Arzuhan and Dakaroth have fixed pronunciations."
   ],
   "pending_authorial_decisions": [
     "Exact unique native glyph for each semantic accent",
@@ -37,5 +38,5 @@
     "Confirm the newly reconstructed particles before treating them as canonical words"
   ],
   "format": "UTF-8 JSON, two-space indentation, no em dashes",
-  "version": "1.1.0"
+  "version": "1.2.0"
 }

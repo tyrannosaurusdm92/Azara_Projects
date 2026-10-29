@@ -187,16 +187,6 @@
       "authority": "proposed explicit selector for an attested sound"
     },
     {
-      "id": "u_oo",
-      "base": "U",
-      "reading": "oo",
-      "ipa": "/uː/",
-      "native_glyph": null,
-      "khmer_unicode": null,
-      "assignment_status": "semantic_only",
-      "authority": "proposed explicit selector for an attested sound"
-    },
-    {
       "id": "y_yah",
       "base": "Y",
       "reading": "yah",
@@ -549,5 +539,6 @@
       "ancestor": "glottal",
       "ipa": null
     }
-  ]
+  ],
+  "notes": "No independent U. The a_uh accent denotes uh and o_oo denotes long oo."
 }

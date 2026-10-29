@@ -72,7 +72,7 @@
       "end": "827 CE",
       "duration_years": 832,
       "order": "SVO preferred; VSO permitted for formal or focused predicates",
-      "profile": "The modern 20-base-letter framework becomes productive and phonetic accents carry family distinctions",
+      "profile": "The 19-base family representation evolves, with B absorbing F/V/W, A family absorbing uh and O-family absorbing long oo; older letter forms remain historically documented.",
       "particle_profile": "Most syntactic functions expressed by particles, with verbs carrying little agreement",
       "phonology": "No independent glottal or click letters; glottal attaches before host, click after; vowel accents are obligatory for A family",
       "orthography": "One base plus up to two subscripts; one accent for each letter; glottal-descended > and < emerge",
@@ -113,7 +113,7 @@
       "profile": "Māori-inspired spoken syllable composition with Khmer-inspired independent and stacked subscript letters",
       "particle_profile": "Approximately 90 percent particle-based, temporal/aspect, number, location, direction, role, negation and focus expressed through particles",
       "phonology": "(C)V(V) preferred, controlled epenthesis between consonants, automatic Nz and Tz repair; all old sounds preserved",
-      "orthography": "Exactly 20 independent letters, all family sounds through accents, dependent vowel letters, glottal pre-host and click post-host",
+      "orthography": "Exactly 19 independent letters ABDEGHIJKLMNOPRSTYZ; A-uh accent and O-oo accent; Khmer-inspired dependent vowel letters and up to two subscripts per host.",
       "syntax_features": [
         "Verb-initial focus permits VSO without losing argument roles",
         "Topic particles permit OSV or OVS when unambiguous",
