@@ -1,0 +1,139 @@
+{
+  "title": "Archive inventory before 2082-3021 time-line correction",
+  "generated": "2026-10-29",
+  "scope": "Do not undo the newer Bilqis chronology or story canonicalization",
+  "folders_scanned": 7,
+  "items": [
+    {
+      "id": "1oVdwSpwi17sFrNMszrM_TsOUnRPQu3Gm",
+      "name": "Audit",
+      "path": "Initial Draft Archive/Before Biliqis 2082-3021 Correction/Audit",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1oVdwSpwi17sFrNMszrM_TsOUnRPQu3Gm",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1KfJkqKpdy2M9WooHT--Ku7I3c5humUdP",
+      "name": "Project",
+      "path": "Initial Draft Archive/Before Biliqis 2082-3021 Correction/Project",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1KfJkqKpdy2M9WooHT--Ku7I3c5humUdP",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1f2zHDSWyNzgGQ7CYRjb91oA3bhKc7z4B",
+      "name": "Code Shared",
+      "path": "Initial Draft Archive/Before Biliqis 2082-3021 Correction/Code Shared",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1f2zHDSWyNzgGQ7CYRjb91oA3bhKc7z4B",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1SCO9xlOfvXMbNnkFsjf3xTTcKu0eSb8Y",
+      "name": "Code TTRPG",
+      "path": "Initial Draft Archive/Before Biliqis 2082-3021 Correction/Code TTRPG",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1SCO9xlOfvXMbNnkFsjf3xTTcKu0eSb8Y",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1SJYuTlg0gfy42iBYQ2uh_MXaCOHYkcgc",
+      "name": "TTRPG",
+      "path": "Initial Draft Archive/Before Biliqis 2082-3021 Correction/TTRPG",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1SJYuTlg0gfy42iBYQ2uh_MXaCOHYkcgc",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1yD7RmgDMKnU5dbAtY387XAD7bx71VKZb",
+      "name": "Book Series",
+      "path": "Initial Draft Archive/Before Biliqis 2082-3021 Correction/Book Series",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1yD7RmgDMKnU5dbAtY387XAD7bx71VKZb",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1ARb245wsvaC6vkPHS2J6OlhEKTbVbRsI",
+      "name": "README.md",
+      "path": "Initial Draft Archive/Before Timeline/Project/README.md",
+      "mime": "text/markdown",
+      "size_bytes": 656,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1ARb245wsvaC6vkPHS2J6OlhEKTbVbRsI/view?usp=drivesdk",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1s_FO1brvow8fW7VCwrFc3bJTUm5r-wkw",
+      "name": "index.html",
+      "path": "Initial Draft Archive/Before Timeline/Code TTRPG/index.html",
+      "mime": "text/html",
+      "size_bytes": 1437,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1s_FO1brvow8fW7VCwrFc3bJTUm5r-wkw/view?usp=drivesdk",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1T4UYq0j-Kg2hbwNfwJeBOrrAuxVpfzNw",
+      "name": "README.md",
+      "path": "Initial Draft Archive/Before Timeline/Code TTRPG/README.md",
+      "mime": "text/markdown",
+      "size_bytes": 222,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1T4UYq0j-Kg2hbwNfwJeBOrrAuxVpfzNw/view?usp=drivesdk",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "15CRmsiyVNOau5qkrf1zY1aZzzk4rWWm5",
+      "name": "TTRPG_24_Tab_Guidebook.html",
+      "path": "Initial Draft Archive/Before Timeline/TTRPG/TTRPG_24_Tab_Guidebook.html",
+      "mime": "text/html",
+      "size_bytes": 26464,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/15CRmsiyVNOau5qkrf1zY1aZzzk4rWWm5/view?usp=drivesdk",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1cfBe3BwUCbZxJkhfof49t_KHXc4GEpYF",
+      "name": "TTRPG_24_Tab_Guidebook.docx",
+      "path": "Initial Draft Archive/Before Timeline/TTRPG/TTRPG_24_Tab_Guidebook.docx",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 46079,
+      "is_folder": false,
+      "source_url": "https://docs.google.com/document/d/1cfBe3BwUCbZxJkhfof49t_KHXc4GEpYF/edit?usp=drivesdk&ouid=102190095328166949525&rtpof=true&sd=true",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "14PIjQrW4MoX3wCm25t_pwX3QtnpH14gu",
+      "name": "Book_Series_24_Tab_Guidebook.html",
+      "path": "Initial Draft Archive/Before Timeline/Book Series/Book_Series_24_Tab_Guidebook.html",
+      "mime": "text/html",
+      "size_bytes": 22362,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/14PIjQrW4MoX3wCm25t_pwX3QtnpH14gu/view?usp=drivesdk",
+      "status": "pre_chronology_fix_archive"
+    },
+    {
+      "id": "1yzIsMki4x1jHRajuRlfuvtmi1nfrqZkH",
+      "name": "Book_Series_24_Tab_Guidebook.docx",
+      "path": "Initial Draft Archive/Before Timeline/Book Series/Book_Series_24_Tab_Guidebook.docx",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 44668,
+      "is_folder": false,
+      "source_url": "https://docs.google.com/document/d/1yzIsMki4x1jHRajuRlfuvtmi1nfrqZkH/edit?usp=drivesdk&ouid=102190095328166949525&rtpof=true&sd=true",
+      "status": "pre_chronology_fix_archive"
+    }
+  ],
+  "errors": []
+}
