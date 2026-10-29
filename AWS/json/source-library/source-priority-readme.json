@@ -1,0 +1,107 @@
+{
+  "id": "source-priority-readme",
+  "title": "Source Scope and Author Priority",
+  "category": "audit",
+  "source_url": "https://drive.google.com/file/d/1QvUfsg8_rDipiNnvRpmbwx6ufcTWKviV/view",
+  "status": "reference_only_not_live_canon",
+  "sections": [
+    {
+      "title": "# Aza’ra Full | Original-source guidebooks",
+      "text": "# Aza’ra Full | Original-source guidebooks",
+      "kind": "source_reference",
+      "original_order": 1
+    },
+    {
+      "title": "Four original guidebooks are supplied in DOCX and HTML. The Aza’raan Language guidebook now has 25 sections after integrating the compl",
+      "text": "Four original guidebooks are supplied in DOCX and HTML. The Aza’raan Language guidebook now has 25 sections after integrating the complete 52-origin hieroglyph table; other guidebooks retain their original section counts.",
+      "kind": "source_reference",
+      "original_order": 2
+    },
+    {
+      "title": "The 52 sign glyph-origin atlas is based on the source Letter Evolution Table, with derived strokes explicitly labeled provisional. No o",
+      "text": "The 52 sign glyph-origin atlas is based on the source Letter Evolution Table, with derived strokes explicitly labeled provisional. No old integrated builds were used.",
+      "kind": "source_reference",
+      "original_order": 3
+    },
+    {
+      "title": "The tabletop and MMORPG programs are starter tools and not a full live game or rewrite of all 240 manuscript chapters. Unconfirmed name",
+      "text": "The tabletop and MMORPG programs are starter tools and not a full live game or rewrite of all 240 manuscript chapters. Unconfirmed names and chronology remain flagged.",
+      "kind": "source_reference",
+      "original_order": 4
+    },
+    {
+      "title": "Shared canon information lives under Code/shared; source-specific guides live in their named folders.",
+      "text": "Shared canon information lives under Code/shared; source-specific guides live in their named folders.",
+      "kind": "source_reference",
+      "original_order": 5
+    },
+    {
+      "title": "## Book Two and Galaxy Era correction",
+      "text": "## Book Two and Galaxy Era correction",
+      "kind": "source_reference",
+      "original_order": 6
+    },
+    {
+      "title": "Book Two now owns the Bilqis / Queen of Sheba / Queen of Atlantis chronology, Göbekli Tepe discovery, Ubar connection, and the 3021 tra",
+      "text": "Book Two now owns the Bilqis / Queen of Sheba / Queen of Atlantis chronology, Göbekli Tepe discovery, Ubar connection, and the 3021 transfer into ancient history. The alternate-universe Galaxy Era TTRPG takes place around 3013 and only briefly mentions Bilqis as an astute queen who repeatedly violates time laws that began in 2082. The dedicated TTRPG Earth clue ledger, validator, and browser UI are removed. Previously stored legacy clue data is not deleted, but the revised program does not access it. The associated novel clues are editorial references only.",
+      "kind": "source_reference",
+      "original_order": 7
+    },
+    {
+      "title": "No previous integrated builds are used as narrative or mechanical source material. The DOCX layout is retained from the immediately pre",
+      "text": "No previous integrated builds are used as narrative or mechanical source material. The DOCX layout is retained from the immediately preceding original-source handbook delivery.",
+      "kind": "source_reference",
+      "original_order": 8
+    },
+    {
+      "title": "## Bilqis and language contact correction, October 2026",
+      "text": "## Bilqis and language contact correction, October 2026",
+      "kind": "source_reference",
+      "original_order": 9
+    },
+    {
+      "title": "Bilqis is the only approved spelling. Biliqis was a typo and is not a separate name. The book-series-only trail is the Queen of Sheba a",
+      "text": "Bilqis is the only approved spelling. Biliqis was a typo and is not a separate name. The book-series-only trail is the Queen of Sheba and Atlantis narrative through Göbekli Tepe and Ubar. The Galaxy Era table campaign refers to the queen only briefly and never has a special Bilqis clue ledger.",
+      "kind": "source_reference",
+      "original_order": 10
+    },
+    {
+      "title": "Aza’raan has **two foundational strands**, Proto-Oceanic-inspired Kaʻaheʻanua and Uxrowoiye / Uxrowo, but it is influenced by other ori",
+      "text": "Aza’raan has **two foundational strands**, Proto-Oceanic-inspired Kaʻaheʻanua and Uxrowoiye / Uxrowo, but it is influenced by other original peoples on Aza’ra through historical contact. The contact data in `Language/azaaraan_multilingual_contact_atlas.json` and `Code/word-generator/contact-data.mjs` separates the confirmed community names from proposed linguistic mechanisms. The attached English alphabet reference supplies method examples, not a literal genealogy for the invented script. Original Egyptian-root assignments remain the starting forms.",
+      "kind": "source_reference",
+      "original_order": 11
+    },
+    {
+      "title": "This is a revision of the immediately preceding delivered source-based documents and runnable starter tools, **not** a lore import from",
+      "text": "This is a revision of the immediately preceding delivered source-based documents and runnable starter tools, **not** a lore import from a previous integrated build. Earlier integrated projects remain prohibited inputs.",
+      "kind": "source_reference",
+      "original_order": 12
+    },
+    {
+      "title": "## 2026-10-24 language revision",
+      "text": "## 2026-10-24 language revision\nActive Language files and the Code/word-generator have been synchronized with the 52-origin hieroglyph register, Ancient 52 / Archaic 49 / Classical 44 / Traditional 32 / Modern 21 inventory, 55 Modern readings, nine winning origin contours, and compulsory accents for every member of a multi-reading family. The 14 newly supplied primary accents are provisional. The only bare Modern letters are H L P U Z; glottal `'`, click `¡`, and syllable selectors `<` `>` are separate signs. Historical archives are retained unchanged.",
+      "kind": "source_reference",
+      "original_order": 13
+    },
+    {
+      "title": "## 2026-10-25 revised Aza’raan origin and writing canon",
+      "text": "## 2026-10-25 revised Aza’raan origin and writing canon",
+      "kind": "source_reference",
+      "original_order": 14
+    },
+    {
+      "title": "Protected group-parent hieroglyphs: 𓆠 T; 𓋜 N; 𓈌 B; 𓇰 K; 𓊲 O; 𓈚 I; 𓆣 E; 𓄣 A; 𓆇 S. All Modern readings in a family with multiple",
+      "text": "Protected group-parent hieroglyphs: 𓆠 T; 𓋜 N; 𓈌 B; 𓇰 K; 𓊲 O; 𓈚 I; 𓆣 E; 𓄣 A; 𓆇 S. All Modern readings in a family with multiple variants - including the primary reading - are accented; only H, L, P, U and Z lack accents. The special signs are glottal apostrophe **`'` (U+0027)**, click **`¡` (U+00A1)**, previous syllable **`<` (U+003C)** and next syllable **`>` (U+003E)**.",
+      "kind": "source_reference",
+      "original_order": 16
+    },
+    {
+      "title": "The original 24-section HTML language guide and the original five-column 52-sign origin HTML table are now unified in `Language/Languag",
+      "text": "The original 24-section HTML language guide and the original five-column 52-sign origin HTML table are now unified in `Language/Language_24_Tab_Guidebook.html` (its file ID retained). The matching Word reference is `Language/Language_24_Tab_Guidebook.docx`, and `Language/historical-lineage-52.json` records every era, merger, winner, and source phoneme. Updated data files are in Language; a complete ZIP snapshot is `Language/Azaaraan_Canon_Complete_2026-10-25.zip`. Legacy images and unrelated manuscript/game content have not been redrawn or rewritten.",
+      "kind": "source_reference",
+      "original_order": 17
+    }
+  ],
+  "omitted_superseded_paragraphs": 1,
+  "note": "Do not override current AWS author-approved canon. Read historical content with its original context."
+}

@@ -1,0 +1,86 @@
+{
+  "title": "Aza'ra Source Reference Library",
+  "source_folder": "https://drive.google.com/drive/folders/1vkpRNyX21cgWOsBBRTnkx5GhaLeucOtG",
+  "authority": "User's latest changes and current AWS rules supersede any contradictions in older Drive source files.",
+  "items": [
+    {
+      "id": "book-series",
+      "title": "Threads of Fate Book Series Guidebook",
+      "category": "books",
+      "path": "./book-series.json",
+      "sections": 25,
+      "omitted_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/1gUFA9puGshdQOC6W1T_6BecFexLro7Da/view"
+    },
+    {
+      "id": "language-guide",
+      "title": "Aza'raan Language Guidebook",
+      "category": "language",
+      "path": "./language-guide.json",
+      "sections": 24,
+      "omitted_superseded_paragraphs": 2,
+      "source_url": "https://drive.google.com/file/d/1xKLwkfb-yFaciguC7DYsvvm_bG782Vew/view"
+    },
+    {
+      "id": "earthkeepers",
+      "title": "Earth-Keeper Families and Shared Underworld",
+      "category": "worldbuilding",
+      "path": "./earthkeepers.json",
+      "sections": 39,
+      "omitted_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/1j1qoFGESmvyhhcbqq_VByArcGnONY40L/view"
+    },
+    {
+      "id": "species",
+      "title": "Species Appearance and Bloodline Atlas",
+      "category": "peoples",
+      "path": "./species.json",
+      "sections": 1,
+      "omitted_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/1wlkij681xFXVvlfFDr6qwV1EaDFoJ2zt/view"
+    },
+    {
+      "id": "naming",
+      "title": "Non-Aza'raan Naming Guide",
+      "category": "language",
+      "path": "./naming.json",
+      "sections": 23,
+      "omitted_superseded_paragraphs": 2,
+      "source_url": "https://drive.google.com/file/d/1ETSBs6_VdcKAoaDjcyB3MQaLbi1RZQD7/view"
+    },
+    {
+      "id": "letter-evolution-source",
+      "title": "Letter Evolution Table Source",
+      "category": "language",
+      "path": "./letter-evolution-source.json",
+      "sections": 69,
+      "omitted_superseded_paragraphs": 1,
+      "source_url": "https://docs.google.com/document/d/1lAkGHgo5pDYvjO9lvzbD6sQjMjgJCixj6degMNSYvOE/edit"
+    },
+    {
+      "id": "peoples-approved",
+      "title": "Approved Peoples and Mixed Heritages",
+      "category": "peoples",
+      "path": "./peoples-approved.json",
+      "sections": 172,
+      "omitted_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/1j9gzcBxUuD2sOGJta_XkYsnF5nScuvlc/view"
+    },
+    {
+      "id": "source-priority-readme",
+      "title": "Source Scope and Author Priority",
+      "category": "audit",
+      "path": "./source-priority-readme.json",
+      "sections": 16,
+      "omitted_superseded_paragraphs": 1,
+      "source_url": "https://drive.google.com/file/d/1QvUfsg8_rDipiNnvRpmbwx6ufcTWKviV/view"
+    }
+  ],
+  "rules": [
+    "Reference data only: never overwrites users' existing manuscripts, lexicon, or glyphs.",
+    "19 modern independent letters and A-family uh override the 21/38-letter historical guide counts.",
+    "Tzaphaer has one pronunciation: taz-uh-fear.",
+    "Belavados was destroyed; any references to extant settlements are historical.",
+    "Unapproved proposed character names are not automatically canonical."
+  ]
+}

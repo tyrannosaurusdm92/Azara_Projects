@@ -1,0 +1,1043 @@
+{
+  "id": "peoples-approved",
+  "title": "Approved Peoples and Mixed Heritages",
+  "category": "peoples",
+  "source_url": "https://drive.google.com/file/d/1j9gzcBxUuD2sOGJta_XkYsnF5nScuvlc/view",
+  "status": "reference_only_not_live_canon",
+  "sections": [
+    {
+      "title": "AZA'RA: APPROVED PEOPLES, PHYSICAL APPEARANCE AND BLOODLINES",
+      "text": "AZA'RA: APPROVED PEOPLES, PHYSICAL APPEARANCE AND BLOODLINES",
+      "kind": "source_reference",
+      "original_order": 1
+    },
+    {
+      "title": "Character creation reference for the Book Series, TTRPG and MMORPG",
+      "text": "Character creation reference for the Book Series, TTRPG and MMORPG",
+      "kind": "source_reference",
+      "original_order": 2
+    },
+    {
+      "title": "==============================================================================",
+      "text": "==============================================================================",
+      "kind": "source_reference",
+      "original_order": 3
+    },
+    {
+      "title": "All physical descriptions and physical subtype details in this edition are approved by the author. The twelve strict-registry species r",
+      "text": "All physical descriptions and physical subtype details in this edition are approved by the author. The twelve strict-registry species remain distinct from other source-documented peoples and mixed-ancestry communities. A mixed community is not automatically another biological species. The source’s character name samples remain proposed, not established personal names.",
+      "kind": "source_reference",
+      "original_order": 4
+    },
+    {
+      "title": "Azh’raim is the ancient name of the draconic people who are now called Azrahai. Both names describe the same species and its nine estab",
+      "text": "Azh’raim is the ancient name of the draconic people who are now called Azrahai. Both names describe the same species and its nine established bloodlines. The specific year of simplification is not established.",
+      "kind": "source_reference",
+      "original_order": 5
+    },
+    {
+      "title": "Dril'thar has always been the sole name for the amphibious people. Its six environmental bloodlines belong exclusively to Dril'thar his",
+      "text": "Dril'thar has always been the sole name for the amphibious people. Its six environmental bloodlines belong exclusively to Dril'thar history.",
+      "kind": "source_reference",
+      "original_order": 6
+    },
+    {
+      "title": "Unmixed Aza’raans have very pale to lightly tanned skin, usually copper or auburn hair and commonly silver, blue, or green eyes. Family",
+      "text": "Unmixed Aza’raans have very pale to lightly tanned skin, usually copper or auburn hair and commonly silver, blue, or green eyes. Family heritage can introduce further variation.",
+      "kind": "source_reference",
+      "original_order": 7
+    },
+    {
+      "title": "Real-world human population references are visual color-range analogies only, not Aza'ran ethnic identities.",
+      "text": "Real-world human population references are visual color-range analogies only, not Aza'ran ethnic identities.",
+      "kind": "source_reference",
+      "original_order": 8
+    },
+    {
+      "title": "==============================================================================",
+      "text": "==============================================================================",
+      "kind": "source_reference",
+      "original_order": 9
+    },
+    {
+      "title": "Physical appearance: Small to modestly sized amphibious people, usually about one to four feet tall, with sinewy limbs,",
+      "text": "Physical appearance: Small to modestly sized amphibious people, usually about one to four feet tall, with sinewy limbs,\ndamp protective skin, webbed hands and feet, and often a powerful prehensile tail. Sensory fins or\nfrills can frame the head. Large reflective eyes, color-shifting patterns, and luminous markings\npermit both speech and visual expression. They can move upright or on four limbs; moisture is\nessential to their health.",
+      "kind": "source_reference",
+      "original_order": 10
+    },
+    {
+      "title": "Dril'thar has always been the sole name for these amphibious peoples and their lineages. No alternate ancestral species name is part of",
+      "text": "Dril'thar has always been the sole name for these amphibious peoples and their lineages. No alternate ancestral species name is part of canon.",
+      "kind": "source_reference",
+      "original_order": 11
+    },
+    {
+      "title": "* Grassland: Light sky blue, pale tan or sun-washed gold surfaces adapted to open wet meadows. Legs remain strong",
+      "text": "* Grassland: Light sky blue, pale tan or sun-washed gold surfaces adapted to open wet meadows. Legs remain strong\nfor leaping and traversing shallow water.",
+      "kind": "source_reference",
+      "original_order": 12
+    },
+    {
+      "title": "* Lush Forest: Moss green, bark brown and lichen gray coloring; fine rootlike patterns help bodies blend into",
+      "text": "* Lush Forest: Moss green, bark brown and lichen gray coloring; fine rootlike patterns help bodies blend into\nshaded wet woodland.",
+      "kind": "source_reference",
+      "original_order": 13
+    },
+    {
+      "title": "* Marsh: Peat brown, slate gray and murky green mottling, often with a denser protective skin coating for",
+      "text": "* Marsh: Peat brown, slate gray and murky green mottling, often with a denser protective skin coating for\nstagnant wetlands.",
+      "kind": "source_reference",
+      "original_order": 14
+    },
+    {
+      "title": "* Rainforest: Vivid emerald, sapphire or violet skins carrying bright bioluminescent rainlike markings and",
+      "text": "* Rainforest: Vivid emerald, sapphire or violet skins carrying bright bioluminescent rainlike markings and\npronounced sensory frills.",
+      "kind": "source_reference",
+      "original_order": 15
+    },
+    {
+      "title": "* Ocean: Ocean lineages may be slightly larger, with elongated swimming profiles, reflective seafoam or deep",
+      "text": "* Ocean: Ocean lineages may be slightly larger, with elongated swimming profiles, reflective seafoam or deep\nblue skin, and strong tails.",
+      "kind": "source_reference",
+      "original_order": 16
+    },
+    {
+      "title": "* Reef: Brilliant reds, turquoise, luminous pink and textured coral-like patterning; fins and webbing",
+      "text": "* Reef: Brilliant reds, turquoise, luminous pink and textured coral-like patterning; fins and webbing\nsupport reef-water movement.",
+      "kind": "source_reference",
+      "original_order": 17
+    },
+    {
+      "title": "Name-design influences: Ancient or Old Egyptian, Navajo (Diné Bizaad), Taa (!Xóõ / !Xoon)",
+      "text": "Name-design influences: Ancient or Old Egyptian, Navajo (Diné Bizaad), Taa (!Xóõ / !Xoon)",
+      "kind": "source_reference",
+      "original_order": 18
+    },
+    {
+      "title": "Name pattern: Optional CLICK + CV.CV or CV.CV.CV; do not require a click in every name",
+      "text": "Name pattern: Optional CLICK + CV.CV or CV.CV.CV; do not require a click in every name",
+      "kind": "source_reference",
+      "original_order": 19
+    },
+    {
+      "title": "Sample proposed character names: ǃKhemaru, ǀSenaki, ǁNamaru, ǂTsenahe, ʘMekanu",
+      "text": "Sample proposed character names: ǃKhemaru, ǀSenaki, ǁNamaru, ǂTsenahe, ʘMekanu",
+      "kind": "source_reference",
+      "original_order": 20
+    },
+    {
+      "title": "Physical appearance: Tall, slender, graceful magic-dependent humanoids with features that vary markedly among bloodlines.",
+      "text": "Physical appearance: Tall, slender, graceful magic-dependent humanoids with features that vary markedly among bloodlines.\nSkin may range from pale ivory through earth green and brown to deep sapphire. Eyes glow faintly in\nthe color of their affinity, while fine hair can shimmer or float in dense ambient magic. Appearance\nshould communicate personal lineage, not a single uniform skin color.",
+      "kind": "source_reference",
+      "original_order": 21
+    },
+    {
+      "title": "* Psionic: psionic light in the eyes or temple markings can be an individual appearance cue.",
+      "text": "* Psionic: psionic light in the eyes or temple markings can be an individual appearance cue.",
+      "kind": "source_reference",
+      "original_order": 22
+    },
+    {
+      "title": "* Swamp: Wetland greens and browns with reed-like markings are characteristic possible looks. The historic",
+      "text": "* Swamp: Wetland greens and browns with reed-like markings are characteristic possible looks. The historic\ntext describes woodland and marsh-linked ancestors, but not every detail of this current label.",
+      "kind": "source_reference",
+      "original_order": 23
+    },
+    {
+      "title": "* Arcane: Luminous pale or violet skin and shifting magical markings are among the approved options for an",
+      "text": "* Arcane: Luminous pale or violet skin and shifting magical markings are among the approved options for an\narcane lineage.",
+      "kind": "source_reference",
+      "original_order": 24
+    },
+    {
+      "title": "* Dark: Low-light, shadow-touched coloring and dim luminescence can occur in this bloodline.",
+      "text": "* Dark: Low-light, shadow-touched coloring and dim luminescence can occur in this bloodline.",
+      "kind": "source_reference",
+      "original_order": 25
+    },
+    {
+      "title": "* Stone: Source describes granite, sandstone and muted moonstone coloration, crystalline highlights, and",
+      "text": "* Stone: Source describes granite, sandstone and muted moonstone coloration, crystalline highlights, and\nmarkings reminiscent of stone inscriptions.",
+      "kind": "source_reference",
+      "original_order": 26
+    },
+    {
+      "title": "* Oceanic: Pearlescent aquamarine or tide-blue color and water-adapted accents are approved visual options.",
+      "text": "* Oceanic: Pearlescent aquamarine or tide-blue color and water-adapted accents are approved visual options.",
+      "kind": "source_reference",
+      "original_order": 27
+    },
+    {
+      "title": "Name-design influences: Korean, French",
+      "text": "Name-design influences: Korean, French",
+      "kind": "source_reference",
+      "original_order": 28
+    },
+    {
+      "title": "Name pattern: (C)V.CV.CV; usually 3-5 syllables",
+      "text": "Name pattern: (C)V.CV.CV; usually 3-5 syllables",
+      "kind": "source_reference",
+      "original_order": 29
+    },
+    {
+      "title": "Sample proposed character names: Yermifana, Meryefina, Salmyeoro, Gyerfima, Constefaria",
+      "text": "Sample proposed character names: Yermifana, Meryefina, Salmyeoro, Gyerfima, Constefaria",
+      "kind": "source_reference",
+      "original_order": 30
+    },
+    {
+      "title": "Ancient and modern naming: Azh’raim gradually simplified to Azrahai across generations. The precise transition date has not been establ",
+      "text": "Ancient and modern naming: Azh’raim gradually simplified to Azrahai across generations. The precise transition date has not been established. This is a historical name change within one species, not the merger of two species.",
+      "kind": "source_reference",
+      "original_order": 31
+    },
+    {
+      "title": "Physical appearance: Original Aza'ran draconic people whose living anatomy includes scales, a powerful tail, clawed",
+      "text": "Physical appearance: Original Aza'ran draconic people whose living anatomy includes scales, a powerful tail, clawed\nhands, facial ridges and, where appropriate to lineage, wings. Bodies range from heavy mineral-\narmored to long and streamlined. Ancient records call these same people Azh’raim; their modern name\nis Azrahai.",
+      "kind": "source_reference",
+      "original_order": 32
+    },
+    {
+      "title": "* Noitzideq: Tall with layered green or blue-green scales, gold and dark speckles, feather-edged aerodynamic",
+      "text": "* Noitzideq: Tall with layered green or blue-green scales, gold and dark speckles, feather-edged aerodynamic\nwings, and a muscular tail.",
+      "kind": "source_reference",
+      "original_order": 33
+    },
+    {
+      "title": "* Saelftum: Massive, volcanic-adapted build with charcoal or black scales, amber and red accents, broad wings,",
+      "text": "* Saelftum: Massive, volcanic-adapted build with charcoal or black scales, amber and red accents, broad wings,\nhorns and molten-looking fissures.",
+      "kind": "source_reference",
+      "original_order": 34
+    },
+    {
+      "title": "* Jazwed: Coarse red-green iridescent scales, crystal clusters, dense muscular frame and shorter gliding wings",
+      "text": "* Jazwed: Coarse red-green iridescent scales, crystal clusters, dense muscular frame and shorter gliding wings\nadapted to heat.",
+      "kind": "source_reference",
+      "original_order": 35
+    },
+    {
+      "title": "* Khoalaros: Long aquatic body with dark reflective scales, bioluminescent veins, webbed extremities, dorsal fins",
+      "text": "* Khoalaros: Long aquatic body with dark reflective scales, bioluminescent veins, webbed extremities, dorsal fins\nand swimming-capable wings and tail.",
+      "kind": "source_reference",
+      "original_order": 36
+    },
+    {
+      "title": "* Gauksneth: Pale sand-colored crystalline scales, slim limbs and long sail-like wings suited to arid terrain.",
+      "text": "* Gauksneth: Pale sand-colored crystalline scales, slim limbs and long sail-like wings suited to arid terrain.",
+      "kind": "source_reference",
+      "original_order": 37
+    },
+    {
+      "title": "* Tuorszom: Gray, brown and black layered scales with mineral streaks, protective plates, and broad climbing",
+      "text": "* Tuorszom: Gray, brown and black layered scales with mineral streaks, protective plates, and broad climbing\nhands and feet.",
+      "kind": "source_reference",
+      "original_order": 38
+    },
+    {
+      "title": "* Taudinax: Dark iridescent scales, semi-translucent patches, silent wings, elongated fingers and a flexible",
+      "text": "* Taudinax: Dark iridescent scales, semi-translucent patches, silent wings, elongated fingers and a flexible\ntail.",
+      "kind": "source_reference",
+      "original_order": 39
+    },
+    {
+      "title": "* Gouxelq: Deep blue metallic scales, crystal protrusions on shoulders and knuckles, heavy frame and broad",
+      "text": "* Gouxelq: Deep blue metallic scales, crystal protrusions on shoulders and knuckles, heavy frame and broad\nflight wings.",
+      "kind": "source_reference",
+      "original_order": 40
+    },
+    {
+      "title": "* Vautaces: Smooth ruby-red and cream scales with radiant crystal edging, long fingers, elegant wings and fine",
+      "text": "* Vautaces: Smooth ruby-red and cream scales with radiant crystal edging, long fingers, elegant wings and fine\nfacial ridges.",
+      "kind": "source_reference",
+      "original_order": 41
+    },
+    {
+      "title": "Name-design influences: Georgian, Japanese",
+      "text": "Name-design influences: Georgian, Japanese",
+      "kind": "source_reference",
+      "original_order": 42
+    },
+    {
+      "title": "Sample proposed character names: Zarikome, Korotavi, Merazuki, Tavikoro",
+      "text": "Sample proposed character names: Zarikome, Korotavi, Merazuki, Tavikoro",
+      "kind": "source_reference",
+      "original_order": 43
+    },
+    {
+      "title": "Physical appearance: People whose bodies visibly reflect one of five elemental affinities, rather than a separate generic",
+      "text": "Physical appearance: People whose bodies visibly reflect one of five elemental affinities, rather than a separate generic\nElementaris species. Some are solid as stone, some carry ember patterns, others appear fluid, airy\nor illuminated by magical energy. Their silhouettes and voices may change with the environment; none\nof those forms should be mistaken for a separate current species.",
+      "kind": "source_reference",
+      "original_order": 44
+    },
+    {
+      "title": "* Earth: Bark or stone textured skin, mosslike hair, weighty build, earthy fissures and a deep resonant",
+      "text": "* Earth: Bark or stone textured skin, mosslike hair, weighty build, earthy fissures and a deep resonant\nvoice.",
+      "kind": "source_reference",
+      "original_order": 45
+    },
+    {
+      "title": "* Fire: Glowing ember veins, heatlike shimmer and hair that can suggest flame; specific color and physiology",
+      "text": "* Fire: Glowing ember veins, heatlike shimmer and hair that can suggest flame; specific color and physiology\nvary.",
+      "kind": "source_reference",
+      "original_order": 46
+    },
+    {
+      "title": "* Water: Fluid, reflective skin and flowing hair or limbs that resemble currents; water effects need not",
+      "text": "* Water: Fluid, reflective skin and flowing hair or limbs that resemble currents; water effects need not\nimply constant liquid anatomy.",
+      "kind": "source_reference",
+      "original_order": 47
+    },
+    {
+      "title": "* Air: Light, wind-swept features and shifting translucency, with clothing or hair that seems moved by",
+      "text": "* Air: Light, wind-swept features and shifting translucency, with clothing or hair that seems moved by\nunseen breezes.",
+      "kind": "source_reference",
+      "original_order": 48
+    },
+    {
+      "title": "* Aether: Luminous magical auras, irregular light patterns and other non-elemental arcane features.",
+      "text": "* Aether: Luminous magical auras, irregular light patterns and other non-elemental arcane features.",
+      "kind": "source_reference",
+      "original_order": 49
+    },
+    {
+      "title": "Name-design influences: Icelandic, Swahili",
+      "text": "Name-design influences: Icelandic, Swahili",
+      "kind": "source_reference",
+      "original_order": 50
+    },
+    {
+      "title": "Sample proposed character names: Svalinuru, Tharakima, Nurathara, Kimasvali",
+      "text": "Sample proposed character names: Svalinuru, Tharakima, Nurathara, Kimasvali",
+      "kind": "source_reference",
+      "original_order": 51
+    },
+    {
+      "title": "Physical appearance: Jaspey are recognized as one people with three established forms, Mosscap, Gloomtail, and Rotcap.",
+      "text": "Physical appearance: Jaspey are recognized as one people with three established forms, Mosscap, Gloomtail, and Rotcap.\nEach form has identifiable surface markings or anatomy. Their shared underlying body plan is not\nspecified in the surviving current reference, so no extra height, limb count, or facial anatomy is\ninvented here.",
+      "kind": "source_reference",
+      "original_order": 52
+    },
+    {
+      "title": "* Mosscap: A moss-textured head or crown, with soft green-brown highlights.",
+      "text": "* Mosscap: A moss-textured head or crown, with soft green-brown highlights.",
+      "kind": "source_reference",
+      "original_order": 53
+    },
+    {
+      "title": "* Gloomtail: A shadow-adapted tail or low-light markings.",
+      "text": "* Gloomtail: A shadow-adapted tail or low-light markings.",
+      "kind": "source_reference",
+      "original_order": 54
+    },
+    {
+      "title": "* Rotcap: Dark fungal or decay-associated patterning.",
+      "text": "* Rotcap: Dark fungal or decay-associated patterning.",
+      "kind": "source_reference",
+      "original_order": 55
+    },
+    {
+      "title": "Name-design influences: Basque, Thai",
+      "text": "Name-design influences: Basque, Thai",
+      "kind": "source_reference",
+      "original_order": 56
+    },
+    {
+      "title": "Sample proposed character names: Zurimai, Keriluna, Mailuri, Lunkerai",
+      "text": "Sample proposed character names: Zurimai, Keriluna, Mailuri, Lunkerai",
+      "kind": "source_reference",
+      "original_order": 57
+    },
+    {
+      "title": "Physical appearance: Tall to towering magical shapeshifters, sometimes feline or beastlike, whose physiques vary from",
+      "text": "Physical appearance: Tall to towering magical shapeshifters, sometimes feline or beastlike, whose physiques vary from\nmuscular to lithe. Fur, scales or earth-toned skin, reflective eyes, wings, tails or other animal\nfeatures vary according to the individual's soul bond. No single default animal form applies to\nevery member.",
+      "kind": "source_reference",
+      "original_order": 58
+    },
+    {
+      "title": "* Open Soul-Animal: This is an open choice, not a preset wolf, cat or bird subtype. Record the person’s initial",
+      "text": "* Open Soul-Animal: This is an open choice, not a preset wolf, cat or bird subtype. Record the person’s initial\nappearance and update markings or silhouette only after the true soul bond is established.",
+      "kind": "source_reference",
+      "original_order": 59
+    },
+    {
+      "title": "Name-design influences: Quechua, Turkish",
+      "text": "Name-design influences: Quechua, Turkish",
+      "kind": "source_reference",
+      "original_order": 60
+    },
+    {
+      "title": "Sample proposed character names: Kirasuni, Arutalka, Sunikira, Talkaeru",
+      "text": "Sample proposed character names: Kirasuni, Arutalka, Sunikira, Talkaeru",
+      "kind": "source_reference",
+      "original_order": 61
+    },
+    {
+      "title": "Physical appearance: Wiry or lithe agile figures, roughly three to six feet tall in the detailed source, with softly",
+      "text": "Physical appearance: Wiry or lithe agile figures, roughly three to six feet tall in the detailed source, with softly\nluminous skin and shifting freckle-like or sigil markings. Hair can range from honey and copper to\nchestnut, jade and gold. Eyes may glow subtly when magic is active; layered clothes and charms suit\ntravel and performance.",
+      "kind": "source_reference",
+      "original_order": 62
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 63
+    },
+    {
+      "title": "Name-design influences: Irish, Yoruba",
+      "text": "Name-design influences: Irish, Yoruba",
+      "kind": "source_reference",
+      "original_order": 64
+    },
+    {
+      "title": "Name pattern: CV.CV.CV, sometimes initial consonant groups",
+      "text": "Name pattern: CV.CV.CV, sometimes initial consonant groups",
+      "kind": "source_reference",
+      "original_order": 65
+    },
+    {
+      "title": "Sample proposed character names: Goraeni, Sefamuni, Enigora, Munesefa",
+      "text": "Sample proposed character names: Goraeni, Sefamuni, Enigora, Munesefa",
+      "kind": "source_reference",
+      "original_order": 66
+    },
+    {
+      "title": "Physical appearance: Dream-born people with forms ranging from tall, shadow-touched silhouettes to luminous figures with",
+      "text": "Physical appearance: Dream-born people with forms ranging from tall, shadow-touched silhouettes to luminous figures with\nweightless hair and shifting auroral features. Their eyes may appear to perceive several layers of\nreality. Intangibility and visual fluidity vary with magic and should not be assigned as a\ncompulsory permanent body type.",
+      "kind": "source_reference",
+      "original_order": 67
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 68
+    },
+    {
+      "title": "Name-design influences: Welsh, Tamil",
+      "text": "Name-design influences: Welsh, Tamil",
+      "kind": "source_reference",
+      "original_order": 69
+    },
+    {
+      "title": "Sample proposed character names: Gwenamila, Rathivena, Venamili, Amilgwen",
+      "text": "Sample proposed character names: Gwenamila, Rathivena, Venamili, Amilgwen",
+      "kind": "source_reference",
+      "original_order": 70
+    },
+    {
+      "title": "Physical appearance: Small, upright, ferret- or stoatlike people with compact wiry bodies, elongated muzzles, expressive",
+      "text": "Physical appearance: Small, upright, ferret- or stoatlike people with compact wiry bodies, elongated muzzles, expressive\neyes, twitching whiskers and opposable thumbs. Fur may be brown, russet, orange, snow white or\npatterned. Their movement is nimble and acrobatic, and they often carry small belts and handmade\ntools.",
+      "kind": "source_reference",
+      "original_order": 71
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 72
+    },
+    {
+      "title": "Name-design influences: Finnish, Tagalog",
+      "text": "Name-design influences: Finnish, Tagalog",
+      "kind": "source_reference",
+      "original_order": 73
+    },
+    {
+      "title": "Name pattern: CV.CV.CV, vowel harmony preferred within long names",
+      "text": "Name pattern: CV.CV.CV, vowel harmony preferred within long names",
+      "kind": "source_reference",
+      "original_order": 74
+    },
+    {
+      "title": "Sample proposed character names: Sumitala, Kanimika, Talatala, Mikasumi",
+      "text": "Sample proposed character names: Sumitala, Kanimika, Talatala, Mikasumi",
+      "kind": "source_reference",
+      "original_order": 75
+    },
+    {
+      "title": "Physical appearance: Amphibious aquatic people with dramatic betta-fish coloration: brilliant blues, violets, teals, reds",
+      "text": "Physical appearance: Amphibious aquatic people with dramatic betta-fish coloration: brilliant blues, violets, teals, reds\nand shifting iridescence. On land they have scaled humanoid legs and arms, bioluminescent jellyfish-\nlike hair, reflective eyes and scales at the face and neck. In water, gills, webbing, dorsal fins\nand a long caudal fin become prominent. They need hydration and tidal energy.",
+      "kind": "source_reference",
+      "original_order": 76
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 77
+    },
+    {
+      "title": "Name-design influences: Arabic, Polish",
+      "text": "Name-design influences: Arabic, Polish",
+      "kind": "source_reference",
+      "original_order": 78
+    },
+    {
+      "title": "Name pattern: CV.CCV.CV or CV.CV.CCV; 2-4 syllables",
+      "text": "Name pattern: CV.CCV.CV or CV.CV.CCV; 2-4 syllables",
+      "kind": "source_reference",
+      "original_order": 79
+    },
+    {
+      "title": "Sample proposed character names: Nurfaleya, Mirszanira, Zawadira, Falnurina, Mazrelya",
+      "text": "Sample proposed character names: Nurfaleya, Mirszanira, Zawadira, Falnurina, Mazrelya",
+      "kind": "source_reference",
+      "original_order": 80
+    },
+    {
+      "title": "Physical appearance: Infernal magical beings with a humanoid and a quadrupedal equine-inspired form. Humanoid skin can",
+      "text": "Physical appearance: Infernal magical beings with a humanoid and a quadrupedal equine-inspired form. Humanoid skin can\nresemble obsidian, molten iron or violet stone, marked by ember veins and living sigils. Curved or\nbladelike horns, fire-bright or voidlike eyes, varied hair and a prehensile tail distinguish\nindividuals. The equine form adds a muscular horse-like trunk and hooved legs.",
+      "kind": "source_reference",
+      "original_order": 81
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 82
+    },
+    {
+      "title": "Name-design influences: Persian, Māori",
+      "text": "Name-design influences: Persian, Māori",
+      "kind": "source_reference",
+      "original_order": 83
+    },
+    {
+      "title": "Name pattern: CV.CV.CV; internal r/v transitions allowed",
+      "text": "Name pattern: CV.CV.CV; internal r/v transitions allowed",
+      "kind": "source_reference",
+      "original_order": 84
+    },
+    {
+      "title": "Sample proposed character names: Ravamanua, Arozeria, Zerimana, Manaravo",
+      "text": "Sample proposed character names: Ravamanua, Arozeria, Zerimana, Manaravo",
+      "kind": "source_reference",
+      "original_order": 85
+    },
+    {
+      "title": "Physical appearance: Ethereal four-armed people with elongated ear horns, sensitive antennae, iridescent skin and",
+      "text": "Physical appearance: Ethereal four-armed people with elongated ear horns, sensitive antennae, iridescent skin and\nluminous or nebula-like eyes. Hair can look like liquid light, drifting mist or fine feathers. They\npass through several lives in service to Nyxarion; during the final life they develop wings. No\nfixed number of lives is established.",
+      "kind": "source_reference",
+      "original_order": 86
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 87
+    },
+    {
+      "title": "Name-design influences: Latin, Japanese",
+      "text": "Name-design influences: Latin, Japanese",
+      "kind": "source_reference",
+      "original_order": 88
+    },
+    {
+      "title": "Name pattern: CV.CV.CV.CV, optional historical title",
+      "text": "Name pattern: CV.CV.CV.CV, optional historical title",
+      "kind": "source_reference",
+      "original_order": 89
+    },
+    {
+      "title": "Sample proposed character names: Mirasora, Senavita, Soramira, Vitasena",
+      "text": "Sample proposed character names: Mirasora, Senavita, Soramira, Vitasena",
+      "kind": "source_reference",
+      "original_order": 90
+    },
+    {
+      "title": "==============================================================================",
+      "text": "==============================================================================",
+      "kind": "source_reference",
+      "original_order": 91
+    },
+    {
+      "title": "Classification: established Aza’raan people in race document, outside strict JSON",
+      "text": "Classification: established Aza’raan people in race document, outside strict JSON",
+      "kind": "source_reference",
+      "original_order": 92
+    },
+    {
+      "title": "Physical appearance: Aza'raans are generally tall, slender and graceful, with long limbs and a very pale to slightly tanned complexion.",
+      "text": "Physical appearance: Aza'raans are generally tall, slender and graceful, with long limbs and a very pale to slightly tanned complexion. The usual unmixed skin-color range resembles fair to lightly tanned complexions seen among Italian, Slavic and Balkan human populations, without implying any shared Earth ethnic identity. Copper, deep copper, auburn and dark auburn are the most common hair colors. Brown appears sometimes, while black and blonde are rare. Silver, blue and green eyes are common, often with a distinctly oceanic shape, occasionally dual-toned or subtly reflective. High oceanic-style cheekbones, a slightly angular brow with shallow paired ridges, and long ears swept backward are defining traits. Ear tips range from moderately pointed to dramatically sharp and elongated, with individual variation. Some Aza'raans bear faint freckles, subtle psionic luminescence, or wave-like ritual markings. Kaluseban, Deorbasun, Zirramunis, Iamhazira and Gandirosha ancestry can introduce additional color, stature, ear, hair, eye, animal-associated, or magical characteristics; such variation does not redefine the typical unmixed appearance.",
+      "kind": "source_reference",
+      "original_order": 93
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 94
+    },
+    {
+      "title": "Approved Aza’raan heritage appearance rules:",
+      "text": "Approved Aza’raan heritage appearance rules:",
+      "kind": "source_reference",
+      "original_order": 95
+    },
+    {
+      "title": "* Aza’raan with Kaluseban ancestry: Kalus’aan is the established name for this mixed-ancestry community. Their Aza’raan cranial ridges,",
+      "text": "* Aza’raan with Kaluseban ancestry: Kalus’aan is the established name for this mixed-ancestry community. Their Aza’raan cranial ridges,\nslender limbs, silver, blue, or green eyes and copper-to-auburn hair may mingle with Kaluseban color\nshifts, luminous marks, mineral textures, water-adapted accents, or forest and shadow features. The\nsix documented Kalus’aan expressions are Arcane, Starborne, Wildroot, Tideborn, Stonebound, and\nUmbral; they are not six separate species. Appearance differs with the family and the particular\nKaluseban bloodline.",
+      "kind": "source_reference",
+      "original_order": 96
+    },
+    {
+      "title": "* Aza’raan with Deorbasun ancestry: An Aza’raan descendant of a Deorbasun family may keep pale-to-lightly-tanned Aza’raan skin and",
+      "text": "* Aza’raan with Deorbasun ancestry: An Aza’raan descendant of a Deorbasun family may keep pale-to-lightly-tanned Aza’raan skin and\nauburn or copper hair while expressing more pronounced reflective eyes, feline or other soul-animal\nhints, a heavier mane, unusual ear contours, tail, fur patches, claw-like nails, or rare wing\nfeatures. The Deorbasun soul-animal bond is individually expressed and cannot be assigned a standard\nanimal or fixed bloodline by appearance alone. No separate canonical community name has been\nestablished.",
+      "kind": "source_reference",
+      "original_order": 97
+    },
+    {
+      "title": "* Aza’raan with Zirramunis ancestry: These descendants may be shorter or more densely built than a typical Aza’raan, with strong",
+      "text": "* Aza’raan with Zirramunis ancestry: These descendants may be shorter or more densely built than a typical Aza’raan, with strong\nforearms, compact musculature, prominent bone structure, mineral-glinting eyes, stone-colored accent\nmarkings, and thick hair or beard growth. Copper and dark auburn hair and the silver, blue, or green\nAza’raan eye spectrum can persist, with jeweled or metallic notes from Zirramunis heritage. No\ndistinct mixed-species name or special fixed subtype is confirmed.",
+      "kind": "source_reference",
+      "original_order": 98
+    },
+    {
+      "title": "* Aza’raan with Iamhazira ancestry: The historically documented Aza’zira community blends Aza’raan facial proportions, psionic markings",
+      "text": "* Aza’raan with Iamhazira ancestry: The historically documented Aza’zira community blends Aza’raan facial proportions, psionic markings,\nand reflective eyes with Iamhazira height, powerful musculature, endurance traits, braids, strong\njaw structure, and sometimes tusk features. Complexion may extend beyond the unmixed pale-to-\nlightly-tanned baseline where that parental lineage is visible. Individuals may retain copper or\nauburn hair, or express their Iamhazira family’s tones and scar or ornament customs.",
+      "kind": "source_reference",
+      "original_order": 99
+    },
+    {
+      "title": "* Aza’raan with Gandirosha ancestry: These descendants can retain the typical pale or lightly tanned Aza’raan complexion, copper or",
+      "text": "* Aza’raan with Gandirosha ancestry: These descendants can retain the typical pale or lightly tanned Aza’raan complexion, copper or\nauburn hair and silver, blue, or green eyes, while expressing greater agility, a more compact or\nlithe build, freckles that resemble luminous sigils, more mobile facial expression, or colorful hair\nhighlights associated with Gandirosha ancestry. These are variable family traits, not a separate\nnamed species or mandatory personality features.",
+      "kind": "source_reference",
+      "original_order": 100
+    },
+    {
+      "title": "Classification: current MMORPG race document, approval relative to strict JSON pending",
+      "text": "Classification: current MMORPG race document, approval relative to strict JSON pending",
+      "kind": "source_reference",
+      "original_order": 101
+    },
+    {
+      "title": "Physical appearance: Compact, densely muscled humanoids with thick bones, strong forearms, calloused hands and skin",
+      "text": "Physical appearance: Compact, densely muscled humanoids with thick bones, strong forearms, calloused hands and skin\nranging from granite gray and earth brown to ember-red. Their eyes shine in jewel-like shades. All\ngenders may wear decorated beards, rings and braids as family or achievement records. The source\ndoes not name separate biological subtypes.",
+      "kind": "source_reference",
+      "original_order": 102
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 103
+    },
+    {
+      "title": "Name-design influences: Armenian, Indonesian",
+      "text": "Name-design influences: Armenian, Indonesian",
+      "kind": "source_reference",
+      "original_order": 104
+    },
+    {
+      "title": "Sample proposed character names: Zirruma, Tansari, Rumazira, Saritanu",
+      "text": "Sample proposed character names: Zirruma, Tansari, Rumazira, Saritanu",
+      "kind": "source_reference",
+      "original_order": 105
+    },
+    {
+      "title": "Classification: current MMORPG race document, approval relative to strict JSON pending",
+      "text": "Classification: current MMORPG race document, approval relative to strict JSON pending",
+      "kind": "source_reference",
+      "original_order": 106
+    },
+    {
+      "title": "Physical appearance: Fine-boned, slender, magic-dependent winged people with iridescent skin in lilac, silver, mint and",
+      "text": "Physical appearance: Fine-boned, slender, magic-dependent winged people with iridescent skin in lilac, silver, mint and\npale blue. Luminous hair may carry petals or glimmers. Their wings can resemble butterfly,\ndragonfly, leaves or living light; these are documented variations in wing morphology, not four\nseparately approved species.",
+      "kind": "source_reference",
+      "original_order": 107
+    },
+    {
+      "title": "* Butterfly-winged: Broad patterned wing membranes; source-documented wing morphology, not a separate species.",
+      "text": "* Butterfly-winged: Broad patterned wing membranes; source-documented wing morphology, not a separate species.",
+      "kind": "source_reference",
+      "original_order": 108
+    },
+    {
+      "title": "* Dragonfly-winged: Fine transparent wings with a slender veined structure; source-documented morphology.",
+      "text": "* Dragonfly-winged: Fine transparent wings with a slender veined structure; source-documented morphology.",
+      "kind": "source_reference",
+      "original_order": 109
+    },
+    {
+      "title": "* Leafwoven-winged: Leaflike wing outlines and botanical texturing; source-documented morphology.",
+      "text": "* Leafwoven-winged: Leaflike wing outlines and botanical texturing; source-documented morphology.",
+      "kind": "source_reference",
+      "original_order": 110
+    },
+    {
+      "title": "* Bioluminescent-winged: Wings patterned with active light; source-documented morphology.",
+      "text": "* Bioluminescent-winged: Wings patterned with active light; source-documented morphology.",
+      "kind": "source_reference",
+      "original_order": 111
+    },
+    {
+      "title": "Name-design influences: Amharic, Indonesian",
+      "text": "Name-design influences: Amharic, Indonesian",
+      "kind": "source_reference",
+      "original_order": 112
+    },
+    {
+      "title": "Sample proposed character names: Guraqeti, Maliteru, Qetimali, Terugura",
+      "text": "Sample proposed character names: Guraqeti, Maliteru, Qetimali, Terugura",
+      "kind": "source_reference",
+      "original_order": 113
+    },
+    {
+      "title": "Classification: current MMORPG race document, approval relative to strict JSON pending",
+      "text": "Classification: current MMORPG race document, approval relative to strict JSON pending",
+      "kind": "source_reference",
+      "original_order": 114
+    },
+    {
+      "title": "Physical appearance: Very tall, heavily muscled people built for endurance. Skin ranges from charcoal gray and ochre to",
+      "text": "Physical appearance: Very tall, heavily muscled people built for endurance. Skin ranges from charcoal gray and ochre to\nmuted green, with scars or war paint carrying personal histories. Tusks may bear rings or carvings.\nEyes often resemble embers or dark steel, hair is thick and braided, and ears are elongated or\nbattle-nicked. No current source supplies an approved biological bloodline list.",
+      "kind": "source_reference",
+      "original_order": 115
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 116
+    },
+    {
+      "title": "Name-design influences: Punjabi, Nahuatl",
+      "text": "Name-design influences: Punjabi, Nahuatl",
+      "kind": "source_reference",
+      "original_order": 117
+    },
+    {
+      "title": "Sample proposed character names: Iamtlani, Hazavira, Tlanihaza, Viraiamu",
+      "text": "Sample proposed character names: Iamtlani, Hazavira, Tlanihaza, Viraiamu",
+      "kind": "source_reference",
+      "original_order": 118
+    },
+    {
+      "title": "III. NAMED COMMUNITIES AND AZA'RAAN MIXED HERITAGES",
+      "text": "III. NAMED COMMUNITIES AND AZA'RAAN MIXED HERITAGES",
+      "kind": "source_reference",
+      "original_order": 119
+    },
+    {
+      "title": "==============================================================================",
+      "text": "==============================================================================",
+      "kind": "source_reference",
+      "original_order": 120
+    },
+    {
+      "title": "Classification: documented mixed ancestry, not separate approved species",
+      "text": "Classification: documented mixed ancestry, not separate approved species",
+      "kind": "source_reference",
+      "original_order": 121
+    },
+    {
+      "title": "Physical appearance: Documented Aza’raan and Kaluseban mixed-ancestry community. Their Aza’raan cranial ridges, slender",
+      "text": "Physical appearance: Documented Aza’raan and Kaluseban mixed-ancestry community. Their Aza’raan cranial ridges, slender\nlimbs, silver, blue, or green eyes and copper-to-auburn hair may mingle with Kaluseban color shifts,\nluminous marks, mineral textures, water-adapted accents, or forest and shadow features. The six\ndocumented Kalus’aan expressions are Arcane, Starborne, Wildroot, Tideborn, Stonebound, and Umbral;\nthey are not six separate species. Appearance differs with the family and the particular Kaluseban\nbloodline.",
+      "kind": "source_reference",
+      "original_order": 122
+    },
+    {
+      "title": "Parent ancestries: Aza’raan, Kaluseban",
+      "text": "Parent ancestries: Aza’raan, Kaluseban",
+      "kind": "source_reference",
+      "original_order": 123
+    },
+    {
+      "title": "* Arcane: Gold, ivory or violet glow with shifting magical markings on skin and fingers.",
+      "text": "* Arcane: Gold, ivory or violet glow with shifting magical markings on skin and fingers.",
+      "kind": "source_reference",
+      "original_order": 124
+    },
+    {
+      "title": "* Starborne: Pale blue, silver or amethyst tones with star-like reflections in the eyes.",
+      "text": "* Starborne: Pale blue, silver or amethyst tones with star-like reflections in the eyes.",
+      "kind": "source_reference",
+      "original_order": 125
+    },
+    {
+      "title": "* Wildroot: Earthy barklike patterns, vine motifs and green-brown skin variation.",
+      "text": "* Wildroot: Earthy barklike patterns, vine motifs and green-brown skin variation.",
+      "kind": "source_reference",
+      "original_order": 126
+    },
+    {
+      "title": "* Tideborn: Pearl-blue or aquamarine skin, subtle webbing and currentlike hair.",
+      "text": "* Tideborn: Pearl-blue or aquamarine skin, subtle webbing and currentlike hair.",
+      "kind": "source_reference",
+      "original_order": 127
+    },
+    {
+      "title": "* Stonebound: Granite or sandstone skin accents, mineral shimmer and etched patterns.",
+      "text": "* Stonebound: Granite or sandstone skin accents, mineral shimmer and etched patterns.",
+      "kind": "source_reference",
+      "original_order": 128
+    },
+    {
+      "title": "* Umbral: Dark skin with phosphorescent veins or shadowlike symbols.",
+      "text": "* Umbral: Dark skin with phosphorescent veins or shadowlike symbols.",
+      "kind": "source_reference",
+      "original_order": 129
+    },
+    {
+      "title": "Name-design influences: Korean, French",
+      "text": "Name-design influences: Korean, French",
+      "kind": "source_reference",
+      "original_order": 130
+    },
+    {
+      "title": "Name pattern: Kaluseban-inspired CV.CV.CV with optional family variant",
+      "text": "Name pattern: Kaluseban-inspired CV.CV.CV with optional family variant",
+      "kind": "source_reference",
+      "original_order": 131
+    },
+    {
+      "title": "Sample proposed character names: Gyermeria, Fanigyel, Meryefina, Yermifana",
+      "text": "Sample proposed character names: Gyermeria, Fanigyel, Meryefina, Yermifana",
+      "kind": "source_reference",
+      "original_order": 132
+    },
+    {
+      "title": "Classification: documented mixed ancestry, not separate approved species",
+      "text": "Classification: documented mixed ancestry, not separate approved species",
+      "kind": "source_reference",
+      "original_order": 133
+    },
+    {
+      "title": "Physical appearance: A documented Tamhiogal and Tideborn Kaluseban mixed community. Land forms retain smooth scaled",
+      "text": "Physical appearance: A documented Tamhiogal and Tideborn Kaluseban mixed community. Land forms retain smooth scaled\ncheeks and limbs, glowing eyes and kelplike bioluminescent hair. Aquatic forms show a streamlined\ntail fin, elbow and spine fins, and richly colored blue, crimson and violet scales. The two parental\nancestries account for variation without requiring an invented separate bloodline list. This is\nTamhiogal and Kaluseban ancestry, not an Aza’raan heritage or a separate founding species.",
+      "kind": "source_reference",
+      "original_order": 134
+    },
+    {
+      "title": "Parent ancestries: Tamhiogal, Kaluseban",
+      "text": "Parent ancestries: Tamhiogal, Kaluseban",
+      "kind": "source_reference",
+      "original_order": 135
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 136
+    },
+    {
+      "title": "Name-design influences: Korean, Arabic",
+      "text": "Name-design influences: Korean, Arabic",
+      "kind": "source_reference",
+      "original_order": 137
+    },
+    {
+      "title": "Name pattern: CV.CV.CV, softened clusters and long mid vowels",
+      "text": "Name pattern: CV.CV.CV, softened clusters and long mid vowels",
+      "kind": "source_reference",
+      "original_order": 138
+    },
+    {
+      "title": "Sample proposed character names: Gyenura, Maragyena, Nurmarea, Gyemarina",
+      "text": "Sample proposed character names: Gyenura, Maragyena, Nurmarea, Gyemarina",
+      "kind": "source_reference",
+      "original_order": 139
+    },
+    {
+      "title": "Classification: documented mixed ancestry, not separate approved species",
+      "text": "Classification: documented mixed ancestry, not separate approved species",
+      "kind": "source_reference",
+      "original_order": 140
+    },
+    {
+      "title": "Physical appearance: Documented Aza’raan and Iamhazira mixed-ancestry community. Individuals blend Aza’raan facial",
+      "text": "Physical appearance: Documented Aza’raan and Iamhazira mixed-ancestry community. Individuals blend Aza’raan facial\nproportions, psionic markings, and reflective eyes with Iamhazira height, powerful musculature,\nendurance traits, braids, strong jaw structure, and sometimes tusk features. Complexion may extend\nbeyond the unmixed pale-to-lightly-tanned baseline where that parental lineage is visible.\nIndividuals may retain copper or auburn hair, or express their Iamhazira family’s tones and scar or\nornament customs.",
+      "kind": "source_reference",
+      "original_order": 141
+    },
+    {
+      "title": "Parent ancestries: Aza’raan, Iamhazira",
+      "text": "Parent ancestries: Aza’raan, Iamhazira",
+      "kind": "source_reference",
+      "original_order": 142
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 143
+    },
+    {
+      "title": "Name-design influences: Punjabi, Nahuatl",
+      "text": "Name-design influences: Punjabi, Nahuatl",
+      "kind": "source_reference",
+      "original_order": 144
+    },
+    {
+      "title": "Name pattern: CV.CVC.CV with optional /tl/ cluster",
+      "text": "Name pattern: CV.CVC.CV with optional /tl/ cluster",
+      "kind": "source_reference",
+      "original_order": 145
+    },
+    {
+      "title": "Sample proposed character names: Viratlana, Iamazira, Tlanivira, Aziratla",
+      "text": "Sample proposed character names: Viratlana, Iamazira, Tlanivira, Aziratla",
+      "kind": "source_reference",
+      "original_order": 146
+    },
+    {
+      "title": "04. Aza’raan with Deorbasun ancestry",
+      "text": "04. Aza’raan with Deorbasun ancestry",
+      "kind": "source_reference",
+      "original_order": 147
+    },
+    {
+      "title": "-------------------------------------",
+      "text": "-------------------------------------",
+      "kind": "source_reference",
+      "original_order": 148
+    },
+    {
+      "title": "Classification: Aza’raan mixed-heritage appearance, not a separate species",
+      "text": "Classification: Aza’raan mixed-heritage appearance, not a separate species",
+      "kind": "source_reference",
+      "original_order": 149
+    },
+    {
+      "title": "Physical appearance: An Aza’raan descendant of a Deorbasun family may keep pale-to-lightly-tanned Aza’raan skin and",
+      "text": "Physical appearance: An Aza’raan descendant of a Deorbasun family may keep pale-to-lightly-tanned Aza’raan skin and\nauburn or copper hair while expressing more pronounced reflective eyes, feline or other soul-animal\nhints, a heavier mane, unusual ear contours, tail, fur patches, claw-like nails, or rare wing\nfeatures. The Deorbasun soul-animal bond is individually expressed and cannot be assigned a standard\nanimal or fixed bloodline by appearance alone. No separate canonical community name has been\nestablished.",
+      "kind": "source_reference",
+      "original_order": 150
+    },
+    {
+      "title": "Parent ancestries: Aza’raan, Deorbasun",
+      "text": "Parent ancestries: Aza’raan, Deorbasun",
+      "kind": "source_reference",
+      "original_order": 151
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 152
+    },
+    {
+      "title": "05. Aza’raan with Zirramunis ancestry",
+      "text": "05. Aza’raan with Zirramunis ancestry",
+      "kind": "source_reference",
+      "original_order": 153
+    },
+    {
+      "title": "--------------------------------------",
+      "text": "--------------------------------------",
+      "kind": "source_reference",
+      "original_order": 154
+    },
+    {
+      "title": "Classification: Aza’raan mixed-heritage appearance, not a separate species",
+      "text": "Classification: Aza’raan mixed-heritage appearance, not a separate species",
+      "kind": "source_reference",
+      "original_order": 155
+    },
+    {
+      "title": "Physical appearance: These descendants may be shorter or more densely built than a typical Aza’raan, with strong",
+      "text": "Physical appearance: These descendants may be shorter or more densely built than a typical Aza’raan, with strong\nforearms, compact musculature, prominent bone structure, mineral-glinting eyes, stone-colored accent\nmarkings, and thick hair or beard growth. Copper and dark auburn hair and the silver, blue, or green\nAza’raan eye spectrum can persist, with jeweled or metallic notes from Zirramunis heritage. No\ndistinct mixed-species name or special fixed subtype is confirmed.",
+      "kind": "source_reference",
+      "original_order": 156
+    },
+    {
+      "title": "Parent ancestries: Aza’raan, Zirramunis",
+      "text": "Parent ancestries: Aza’raan, Zirramunis",
+      "kind": "source_reference",
+      "original_order": 157
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 158
+    },
+    {
+      "title": "06. Aza’raan with Gandirosha ancestry",
+      "text": "06. Aza’raan with Gandirosha ancestry",
+      "kind": "source_reference",
+      "original_order": 159
+    },
+    {
+      "title": "--------------------------------------",
+      "text": "--------------------------------------",
+      "kind": "source_reference",
+      "original_order": 160
+    },
+    {
+      "title": "Classification: Aza’raan mixed-heritage appearance, not a separate species",
+      "text": "Classification: Aza’raan mixed-heritage appearance, not a separate species",
+      "kind": "source_reference",
+      "original_order": 161
+    },
+    {
+      "title": "Physical appearance: These descendants can retain the typical pale or lightly tanned Aza’raan complexion, copper or",
+      "text": "Physical appearance: These descendants can retain the typical pale or lightly tanned Aza’raan complexion, copper or\nauburn hair and silver, blue, or green eyes, while expressing greater agility, a more compact or\nlithe build, freckles that resemble luminous sigils, more mobile facial expression, or colorful hair\nhighlights associated with Gandirosha ancestry. These are variable family traits, not a separate\nnamed species or mandatory personality features.",
+      "kind": "source_reference",
+      "original_order": 162
+    },
+    {
+      "title": "Parent ancestries: Aza’raan, Gandirosha",
+      "text": "Parent ancestries: Aza’raan, Gandirosha",
+      "kind": "source_reference",
+      "original_order": 163
+    },
+    {
+      "title": "Distinct named biological forms: none supplied in the current race registry.",
+      "text": "Distinct named biological forms: none supplied in the current race registry.",
+      "kind": "source_reference",
+      "original_order": 164
+    },
+    {
+      "title": "IV. CANON CROSS-REFERENCE AND LIMITATIONS",
+      "text": "IV. CANON CROSS-REFERENCE AND LIMITATIONS",
+      "kind": "source_reference",
+      "original_order": 165
+    },
+    {
+      "title": "==============================================================================",
+      "text": "==============================================================================",
+      "kind": "source_reference",
+      "original_order": 166
+    },
+    {
+      "title": "The three distinct official Jaspey appearances are Mosscap (moss crown, green-brown highlights), Gloomtail (shadow-adapted tail or low-",
+      "text": "The three distinct official Jaspey appearances are Mosscap (moss crown, green-brown highlights), Gloomtail (shadow-adapted tail or low-light markings), and Rotcap (dark fungal or decay-associated patterns). No extra Jaspey limb count or facial anatomy is established.",
+      "kind": "source_reference",
+      "original_order": 167
+    },
+    {
+      "title": "The strict registry confirms twelve species and thirty designated variants, bloodlines, or forms. Zirramunis, Garuraqets, Iamhazira, an",
+      "text": "The strict registry confirms twelve species and thirty designated variants, bloodlines, or forms. Zirramunis, Garuraqets, Iamhazira, and Aza’raans are documented by the current MMORPG race material but are not part of the twelve-species strict JSON list. Existing mixed communities remain separate cultural identities, not necessarily new species.",
+      "kind": "source_reference",
+      "original_order": 168
+    },
+    {
+      "title": "The name Azh’raim in ancient passages and Azrahai in modern passages must not be changed to a single spelling everywhere. It is a genui",
+      "text": "The name Azh’raim in ancient passages and Azrahai in modern passages must not be changed to a single spelling everywhere. It is a genuine historical simplification.",
+      "kind": "source_reference",
+      "original_order": 169
+    },
+    {
+      "title": "The Aza'raan language grammar and glyph system were not modified for this appearance update.",
+      "text": "The Aza'raan language grammar and glyph system were not modified for this appearance update.",
+      "kind": "source_reference",
+      "original_order": 170
+    },
+    {
+      "title": "==============================================================================",
+      "text": "==============================================================================",
+      "kind": "source_reference",
+      "original_order": 171
+    },
+    {
+      "title": "Pix family appearance canon: Pix is a transgender man who can pass as human despite his visibly pointed, backward-swept ears. The child",
+      "text": "Pix family appearance canon: Pix is a transgender man who can pass as human despite his visibly pointed, backward-swept ears. The childhood name 'Pix' came from those conspicuous ears, which his parents explained as an old inherited abnormality. Pix and his father have the tell-tale pointed ears. Pix's mother, Jacob and Clarahmizah have ordinary-looking human ears without points. Pix's mother eventually explains that much of the protector bloodline shared by her and Clarahmizah has Gandirosha and Zirramunis ancestry, and many descendants lost the conspicuous Aza'raan ear shape. Pix inherited the unmistakable ears through his father. The absence of pointed ears does not erase anyone's Aza'raan lineage or protector heritage.",
+      "kind": "source_reference",
+      "original_order": 172
+    }
+  ],
+  "omitted_superseded_paragraphs": 0,
+  "note": "Do not override current AWS author-approved canon. Read historical content with its original context."
+}
