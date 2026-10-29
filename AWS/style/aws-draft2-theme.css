@@ -1,0 +1,46 @@
+/* Full AWS Steampunk palette derived from the supplied keyboard. Shared application theme.
+   Keep original keyboard and its extensive key styling intact. */
+:root{color-scheme:dark;--bg:#0c1017;--paper:#15272a;--soft:#14242a;--warm:#20383b;--text:#f3e9db;--muted:#c9b8a5;--green:#3d9fa0;--green-deep:#143c40;--rail:#0e2228;--gold:#e8c76e;--line:rgba(215,170,99,.35)}
+html,body{color-scheme:dark;background-color:#0a1115!important;color:#f3e9db!important}
+body{background-image:linear-gradient(115deg,rgba(8,20,26,.94),rgba(19,29,33,.91)),var(--steampunk)!important;background-attachment:fixed;background-size:cover}
+.app,.shell-main,.editor-section,.channels-pane,.workspace-rail,.paper,.inspector-pane,.planner-pane,.modal,.settings-panel,.aws-master-nav,.aws-master-content{color:#f3e9db}
+.workspace-rail{background:#0d252b!important;border-right-color:#b07a3a!important}
+.channels-pane{background:#11282e!important;border-right:1px solid #916b41!important}
+.shell-main{background:linear-gradient(150deg,#0d1922,#172a30)!important}
+.app-topbar,.editor-top,.editor-toolbar,.writing-footer,.channels-top,.sidebar-footer,.inspector-pane,.paper,.studio-pane,.aws-library-panel,.aws-dictionary-panel,.aws-tts-panel{background:#182e33!important;color:#f3e9db!important;border-color:#9b794b!important}
+.paper,.studio-pane{background:linear-gradient(160deg,#22383a,#17272a)!important;border:1px solid #ad8755!important;box-shadow:0 6px 36px #0006}
+.rich-editor,.rich-editor[contenteditable=true],#channel-notes,.document-title{color:#f3e9db!important;background:transparent!important;caret-color:#8de0dc}
+.rich-editor::selection,.rich-editor *::selection{background:#4c8b8a;color:#fff}
+.channels-pane button,.app button,.aws-master-nav button{color:#f3e9db}
+.app button:not(.keyboard button):not(.keyboard-bubble),.aws-master-nav button{border-color:#94734c}
+.app input,.app textarea,.app select,.aws-master-nav input{background-color:#0f2429;color:#f3e9db;border-color:#8e7150}
+.app input:focus,.app textarea:focus,.app select:focus{outline-color:#8de0dc}
+.aws-master-nav{background:#172f34!important;border:2px solid #d7aa63!important;box-shadow:0 10px 38px #0008,inset 0 0 0 2px #8de0dc22}
+.aws-nav-item.active,.channel-button.active{background:#2d5a5a!important;color:#fff!important;border-left:3px solid #e8c76e}
+.aws-install{background:linear-gradient(135deg,#3d9fa0,#275e63)!important}
+.aws-evolution-panel{padding:25px 24px 80px;min-width:0;color:#f3e9db;background:#0f1e24;overflow:auto;min-height:100vh}
+.aws-evolution-panel .evolution-pane{display:block}
+.aws-evolution-panel h1{color:#e8c76e}
+#keyboardBubble,#keyboard{z-index:350}
+#keyboard .key{color:var(--text)}
+#keyboard .key-panel{font-size:12px}
+#captureDialog{z-index:610}
+#toast{z-index:700}
+#aws-keyboard-compat{display:none!important}
+#aws-glyph-panel .text-control,#aws-glyph-panel input,#aws-glyph-panel select{color:#f3e9db;background:#10262b;border-color:#b07a3a}
+.aws-khmer-registry{padding:12px;margin:14px 0;border:1px solid #b07a3a;border-radius:12px;background:#10252a;color:#f3e9db}
+.aws-khmer-registry header{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.aws-khmer-registry .aws-registry-slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:5px;max-height:240px;overflow:auto;margin-top:10px}
+.aws-khmer-registry button{border:1px solid #98734c;border-radius:7px;background:#1b3840;color:#f3e9db;padding:6px;min-height:54px;text-align:left}
+.aws-khmer-registry button:disabled{opacity:.45}
+.aws-khmer-registry small{display:block;color:#a9d8d8}
+@media(max-width:650px){.aws-evolution-panel{padding:12px 7px 64px}}
+
+#inspector{background:#142c31!important;color:#f3e9db!important;border-left:1px solid #d7aa63!important}
+#inspector *,#inspector h2,#inspector h3,#inspector p,#inspector strong{color:#f3e9db}
+#inspector section,#inspector article,#inspector .planner-card,#inspector .inspector-card{background:#193a40!important;border-color:#ad8755!important}
+#inspector button{background:#244f55!important;color:#f3e9db!important;border-color:#d7aa63!important}
+#inspector input,#inspector select,#inspector textarea{background:#0d252a!important;color:#f3e9db!important}
+#voiceSettings .aws-speech-full{margin-top:18px;border-top:1px solid #b07a3a;padding-top:12px}
+#voiceSettings .aws-speech-full textarea{width:100%;resize:vertical;background:#122c31;color:#f3e9db;border:1px solid #d7aa63;border-radius:8px;padding:10px}
+#voiceSettings .aws-speech-full button{background:#20434a;color:#e8c76e;border:1px solid #b07a3a;border-radius:8px;padding:9px 14px;margin:4px}

@@ -1,0 +1,90 @@
+{
+  "canvas": [
+    "cover-presets",
+    "custom-dimensions",
+    "portrait",
+    "landscape",
+    "square",
+    "guides",
+    "safe-areas",
+    "zoom",
+    "rulers"
+  ],
+  "layers": [
+    "reorder",
+    "rename",
+    "group",
+    "duplicate",
+    "hide-show",
+    "lock",
+    "opacity",
+    "blend",
+    "layer-transforms"
+  ],
+  "transforms": [
+    "stretch",
+    "scale",
+    "crop",
+    "skew",
+    "rotate",
+    "flip",
+    "position",
+    "align",
+    "distribute"
+  ],
+  "selection": [
+    "regions",
+    "layers",
+    "cut",
+    "copy",
+    "paste",
+    "duplicate",
+    "move",
+    "resize"
+  ],
+  "brushes": [
+    "multiple-tips",
+    "sizes",
+    "hardness",
+    "opacity",
+    "flow",
+    "spacing",
+    "pressure-style-variation",
+    "texture-brushes"
+  ],
+  "media": [
+    "ink",
+    "pencil",
+    "marker",
+    "paint",
+    "chalk",
+    "spray",
+    "eraser",
+    "blend"
+  ],
+  "fill": [
+    "bucket",
+    "gradient",
+    "shape",
+    "outline",
+    "fill-stroke"
+  ],
+  "color": [
+    "hsv-wheel",
+    "hex",
+    "eyedropper",
+    "project-palettes",
+    "cover-palettes",
+    "character-palettes",
+    "recent-colors"
+  ],
+  "coverLayers": [
+    "artwork",
+    "title",
+    "author",
+    "series",
+    "badge",
+    "texture"
+  ],
+  "aiGeneration": true
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "character",
+    "label": "Character"
+  },
+  {
+    "id": "location",
+    "label": "Location"
+  },
+  {
+    "id": "organization",
+    "label": "Organization"
+  },
+  {
+    "id": "faction",
+    "label": "Faction"
+  },
+  {
+    "id": "species",
+    "label": "Species"
+  },
+  {
+    "id": "culture",
+    "label": "Culture"
+  },
+  {
+    "id": "object",
+    "label": "Object"
+  },
+  {
+    "id": "artifact",
+    "label": "Artifact"
+  },
+  {
+    "id": "rule",
+    "label": "Rule"
+  },
+  {
+    "id": "term",
+    "label": "Term"
+  },
+  {
+    "id": "event",
+    "label": "Event"
+  },
+  {
+    "id": "technology",
+    "label": "Technology"
+  },
+  {
+    "id": "magic",
+    "label": "Magic"
+  },
+  {
+    "id": "religion",
+    "label": "Religion"
+  },
+  {
+    "id": "government",
+    "label": "Government"
+  },
+  {
+    "id": "other",
+    "label": "Other"
+  }
+]

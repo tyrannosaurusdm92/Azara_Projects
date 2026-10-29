@@ -1,0 +1,2 @@
+/* Textbook / Manual 8.5×11 — 8.5 × 11 in */
+.studio-stage[data-size="hardcover-textbook-letter"] { --trim-width-in: 8.5; --trim-height-in: 11; --trim-ratio: 0.77272727; }

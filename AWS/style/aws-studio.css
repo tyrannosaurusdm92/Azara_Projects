@@ -1,0 +1,58 @@
+/* Aza'raan Writing Studio custom surfaces. Extends supplied LiteraryFriend UI. */
+.editor-section[hidden],#aws-library-panel[hidden],#aws-tts-panel[hidden],#aws-glyph-panel[hidden],#aws-master-content[hidden]{display:none!important}
+#aws-master-nav{position:fixed;left:14px;top:12px;z-index:1100;width:50px;border:1px solid #b7c9bd;border-radius:13px;background:#fdfcf9;box-shadow:0 8px 26px #102c2540;color:#123a30;overflow:hidden;max-height:min(85dvh,740px)}
+#aws-master-nav.expanded{width:min(315px,calc(100vw - 16px));box-shadow:0 13px 40px #102c2552}
+#aws-master-handle{display:flex;align-items:center;gap:10px;min-height:49px;padding:6px;background:#10362d;color:#f4e9d3;cursor:move;touch-action:none;user-select:none}
+#aws-menu-toggle{flex:none;border:1px solid #819b88;background:#e8d5a9;color:#10362d;font-size:24px;line-height:1;width:37px;height:36px;border-radius:9px;cursor:pointer}
+#aws-master-handle strong{font:650 14px/1.25 Georgia,serif;white-space:nowrap}#aws-master-handle .aws-drag-hint{margin-left:auto;color:#b7cabf;font-size:9px;max-width:56px}
+.aws-master-content{padding:10px;overflow-y:auto;max-height:calc(85dvh - 49px);overscroll-behavior:contain}.aws-master-links{display:grid;gap:2px;max-height:37dvh;overflow-y:auto;padding-right:2px}
+.aws-nav-item{text-align:left;border:1px solid transparent;border-radius:6px;background:transparent;color:#334c41;min-height:31px;padding:7px 8px;font-size:12px;line-height:1.25;overflow-wrap:anywhere;cursor:pointer}
+.aws-nav-item:hover,.aws-nav-item.active{background:#eaf2ec;border-color:#d0dfd1;color:#0d5d4a;font-weight:700}
+.aws-menu-tools{display:grid;grid-template-columns:1fr 1fr;gap:6px;border-top:1px solid #d6e0d8;margin-top:8px;padding-top:9px}
+.aws-menu-tools button{min-height:37px;border:1px solid #bbcfc0;background:#f9faf6;color:#18483c;border-radius:6px;font-size:11px;font-weight:650;cursor:pointer}
+.aws-menu-tools button:hover{background:#e9f1e9}.aws-menu-tools .aws-install{grid-column:1 / -1;background:#dcbf7d;border-color:#b99b55;color:#25372d;font-size:13px}
+.aws-hint{color:#647b70;font-size:12px;line-height:1.5;margin:9px 0}
+.aws-fold{border:0;background:transparent;width:19px;min-width:19px;height:32px;color:#53725f;font-size:14px;padding:0}.aws-fold-spacer{width:19px;min-width:19px}
+.channel-row .channel-button{padding:7px 3px;min-height:34px}.channel-row .channel-name{line-height:1.2}.channels-scroll{padding-left:5px;padding-right:5px}
+.aws-feature-panel{min-height:0;flex:1;overflow:auto;padding:30px clamp(15px,3vw,40px) 55px;background:#f7f5f0}
+.aws-feature-head{display:flex;align-items:start;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid #d9e1d9;margin-bottom:17px}
+.aws-feature-head small{color:#809084;letter-spacing:.13em;font:700 10px system-ui}.aws-feature-head h2{font:700 clamp(25px,2.7vw,36px)/1.15 Georgia,serif;color:#123e32;margin:5px 0}
+.aws-feature-head p{margin:0;color:#677b6b;font-size:13px}.aws-feature-actions{display:flex;flex-wrap:wrap;gap:8px}
+.aws-library-drop{min-height:115px;border:2px dashed #91ada0;border-radius:12px;background:#fcfdf9;display:grid;place-content:center;text-align:center;padding:22px;color:#496f5b;cursor:pointer}
+.aws-library-drop.dragover{background:#e9f6e9;border-color:#2b8265}.aws-library-controls{display:flex;align-items:center;gap:12px;margin:16px 0;flex-wrap:wrap}
+.aws-library-controls input[type=search]{min-width:180px;flex:1;border:1px solid #bdcec1;background:white;border-radius:7px;padding:10px}
+.aws-library-controls select{border:1px solid #bdcec1;padding:8px;border-radius:7px;background:white}
+.aws-library-list{display:grid;gap:7px}.aws-library-item{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #d7e2d7;background:#fff;border-radius:9px;padding:11px 14px;min-height:64px}
+.aws-library-item-info{min-width:0;display:grid;gap:2px}.aws-library-item-info strong{font-size:13px;font-weight:700;overflow-wrap:anywhere;color:#203d2c}.aws-library-item-info span{font-size:10px;color:#70877a}
+.aws-library-item-actions{display:flex;gap:5px;justify-content:flex-end;align-items:center;flex-wrap:wrap}.aws-library-item-actions button{border:1px solid #c6d6c9;background:#f9faf7;border-radius:6px;padding:6px 9px;font-size:11px;color:#2a5444;min-height:30px}
+.aws-library-item-actions button:hover{background:#e5efe6}.aws-synced{font-size:10px;color:#17745a;font-weight:750}.aws-important-panel{margin-top:24px;padding:16px 19px;background:#fffdf7;border:1px solid #ddceaa;border-radius:12px}
+.aws-important-panel h3{font:700 20px Georgia,serif;margin:0 0 6px;color:#6e511e}.aws-important-panel>p{font-size:12px;color:#766c54;margin-top:0}
+.aws-important-item{background:#fff;border:1px solid #e7d6ac;border-radius:8px;margin:8px 0;padding:10px 12px}.aws-important-item p{white-space:pre-wrap;overflow-wrap:anywhere}.aws-important-item .btn{margin-right:7px}
+.aws-field{display:grid;gap:8px;font-weight:700;color:#31594a;margin-bottom:15px}.aws-field textarea{resize:vertical;width:100%;border-radius:9px;border:1px solid #bbd2c0;background:white;min-height:100px;padding:14px;font-size:16px}
+.aws-tts-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:15px}.aws-tts-options label{display:grid;gap:6px;padding:11px;background:#fff;border:1px solid #dce5de;border-radius:8px;font-size:11px;line-height:1.4;color:#41614d}
+.aws-tts-options select,.aws-tts-options input:not([type=range]){width:100%;border:1px solid #c5d4c6;border-radius:5px;padding:8px;background:white}
+.aws-tts-result{white-space:pre-wrap;margin:18px 0;background:#fff;border-left:3px solid #ae884b;border-radius:4px;padding:17px;line-height:1.65;font-size:13px;color:#2f5343;overflow-wrap:anywhere}#aws-tts-audio{width:100%}
+#aws-glyph-panel{flex:1;min-height:0;overflow:auto;background:#f6f7f4;--paper:#f6f7f4;--ink:#193a36;--muted:#71827e;color:#193a36;--teal:#147b6d;--surface:#fff;--line:#e3e9e5;--line-strong:#d4dfda;--gold:#bf8e39;--shadow:0 8px 28px #193a360e;--radius:15px}
+#aws-glyph-panel,#aws-glyph-panel .app-shell{min-width:0!important;min-height:0!important}#aws-glyph-panel .topbar{height:auto;min-height:76px}
+#aws-glyph-panel button,#aws-glyph-panel input,#aws-glyph-panel textarea,#aws-glyph-panel select{font-family:inherit}
+#aws-glyph-panel .app-body{min-width:0}#aws-glyph-panel .glyph-grid{grid-template-columns:repeat(auto-fill,minmax(105px,1fr))}
+@media(max-width:1080px){#aws-glyph-panel .app-body{display:flex;flex-direction:column}#aws-glyph-panel .left-rail,#aws-glyph-panel .right-rail{width:100%;min-width:0;max-width:none}#aws-glyph-panel .main-area{width:100%;min-width:0;max-width:none}}
+@media(max-width:760px){#aws-master-nav{left:55px;top:8px;max-height:80dvh}#aws-master-nav.expanded{width:min(290px,calc(100vw - 60px))}.aws-feature-panel{padding:13px 10px 35px}.aws-library-item{align-items:flex-start;flex-direction:column}.aws-library-item-actions{justify-content:start}.aws-feature-head{margin-top:5px}#aws-glyph-panel .topbar{padding:15px;align-items:start;flex-wrap:wrap}#aws-glyph-panel .app-shell{width:100%;min-width:0}#aws-glyph-panel .glyph-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}}
+@media print{#aws-master-nav,#aws-library-panel,#aws-tts-panel{display:none!important}#aws-glyph-panel[hidden]{display:none!important}}
+
+/* Integrated glyph editor has its own three-pane UI. Use full remaining width. */
+@media(min-width:761px){
+.app:has(#aws-glyph-panel:not([hidden])){grid-template-columns:70px minmax(0,1fr)!important}
+.app:has(#aws-glyph-panel:not([hidden])) .channels-pane,.app:has(#aws-glyph-panel:not([hidden])) .inspector{display:none!important}
+}
+
+.aws-dictionary-dialog{border:1px solid #96b4a5;border-radius:15px;padding:24px;box-shadow:0 20px 80px #0004;max-width:min(620px,94vw);width:540px;background:#fafcf8;color:#163b2a}
+.aws-dictionary-dialog::backdrop{background:#102f29aa}
+.aws-dictionary-dialog form{display:grid;gap:12px}
+.aws-dictionary-dialog h3{font:700 22px Georgia,serif;margin:0 0 5px}
+.aws-dictionary-dialog label{display:grid;gap:4px;font-size:12px;font-weight:700}
+.aws-dictionary-dialog input,.aws-dictionary-dialog textarea,.aws-dictionary-dialog select{width:100%;border:1px solid #b9cdbd;border-radius:6px;background:white;padding:9px;color:#193f2e}
+.aws-dictionary-dialog footer{display:flex;justify-content:end;gap:10px}
+.aws-dictionary-entry{display:grid;gap:4px;min-width:0;flex:1}
+.aws-dictionary-entry strong{font-size:17px;color:#204838}.aws-dictionary-entry p{font-size:12px;white-space:pre-wrap;margin:3px 0;color:#4c6357}
+@media print{#aws-dictionary-dialog{display:none!important}}

@@ -1,0 +1,647 @@
+{
+  "schemaVersion": "1.0.0",
+  "package": "Effects Studio",
+  "notes": [
+    "Catalog size numbers are relative and are not standardized between manufacturers.",
+    "Pixel ranges are practical digital mappings, not physical brush measurements.",
+    "Brush behavior is generated procedurally with Canvas 2D; no raster brush tips are embedded."
+  ],
+  "sizeGuidance": {
+    "detail": {
+      "catalog": "below 4 / 5-0 to 1",
+      "pixelRange": [
+        1,
+        10
+      ]
+    },
+    "smallArea": {
+      "catalog": "4 to 6",
+      "pixelRange": [
+        8,
+        24
+      ]
+    },
+    "broad": {
+      "catalog": "above 6",
+      "pixelRange": [
+        20,
+        96
+      ]
+    },
+    "wash": {
+      "catalog": "1/2 inch and wider",
+      "pixelRange": [
+        48,
+        200
+      ]
+    }
+  },
+  "presets": [
+    {
+      "id": "round",
+      "name": "Round",
+      "family": "universal",
+      "description": "Versatile pointed brush that shifts from detail to broad strokes with pressure.",
+      "uses": [
+        "details",
+        "outlines",
+        "underpainting",
+        "scumbling",
+        "impasto",
+        "washes"
+      ],
+      "catalogSizes": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "16",
+        "24"
+      ],
+      "defaultPx": 22,
+      "minPx": 2,
+      "maxPx": 140,
+      "renderer": "round",
+      "tip": {
+        "shape": "circle",
+        "hardness": 0.82,
+        "aspect": 1.0
+      },
+      "dynamics": {
+        "pressureSize": 0.72,
+        "pressureOpacity": 0.25,
+        "spacing": 0.12,
+        "taper": 0.28
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "flat-long",
+      "name": "Long Flat",
+      "family": "flat",
+      "description": "Long rectangular bristles for broad strokes, washes, long lines, and lighter applications.",
+      "uses": [
+        "broad strokes",
+        "washes",
+        "graduated color",
+        "chiseled edges"
+      ],
+      "catalogSizes": [
+        "2",
+        "6",
+        "10",
+        "16",
+        "24"
+      ],
+      "defaultPx": 34,
+      "minPx": 4,
+      "maxPx": 180,
+      "renderer": "flat",
+      "tip": {
+        "shape": "rectangle",
+        "hardness": 0.9,
+        "aspect": 0.34
+      },
+      "dynamics": {
+        "pressureSize": 0.42,
+        "pressureOpacity": 0.18,
+        "spacing": 0.1,
+        "angleFollowsStroke": true
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "bright-short",
+      "name": "Short Bright",
+      "family": "flat",
+      "description": "Short, springy flat brush for controlled blocks, crisp marks, texture, and impasto.",
+      "uses": [
+        "tight color areas",
+        "calligraphic marks",
+        "textural effects",
+        "impasto"
+      ],
+      "catalogSizes": [
+        "2",
+        "6",
+        "10",
+        "12",
+        "16"
+      ],
+      "defaultPx": 28,
+      "minPx": 4,
+      "maxPx": 130,
+      "renderer": "flat",
+      "tip": {
+        "shape": "rectangle",
+        "hardness": 0.96,
+        "aspect": 0.48
+      },
+      "dynamics": {
+        "pressureSize": 0.32,
+        "pressureOpacity": 0.12,
+        "spacing": 0.16,
+        "angleFollowsStroke": true
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "filbert",
+      "name": "Filbert",
+      "family": "flat-rounded",
+      "description": "Flat brush with an oval end; useful for soft edges, blending, petals, and tapered marks.",
+      "uses": [
+        "blending",
+        "soft edges",
+        "washes",
+        "graduated color",
+        "petals"
+      ],
+      "catalogSizes": [
+        "2",
+        "6",
+        "10",
+        "16",
+        "24"
+      ],
+      "defaultPx": 30,
+      "minPx": 4,
+      "maxPx": 150,
+      "renderer": "filbert",
+      "tip": {
+        "shape": "ellipse",
+        "hardness": 0.86,
+        "aspect": 0.52
+      },
+      "dynamics": {
+        "pressureSize": 0.5,
+        "pressureOpacity": 0.2,
+        "spacing": 0.11,
+        "angleFollowsStroke": true
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "fan",
+      "name": "Fan",
+      "family": "texture",
+      "description": "Thin spread of bristles for blending, grasses, hair, stippling, and broken textural marks.",
+      "uses": [
+        "blending",
+        "grass",
+        "hair",
+        "branches",
+        "stippling",
+        "graduated color"
+      ],
+      "catalogSizes": [
+        "3",
+        "6",
+        "10",
+        "14"
+      ],
+      "defaultPx": 42,
+      "minPx": 10,
+      "maxPx": 180,
+      "renderer": "fan",
+      "tip": {
+        "shape": "fan",
+        "hardness": 0.88,
+        "aspect": 0.22,
+        "bristles": 11
+      },
+      "dynamics": {
+        "pressureSize": 0.45,
+        "pressureOpacity": 0.2,
+        "spacing": 0.22,
+        "scatter": 0.12
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "wide-flat",
+      "name": "Wide Flat / Wash",
+      "family": "wash",
+      "description": "Very wide flat brush for large washes, gesso, glaze, backgrounds, and clean edges.",
+      "uses": [
+        "large washes",
+        "gesso",
+        "glaze",
+        "backgrounds",
+        "abstract edges"
+      ],
+      "catalogSizes": [
+        "25 mm",
+        "50 mm",
+        "75 mm"
+      ],
+      "defaultPx": 96,
+      "minPx": 24,
+      "maxPx": 240,
+      "renderer": "wash",
+      "tip": {
+        "shape": "rectangle",
+        "hardness": 0.8,
+        "aspect": 0.22,
+        "bristles": 17
+      },
+      "dynamics": {
+        "pressureSize": 0.28,
+        "pressureOpacity": 0.24,
+        "spacing": 0.08,
+        "angleFollowsStroke": true
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "mop",
+      "name": "Mop",
+      "family": "wash",
+      "description": "Soft, full-bellied brush that carries abundant water and pigment for broad soft washes.",
+      "uses": [
+        "watercolor washes",
+        "soft gradients",
+        "wet-in-wet",
+        "lifting"
+      ],
+      "catalogSizes": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "16"
+      ],
+      "defaultPx": 70,
+      "minPx": 18,
+      "maxPx": 220,
+      "renderer": "mop",
+      "tip": {
+        "shape": "soft-circle",
+        "hardness": 0.25,
+        "aspect": 1.0
+      },
+      "dynamics": {
+        "pressureSize": 0.5,
+        "pressureOpacity": 0.38,
+        "spacing": 0.08,
+        "wetness": 0.88
+      },
+      "defaultTexture": "watercolor-wash"
+    },
+    {
+      "id": "hake",
+      "name": "Hake",
+      "family": "wash",
+      "description": "Wide soft brush inspired by Japanese wash brushes, intended for large swatches and gentle blending.",
+      "uses": [
+        "large swatches",
+        "background washes",
+        "soft blending",
+        "glazing"
+      ],
+      "catalogSizes": [
+        "1/2 in",
+        "1 in",
+        "2 in",
+        "3 in"
+      ],
+      "defaultPx": 110,
+      "minPx": 30,
+      "maxPx": 260,
+      "renderer": "hake",
+      "tip": {
+        "shape": "bristle-bar",
+        "hardness": 0.5,
+        "aspect": 0.18,
+        "bristles": 23
+      },
+      "dynamics": {
+        "pressureSize": 0.28,
+        "pressureOpacity": 0.3,
+        "spacing": 0.06,
+        "angleFollowsStroke": true
+      },
+      "defaultTexture": "watercolor-wash"
+    },
+    {
+      "id": "rigger",
+      "name": "Rigger",
+      "family": "line",
+      "description": "Long thin round brush for continuous narrow lines and fluid detail.",
+      "uses": [
+        "long lines",
+        "scrollwork",
+        "branches",
+        "masts",
+        "whiskers",
+        "signatures"
+      ],
+      "catalogSizes": [
+        "5/0",
+        "2/0",
+        "1",
+        "2",
+        "3"
+      ],
+      "defaultPx": 6,
+      "minPx": 1,
+      "maxPx": 28,
+      "renderer": "rigger",
+      "tip": {
+        "shape": "point",
+        "hardness": 0.9,
+        "aspect": 0.12
+      },
+      "dynamics": {
+        "pressureSize": 0.35,
+        "pressureOpacity": 0.2,
+        "spacing": 0.06,
+        "smoothing": 0.72
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "liner",
+      "name": "Liner",
+      "family": "line",
+      "description": "Long thin bristles for lettering, subtle touch-ups, outlines, and controlled fine lines.",
+      "uses": [
+        "lettering",
+        "outlines",
+        "fine detail",
+        "signatures"
+      ],
+      "catalogSizes": [
+        "5/0",
+        "2/0",
+        "1"
+      ],
+      "defaultPx": 4,
+      "minPx": 1,
+      "maxPx": 20,
+      "renderer": "rigger",
+      "tip": {
+        "shape": "point",
+        "hardness": 0.94,
+        "aspect": 0.1
+      },
+      "dynamics": {
+        "pressureSize": 0.28,
+        "pressureOpacity": 0.14,
+        "spacing": 0.05,
+        "smoothing": 0.82
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "detailer",
+      "name": "Detailer / Spotter",
+      "family": "detail",
+      "description": "Short precise bristles for tiny marks, retouching, corrections, and signatures.",
+      "uses": [
+        "minute detail",
+        "retouching",
+        "corrections",
+        "outlines"
+      ],
+      "catalogSizes": [
+        "5/0",
+        "3/0",
+        "2/0",
+        "1"
+      ],
+      "defaultPx": 3,
+      "minPx": 1,
+      "maxPx": 18,
+      "renderer": "spotter",
+      "tip": {
+        "shape": "small-round",
+        "hardness": 0.98,
+        "aspect": 1.0
+      },
+      "dynamics": {
+        "pressureSize": 0.3,
+        "pressureOpacity": 0.1,
+        "spacing": 0.08,
+        "smoothing": 0.68
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "angle",
+      "name": "Angle Shader",
+      "family": "flat-angled",
+      "description": "Flat angled edge for corners, curves, controlled shading, and double-loaded strokes.",
+      "uses": [
+        "sharp edges",
+        "corners",
+        "curved strokes",
+        "double loading",
+        "pointillism"
+      ],
+      "catalogSizes": [
+        "2",
+        "6",
+        "12",
+        "16",
+        "24"
+      ],
+      "defaultPx": 34,
+      "minPx": 5,
+      "maxPx": 150,
+      "renderer": "angle",
+      "tip": {
+        "shape": "angled-rectangle",
+        "hardness": 0.92,
+        "aspect": 0.42
+      },
+      "dynamics": {
+        "pressureSize": 0.42,
+        "pressureOpacity": 0.15,
+        "spacing": 0.11,
+        "angleFollowsStroke": true
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "dagger",
+      "name": "Dagger / Sword",
+      "family": "calligraphic",
+      "description": "Flexible tapered wedge for sweeping calligraphic marks, curved edges, and variable-width lines.",
+      "uses": [
+        "sweeping strokes",
+        "curved edges",
+        "crosshatching",
+        "sharp edges",
+        "calligraphy"
+      ],
+      "catalogSizes": [
+        "1/8 in",
+        "3/8 in",
+        "5/8 in"
+      ],
+      "defaultPx": 32,
+      "minPx": 4,
+      "maxPx": 150,
+      "renderer": "dagger",
+      "tip": {
+        "shape": "tapered-wedge",
+        "hardness": 0.88,
+        "aspect": 0.38
+      },
+      "dynamics": {
+        "pressureSize": 0.65,
+        "pressureOpacity": 0.18,
+        "spacing": 0.07,
+        "angleFollowsStroke": true,
+        "taper": 0.7
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "cats-tongue",
+      "name": "Cat's Tongue",
+      "family": "flat-pointed",
+      "description": "Flat body with a pointed tip, combining broad wash coverage with a fine point.",
+      "uses": [
+        "washes",
+        "petals",
+        "leaf shapes",
+        "broad-to-fine strokes"
+      ],
+      "catalogSizes": [
+        "1",
+        "4",
+        "6",
+        "8",
+        "3/4 in"
+      ],
+      "defaultPx": 36,
+      "minPx": 6,
+      "maxPx": 160,
+      "renderer": "cats-tongue",
+      "tip": {
+        "shape": "leaf",
+        "hardness": 0.82,
+        "aspect": 0.48
+      },
+      "dynamics": {
+        "pressureSize": 0.58,
+        "pressureOpacity": 0.2,
+        "spacing": 0.1,
+        "angleFollowsStroke": true
+      },
+      "defaultTexture": "acrylic-smooth"
+    },
+    {
+      "id": "dry-brush",
+      "name": "Dry Brush",
+      "family": "texture",
+      "description": "Sparse broken bristle pattern that leaves the ground visible between marks.",
+      "uses": [
+        "weathering",
+        "wood grain",
+        "fur",
+        "stone",
+        "broken edges"
+      ],
+      "catalogSizes": [
+        "2",
+        "6",
+        "10",
+        "16",
+        "24"
+      ],
+      "defaultPx": 40,
+      "minPx": 6,
+      "maxPx": 180,
+      "renderer": "dry",
+      "tip": {
+        "shape": "bristle-cluster",
+        "hardness": 0.9,
+        "aspect": 0.42,
+        "bristles": 15
+      },
+      "dynamics": {
+        "pressureSize": 0.48,
+        "pressureOpacity": 0.28,
+        "spacing": 0.14,
+        "scatter": 0.2
+      },
+      "defaultTexture": "dry-brush"
+    },
+    {
+      "id": "chalk-stick",
+      "name": "Chalk Stick",
+      "family": "dry media",
+      "description": "Grainy, dusty stroke with broken edges and pressure-sensitive coverage.",
+      "uses": [
+        "sketching",
+        "blocking",
+        "pastel-like shading",
+        "rough lettering"
+      ],
+      "catalogSizes": [
+        "thin",
+        "medium",
+        "broad",
+        "side"
+      ],
+      "defaultPx": 26,
+      "minPx": 3,
+      "maxPx": 120,
+      "renderer": "chalk",
+      "tip": {
+        "shape": "grain-cluster",
+        "hardness": 0.68,
+        "aspect": 0.65,
+        "grains": 64
+      },
+      "dynamics": {
+        "pressureSize": 0.55,
+        "pressureOpacity": 0.55,
+        "spacing": 0.12,
+        "scatter": 0.34
+      },
+      "defaultTexture": "chalk-dense"
+    },
+    {
+      "id": "marker-chisel",
+      "name": "Chisel Marker",
+      "family": "marker",
+      "description": "Translucent chisel tip with overlap darkening, edge pooling, and directional streaks.",
+      "uses": [
+        "lettering",
+        "blocking",
+        "design rendering",
+        "broad fills"
+      ],
+      "catalogSizes": [
+        "fine",
+        "medium",
+        "broad",
+        "extra broad"
+      ],
+      "defaultPx": 32,
+      "minPx": 5,
+      "maxPx": 120,
+      "renderer": "marker",
+      "tip": {
+        "shape": "chisel",
+        "hardness": 0.92,
+        "aspect": 0.34
+      },
+      "dynamics": {
+        "pressureSize": 0.18,
+        "pressureOpacity": 0.18,
+        "spacing": 0.06,
+        "angleFollowsStroke": true
+      },
+      "defaultTexture": "marker-overlap"
+    }
+  ]
+}

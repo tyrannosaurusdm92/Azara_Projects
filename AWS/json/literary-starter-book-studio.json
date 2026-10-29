@@ -1,0 +1,80 @@
+{
+  "schema": "literaryfriend.interactive-book.v1",
+  "version": 1,
+  "title": "Book Studio Sample",
+  "subtitle": "Editable starter project",
+  "author": "",
+  "size": {
+    "preset": "trade",
+    "width": 6,
+    "height": 9,
+    "unit": "in",
+    "binding": "paperback"
+  },
+  "cover": {
+    "preset": "classic",
+    "artUrl": "",
+    "artDataUrl": "",
+    "showText": true,
+    "title": "Book Studio Sample",
+    "subtitle": "",
+    "author": "",
+    "background": "#362a25",
+    "text": "#fff7e9",
+    "fit": "cover",
+    "overlay": 18
+  },
+  "pageDesign": {
+    "preset": "cream",
+    "background": "#f7efd9",
+    "ink": "#2b241b",
+    "accent": "#8b5f32",
+    "pattern": "paper",
+    "font": "serif",
+    "margin": 8,
+    "pageNumbers": true,
+    "textureDataUrl": "",
+    "textureUrl": ""
+  },
+  "sound": {
+    "enabled": true,
+    "volume": 0.55,
+    "file": "assets/page-flip.wav"
+  },
+  "pages": [
+    {
+      "schema": "literaryfriend.interactive-book.page.v1",
+      "title": "Book Studio",
+      "type": "article",
+      "html": "<h1>Build, design, and preview one book project.</h1><p>Edit structured pages in Book Builder, design the cover in Cover & Art Studio, then send the finished cover directly back to the book preview.</p>"
+    },
+    {
+      "schema": "literaryfriend.interactive-book.page.v1",
+      "title": "Page Content",
+      "type": "article",
+      "html": "<h2>Pages stay editable</h2><p>Import one page JSON file, many page files, or a complete project. Reorder pages, duplicate them, edit JSON, and preview physical page turns as you work.</p>"
+    },
+    {
+      "schema": "literaryfriend.interactive-book.page.v1",
+      "title": "Cover Workflow",
+      "type": "article",
+      "html": "<h2>Cover design is part of the same studio</h2><p>Use layers, uploaded images, painting, editable typography, transforms, textures, filters, print guides, and preflight checks. The integrated bridge can match the art canvas to the active book and place the finished front cover into the book preview.</p>"
+    },
+    {
+      "schema": "literaryfriend.interactive-book.page.v1",
+      "title": "Print Sizes",
+      "type": "record",
+      "data": {
+        "Paperback": "5 × 8, 5.5 × 8.5, 6 × 9, 4.25 × 6.87",
+        "Hardcover": "6 × 9, 6.14 × 9.21, 7 × 10, 8.5 × 11",
+        "Art / picture books": "8 × 10, 10 × 8, 10 × 10, 12 × 12",
+        "Custom": "Any supported trim width and height"
+      }
+    }
+  ],
+  "cloud": {
+    "projectId": "",
+    "manifestNodeId": "",
+    "pageNodeIds": []
+  }
+}

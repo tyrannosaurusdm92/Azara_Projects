@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "default": "light",
+  "backgrounds": [
+    "transparent",
+    "#ffffff",
+    "#111111",
+    "#ff3b30",
+    "#ec176a",
+    "#a52ac4",
+    "#178de8",
+    "gradient:mono",
+    "gradient:sunset",
+    "gradient:earth",
+    "gradient:spring",
+    "gradient:ocean"
+  ]
+}

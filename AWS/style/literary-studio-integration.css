@@ -1,0 +1,11 @@
+#mainContent{position:relative}
+
+#lfIntegratedStudio{position:absolute;inset:0;overflow:hidden;background:var(--background,#001010);z-index:3;min-width:0;min-height:0}
+#lfIntegratedStudio[hidden]{display:none!important}
+#lfStudioOuter{width:100%;height:100%;min-width:0;min-height:0;overflow:hidden}
+#lfStudioOuter>.app-shell{width:100%;height:100%;min-height:0}
+#lfAdvancedStudio{display:block;width:100%;height:100%;min-width:0;min-height:0;overflow:auto;background:#776f62}
+#lfAdvancedStudio[hidden]{display:none!important}
+#lfAdvancedStudio .studio-root{height:100%!important;min-height:100%!important;grid-template-rows:minmax(0,1fr)!important}
+#lfAdvancedStudio .studio-switcher{display:none!important}
+@media (prefers-reduced-motion:reduce){#lfIntegratedStudio *,#lfIntegratedStudio *::before,#lfIntegratedStudio *::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}

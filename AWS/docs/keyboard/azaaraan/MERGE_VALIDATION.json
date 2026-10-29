@@ -1,0 +1,27 @@
+{
+  "title": "Aza’raan Language Studio: Complete Keyboard + Voice + Evolution Merge",
+  "mergedSources": [
+    "Azaaraan_Language_Studio_Voice_Evolution_Complete(1).zip",
+    "Azaaraan_Language_Studio_Best_of_Both_Merged(1).zip"
+  ],
+  "pages": [
+    "Keyboard, phonetic converter, voice laboratory and pronunciation workshop",
+    "Interactive evolution chart"
+  ],
+  "singleHTML": "index.html",
+  "canonicalAccents": 24,
+  "structuralMarkers": 4,
+  "letterKeys": 21,
+  "stackingMaximum": 3,
+  "checks": {
+    "verify-phonetics.js": "23 checks completed, 0 failures.",
+    "test-merge.js": "29 accent examples, three-mark stack, archaic signs, phrase audio, live edits, names: PASSED",
+    "test-ipa.js": "51 creator entries + 335 reference symbols + sound-event checks: PASSED",
+    "test-practice.js": "51 sound cards, four filters, regional/world voices, local recording: PASSED"
+  },
+  "notes": [
+    "Browser-based text-to-speech approximates mapped phonemes with available OS/browser voices. It is not a trained native Aza’raan voice.",
+    "Synthetic click/glottal .wav assets are cue effects, not recorded speech.",
+    "Live speech, microphone permission and localStorage depend on browser environment."
+  ]
+}

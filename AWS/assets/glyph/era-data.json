@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "eras": [
+    { "id": "proto", "label": "Proto", "backendEra": "archaic", "targetCount": 52, "description": "Earliest glyph layer. Proto template codepoints are seeded from the supplied sheets." },
+    { "id": "ancient", "label": "Ancient", "backendEra": "archaic", "targetCount": 52, "description": "Ancient glyph layer. Assign visual ancestors after comparing artwork." },
+    { "id": "preclassical", "label": "Pre-Classical", "backendEra": "archaic", "targetCount": 52, "description": "Transition layer for gradual shape changes." },
+    { "id": "classical", "label": "Classical", "backendEra": "classical", "targetCount": 49, "description": "Classical inventory and sound assignments." },
+    { "id": "traditional", "label": "Traditional", "backendEra": "traditional", "targetCount": 44, "description": "Traditional cursive inventory." },
+    { "id": "modern", "label": "Modern", "backendEra": "modern", "targetCount": 21, "description": "Modern 21-key Aza'raan base inventory plus auxiliary F and V family glyphs from the tested AWS backend." }
+  ],
+  "rules": {
+    "oneCodepointPerGlyph": true,
+    "uniqueUnicodePerEra": true,
+    "uniqueKeyboardKeyPerEra": true,
+    "maxStackedMarks": 3,
+    "maxVowelMarks": 1,
+    "baseMarkExclusive": true,
+    "modernKeyCount": 21
+  }
+}

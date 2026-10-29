@@ -1,0 +1,574 @@
+{
+  "schema": "writer-helper-ready.manifest.v4",
+  "name": "writer_helper_ready",
+  "version": "4.0.0-ready",
+  "date": "2026-09-22",
+  "runtime": "static JavaScript",
+  "wasm_required": false,
+  "backend_action": "onyx.chat",
+  "backend_endpoint": "https://script.google.com/macros/s/AKfycbwxviV1hERFKIivY5we5W1gVMqfsH6DNY0mNZkEs2SXcoa4gDM88c14tIyraytnSAyKvQ/exec",
+  "javascript_files": [
+    "js/ai-brain-persona.js",
+    "js/ai-brain-safety.js",
+    "js/ai-brain-memory.js",
+    "js/ai-brain-world-model.js",
+    "js/ai-brain-retrieval.js",
+    "js/context-assembler.js",
+    "js/context-composer.js",
+    "js/ai-brain-core.js",
+    "js/ai-brain-provider-bridge.js",
+    "js/ai-brain-creative.js",
+    "js/ai-brain-router.js",
+    "js/ai-brain-index.js",
+    "js/debug-trace.js",
+    "js/ai-brain-loader.js"
+  ],
+  "source_modules": [
+    {
+      "source": "william-saville_stories.js",
+      "source_path": "/mnt/data/writer_audit/helper/william-saville_stories.js",
+      "target": "ai-brain-persona.js",
+      "bytes": 182300,
+      "sha256": "cbcb43e6944754fa703749960c22f6e9602b9317e029341dec93e026f5074c0e",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "william-saville_poetry.js",
+      "source_path": "/mnt/data/writer_audit/helper/william-saville_poetry.js",
+      "target": "ai-brain-persona.js",
+      "bytes": 37068,
+      "sha256": "a30cbaa4ec73b231b3e7e313f382726a67fbbe484b6ff8b81dc421a7fc096a98",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "william-saville_lyrics.js",
+      "source_path": "/mnt/data/writer_audit/helper/william-saville_lyrics.js",
+      "target": "ai-brain-persona.js",
+      "bytes": 10162,
+      "sha256": "2d7242a2f6cdd80c04cbdeaa26cb15cc1ec757ff7c848cb595ca3ca0f7fc9516",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-audience-profile.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-audience-profile.js",
+      "target": "ai-brain-persona.js",
+      "bytes": 7381,
+      "sha256": "de54ae6a104aa40f856ef2526e72acb054d73ec02a1cb239fd65651286ae7589",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-william-voice.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-william-voice.js",
+      "target": "ai-brain-persona.js",
+      "bytes": 22648,
+      "sha256": "e2249c95526d669da06fbffc38de8fec9370febb5b620c4340fe82d043f71a29",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-fade-to-black.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-fade-to-black.js",
+      "target": "ai-brain-safety.js",
+      "bytes": 3181,
+      "sha256": "4f8646a82d9f22aaa954f8ad7596131743819e88bb6905394b2706598d6053a0",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-romance-boundary.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-romance-boundary.js",
+      "target": "ai-brain-safety.js",
+      "bytes": 2302,
+      "sha256": "5cfa7f170d03a6248ccc4d4ea94316d7911b44dc2078a825060b031639478d14",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-content-boundary.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-content-boundary.js",
+      "target": "ai-brain-safety.js",
+      "bytes": 1592,
+      "sha256": "27806c30a59351eb298977731a082e59a3fa6bcc7c7da15728f4e7c7b5c14398",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-session-memory.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-session-memory.js",
+      "target": "ai-brain-memory.js",
+      "bytes": 1028,
+      "sha256": "82815a3bd32ef7a0e2603add3644defd4766602074480fd5520fb545e0030b73",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-continuity-memory.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-continuity-memory.js",
+      "target": "ai-brain-memory.js",
+      "bytes": 3291,
+      "sha256": "88827389f2ff8ce62d5833dcf16f7b5f0527037a8f1da42a7be55170387d358c",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-memory.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-memory.js",
+      "target": "ai-brain-memory.js",
+      "bytes": 11863,
+      "sha256": "bb16e2802bb1de73633501469e8bfc53156f04ff9226f90cecd072606ff51284",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-character-reactions.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-character-reactions.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 809,
+      "sha256": "87d1907c2a59080450ebd690e53725dac430affbbb2f2e8d3b5f149bc3910816",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-creation-sources.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-creation-sources.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 4195,
+      "sha256": "5133433265f099ffd8bdd7bc13cb743004b5a9e8a5396a511f12a98123c5adef",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-story-graph.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-story-graph.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 4300,
+      "sha256": "f6883e3b8d6843a2e371d25d9c76888d4a6238d581ecd534fefdc8b6fce72aeb",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-timeline.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-timeline.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 578,
+      "sha256": "d26bb512dec01bbf0ecb675f5ea8139282ab21ef0c69920ec666e98fd92f4cff",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-relationship-engine.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-relationship-engine.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 680,
+      "sha256": "f3424c45188f8e4aaa1623f4056d57b1e30738d50210d30d8a5213094fa9ed9f",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-project-data.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-project-data.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 3355,
+      "sha256": "409380f9e4b685200b1ca18e49a057898bc5e7045c66c5b35d8bcd08edcd9129",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-character-library.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-character-library.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 4028,
+      "sha256": "d2e5a425c3a49c2b0887b547506a5abcb4d2ad63503ec6df5c8f9ed4bd33921d",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-lore-library.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-lore-library.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 1210,
+      "sha256": "17f7f31efa62898c68a4562f5433fdae32ef33eb4dced2402492faed37f59ca3",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-continuity.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-continuity.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 12658,
+      "sha256": "dcec44782af65368c887b92043ea0b32619af2d0204ba83d7193a42541f82206",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-script-evolution.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-script-evolution.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 2104381,
+      "sha256": "22cb4e485a04bab41904bfc2affbb3e4425390844877d0152bab733d14882be2",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-language-evolution.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-language-evolution.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 52489561,
+      "sha256": "989244c38bd04481aec2519f29e1837448a806a768b7c960f9c41022a736a3dc",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-grammar-typology.js",
+      "source_path": "/mnt/data/writer_audit/secondpass/writer_strengthened/writer-grammar-typology.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 3567169,
+      "sha256": "00323c7e572912f34e695895533a2893afc86f942d7aa0b04678bf30db38d608",
+      "recovered_second_pass": true
+    },
+    {
+      "source": "writer-lexicon-evolution.js",
+      "source_path": "/mnt/data/writer_audit/secondpass/writer_strengthened/writer-lexicon-evolution.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 4602593,
+      "sha256": "e86443b6aa56e7b830277a62ffd460bd39540152879fb069e98c522ba5d22cba",
+      "recovered_second_pass": true
+    },
+    {
+      "source": "writer-sociolinguistics.js",
+      "source_path": "/mnt/data/writer_audit/secondpass/writer_strengthened/writer-sociolinguistics.js",
+      "target": "ai-brain-world-model.js",
+      "bytes": 5778738,
+      "sha256": "d4bec8c6720cf36d5644bfdef203ca60774a6bdd4246d64de789e8af8ea63364",
+      "recovered_second_pass": true
+    },
+    {
+      "source": "writer-material-hub.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-material-hub.js",
+      "target": "ai-brain-retrieval.js",
+      "bytes": 9423,
+      "sha256": "a552b450aa87eb77536fc0c93b94eb7c3333ec733549874fb32472c2d16fb2d3",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-source-context.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-source-context.js",
+      "target": "context-assembler.js",
+      "bytes": 2859,
+      "sha256": "69bc15468df8913d1a415fc2eccfab971a492444cdf408a8a6fd0c030e1c7498",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-character-context.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-character-context.js",
+      "target": "context-assembler.js",
+      "bytes": 2522,
+      "sha256": "831d817360bc7317501b64decfeb7dbecb04b4d859ced6d02e711a9944ecef33",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-character-prompt.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-character-prompt.js",
+      "target": "context-composer.js",
+      "bytes": 2413,
+      "sha256": "f560932000a3e6b0902c1751448dc1bf5bb4d28b83269aae3d4d4d07dc283292",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-plot-hole-checker.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-plot-hole-checker.js",
+      "target": "ai-brain-core.js",
+      "bytes": 22799,
+      "sha256": "65602cc50a3bb537d9b6a406711af08d139f757f04b1cefcb95ccda55ebec03b",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-output-validator.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-output-validator.js",
+      "target": "ai-brain-core.js",
+      "bytes": 7737,
+      "sha256": "46216c6e96a746c31ec3ab982022ccc3a01da7412a5c49ad9cdbcd681f34cd96",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-generation-stream.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-generation-stream.js",
+      "target": "ai-brain-provider-bridge.js",
+      "bytes": 1356,
+      "sha256": "dfaa68f58ef4f246862493d1d5a9d984ae304279fe5ee2b2425b617a6a849bf7",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-backend-provider.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-backend-provider.js",
+      "target": "ai-brain-provider-bridge.js",
+      "bytes": 7400,
+      "sha256": "2dae1eee960990f2ac028a613d7f9bfbdb2be53caab98c6edaef1b64bece0cf1",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-reference.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-reference.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 14085542,
+      "sha256": "65553b43b1b1ac057e37da1b85bb1280e7edf2268c9f9b73106b952c655e47a4",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-dialogue-parser.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-dialogue-parser.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 2187,
+      "sha256": "5aef3e93ba7965c3280bd4d1efd480eeb5575533582f98e075174d3352329ad5",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-phonology.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-phonology.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 12411731,
+      "sha256": "d752e8859746f00bfb4250cb64a5ab88ae518b1b6ba1b71b5fcc74802af3e96e",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-character-dialogue.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-character-dialogue.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 5344,
+      "sha256": "93fe2ec96354021623c53ab621d56ad031620a119216d1b89298315fb4229e2a",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-branch-builder.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-branch-builder.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 3407,
+      "sha256": "58f1ab4e3c6d3c66d68c90a96fd171d269ca268e1ef62780d03817100c51ff1e",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-generation.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-generation.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 27278,
+      "sha256": "6aeb6e2d682c60fe1a64717288c03f34b588963b11cde3c272e7ef1049884fb1",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-fallback-brain.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-fallback-brain.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 7378,
+      "sha256": "4da0646637dc1e9994c2e19a82fac43308ebf50294145ad740c5f41b43fd0aee",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-scene-beats.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-scene-beats.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 43870886,
+      "sha256": "c7f1166a06eb263b50ece9c0e3f7f33429f070f351da307dc349c92b58420e95",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-fade-controller.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-fade-controller.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 2083,
+      "sha256": "1c14e16abaebe9724fa7cae9396672b7e15fbf6acd9117940a4083346ba79c12",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-style.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-style.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 15830,
+      "sha256": "d404d2284d2cf7b3ae73aee7b0ff1d5a8f4c2fe327404566408145e1b692ef3a",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-people-places.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-people-places.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 2403932,
+      "sha256": "3aad4089e84efd8a90567a9258ea48c9e42291f954656a590f599861cb6b0279",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-setting-generator.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-setting-generator.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 1985,
+      "sha256": "c0643c4556d52facaa4d19d736c816a8a998745abd3c60763efd0a0c353c5870",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-font-ttf.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-font-ttf.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 17955,
+      "sha256": "5ab56fad4f1cc83997149d6c3dc596616b0f0d5cbfba35bc534393d69d95bcef",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-language-export.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-language-export.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 16238,
+      "sha256": "93042830b8644d62ca00dbeebe96fd6b39d4a1d52e4ed0491726cc76f4969c50",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-glyph-synthesis.js",
+      "source_path": "/mnt/data/writer_audit/secondpass/writer_strengthened/writer-glyph-synthesis.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 5691423,
+      "sha256": "836bd192c3f6580ab90c657444911652bdf523c5c5dfd2518f989831fc7762c4",
+      "recovered_second_pass": true
+    },
+    {
+      "source": "writer-conlang-workbench.js",
+      "source_path": "/mnt/data/writer_audit/secondpass/writer_strengthened/writer-conlang-workbench.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 7745,
+      "sha256": "bc855ad388ca68c23809c31887b161d087d2458d2a7626dcf6045bcdbbfd338f",
+      "recovered_second_pass": true
+    },
+    {
+      "source": "writer-branching-engine.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-branching-engine.js",
+      "target": "ai-brain-creative.js",
+      "bytes": 123416,
+      "sha256": "ba0021d2b3fc4e6df57bc57d4e65be69b6dd72873de76c8a7d076a296385c06f",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-intent.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-intent.js",
+      "target": "ai-brain-router.js",
+      "bytes": 1556,
+      "sha256": "33f1fa746e7fc2e26d3f533723be2cb86b83e0c5ca37dccd27d780b448f7d6dc",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-runtime.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-runtime.js",
+      "target": "ai-brain-index.js",
+      "bytes": 9517,
+      "sha256": "c32ff6050a990f702fd3eb2a398c06765e5cfc0f7cf268963cc20c8e65fcc3f8",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-integration-diagnostics.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-integration-diagnostics.js",
+      "target": "debug-trace.js",
+      "bytes": 2033,
+      "sha256": "48a2d034d5714ffa53fe43666c1acbbfba05c593d67e8327b0a14b5b9610d662",
+      "recovered_second_pass": false
+    },
+    {
+      "source": "writer-tools-app.js",
+      "source_path": "/mnt/data/writer_audit/helper/writer-tools-app.js",
+      "target": "ai-brain-loader.js",
+      "bytes": 64752,
+      "sha256": "d29d26464c95256eebe784429c601e0f5144176adbe6c89923e10397cda76df3",
+      "recovered_second_pass": false
+    }
+  ],
+  "deep_research_atlas": {
+    "records": 200000,
+    "raw_bytes": 66550953,
+    "gzip_bytes": 2531041
+  },
+  "voice_priority_songs": [
+    "We’ll Survive",
+    "Create In Defiance",
+    "Modern Day Addictions",
+    "Shout It Out",
+    "Northern Light / You, My Northern Light",
+    "Messy and Real v2",
+    "Let Me Be A Tree",
+    "Poisonous Kisses",
+    "Red Flag Heart version 2",
+    "Hanging In There"
+  ],
+  "take_flight_note": "No standalone Drive song document or exact title was found during this pass; no source was fabricated.",
+  "final_javascript": [
+    {
+      "path": "js/ai-brain-core.js",
+      "bytes": 32547,
+      "sha256": "e648f9eb3576b4acc8ad14165a5bcafd7ff66f44f8840de285e4130c06a5b582"
+    },
+    {
+      "path": "js/ai-brain-creative.js",
+      "bytes": 82084007,
+      "sha256": "e3bdfb3e4181ba82e8d637b562f13651e7aee90a762df07cf3205e5120b0faff"
+    },
+    {
+      "path": "js/ai-brain-index.js",
+      "bytes": 12161,
+      "sha256": "f9259d33cc3c77fcabcf25e17c5589c5c01d2e0b46455361551d48cffb3177c8"
+    },
+    {
+      "path": "js/ai-brain-loader.js",
+      "bytes": 66978,
+      "sha256": "a2794584ed71d62b05f322861ad5c71824ece9cc451870a4413268eadf687f32"
+    },
+    {
+      "path": "js/ai-brain-memory.js",
+      "bytes": 17105,
+      "sha256": "587a3691ab44904af5d0af04d580f8578b09e0e6761288a21a1dfe2ea51a318d"
+    },
+    {
+      "path": "js/ai-brain-persona.js",
+      "bytes": 269150,
+      "sha256": "1276866407a3db1b7cc9ea7c5fac84364c33139a48e194cc2852b16323f3b3a5"
+    },
+    {
+      "path": "js/ai-brain-provider-bridge.js",
+      "bytes": 15988,
+      "sha256": "63be1893cc48783c453cfeb394d24c8a29c22295934610e07fa4bf5f23bac65c"
+    },
+    {
+      "path": "js/ai-brain-retrieval.js",
+      "bytes": 14307,
+      "sha256": "9dcfdf2a073e46c6c8e1a90e3985d7d8235535f6e659da2bc5154dc655cd8ff8"
+    },
+    {
+      "path": "js/ai-brain-router.js",
+      "bytes": 3462,
+      "sha256": "07e238cc95d73f4b9715c5b33b1448e628aa9be712504813d05fcb82d616c79b"
+    },
+    {
+      "path": "js/ai-brain-safety.js",
+      "bytes": 8014,
+      "sha256": "611e09d2dd1a1904131aa2b83e7cfcf490786a44a1400faa3c43c9c7a65e916b"
+    },
+    {
+      "path": "js/ai-brain-world-model.js",
+      "bytes": 68593293,
+      "sha256": "823054e04982e67c85c8cf61d84aade25761f4a4d966d4651325d820a7febf0b"
+    },
+    {
+      "path": "js/context-assembler.js",
+      "bytes": 6134,
+      "sha256": "7f79ba69188ce6050a19438ceaf4aa6361d62025f113ca8e8bab34f9f0f7425a"
+    },
+    {
+      "path": "js/context-composer.js",
+      "bytes": 2975,
+      "sha256": "be257a3e75f744231eff2c487e59d3772037b9ac5e52f6eac3840c13f45f3603"
+    },
+    {
+      "path": "js/debug-trace.js",
+      "bytes": 3411,
+      "sha256": "02fc8429d6df05fff34e7f5f6fc6d4c6eb544992e37c44de5278e6b544f9c8d4"
+    }
+  ],
+  "final_javascript_total_bytes": 151129532,
+  "source_module_count": 54,
+  "consolidated_javascript_count": 14,
+  "source_preservation": {
+    "uploaded_js_union": 49,
+    "reconciled_source_modules": 54,
+    "uploaded_js_missing": 0,
+    "recovered_later_pass_modules": [
+      "writer-grammar-typology.js",
+      "writer-lexicon-evolution.js",
+      "writer-sociolinguistics.js",
+      "writer-glyph-synthesis.js",
+      "writer-conlang-workbench.js"
+    ]
+  },
+  "runtime_validation": {
+    "syntax": "14/14",
+    "integrity": true,
+    "deep_research_cards": 200000,
+    "backend_action": "onyx.chat",
+    "fallback": "static JavaScript",
+    "ttf_independent_parse": true,
+    "pdf_export_runtime": "browser Canvas only by design"
+  }
+}

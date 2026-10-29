@@ -1,0 +1,282 @@
+/* Final LiteraryFriend completion layer.
+   All selectors are scoped to final-edit surfaces so the retained production
+   shell and protected Studio cascade are not globally redefined. */
+
+.lf-final-model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: .9rem;
+  margin: 1rem 0;
+}
+
+.lf-final-model-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--cyan, #00ffff) 44%, transparent);
+  border-radius: var(--radius, .8rem);
+  background: color-mix(in srgb, var(--panel, #003333) 92%, #00ffff 8%);
+}
+
+.lf-final-model-card > strong {
+  display: block;
+  color: var(--cyan, #00ffff);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.lf-final-model-card h2 {
+  margin: .45rem 0 .25rem;
+  font-size: 1rem;
+}
+
+.lf-final-model-card p,
+.lf-final-section > p {
+  margin: .3rem 0;
+  line-height: 1.55;
+}
+
+.lf-final-section {
+  margin-block: 1rem;
+  overflow: visible;
+}
+
+.lf-final-section .table-wrap {
+  max-width: 100%;
+  overflow: auto;
+}
+
+.lf-final-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lf-final-section th,
+.lf-final-section td {
+  padding: .65rem .7rem;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  text-align: left;
+  vertical-align: top;
+}
+
+.lf-final-section th {
+  color: var(--cyan, #00ffff);
+  font-size: .82rem;
+}
+
+.lf-final-section code,
+.lf-final-section pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.lf-final-warning,
+.lf-final-ok {
+  margin: .9rem 0 0;
+  padding: .75rem .9rem;
+  border-radius: .65rem;
+}
+
+.lf-final-warning {
+  border: 1px solid #ca6309;
+  background: color-mix(in srgb, #ca6309 14%, transparent);
+}
+
+.lf-final-ok {
+  border: 1px solid #32cd32;
+  background: color-mix(in srgb, #32cd32 12%, transparent);
+}
+
+.lf-final-debug {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.lf-final-debug section,
+.lf-final-character-view {
+  min-width: 0;
+  padding: .8rem;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: .6rem;
+}
+
+.lf-final-character-view li {
+  margin-block: .55rem;
+}
+
+.lf-final-character-view li span {
+  display: block;
+  font-size: .82rem;
+  opacity: .8;
+}
+
+.lf-final-matrix-wrap {
+  max-width: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.lf-final-matrix {
+  min-width: max-content;
+}
+
+.lf-final-matrix th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 10rem;
+  background: var(--panel, #003333);
+}
+
+.lf-final-matrix th small {
+  display: block;
+  font-weight: 400;
+  opacity: .75;
+}
+
+.lf-final-matrix td {
+  padding: .35rem;
+  text-align: center;
+}
+
+.lf-final-matrix td button {
+  width: 2.45rem;
+  min-height: 2.45rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.lf-final-matrix td button[aria-pressed="true"] {
+  background: #00ffff;
+  color: #001010;
+}
+
+.lf-final-clocks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .9rem;
+  margin-top: 1rem;
+}
+
+.lf-final-clock {
+  min-width: 0;
+  padding: .85rem;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: .7rem;
+}
+
+.lf-final-clock h3 {
+  margin-top: 0;
+}
+
+.lf-final-clock ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lf-final-clock li + li {
+  margin-top: .45rem;
+}
+
+.lf-final-clock button {
+  display: grid;
+  grid-template-columns: 1.8rem 1fr;
+  gap: .15rem .45rem;
+  width: 100%;
+  padding: .6rem;
+  text-align: left;
+}
+
+.lf-final-clock button > span {
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-weight: 900;
+}
+
+.lf-final-clock button > small {
+  opacity: .78;
+}
+
+.lf-final-issue-list {
+  display: grid;
+  gap: .8rem;
+}
+
+.lf-final-issue-list article {
+  padding: .8rem;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: .7rem;
+}
+
+.lf-final-issue-list header,
+.lf-final-issue-list label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.lf-final-language-tools,
+.lf-final-editor-run {
+  display: flex;
+  align-items: end;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.lf-final-language-tools .field,
+.lf-final-editor-run .field {
+  flex: 1 1 12rem;
+  margin: 0;
+}
+
+.lf-final-version-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.lf-final-version-groups article {
+  padding: .8rem;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: .65rem;
+}
+
+.lf-final-version-groups li {
+  display: flex;
+  justify-content: space-between;
+  gap: .7rem;
+}
+
+.lf-final-editor-results ol {
+  display: grid;
+  gap: .6rem;
+}
+
+.lf-final-editor-results li {
+  padding: .65rem;
+  border-inline-start: .3rem solid #1e90ff;
+  background: color-mix(in srgb, #1e90ff 9%, transparent);
+}
+
+.lf-final-editor-results p {
+  margin: .25rem 0 0;
+}
+
+@media (max-width: 900px) {
+  .lf-final-clocks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lf-final-section *,
+  .lf-final-model-card {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}

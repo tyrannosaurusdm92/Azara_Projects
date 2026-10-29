@@ -1,0 +1,22 @@
+{
+  "schema": "literaryfriend/page-sizes/v1",
+  "units": "in",
+  "defaultBleed": 0.125,
+  "defaultSafeMargin": 0.25,
+  "sizes": [
+    {"id":"paperback-digest","binding":"Paperback","name":"Digest / US Trade","width":5.5,"height":8.5,"use":"Standard fiction, memoirs, and poetry"},
+    {"id":"paperback-standard","binding":"Paperback","name":"Standard Trade","width":6,"height":9,"use":"Non-fiction, textbooks, and larger novels"},
+    {"id":"paperback-small","binding":"Paperback","name":"Small Trade","width":5,"height":8,"use":"Compact novels and literary fiction"},
+    {"id":"paperback-mass","binding":"Paperback","name":"Mass Market","width":4.25,"height":6.87,"use":"Pocket books, genre fiction, and airport thrillers"},
+    {"id":"hardcover-fiction","binding":"Hardcover","name":"Standard Fiction / Novel","width":6,"height":9,"use":"Common US trade hardcover fiction"},
+    {"id":"hardcover-royal","binding":"Hardcover","name":"Royal","width":6.14,"height":9.21,"use":"Slightly larger fiction / novel format"},
+    {"id":"hardcover-compact","binding":"Hardcover","name":"Compact / Novella","width":5.5,"height":8.5,"use":"Compact hardcovers and novellas"},
+    {"id":"hardcover-textbook-7x10","binding":"Hardcover","name":"Textbook / Manual 7 × 10","width":7,"height":10,"use":"Textbooks and manuals"},
+    {"id":"hardcover-letter","binding":"Hardcover","name":"Textbook / Manual 8.5 × 11","width":8.5,"height":11,"use":"Large textbooks and manuals"},
+    {"id":"hardcover-child-portrait","binding":"Hardcover","name":"Children's Picture Book 8 × 10","width":8,"height":10,"use":"Portrait picture books"},
+    {"id":"hardcover-child-landscape","binding":"Hardcover","name":"Children's Picture Book 10 × 8","width":10,"height":8,"use":"Landscape picture books"},
+    {"id":"hardcover-art-10","binding":"Hardcover","name":"Coffee Table / Art 10 × 10","width":10,"height":10,"use":"Square art and coffee-table books"},
+    {"id":"hardcover-art-12","binding":"Hardcover","name":"Coffee Table / Art 12 × 12","width":12,"height":12,"use":"Large square art and coffee-table books"},
+    {"id":"custom","binding":"Custom","name":"Custom Size","width":6,"height":9,"use":"Enter any trim size"}
+  ]
+}

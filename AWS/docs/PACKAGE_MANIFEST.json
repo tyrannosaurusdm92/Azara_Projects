@@ -1,0 +1,185 @@
+{
+  "name": "Literary Friend",
+  "version": "2026-10-10-flat",
+  "topLevelFiles": [
+    "index.html",
+    "service-worker.js",
+    "manifest.webmanifest"
+  ],
+  "directories": [
+    "script/js",
+    "script/wasm",
+    "css",
+    "json",
+    "assets",
+    "docs"
+  ],
+  "htmlFiles": [
+    "index.html"
+  ],
+  "referenceHtmlPagesConvertedToJson": 131,
+  "splitHelperLibraries": {
+    "script/js/helper-creative.js": {
+      "originalSize": 82083986,
+      "sha256": "b60f5238210eacfdeafee459a208389f557c4a6b662ead13ae3871431f25e317",
+      "parts": [
+        {
+          "path": "script/js/helper-creative.js.pt1",
+          "bytes": 14336000,
+          "sha256": "e5e7f14ac7b8afeda4e20d4eaa9de94449bb20ef63c747bba280303cd652b668"
+        },
+        {
+          "path": "script/js/helper-creative.js.pt2",
+          "bytes": 14336000,
+          "sha256": "062647ecdff0a17c22f517899753dd691f8063ed5516a380327692cdbd9f1ff5"
+        },
+        {
+          "path": "script/js/helper-creative.js.pt3",
+          "bytes": 14336000,
+          "sha256": "5f60344105bc512d79507cc848998abce6d5eefee197125bd79d186e7cf4dd3a"
+        },
+        {
+          "path": "script/js/helper-creative.js.pt4",
+          "bytes": 14336000,
+          "sha256": "5fe29817af24902663bf893f9e187edc6186c29676fe10e1b7981ae4afaefb94"
+        },
+        {
+          "path": "script/js/helper-creative.js.pt5",
+          "bytes": 14336000,
+          "sha256": "d68f492cd6e21712ab4415e592e557aa7efc066e2e0f1b7f72e4769dd825b1e4"
+        },
+        {
+          "path": "script/js/helper-creative.js.pt6",
+          "bytes": 10403986,
+          "sha256": "a3966cc7f5c9199deccc182cd2b4368839257a7ca1cb9df3d12d08f901fb40f7"
+        }
+      ],
+      "reason": "browser-loadable-javascript"
+    },
+    "script/js/helper-world-model.js": {
+      "originalSize": 68593286,
+      "sha256": "d3d1a3e4bbb28c30d7ef12038751d529f69476d04f77525f11f9c1ab6d008508",
+      "parts": [
+        {
+          "path": "script/js/helper-world-model.js.pt1",
+          "bytes": 14336000,
+          "sha256": "4ef10e9092d6580fa8549b1b7a1503080667ae22035cf7ef1424179b356be40d"
+        },
+        {
+          "path": "script/js/helper-world-model.js.pt2",
+          "bytes": 14336000,
+          "sha256": "262d0b973c10abe112504dda5e697698fdb78c904aad8bfc4faa5512b53019e7"
+        },
+        {
+          "path": "script/js/helper-world-model.js.pt3",
+          "bytes": 14336000,
+          "sha256": "76965ccc786e0ea1395b2b22bc1766ce8e67a734b40144cd556f42b1da2dabf7"
+        },
+        {
+          "path": "script/js/helper-world-model.js.pt4",
+          "bytes": 14336000,
+          "sha256": "8acd61e09ee183b020d48753ebe0e84c8a0b66ba4b9d1b47db61b8f4a974e9b0"
+        },
+        {
+          "path": "script/js/helper-world-model.js.pt5",
+          "bytes": 11249286,
+          "sha256": "99c7cfe270b857f5cd3a659af4bc92bc60b7ad88cd3355a236c8017991e8903f"
+        }
+      ],
+      "reason": "browser-loadable-javascript"
+    }
+  },
+  "maxAllowedFileBytes": 15000000,
+  "minimumSizeNoPadding": true,
+  "excludedTypes": [
+    ".1",
+    ".bat",
+    ".bcmap",
+    ".c",
+    ".cc",
+    ".cidmap",
+    ".cmake",
+    ".conf",
+    ".cpp",
+    ".css",
+    ".desktop",
+    ".dic",
+    ".dirs",
+    ".ds_store",
+    ".el",
+    ".eot",
+    ".fea",
+    ".gplv3",
+    ".h",
+    ".hpp",
+    ".icns",
+    ".in",
+    ".install",
+    ".iss",
+    ".js",
+    ".json",
+    ".lintian-overrides",
+    ".lock",
+    ".m",
+    ".manpages",
+    ".mcy",
+    ".md",
+    ".otf",
+    ".pat",
+    ".patch",
+    ".pe",
+    ".pfb",
+    ".plist",
+    ".po",
+    ".props",
+    ".ps1",
+    ".pt1",
+    ".pt10",
+    ".pt11",
+    ".pt12",
+    ".pt2",
+    ".pt3",
+    ".pt4",
+    ".pt5",
+    ".pt6",
+    ".pt7",
+    ".pt8",
+    ".pt9",
+    ".rc",
+    ".rs",
+    ".rst",
+    ".sfd",
+    ".sh",
+    ".spec",
+    ".toml",
+    ".tsv",
+    ".ttf",
+    ".txt",
+    ".ui",
+    ".wav",
+    ".woff",
+    ".woff2",
+    ".wxs",
+    ".xbm",
+    ".xml",
+    ".yaml",
+    ".yml",
+    "_unknown"
+  ],
+  "assetPolicy": "images only",
+  "generativeAI": false,
+  "pythonFiles": false,
+  "backendFileIncluded": false,
+  "backendURL": "https://script.google.com/macros/s/AKfycbyzbjqonkGubp-g2XnLr5vSgDc6EnYreGBS-hSBRGIdMRPFarQxeGTmOdSN9nBRp3eF/exec",
+  "imagePolicy": {
+    "previousCount": 2114,
+    "currentCount": 3,
+    "removedCount": 2111,
+    "kept": [
+      "literary-icon-192.png",
+      "literary-icon-512.png",
+      "mark.svg"
+    ],
+    "details": "json/image-manifest.json"
+  }
+}

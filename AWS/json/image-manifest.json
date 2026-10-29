@@ -1,0 +1,26 @@
+{
+  "schema": "literary-friend.image-manifest.v2",
+  "policy": "Only images used by the deployed app shell are packaged. Historical reference screenshots, interface mockups and FontForge documentation bitmaps were intentionally omitted.",
+  "originalImageCount": 2114,
+  "currentImageCount": 3,
+  "removedImageCount": 2111,
+  "removedUncompressedBytes": 16442500,
+  "images": [
+    {
+      "path": "assets/literary-icon-192.png",
+      "bytes": 10842,
+      "purpose": "PWA icon"
+    },
+    {
+      "path": "assets/literary-icon-512.png",
+      "bytes": 57526,
+      "purpose": "PWA icon"
+    },
+    {
+      "path": "assets/mark.svg",
+      "bytes": 313,
+      "purpose": "app navigation and site icon"
+    }
+  ],
+  "historicalDocumentation": "The 131 converted HTML pages stay in json/. Any image links inside their historical source descriptions are archival references, not bundled image dependencies."
+}

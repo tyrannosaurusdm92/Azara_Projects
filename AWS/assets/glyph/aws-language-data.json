@@ -1,0 +1,52 @@
+{
+  "source": "Aza'raan language constants copied from the supplied tested AWS backend for frontend compatibility.",
+  "keyLabels": ["A", "B", "D", "E", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "W", "Y", "Z"],
+  "baseLetters": [
+    { "key": "A", "character": "ឯ", "ipa": "a" }, { "key": "B", "character": "ប", "ipa": "b" },
+    { "key": "D", "character": "ដ", "ipa": "d" }, { "key": "E", "character": "ឥ", "ipa": "e" },
+    { "key": "G", "character": "ខ", "ipa": "g" }, { "key": "H", "character": "ហ", "ipa": "h" },
+    { "key": "I", "character": "ឰ", "ipa": "i" }, { "key": "J", "character": "ច", "ipa": "dʒ" },
+    { "key": "K", "character": "គ", "ipa": "k" }, { "key": "L", "character": "ឡ", "ipa": "l" },
+    { "key": "M", "character": "ម", "ipa": "m" }, { "key": "N", "character": "ន", "ipa": "n" },
+    { "key": "O", "character": "ឧ", "ipa": "o" }, { "key": "P", "character": "ព", "ipa": "p" },
+    { "key": "R", "character": "រ", "ipa": "r" }, { "key": "S", "character": "ស", "ipa": "s" },
+    { "key": "T", "character": "ត", "ipa": "t" }, { "key": "U", "character": "ឩ", "ipa": "u" },
+    { "key": "W", "character": "ឆ", "ipa": "w" }, { "key": "Y", "character": "យ", "ipa": "j" },
+    { "key": "Z", "character": "ជ", "ipa": "z" }
+  ],
+  "familyGlyphs": [{ "key": "F", "character": "ផ", "ipa": "f" }, { "key": "V", "character": "វ", "ipa": "v" }],
+  "marks": [
+    { "id": "short-a", "name": "Short A", "character": "៊", "ipa": "æ", "kind": "vowel" },
+    { "id": "short-e", "name": "Short E", "character": "៎", "ipa": "ɛ", "kind": "vowel" },
+    { "id": "short-i", "name": "Short I", "character": "៏", "ipa": "ɪ", "kind": "vowel" },
+    { "id": "short-u", "name": "Short U", "character": "័", "ipa": "ʌ", "kind": "vowel" },
+    { "id": "long-a", "name": "Long A", "character": "៍", "ipa": "ɑː", "kind": "vowel" },
+    { "id": "long-e", "name": "Long E", "character": "៝", "ipa": "iː", "kind": "vowel" },
+    { "id": "long-u", "name": "Long U", "character": "ៈ", "ipa": "uː", "kind": "vowel" },
+    { "id": "g", "name": "G", "character": "ឹ", "ipa": "g", "kind": "consonant" },
+    { "id": "w", "name": "W", "character": "ឺ", "ipa": "w", "kind": "consonant" },
+    { "id": "y", "name": "Y", "character": "ើ", "ipa": "j", "kind": "consonant" },
+    { "id": "f", "name": "F", "character": "ៃ", "ipa": "f", "kind": "consonant" },
+    { "id": "b", "name": "B", "character": "្ក", "ipa": "b", "kind": "consonant" },
+    { "id": "z", "name": "Z", "character": "ា", "ipa": "z", "kind": "consonant" },
+    { "id": "s", "name": "S", "character": "ិ", "ipa": "s", "kind": "consonant" },
+    { "id": "ch", "name": "CH", "character": "ី", "ipa": "tʃ", "kind": "consonant" },
+    { "id": "hard-h", "name": "Hard H", "character": "ុ", "ipa": "h", "kind": "consonant" },
+    { "id": "base", "name": "Base letter", "character": "ូ", "ipa": "", "kind": "base" },
+    { "id": "d", "name": "D", "character": "ួ", "ipa": "d", "kind": "consonant" },
+    { "id": "k", "name": "K", "character": "េ", "ipa": "k", "kind": "consonant" },
+    { "id": "l", "name": "L", "character": "ែ", "ipa": "l", "kind": "consonant" },
+    { "id": "m", "name": "M", "character": "ោ", "ipa": "m", "kind": "consonant" },
+    { "id": "n", "name": "N", "character": "ំ", "ipa": "n", "kind": "consonant" },
+    { "id": "r", "name": "R", "character": "ះ", "ipa": "r", "kind": "consonant" },
+    { "id": "t", "name": "T", "character": "់", "ipa": "t", "kind": "consonant" }
+  ],
+  "specialMarks": [
+    { "id": "glottal", "name": "Glottal stop", "character": "៉", "ipa": "ʔ", "kind": "special" },
+    { "id": "click", "name": "Click", "character": "្ឃ", "ipa": "ǃ", "kind": "special" },
+    { "id": "emphasis-previous", "name": "Previous-syllable emphasis", "character": "៌", "ipa": "", "kind": "special" },
+    { "id": "emphasis-next", "name": "Next-syllable emphasis", "character": "៑", "ipa": "", "kind": "special" }
+  ],
+  "standaloneArchaic": { "glottal": "៉", "click": "្ឃ" },
+  "eraRules": { "archaic": "Glottal and click are standalone glyphs.", "classicalAndLater": "Four special marks attach to base glyphs." }
+}

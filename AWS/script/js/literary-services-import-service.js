@@ -1,0 +1,5 @@
+import {backend} from './backend-client.js'; import {store} from '../core/state-store.js'; const pid=()=>store.get('activeProject')?.id;
+export const ImportService={
+ list(){return backend.call('imports.list',{projectId:pid()});}, register(data){return backend.call('imports.register',{projectId:pid(),...data});}, ingest(filePayload){return backend.call('files.ingest',{projectId:pid(),...filePayload},{timeoutMs:120000});}, ingestBatch(files,options={}){return backend.call('files.ingest.batch',{projectId:pid(),files,...options},{timeoutMs:180000});}, fileIndex(data={}){return backend.call('files.index.list',{projectId:pid(),...data});}, getIndexedFile(id){return backend.call('files.index.get',{id,fileId:id});},
+ consolidationPlan(inputImportIds,options={}){return backend.call('consolidation.plan',{projectId:pid(),inputImportIds,...options},{timeoutMs:180000});}, consolidationApply(mergeJobId,decisions={}){return backend.call('consolidation.apply',{projectId:pid(),mergeJobId,decisions},{timeoutMs:180000});}, bulkApply(operations,options={}){return backend.call('bulk.apply',{projectId:pid(),operations,...options},{timeoutMs:180000});}
+};
