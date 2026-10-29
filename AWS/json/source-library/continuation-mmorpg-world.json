@@ -1,0 +1,90 @@
+{
+  "id": "continuation-mmorpg-world",
+  "title": "MMORPG Historical Continuation: World and Story",
+  "category": "worldbuilding",
+  "source_url": "https://drive.google.com/file/d/1Nng6SOuLOc3IJezGqQarDiBd9LvW_ZZj/view",
+  "status": "reference_only_never_overwrites_current_aws",
+  "source_type": "Drive source-only continuation",
+  "sections": [
+    {
+      "title": "Surviving Aza’ra",
+      "text": "The MMORPG unfolds after Belavadös has been completely destroyed.\nIts absence shapes refugees, laws, routes, labor, and inherited language.\nThe setting mixes post-apocalyptic survival with working cities rather than depicting an empty wasteland.\nPlayers move among surviving continents, floating settlements and public transit networks.\nHistory can be explored through books, memorials, and stories, but the destroyed continent is never a playable map.\nHistorical and system reference\nThe source Steampunk-to-Moonpunk history depicts necessity-driven rebuilding rather than an uninterrupted golden age. Architecture and trade should remember migration, scarcity and displaced communities after Belavadös is destroyed. The continent can be referenced in museums or memories but cannot be traversed.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 1
+    },
+    {
+      "title": "Brassbound Steampunk",
+      "text": "The original world document describes the Brassbound Age as industry born from necessity.\nBrass, storm-forged metal, pressure conduits and ley-light engineering support homes, tools and transit.\nMechanical systems require fuel, maintenance and safe operating pressure.\nClothes reflect travel and industrial needs, not merely decoration.\nPlayers can build workshops and repair public infrastructure as meaningful professions.\nHistorical and system reference\nThe Brassbound Age reference names Zephonara, Emberhold and Vulkiris as industrial cities, alongside brass, storm-forged iron, ley-glass and aether-cable. These are source-backed worldbuilding names, not decorative placeholders. Pressure, repair, fuel and contamination hazards should matter mechanically.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 2
+    },
+    {
+      "title": "Moonpunk Technologies",
+      "text": "Later technology uses lunar resonance and refined magical systems to extend the Brassbound infrastructure.\nThe three moons Duvaen, W’iosamn and Arvalla influence lighting, ritual timing and engineering culture.\nMoonpunk vehicles and buildings should still use resources, trained work and physical space.\nDigital simulation can treat the three-moon alignment as a calendar condition rather than a free source of limitless power.\nHistorical and system reference\nThe three moons are Duvaen, W’iosamn and Arvalla. Lunar resonance can affect ritual timing and machinery as a calendar condition, but Moonpunk technology still needs explicit resources and safeguards. The novel and TTRPG must use the same lunar names.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 3
+    },
+    {
+      "title": "Continents and Boundaries",
+      "text": "The surviving setting has different communities in Arzuhan, Dakaroth and Tzaphaer.\nSkyborne districts, storm regions, wetlands and industrial cities require distinct travel logic.\nRegion identifiers are stable across quests, economy and housing.\nBelavadös remains a historical name without a traversable destination.\nIf a map source still shows it, the importer tags that location as retired before gameplay begins.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 4
+    },
+    {
+      "title": "Species and Heritage",
+      "text": "Strict species data, legacy race descriptions and mixed communities must be searchable in one place.\nThe old MMORPG includes 18 named entries but not all are distinct current species.\nAmpharils have been merged into Dril’thars.\nKalus’aans and Kalusogals represent mixed ancestry; Azh’raim is an older label to reconcile with Azrahai.\nCharacters can choose ancestry detail without double-counting species or losing cultural identity.\nHistorical and system reference\nThe current strict JSON contains 12 recognized named species, and the older MMORPG contains additional source-backed candidates and mixed groups. The concordance tracks each separately. Ampharils remain Dril'thar heritage, not an independent selectable race. Aza'raans are the hybrid founding people.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 6
+    },
+    {
+      "title": "Careers and Work",
+      "text": "Skills, careers and crafting in the original MMORPG support artisans, merchants, archivists, couriers, builders and technical specialists.\nProfessions require jobs, tools, resources and customers.\nA stable task loop includes request, materials, preparation, work, quality check and delivery.\nThe economy responds to actual completed work, not a simulated paycheck disconnected from the world.\nHistorical and system reference\nProfessions can supply restoration, housing, medical services and industry, not only battle bonuses. The original Brassbound text supports work in pressure systems, transit, filters, workshop repairs and magical engineering. Public service jobs can earn rewards without requiring PvP.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 10
+    },
+    {
+      "title": "Housing and Private Dimensions",
+      "text": "Players can claim a private dimension and build an entire settlement, including homes, roads, farms, gardens, public services, workshops and meeting places.\nPermissions distinguish owner, household, collaborator and visitor.\nEvery placed object receives a persistent identifier, orientation, size and function.\nThe dimension may expand, but expansions cost resources and respect adjacency constraints.\nThis design draws on the user’s requested creative-building scope without copying another game’s assets.\nHistorical and system reference\nPrivate dimensions should support zoning, roads, workshops, gardens, homes, utilities and visitor permissions. Buildings consume materials and space. The local settlement prototype models a small grid, but a full multiplayer service still requires server authority, permissions and persistence.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 13
+    },
+    {
+      "title": "Terrain and Agriculture",
+      "text": "The settlement terrain grid includes soil, water, path, road, garden and natural habitat.\nAgriculture requires water, appropriate soil, season and maintenance.\nTree and structure footprints cannot silently overlap.\nRegional weather and available labor affect yields.\nPlayers can protect wildlife and build community gardens rather than treating all undeveloped space as empty construction land.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 15
+    },
+    {
+      "title": "Residents and NPC Homes",
+      "text": "An NPC resident has a household, occupation, needs, relationships, permissions and schedule.\nTheir home must be placed before it becomes their address.\nA clinic, market or school provides useful settlement services only when staffed and supplied.\nNPCs can choose to stay, move or make requests, and the system should remember promises made by players.\nPopulation growth requires infrastructure.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 16
+    },
+    {
+      "title": "Factions and Guilds",
+      "text": "Guilds can focus on research, craft, protection, trade, travel, art or community care.\nGovernance needs clear permissions, resources and member responsibilities.\nReputation depends on decisions, not a single universal good meter.\nHistorical organizations from the destroyed continent can persist through descendants and archives without surviving as unexplained new cities.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 17
+    },
+    {
+      "title": "Quest and Event Calendar",
+      "text": "Events should combine seasonal moon phases with local politics, work orders and natural conditions.\nSome activities require a time window, while others stay available to accommodate different schedules.\nQuest design permits multiple solutions and stores resulting changes.\nEvents can spotlight linguistic encounters, refugee histories and recovered documents without inventing a permanent new lore crisis each day.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 18
+    },
+    {
+      "title": "Transportation Network",
+      "text": "Skyships, rail, watercraft, road travel and designated short-range portals make exploration possible.\nThe safest magical jumps terminate at public transit stations.\nUnauthorized long-distance jumps expose travelers to serious misarrival risk.\nRoutes must be verified against world geography and era, with Belavadös unavailable after its destruction.\nVehicles also require accessible boarding, maintenance and storage.\nHistorical and system reference\nAnchored portal stops and maintained sky routes need route metadata, danger states and access restrictions. Destroyed Belavadös cannot appear on current transit menus. Long-range unchecked teleportation is dangerous and must never be the universal default.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 19
+    },
+    {
+      "title": "Economy of Restoration",
+      "text": "The post-apocalyptic economy values repair, clean water, safe transit, medical support, housing and salvaged knowledge.\nScarcity has understandable local causes.\nA region that rebuilds a bridge can improve trade prices; a broken ferry can isolate a market.\nPlayers should be able to see their contribution to recovery in the physical environment and in residents’ lives.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 20
+    }
+  ],
+  "omitted_superseded_lines": 0,
+  "warning": "These supporting sources are not the authoritative new 19-letter language model or newer book manuscript. Repeated and old version titles are historical, not an instruction to rename anything."
+}

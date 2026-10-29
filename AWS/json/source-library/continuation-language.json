@@ -1,0 +1,156 @@
+{
+  "id": "continuation-language",
+  "title": "Aza'raan Language Source-only Continuation (24 chapters)",
+  "category": "language",
+  "source_url": "https://drive.google.com/file/d/1didtDvlrKb1q_OYo8SuRhqUvX2kEbLa1/view",
+  "status": "reference_only_never_overwrites_current_aws",
+  "source_type": "Drive source-only continuation",
+  "sections": [
+    {
+      "title": "Two Foundations, Many Voices",
+      "text": "The Kaʻaheʻanua people brought a Fenua language shaped for the project by Proto-Oceanic structures.\nUxrowoiye speakers already had their own speech and hieroglyph-derived written tradition.\nThe first Aza’raan was not either language alone.\nIt emerged where survivors needed to speak with one another while preserving names, ceremonies, and records.\nLater immigration added new sounds, borrowed words, translations, and prestige registers.\nTreat this history as a sequence of human and nonhuman communities making choices, not an instant equal blending of every language.\nHistorical and system reference\nThe source MMORPG describes Aza'raans as descendants of Kaʻaheʻanua sorcerers and Uxrowoiye psychics. A shared language emerges from contact between these specific communities, not from the instant disappearance of either parent language. Preserve the distinction between linguistic ancestry and genetic ancestry. Historical mixed communities, including Kalus’aans, Kalusogals, and Aza’ziras, provide plausible bilingual transmission routes, but their native grammars are not yet independently documented.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 1
+    },
+    {
+      "title": "Before the Cataclysm",
+      "text": "Uxrowo had a native psionic civilization with its own language and pictographic records.\nFenua’s Kaʻaheʻanua community existed independently.\nUxrowoiye records used reassigned Egyptian-inspired figures as meaningful written signs; they did not use the alphabet of modern Earth.\nThe two lineages must remain legible in place names, ritual words, and inherited sign meanings even after the shared language emerges.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 2
+    },
+    {
+      "title": "1351 BCE Convergence",
+      "text": "The Cataclysm transformed Uxrowo and created the conditions under which the newcomers and Uxrowoiye could no longer live separately.\nEmergency coordination favored quickly learnable particles and shared everyday terms.\nFormal writing retained the weight of older Uxrowoiye symbols.\nThis is the start of the linguistic convergence, not proof that all languages became identical in a single generation.\nThe 1351 BCE planetary event is distinguished from the later destruction of the continent Belavadös by the Iron Dominion.\nHistorical and system reference\nThe old Uxrowoiye document presents the early period as a coexisting dual system with competing spoken and written conventions. This supports gradual convergence: learners can borrow a grammatical particle from one lineage while continuing to use a different lineage's family terminology or record-keeping marks. The earlier 132-sign count in that document is superseded by the author's current 52-letter rule.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 3
+    },
+    {
+      "title": "Proto Aza’raan, 52 Letters",
+      "text": "The working Proto-Aza’raan inventory has exactly 52 letter values, including early distinctions subsequently lost or merged.\nThe source Letter Evolution Table preserves 52 ancestral glyph rows.\nUse them as provenance for letter-design studies, not as finished modern letterforms.\nThe count excludes convenient duplicates of a character caused by word position or artistic calligraphy.\nThe glottal stop and click belonged to the ancient sound system.\nTheir later representation needs a recorded change history.\nHistorical and system reference\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 4
+    },
+    {
+      "title": "Uxrowoiye Hieroglyph Origins",
+      "text": "Every new glyph proposal must cite an identified source sign, its Uxrowoiye meaning, its proposed phonetic reassignment, and the alterations visible in each era.\nThe letter should be traceable from recognizable picture, to shorthand, to a standardized pen stroke, to modern independent and subscript forms.\nA sign that cannot be traced should stay a design proposal.\nThe legacy glyph assignments remain useful even where the old alphabet counts are obsolete.\nHistorical and system reference\nThe uploaded English-alphabet study documents a useful real-world process: pictures can be reused as phonetic signs, sounds may be reassigned, and writing can change without every symbol having a single direct descendant. Use that method to design Aza'raan, while preserving the fictional Uxrowoiye meanings assigned to Egyptian-looking signs. Do not import Phoenician, Greek, or Latin as an in-world intermediate stage.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 5
+    },
+    {
+      "title": "Kaʻaheʻanua Sound Inheritance",
+      "text": "Kaʻaheʻanua contributes an open, vowel-friendly syllable flow and social vocabulary to the merged language.\nExisting Fenua names deserve stable pronunciation and capitalization rather than forced conversion into Uxrowoiye-looking spellings.\nProto-Oceanic is a real comparative inspiration, not evidence of a literal undocumented migration of an Earth-language family into fiction.\nVerify examples against the original Kaʻaheʻanua reference rather than inventing unmarked translations.\nHistorical and system reference\nThe Kaʻaheʻanua language source records open syllables, vowel prominence and glottalization. These can inform the founding contact layer, but its older claim of exclusive Proto-Polynesian derivation conflicts with the latest Proto-Oceanic guidance. Proto-Oceanic remains the principal real-world inspiration; older formulations are research history only.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 6
+    },
+    {
+      "title": "Other Peoples as Language Makers",
+      "text": "Kaluseban, Tamhiogal, Dril’thar, Deorbasun, Gandirosha, Gwynis, Geisamahi, Panolima, Volsarii, Azrahai, Jaspey, and Aburata peoples participate in centuries of exchange.\nContact can leave kinship terminology, practical trade vocabulary, ritual formulas, accents and loan names.\nThese are independently named communities; shared ancestry does not erase their speech differences.\nThe exact native grammar of each people remains an open research task where the original source documents do not specify it.\nHistorical and system reference\nA language-contact record should distinguish trade words, inherited kinship terms, prestige borrowings, ritual conservatism, bilingual code-switching, phonological accommodation and script adoption. Include each contributing people by canonical name and mark candidate records. Ampharils are Dril'thar ancestry, not a second independent contact source.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 7
+    },
+    {
+      "title": "Dril’thar Inheritance",
+      "text": "The Dril’thars are an amphibious people whose old MMORPG account connects them with water spirits and shore environments.\nTheir six strict-JSON environmental variants provide room for distinct reef, marsh, forest, ocean, rainforest and grassland regional speech.\nAmpharils have already been merged into this people.\nAn old Ampharil entry can be retained as historical ancestry or an older dialect label, but never treated as an independent modern species or counted as another language-contact community.\nHistorical and system reference\nThe current species JSON recognizes six Dril'thar environmental variants. Record local regional terms under the Dril'thar branch rather than fabricating six separate species or imposing a single coastal pronunciation everywhere. Dril'thar signs for water, marsh, current and rainfall need source attestations before entering the approved dictionary.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 8
+    },
+    {
+      "title": "Kaluseban and Mixed Lineages",
+      "text": "Kaluseban has six named strict-JSON bloodline variants.\nThe old MMORPG also records Kalus’aans, mixed Aza’raan and Kaluseban heritage, and Kalusogals, mixed aquatic Tamhiogal and oceanic Kaluseban heritage.\nThese names support multilingual households and local naming conventions without implying that mixed families belong to isolated biological species.\nA mixed community can foster code-switching and new particles while remaining part of existing people.\nHistorical and system reference\nThe archived race list names Kalus’aans and Kalusogals among mixed-ancestry communities. These are valuable contact-setting evidence because multilingual households can move particles and honorifics between communities. They are not automatically newly approved species or evidence of a uniform Kaluseban accent.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 9
+    },
+    {
+      "title": "Ocean, Wetland and Coastal Speech",
+      "text": "Tamhiogal and Dril’thar traditions encounter Kaluseban oceanic communities at ports and through travel.\nTerms for tide, depth, reef, vessel, seasonal migration and navigational warnings are plausible borrowing domains.\nTheir exact sounds and word roots should only be finalized after consulting source language sheets.\nA port-born Aza’raan register may preserve archaic names that are unusual in inland Modern Aza’raan.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 10
+    },
+    {
+      "title": "Other Regional Voices",
+      "text": "The old MMORPG separately names Zirramunis, Garuraqets and Iamhaziras.\nThey should not vanish because the newer strict JSON has not yet assigned them a canonical entry.\nKeep their source descriptions in a reconciliation register and distinguish them from author-approved species.\nTheir potential linguistic influence is a documented question, not a license to invent ancestral vocabulary.\nNew words generated from their influence are draft forms.\nHistorical and system reference\nThe source-backed names Zirramunis, Garuraqets and Iamhaziras warrant entries in the historical race concordance. Their spellings alone do not justify inventing complete phoneme inventories. Archive-only names such as Auridens or Sidherins stay below the approval threshold and have no automatic generator profile.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 11
+    },
+    {
+      "title": "Classical Aza’raan",
+      "text": "Classical Aza’raan, especially relevant to campaigns on Belavadös, is approximately 80 percent particle-oriented.\nSubjects and objects may move for emphasis when particles preserve their roles.\nChronicles, legal testimony, domestic conversation and poetry can employ different registers.\nA historical word may retain a final consonant that later spelling would treat as exceptional.\nThe classical script belongs to a distinct phase between the 52-letter ancient register and later Modern 38-letter usage.\nHistorical and system reference\nFor the classical period, preserve flexible word order and roughly 80 percent particle-reliant grammar. Examples must indicate agent, patient, tense, certainty and emphasis without presuming Latin noun cases. A particle table should distinguish fixed meanings from proposed tests, and should not present a generated draft word as a translation.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 12
+    },
+    {
+      "title": "Intermediate Sound Changes",
+      "text": "Vowels can merge when adults from different communities use the same term; clusters can split in careful ceremonial speech and collapse in everyday markets.\nEvery proposed sound change requires a before form, after form, estimated era, affected community, and plausible mechanism.\nAvoid universal changes that supposedly reach every settlement overnight.\nExisting archival notes document candidate processes, but conflicting old counts and anachronistic descriptions do not override the newest project rules.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 13
+    },
+    {
+      "title": "Transitional Aza’raan",
+      "text": "The post-Cataclysm world, expanded road networks and later industrial settlements create conditions for more shared speech, not linguistic uniformity.\nTransitional Aza’raan should preserve older verbal particles and regional loans.\nIn the MMORPG, characters may encounter archaic writing without needing the destroyed continent of Belavadös to exist as a playable land.\nHistorical sources can appear as objects, archives and inherited songs.\nHistorical and system reference\nThe transitional stage must preserve continuity between the older Uxrowoiye pictorial root shapes and independent or subscript forms seen in modern writing. This is a stage of change, not an unexplained replacement alphabet. Record what a scribe would simplify when using a brush, reed, carving tool, or later printer.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 14
+    },
+    {
+      "title": "Modern Aza’raan, 38 Letters",
+      "text": "The authoritative modern target is a 38-letter system.\nIt includes compound sound letters and sound families rather than assuming 38 English-style keys.\nOne base sign may cover modern w, v and b in defined contexts.\nSeparate consonant-vowel letters can represent wah, weh and wee.\nThe W’i of W’iosamn and the mn sound in the same name each require one written character.\nTheir Latin spellings do not define glyph counts.\nHistorical and system reference\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 15
+    },
+    {
+      "title": "Independent and Subscript Forms",
+      "text": "A full independent letter occupies a normal writing unit.\nA subscript derivative fits under, beside, or into an anchor where allowed by the spelling rules.\nKhmer writing is an inspiration for the system of dependent positioning, but its actual letters are not transplanted.\nFor each of the 38 target graphemes, a chart should show independent shape, subscript shape, permitted combination, and one historical ancestor.\nA positional allograph must not be accidentally counted as an extra letter.\nHistorical and system reference\nA glyph design record needs anchor shape, independent form, subscript attachment point, stroke count, joining rule, collision avoidance and reading order. Draw each proposed sign at manuscript scale and small-screen scale. Subscript forms are visual alternates, not extra alphabet slots.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 16
+    },
+    {
+      "title": "Pronunciation and Phoneme Audit",
+      "text": "Modern Aza’raan preserves a rolled or tapped r with ceremonial registers favoring a full trill.\nTz has the compound Taz value.\nW’i functions as wee.\nMn is a single compound consonant unit associated with mhn.\nThe retained source table contains additional affricates, vowels, nasal sounds and glottal values.\nWhere their modern assignments conflict with the 38-letter rule, leave the mapping open pending deliberate author approval.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 17
+    },
+    {
+      "title": "Particles and Flexible Order",
+      "text": "The modern language is approximately 90 percent particle-based.\nTopic, agent, patient, tense, aspect, evidential, negation, direction, and relationship particles can carry roles that English expresses through word position or inflection.\nGive each example a particle-by-particle gloss; no invented Aza’raan sentence should masquerade as a certified translation.\nFlexible word order must never mean that a changed sentence becomes uninterpretable.\nHistorical and system reference\nParticles should carry grammatical roles, temporal relationships, evidence, emphasis and social orientation in independently tested categories. The original word generator lists approximately fifty semantic particle categories, which can seed a lexicon design queue without constituting final spoken Aza'raan.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 18
+    },
+    {
+      "title": "Pronouns and Identity",
+      "text": "Pronouns derive from cultural identity terms rather than assuming the English he/she distinction.\nSource-era inventories contain different counts; the current guide can state the principle without silently settling conflicting inventories.\nRecord self-identified name, pronoun, speech register, relationship and appropriate context.\nA language-contact model should also recognize that kinship and identity terms are often borrowed among neighboring peoples.\nHistorical and system reference\nThe older language documents mention 15 identity categories and an identity-derived pronoun system. Preserve any attested pronouns, but check them against the newer naming guide before determining whether a form is regional, historical or modern. Do not infer gender from appearance or species.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 19
+    },
+    {
+      "title": "Names and Inherited Spellings",
+      "text": "W’iosamn, Arzuhan, Dakaroth, Belavadös and Tzaphaer keep historical romanizations unless a source-approved modern spelling replaces them.\nMost everyday modern words tend toward vowel endings, while proper nouns and archival words may keep consonant endings.\nMixing ancestry may influence name sounds, but a character name should not be randomly reshaped to fit a temporary generator setting.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 20
+    },
+    {
+      "title": "Dictionary Provenance",
+      "text": "Each dictionary entry records its meaning, era, community, original source, confidence, phonemic segments, written form and optional glyph lineage.\nSeparate approved vocabulary from newly generated candidates.\nWhen two communities have the same gloss, preserve both forms until a documented borrowing or merger is established.\nDictionary export should be editable JSON so author-approved forms can remain stable.\nHistorical and system reference\nAn approved dictionary entry requires a meaning, era, sound rendering, grammatical role, source attestation, community or region, script form and review status. Generator output begins at draft status. Its listed contacts indicate design ingredients, not proven etymologies.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 21
+    },
+    {
+      "title": "Translation Method",
+      "text": "Translation must specify which Aza’raan era and register is wanted.\nBreak the English source into propositions, choose semantic roles, select evidenced words, then add grammatical particles and attested ordering.\nMark unattested terms as missing, not as automatically invented equivalents.\nBack-translate proposed sentences and report where meaning drift occurs.\nKeep pronouns and names as author controlled choices.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 22
+    },
+    {
+      "title": "Word Generator Rules",
+      "text": "The generator is a proposal tool with selectable contact communities and meanings, not a machine that declares new canon.\nIt should show chosen era, syllable count, allowed consonants and vowels, origin streams and a draft tag.\nExports should preserve the chosen sources and permit review.\nOnly explicitly approved forms enter the authoritative dictionary.\nAmpharil is an alias for Dril’thar heritage and must never yield two separate influences.\nHistorical and system reference\nThe provided HTML generator has independent, anchor and subscript letter groups alongside noun and particle taxonomies. A new generator must preserve those categories or document why a particular archaic character cannot be mapped to the modern 38. The companion script workbench now records proposed derivations directly against each of the 52 assigned source roots.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 23
+    },
+    {
+      "title": "Writing System Review",
+      "text": "For every sign, trace the assigned hieroglyph to proto outline, intermediate stroke economy, classical form and modern form.\nThe English alphabet document illustrates the general process of pictograms becoming phonetic signs and adapting through cultures.\nIt does not provide literal Aza’raan ancestry.\nDo not replace the 52 Uxrowoiye sign references with Latin letters.\nProduce black-and-white form studies and leave unverified shapes visibly labeled proposed.\nHistorical and system reference\nQuality checks include reading order, strokes that remain visible at 16 pixels, identification under reduced vision, and distinct forms for lookalike roots. Any glyph chart lacking an attested source assignment should be labeled an illustration rather than a linguistic fact.\nAppendix A: Source-contact concordance\nClassification here does not grant playable or linguistic-canon status to historical candidates. Approved species are identified by strict-JSON evidence. Older race names are preserved for editorial review.\nAza'raan  current founding people\nKaluseban  strict-JSON approved species\nAzrahai  strict-JSON approved species\nGandirosha  strict-JSON approved species\nPanolima  strict-JSON approved species\nGwynis  strict-JSON approved species\nGeisamahi  strict-JSON approved species\nDril'thar  strict-JSON approved species\nTamhiogal  strict-JSON approved species\nJaspey  strict-JSON approved species\nAburata  strict-JSON approved species\nDeorbasun  strict-JSON approved species\nVolsarii  strict-JSON approved species\nZirramunis  source-backed candidate for canon reconciliation\nGaruraqets  source-backed candidate for canon reconciliation\nKalus'aans  historical mixed-ancestry community\nKalusogals  historical mixed-ancestry community\nIamhaziras  source-backed candidate for canon reconciliation\nAza'ziras  historical mixed-ancestry community\nAhkiwehans  archived legacy reference only, unapproved\nAuridens  archived legacy reference only, unapproved\nChimerals  archived legacy reference only, unapproved\nDraumaris  archived legacy reference only, unapproved\nElementaris  archived legacy reference only, unapproved\nMantacirans  archived legacy reference only, unapproved\nMemoraths  archived legacy reference only, unapproved\nOndarils  archived legacy reference only, unapproved\nPoyehnis  archived legacy reference only, unapproved\nSidherins  archived legacy reference only, unapproved\nTenebralis  archived legacy reference only, unapproved\nTysvaerils  archived legacy reference only, unapproved\nVeszars  archived legacy reference only, unapproved\nAppendix B: Hieroglyph root studies\nThe plates are experimental changes of stroke geometry. They are not final glyph assignments for the Modern 38.\nResearch: Lexical Evidence Across Four Eras\n07 | Other Peoples as Language Makers\nResearch workflow: record each proposed loanword with the source community, time period, regional context, original written form, probable sound accommodation and evidence level. A Dril'thar environmental register can contain distinct regional terms without treating Ampharils as an independent people. Source file citations are mandatory before an entry can be called attested.\n08 | Dril’thar Inheritance\nDril'thar inherited amphibious heritage includes the merged Ampharil material. Contact registers must not double count that ancestry. Distinguish six source-described Dril'thar environmental variants from six independent languages. The older root spelling of a place can coexist with a modern pronunciation only when both are cited.\n16 | Independent and Subscript Forms\nDictionary workflow: the Word Forge generates unapproved drafts. The new lexicon evidence register can store Proto, Classical, Transitional and Modern spellings, plus source passages and community contact. A proposed borrowing is not the same as an attested native word; neither is author-approved automatically.\n19 | Pronouns and Identity\nHistorical scripts should preserve one verified path from an original Uxrowoiye full-word sign through reduced strokes and sound use before proposing dependent or independent modern forms. The alphabet-history reference is an analogy for historical change, not a literal source alphabet for Aza'ra.\nEvidence standard\nA source-attested item requires a document and passage. A proposed borrowing must name the community and indicate that its sound and grammar are unverified. Authored approval must be a separate action from saving a draft.",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 24
+    }
+  ],
+  "omitted_superseded_lines": 2,
+  "warning": "These supporting sources are not the authoritative new 19-letter language model or newer book manuscript. Repeated and old version titles are historical, not an instruction to rename anything."
+}

@@ -1,0 +1,84 @@
+{
+  "id": "continuation-ttrpg-world",
+  "title": "TTRPG Historical Continuation: World and Story",
+  "category": "worldbuilding",
+  "source_url": "https://drive.google.com/file/d/1DAVBT3Nd9xEjEXZIpMz9S42_9VgI3y4M/view",
+  "status": "reference_only_never_overwrites_current_aws",
+  "source_type": "Drive source-only continuation",
+  "sections": [
+    {
+      "title": "Two Aza’ra Campaign Eras",
+      "text": "The tabletop game supports a historical Belavadös setting and a distinct Galaxy Era around 3013 CE in an alternate continuity.\nCampaign creation requires an era selection because available places, transport, knowledge and technology are not interchangeable.\nA story in the later era must not send adventurers to the destroyed continent as though it still exists.\nThe tabletop rules can share mechanics across eras while changing available equipment, communication and hazards.\nHistorical and system reference\nThe historical and Galaxy Era settings share their core resolution logic but must not share maps, technology lists or historical knowledge without explanation. The alternate Galaxy Era around 3013 CE is not Pix's 2036 present. The original two-era constraint belongs in every saved campaign state.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 1
+    },
+    {
+      "title": "Belavadös Before Destruction",
+      "text": "Most historical tabletop campaigns center on Belavadös before the Iron Dominion destroys it.\nCharacters can encounter its ports, polities and oral traditions while those communities are still living.\nLater documents may describe ruins or migration, but cannot treat the original continent as surviving terrain.\nThe destruction is attributed to the Iron Dominion, not Tzaphaer.\nKeep the historical date of the bombing unresolved until a dated canonical source establishes it.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 2
+    },
+    {
+      "title": "The Cataclysm of 1351 BCE",
+      "text": "Uxrowo’s cataclysm and language convergence occur in 1351 BCE.\nThis event begins Aza’ra’s reconstructed civilization and involves a planetary catastrophe, surviving Uxrowoiye psionics and Kaʻaheʻanua magic.\nThe Iron Dominion’s later destruction of Belavadös is tracked separately.\nPlayers in an era close to the catastrophe should face broken geography and unstable infrastructure, not modern Moonpunk installations.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 3
+    },
+    {
+      "title": "Galaxy Era, Around 3013 CE",
+      "text": "The Galaxy Era is an alternate-universe spacefaring campaign option.\nIt centers on exploration, diplomacy, industry, identity and temporal risk rather than a single queen.\nBilqis is present as a cunning Aza’raan ruler known to disregard laws established when time travel was invented in 2082.\nNo campaign is obliged to solve the novel’s ancient clue trail.\nHer later displacement in 3021 belongs to established chronology, without making it the tabletop interface’s primary quest.\nHistorical and system reference\nGalaxy Era adventures can explore transport, science, factions, artificial environments and legal consequences of time travel. Bilqis is known for being a cunning queen who repeatedly breaches the laws first established in 2082, but her personal archaeological clue hunt belongs to Book Two rather than a tabletop clue ledger.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 4
+    },
+    {
+      "title": "Time Travel and Its Laws",
+      "text": "Time travel becomes possible in 2082 CE and prompts legal restrictions.\nBefore a session involving temporal alteration, the group chooses what violations change: custody of displaced people, evidence admissibility, paradox risk and remembered history.\nThe system must never treat a lawbreaking act as automatically safe because a famous ruler has done it.\nThe Bilqis reference is a setting example, not a dedicated clue ledger.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 5
+    },
+    {
+      "title": "Species and Mixed Ancestry",
+      "text": "The strict JSON supplies twelve approved original species names and their named variants, while the old MMORPG supplies eighteen race-menu descriptions including several mixed-ancestry groups.\nUse one reconciliation table instead of assuming every menu item denotes a separate biological species.\nAmpharils are part of Dril’thar ancestry.\nKalus’aans, Kalusogals and Aza’ziras are mixed communities.\nThe old Azh’raim name is cross-referenced with Azrahai, not silently duplicated.\nHistorical and system reference\nStrict JSON species can be selected as approved. Source-only candidates from the old MMORPG are listed for reconciliation, not enabled by default. Kalus’aans and Kalusogals are historical mixed communities; Ampharils are already part of Dril'thar heritage. Character ancestry should not force one language or one alignment.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 7
+    },
+    {
+      "title": "Settlements and Architecture",
+      "text": "Building begins with land rights, access, resources, foundation and utilities.\nSpaces require circulation clearance, safety and occupancy limits.\nInterior decoration and terrain work have persistent state so the result is more than a temporary combat map.\nA home or workshop may alter NPC trust and access to professions.\nTabletop layouts use tiles or coordinates compatible with the MMORPG’s private-dimension grid.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 16
+    },
+    {
+      "title": "Travel and Portal Safety",
+      "text": "Designated short-range public portal stops are safer than uncontrolled travel.\nLong-range unanchored teleportation risks misarrival, injury and entering hazardous terrain.\nIn a tabletop game, reveal safe routes and let players plan.\nA voyage should have time, supplies and consequences.\nThe geography dataset must reject passage to Belavadös in any era after the continent has been destroyed.\nHistorical and system reference\nShort-range travel to a designated public transit stop can be safer than unanchored long-distance movement. Track intended destination, anchor status, environmental danger and consequences on failure. Later games must never offer destroyed Belavadös as a valid route.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 17
+    },
+    {
+      "title": "Factions and Communities",
+      "text": "Factions have leadership, goals, methods, territories, internal disagreement and material needs.\nPlayers may help a cause without agreeing with every leader.\nTrack personal relationships separately from public reputation.\nThe Iron Dominion appears in histories of Belavadös’s destruction, while later organizations reflect migrations and societal change.\nA referee should not flatten every culture or people into one set of beliefs.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 18
+    },
+    {
+      "title": "Dialogue and NPC Memory",
+      "text": "NPCs remember concrete actions, not only numeric approval.\nEach record includes relationships, a recent interaction, unanswered promises, occupation and community ties.\nThe dialogue generator must not force every speaking character into the author’s exact voice.\nA person should be able to decline, negotiate, ask for aid or leave.\nMixed families and multilingual speakers may have different registers without reducing their speech to caricature.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 19
+    },
+    {
+      "title": "Equipment Across Eras",
+      "text": "Historical equipment, machinery and Galaxy Era gear belong to separately filtered catalogs.\nAn item needs an era, source culture, weight, function, maintenance and access restrictions.\nA lost artifact may survive a catastrophe through believable custody but should not populate every shop.\nDisplay each effect as a rule and a story consequence.\nThe digital version uses the same item identifiers so table and screen reports match.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 21
+    },
+    {
+      "title": "Campaign Continuity",
+      "text": "Each session records current date and era, party roster, locations, promises, faction changes, crafted work, open travel routes and conflicts.\nA change to the Veil or one species name must update the related campaign entry, source glossary and game JSON.\nBilqis is spelled exactly so.\nA separate book-series clue record exists for Pix’s investigation, but not as a Galaxy Era gameplay mechanic.\nNext chapter",
+      "status": "source_only_compatible_historical_reference",
+      "original_order": 23
+    }
+  ],
+  "omitted_superseded_lines": 0,
+  "warning": "These supporting sources are not the authoritative new 19-letter language model or newer book manuscript. Repeated and old version titles are historical, not an instruction to rename anything."
+}

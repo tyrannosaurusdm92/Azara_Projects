@@ -212,6 +212,46 @@
       "removed_superseded_paragraphs": 0,
       "source_url": "https://drive.google.com/file/d/1EXsKi23Mk8C3cH2b3HTwRcx9ouDWf5Qa/view",
       "status": "reference_only"
+    },
+    {
+      "id": "continuation-books",
+      "title": "Threads of Fate Source-only Continuation (24 chapters)",
+      "category": "books",
+      "path": "./continuation-books.json",
+      "sections": 24,
+      "omitted_superseded_lines": 0,
+      "source_url": "https://drive.google.com/file/d/1hjlaEgTc6KUlIKtjcqpWbV8vO0d-0Jmj/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "continuation-language",
+      "title": "Aza'raan Language Source-only Continuation (24 chapters)",
+      "category": "language",
+      "path": "./continuation-language.json",
+      "sections": 24,
+      "omitted_superseded_lines": 2,
+      "source_url": "https://drive.google.com/file/d/1didtDvlrKb1q_OYo8SuRhqUvX2kEbLa1/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "continuation-ttrpg-world",
+      "title": "TTRPG Historical Continuation: World and Story",
+      "category": "worldbuilding",
+      "path": "./continuation-ttrpg-world.json",
+      "sections": 12,
+      "omitted_superseded_lines": 0,
+      "source_url": "https://drive.google.com/file/d/1DAVBT3Nd9xEjEXZIpMz9S42_9VgI3y4M/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "continuation-mmorpg-world",
+      "title": "MMORPG Historical Continuation: World and Story",
+      "category": "worldbuilding",
+      "path": "./continuation-mmorpg-world.json",
+      "sections": 13,
+      "omitted_superseded_lines": 0,
+      "source_url": "https://drive.google.com/file/d/1Nng6SOuLOc3IJezGqQarDiBd9LvW_ZZj/view",
+      "status": "reference_only"
     }
   ],
   "rules": [
