@@ -110,6 +110,8 @@
     $('languageSelect').value=state.language;
     $('eraSelectWrap').hidden=state.language!=='azaaraan';
     $('eraSelect').value=state.era;
+    const awsLayout=$('awsLayoutSelect');
+    if(awsLayout) awsLayout.value=state.language==='azaaraan'?state.era.toLowerCase():'standard';
     document.getElementById('note').classList.toggle('aza-writing',state.language==='azaaraan');
     for(const era of ['Archaic','Classical','Traditional','Modern']) document.getElementById('note').classList.toggle('era-'+era.toLowerCase(),state.language==='azaaraan' && state.era===era);
     drawFrame();
@@ -194,6 +196,14 @@
   $('collapseKeyboard').onclick = collapse;
   $('languageSelect').addEventListener('change',event=>{
     state.language=event.target.value==='azaaraan'?'azaaraan':'qwerty';state.mode='letters';state.page=0;state.shift=0;
+    closePanel();render();window.AzaaraanBridge.saveChoice(state.language,state.era);
+  });
+  $('awsLayoutSelect')?.addEventListener('change',event=>{
+    const eraByLayout={archaic:'Archaic',classical:'Classical',traditional:'Traditional',modern:'Modern'};
+    const selected=event.target.value;
+    state.language=selected==='standard'?'qwerty':'azaaraan';
+    if(eraByLayout[selected]) state.era=eraByLayout[selected];
+    state.mode='letters';state.page=0;state.shift=0;
     closePanel();render();window.AzaaraanBridge.saveChoice(state.language,state.era);
   });
   $('eraSelect').addEventListener('change',event=>{

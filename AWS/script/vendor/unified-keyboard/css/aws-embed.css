@@ -4,6 +4,8 @@ body{position:relative!important;background:transparent!important}
 .main-pages,.desk,.evolution-pane,#keyboardBubble,.site-top,.site-footer,.desk-header,.notebook,.desk-hint{display:none!important}
 #keyboard{position:absolute!important;inset:0!important;left:0!important;top:0!important;right:auto!important;bottom:auto!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;margin:0!important;border-radius:0!important;box-shadow:none!important;transform:none!important;z-index:5!important}
 #keyboard[hidden]{display:flex!important}
+#awsLanguageWrap,#eraSelectWrap{display:none!important}
+#awsLayoutWrap{display:flex!important;align-items:center}
 #dragBar,#collapseKeyboard,.resize-handle,.safe-area{display:none!important}
 .app-dialog[open]{z-index:100!important}
 .toast{z-index:110!important}
