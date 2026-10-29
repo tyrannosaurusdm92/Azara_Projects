@@ -232,3 +232,58 @@ body.aws-single-nav :is(.aws-source-section,.aws-rule-example,.aws-rules-lexeme)
  body.aws-single-nav :is(#aws-master-nav,.aws-language-hub){display:none!important}
  body.aws-single-nav :is(.paper,.studio-pane){box-shadow:none!important;border:0!important}
 }
+
+/* Pass 3 geometry: turquoise title ribbons, warm brass on secondary headers. */
+body.aws-single-nav :is(.editor-top,.aws-feature-head,.aws-language-hub-heading),
+body.aws-single-nav #aws-glyph-panel .topbar{
+ background:linear-gradient(180deg,#8de0dc,#3d9fa0)!important;color:#07111a!important;
+ border-bottom:2px ridge #d7aa63!important;border-radius:10px 10px 0 0!important;
+}
+body.aws-single-nav :is(.editor-top,.aws-feature-head,.aws-language-hub-heading) :is(h1,h2,h3,p,small,.eyebrow,.aws-language-kicker),
+body.aws-single-nav #aws-glyph-panel .topbar :is(h1,.eyebrow,.save-state,#save-label){
+ color:#07111a!important;text-shadow:none!important;
+}
+body.aws-single-nav #aws-glyph-panel .editor-header{
+ background:linear-gradient(180deg,#d7aa63,#b07a3a)!important;color:#0b1115!important;
+ border-bottom:1px solid #f7d993;padding:9px 12px;border-radius:8px 8px 0 0;
+}
+body.aws-single-nav #aws-glyph-panel .editor-header :is(h2,.eyebrow){color:#0b1115!important}
+body.aws-single-nav #aws-glyph-panel .app-body{
+ display:grid!important;grid-template-columns:var(--aws-glyph-left,218px) minmax(0,1fr) var(--aws-glyph-right,310px)!important;
+ gap:10px!important;min-width:0!important;width:100%;
+}
+body.aws-single-nav #aws-glyph-panel :is(.left-rail,.editor-panel){
+ min-width:0!important;max-width:100%;background:linear-gradient(180deg,rgba(13,19,27,.97),rgba(9,13,18,.98))!important;
+ color:#f3e9db!important;border:2px ridge rgba(141,224,220,.36)!important;border-radius:10px!important;overflow:auto;
+}
+body.aws-single-nav #aws-glyph-panel .main-content{
+ min-width:0!important;max-width:100%;overflow-x:auto!important;overflow-y:visible;
+ background:linear-gradient(180deg,rgba(12,16,23,.93),rgba(10,14,21,.96))!important;
+ border:2px ridge rgba(141,224,220,.26)!important;border-radius:10px;padding:clamp(8px,1.7vw,20px)!important;
+}
+body.aws-single-nav #aws-glyph-panel :is(.left-rail,.editor-panel) .field-label{color:#8de0dc!important}
+body.aws-single-nav #aws-glyph-panel .left-rail .rail-note{color:#d4c6b6!important}
+body.aws-single-nav #aws-glyph-panel .left-rail .rail-note strong{color:#8de0dc!important}
+body.aws-single-nav #aws-glyph-panel :is(.summary-strip,.toolbar-row,.canvas-action-bar){
+ background:rgba(12,16,23,.93)!important;border:1px solid rgba(141,224,220,.36)!important;
+ border-radius:10px!important;color:#f3e9db!important;
+}
+body.aws-single-nav #aws-glyph-panel .aws-glyph-panel-toggle{
+ width:100%;display:flex!important;align-items:center;justify-content:space-between;gap:7px;
+ padding:8px!important;min-height:39px;flex:none;background:linear-gradient(180deg,#8de0dc,#3d9fa0)!important;
+ border:1px solid #b07a3a!important;border-radius:8px!important;
+ color:#081116!important;font:700 12px Georgia,serif!important;cursor:pointer;
+}
+body.aws-single-nav #aws-glyph-panel .aws-glyph-panel-toggle[aria-expanded="false"]{
+ width:40px;min-width:40px;white-space:nowrap;overflow:hidden;
+}
+body.aws-single-nav #aws-glyph-panel .app-body.aws-glyph-left-collapsed{--aws-glyph-left:48px}
+body.aws-single-nav #aws-glyph-panel .app-body.aws-glyph-right-collapsed{--aws-glyph-right:48px}
+body.aws-single-nav #aws-glyph-panel .left-rail.is-collapsed>:not(.aws-glyph-panel-toggle),
+body.aws-single-nav #aws-glyph-panel .editor-panel.is-collapsed>:not(.aws-glyph-panel-toggle){display:none!important}
+body.aws-single-nav #aws-glyph-panel :is(.left-rail,.editor-panel).is-collapsed{padding:6px!important;overflow:hidden!important}
+@media(max-width:1090px){
+ body.aws-single-nav #aws-glyph-panel .app-body{display:flex!important;flex-direction:column!important;align-items:stretch!important}
+ body.aws-single-nav #aws-glyph-panel :is(.left-rail,.main-content,.editor-panel){width:100%!important}
+ body.aws-single-nav #aws-glyph-panel :is(.left-rail,.editor-panel).is-collapsed{min-height:50px}
+}
