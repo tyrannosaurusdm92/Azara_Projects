@@ -44,3 +44,52 @@ body{background-image:linear-gradient(115deg,rgba(8,20,26,.94),rgba(19,29,33,.91
 #voiceSettings .aws-speech-full{margin-top:18px;border-top:1px solid #b07a3a;padding-top:12px}
 #voiceSettings .aws-speech-full textarea{width:100%;resize:vertical;background:#122c31;color:#f3e9db;border:1px solid #d7aa63;border-radius:8px;padding:10px}
 #voiceSettings .aws-speech-full button{background:#20434a;color:#e8c76e;border:1px solid #b07a3a;border-radius:8px;padding:9px 14px;margin:4px}
+
+/* White paper for writing, notes, and text-entry fields throughout AWS. */
+html body .paper,
+html body .studio-pane {
+  background: #fff !important;
+  color: #20262e !important;
+  color-scheme: light;
+}
+
+html body .rich-editor,
+html body .rich-editor[contenteditable],
+html body [contenteditable="true"],
+html body [contenteditable=""],
+html body [contenteditable="plaintext-only"],
+html body textarea,
+html body #channel-notes,
+html body #inspector textarea,
+html body input:is(:not([type]), [type="text"], [type="search"], [type="email"], [type="password"], [type="url"], [type="tel"]),
+html body #inspector input:is(:not([type]), [type="text"], [type="search"], [type="email"], [type="password"], [type="url"], [type="tel"]) {
+  background: #fff !important;
+  color: #20262e !important;
+  caret-color: #173d44;
+  color-scheme: light;
+}
+
+html body .paper-meta {
+  color: #626b72;
+}
+
+html body .studio-pane .eyebrow {
+  color: #6c5735;
+}
+
+html body textarea::placeholder,
+html body input::placeholder,
+html body .rich-editor:empty::before {
+  color: #66717a !important;
+  opacity: 1;
+}
+
+html body .rich-editor::selection,
+html body .rich-editor *::selection,
+html body [contenteditable]::selection,
+html body [contenteditable] *::selection,
+html body textarea::selection,
+html body input::selection {
+  background: #bfe8e4;
+  color: #142f35;
+}
