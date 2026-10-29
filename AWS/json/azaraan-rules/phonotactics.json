@@ -20,10 +20,17 @@
   "historical_exception_policy": {
     "allow_coda": true,
     "required": "Do not respell inherited words or proper names against their recorded form",
-    "spoken_repair": "A transitional vowel can be pronounced without appearing as a separate Latin transliteration letter"
+    "spoken_repair": "A transitional vowel can be pronounced without appearing as a separate Latin transliteration letter",
+    "protected_fixed_names": [
+      "Tzaphaer (taz-uh-fear)",
+      "Belavados (bell-ah-vuh-doe-s)",
+      "Arzuhan (are-zoo-hahn)",
+      "Dakaroth (dack-uh-rawth)"
+    ]
   },
   "consonant_contact": {
     "precedence": [
+      "Author-confirmed fixed pronunciation of inherited Uxrowo proper names always takes priority",
       "lexical historical pronunciation override",
       "exact attested pair rule",
       "other sibilant cluster rule",
@@ -44,12 +51,14 @@
       },
       {
         "pair": "Tz",
-        "source": "Tzaphaer",
+        "source": "Hypothetical newly coined modern Tz- word, not Tzaphaer",
         "inserted_ipa": "æ",
         "spoken_first_unit": "Tæz",
         "phonemic_first_unit": "/tæz/",
-        "status": "user specified",
-        "written_original_unchanged": true
+        "status": "Proposed modern cluster rule, not applicable to inherited names",
+        "written_original_unchanged": true,
+        "example_only": true,
+        "exception": "Tzaphaer is always taz-uh-fear; no Tæz pronunciation belongs to this proper name."
       }
     ],
     "other_sibilant_pairs": {
