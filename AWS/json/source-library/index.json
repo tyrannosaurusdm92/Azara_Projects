@@ -252,6 +252,42 @@
       "omitted_superseded_lines": 0,
       "source_url": "https://drive.google.com/file/d/1Nng6SOuLOc3IJezGqQarDiBd9LvW_ZZj/view",
       "status": "reference_only"
+    },
+    {
+      "id": "english-alphabet-history",
+      "title": "History of Alphabet Letterforms: Source Reference",
+      "category": "language",
+      "path": "./english-alphabet-history.json",
+      "sections": 1,
+      "source_url": "https://drive.google.com/file/d/1SF1vhluI8S3ZqADBRSGDb7zhNzZWlxaK/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "drive-sync-status",
+      "title": "Other Peoples Naming: Historical Drive Sync Audit",
+      "category": "audit",
+      "path": "./drive-sync-status.json",
+      "sections": 6,
+      "source_url": "https://drive.google.com/file/d/1NXuKNIUbAigTAScClficonat_A45ChGo/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "continued-rules-readme",
+      "title": "Expanded Historical Continuations: Provenance",
+      "category": "audit",
+      "path": "./continued-rules-readme.json",
+      "sections": 9,
+      "source_url": "https://drive.google.com/file/d/164z3LNb8-gHeTBWvBcVdDeZUNDOy0I_3/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "continued-source-readme",
+      "title": "Earlier Continuation Provenance",
+      "category": "audit",
+      "path": "./continued-source-readme.json",
+      "sections": 5,
+      "source_url": "https://drive.google.com/file/d/14Z91wMDpUMsiEBG_WKmNOEHd68fF1Y-g/view",
+      "status": "reference_only"
     }
   ],
   "rules": [

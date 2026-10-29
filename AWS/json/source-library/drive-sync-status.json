@@ -1,0 +1,47 @@
+{
+  "id": "drive-sync-status",
+  "title": "Other Peoples Naming: Historical Drive Sync Audit",
+  "category": "audit",
+  "source_url": "https://drive.google.com/file/d/1NXuKNIUbAigTAScClficonat_A45ChGo/view",
+  "status": "research_reference_only",
+  "warning": "Supplemental historical research or Drive provenance, never overrides current Aza'raan 19-letter script, confirmed Uxrowo continental pronunciations or current manuscripts.",
+  "sections": [
+    {
+      "title": "# Aza'ra Full Drive sync, 11 October 2026",
+      "text": "# Aza'ra Full Drive sync, 11 October 2026",
+      "status": "reference_only",
+      "original_order": 1
+    },
+    {
+      "title": "Target folder: Aza'ra Full, inside the user-specified Aza'ra Google Drive directory.",
+      "text": "Target folder: Aza'ra Full, inside the user-specified Aza'ra Google Drive directory.",
+      "status": "reference_only",
+      "original_order": 2
+    },
+    {
+      "title": "## Source document update",
+      "text": "## Source document update\nThe existing Google Drive Word file `Language_24_Tab_Guidebook.docx` was updated in place using its exact original Drive file ID. A copy of the original was saved in `Initial Draft Archive` before replacement. The Word document retained all 24 sections. Tabs 01 to 17 and 22 to 24 were verified text-identical between the pre-update original and the replacement. Only the Kaluseban, Tamhiogal, Dril'thar, and Other Peoples naming sections (Tabs 18 to 21) were expanded.",
+      "status": "reference_only",
+      "original_order": 3
+    },
+    {
+      "title": "## New shared naming materials",
+      "text": "## New shared naming materials\n- Non-Aza'raan naming guide, labeled derivative DOCX\n- Interactive 18-tab naming atlas, HTML\n- Naming profiles and example names, JSON\n- CSV roster of proposed character names\n- Writer Helper review result\n- ZIP of the naming reference materials\n- Shared game code reference to the naming rules and a browsable copy of the naming atlas in the TTRPG and MMORPG folders",
+      "status": "reference_only",
+      "original_order": 4
+    },
+    {
+      "title": "## Key canon handling",
+      "text": "## Key canon handling\n- Aza'raan grammar, phonology, script, glyph and chronological language sections were not changed in this sync.\n- Bilqis is spelled correctly; no separate Bilqis clue-ledger is introduced.\n- Ampharil is historical Dril'thar heritage, not a distinct playable race.\n- Kaluseban uses Korean + French inspirations.\n- Tamhiogal uses Arabic + Polish inspirations.\n- Dril'thar uses Ancient/Old Egyptian + Navajo (Dine Bizaad) + Taa (!Xoon/!Xóõ) click consonant inspirations.\n- All additional proposed naming roots and meanings remain pending author approval.\n- Original archived sources were not modified. Earlier integrated builds were not used as source material.",
+      "status": "reference_only",
+      "original_order": 5
+    },
+    {
+      "title": "## Verification",
+      "text": "## Verification\nThe source DOCX was compared to the replacement at the tab level; exactly four tab sections differ. A backup copy was saved before updating. Local document render and Writer Helper audit were completed previously. The HTML atlas passed JavaScript syntax checks, but full browser interaction smoke tests remain unverified due to browser restrictions.",
+      "status": "reference_only",
+      "original_order": 6
+    }
+  ],
+  "excluded_superseded_paragraphs": 0
+}

@@ -1,0 +1,65 @@
+{
+  "id": "continued-rules-readme",
+  "title": "Expanded Historical Continuations: Provenance",
+  "category": "audit",
+  "source_url": "https://drive.google.com/file/d/164z3LNb8-gHeTBWvBcVdDeZUNDOy0I_3/view",
+  "status": "research_reference_only",
+  "warning": "Supplemental historical research or Drive provenance, never overrides current Aza'raan 19-letter script, confirmed Uxrowo continental pronunciations or current manuscripts.",
+  "sections": [
+    {
+      "title": "# Aza'ra Source-Only Continuation",
+      "text": "# Aza'ra Source-Only Continuation",
+      "status": "reference_only",
+      "original_order": 1
+    },
+    {
+      "title": "The four linked 24-chapter Word guidebooks and interactive HTML books are expanded from source-only ",
+      "text": "The four linked 24-chapter Word guidebooks and interactive HTML books are expanded from source-only source-backed material. These are not a rewrite of the eight full novels, nor are the games production-complete. Previous integrated builds were not used as canon. The original MMORPG archived 'Duplicate Aza_ra MMORPG Guide Book.docx' was consulted for document organization, not for obsolete lore.",
+      "status": "reference_only",
+      "original_order": 2
+    },
+    {
+      "title": "Source Review includes a 25+ name research concordance that separates strict-JSON species, historic ",
+      "text": "Source Review includes a 25+ name research concordance that separates strict-JSON species, historic communities and unapproved archival candidates. The count is not a declaration that 25 species are approved. Source Review also includes 240 indexed, untitled manuscript slots, not fabricated completed chapters.",
+      "status": "reference_only",
+      "original_order": 3
+    },
+    {
+      "title": "To run the JavaScript modules, start a local server from this directory using `python -m http.server",
+      "text": "To run the JavaScript modules, start a local server from this directory using `python -m http.server 8000`, then open Code/word-generator/index.html, Code/ttrpg/index.html or Code/mmorpg/index.html. Word generator includes a separate script workbench; the tabletop folder includes a 5,000-point Shaping Hall planner.",
+      "status": "reference_only",
+      "original_order": 4
+    },
+    {
+      "title": "Final acceptance of the 38 letterforms, historic candidate species, alignment edition, purchase cost",
+      "text": "Final acceptance of the 38 letterforms, historic candidate species, alignment edition, purchase costs, date of the Belavadös bombing and all new language samples remains with the author.",
+      "status": "reference_only",
+      "original_order": 5
+    },
+    {
+      "title": "## Continued mechanics and lexicon evidence",
+      "text": "## Continued mechanics and lexicon evidence",
+      "status": "reference_only",
+      "original_order": 6
+    },
+    {
+      "title": "The source-documented Eight-Axis Covenant is now a separate playable profile tracker in Code/ttrpg/c",
+      "text": "The source-documented Eight-Axis Covenant is now a separate playable profile tracker in Code/ttrpg/covenant.html. It records 0 to 3000 scores across eight axes and has a meaningful-choice change log. It does not assert invented profile names; the existing 81-title source registry still requires extraction and approval. The archived spell knowledge formula is exposed in magic-study.html as an independent source research calculator. The original 2d6 action roll remains a proposal, not a retroactive interpretation of the eight-axis source.",
+      "status": "reference_only",
+      "original_order": 7
+    },
+    {
+      "title": "Code/mmorpg/market.html records trade in Copper Bits, Silver Marks, Gold Crowns and Platinum Seals, ",
+      "text": "Code/mmorpg/market.html records trade in Copper Bits, Silver Marks, Gold Crowns and Platinum Seals, with no unverified exchange rate and no online transaction. Code/word-generator/lexicon-lab.html separates source-attested forms from proposed borrowing and new drafts, including provenance metadata. All new controls store only local browser data.",
+      "status": "reference_only",
+      "original_order": 8
+    },
+    {
+      "title": "All four 24-section guides have new reference annotations and appended source-backed material. No ne",
+      "text": "All four 24-section guides have new reference annotations and appended source-backed material. No new 240-chapter manuscript prose has been fabricated.",
+      "status": "reference_only",
+      "original_order": 9
+    }
+  ],
+  "excluded_superseded_paragraphs": 1
+}
