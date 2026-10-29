@@ -56,6 +56,7 @@ function setExpanded(next){expanded=!!next;$('aws-master-nav').classList.toggle(
 function initNav(){nav();setExpanded(false);
  $('aws-menu-toggle').onclick=()=>setExpanded(!expanded);
  $('aws-new-section').onclick=()=>app()?.newPage?.();
+ $('aws-new-studio').onclick=()=>app()?.newStudio?.();
  $('aws-master-library').onclick=()=>{app()?.goToRole?.('library')};
  $('aws-master-tasks').onclick=()=>{app()?.showTasks?.();setExpanded(false)};
  $('aws-master-settings').onclick=()=>{$('settings-dialog')?.showModal()};
