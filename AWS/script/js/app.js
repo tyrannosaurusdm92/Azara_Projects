@@ -18,6 +18,7 @@
     page('Language Rules & Orthography',language,'rules');page('Pronunciation & TTS',language,'tts');
     page('Glyph Studio',language,'glyph');page('Language Evolution Breakdown',language,'language-evolution');
     const library=page('Library',null,'library');
+    page('Source Archive & Canon',null,'source-library');
     const series=page('Full Series',null,'section');
     ['Series Synopsis','Series Outline','Characters & Relationships','Overarching Plots','Worldbuilding & Canon','Series Timeline','Series Notes'].forEach(name=>page(name,series));
     const titles=['The Door In The Tree','The Drowned Queen','The Unwilling Spy','The Hollow Throne','Never-Ending Loss','Threats Of Space','Collision Of Worlds','Unraveled'];
@@ -73,13 +74,19 @@
     const workspaces=input.workspaces.slice(0,150).filter(x=>x&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),name:cleanName(x.name,'Workspace')}));
     if(!workspaces.length)throw Error('No valid workspaces in backup.');
     const wsIds=new Set(workspaces.map(w=>w.id));
-    let channels=input.channels.slice(0,3000).filter(x=>x&&wsIds.has(x.workspaceId)&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),workspaceId:x.workspaceId,name:cleanName(x.name),type:x.type==='studio'?'studio':'document',parentId:typeof x.parentId==='string'?x.parentId.slice(0,150):null,role:['page','section','library','glyph','glyph-evolution','language-evolution','tts','dictionary','rules'].includes(x.role)?x.role:'page',deletedAt:String(x.deletedAt||'').slice(0,40),html:cleanHTML(x.html),leftHtml:cleanHTML(x.leftHtml),rightHtml:cleanHTML(x.rightHtml),notes:String(x.notes||'').slice(0,20000),lang:langs[x.lang]?x.lang:'en',font:String(x.font||'Georgia').slice(0,150),size:Math.max(12,Math.min(28,Number(x.size)||18)),updatedAt:x.updatedAt||nowDate()}));
+    let channels=input.channels.slice(0,3000).filter(x=>x&&wsIds.has(x.workspaceId)&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),workspaceId:x.workspaceId,name:cleanName(x.name),type:x.type==='studio'?'studio':'document',parentId:typeof x.parentId==='string'?x.parentId.slice(0,150):null,role:['page','section','library','glyph','glyph-evolution','language-evolution','tts','dictionary','rules','source-library'].includes(x.role)?x.role:'page',deletedAt:String(x.deletedAt||'').slice(0,40),html:cleanHTML(x.html),leftHtml:cleanHTML(x.leftHtml),rightHtml:cleanHTML(x.rightHtml),notes:String(x.notes||'').slice(0,20000),lang:langs[x.lang]?x.lang:'en',font:String(x.font||'Georgia').slice(0,150),size:Math.max(12,Math.min(28,Number(x.size)||18)),updatedAt:x.updatedAt||nowDate()}));
     for(const w of workspaces){if(!channels.some(c=>c.workspaceId===w.id && !c.deletedAt))channels.push(defaultChannel(w.id))}
     const channelIds=new Set(channels.map(c=>c.id));
     const tasks=input.tasks.slice(0,10000).filter(t=>t&&typeof t.id==='string'&&wsIds.has(t.workspaceId)).map(t=>({id:t.id.slice(0,150),workspaceId:t.workspaceId,channelId:channelIds.has(t.channelId)?t.channelId:null,title:cleanName(t.title),details:String(t.details||'').slice(0,2000),due:String(t.due||'').slice(0,40),remindAt:String(t.remindAt||'').slice(0,40),done:!!t.done,notified:!!t.notified}));
     const selectedWorkspaceId=wsIds.has(input.selectedWorkspaceId)?input.selectedWorkspaceId:workspaces[0].id;
     const selectedChannelId=channelIds.has(input.selectedChannelId)&&channels.find(c=>c.id===input.selectedChannelId)?.workspaceId===selectedWorkspaceId&&!channels.find(c=>c.id===input.selectedChannelId).deletedAt?input.selectedChannelId:channels.find(c=>c.workspaceId===selectedWorkspaceId&&!c.deletedAt)?.id;
     return {version:2,workspaces,channels,tasks,files:(Array.isArray(input.files)?input.files:[]).slice(0,10000).filter(f=>f&&typeof f.id==='string').map(f=>({id:f.id,name:cleanName(f.name),mime:String(f.mime||''),size:Math.max(0,Number(f.size)||0),category:String(f.category||'attachment'),folderId:String(f.folderId||''),updatedAt:String(f.updatedAt||nowDate()),deletedAt:String(f.deletedAt||''),inlineData:typeof f.inlineData==='string'&&f.inlineData.length<1500000?f.inlineData:'',cloudId:String(f.cloudId||'')})),lexicon:(Array.isArray(input.lexicon)?input.lexicon:[]).slice(0,15000).filter(x=>x&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),word:String(x.word||'').slice(0,150),ipa:String(x.ipa||'').slice(0,200),meaning:String(x.meaning||'').slice(0,2000),era:String(x.era||'modern').slice(0,40),partOfSpeech:String(x.partOfSpeech||'').slice(0,100),notes:String(x.notes||'').slice(0,5000)})),important:(Array.isArray(input.important)?input.important:[]).slice(0,5000).map(q=>({id:String(q.id||uid()),channelId:String(q.channelId||''),text:String(q.text||'').slice(0,10000),createdAt:String(q.createdAt||nowDate())})),collapsed:input.collapsed&&typeof input.collapsed==='object'&&!Array.isArray(input.collapsed)?input.collapsed:{},awsSeeded:!!input.awsSeeded,selectedWorkspaceId,selectedChannelId,inspectorOpen:input.inspectorOpen!==false};
+  }
+  function seedSourceLibrary(st){
+    const ws=st.workspaces.find(w=>w.id===st.selectedWorkspaceId)||st.workspaces[0];
+    if(!ws||st.channels.some(c=>c.workspaceId===ws.id&&c.role==='source-library'&&!c.deletedAt))return false;
+    const page=defaultChannel(ws.id,'Source Archive & Canon','document',null,'source-library');
+    st.channels.push(page);return true;
   }
   function seedExistingStudio(st){
     // Migration is additive: keep all original LiteraryFriend pages, workspaces, tasks and drafts.
@@ -125,9 +132,9 @@
     const ch=currentChannel();if(!ch)return;
     const ws=currentWorkspace();$('crumb-workspace').textContent=ws.name;$('crumb-channel').textContent=ch.name;
     const rulesPage=ch.role==='rules'||ch.name==='Language Rules & Orthography';
-    const special=rulesPage||['library','glyph','glyph-evolution','language-evolution','tts','dictionary'].includes(ch.role);
+    const special=rulesPage||['library','glyph','glyph-evolution','language-evolution','tts','dictionary','source-library'].includes(ch.role);
     $('aws-evolution-panel').hidden=ch.role!=='language-evolution';$('panel-evolution').hidden=ch.role!=='language-evolution';window.dispatchEvent(new CustomEvent('aws:keyboard-visibility',{detail:{hidden:ch.role==='language-evolution'}}));
-    $('aws-library-panel').hidden=ch.role!=='library';$('aws-glyph-panel').hidden=!['glyph','glyph-evolution'].includes(ch.role);$('aws-tts-panel').hidden=ch.role!=='tts';$('aws-dictionary-panel').hidden=ch.role!=='dictionary';$('aws-rules-panel').hidden=!rulesPage;if(ch.role==='glyph-evolution')window.AWSGlyphStudio?.setView?.('evolution');if(ch.role==='glyph')window.AWSGlyphStudio?.setView?.('glyphs');
+    $('aws-library-panel').hidden=ch.role!=='library';$('aws-glyph-panel').hidden=!['glyph','glyph-evolution'].includes(ch.role);$('aws-tts-panel').hidden=ch.role!=='tts';$('aws-dictionary-panel').hidden=ch.role!=='dictionary';$('aws-rules-panel').hidden=!rulesPage;$('aws-source-library-panel').hidden=ch.role!=='source-library';if(ch.role==='glyph-evolution')window.AWSGlyphStudio?.setView?.('evolution');if(ch.role==='glyph')window.AWSGlyphStudio?.setView?.('glyphs');
     document.querySelector('.editor-section').hidden=special;
     if(special){$('writing-surface').replaceChildren();$('channel-notes').value=ch.notes||'';activeEditor=null;lastRange=null;lastBookmark=null;window.dispatchEvent(new CustomEvent('aws:view',{detail:{role:rulesPage?'rules':ch.role}}));return;}
     $('document-title').value=ch.name;$('channel-type').textContent=ch.type==='studio'?'TWO-PANE WRITING STUDIO':'DOCUMENT CHANNEL';
@@ -503,7 +510,7 @@
   window.dispatchEvent(new Event('literaryfriend:api-ready'));
   async function init(){
     setupBindings();
-    try{state=validateState((await store.readState())||initialState());if(seedExistingStudio(state))scheduleSave()}catch(e){state=initialState();toast('Started a new local library because saved data could not be loaded.')}
+    try{state=validateState((await store.readState())||initialState());if(seedExistingStudio(state))scheduleSave();if(seedSourceLibrary(state))scheduleSave()}catch(e){state=initialState();toast('Started a new local library because saved data could not be loaded.')}
     fonts=await store.allFonts();
     for(const f of fonts){try{await loadFont(f)}catch(error){console.warn('Font could not be loaded:',f.name,error)}}
     renderAll();

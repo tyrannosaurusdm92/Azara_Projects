@@ -41,7 +41,7 @@
 <script defer="" src="script/js/pwa.js"></script>
 <link href="style/keyboard/keyboard.css" rel="stylesheet"/><link href="style/keyboard/evolution.css" rel="stylesheet"/><link href="style/keyboard/aza-merge.css" rel="stylesheet"/><link href="style/aws-draft2-theme.css" rel="stylesheet"/><script defer="" src="script/js/keyboard/keyboard-data.js"></script><script defer="" src="script/js/keyboard/html2canvas.min.js"></script><script defer="" src="script/js/keyboard/aza-config.js"></script><script defer="" src="script/js/keyboard/aza-data.js"></script><script defer="" src="script/js/keyboard/aza-phonetic-data.js"></script><script defer="" src="script/js/keyboard/aza-phonetic.js"></script><script defer="" src="script/js/keyboard/aza-sound-data.js"></script><script defer="" src="script/js/keyboard/aza-tts-data.js"></script><script defer="" src="script/js/keyboard/aza-ipa-data.js"></script><script defer="" src="script/js/keyboard/aza-ipa.js"></script><script defer="" src="script/js/keyboard/aza-tts.js"></script><script defer="" src="script/js/keyboard/aza-evolution.js"></script><script defer="" src="script/js/keyboard/notes.js"></script><script defer="" src="script/js/keyboard/azaaraan-bridge.js"></script><script defer="" src="script/js/keyboard/keyboard.js"></script><script defer="" src="script/js/keyboard/capture.js"></script><script defer="" src="script/js/keyboard/aws-keyboard-app.js"></script><link href="style/aws-map-steampunk.css" rel="stylesheet"/>
 <script defer src="script/js/aws-language-rules.js"></script>
-</head>
+<link href="style/aws-source-library.css" rel="stylesheet"/><script defer src="script/js/aws-source-library.js"></script></head>
 <body class="aws-single-nav">
 <nav aria-label="Movable master navigation" class="aws-master-nav" id="aws-master-nav">
 <header class="aws-master-handle" id="aws-master-handle"><button aria-expanded="false" aria-label="Expand master navigation" id="aws-menu-toggle" type="button">☰</button><strong class="aws-menu-content">Aza'raan Writing Studio</strong><span class="aws-menu-content aws-drag-hint">Drag here to move</span></header>
@@ -107,6 +107,11 @@
  </select></label><button type="button" class="btn outline" id="aws-rules-open-dictionary">Open era dictionary</button></div>
  <div class="aws-rules-era-tabs" id="aws-rules-tabs" aria-label="Era selector"></div>
  <div id="aws-rules-content" class="aws-rules-content" aria-live="polite"><p>Loading language rules…</p></div>
+</section>
+<section aria-label="Drive source reference library" class="aws-feature-panel aws-source-panel" hidden id="aws-source-library-panel">
+<header class="aws-feature-head"><div><small>BOOKS / LANGUAGE / PEOPLE / WORLD</small><h2>Source Archive &amp; Canon</h2><p>Read supporting sources imported from Google Drive. New AWS rules and existing manuscript pages take precedence over archival differences.</p></div></header>
+<div class="aws-source-controls"><input id="aws-source-search" type="search" placeholder="Search source sections"/><select id="aws-source-category" aria-label="Source category"><option value="">All source categories</option><option value="books">Books</option><option value="language">Language</option><option value="peoples">Peoples</option><option value="worldbuilding">Worldbuilding</option><option value="audit">Source audit</option></select></div>
+<div id="aws-source-index" class="aws-source-index"></div><div id="aws-source-viewer" aria-live="polite" class="aws-source-viewer"><p>Select a source to read its sections.</p></div>
 </section>
 <section aria-label="Aza'raan dictionary and lexicon" class="aws-feature-panel" hidden="" id="aws-dictionary-panel">
 <header class="aws-feature-head"><div><small>LANGUAGE / WORDS</small><h2>Aza'raan dictionary &amp; lexicon</h2><p>Build, search and export words, pronunciations, eras, word classes and definitions. Saved with your writing-library snapshots.</p></div><div class="aws-feature-actions"><button class="btn green" id="aws-dictionary-add">+ Add word</button><button class="btn outline" id="aws-dictionary-export">↓ Export CSV</button></div></header>

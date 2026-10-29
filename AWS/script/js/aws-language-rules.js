@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const root='./json/azaraan-rules/';
 const eraNames={proto:'Proto',ancient:'Ancient',archaic:'Archaic',classical:'Classical',traditional:'Traditional',modern:'Modern'};
 const eraOrder=Object.keys(eraNames);
-const wanted=['grammar-eras','alphabet-and-sounds','letter-construction','phonotactics','historical-sound-changes','examples-and-tests','diacritic-registry','historical-dictionary'];
+const wanted=['grammar-eras','alphabet-and-sounds','letter-construction','phonotactics','historical-sound-changes','examples-and-tests','diacritic-registry','historical-dictionary','continents'];
 let data=null,activeEra='modern',loading=null;
 const el=(tag,cls,content)=>{
  const n=document.createElement(tag);if(cls)n.className=cls;if(content!==undefined)n.textContent=String(content);
@@ -82,6 +82,14 @@ function render(){
   examples.append(node);
  }
  host.append(examples);
+ const continentBox=el('section','aws-rules-card aws-rules-wide');
+ row(continentBox,'h3','','The four continents of Aza’ra');
+ for(const c of (data.continents?.continents||[])){
+  const p=el('p','aws-rule-example');
+  p.append(el('strong','',c.name),document.createTextNode(' · '+c.pronunciation+(c.destroyed?' · Destroyed by the Iron Dominion':'')));
+  continentBox.append(p);
+ }
+ host.append(continentBox);
  const dictionary=data['historical-dictionary'];
  const proposal=el('section','aws-rules-card aws-rules-wide');
  row(proposal,'h3','','Dictionary evolution: '+eraNames[activeEra]);

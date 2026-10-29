@@ -2745,6 +2745,94 @@
       "ipa": "",
       "builtin": true,
       "status": "attested_example"
+    },
+    {
+      "id": "canon:tzaphaer:ancient",
+      "word": "Tzaphaer",
+      "ipa": "",
+      "meaning": "Continent of Aza'ra",
+      "era": "ancient",
+      "partOfSpeech": "proper noun",
+      "notes": "Fixed historical Uxrowo name, pronounced taz-uh-fear in all eras. Old English romanization does not determine current independent glyph inventory.",
+      "builtin": true,
+      "status": "author_confirmed"
+    },
+    {
+      "id": "canon:tzaphaer:modern",
+      "word": "Tzaphaer",
+      "ipa": "",
+      "meaning": "Continent of Aza'ra",
+      "era": "modern",
+      "partOfSpeech": "proper noun",
+      "notes": "Fixed historical Uxrowo name, pronounced taz-uh-fear in all eras. Old English romanization does not determine current independent glyph inventory.",
+      "builtin": true,
+      "status": "author_confirmed"
+    },
+    {
+      "id": "canon:belavados:ancient",
+      "word": "Belavados",
+      "ipa": "",
+      "meaning": "Destroyed continent of Aza'ra",
+      "era": "ancient",
+      "partOfSpeech": "proper noun",
+      "notes": "Fixed historical Uxrowo name, pronounced bell-ah-vuh-doe-s in all eras. Old English romanization does not determine current independent glyph inventory.",
+      "builtin": true,
+      "status": "author_confirmed"
+    },
+    {
+      "id": "canon:belavados:modern",
+      "word": "Belavados",
+      "ipa": "",
+      "meaning": "Destroyed continent of Aza'ra",
+      "era": "modern",
+      "partOfSpeech": "proper noun",
+      "notes": "Fixed historical Uxrowo name, pronounced bell-ah-vuh-doe-s in all eras. Old English romanization does not determine current independent glyph inventory.",
+      "builtin": true,
+      "status": "author_confirmed"
+    },
+    {
+      "id": "canon:arzuhan:ancient",
+      "word": "Arzuhan",
+      "ipa": "",
+      "meaning": "Continent of Aza'ra",
+      "era": "ancient",
+      "partOfSpeech": "proper noun",
+      "notes": "Fixed historical Uxrowo name, pronounced are-zoo-hahn in all eras. Old English romanization does not determine current independent glyph inventory.",
+      "builtin": true,
+      "status": "author_confirmed"
+    },
+    {
+      "id": "canon:arzuhan:modern",
+      "word": "Arzuhan",
+      "ipa": "",
+      "meaning": "Continent of Aza'ra",
+      "era": "modern",
+      "partOfSpeech": "proper noun",
+      "notes": "Fixed historical Uxrowo name, pronounced are-zoo-hahn in all eras. Old English romanization does not determine current independent glyph inventory.",
+      "builtin": true,
+      "status": "author_confirmed"
+    },
+    {
+      "id": "canon:dakaroth:ancient",
+      "word": "Dakaroth",
+      "ipa": "",
+      "meaning": "Continent of Aza'ra",
+      "era": "ancient",
+      "partOfSpeech": "proper noun",
+      "notes": "Fixed historical Uxrowo name, pronounced dack-uh-rawth in all eras. Old English romanization does not determine current independent glyph inventory.",
+      "builtin": true,
+      "status": "author_confirmed"
+    },
+    {
+      "id": "canon:dakaroth:modern",
+      "word": "Dakaroth",
+      "ipa": "",
+      "meaning": "Continent of Aza'ra",
+      "era": "modern",
+      "partOfSpeech": "proper noun",
+      "notes": "Fixed historical Uxrowo name, pronounced dack-uh-rawth in all eras. Old English romanization does not determine current independent glyph inventory.",
+      "builtin": true,
+      "status": "author_confirmed"
     }
   ]
 }

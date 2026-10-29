@@ -1,0 +1,13 @@
+/* Source viewer styled as a study library, not a competing navigation */
+.aws-source-panel[hidden]{display:none!important}
+.aws-source-controls{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.aws-source-controls input{min-width:230px;flex:1}
+.aws-source-index{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 18px}
+.aws-source-item{padding:10px 13px!important;background:#153842!important;color:#f3e9db!important;border:1px solid #ad8755!important}
+.aws-source-item.active{background:#2b5d5e!important;border-color:#8de0dc!important}
+.aws-source-head,.aws-source-section{background:linear-gradient(150deg,#122730,#102027)!important;border:1px solid #ac895a!important;padding:13px 17px;border-radius:12px;margin:10px 0;color:#f3e9db}
+.aws-source-head h3{color:#e8c76e;margin:5px 0}
+.aws-source-original{display:inline-block;color:#8de0dc;text-decoration:underline;margin:5px 0}
+.aws-source-section summary{cursor:pointer;font:700 16px Georgia,serif;color:#e8c76e}
+.aws-source-text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65;margin:10px 0;color:#f3e9db}
+@media(max-width:650px){.aws-source-section{padding:10px}.aws-source-index{display:grid;grid-template-columns:1fr}}
