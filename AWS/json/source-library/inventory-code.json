@@ -1,0 +1,207 @@
+{
+  "title": "Drive code prototype metadata inventory",
+  "generated": "2026-10-29",
+  "note": "This metadata is not connected to AWS executable code, scripts or user backend. Backend and User folders were empty at inventory time.",
+  "folders_scanned": 7,
+  "items": [
+    {
+      "id": "1ZbzJgclbj2q0AV23DZe-oe9XNx_XVuLP",
+      "name": "User",
+      "path": "Code/User",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1ZbzJgclbj2q0AV23DZe-oe9XNx_XVuLP",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "11Sdoe5Ym_p6gYlYMWcbzX-ApY8WKuthd",
+      "name": "Backend",
+      "path": "Code/Backend",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/11Sdoe5Ym_p6gYlYMWcbzX-ApY8WKuthd",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1I2DL80vWKTwAJvC50oPQmaKxPd-PE3ii",
+      "name": "shared",
+      "path": "Code/shared",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1I2DL80vWKTwAJvC50oPQmaKxPd-PE3ii",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1iKEZuYNYSoUIeWdEbWhpePPbQORP5DHL",
+      "name": "mmorpg",
+      "path": "Code/mmorpg",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1iKEZuYNYSoUIeWdEbWhpePPbQORP5DHL",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1G0Y4Alv9YlI8Cnh5I2DEt1CAOltjXUy0",
+      "name": "ttrpg",
+      "path": "Code/ttrpg",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1G0Y4Alv9YlI8Cnh5I2DEt1CAOltjXUy0",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1oERzU-a9szNJI-VfSFug7FaSVjVbVL-G",
+      "name": "word-generator",
+      "path": "Code/word-generator",
+      "mime": "application/vnd.google-apps.folder",
+      "size_bytes": null,
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1oERzU-a9szNJI-VfSFug7FaSVjVbVL-G",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1ImYG08fNXSBPYkPWMUifwKTl_fqdNtO2",
+      "name": "README.md",
+      "path": "Code/shared/README.md",
+      "mime": "text/markdown",
+      "size_bytes": 302,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1ImYG08fNXSBPYkPWMUifwKTl_fqdNtO2/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1vhO-sP5ChdTZNbmcJiL248OvrpcCJhJb",
+      "name": "Non_Azaaraan_Character_Names.html",
+      "path": "Code/mmorpg/Non_Azaaraan_Character_Names.html",
+      "mime": "text/html",
+      "size_bytes": 29705,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1vhO-sP5ChdTZNbmcJiL248OvrpcCJhJb/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1euDEa7ZMrZqxo-pHhI3jpWac4qHhvz0t",
+      "name": "index.html",
+      "path": "Code/mmorpg/index.html",
+      "mime": "text/html",
+      "size_bytes": 1767,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1euDEa7ZMrZqxo-pHhI3jpWac4qHhvz0t/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1NSBRjyaMPMnKxOD7AWaw4QA_xNjRMOiT",
+      "name": "README.md",
+      "path": "Code/mmorpg/README.md",
+      "mime": "text/markdown",
+      "size_bytes": 241,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1NSBRjyaMPMnKxOD7AWaw4QA_xNjRMOiT/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1-Ir3eJ0VpUeTbeBh2sAhh2lRtK5Bn-W2",
+      "name": "Non_Azaaraan_Character_Names.html",
+      "path": "Code/ttrpg/Non_Azaaraan_Character_Names.html",
+      "mime": "text/html",
+      "size_bytes": 29705,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1-Ir3eJ0VpUeTbeBh2sAhh2lRtK5Bn-W2/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1qDhjvVnkOFt1m8nWjkwaPLNZ-xDxqyGw",
+      "name": "README.md",
+      "path": "Code/ttrpg/README.md",
+      "mime": "text/markdown",
+      "size_bytes": 329,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1qDhjvVnkOFt1m8nWjkwaPLNZ-xDxqyGw/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1kTuou1BA4NpqWAy4pd5liWleaVj-6P71",
+      "name": "index.html",
+      "path": "Code/ttrpg/index.html",
+      "mime": "text/html",
+      "size_bytes": 1377,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1kTuou1BA4NpqWAy4pd5liWleaVj-6P71/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1p-KUtY7T9GdHAnu_kQSUDViNa05fn8y5",
+      "name": "__azara_stage_09_README.md",
+      "path": "Code/word-generator/__azara_stage_09_README.md",
+      "mime": "text/markdown",
+      "size_bytes": 974,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1p-KUtY7T9GdHAnu_kQSUDViNa05fn8y5/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1htAlL1vSh6KOr4JyUKavoPpShsAEwHy0",
+      "name": "README.md",
+      "path": "Code/word-generator/README.md",
+      "mime": "text/markdown",
+      "size_bytes": 974,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1htAlL1vSh6KOr4JyUKavoPpShsAEwHy0/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "1EXsKi23Mk8C3cH2b3HTwRcx9ouDWf5Qa",
+      "name": "original-source-generator.html",
+      "path": "Code/word-generator/original-source-generator.html",
+      "mime": "text/html",
+      "size_bytes": 21144,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1EXsKi23Mk8C3cH2b3HTwRcx9ouDWf5Qa/view?usp=drivesdk",
+      "status": "imported_reference",
+      "reference_id": "original-generator"
+    },
+    {
+      "id": "1wPOMAF5xEN-ec2lI54bJenslXPmBWYAw",
+      "name": "index.html",
+      "path": "Code/word-generator/index.html",
+      "mime": "text/html",
+      "size_bytes": 1800,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/1wPOMAF5xEN-ec2lI54bJenslXPmBWYAw/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    },
+    {
+      "id": "16zjqoPqsRSH50m1PysKURQHZ_mQmnrn9",
+      "name": "__azara_stage_08_index.html",
+      "path": "Code/word-generator/__azara_stage_08_index.html",
+      "mime": "text/html",
+      "size_bytes": 1800,
+      "is_folder": false,
+      "source_url": "https://drive.google.com/file/d/16zjqoPqsRSH50m1PysKURQHZ_mQmnrn9/view?usp=drivesdk",
+      "status": "catalogued_only_not_executable",
+      "reference_id": null
+    }
+  ],
+  "errors": []
+}
