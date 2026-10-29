@@ -1,0 +1,99 @@
+{
+  "primary_inspiration": "Māori (C)V(V) with Aza'raan historical exceptions",
+  "modern_spoken_syllable_templates": [
+    "V",
+    "VV",
+    "CV",
+    "CVV"
+  ],
+  "mora_note": "A long vowel and a diphthong may occupy two morae",
+  "basic_rules": [
+    "Open syllables are strongly preferred in modern native and adapted words",
+    "Consonant + vowel is the default syllable, even if represented with one compact written cluster",
+    "Independent vowels are permitted at word start and hiatus",
+    "Two adjacent consonants are not automatically one syllable",
+    "Historical names and certain grammatical morphemes preserve consonant-final exceptions",
+    "Letter stacks are orthography, not an invitation to ignore the spoken CV structure",
+    "S, Z and SH are different: SH represents one fricative sound and does not trigger S/Z epenthesis",
+    "Attested legacy pronunciations override generic repair"
+  ],
+  "historical_exception_policy": {
+    "allow_coda": true,
+    "required": "Do not respell inherited words or proper names against their recorded form",
+    "spoken_repair": "A transitional vowel can be pronounced without appearing as a separate Latin transliteration letter"
+  },
+  "consonant_contact": {
+    "precedence": [
+      "lexical historical pronunciation override",
+      "exact attested pair rule",
+      "other sibilant cluster rule",
+      "general cluster repair",
+      "phonological lexical exception"
+    ],
+    "automatic_epenthesis": true,
+    "trigger": "Two adjacent consonant phonemes without a written or dependent vowel nucleus",
+    "examples": [
+      {
+        "pair": "Nz",
+        "source": "Nzra",
+        "inserted_ipa": "ɪ",
+        "spoken_first_unit": "Nihz",
+        "phonemic_first_unit": "/nɪz/",
+        "status": "user specified",
+        "written_original_unchanged": true
+      },
+      {
+        "pair": "Tz",
+        "source": "Tzaphaer",
+        "inserted_ipa": "æ",
+        "spoken_first_unit": "Tæz",
+        "phonemic_first_unit": "/tæz/",
+        "status": "user specified",
+        "written_original_unchanged": true
+      }
+    ],
+    "other_sibilant_pairs": {
+      "pairs": [
+        "Cs",
+        "Cz",
+        "sC",
+        "zC"
+      ],
+      "where_C": "Any consonant other than a vowel",
+      "default_vowel_ipa": "ɪ",
+      "status": "proposed default subject to historical lexicon",
+      "exclusions": [
+        "S plus H producing sh",
+        "An already-marked dependent vowel",
+        "Within a historically lexicalized compound with its own pronunciation"
+      ]
+    },
+    "general_clusters": {
+      "default_vowel_ipa": "ə",
+      "status": "proposed repair for unlisted clusters",
+      "preserve_morpheme_boundary": true,
+      "warning": "A vowel selected by morphology or dictionary beats the default"
+    }
+  },
+  "gemination": {
+    "allowed": true,
+    "italian_inspired": true,
+    "single_base_can_carry_length": true,
+    "example": "llo represents a long L onset and an O nucleus, not three subscripts",
+    "not_identical_to_two_consonants": true
+  },
+  "stress": {
+    "normal": "Penultimate mora preferred in newer regular words, with lexical exceptions",
+    "status": "proposed adaptation of Māori mora-oriented stress",
+    "explicit_emphasis": {
+      "<": "Emphasize previous syllable",
+      ">": "Emphasize following syllable"
+    },
+    "never_delete_lexical_stress": true
+  },
+  "phonemic_conservation": "All sound groups in alphabet-and-sounds.json remain pronounceable despite orthographic compression.",
+  "differentiation": {
+    "independent_letter_count": 20,
+    "spoken_syllable_phonemes": "Can be 1 or more, independently of written cluster count"
+  }
+}

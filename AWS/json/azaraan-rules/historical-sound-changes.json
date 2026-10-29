@@ -1,0 +1,89 @@
+{
+  "policy": "Every source IPA remains readable; changes are re-encodings, context allophones, or pronunciation variants rather than deletions.",
+  "steps": [
+    {
+      "transition": "proto_to_ancient",
+      "changes": [
+        "Independent Uxrowoiye glyph lineages retained",
+        "Vowel-final Polynesian phonotactics spreads",
+        "Consonant clusters coexist with vowel-dominant roots",
+        "Regularize contact repairs while maintaining older spellings"
+      ]
+    },
+    {
+      "transition": "ancient_to_archaic",
+      "changes": [
+        "Separate W, F, V, Q and KS families begin merging into larger phonetic letter groups",
+        "Consonant-contact transitional vowels become more predictable",
+        "SOV starts to yield to SVO under particle licensing",
+        "Glottal and click remain recognizable as independent historical keys"
+      ]
+    },
+    {
+      "transition": "archaic_to_classical",
+      "changes": [
+        "Exactly 20 independent base letters established",
+        "B becomes the written host for B, F, V and W readings, selected by an accent",
+        "A no longer has a plain default pronunciation; every A phoneme has a quality accent",
+        "Clicks and glottal stops cease to be standard independent letters and become subscripts",
+        "Glottal pre-host; click post-host",
+        "Glottal lineage produces emphasis descendants > and <",
+        "Other major sound-family contrasts increasingly use accent selectors",
+        "Host letter plus two subscripts plus one accent per letter permitted"
+      ]
+    },
+    {
+      "transition": "classical_to_traditional",
+      "changes": [
+        "Standardize which subscripts are pre, below and post host",
+        "Stabilize two-subscript limit and historical pronunciation dictionary",
+        "Normalize accent selectors for vowels and consonant families",
+        "Allow syllabic and long-consonant metadata without extra glyph count"
+      ]
+    },
+    {
+      "transition": "traditional_to_modern",
+      "changes": [
+        "Default spoken syllables V, VV, CV, CVV",
+        "Preferred SVO remains while VSO becomes productive in marked constructions",
+        "Automatic epenthesis repairs new adjacent consonant pairs without rewriting inherited place names",
+        "Modern 20-letter base and stacked subscript writing applied consistently",
+        "Preserve historic proper name pronunciations alongside hypothetical modern readings"
+      ]
+    }
+  ],
+  "lexical_sound_overrides": [
+    {
+      "spelling": "W'iosamn",
+      "era": "historical and modern",
+      "pronunciation_prefix": "Glottal before B-with-W reading, then I-ee dependent vowel",
+      "phoneme_cluster": [
+        "ʔ",
+        "w",
+        "iː"
+      ],
+      "status": "user specified",
+      "never_assume_roman_apostrophe_is_new_letter": true
+    },
+    {
+      "spelling": "Tzaphaer",
+      "era": "ancient inherited",
+      "pronunciation_english": "Taz-uh-fear",
+      "status": "user specified attested name pronunciation",
+      "do_not_replace": true
+    },
+    {
+      "spelling": "Tzaphaer",
+      "era": "hypothetical modern naming",
+      "pronunciation_english": "Tæz-ahp-hah-err",
+      "status": "user specified counterfactual only, not renaming"
+    },
+    {
+      "spelling": "Nzra",
+      "era": "modern",
+      "pronunciation_prefix": "Nihz",
+      "pronunciation_ipa_prefix": "/nɪz/",
+      "status": "user specified"
+    }
+  ]
+}

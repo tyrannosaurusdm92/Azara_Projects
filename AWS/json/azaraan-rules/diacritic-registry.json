@@ -1,0 +1,553 @@
+{
+  "purpose": "Semantic accent registry. Symbols shown in Latin transliteration are only demonstrations. Actual native glyphs and Khmer code point assignment are deliberately left unset.",
+  "maximum_accents_per_atomic_letter": 1,
+  "base_family_required_accents_from_classical": [
+    "A",
+    "B"
+  ],
+  "accent_semantics": [
+    {
+      "id": "a_aa",
+      "base": "A",
+      "reading": "aa",
+      "ipa": "/ɑː/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "a_ae",
+      "base": "A",
+      "reading": "ae",
+      "ipa": "/æ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "a_uh",
+      "base": "A",
+      "reading": "uh",
+      "ipa": "/ʌ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "a_ay",
+      "base": "A",
+      "reading": "ay",
+      "ipa": "/eɪ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "a_aw",
+      "base": "A",
+      "reading": "aw",
+      "ipa": "/aw/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "b_b",
+      "base": "B",
+      "reading": "b",
+      "ipa": "/b/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "b_f",
+      "base": "B",
+      "reading": "f",
+      "ipa": "/f/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "b_v",
+      "base": "B",
+      "reading": "v",
+      "ipa": "/v/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "b_w",
+      "base": "B",
+      "reading": "w",
+      "ipa": "/w/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "required family distinction"
+    },
+    {
+      "id": "e_eh",
+      "base": "E",
+      "reading": "eh",
+      "ipa": "/ɛ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "e_ee",
+      "base": "E",
+      "reading": "ee",
+      "ipa": "/iː/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "i_eye",
+      "base": "I",
+      "reading": "eye",
+      "ipa": "/aɪ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "i_ih",
+      "base": "I",
+      "reading": "ih",
+      "ipa": "/ɪ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "i_ee",
+      "base": "I",
+      "reading": "ee",
+      "ipa": "/iː/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "o_oh",
+      "base": "O",
+      "reading": "oh",
+      "ipa": "/oʊ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "o_ow",
+      "base": "O",
+      "reading": "ow",
+      "ipa": "/ow/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "o_oy",
+      "base": "O",
+      "reading": "oy",
+      "ipa": "/ɔɪ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "o_oo",
+      "base": "O",
+      "reading": "oo",
+      "ipa": "/uː/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "u_oo",
+      "base": "U",
+      "reading": "oo",
+      "ipa": "/uː/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "y_yah",
+      "base": "Y",
+      "reading": "yah",
+      "ipa": "/ja/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "y_yeh",
+      "base": "Y",
+      "reading": "yeh",
+      "ipa": "/jɛ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "y_yu",
+      "base": "Y",
+      "reading": "yu",
+      "ipa": "/juː/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "y_yih",
+      "base": "Y",
+      "reading": "yih",
+      "ipa": "/jɪ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "y_yee",
+      "base": "Y",
+      "reading": "yee",
+      "ipa": "/jiː/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "y_yoh",
+      "base": "Y",
+      "reading": "yoh",
+      "ipa": "/joʊ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "s_s",
+      "base": "S",
+      "reading": "s",
+      "ipa": "/s/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "s_sh",
+      "base": "S",
+      "reading": "sh",
+      "ipa": "/ʃ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "s_soft_sh",
+      "base": "S",
+      "reading": "soft_sh",
+      "ipa": "/ɕ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "z_z",
+      "base": "Z",
+      "reading": "z",
+      "ipa": "/z/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "z_zn",
+      "base": "Z",
+      "reading": "zn",
+      "ipa": "/zn/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "t_t",
+      "base": "T",
+      "reading": "t",
+      "ipa": "/t/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "t_tch",
+      "base": "T",
+      "reading": "tch",
+      "ipa": "/tʃ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "t_th",
+      "base": "T",
+      "reading": "th",
+      "ipa": "/θ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "t_taz",
+      "base": "T",
+      "reading": "taz",
+      "ipa": "/tæz/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "k_k",
+      "base": "K",
+      "reading": "k",
+      "ipa": "/k/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "k_kw",
+      "base": "K",
+      "reading": "kw",
+      "ipa": "/kw/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "k_ks",
+      "base": "K",
+      "reading": "ks",
+      "ipa": "/ks/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "k_x",
+      "base": "K",
+      "reading": "x",
+      "ipa": "/x/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "n_n",
+      "base": "N",
+      "reading": "n",
+      "ipa": "/n/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "n_ng",
+      "base": "N",
+      "reading": "ng",
+      "ipa": "/ŋ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    },
+    {
+      "id": "n_ny",
+      "base": "N",
+      "reading": "ny",
+      "ipa": "/ɲ/",
+      "native_glyph": null,
+      "khmer_unicode": null,
+      "assignment_status": "semantic_only",
+      "authority": "proposed explicit selector for an attested sound"
+    }
+  ],
+  "other_sound_distinctions": [
+    {
+      "family": "D",
+      "sounds": [
+        "d",
+        "ɾ"
+      ],
+      "resolution": "contextual allophone or one optional accent"
+    },
+    {
+      "family": "G",
+      "sounds": [
+        "g",
+        "ɣ"
+      ],
+      "resolution": "contextual allophone or one optional accent"
+    },
+    {
+      "family": "H",
+      "sounds": [
+        "h",
+        "ɦ"
+      ],
+      "resolution": "contextual allophone or one optional accent"
+    },
+    {
+      "family": "J",
+      "sounds": [
+        "dʒ",
+        "ʒ"
+      ],
+      "resolution": "contextual allophone or one optional accent"
+    },
+    {
+      "family": "L",
+      "sounds": [
+        "l",
+        "ɫ"
+      ],
+      "resolution": "contextual allophone or one optional accent"
+    },
+    {
+      "family": "M",
+      "sounds": [
+        "m",
+        "m̩"
+      ],
+      "resolution": "contextual allophone or syllabicity tag"
+    },
+    {
+      "family": "N",
+      "sounds": [
+        "n",
+        "n̩",
+        "ŋ",
+        "ŋg",
+        "ɲ",
+        "nj"
+      ],
+      "resolution": "use N phoneme quality selectors as needed"
+    },
+    {
+      "family": "P",
+      "sounds": [
+        "p",
+        "pʰ"
+      ],
+      "resolution": "contextual aspiration or optional one accent"
+    },
+    {
+      "family": "R",
+      "sounds": [
+        "r",
+        "ɾ"
+      ],
+      "resolution": "tap and trill distinctions"
+    },
+    {
+      "family": "T",
+      "sounds": [
+        "t",
+        "tʰ",
+        "tʃ",
+        "tʃʰ",
+        "θ",
+        "ð",
+        "tæz",
+        "taːhzi"
+      ],
+      "resolution": "select one phoneme class per token, with contextual voicing or historical lexicon override"
+    }
+  ],
+  "accent_on_subscript": true,
+  "structural_exception": "An accent attached to a vowel subscript counts against that subscript's one-accent allowance, not against the independent host's one-accent allowance.",
+  "special_marks": [
+    {
+      "id": "glottal",
+      "symbol": "ʼ",
+      "ipa": "/ʔ/",
+      "placement": "pre_host",
+      "type": "subscript",
+      "descendants": [
+        "stress_next",
+        "stress_previous"
+      ],
+      "status": "historical canon plus latest user update"
+    },
+    {
+      "id": "click",
+      "symbol": "¡",
+      "ipa": "/ǃ/",
+      "placement": "post_host",
+      "type": "subscript",
+      "descendants": [],
+      "status": "historical canon plus latest user update"
+    },
+    {
+      "id": "stress_next",
+      "symbol": ">",
+      "placement": "after antecedent sound to target following syllable",
+      "type": "syllable_emphasis",
+      "ancestor": "glottal",
+      "ipa": null
+    },
+    {
+      "id": "stress_previous",
+      "symbol": "<",
+      "placement": "after antecedent sound to target preceding syllable",
+      "type": "syllable_emphasis",
+      "ancestor": "glottal",
+      "ipa": null
+    }
+  ]
+}

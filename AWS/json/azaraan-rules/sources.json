@@ -1,0 +1,77 @@
+{
+  "approach": "Use the supplied references for features, not wholesale borrowing of their entire grammars or sound systems. Aza'raan canon controls conflicts.",
+  "primary": {
+    "name": "Letter Evolution Table.docx",
+    "type": "user canon",
+    "authority": "Primary historical source",
+    "facts": [
+      "Kaʻaheʻanua is Proto-Polynesian-derived; Uxrowoiye is shaped primarily by Khmer speech with a lesser Italian influence",
+      "Aza'raan emerges from their merger after the 1351 BCE convergence",
+      "15 identity categories",
+      "Approximately 90 percent of grammar uses particles",
+      "Preferred SVO with particle-governed order flexibility",
+      "Most words end in vowels; some consonant-final words survive",
+      "Six dated eras",
+      "Historical sound inventory grouped into 13 sound families",
+      "Historic glottal ʼ, click ¡, emphasis > and < are not base letters"
+    ]
+  },
+  "attached_references": [
+    {
+      "name": "Māori language - Wikipedia(1).pdf",
+      "kind": "linguistic",
+      "design_use": "Open syllables V, VV, CV, CVV; mora and vowel length; particles, flexible focus and verbal predicates, pronoun number and inclusivity"
+    },
+    {
+      "name": "Khmer script - Wikipedia(20261029-041352).pdf",
+      "kind": "script",
+      "design_use": "Abugida-like consonant bases, dependent vowels, coeng-style stacked subscript representation; Khmer Unicode block"
+    },
+    {
+      "name": "Malayalam script - Wikipedia(8).pdf",
+      "kind": "script",
+      "design_use": "Independent/dependent vowels, consonant joining and subscript shapes, syllabic composition"
+    },
+    {
+      "name": "Georgian scripts - Wikipedia(20261029-041412).pdf",
+      "kind": "script evolution",
+      "design_use": "Historically distinct letterforms and retained letter identity across evolving scripts"
+    },
+    {
+      "name": "Tengwar - Wikipedia(20261029-041352).pdf",
+      "kind": "artificial script",
+      "design_use": "Separating base signs and phonetic marks; mode-dependent orthography. Inspiration only, not copied glyphs"
+    },
+    {
+      "name": "Khoisan languages - Wikipedia(1).pdf",
+      "kind": "phonology",
+      "design_use": "Click articulations and contrastive phoneme treatment; avoid treating Khoisan as a single established language family"
+    },
+    {
+      "name": "French language - Wikipedia(1).pdf",
+      "kind": "phonology",
+      "design_use": "Vowel quality, front vowels, nasal effects and historical spelling change as possible sound-development inspirations"
+    },
+    {
+      "name": "Italian language - Wikipedia(1).pdf",
+      "kind": "phonology",
+      "design_use": "Gemination and vowel-ending tendencies; not imported as Italian grammar"
+    },
+    {
+      "name": "German language - Wikipedia(1).pdf",
+      "kind": "phonology",
+      "design_use": "Consonant contrasts, cluster repair and historical sound alternation as optional influences"
+    }
+  ],
+  "distinction": {
+    "attested": "Specified by the user or the attached evolution table",
+    "derived": "A direct structural consequence of an attested rule",
+    "proposed": "A newly authored Aza'raan system rule or example not previously canonized"
+  },
+  "missing_data": [
+    "Attached evolution tables intentionally leave many Khmer Unicode assignments blank",
+    "The available authoritative header gives 15 identity categories but does not enumerate their names",
+    "No definitive list of all 24 historical accent glyphs was supplied in these files",
+    "Sound families and IPA are retained independently from exact font glyph assignments"
+  ]
+}

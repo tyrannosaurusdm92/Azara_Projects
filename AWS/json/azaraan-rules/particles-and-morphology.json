@@ -1,0 +1,303 @@
+{
+  "design": "Functional registry first. Proposed Aza'raan particle forms are examples, not asserted canonical vocabulary from the Letter Evolution Table.",
+  "word_order_policy": {
+    "default": "SVO",
+    "alternative": [
+      "VSO",
+      "OSV",
+      "OVS",
+      "SOV"
+    ],
+    "condition": "Non-default orders require role/topic/focus marking or sufficient discourse context"
+  },
+  "candidate_particles": [
+    {
+      "id": "SUBJ",
+      "proposed_form": "ra",
+      "semantics": "Nominal subject or agent, used mainly when order is non-default",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "OBJ",
+      "proposed_form": "ke",
+      "semantics": "Marks patient or direct object in marked orders",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "DAT",
+      "proposed_form": "na",
+      "semantics": "Recipient or beneficiary",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "LOC",
+      "proposed_form": "lo",
+      "semantics": "Place or static location",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "GOAL",
+      "proposed_form": "yu",
+      "semantics": "Direction toward a goal",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "SOURCE",
+      "proposed_form": "mu",
+      "semantics": "Movement away from source",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "TAM_PAST",
+      "proposed_form": "sa",
+      "semantics": "Past or completed event",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "TAM_PRESENT",
+      "proposed_form": "ni",
+      "semantics": "Current or ongoing state",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "TAM_FUTURE",
+      "proposed_form": "ye",
+      "semantics": "Expected future event",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "ASPECT_PROGRESSIVE",
+      "proposed_form": "mio",
+      "semantics": "Action in progress",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "ASPECT_COMPLETED",
+      "proposed_form": "tea",
+      "semantics": "Resulting state",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "NEG",
+      "proposed_form": "no",
+      "semantics": "Negates the predicate",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "TOPIC",
+      "proposed_form": "aro",
+      "semantics": "Topic or contrast",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "FOCUS",
+      "proposed_form": "eha",
+      "semantics": "Focus on the adjacent constituent",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "QUESTION",
+      "proposed_form": "iha",
+      "semantics": "Polar question",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "PLURAL",
+      "proposed_form": "ne",
+      "semantics": "Plural group marker",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "DUAL",
+      "proposed_form": "niya",
+      "semantics": "Exactly two referents",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "INCLUSIVE",
+      "proposed_form": "ya",
+      "semantics": "Includes addressee",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "EXCLUSIVE",
+      "proposed_form": "yo",
+      "semantics": "Excludes addressee",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "POSSESSION_ALIENABLE",
+      "proposed_form": "ae",
+      "semantics": "Owned or voluntarily transferable relation",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "POSSESSION_INALIENABLE",
+      "proposed_form": "oi",
+      "semantics": "Kinship, intrinsic relation or essential association",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "DEMONSTRATIVE_NEAR",
+      "proposed_form": "nei",
+      "semantics": "Near speaker",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "DEMONSTRATIVE_FAR",
+      "proposed_form": "rai",
+      "semantics": "Distant from speaker",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "COORDINATOR",
+      "proposed_form": "ama",
+      "semantics": "Connects two constituents",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "EVIDENTIAL_DIRECT",
+      "proposed_form": "hi",
+      "semantics": "Personally witnessed",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "EVIDENTIAL_REPORTED",
+      "proposed_form": "sha",
+      "semantics": "Reported information",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    },
+    {
+      "id": "HONORIFIC",
+      "proposed_form": "ari",
+      "semantics": "Polite or ritual register",
+      "status": "proposal",
+      "requires_lexicon_collision_check": true
+    }
+  ],
+  "grammar_templates": [
+    {
+      "name": "unmarked_transitive",
+      "pattern": "SUBJECT + TAM? + VERB + OBJECT + LOCATION? + EVIDENTIAL?",
+      "roles": [
+        "subject",
+        "verb",
+        "object"
+      ],
+      "notes": "SVO is the canonical ordinary order"
+    },
+    {
+      "name": "marked_verb_initial",
+      "pattern": "TAM? + VERB + SUBJ-PARTICLE + SUBJECT + OBJ-PARTICLE + OBJECT",
+      "roles": [
+        "verb",
+        "subject",
+        "object"
+      ],
+      "notes": "Māori-inspired predicate-initial order without discarding canonical SVO"
+    },
+    {
+      "name": "focused_object",
+      "pattern": "TOPIC + OBJECT + TAM? + SUBJECT + VERB",
+      "roles": [
+        "topic",
+        "object",
+        "subject",
+        "verb"
+      ],
+      "notes": "Require explicit role particles for ambiguous clauses"
+    },
+    {
+      "name": "negative",
+      "pattern": "SUBJECT + TAM? + NEG + VERB + OBJECT",
+      "roles": [
+        "subject",
+        "negation",
+        "verb",
+        "object"
+      ]
+    },
+    {
+      "name": "noun_phrase",
+      "pattern": "DETERMINER? + NOUN + MODIFIER* + DEMONSTRATIVE?",
+      "roles": [
+        "noun",
+        "modifier",
+        "demonstrative"
+      ]
+    },
+    {
+      "name": "possessive_phrase",
+      "pattern": "POSSESSOR + POSSESSION_CLASS + POSSESSED",
+      "roles": [
+        "possessor",
+        "possession_class",
+        "possessed"
+      ]
+    },
+    {
+      "name": "polar_question",
+      "pattern": "DECLARATIVE_CLAUSE + QUESTION",
+      "roles": [
+        "clause",
+        "question"
+      ]
+    }
+  ],
+  "pronouns": {
+    "persons": [
+      1,
+      2,
+      3
+    ],
+    "numbers": [
+      "singular",
+      "dual",
+      "plural"
+    ],
+    "first_person_clusivity": [
+      "inclusive",
+      "exclusive"
+    ],
+    "source": "Māori structural inspiration",
+    "forms": "Unassigned. Do not substitute Māori pronouns for Aza'raan words."
+  },
+  "identity": {
+    "count": 15,
+    "labels": [],
+    "grammar": "Use optional identity or person-reference particles, never force an invented identity lexicon or grammatical gender"
+  },
+  "morphology": {
+    "dominant": "analytic particle-based",
+    "approx_particle_based_fraction": 0.9,
+    "number_and_tense": "Generally marked by particles; inherited and expressive inflection allowed",
+    "gemination": "May mark emphasis or lexical contrast, but cannot consume a third subscript"
+  },
+  "safety_for_canon": "Particle phonetic strings are provisional drafts and should not be treated as established Aza'raan lexical items until the user approves them."
+}

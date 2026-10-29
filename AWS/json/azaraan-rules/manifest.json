@@ -1,0 +1,54 @@
+{
+  "title": "Aza'raan Historical Language Rules",
+  "version": "1.0.0",
+  "created": "2026-10-29",
+  "status": "Supplemental language specification. Proposed vocabulary and orthographic placeholders are flagged. Existing AWS files are not replaced.",
+  "source_priority": [
+    "Latest user instructions in this request",
+    "Authoritative canon section of Letter Evolution Table.docx",
+    "Letter evolution sound tables",
+    "Attached writing-system and language reference PDFs",
+    "Newly designed rules marked proposed"
+  ],
+  "files": [
+    "manifest.json",
+    "sources.json",
+    "alphabet-and-sounds.json",
+    "diacritic-registry.json",
+    "letter-construction.json",
+    "phonotactics.json",
+    "grammar-eras.json",
+    "particles-and-morphology.json",
+    "historical-sound-changes.json",
+    "examples-and-tests.json",
+    "integration-notes.json"
+  ],
+  "base_letters": "ABDEGHIJKLMNOPRSTUYZ",
+  "base_letter_count": 20,
+  "eras": [
+    "proto",
+    "ancient",
+    "archaic",
+    "classical",
+    "traditional",
+    "modern"
+  ],
+  "constraints": [
+    "No em dash in JSON files",
+    "One independent base letter per written cluster",
+    "Maximum two attached subscripts per independent letter",
+    "Maximum one semantic accent per atomic letter, including a subscript letter",
+    "Glottal marker precedes the host sound; click follows it",
+    "Modern B family includes b, f, v, w",
+    "No independent F, V, W, Q, X, C, or glottal/click letter in modern base alphabet",
+    "Retain every phoneme family from the authoritative letter evolution tables",
+    "Do not assign unknown Khmer code points",
+    "Keep existing AWS application assets, keyboard, and backend untouched"
+  ],
+  "compatibility": {
+    "repository": "tyrannosaurusdm92/Azara_Projects",
+    "path": "AWS/json/azaraan-rules/",
+    "loaded_by_existing_app": false,
+    "reason": "Data-only language-rule addition. Application JavaScript has not been changed."
+  }
+}

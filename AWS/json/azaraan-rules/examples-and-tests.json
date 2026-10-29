@@ -1,0 +1,204 @@
+{
+  "notation": "The JSON cluster objects are symbolic, not real Aza'raan rendered font glyphs or Khmer Unicode sequences.",
+  "examples": [
+    {
+      "id": "hello_2_hosts",
+      "source": "Hello",
+      "type": "English demonstration of Aza'raan compression, not a new Aza'raan dictionary translation",
+      "expected_host_count": 2,
+      "clusters": [
+        {
+          "base": "H",
+          "base_accent": null,
+          "subscripts": [
+            {
+              "base": "E",
+              "accent": "e_eh",
+              "position": "under",
+              "ipa": "ɛ"
+            }
+          ],
+          "pronunciation": "heh",
+          "note": "H plus accented E carries he or heh sound"
+        },
+        {
+          "base": "L",
+          "base_accent": null,
+          "gemination": true,
+          "subscripts": [
+            {
+              "base": "O",
+              "accent": "o_oh",
+              "position": "under",
+              "ipa": "oʊ"
+            }
+          ],
+          "pronunciation": "llo",
+          "note": "L length flag represents double L, O subscript gives oh"
+        }
+      ],
+      "status": "structural demonstration"
+    },
+    {
+      "id": "wiosamn",
+      "source": "W'iosamn",
+      "type": "Attested Uxrowoiye moon proper name",
+      "target": "W'i can occupy one host cluster",
+      "expected_host_count_first_unit": 1,
+      "clusters": [
+        {
+          "base": "B",
+          "base_accent": "b_w",
+          "subscripts": [
+            {
+              "type": "glottal",
+              "position": "pre",
+              "ipa": "ʔ"
+            },
+            {
+              "base": "I",
+              "accent": "i_ee",
+              "position": "under",
+              "ipa": "iː"
+            }
+          ],
+          "pronunciation_order": [
+            "ʔ",
+            "w",
+            "iː"
+          ],
+          "surface_roman": "W'i"
+        }
+      ],
+      "remaining_roman": "osamn",
+      "status": "user specified, later syllabification of remainder not asserted"
+    },
+    {
+      "id": "nzra",
+      "source": "Nzra",
+      "type": "epenthesis",
+      "written": "Nzra",
+      "trigger_pair": "Nz",
+      "inserted_vowel_ipa": "ɪ",
+      "expected_initial_ipa": "nɪz",
+      "expected_initial_english": "Nihz",
+      "status": "user specified"
+    },
+    {
+      "id": "tzaphaer_ancient",
+      "source": "Tzaphaer",
+      "type": "historical_pronunciation",
+      "era": "ancient",
+      "expected_english": "Taz-uh-fear",
+      "status": "user specified"
+    },
+    {
+      "id": "tzaphaer_modern_hypothesis",
+      "source": "Tzaphaer",
+      "type": "counterfactual_pronunciation",
+      "era": "modern",
+      "expected_english": "Tæz-ahp-hah-err",
+      "initial_written_pair": "Tz",
+      "initial_ipa": "tæz",
+      "status": "user specified hypothetical"
+    },
+    {
+      "id": "glottal_click",
+      "type": "positional validation",
+      "clusters": [
+        {
+          "base": "T",
+          "base_accent": "t_t",
+          "subscripts": [
+            {
+              "type": "glottal",
+              "position": "pre"
+            },
+            {
+              "type": "click",
+              "position": "post"
+            }
+          ]
+        }
+      ],
+      "expected_sound_order": [
+        "ʔ",
+        "t",
+        "ǃ"
+      ],
+      "status": "constructed structural test, not a lexeme"
+    }
+  ],
+  "invariants": [
+    {
+      "id": "alphabet_exactly_20",
+      "expect": "ABDEGHIJKLMNOPRSTUYZ",
+      "count": 20
+    },
+    {
+      "id": "no_modern_independent_w",
+      "expect": false
+    },
+    {
+      "id": "no_modern_independent_glottal_or_click",
+      "expect": false
+    },
+    {
+      "id": "glottal_descendants",
+      "expect": [
+        "<",
+        ">"
+      ]
+    },
+    {
+      "id": "max_subscripts",
+      "expect": 2
+    },
+    {
+      "id": "max_accents_per_atomic_letter",
+      "expect": 1
+    },
+    {
+      "id": "a_always_accented_classical_plus",
+      "expect": true
+    },
+    {
+      "id": "b_bfvw_family",
+      "expect": [
+        "b",
+        "f",
+        "v",
+        "w"
+      ]
+    },
+    {
+      "id": "no_lost_historic_sound_family",
+      "expect": true
+    },
+    {
+      "id": "Tz_epenthesis",
+      "expect": "æ"
+    },
+    {
+      "id": "Nz_epenthesis",
+      "expect": "ɪ"
+    },
+    {
+      "id": "default_order",
+      "expect": "SVO"
+    },
+    {
+      "id": "modern_spoken_syllables",
+      "expect": [
+        "V",
+        "VV",
+        "CV",
+        "CVV"
+      ]
+    },
+    {
+      "id": "no_guessed_khmer_unicode",
+      "expect": true
+    }
+  ]
+}

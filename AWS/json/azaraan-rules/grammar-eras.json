@@ -1,0 +1,134 @@
+{
+  "overarching": {
+    "historical_origin": "Convergence of Kaʻaheʻanua and Uxrowoiye after 1351 BCE",
+    "canonical_grammar": "Approximately 90 percent particle-based, with SVO preferred and order flexibility when particles resolve meaning",
+    "identity_categories_count": 15,
+    "identity_category_labels": "not supplied; never synthesize labels from the count",
+    "general_word_endings": "Vowel final preferred; inherited consonant-final words allowed",
+    "grammatical_gender": "Do not infer gender from the 15 identity categories"
+  },
+  "eras": [
+    {
+      "id": "proto",
+      "label": "Proto Aza'raan",
+      "start": "1351 BCE",
+      "end": "1040 BCE",
+      "duration_years": 312,
+      "order": "SOV predominant; ritual verb-initial clauses possible",
+      "profile": "Convergence stage with vowel-dominant Kaʻaheʻanua syllables plus complex Uxrowoiye consonants and word-specific glottal/click letters",
+      "particle_profile": "Particles emerging; greater use of verbal endings and juxtaposition",
+      "phonology": "Vowel final base words, full historic W and clicking consonants; words may remain unsmoothed",
+      "orthography": "Independent historical glyphs and full sound-bearing characters, limited stacking",
+      "syntax_features": [
+        "Head-final verb in ordinary narration",
+        "Postnominal descriptive phrases optional",
+        "Boundary glottal can differentiate adjacent vowels",
+        "Honorific position governed by ritual register"
+      ],
+      "status": "proposed era grammar, with historical origin attested"
+    },
+    {
+      "id": "ancient",
+      "label": "Ancient Aza'raan",
+      "start": "1039 BCE",
+      "end": "286 BCE",
+      "duration_years": 754,
+      "order": "SOV neutral; SVO in contact or trade speech",
+      "profile": "Older separate sound letters persist; vowel repair increasingly regular",
+      "particle_profile": "Clause-role particles follow the words they mark; tense or aspect particles often attach at the end of the verb phrase",
+      "phonology": "Explicit /ʔ/ and click consonants; older Taz reading survives",
+      "orthography": "Separate independent phoneme signs, little or no compulsory subscript compression",
+      "syntax_features": [
+        "Topic before other arguments",
+        "Object and recipient distinguished by following particles",
+        "Lexical and ritual stress not yet standardized",
+        "Identity markers are optional nominals, not compulsory gender agreement"
+      ],
+      "status": "proposed grammatical differentiation"
+    },
+    {
+      "id": "archaic",
+      "label": "Archaic Aza'raan",
+      "start": "285 BCE",
+      "end": "6 BCE",
+      "duration_years": 280,
+      "order": "SOV and SVO in transition, differentiated by case and topic particles",
+      "profile": "Active shift from full historic alphabet to family-based accented letters",
+      "particle_profile": "A subset of role markers moves before its noun; TAM markers increasingly precede verbs",
+      "phonology": "Glottal and click still typeable as independent historical signs; consonant-contact vowel insertion codified",
+      "orthography": "Mixed independent letters and early subscripts; G/K/Q and B/F/V/W mergers begin in spelling",
+      "syntax_features": [
+        "Preposed topic may dislocate a clause argument",
+        "Particle placement begins deciding argument order",
+        "Focused objects may precede the verb",
+        "Historical proper names remain conservative"
+      ],
+      "status": "proposed grammatical differentiation"
+    },
+    {
+      "id": "classical",
+      "label": "Classical Aza'raan",
+      "start": "5 BCE",
+      "end": "827 CE",
+      "duration_years": 832,
+      "order": "SVO preferred; VSO permitted for formal or focused predicates",
+      "profile": "The modern 20-base-letter framework becomes productive and phonetic accents carry family distinctions",
+      "particle_profile": "Most syntactic functions expressed by particles, with verbs carrying little agreement",
+      "phonology": "No independent glottal or click letters; glottal attaches before host, click after; vowel accents are obligatory for A family",
+      "orthography": "One base plus up to two subscripts; one accent for each letter; glottal-descended > and < emerge",
+      "syntax_features": [
+        "Argument particles distinguish subject and object when order varies",
+        "Verb-initial ceremonial style is established",
+        "Inclusive and exclusive first-person distinctions are allowed",
+        "Plurality usually indicated by a particle rather than a stem change"
+      ],
+      "status": "newly proposed grammar plus user-required script transition"
+    },
+    {
+      "id": "traditional",
+      "label": "Traditional Aza'raan",
+      "start": "828 CE",
+      "end": "1797 CE",
+      "duration_years": 970,
+      "order": "SVO neutral; focus fronting and VSO sacred register",
+      "profile": "Standardization of dependent vowels, gemination, honorific particles, subscript placement and compositional spelling",
+      "particle_profile": "Sentence-final evidential and politeness particles added, clauses can be linked by coordinators",
+      "phonology": "Strong open syllable preference; old codas and inherited Taz lexical readings protected",
+      "orthography": "Two-subscript stacking and one-accent-per-letter made standard",
+      "syntax_features": [
+        "Demonstratives typically after the noun and determiners before",
+        "Aspect precedes main verb in neutral clauses",
+        "Negation takes a pre-verbal particle",
+        "Possession uses alienable and inalienable constructions"
+      ],
+      "status": "proposed grammatical differentiation"
+    },
+    {
+      "id": "modern",
+      "label": "Modern Aza'raan",
+      "start": "1798 CE",
+      "end": "present",
+      "duration_years": null,
+      "order": "SVO default from canon; verb-initial VSO is a productive Māori-inspired marked construction",
+      "profile": "Māori-inspired spoken syllable composition with Khmer-inspired independent and stacked subscript letters",
+      "particle_profile": "Approximately 90 percent particle-based, temporal/aspect, number, location, direction, role, negation and focus expressed through particles",
+      "phonology": "(C)V(V) preferred, controlled epenthesis between consonants, automatic Nz and Tz repair; all old sounds preserved",
+      "orthography": "Exactly 20 independent letters, all family sounds through accents, dependent vowel letters, glottal pre-host and click post-host",
+      "syntax_features": [
+        "Verb-initial focus permits VSO without losing argument roles",
+        "Topic particles permit OSV or OVS when unambiguous",
+        "Flexible negation and tense-aspect-mood particles",
+        "Singular, dual, plural and inclusive/exclusive reference as Māori-inspired options",
+        "Noun phrase: optional determiner + noun + modifier + demonstrative",
+        "A zero gender agreement default avoids assigning binary categories to nouns"
+      ],
+      "status": "user-directed new modern rules and source-aligned canon"
+    }
+  ],
+  "continuity": [
+    "Old words keep inherited pronunciations unless a lexicon entry explicitly records modernization",
+    "Each era is a synchronically distinct grammar, not just a font switch",
+    "The same text may have different era-appropriate order and spoken rendering",
+    "Sound family preservation is required at every historical transition"
+  ]
+}

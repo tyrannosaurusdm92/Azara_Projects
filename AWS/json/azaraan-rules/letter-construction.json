@@ -1,0 +1,99 @@
+{
+  "writing_system": "Aza'raan independent plus dependent phonetic elements, inspired by Khmer and Malayalam but not an assertion of literal Khmer letters",
+  "direction": "ltr",
+  "host_type": "one of 20 independent letters",
+  "atomic_letter": {
+    "fields": [
+      "base",
+      "accent"
+    ],
+    "max_accents": 1,
+    "subscript_support": true
+  },
+  "cluster_schema": {
+    "required": [
+      "base"
+    ],
+    "optional": [
+      "base_accent",
+      "subscripts",
+      "gemination",
+      "mora_count",
+      "stress_target",
+      "reading_override"
+    ],
+    "base_allowed": "ABDEGHIJKLMNOPRSTUYZ",
+    "max_subscripts": 2,
+    "max_accents_per_atomic": 1,
+    "subscript_order": [
+      "pre",
+      "vowel_or_consonant",
+      "post"
+    ],
+    "supported_subscripts": [
+      "vowel",
+      "consonant",
+      "glottal",
+      "click"
+    ],
+    "subscript_may_have_one_accent": true
+  },
+  "positioning": [
+    {
+      "slot": "pre",
+      "classes": [
+        "glottal"
+      ],
+      "linear_pronunciation": "Before its attached host"
+    },
+    {
+      "slot": "under",
+      "classes": [
+        "vowel",
+        "consonant"
+      ],
+      "linear_pronunciation": "Dependent vowel after the host onset; dependent consonant follows its host by explicit lexical cluster rule"
+    },
+    {
+      "slot": "post",
+      "classes": [
+        "click"
+      ],
+      "linear_pronunciation": "After its attached host; phonetic realization within the host syllable"
+    },
+    {
+      "slot": "above_or_side",
+      "classes": [
+        "accent"
+      ],
+      "linear_pronunciation": "Modifies phoneme of the specific letter it is attached to"
+    }
+  ],
+  "non_standard_notes": [
+    "A written cluster is not necessarily an IPA syllable or a single Unicode code point",
+    "The two-subscript limit includes glottal and click",
+    "Two independent letters never fuse into one host just because their font glyphs touch",
+    "Gemination is length metadata on the host and is not automatically a third subscript",
+    "No default or inherent A vowel is assumed because A quality requires an explicit accent",
+    "A free vowel is itself an independent host; a dependent vowel is a subscript letter",
+    "Consonant-plus-vowel host complexes are the normal modern syllabic written units",
+    "Native glyphs, ligatures, and Khmer Unicode assignments require the user's font/glyph data"
+  ],
+  "rendering_algorithm": [
+    "Parse spelling and detect historical lexeme overrides first",
+    "Resolve each sound to a base family and at most one accent per atomic letter",
+    "Select independent host and at most two ordered subscripts",
+    "Apply pre-host glottal before vowel realization",
+    "Apply post-host click after the associated phoneme",
+    "Apply vowel quality on the vowel's own letter, including if subscript",
+    "Apply length/gemination and then stress or emphasis, without creating extra subscripts",
+    "Reject overflow rather than silently deleting a sound"
+  ],
+  "unicode_policy": {
+    "khmer_registry": "../khmer-unicode-registry.json",
+    "khmer_coeng_reference": "U+17D2 is the Khmer COENG joiner, but do not treat it as an automatic Aza'raan codepoint assignment",
+    "grapheme_stability": "Keep semantic character IDs separate from glyph display and Unicode mapping",
+    "missing_glyph_policy": "Unassigned rather than guessing",
+    "latin_transliteration": "Explanatory only"
+  }
+}

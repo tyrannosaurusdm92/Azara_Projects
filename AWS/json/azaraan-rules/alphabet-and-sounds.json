@@ -1,0 +1,379 @@
+{
+  "alphabet": "ABDEGHIJKLMNOPRSTUYZ",
+  "count": 20,
+  "case": "Case is a Latin transliteration aid, not a claim about native glyph casing",
+  "sound_source": "The IPA values in the Letter Evolution Table are preserved, including unconventional notation used by that table.",
+  "independent_letters": [
+    {
+      "letter": "A",
+      "type": "vowel",
+      "ipa": [
+        "/ɑː/",
+        "/æ/",
+        "/ʌ/",
+        "/eɪ/",
+        "/aw/"
+      ],
+      "notes": "All A-family vowels require an accent from Classical onward"
+    },
+    {
+      "letter": "B",
+      "type": "consonant",
+      "ipa": [
+        "/b/",
+        "/β/",
+        "/f/",
+        "/v/",
+        "/ʋ/",
+        "/wɑ/",
+        "/wɛ/",
+        "/wɪ/",
+        "/wuː/",
+        "/woʊ/",
+        "/wiː/"
+      ],
+      "notes": "B, F, V and W merged into one base. The W plus vowel phonemes remain representable."
+    },
+    {
+      "letter": "D",
+      "type": "consonant",
+      "ipa": [
+        "/d/",
+        "/ɾ/"
+      ],
+      "notes": "Tapped realization retained"
+    },
+    {
+      "letter": "E",
+      "type": "vowel",
+      "ipa": [
+        "/ɛ/",
+        "/iː/"
+      ],
+      "notes": "Eh and ee"
+    },
+    {
+      "letter": "G",
+      "type": "consonant",
+      "ipa": [
+        "/g/",
+        "/ɣ/"
+      ],
+      "notes": "Hard and soft g"
+    },
+    {
+      "letter": "H",
+      "type": "consonant",
+      "ipa": [
+        "/h/",
+        "/ɦ/"
+      ],
+      "notes": "Voiceless and voiced h"
+    },
+    {
+      "letter": "I",
+      "type": "vowel",
+      "ipa": [
+        "/aɪ/",
+        "/ɪ/",
+        "/iː/"
+      ],
+      "notes": "I has an ee reading as a user-specified modern subscript; /iː/ is historically also in the E family"
+    },
+    {
+      "letter": "J",
+      "type": "consonant",
+      "ipa": [
+        "/dʒ/",
+        "/ʒ/"
+      ],
+      "notes": "J and zh"
+    },
+    {
+      "letter": "K",
+      "type": "consonant",
+      "ipa": [
+        "/k/",
+        "/kʰ/",
+        "/kw/",
+        "/kʷʰ/",
+        "/ks/",
+        "/x/"
+      ],
+      "notes": "Historical Q and KS/X are consolidated into K-based sequences/marks"
+    },
+    {
+      "letter": "L",
+      "type": "consonant",
+      "ipa": [
+        "/l/",
+        "/ɫ/"
+      ],
+      "notes": "Light and dark l; gemination is a separate length feature"
+    },
+    {
+      "letter": "M",
+      "type": "consonant",
+      "ipa": [
+        "/m/",
+        "/m̩/"
+      ],
+      "notes": "Includes syllabic m"
+    },
+    {
+      "letter": "N",
+      "type": "consonant",
+      "ipa": [
+        "/n/",
+        "/n̩/",
+        "/ŋ/",
+        "/ŋg/",
+        "/ɲ/",
+        "/nj/"
+      ],
+      "notes": "N, NG, NY retained in one letter family"
+    },
+    {
+      "letter": "O",
+      "type": "vowel",
+      "ipa": [
+        "/oʊ/",
+        "/ow/",
+        "/ɔɪ/",
+        "/uː/"
+      ],
+      "notes": "Oh, ow, oy, historic oo; oo can be modern U as a graphic migration"
+    },
+    {
+      "letter": "P",
+      "type": "consonant",
+      "ipa": [
+        "/p/",
+        "/pʰ/"
+      ],
+      "notes": "P and aspirated p"
+    },
+    {
+      "letter": "R",
+      "type": "consonant",
+      "ipa": [
+        "/r/",
+        "/ɾ/"
+      ],
+      "notes": "Trill and tap"
+    },
+    {
+      "letter": "S",
+      "type": "consonant",
+      "ipa": [
+        "/s/",
+        "/z/",
+        "/ʃ/",
+        "/ɕ/"
+      ],
+      "notes": "S, voiced s and sh; sh is one phoneme, not a simple S+H cluster"
+    },
+    {
+      "letter": "T",
+      "type": "consonant",
+      "ipa": [
+        "/t/",
+        "/tʰ/",
+        "/tʃ/",
+        "/tʃʰ/",
+        "/θ/",
+        "/ð/",
+        "/tæz/",
+        "/taːhzi/"
+      ],
+      "notes": "T, TH, TCH and TAZ remain"
+    },
+    {
+      "letter": "U",
+      "type": "vowel",
+      "ipa": [
+        "/uː/"
+      ],
+      "notes": "Independent modern U for the inherited oo quality; short /u/ is not asserted by the source table"
+    },
+    {
+      "letter": "Y",
+      "type": "semivowel",
+      "ipa": [
+        "/ja/",
+        "/jɛ/",
+        "/juː/",
+        "/jɪ/",
+        "/jiː/",
+        "/joʊ/"
+      ],
+      "notes": "Y glide families"
+    },
+    {
+      "letter": "Z",
+      "type": "consonant",
+      "ipa": [
+        "/z/",
+        "/zn/"
+      ],
+      "notes": "Z and historical zn cluster; /zn/ is table notation rather than standard single IPA symbol"
+    }
+  ],
+  "historical_families": [
+    {
+      "name": "Glottal and click",
+      "ipa": [
+        "/ʔ/",
+        "/ǃ/"
+      ],
+      "modern": "Preposed glottal and postposed click subscripts. The two emphasis descendant markers belong to the glottal lineage."
+    },
+    {
+      "name": "W",
+      "ipa": [
+        "/wɑ/",
+        "/wɛ/",
+        "/wɪ/",
+        "/wuː/",
+        "/woʊ/",
+        "/wiː/"
+      ],
+      "modern": "B host with W accent plus vowel subscript"
+    },
+    {
+      "name": "A",
+      "ipa": [
+        "/ɑː/",
+        "/æ/",
+        "/ʌ/",
+        "/eɪ/",
+        "/aw/"
+      ],
+      "modern": "Accented A"
+    },
+    {
+      "name": "E and EE",
+      "ipa": [
+        "/ɛ/",
+        "/iː/"
+      ],
+      "modern": "Accented E, or I-ee subscript in the newly requested special spelling"
+    },
+    {
+      "name": "I",
+      "ipa": [
+        "/aɪ/",
+        "/ɪ/"
+      ],
+      "modern": "I accents"
+    },
+    {
+      "name": "O, OW and OY",
+      "ipa": [
+        "/oʊ/",
+        "/ow/",
+        "/ɔɪ/",
+        "/uː/"
+      ],
+      "modern": "Accented O; long oo may be U"
+    },
+    {
+      "name": "Y",
+      "ipa": [
+        "/ja/",
+        "/jɛ/",
+        "/juː/",
+        "/jɪ/",
+        "/jiː/",
+        "/joʊ/"
+      ],
+      "modern": "Y accents"
+    },
+    {
+      "name": "T, TH, TCH and TAZ",
+      "ipa": [
+        "/tæz ~ taːhzi/",
+        "/tʃ ~ tʃʰ/",
+        "/θ ~ ð/",
+        "/t ~ tʰ/"
+      ],
+      "modern": "T accents and lexical historical readings"
+    },
+    {
+      "name": "S, SH and Z",
+      "ipa": [
+        "/s ~ z/",
+        "/ʃ ~ ɕ/",
+        "/z ~ zn/"
+      ],
+      "modern": "S and Z families"
+    },
+    {
+      "name": "D and J",
+      "ipa": [
+        "/d ~ ɾ/",
+        "/dʒ ~ ʒ/"
+      ],
+      "modern": "D and J families"
+    },
+    {
+      "name": "G, K, Q and KS",
+      "ipa": [
+        "/g ~ ɣ/",
+        "/k ~ kʰ/",
+        "/kw ~ kʷʰ/",
+        "/ks ~ x/"
+      ],
+      "modern": "G and K families"
+    },
+    {
+      "name": "B, P, F and V",
+      "ipa": [
+        "/b ~ β/",
+        "/p ~ pʰ/",
+        "/f ~ v/",
+        "/v ~ ʋ/"
+      ],
+      "modern": "B and P families"
+    },
+    {
+      "name": "N, NG, NY and M",
+      "ipa": [
+        "/ŋ ~ ŋg/",
+        "/m ~ m̩/",
+        "/n ~ n̩/",
+        "/ɲ ~ nj/"
+      ],
+      "modern": "N and M families"
+    },
+    {
+      "name": "R and L",
+      "ipa": [
+        "/r ~ ɾ/",
+        "/l ~ ɫ/"
+      ],
+      "modern": "R and L families"
+    },
+    {
+      "name": "H",
+      "ipa": [
+        "/h ~ ɦ/"
+      ],
+      "modern": "H"
+    }
+  ],
+  "legacy_letter_mergers": {
+    "F": "B accent for f",
+    "V": "B accent for v",
+    "W": "B accent for w",
+    "Q": "K accent for kw",
+    "X": "K accent or compound for ks/x",
+    "C": "Use K, S or T-family reading according to historical word, not automatic C replacement",
+    "glottal": "Independent in early script; subscript from Classical",
+    "click": "Independent in early script; subscript from Classical"
+  },
+  "standalone_consonant_default": {
+    "B": "Must carry an explicit b/f/v/w selector accent",
+    "A": "Must carry vowel quality accent"
+  }
+}

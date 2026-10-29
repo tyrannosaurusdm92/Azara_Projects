@@ -1,0 +1,37 @@
+{
+  "target": "AWS/json/azaraan-rules/",
+  "scope": "New JSON files only. No preexisting file is edited, renamed, removed, or relocated.",
+  "current_aws_interfaces": {
+    "keyboard": "Existing program retained without modification",
+    "glyph_studio": "Existing program retained without modification",
+    "backend": "Existing hook retained without modification",
+    "html": "AWS/index.html unchanged",
+    "style": "Existing style and service worker unchanged"
+  },
+  "loading_plan": "Application integration is a separate task. When requested, load manifest.json from AWS/json/azaraan-rules/ and keep semantic phonemes, glyph mapping and historical lexicon as distinct stores.",
+  "expected_engine_pipeline": [
+    "Load manifest + alphabet + registry + era grammar",
+    "Validate era-specific orthography and host/subscript counts",
+    "Resolve lexical historical exceptions before generic sound changes",
+    "Resolve base family, accent semantics and dependent vowels",
+    "Apply era-specific morphology, word order and phonotactics",
+    "Serialize a semantic document model",
+    "Render with actual user-provided Aza'raan fonts once glyph-to-Unicode mapping exists"
+  ],
+  "source_fidelity": [
+    "The canonical DOCX header supersedes contradictory older rules except where the user's current instructions explicitly supersede it",
+    "The 20 modern letters apply from Classical onward; do not retroactively erase Proto, Ancient or Archaic characters",
+    "All older source IPA variants persist as sound slots or contextual realizations",
+    "Aza'raan origin remains Kaʻaheʻanua plus Uxrowoiye",
+    "Do not silently import entire Māori verb system or Khmer inherent-vowel values",
+    "Keep unassigned Khmer Unicode entries unassigned"
+  ],
+  "pending_authorial_decisions": [
+    "Exact unique native glyph for each semantic accent",
+    "Final Khmer Unicode mapping for each modern glyph",
+    "Full lexicon of the 15 identity categories",
+    "Review provisional Aza'raan particle words for collisions",
+    "Preferred precedence of sound stress versus decorative accents"
+  ],
+  "format": "UTF-8 JSON, two-space indentation, no em dashes"
+}
