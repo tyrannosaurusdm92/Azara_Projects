@@ -1,2 +1,0 @@
-import {backend} from './backend-client.js'; import {store} from '../core/state-store.js';
-export const SearchService={global(query,{crossProject=false,...options}={}){return backend.call('search.global',{query,projectId:crossProject?'':store.get('activeProject')?.id||'',crossProject,...options});},saved(){return backend.call('search.saved.list',{projectId:store.get('activeProject')?.id||''});},save(data){return backend.call('search.saved.save',{projectId:store.get('activeProject')?.id||'',...data});},remove(id){return backend.call('search.saved.delete',{id,searchId:id});}};

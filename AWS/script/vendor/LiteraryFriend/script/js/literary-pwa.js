@@ -1,1 +1,0 @@
-(function(){'use strict';if(!('serviceWorker'in navigator))return;const ok=location.protocol==='https:'||location.hostname==='localhost'||location.hostname==='127.0.0.1';if(ok)window.addEventListener('load',()=>navigator.serviceWorker.register('service-worker.js',{scope:'./'}).catch(err=>console.warn('LiteraryFriend service worker:',err)));})();

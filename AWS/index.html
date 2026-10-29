@@ -1,140 +1,45 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <base href="./script/vendor/LiteraryFriend/">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0c141d">
-  <meta name="application-name" content="Aza’raan Writing Studio">
-  <meta name="apple-mobile-web-app-title" content="AWS">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="description" content="Aza’raan Writing Studio: language studio, glyph workshop and eight book workspaces.">
-  <title>Aza’raan Writing Studio</title>
-  <link rel="manifest" href="../../../manifest.webmanifest">
-  <link rel="icon" href="../../../assets/images/icon-64.png" type="image/png">
-  <link rel="apple-touch-icon" href="../../../assets/images/icon-180.png">
-  <link rel="stylesheet" href="css/luxury-editor.css">
-
-  <link rel="stylesheet" href="css/literary-friend.css">
-  <script defer src="script/js/languages.js"></script>
-  <script defer src="script/js/unicode-data.js"></script>
-  <script defer src="script/js/storage.js"></script>
-  <script defer src="script/js/app.js"></script>
-  <script defer src="script/js/literary-core.js"></script>
-  <script defer src="script/js/literary-writer-tools.js"></script>
-  <script defer src="script/js/helper-safe.js"></script>
-  <script defer src="script/js/helper-chunks.js"></script>
-  <script defer src="script/js/wasm-diagnostics.js"></script>
-  <script defer src="script/js/wasm-preload.js"></script>
-  <script defer src="script/js/resize-panels.js"></script>
-  <script defer src="script/js/literary-friend.js"></script>
-  <script defer src="../../../script/js/backend-bridge.js"></script>
-  <script defer src="../../../script/js/pwa.js"></script>
-  <link rel="stylesheet" href="../../../style/css/writerhelper.css">
-  <link rel="stylesheet" href="../../../style/css/aza-integration.css">
-  <link rel="stylesheet" href="../../../style/css/font-workshop.css">
-  <link rel="stylesheet" href="../../../style/css/writerhelper-theme.css">
-  <link rel="stylesheet" href="../../../style/css/master-navigation.css">
-  <script defer src="../../../script/js/writerhelper.js"></script>
-  <script defer src="../../../script/js/master-navigation.js"></script>
-  <script defer src="../../../script/js/fonteditor-core.min.js"></script>
-  <script defer src="../../../script/js/aza-language-document.js"></script>
-  <script defer src="../../../script/js/aza-integration.js"></script>
-  <script defer src="../../../script/js/font-workshop-core.js"></script>
-  <script defer src="../../../script/js/font-workshop.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101e27">
+<meta name="description" content="Aza’raan Writing Studio read-only historical and manuscript archive">
+<title>Aza’raan Writing Studio · View only</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/images/icon-64.png">
+<link rel="stylesheet" href="./viewer.css">
+<script defer src="./viewer.js"></script>
 </head>
 <body>
-  <div class="app" id="app">
-    <aside class="workspace-rail" aria-label="Workspaces">
-      <div class="rail-head" title="Aza’raan Writing Studio"><img src="../../../assets/images/icon-64.png" width="34" height="34" alt="Aza’ra Universe"></div>
-      <div class="workspace-list" id="workspace-list" aria-label="Project workspaces"></div>
-      <button class="rail-add" id="new-workspace" title="New workspace" aria-label="New workspace">+</button>
-      <div class="rail-spacer"></div>
-      <button class="rail-tool" id="rail-home" title="All tasks" aria-label="All tasks">☷</button>
-      <button class="rail-tool" id="rail-settings" title="Settings and data" aria-label="Settings">⚙</button>
-    </aside>
-
-    <aside class="channels-pane" id="channels-pane" aria-label="Channels">
-      <div class="channels-top"><div class="eyebrow">WORKSPACE</div><div class="workspace-title-row"><h2 id="workspace-title">Writing studio</h2><button class="icon-button subtle" id="rename-workspace" title="Rename workspace" aria-label="Rename workspace">✎</button></div></div>
-      <div class="channels-scroll">
-        <div class="channels-heading"><span>WRITING CHANNELS</span><button id="new-writing" class="plus-small" title="Add a writing channel" aria-label="Add writing channel">+</button></div>
-        <nav id="writing-channels" class="channel-list" aria-label="Writing channels"></nav>
-        <div class="channels-heading"><span>WRITING STUDIOS</span><button id="new-studio" class="plus-small" title="Add a two-pane writing studio" aria-label="Add writing studio">+</button></div>
-        <nav id="studio-channels" class="channel-list" aria-label="Writing studios"></nav>
-        <div class="channel-help">Every channel is an editable document. Studios provide two simultaneous writing surfaces.</div>
-      </div>
-      <div class="sidebar-footer"><span class="avatar"><img src="../../../assets/images/icon-64.png" width="35" height="35" alt="Aza’ra Universe"></span><span><strong>Aza’raan Writing Studio</strong><small>Private writing workspace</small></span><button class="icon-button subtle" id="sidebar-settings" title="Settings">⚙</button></div>
-    </aside>
-
-    <div class="shell-main">
-      <header class="app-topbar">
-        <div class="topbar-start"><button class="icon-button mobile-menu" id="toggle-sidebar" aria-label="Toggle channels">☰</button><span class="crumb-workspace" id="crumb-workspace">Library</span><span class="crumb-sep">/</span><strong id="crumb-channel">Manuscript</strong><span class="autosave" id="autosave-status" role="status">Saved locally</span></div>
-        <div class="topbar-actions"><button class="btn tiny light" id="top-task">+ Task</button><button class="btn tiny light" id="open-helper" aria-haspopup="dialog">✎ Helper</button><button class="btn tiny light" id="toggle-inspector" aria-expanded="true">◫ Planner</button><button class="btn tiny gold" id="export-doc">↓ Export</button></div>
-      </header>
-
-      <section class="editor-section" aria-label="Writing workspace">
-        <div class="editor-top">
-          <div class="editor-heading"><div class="eyebrow" id="channel-type">DOCUMENT ROOM</div><div class="title-line"><input id="document-title" class="document-title" aria-label="Document title" maxlength="100" value="Manuscript"><span class="type-mark" id="type-mark">01</span></div><p id="document-subtitle" class="editor-subtitle">A quiet place for the next chapter.</p></div>
-          <div class="language-strip"><label for="language-select">Writing language</label><select id="language-select" aria-label="Writing language"></select></div>
-        </div>
-        <div class="editor-toolbar" id="editor-toolbar" role="toolbar" aria-label="Document formatting">
-          <div class="tool-group"><select id="format-block" title="Paragraph style" aria-label="Paragraph style"><option value="p">Normal text</option><option value="h1">Heading 1</option><option value="h2">Heading 2</option><option value="h3">Heading 3</option><option value="blockquote">Quote</option></select><select id="font-select" title="Document font" aria-label="Document font"><option value="Georgia">Georgia</option><option value="'Playfair Display', Georgia">Playfair Display</option><option value="Arial">Arial</option><option value="'Times New Roman'">Times New Roman</option><option value="'IBM Plex Mono', monospace">IBM Plex Mono</option></select><select id="font-size" title="Base font size" aria-label="Base font size"><option value="14">14</option><option value="16">16</option><option value="18" selected>18</option><option value="20">20</option><option value="24">24</option><option value="28">28</option></select></div>
-          <div class="tool-divider"></div><div class="tool-group"><button class="format-button" data-command="bold" title="Bold (Ctrl+B)"><b>B</b></button><button class="format-button" data-command="italic" title="Italic (Ctrl+I)"><i>I</i></button><button class="format-button" data-command="underline" title="Underline (Ctrl+U)"><u>U</u></button><button class="format-button" data-command="strikeThrough" title="Strikethrough"><s>S</s></button></div>
-          <div class="tool-divider"></div><div class="tool-group"><button class="format-button" data-command="justifyLeft" title="Align left">☷</button><button class="format-button" data-command="justifyCenter" title="Center">≡</button><button class="format-button" data-command="justifyRight" title="Align right">☰</button><button class="format-button" data-command="insertUnorderedList" title="Bulleted list">• ≡</button><button class="format-button" data-command="insertOrderedList" title="Numbered list">1. ≡</button></div>
-          <div class="tool-divider"></div><div class="tool-group"><button class="format-button" data-command="undo" title="Undo (Ctrl+Z)">↶</button><button class="format-button" data-command="redo" title="Redo (Ctrl+Y)">↷</button><button class="format-button" data-command="removeFormat" title="Remove formatting">Tx</button><button class="format-button" id="insert-divider" title="Insert horizontal rule">―</button></div>
-          <div class="tool-grow"></div><button id="upload-font" class="toolbar-text-button" title="Upload a font">+ Font</button><button id="print-doc" class="toolbar-text-button" title="Print document">Print</button>
-        </div>
-        <div class="writing-surface" id="writing-surface"><!-- Rendered from saved state --></div>
-        <footer class="writing-footer"><div><span id="word-count">0 words</span><span class="dot">·</span><span id="character-count">0 characters</span><span class="dot">·</span><span id="current-language">English</span></div><div class="save-indicator"><span class="status-dot"></span><span id="footer-save">Saved locally; cloud connection optional</span></div></footer>
-      </section>
-    </div>
-
-    <aside class="inspector" id="inspector" aria-label="Planner and channel details">
-      <div class="inspector-header"><span class="eyebrow">THE PLANNER</span><button class="icon-button subtle" id="close-inspector" title="Close planner" aria-label="Close planner">×</button></div>
-      <div class="inspector-content"><div class="planner-card planner-date"><div class="eyebrow">YOUR WRITING DAY</div><div class="today-line" id="date-label">Today</div><div class="today-summary" id="task-summary">No tasks yet.</div><button class="btn green full" id="new-task">+ New task / reminder</button></div>
-        <div class="planner-section"><div class="planner-section-title"><h3>Tasks & reminders</h3><select id="task-filter" aria-label="Task filter"><option value="current">Channel</option><option value="workspace">Workspace</option><option value="all">All</option></select></div><div id="task-list" class="tasks"></div></div>
-        <div class="planner-section"><div class="planner-section-title"><h3>Channel notes</h3><span class="eyebrow">PRIVATE</span></div><textarea id="channel-notes" placeholder="Ideas, continuity notes, next steps…" aria-label="Channel notes" rows="5"></textarea><small>Notes save with this channel.</small></div>
-        <div class="planner-section"><div class="planner-section-title"><h3>Project tools</h3></div><div class="tool-stacks"><button class="btn outline full" id="new-channel-shortcut">+ Create channel</button><button class="btn outline full" id="open-backup">Back up / restore workspace</button><button class="btn outline full" id="inspector-helper">Open writing Helper</button></div></div>
-      </div>
-    </aside>
-  </div>
-
-
-  <section id="helper-window" class="helper-window" role="dialog" aria-label="Aza’raan Writing Studio writing Helper" aria-modal="false" hidden>
-    <header id="helper-handle" class="helper-header"><div class="helper-title"><strong>Aza’raan Writing Studio</strong><small>Writing Helper · offline-first tools</small></div><div class="helper-actions"><button id="helper-collapse" title="Collapse Helper" aria-label="Collapse Helper">−</button><button id="helper-close" title="Close Helper" aria-label="Close Helper">×</button></div></header>
-    <div id="helper-body" class="helper-body">
-      <nav class="helper-tabs" aria-label="Helper tools" role="tablist">
-       <button class="helper-tab active" data-helper-tab="scan" role="tab">Draft scan</button>
-       <button class="helper-tab" data-helper-tab="find" role="tab">Find & replace</button>
-       <button class="helper-tab" data-helper-tab="outline" role="tab">Outline</button>
-       <button class="helper-tab" data-helper-tab="continuity" role="tab">Continuity</button>
-       <button class="helper-tab" data-helper-tab="reference" role="tab">References</button>
-       <button class="helper-tab" data-helper-tab="glyphs" role="tab">Glyph studio</button>
-       <button class="helper-tab" data-helper-tab="book" role="tab">Book layout</button>
-      </nav>
-      <div class="helper-content" id="helper-content" role="tabpanel"></div>
-      <footer class="helper-footer"><span id="helper-summary" role="status">No generated writing. Your words stay yours.</span><span>Drag any side or corner to resize.</span></footer>
-    </div>
-  </section>
-
-  <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
-  <input type="file" id="font-upload-input" hidden accept=".ttf,.otf,.woff,.woff2,font/ttf,font/otf,font/woff,font/woff2" multiple>
-  <input type="file" id="import-input" hidden accept=".json,application/json">
-  <input type="file" id="document-import-input" hidden accept=".txt,.html,.htm,text/plain,text/html">
-
-  <dialog id="main-dialog" class="modal" aria-labelledby="dialog-title"><form id="dialog-form" method="dialog"><header><div class="eyebrow" id="dialog-kicker">LITERARY FRIEND</div><h2 id="dialog-title">New item</h2><button type="button" id="dialog-close" class="icon-button subtle" aria-label="Close dialog">×</button></header><div id="dialog-fields" class="dialog-fields"></div><footer class="modal-actions"><button type="button" id="dialog-cancel" class="btn outline">Cancel</button><button type="submit" id="dialog-submit" class="btn green">Create</button></footer></form></dialog>
-
-  <dialog id="settings-dialog" class="modal settings-modal" aria-labelledby="settings-title"><div class="settings-inner"><header><div class="eyebrow">SETTINGS & DATA</div><h2 id="settings-title">Your writing library</h2><button id="settings-close" class="icon-button subtle" aria-label="Close dialog">×</button></header><p>Your writing saves on this device. Install the app separately on each device, then connect the same account: sync this device’s local library to cloud, and restore that snapshot on the other device. Local autosave and downloadable backups remain available.</p><div class="settings-buttons"><button class="btn green" id="backup-json">↓ Export complete backup</button><button class="btn outline" id="restore-json">↑ Restore backup</button><button class="btn outline" id="import-document">↑ Import text / HTML document</button><button class="btn outline" id="notification-permission">Enable reminder notifications</button></div><h3>Account connection</h3>
-<div class="bridge-box" id="bridge-box">
-  <div id="bridge-status" role="status">Local-only. No account connected.</div>
-  <label>Account email or username <input id="bridge-login" type="text" autocomplete="username" placeholder="Username or email"></label>
-  <label>Password <input id="bridge-password" type="password" autocomplete="current-password" placeholder="Password"></label>
-  <label>Two-factor code (when requested) <input id="bridge-2fa" type="text" inputmode="numeric" autocomplete="one-time-code" placeholder="Code"></label>
-  <div class="bridge-buttons"><button id="bridge-connect" class="btn green">Connect / sign in</button><button id="bridge-verify" class="btn outline">Verify code</button><button id="bridge-push" class="btn outline">Sync local → cloud</button><button id="bridge-pull" class="btn outline">Restore cloud → local</button><button id="bridge-signout" class="btn outline">Disconnect</button></div>
-  <small>To use this library on another device, connect the same account on both devices. On the current device choose “Sync local → cloud”; on the other choose “Restore cloud → local”. Each upload creates a new cloud snapshot and does not delete earlier copies. Restore replaces that device’s local library after confirmation.</small>
-</div><h3>Uploaded fonts</h3><div id="uploaded-fonts-list">No uploaded fonts.</div><h3>Selected workspace</h3><button class="btn danger" id="delete-workspace">Delete selected workspace</button><p class="fine-print">Reminders are checked while this app is open. Browser notifications require permission and a supported context. Cloud synchronization works only after successful connection to the existing backend bridge.</p></div></dialog>
-
-<section id="wh-language-overlay" hidden aria-label="Complete Aza’raan language studio"><header><span>01 Language · Writing, Voice &amp; Evolution</span><button type="button" id="wh-open-font-workshop">✒ Font workshop</button></header><iframe id="wh-language-frame" title="Complete Aza’raan language studio"></iframe></section>
-<section id="wh-font-workshop" hidden aria-label="Aza’raan font workshop"><header><img src="../../../assets/images/icon-64.png" alt="" width="40" height="40"><div><strong>Font Workshop</strong><small>Names, metadata, glyphs, spacing and TrueType export</small></div><button type="button" id="wh-font-close" aria-label="Close font workshop">×</button></header><div class="wh-font-content"><aside class="wh-font-sidebar"><label>Era <select id="wh-font-era"><option>Proto</option><option>Ancient</option><option>Archaic</option><option>Classical</option><option>Traditional</option><option selected>Modern</option></select></label><label>Find a glyph <input id="wh-font-search" type="search" placeholder="Name or U+1780"></label><div id="wh-font-glyph-list" role="listbox" aria-label="Glyphs"></div></aside><main class="wh-font-main"><div class="wh-font-fields"><label>Font family <input id="wh-font-family" maxlength="80"></label><label>Style <input id="wh-font-style" maxlength="60"></label><label>Version <input id="wh-font-version" maxlength="60"></label><label>Designer <input id="wh-font-designer" maxlength="100"></label><label>Description <input id="wh-font-description" maxlength="240"></label><label>Copyright <input id="wh-font-copyright" maxlength="240"></label><label>Manufacturer <input id="wh-font-manufacturer" maxlength="100"></label><label>Designer website <input id="wh-font-designer-url" type="url" maxlength="240"></label><label>License <input id="wh-font-license" maxlength="1000"></label><label>License website <input id="wh-font-license-url" type="url" maxlength="240"></label></div><div class="wh-font-metrics"><label>Baseline shift <input id="wh-font-baseline" type="range" min="-240" max="240" value="0"><output id="wh-font-baseline-value">0</output></label><label>Letter spacing <input id="wh-font-spacing" type="range" min="-180" max="300" value="0"><output id="wh-font-spacing-value">0</output></label><label>Ascender <input id="wh-font-ascender" type="number" min="100" max="3000"></label><label>Descender <input id="wh-font-descender" type="number" min="-2000" max="-10"></label></div><section class="wh-font-glyph-editor"><h3>Selected glyph</h3><div class="wh-font-glyph-controls"><label>Unicode <input id="wh-font-codepoint" placeholder="U+1780"></label><label>Glyph name <input id="wh-font-glyph-name" maxlength="80"></label><label>Advance width <input id="wh-font-advance" type="number" min="0" max="4000"></label><label>New glyph Unicode <input id="wh-font-new-codepoint" placeholder="U+E101"></label><button id="wh-font-add-glyph" type="button">Add glyph</button></div><details class="wh-font-glyph-notes"><summary>Glyph meaning, sound, research & lineage</summary><div class="wh-font-glyph-metadata"><label>Meaning <input id="wh-font-glyph-meaning" maxlength="240"></label><label>Category <input id="wh-font-glyph-category" maxlength="100"></label><label>Keyboard key <input id="wh-font-glyph-key" maxlength="30"></label><label>IPA <input id="wh-font-glyph-ipa" maxlength="120"></label><label>Sound cue <input id="wh-font-glyph-sound" maxlength="160"></label><label>Pronunciation <input id="wh-font-glyph-pronunciation" maxlength="240"></label><label>Transliteration <input id="wh-font-glyph-transliteration" maxlength="160"></label><label>Latin substitute <input id="wh-font-glyph-latin" maxlength="40"></label><label>Parent glyphs, comma-separated <input id="wh-font-glyph-parents" maxlength="600"></label><label>Confidence, 0–1 <input id="wh-font-glyph-confidence" type="number" min="0" max="1" step="0.05"></label><label>Research notes <textarea id="wh-font-glyph-notes" maxlength="12000" rows="3"></textarea></label><label>Lineage note <textarea id="wh-font-glyph-lineage" maxlength="4000" rows="3"></textarea></label></div><button id="wh-font-glyph-details-save" type="button">Save glyph details</button></details><div class="wh-font-transforms"><label>Move horizontally <input id="wh-font-offset-x" type="number" value="0" min="-4000" max="4000"></label><label>Move vertically <input id="wh-font-offset-y" type="number" value="0" min="-4000" max="4000"></label><label>Width scale % <input id="wh-font-scale-x" type="number" value="100" min="10" max="400"></label><label>Height scale % <input id="wh-font-scale-y" type="number" value="100" min="10" max="400"></label><button id="wh-font-transform" type="button">Apply to glyph</button></div><section class="wh-glyph-sound-assignment" aria-label="Glyph sound assignment"><h4>Glyph sound and grammar assignment</h4><p>These labels are stored separately from Unicode. An assigned IPA becomes the spoken value of the selected glyph in the Aza’raan keyboard.</p><div class="wh-font-transforms"><label>Slot type <select id="wh-glyph-category"><option value="letter">Letter glyph</option><option value="accent">Accent / diacritic</option></select></label><label>Sound <input id="wh-glyph-sound" maxlength="120" placeholder="apple, glottal, short A"></label><label>IPA <input id="wh-glyph-ipa" maxlength="120" placeholder="æ, ʔ, t͡ʃ"></label><label>Aza’raan grammar family <select id="wh-glyph-family"><option value="A">A</option><option value="B">B</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option><option value="J">J</option><option value="K">K</option><option value="L">L</option><option value="M">M</option><option value="N">N</option><option value="O">O</option><option value="P">P</option><option value="R">R</option><option value="S">S</option><option value="T">T</option><option value="U">U</option><option value="V">V</option><option value="W">W</option><option value="Y">Y</option><option value="Z">Z</option><option value="Special">Special</option></select></label><button id="wh-glyph-assignment-save" type="button">Save sound assignment</button></div><div class="wh-font-transforms"><button id="wh-font-duplicate-glyph" type="button">Duplicate to new Unicode slot</button><button id="wh-font-delete-glyph" type="button">Retire non-standard glyph</button></div><div class="wh-glyph-upload-review" id="wh-glyph-upload-review" hidden><strong>Review uploaded glyph</strong><p id="wh-glyph-upload-status"></p><div class="wh-font-actions"><button id="wh-glyph-upload-approve" type="button">Approve upload</button><button id="wh-glyph-upload-cancel" type="button">Cancel</button></div></div><div class="wh-glyph-retired"><strong>Retired Unicode slots</strong><div id="wh-font-retired-list"></div></div></section><canvas id="wh-font-canvas" width="760" height="310" aria-label="Glyph outline preview"></canvas><div class="wh-font-draw-panel"><div class="wh-font-draw-tools"><label>Drawing tool <select id="wh-font-draw-tool" aria-label="Drawing tool"><option value="draw">Draw</option><option value="erase">Erase</option></select></label><label>Brush size <input id="wh-font-brush-size" type="range" min="2" max="72" value="14"><output id="wh-font-brush-size-value">14 px</output></label><label>Ink <input id="wh-font-brush-color" type="color" value="#123f48"></label><button id="wh-font-draw-undo" type="button">Undo stroke</button><button id="wh-font-draw-redo" type="button">Redo stroke</button><button id="wh-font-draw-clear" type="button">Clear layer</button><button id="wh-font-layer-add" type="button">+ Layer</button><button id="wh-font-layer-duplicate" type="button">Duplicate layer</button><button id="wh-font-layer-merge" type="button">Merge down</button><button id="wh-font-layer-delete" type="button">Delete layer</button><button id="wh-font-layer-up" type="button" aria-label="Move layer up">↑ Layer</button><button id="wh-font-layer-down" type="button" aria-label="Move layer down">↓ Layer</button><button id="wh-font-draw-trace" type="button">Trace layers to outline</button></div><div id="wh-font-layer-list" class="wh-font-layer-list" role="list" aria-label="Glyph artwork layers"></div><div class="wh-font-drawing-board"><canvas id="wh-font-draw-canvas" width="512" height="512" aria-label="Draw the selected glyph"></canvas><div class="wh-font-baseline-guide" aria-hidden="true"></div></div><p>Draw on separate named layers, adjust visibility, opacity and blend mode, then trace the composite into editable font contours. Layers, labels and glyph metrics save locally between visits. Export a .azglyph project to carry them to another device.</p></div><p>Upload an SVG outline or a high contrast PNG to replace the selected glyph. PNGs are traced into editable outlines; SVG paths, circles and polygons are supported.</p><div class="wh-font-import-controls"><label>PNG ink <select id="wh-font-ink"><option value="auto">Auto</option><option value="dark">Dark ink on light</option><option value="light">Light ink on dark</option><option value="alpha">Transparent silhouette</option></select></label><label>PNG threshold <input id="wh-font-threshold" type="number" min="1" max="254" value="170"></label></div><input id="wh-font-glyph-upload" type="file" accept=".svg,.png,image/svg+xml,image/png"></section><section class="wh-font-kerning"><h3>Pair spacing</h3><p>Enter two characters or their U+ codes. Use negative values to bring them closer, then update the preview.</p><div class="wh-font-transforms"><label>Left glyph <input id="wh-font-kern-left" placeholder="U+1780"></label><label>Right glyph <input id="wh-font-kern-right" placeholder="U+1781"></label><label>Adjustment <input id="wh-font-kern-value" type="number" min="-2000" max="2000" value="-30"></label><button id="wh-font-kern-save" type="button">Set pair</button></div><div id="wh-font-kern-list"></div></section><section class="wh-font-preview"><label>Proof text <input id="wh-font-proof-input" value="Aza’raan  ប៊ា គិ" spellcheck="false"></label><div id="wh-font-proof" aria-live="polite"></div><button id="wh-font-update-preview" type="button">Update font preview</button></section><div class="wh-font-actions"><label class="wh-font-upload-button">Import TTF / OTF <input id="wh-font-import" type="file" accept=".ttf,.otf,font/ttf,font/otf"></label><button id="wh-font-save" type="button">Save draft</button><button id="wh-font-use" type="button">Use in books</button><button id="wh-font-export" type="button">Export TTF</button><button id="wh-font-export-json" type="button">Export TTF project JSON</button><button id="wh-font-export-azglyph" type="button">Export current era .azglyph</button><label class="wh-font-upload-button">Import font or .azglyph project <input id="wh-font-import-json" type="file" accept=".json,.azglyph.json,application/json"></label></div><p id="wh-font-status" role="status" aria-live="polite">Loading font…</p></main></div></section>
+<header class="mast">
+<img src="./assets/images/icon-64.png" alt="Aza’ra Universe" width="52" height="52">
+<div><strong>Aza’raan Writing Studio</strong><small>Preserved language evolution and book archives</small></div>
+<span class="status">VIEW ONLY</span>
+</header>
+<div class="layout">
+<nav class="rail" aria-label="Read-only workspaces">
+<h2>LANGUAGE</h2><button class="nav selected" type="button" id="go-language">Historical evolution</button>
+<h2>BOOKS</h2><div id="books"></div>
+<p class="small">The previous keyboards, speech tools and all text-entry controls have been removed. Existing manuscripts are not deleted.</p>
+</nav>
+<main>
+<section id="language-view">
+<p class="eyebrow">AZA’RAAN REFERENCE</p>
+<h1>Six eras of evolution</h1>
+<p>Historical glyphs and lineages are displayed for reference only. This page contains no writing, keyboard or voice controls.</p>
+<div id="eras" class="eras" aria-label="Language eras"></div>
+<h2 id="era-title">Historical glyph archive</h2>
+<div class="gallery" id="gallery"></div>
+<p id="gallery-status" role="status">Loading preserved glyph artwork…</p>
+</section>
+<section id="book-view" hidden>
+<p class="eyebrow">BOOK LIBRARY · READ ONLY</p><h1 id="book-title">Book</h1>
+<p>Saved manuscript pages can be viewed, but not edited.</p>
+<div id="pages" class="eras" aria-label="Saved pages"></div>
+<article id="page-text" class="manuscript" aria-live="polite"></article>
+</section>
+</main>
+</div>
 </body>
 </html>

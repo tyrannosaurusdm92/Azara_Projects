@@ -1,2 +1,0 @@
-import {backend} from './backend-client.js';import {store} from '../core/state-store.js';const pid=()=>store.get('activeProject')?.id;
-export const AttachmentService={upload(data){return backend.call('attachments.upload',{projectId:data.projectId||pid(),...data},{timeoutMs:120000});},list(data={}){return backend.call('attachments.list',{projectId:data.projectId||pid(),...data});},remove(id){return backend.call('attachments.delete',{id,attachmentId:id});}};
