@@ -1,0 +1,76 @@
+{
+  "id": "ttrpg-lore",
+  "title": "Galaxy and Historical Worldbuilding References",
+  "category": "worldbuilding",
+  "source_url": "https://drive.google.com/file/d/17LyhWZNm5xuWCFuqMUQyN0jcp0KD3l60/view",
+  "status": "reference_only",
+  "warning": "Only worldbuilding sections from original game guidebooks were retained. Gameplay mechanics were not integrated into AWS.",
+  "sections": [
+    {
+      "title": "Guide and Continuity Boundaries",
+      "text": "Tab 01  |  Guide and Continuity Boundaries\nThe Aza'ra TTRPG supports two campaign families. Historical Belavadös takes place before the Iron Dominion destroys the continent. The separate, alternate-universe Galaxy Era takes place around 3013 CE, amid interplanetary travel and mature temporal technology.\nChoose a continuity and era before character creation. Keep the original attribute, skill, consequence, magic, and relationship systems shared while changing routes, technology, available communities, and campaign pressures to match the era.\nThe Galaxy Era is a playable period, not a reenactment of Book Two. The novel's Earth antiquities and Bilqis's personal mystery must not become obligatory tabletop objectives.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 1
+    },
+    {
+      "title": "The Cataclysm and Historical Calendar",
+      "text": "Tab 02  |  The Cataclysm and Historical Calendar\nCANON UPDATE | The same 1351 BCE event also connected Earth and Aza'ra to a shared underworld. This shared passage predates the later magic-draining Veil. Keep the chronology separate from the 312 CE destruction of Belavadös and the 492 CE MMORPG start.\nThe Cataclysm occurs in 1351 BCE. Ancient maps should show a world in the long aftermath of this event, with migrations and political arrangements specific to the chosen century.\nA session log records year, calendar convention, weather, travel time, local authority and known historical events. Do not assume a single empire rules every location.\nBelavadös only exists as a playable living continent before its final destruction.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 2
+    },
+    {
+      "title": "Belavadös Before the Iron Dominion Bomb",
+      "text": "Tab 03  |  Belavadös Before the Iron Dominion Bomb\nBelavadös supports cities, wilderness, waterways, markets, diplomatic pressure, faith, industry and slow political change before the hybrid antimatter/dark-matter weapon destroys the continent.\nCampaigns can center on salvage, relationships, civic life or war without forcing the catastrophe to happen in the players’ current story. The historical end remains fixed in canon.\nThe Iron Dominion drops the bomb, not Tzaphaer. The continent is completely destroyed, not transformed into a future open-world ruin.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 3
+    },
+    {
+      "title": "Galaxy Era: Interstellar Life and Time Laws",
+      "text": "Tab 04  |  Galaxy Era: Interstellar Life and Time Laws\nThe alternate-universe Galaxy Era around 3013 CE supports interstellar society, travel and regulated temporal technology. Time travel was invented in 2082 CE when its governing laws were established. Queen Bilqis is known for cunning and repeated disregard of temporal law. Most Galaxy Era campaigns should never need to deal with her personally.\nOffer shipboard, station, colony, trade, rescue, research, diplomatic, and navigation campaigns. Temporal incidents may be adjudicated as questions of authorization, paradox exposure, harm, and responsibility. Bilqis is the cunning Aza'raan queen of this period, notorious for repeatedly breaking the 2082 time laws. Most Galaxy Era adventures do not involve her directly.\nKeep Bilqis as background, not a forced campaign objective. No dedicated clue ledger or Sheba and Atlantis archaeology is part of the Galaxy Era rules.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 4
+    },
+    {
+      "title": "Playable Species and Mixed Ancestry",
+      "text": "Tab 07  |  Playable Species and Mixed Ancestry\nPlayable people include established Aza’raan mixed-ancestry communities and species such as Kaluseban, Tamhiogal, Dril’thar, Azrahai, Volsarii and others in the strict roster. Their cultures and languages contribute to Aza’raan through contact. Eight additional names remain unapproved proposals.\nAllow heritage languages, common Aza’raan and regional speech, without claiming every member of a species shares one accent. Adapt names and historical etymologies through the multilingual contact register. Keep game statistics governed by the original shared tabletop rules, not by stereotypes.\nDo not introduce mainstream fantasy species labels as replacement names.\nAzrahai (ancient Azh’raim): The Aza'ran draconic people; their nine established lineages retain their original names. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nGandirosha: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nPanolima: An original Aza'ran people with five elemental bloodlines. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nGwynis: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nGeisamahi: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nDril'thar: An original Aza'ran people; every established bloodline can breathe underwater. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nTamhiogal: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nJaspey: An original Aza'ran people with three established non-bloodline forms. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nAburata: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nDeorbasun: An original Aza'ran people; its soul-animal bloodline remains open until the first true soul bond. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nVolsarii: Mortal ferrymen of the dead who serve Nyxarion, live multiple lives, and gain wings in their final life. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nOruvakhi: Night-adapted luminous wayfinders descended from migrating twilight-spirit traditions. Their families organize routes by memorized constellations. Naming influences: Finnish and Swahili. Status: new proposal, not author approved.\nMahindari: Tidal skinchangers linked to old human stories of beings who crossed between shore and sea. Their coast cultures protect ancestral landing sites. Naming influences: Georgian and Tagalog. Status: new proposal, not author approved.\nQelusari: Winged highland voyagers descending from immense sky-creature legends who followed portal currents to Aza’ra. Naming influences: Welsh and Malayalam. Status: new proposal, not author approved.\nAnobari: Small-bodied hearth guardians descended from protective household-spirit folktales. Their craft traditions emphasize shared domestic safety. Naming influences: Basque and Thai. Status: new proposal, not author approved.\nTserukhi: River-canyon guardians whose ancestors came from water-serpent legends. They build flood-safe structures and keep living river maps. Naming influences: Quechua and Turkish. Status: new proposal, not author approved.\nZavomeri: Nocturnal pollen-tenders linked to luminous insect folklore. Their kin networks cultivate restoration gardens after environmental disasters. Naming influences: Yoruba and Japanese. Status: new proposal, not author approved.\nHelunari: Dryland mirage travelers inspired by desert spirit stories, with craft traditions designed around heat and distance. Naming influences: Persian and Māori. Status: new proposal, not author approved.\nAvurashi: Old-growth grove keepers descended from mobile wood-spirit stories, skilled in patient ecological repair. Naming influences: Ainu and Spanish. Status: new proposal, not author approved.\nThe strict pantheon file establishes twelve distinct original peoples, including Kaluseban, Azrahai, Dril’thar, Tamhiogal, Deorbasun and Volsarii. The wider twenty-plus target requires additions not yet ratified.\nSpecies determines descriptive ancestry options and cultural knowledge, not moral alignment. Mixed ancestry is ordinary; Princess Lohkahna has Tamhiogal and Kaluseban ancestry, while Jacob has Deorbasun ancestry.\nDo not introduce mainstream fantasy species labels as replacement names.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 7
+    },
+    {
+      "title": "Magic Sources and Collaborative Casting",
+      "text": "Tab 11  |  Magic Sources and Collaborative Casting\nEvery soul generates magic at birth. Ambient magic on Aza’ra is abundant but volatile, making large workings safer when practitioners cooperate and anchor them in stable places.\nIn the starter engine a small working uses Attunement plus Weave against 9. A complex working costs one Focus and needs a preparation or a second contributor; dangerous remote transit is never a consequence-free shortcut.\nFocus equals 3 plus Attunement. Failed magic can change position, add fatigue or break an unstable working, with outcomes announced before the roll.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 11
+    },
+    {
+      "title": "Divine Roles and Boundaries",
+      "text": "Tab 12  |  Divine Roles and Boundaries\nCANON UPDATE | Current afterlife: Nyxarion rules the shared passage alongside Volsara, his wife and demigod of peace and transition. Volsarii are soul-ferriers with successive mortal lives. Anubriosh has lost the death office and retains necromancy and hostility toward those who survive death. Aramaic-derived old underworld place names are retired; use descriptive placeholders pending true Aza'raan terms.\nThe strict pantheon has Nyxarion as compassionate god of death and Anubriosh as the former god of death now pursuing necromancy and those who evade death. Volsara freely accepted ascension and later married Nyxarion.\nA divine relationship may create a quest, a vow, a boon or a price. Characters retain agency even when dealing with patrons such as Ruqore, Wenaskozid, Selkhanis and Vulkiris.\nOnly deity names in the supplied strict pantheon may be used as current deities.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 12
+    },
+    {
+      "title": "Factions, Courts and Reputation",
+      "text": "Tab 16  |  Factions, Courts and Reputation\nBelavadös politics involve institutions, guilds, alliances and opposition that remember deeds. The same faction may be protective of one settlement and exploitative in another.\nTrack relationship standing separately for faction, named NPC and local law. A promise broken in one town should produce credible consequences, not omniscient hostility from every inhabitant.\nDo not assign every faction to a deity or moral axis.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 16
+    },
+    {
+      "title": "Settlements, Architecture and Homes",
+      "text": "Tab 19  |  Settlements, Architecture and Homes\nPlayers may help design shelters, workshops, docks, markets, gardens and entire neighborhoods, with accessibility and utilities considered from the first plan.\nA settlement ledger records occupied lots, food, clean water, energy capacity, road access, labor demand and resident trust. Place projects using terrain constraints and honest material costs.\nBelavadös settlements become historical locations after the destruction, not active MMORPG maps.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 19
+    },
+    {
+      "title": "Travel, Public Transit and Portals",
+      "text": "Tab 21  |  Travel, Public Transit and Portals\nCANON UPDATE | Portals between living worlds and guarded access to the underworld are separate systems. The old source records a three-hour protective ritual for living visitors to the Veilgate; the details remain under author review. Do not create a routine shortcut through the afterlife realm.\nDesignated short-range public transit anchors are much safer than uncontrolled long-range teleportation. Ships, caravans, accessible routes and transit hubs therefore matter culturally and economically.\nA journey records departure, route segments, passage cost, supply needs and hazards. Dangerous jumps require agreed destination uncertainty and a recovery option.\nA failed long-range jump can be catastrophic; no starter ability permits unlimited safe teleportation.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 21
+    },
+    {
+      "title": "Vehicles, Spacecraft and Communication",
+      "text": "Tab 22  |  Vehicles, Spacecraft and Communication\nGalaxy Era characters navigate ships, habitats, public stations, communications networks, interplanetary routes, and occasionally regulated time travel. Historical Belavadös instead emphasizes surviving contemporary transit, vessels, and known magic-anchored routes.\nModel journeys with travel legs, supply and maintenance demands, crew responsibilities, and scene-level risk. If a temporal transfer is proposed in the Galaxy Era, check the time laws established in 2082, document the claimed authorization, and let the facilitator adjudicate consequences without assuming paradox immunity.\nSpacecraft do not grant unrestricted time travel. The Galaxy Era is an alternate continuity and does not overwrite events in the eight-book story.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 22
+    }
+  ]
+}

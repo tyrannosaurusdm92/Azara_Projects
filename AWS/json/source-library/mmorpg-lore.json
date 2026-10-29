@@ -1,0 +1,88 @@
+{
+  "id": "mmorpg-lore",
+  "title": "Post-Cataclysm World and Civilization References",
+  "category": "worldbuilding",
+  "source_url": "https://drive.google.com/file/d/185EumFBs9zgwAw4lFuDFCE7Rk4ST5gM2/view",
+  "status": "reference_only",
+  "warning": "Only worldbuilding sections from original game guidebooks were retained. Gameplay mechanics were not integrated into AWS.",
+  "sections": [
+    {
+      "title": "Orientation and Current World State",
+      "text": "Tab 01  |  Orientation and Current World State\nThe MMORPG begins after the complete destruction of Belavadös. The accessible world is post-apocalyptic Aza’ra, where steampunk engineering and Moonpunk lunar technologies support survival, travel and community rebuilding.\nLaunch zones are anchored to surviving continents and stable skyways. Historical Belavadös may appear through documents, memorials and museum interfaces only.\nThe Iron Dominion caused Belavadös’s destruction. The game cannot present the continent as an ordinary explorable map.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 1
+    },
+    {
+      "title": "Steampunk: The Brassbound Age",
+      "text": "Tab 03  |  Steampunk: The Brassbound Age\nThe old 'From Steampunk to Moonpunk in Aza’ra' document calls the steampunk period the Brassbound Age. Brass, storm-forged iron, visible conduits, pressure engines and stabilized ley-light were practical necessities, not mere ornament.\nArchitecture should show serviceable pistons, chimney vents, accessible ramps, maintenance platforms and material weathering. Engineering failures have plausible repair paths.\nThe imported old prose is subject to newer energy and geography corrections.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 3
+    },
+    {
+      "title": "Moonpunk: Triune-Lunar Civilization",
+      "text": "Tab 04  |  Moonpunk: Triune-Lunar Civilization\nMoonpunk extends the Brassbound tradition into technologies organized around Duvaen, W’iosamn and Arvalla. Moon-cycle infrastructure affects lighting, manufacturing and settlement rituals.\nUse distinct warm, silver and blue-silver illumination patterns for the three moons, while retaining high-contrast readable UI. Power demand and lunar alignment create meaningful scheduling opportunities.\nLunar symbolism must not be mistaken for an unlimited energy source.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 4
+    },
+    {
+      "title": "Post-Apocalyptic Recovery",
+      "text": "Tab 05  |  Post-Apocalyptic Recovery\nCANON UPDATE | Long before the post-apocalyptic setting, Aza'raan families maintained secret Earth missions to help medicine, scholarship and technology, and saved knowledge from the Library of Alexandria and other threatened libraries. Their archives can survive as research and preservation quests without restoring destroyed Belavadös.\nThe disaster leaves population loss, disrupted supply routes and fragile local governance. Restoration involves surviving people with different needs and agendas, not empty ruin maps waiting to be conquered.\nEvery region tracks shelter, potable water, medical access, clean transit, safe gathering spaces and resident trust. Recovery quests reward genuine improvements.\nAvoid converting mass casualties into decorative scenery without narrative consequences.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 5
+    },
+    {
+      "title": "Continents, Zones and Access",
+      "text": "Tab 06  |  Continents, Zones and Access\nWorld zones belong to surviving landmasses or secure enclosed environments. Ruins, skyports, industrial districts, wetlands and reconstructed towns should feel distinct.\nZone metadata includes an era status, local climate, traversal support, faction access and portal stability. Prevent accidental placement of contemporary NPCs on destroyed Belavadös.\nA historical map may still show Belavadös as a lost reference.\nMap validation rule: any region with destroyed_continent=true must have explorable=false and post_bomb_location=false.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 6
+    },
+    {
+      "title": "Species and Mixed Ancestry",
+      "text": "Tab 07  |  Species and Mixed Ancestry\nPlayable peoples register: 13 established names, 8 additional original proposals. Proposed species are not yet approved canon.\nAza’raan: Mixed-ancestry portal descendants from the convergence of Earth and Uxrowo, central to the language and books. Naming influences: Proto-Oceanic + Uxrowoiye contact. Status: established by current user instructions.\nKaluseban: An original Aza'ran people with six established bloodlines. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nAzrahai (ancient Azh’raim): The Aza'ran draconic people; their nine established lineages retain their original names. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nGandirosha: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nPanolima: An original Aza'ran people with five elemental bloodlines. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nGwynis: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nGeisamahi: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nDril'thar: An original Aza'ran people; every established bloodline can breathe underwater. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nTamhiogal: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nJaspey: An original Aza'ran people with three established non-bloodline forms. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nAburata: An original Aza'ran people. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nDeorbasun: An original Aza'ran people; its soul-animal bloodline remains open until the first true soul bond. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nVolsarii: Mortal ferrymen of the dead who serve Nyxarion, live multiple lives, and gain wings in their final life. Naming influences: Aza’raan local and community rules, requires individual language guide. Status: established in strict pantheon JSON.\nOruvakhi: Night-adapted luminous wayfinders descended from migrating twilight-spirit traditions. Their families organize routes by memorized constellations. Naming influences: Finnish and Swahili. Status: new proposal, not author approved.\nMahindari: Tidal skinchangers linked to old human stories of beings who crossed between shore and sea. Their coast cultures protect ancestral landing sites. Naming influences: Georgian and Tagalog. Status: new proposal, not author approved.\nQelusari: Winged highland voyagers descending from immense sky-creature legends who followed portal currents to Aza’ra. Naming influences: Welsh and Malayalam. Status: new proposal, not author approved.\nAnobari: Small-bodied hearth guardians descended from protective household-spirit folktales. Their craft traditions emphasize shared domestic safety. Naming influences: Basque and Thai. Status: new proposal, not author approved.\nTserukhi: River-canyon guardians whose ancestors came from water-serpent legends. They build flood-safe structures and keep living river maps. Naming influences: Quechua and Turkish. Status: new proposal, not author approved.\nZavomeri: Nocturnal pollen-tenders linked to luminous insect folklore. Their kin networks cultivate restoration gardens after environmental disasters. Naming influences: Yoruba and Japanese. Status: new proposal, not author approved.\nHelunari: Dryland mirage travelers inspired by desert spirit stories, with craft traditions designed around heat and distance. Naming influences: Persian and Māori. Status: new proposal, not author approved.\nAvurashi: Old-growth grove keepers descended from mobile wood-spirit stories, skilled in patient ecological repair. Naming influences: Ainu and Spanish. Status: new proposal, not author approved.\nThe strict pantheon JSON establishes twelve playable species names. The design target is twenty or more, with all additional species gated as proposals until original names and source relationships are checked.\nCreation provides ancestry narratives, selectable cultural upbringing, appearance options and optional mixed heritage. Lohkahna’s Tamhiogal and Kaluseban ancestry and Jacob’s Deorbasun link are shared canon.\nDo not automatically infer abilities or temperament from ethnic or species names.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 7
+    },
+    {
+      "title": "Names, Identity and Languages",
+      "text": "Tab 08  |  Names, Identity and Languages\nNames and spoken language evolve through shared settlement life. Aza’raan merges Proto-Oceanic-inspired Kaʻaheʻanua and Uxrowoiye influences, then develops through contact with other original peoples, including Kaluseban, Tamhiogal, Dril’thar, Azrahai, Deorbasun and Volsarii.\nNPCs may speak community dialects, use borrowed words, choose heritage names or code switch. Store a language tag and contact register identifier for relevant dialogue; do not decide personality by species. The 52-letter Proto and 38-letter Modern references are not automatic fantasy translation ciphers.\nThe generator must not rewrite W’iosamn or protected archaic names to match a new spelling preference.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 8
+    },
+    {
+      "title": "Farming, Ecology and Resource Renewal",
+      "text": "Tab 14  |  Farming, Ecology and Resource Renewal\nCommunities need food, clean soil, sustainable timber and recovered habitats. Harvest rates must respond to ecological health and local weather rather than infinite resource nodes.\nPlots track crop families, water access, contamination, recovery time and biodiversity. Residents can contribute skills, while players choose whether to farm privately or cooperatively.\nPost-apocalyptic land should not become fully restored in an instant without in-world work.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 14
+    },
+    {
+      "title": "Architect and Interior Design",
+      "text": "Tab 15  |  Architect and Interior Design\nConstruction provides room-by-room placement, resizable walls, windows, doors, stairs, ramps, furniture and layered decoration. Building previews must show footprint and collision.\nThe design tool supports rotate, move, recolor, resize, undo, redo, templates and accessibility overlays. Save serialized floorplans as structured JSON with owner and permission records.\nFurniture should be usable where affordances exist rather than merely decorative.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 15
+    },
+    {
+      "title": "Private Dimensions and Whole Towns",
+      "text": "Tab 16  |  Private Dimensions and Whole Towns\nPlayers can establish private dimensions containing multiple streets, housing lots, gardens, businesses and communal buildings. A dimension is a persistent community project, not a small furniture-only plot.\nProvide zoning, infrastructure budgets, terrain editing, waterways, utilities, residents, guest roles, building permits and rollback/version history. Shared access must be opt-in.\nThe in-game town is a separate constructed space, not a way to restore the lost real continent of Belavadös.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 16
+    },
+    {
+      "title": "NPC Households and Daily Routines",
+      "text": "Tab 17  |  NPC Households and Daily Routines\nResidents have jobs, relationships, sleep routines, needs and rights to privacy. A settlement’s residents should remain people, not automated decorative resource producers.\nSchedule data stores home, workplace, kinships, community tasks and personal preferences. NPCs can refuse unsuitable conditions or negotiate changes.\nDialogue choices and attitudes persist only when grounded in actual encounters.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 17
+    },
+    {
+      "title": "Careers and Community Services",
+      "text": "Tab 18  |  Careers and Community Services\nCANON UPDATE | Add preservationist, linguist, translator, academic researcher, archaeologist and medical researcher as lore-supported professions. Universities teach every Earth language as part of the planet-contact curriculum; courses distinguish living, historic, endangered and reconstructed traditions.\nCareer progress includes makers, transit crews, archivists, builders, growers, medics and other public specialists. Each profession contributes practical settlement benefits.\nEmployment systems track skill prerequisites, contracts, wages, workspace safety, hours and learned techniques. Cooperative projects distribute credit fairly.\nA player's vocation must not be hardlocked by species or gender.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 18
+    },
+    {
+      "title": "Transportation, Skyships and Anchors",
+      "text": "Tab 19  |  Transportation, Skyships and Anchors\nRail, carriage, vessel, skyship and public short-range portal networks make travel coherent despite volatile magic. Safe destinations have surveyed anchors and maintenance staff.\nTransit tickets, schedules, wheelchair access, route reliability and failures are first-class systems. Longer uncontrolled transport risks misrouting across oceans or between distant regions.\nA teleport interface never asserts a perfectly safe free jump to any map coordinate.\nReturn to contents: Contents\n",
+      "status": "source_only",
+      "original_tab": 19
+    }
+  ]
+}

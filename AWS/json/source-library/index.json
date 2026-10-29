@@ -74,6 +74,24 @@
       "sections": 16,
       "omitted_superseded_paragraphs": 1,
       "source_url": "https://drive.google.com/file/d/1QvUfsg8_rDipiNnvRpmbwx6ufcTWKviV/view"
+    },
+    {
+      "id": "ttrpg-lore",
+      "title": "Galaxy and Historical Worldbuilding References",
+      "category": "worldbuilding",
+      "path": "./ttrpg-lore.json",
+      "sections": 11,
+      "omitted_gameplay_sections": 13,
+      "source_url": "https://drive.google.com/file/d/17LyhWZNm5xuWCFuqMUQyN0jcp0KD3l60/view"
+    },
+    {
+      "id": "mmorpg-lore",
+      "title": "Post-Cataclysm World and Civilization References",
+      "category": "worldbuilding",
+      "path": "./mmorpg-lore.json",
+      "sections": 13,
+      "omitted_gameplay_sections": 11,
+      "source_url": "https://drive.google.com/file/d/185EumFBs9zgwAw4lFuDFCE7Rk4ST5gM2/view"
     }
   ],
   "rules": [
