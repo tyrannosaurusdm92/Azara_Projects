@@ -16,7 +16,7 @@
     const language=page('Language',null,'section');
     page('Language Overview',language);page('Dictionary & Lexicon',language,'dictionary');page('Grammar & Syntax',language);
     page('Language Rules & Orthography',language,'rules');page('Pronunciation & TTS',language,'tts');
-    page('Glyph Studio',language,'glyph');page('Language Evolution Breakdown',language,'language-evolution');
+    page('Glyph Studio',language,'glyph');page('Alphabet Evolution',language,'glyph-evolution');page('Language Evolution Breakdown',language,'language-evolution');
     const library=page('Library',null,'library');
     page('Source Archive & Canon',null,'source-library');
     const series=page('Full Series',null,'section');
@@ -81,6 +81,30 @@
     const selectedWorkspaceId=wsIds.has(input.selectedWorkspaceId)?input.selectedWorkspaceId:workspaces[0].id;
     const selectedChannelId=channelIds.has(input.selectedChannelId)&&channels.find(c=>c.id===input.selectedChannelId)?.workspaceId===selectedWorkspaceId&&!channels.find(c=>c.id===input.selectedChannelId).deletedAt?input.selectedChannelId:channels.find(c=>c.workspaceId===selectedWorkspaceId&&!c.deletedAt)?.id;
     return {version:2,workspaces,channels,tasks,files:(Array.isArray(input.files)?input.files:[]).slice(0,10000).filter(f=>f&&typeof f.id==='string').map(f=>({id:f.id,name:cleanName(f.name),mime:String(f.mime||''),size:Math.max(0,Number(f.size)||0),category:String(f.category||'attachment'),folderId:String(f.folderId||''),updatedAt:String(f.updatedAt||nowDate()),deletedAt:String(f.deletedAt||''),inlineData:typeof f.inlineData==='string'&&f.inlineData.length<1500000?f.inlineData:'',cloudId:String(f.cloudId||'')})),lexicon:(Array.isArray(input.lexicon)?input.lexicon:[]).slice(0,15000).filter(x=>x&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),word:String(x.word||'').slice(0,150),ipa:String(x.ipa||'').slice(0,200),meaning:String(x.meaning||'').slice(0,2000),era:String(x.era||'modern').slice(0,40),partOfSpeech:String(x.partOfSpeech||'').slice(0,100),notes:String(x.notes||'').slice(0,5000)})),important:(Array.isArray(input.important)?input.important:[]).slice(0,5000).map(q=>({id:String(q.id||uid()),channelId:String(q.channelId||''),text:String(q.text||'').slice(0,10000),createdAt:String(q.createdAt||nowDate())})),collapsed:input.collapsed&&typeof input.collapsed==='object'&&!Array.isArray(input.collapsed)?input.collapsed:{},awsSeeded:!!input.awsSeeded,selectedWorkspaceId,selectedChannelId,inspectorOpen:input.inspectorOpen!==false};
+  }
+  // Additive repair for older saved libraries. Never discard pages, glyphs, book text, or notes.
+  function ensureLanguageTools(st){
+    let changed=false;
+    for(const ws of st.workspaces){
+      const active=()=>st.channels.filter(c=>c.workspaceId===ws.id&&!c.deletedAt);
+      let parent=active().find(c=>c.name==='Language'&&c.role==='section');
+      if(!parent){
+        parent=defaultChannel(ws.id,'Language','document',null,'section');
+        st.channels.push(parent);changed=true;
+      }
+      const needed=[
+        ['Glyph Studio','glyph'],
+        ['Alphabet Evolution','glyph-evolution'],
+        ['Language Evolution Breakdown','language-evolution']
+      ];
+      for(const [name,role] of needed){
+        if(active().some(c=>c.parentId===parent.id&&c.role===role))continue;
+        // Preserve any ordinary pages with the same title and their contents.
+        st.channels.push(defaultChannel(ws.id,name,'document',parent.id,role));
+        changed=true;
+      }
+    }
+    return changed;
   }
   function seedSourceLibrary(st){
     const ws=st.workspaces.find(w=>w.id===st.selectedWorkspaceId)||st.workspaces[0];
@@ -198,7 +222,7 @@
   }
   function openDialog(title,fields,submitText,onSubmit){dialogCallback=onSubmit;$('dialog-title').textContent=title;$('dialog-submit').textContent=submitText;$('dialog-fields').replaceChildren(...fields.map(inputField));$('main-dialog').showModal();setTimeout(()=>$('dialog-fields').querySelector('input,select,textarea')?.focus(),0)}
   function workspaceCreate(){openDialog('New workspace',[{name:'name',label:'Workspace name',placeholder:'Novel, research project, journal…'}],'Create workspace',values=>{
-    const w={id:uid(),name:cleanName(values.name,'New Workspace')};state.workspaces.push(w);const ch=defaultChannel(w.id);state.channels.push(ch);selectWorkspace(w.id);toast('Workspace created')
+    const w={id:uid(),name:cleanName(values.name,'New Workspace')};state.workspaces.push(w);const ch=defaultChannel(w.id);state.channels.push(ch);ensureLanguageTools(state);selectWorkspace(w.id);toast('Workspace created')
   })}
   function workspaceRename(){openDialog('Rename workspace',[{name:'name',label:'Workspace name',value:currentWorkspace().name}],'Save name',values=>{currentWorkspace().name=cleanName(values.name);renderAll();scheduleSave()})}
   function channelCreate(type='document',preferredParent){
@@ -480,14 +504,14 @@
     currentDocument(){captureEditor();const c=currentChannel();if(!c)return null;return {id:c.id,title:c.name,html:c.type==='studio'?c.leftHtml:c.html,notes:c.notes,type:c.type,lang:c.lang,workspace:currentWorkspace()?.name||''}},
     updateCurrent(html){const c=currentChannel();if(!c)throw Error('No selected document');if(c.type==='studio')c.leftHtml=cleanHTML(html);else c.html=cleanHTML(html);renderDoc();scheduleSave()},
     appendCurrent(html){const c=currentChannel();if(!c)throw Error('No selected document');if(c.type==='studio')c.leftHtml+=cleanHTML(html);else c.html+=cleanHTML(html);renderDoc();scheduleSave()},
-    async replaceSnapshot(input){captureEditor();state=validateState(input);renderAll();await persist();if(input.glyphProject)await window.AWSGlyphStudio?.replaceSnapshot?.(input.glyphProject)},
+    async replaceSnapshot(input){captureEditor();state=validateState(input);ensureLanguageTools(state);renderAll();await persist();if(input.glyphProject)await window.AWSGlyphStudio?.replaceSnapshot?.(input.glyphProject)},
     getSelectedWorkspace(){return currentWorkspace()?.name||''},
     switchWorkspace(id){selectWorkspace(id)},
     newWorkspace(){workspaceCreate()},
     renameWorkspace(){workspaceRename()},
     managePage(id){const c=state.channels.find(x=>x.id===id&&!x.deletedAt);if(c)openChannelActions(c)},
     newStudio(parentId){channelCreate('studio',parentId)},
-    goToRole(role){const ch=state.channels.find(c=>c.role===role&&!c.deletedAt&&c.workspaceId===state.selectedWorkspaceId);if(ch){selectChannel(ch.id);return true}return false},
+    goToRole(role){ensureLanguageTools(state);const ch=state.channels.find(c=>c.role===role&&!c.deletedAt&&c.workspaceId===state.selectedWorkspaceId);if(ch){selectChannel(ch.id);return true}return false},
     openPage(id){selectChannel(id)},
     newPage(parentId){channelCreate('document',parentId)},
     createPageFromText(name,html,parentId){const ch=defaultChannel(state.selectedWorkspaceId,cleanName(name),'document',parentId||null,'page');ch.html=cleanHTML(html);state.channels.push(ch);renderAll();scheduleSave();return ch.id},
@@ -510,7 +534,7 @@
   window.dispatchEvent(new Event('literaryfriend:api-ready'));
   async function init(){
     setupBindings();
-    try{state=validateState((await store.readState())||initialState());if(seedExistingStudio(state))scheduleSave();if(seedSourceLibrary(state))scheduleSave()}catch(e){state=initialState();toast('Started a new local library because saved data could not be loaded.')}
+    try{state=validateState((await store.readState())||initialState());if(seedExistingStudio(state))scheduleSave();if(seedSourceLibrary(state))scheduleSave();if(ensureLanguageTools(state))scheduleSave()}catch(e){state=initialState();toast('Started a new local library because saved data could not be loaded.')}
     fonts=await store.allFonts();
     for(const f of fonts){try{await loadFont(f)}catch(error){console.warn('Font could not be loaded:',f.name,error)}}
     renderAll();
