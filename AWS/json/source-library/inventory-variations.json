@@ -1,0 +1,81 @@
+{
+  "title": "Drive variation glyph folder inventory",
+  "generated": "2026-10-29",
+  "folders_scanned": 10,
+  "items": [
+    {
+      "id": "1AWFdfnJCp1n38LPnY3LysDPQ5tuuwWbC",
+      "name": "modern 𓋑 glyph",
+      "path": "Variations/modern 𓋑 glyph",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1AWFdfnJCp1n38LPnY3LysDPQ5tuuwWbC"
+    },
+    {
+      "id": "1aDr7s6JmLaz8vHdMxWyv-1sLSHwtOInl",
+      "name": "𓃪 variations per era",
+      "path": "Variations/𓃪 variations per era",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1aDr7s6JmLaz8vHdMxWyv-1sLSHwtOInl"
+    },
+    {
+      "id": "1st_9vbPnHeY5ICZ85QWoOl3mr-Va3LNh",
+      "name": "modern 𓀃 glyph",
+      "path": "Variations/modern 𓀃 glyph",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1st_9vbPnHeY5ICZ85QWoOl3mr-Va3LNh"
+    },
+    {
+      "id": "10eM3AlPQSnQgPS45FwE6nKHEY8GPs8fo",
+      "name": "modern 𓄣 glyph",
+      "path": "Variations/modern 𓄣 glyph",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/10eM3AlPQSnQgPS45FwE6nKHEY8GPs8fo"
+    },
+    {
+      "id": "1z9_gJkr3WOHd8Lz28kHVx9qBMt22nLMf",
+      "name": "modern 𓍋 glyph",
+      "path": "Variations/modern 𓍋 glyph",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1z9_gJkr3WOHd8Lz28kHVx9qBMt22nLMf"
+    },
+    {
+      "id": "10v-dsvAhYhHQxBLoz3mBB4-7Bp9FVo8k",
+      "name": "modern 𓊓 glyph",
+      "path": "Variations/modern 𓊓 glyph",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/10v-dsvAhYhHQxBLoz3mBB4-7Bp9FVo8k"
+    },
+    {
+      "id": "1znoB9RXTzuwwizrukgQQFz58RjVDxTM9",
+      "name": "modern 𓆇 glyph",
+      "path": "Variations/modern 𓆇 glyph",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1znoB9RXTzuwwizrukgQQFz58RjVDxTM9"
+    },
+    {
+      "id": "1uoBIMWCazc4yThhLii1gTMcheX58857W",
+      "name": "modern 𓈊 glyph",
+      "path": "Variations/modern 𓈊 glyph",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/1uoBIMWCazc4yThhLii1gTMcheX58857W"
+    },
+    {
+      "id": "18SISwE3UYbcAOxhx_nwha9o47JH0X2WS",
+      "name": "modern 𓋝 glyph",
+      "path": "Variations/modern 𓋝 glyph",
+      "mime": "application/vnd.google-apps.folder",
+      "is_folder": true,
+      "source_url": "https://drive.google.com/drive/folders/18SISwE3UYbcAOxhx_nwha9o47JH0X2WS"
+    }
+  ],
+  "errors": [],
+  "summary": "All nine variation subfolders were empty when checked. No source glyph images were silently fabricated or replaced."
+}
