@@ -288,6 +288,15 @@
       "sections": 5,
       "source_url": "https://drive.google.com/file/d/14Z91wMDpUMsiEBG_WKmNOEHd68fF1Y-g/view",
       "status": "reference_only"
+    },
+    {
+      "id": "deep-import-audit",
+      "title": "Drive Content and Version Priority Audit",
+      "category": "audit",
+      "path": "./deep-import-audit.json",
+      "sections": 5,
+      "source_url": "https://github.com/tyrannosaurusdm92/Azara_Projects/tree/main/AWS/json/source-library",
+      "status": "audit"
     }
   ],
   "rules": [
@@ -298,5 +307,17 @@
     "Unapproved proposed character names are not automatically canonical."
   ],
   "last_deep_scan": "2026-10-29",
-  "canon_priority": "19-letter alphabet and author-confirmed four continent pronunciations override older sources; no manuscript or backend replacements."
+  "canon_priority": "19-letter alphabet and author-confirmed four continent pronunciations override older sources; no manuscript or backend replacements.",
+  "inventory_paths": [
+    "inventory-current.json",
+    "inventory-source-main.json",
+    "inventory-source-rules.json",
+    "inventory-source-continued.json",
+    "inventory-code.json",
+    "inventory-variations.json",
+    "inventory-initial-early.json",
+    "inventory-initial-bilqis-name.json",
+    "inventory-initial-timeline.json",
+    "inventory-root.json"
+  ]
 }

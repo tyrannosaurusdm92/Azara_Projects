@@ -1,0 +1,72 @@
+{
+  "id": "deep-import-audit",
+  "title": "Drive Content and Version Priority Audit",
+  "category": "audit",
+  "status": "current_import_audit",
+  "source_url": "https://github.com/tyrannosaurusdm92/Azara_Projects/tree/main/AWS/json/source-library",
+  "updated": "2026-10-29",
+  "summary": {
+    "drive_folder": "1vkpRNyX21cgWOsBBRTnkx5GhaLeucOtG",
+    "folders_scanned": 77,
+    "drive_file_entries_in_inventories": 158,
+    "unique_files_by_id": 158,
+    "reference_documents_in_aws": 30,
+    "inventories": 10,
+    "unresolved_list_pages": 0,
+    "note": "Inventoried files are not the same as imported full contents. Duplicate exports and older snapshots are mainly catalogued by metadata."
+  },
+  "priority": [
+    "Latest explicit user language and location corrections",
+    "Current AWS code, drafts, keyboard, and language rules",
+    "Current Drive source guidebooks and author approved atlases",
+    "Source-only revisions and older archived drafts used as reference evidence only"
+  ],
+  "protected_canon": {
+    "alphabet": "ABDEGHIJKLMNOPRSTYZ",
+    "independent_count": 19,
+    "uh": "A family accent",
+    "long_oo": "O family accent",
+    "continents": {
+      "Tzaphaer": "taz-uh-fear",
+      "Belavados": "bell-ah-vuh-doe-s",
+      "Arzuhan": "are-zoo-hahn",
+      "Dakaroth": "dack-uh-rawth"
+    },
+    "belavados_destroyed": true,
+    "iron_dominion_azaaraan_name": "unassigned"
+  },
+  "source_policy": [
+    "No older language counts are installed as active grammar.",
+    "No old TTRPG species or gameplay systems are installed into AWS.",
+    "No archived text overwrote saved book chapters, character records, dictionary or backend.",
+    "The Source Archive reader opens research data; it does not merge it into an editable manuscript automatically.",
+    "Duplicate Word and HTML guidebook exports are not multiplied into conflicting active pages.",
+    "Atlas records are structured but remain reference-only until approved."
+  ],
+  "inventory_paths": [
+    "inventory-current.json",
+    "inventory-source-main.json",
+    "inventory-source-rules.json",
+    "inventory-source-continued.json",
+    "inventory-code.json",
+    "inventory-variations.json",
+    "inventory-initial-early.json",
+    "inventory-initial-bilqis-name.json",
+    "inventory-initial-timeline.json",
+    "inventory-root.json"
+  ],
+  "eligible_legacy_notes": [
+    "The original 52-glyph register is preserved as a historical source, not a 52-letter modern alphabet.",
+    "Historic source-only glyph simplifications were experiments, not approved replacements for the author's actual glyphs.",
+    "Contact references include Kaluseban, Azrahai, Gandirosha, Panolima, Gwynis, Geisamahi, Dril'thar, Tamhiogal, Jaspey, Aburata, Deorbasun and Volsarii. Source naming lists do not automatically change the approved roster.",
+    "Source documents describe a full eight-book saga and the 1351 BCE Cataclysm. Existing AWS manuscripts remain authoritative.",
+    "No invented Aza'raan translation for the Iron Dominion was introduced.",
+    "Tzaphaer is always pronounced taz-uh-fear, Belavados bell-ah-vuh-doe-s, Arzuhan are-zoo-hahn and Dakaroth dack-uh-rawth."
+  ],
+  "outstanding": [
+    "Historical files not fully imported are catalogued in inventories but not guaranteed word-by-word verified.",
+    "Illustrations embedded in Google Docs and older Word files are not reproduced as native AWS image assets.",
+    "The attached glyph variation directories returned no files at this time.",
+    "Google Drive may change after this inventory; this is a dated snapshot."
+  ]
+}

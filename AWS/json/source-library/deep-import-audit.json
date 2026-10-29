@@ -1,0 +1,34 @@
+{
+  "id": "deep-import-audit",
+  "title": "Drive Content and Version Priority Audit",
+  "category": "audit",
+  "status": "reference_only_audit",
+  "source_url": "https://github.com/tyrannosaurusdm92/Azara_Projects/tree/main/AWS/json/source-library",
+  "sections": [
+    {
+      "title": "Inventory completeness and coverage",
+      "text": "Folders scanned: 77\nFiles catalogued by ID: 158\nReference documents included in AWS before this audit entry: 30\nInventory files: 10\nPagination or listing warnings: 0\n\nCataloging a file by its Drive ID is not identical to copying or approving its contents.",
+      "original_order": 1
+    },
+    {
+      "title": "Canon precedence",
+      "text": "1. Latest explicit user language and location corrections\n2. Current AWS code, drafts, keyboard, and language rules\n3. Current Drive source guidebooks and author approved atlases\n4. Source-only revisions and older archived drafts used as reference evidence only\n\nNo older language counts are installed as active grammar.\nNo old TTRPG species or gameplay systems are installed into AWS.\nNo archived text overwrote saved book chapters, character records, dictionary or backend.\nThe Source Archive reader opens research data; it does not merge it into an editable manuscript automatically.\nDuplicate Word and HTML guidebook exports are not multiplied into conflicting active pages.\nAtlas records are structured but remain reference-only until approved.",
+      "original_order": 2
+    },
+    {
+      "title": "Protected Aza'raan canon",
+      "text": "19 independent letters: ABDEGHIJKLMNOPRSTYZ\nNo independent U. Uh is in A family; old oo can use O-family accent.\nTzaphaer: taz-uh-fear\nBelavados: bell-ah-vuh-doe-s\nArzuhan: are-zoo-hahn\nDakaroth: dack-uh-rawth\nBelavados was destroyed by the Iron Dominion. The Aza'raan translation of Iron Dominion is not yet approved.",
+      "original_order": 3
+    },
+    {
+      "title": "Compatible historical notes",
+      "text": "The original 52-glyph register is preserved as a historical source, not a 52-letter modern alphabet.\n\nHistoric source-only glyph simplifications were experiments, not approved replacements for the author's actual glyphs.\n\nContact references include Kaluseban, Azrahai, Gandirosha, Panolima, Gwynis, Geisamahi, Dril'thar, Tamhiogal, Jaspey, Aburata, Deorbasun and Volsarii. Source naming lists do not automatically change the approved roster.\n\nSource documents describe a full eight-book saga and the 1351 BCE Cataclysm. Existing AWS manuscripts remain authoritative.\n\nNo invented Aza'raan translation for the Iron Dominion was introduced.\n\nTzaphaer is always pronounced taz-uh-fear, Belavados bell-ah-vuh-doe-s, Arzuhan are-zoo-hahn and Dakaroth dack-uh-rawth.",
+      "original_order": 4
+    },
+    {
+      "title": "Inventory files and limitations",
+      "text": "inventory-current.json | 52 files | 12 scanned folders\ninventory-source-main.json | 19 files | 8 scanned folders\ninventory-source-rules.json | 26 files | 8 scanned folders\ninventory-source-continued.json | 22 files | 8 scanned folders\ninventory-code.json | 12 files | 7 scanned folders\ninventory-variations.json | 0 files | 10 scanned folders\ninventory-initial-early.json | 5 files | 7 scanned folders\ninventory-initial-bilqis-name.json | 12 files | 9 scanned folders\ninventory-initial-timeline.json | 7 files | 7 scanned folders\ninventory-root.json | root folder entries\n\nHistorical files not fully imported are catalogued in inventories but not guaranteed word-by-word verified.\nIllustrations embedded in Google Docs and older Word files are not reproduced as native AWS image assets.\nThe attached glyph variation directories returned no files at this time.\nGoogle Drive may change after this inventory; this is a dated snapshot.",
+      "original_order": 5
+    }
+  ]
+}
