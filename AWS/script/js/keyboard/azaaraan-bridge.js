@@ -8,6 +8,7 @@
   const C = window.AZA_CONFIG, P = window.AzaaraanPhonetics;
   const rows = [['A','B','D','E','F','G','H','I'], ['J','K','L','M','N','O','P','R'], ['S','T','U','V','W','Y','Z'], ['SYMBOLS','AZA_GLOTTAL','AZA_CLICK','AZA_PREV','AZA_NEXT','SPACE','BACK','ENTER']];
   const letters = new Set(C.keyOrder.split(''));
+  const modernIndependent = new Set('ABDEGHIJKLMNOPRSTYZ'.split(''));
   const allMarks = [...C.accents, ...C.specials];
   const markMap = new Map(allMarks.map(m=>[m.id,m]));
   const preferenceKey = 'steampunk-azaaraan-keyboard-preferences-v1';
@@ -21,10 +22,11 @@
     try{localStorage.setItem(preferenceKey,JSON.stringify({language,era}));}catch{/* ephemeral setting */}
   }
   function isLetter(raw){return letters.has(raw);}
-  function rowsForEra(era){return rows.map(row=>row.filter(raw=>era!=='Archaic'||!['AZA_PREV','AZA_NEXT'].includes(raw)));}
+  function rowsForEra(era){return rows.map(row=>row.filter(raw=>(era!=='Archaic'||!['AZA_PREV','AZA_NEXT'].includes(raw))&&(era!=='Modern'||!letters.has(raw)||modernIndependent.has(raw))));}
   function tryEncode(base,marks=[],era='Modern') {
     try {
       if (!isLetter(base)) throw new Error('Unrecognized Aza’raan letter: '+base);
+       if (era==='Modern'&&!modernIndependent.has(base)) throw new Error('Modern Aza’raan uses the 19-letter alphabet; choose a family accent instead of '+base+'.');
       const allowed = new Set(availableMarks(era).map(m=>m.id));
       if (marks.some(id=>!allowed.has(id))) throw new Error('This special mark is unavailable in '+era+'.');
       if (marks.length>3) throw new Error('Maximum three marks per letter.');

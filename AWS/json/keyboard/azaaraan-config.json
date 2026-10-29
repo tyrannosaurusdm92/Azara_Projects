@@ -94,15 +94,16 @@
       "id": "C04",
       "display": "◌̌",
       "khmer": "័",
-      "name": "Short U",
-      "meaning": "Adds /ʌ/",
+      "name": "Central A (uh)",
+      "meaning": "/ʌ/ is from the A family, not a separate U letter",
       "example": "R + Short U → /rʌ/",
       "ipa": "ʌ",
       "kind": "vowel",
       "placement": "top",
       "codepoints": [
         "U+17D0"
-      ]
+      ],
+      "family": "A"
     },
     {
       "number": 5,
@@ -461,5 +462,13 @@
     "Classical": "assets/ttf/Azaaraan-Classical.ttf",
     "Traditional": "assets/ttf/Azaaraan-Traditional.ttf",
     "Modern": "assets/ttf/Azaaraan-Modern.ttf"
-  }
+  },
+  "modernIndependentAlphabet": "ABDEGHIJKLMNOPRSTYZ",
+  "modernFamilyMergers": {
+    "F": "B",
+    "V": "B",
+    "W": "B",
+    "U": "A for uh, O for oo"
+  },
+  "historicalKeyOrder": "ABDEGHIJKLMNOPRSTUWYZ"
 }
