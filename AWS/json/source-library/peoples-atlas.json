@@ -1,0 +1,22 @@
+{
+  "id": "peoples-atlas",
+  "title": "Aza'ra Peoples Interactive Atlas",
+  "category": "peoples",
+  "source_url": "https://drive.google.com/file/d/1WyP1WigsHT4O0LwTU59jPDWO3bZWSqXk/view",
+  "source_mime": "text/html",
+  "status": "source_only",
+  "warnings": [
+    "Older text has been screened for several known direct contradictions but has not been promoted into active AWS canon.",
+    "Stored as text. HTML prototypes are not executed and cannot replace AWS code."
+  ],
+  "sections": [
+    {
+      "title": "Source notes 1",
+      "text": "Aza'ra Peoples and Heritages Aza'ra Peoples and Heritages\n Approved physical appearances | Historical Azh’raim and modern Azrahai are the same people. Aza'raan linguistic rules have not been altered. The family appearance note is available in the companion race reference.\n Filter peoples",
+      "original_order": 1,
+      "status": "reference_only"
+    }
+  ],
+  "removed_superseded_paragraphs": 0,
+  "content_hash": "8532244e"
+}

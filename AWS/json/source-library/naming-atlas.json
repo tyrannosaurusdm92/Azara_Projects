@@ -1,0 +1,22 @@
+{
+  "id": "naming-atlas",
+  "title": "Non-Aza'raan Naming Atlas",
+  "category": "language",
+  "source_url": "https://drive.google.com/file/d/1q0ncQptdV9an5RR5DowYKCcwZp6zhu_1/view",
+  "source_mime": "text/html",
+  "status": "source_only",
+  "warnings": [
+    "Older text has been screened for several known direct contradictions but has not been promoted into active AWS canon.",
+    "Stored as text. HTML prototypes are not executed and cannot replace AWS code."
+  ],
+  "sections": [
+    {
+      "title": "Source notes 1",
+      "text": "Aza'ra | Non-Aza'raan Naming Atlas \n Aza'ra | Naming Atlas\n Non-Aza'raan playable peoples and documented mixed communities. 18 guides and 86 proposed names for TTRPG and MMORPG.\n Original sources: strict pantheon JSON, current MMORPG race documents and the author's examples. Sound inspirations are not claims of literal real-language translation. Aza'raan rules are unchanged.\n Find a people",
+      "original_order": 1,
+      "status": "reference_only"
+    }
+  ],
+  "removed_superseded_paragraphs": 0,
+  "content_hash": "7ee1a37d"
+}

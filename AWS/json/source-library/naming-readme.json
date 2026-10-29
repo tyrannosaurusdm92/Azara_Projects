@@ -1,0 +1,40 @@
+{
+  "id": "naming-readme",
+  "title": "Other Peoples Naming README",
+  "category": "language",
+  "source_url": "https://drive.google.com/file/d/10yu-QQLG2Pd4TpQLQVWOZSBE1sq7KWmI/view",
+  "source_mime": "text/markdown",
+  "status": "source_only",
+  "warnings": [
+    "Older text has been screened for several known direct contradictions but has not been promoted into active AWS canon.",
+    "Stored as text. HTML prototypes are not executed and cannot replace AWS code."
+  ],
+  "sections": [
+    {
+      "title": "Non-Aza'raan playable peoples naming, Taa update",
+      "text": "# Non-Aza'raan playable peoples naming, Taa update\n\nThis revision affects only tabs 18, 19, 20 and 21 of the user-attached Language_24_Tab_Guidebook.docx. All other twenty tab bodies are left unchanged, including Aza'raan grammatical history.\n\nDril'thar: Ancient or Old Egyptian + Navajo (Dine Bizaad) + Taa (!Xoo / !Xoon). Five phonetic click places are represented with correct IPA symbols: ǀ, ǃ, ǁ, ǂ, ʘ. An ASCII exclamation mark is not the only type of click. A click is a consonant, not a punctuation mark.\n\nAmpharil is no separate people or living language in this pass. Its historical reference remains in the Dril'thar source heritage.\n\nCanonical statuses follow the user's strict JSON (12 names), the current MMORPG Races.docx (3 additional named peoples), and three documented mixed-ancestry communities. These are 18 guides, not 18 confirmed original biological species.\n\nNaming seeds and final meanings are explicitly authored fictional proposals. Linguistic models are creative inspiration, not direct borrowing of entire real words or proof of real-language derivations. Existing author's ten Kaluseban examples are reproduced with their readings and intended meanings.\n\nWriter Helper Ready persona and VOICE.md used for editing constraints: direct phrasing, remove repetition, preserve source distinction, avoid false etymological claims and preserve the author's existing voice. The companion audit file documents checks.",
+      "original_order": 1,
+      "status": "reference_only"
+    },
+    {
+      "title": "Linguistic context used for Taa design",
+      "text": "## Linguistic context used for Taa design\n\n- Traill's and contemporary descriptions of Taa distinguish dental, alveolar, lateral, palatal and bilabial click places, with additional phonation/accompaniment contrasts.\n- University of New Mexico Navajo Sound Profile documents tone, vowel nasality, length and ejective consonants.\n- Cambridge Ancient Egyptian phonology chapter explains why ancient vowels cannot be reconstructed directly from hieroglyphic orthography.\n\nThis is a name-building design guide, not an authoritative phonology of Navajo, Egyptian or Taa.",
+      "original_order": 2,
+      "status": "reference_only"
+    },
+    {
+      "title": "References used for technical phonetics",
+      "text": "## References used for technical phonetics\n\n- Taa click typology, including five click places and accompaniment distinctions: https://scielo.org.za/scielo.php?pid=S2224-33802023000300010&script=sci_arttext\n- Navajo example with nasal, long, high-tone vowel and ejective /t'/ in the University of New Mexico Sound Profile: https://navajo.unm.edu/dinesound/html/e_mid_front_long_nasal_htone.html\n- Ancient Egyptian sound-system reconstruction limitations: https://www.cambridge.org/core/books/abs/ancient-egyptian/egyptian-phonology/23B7D5888A4B35A64377E8FE62B8F9EF",
+      "original_order": 3,
+      "status": "reference_only"
+    },
+    {
+      "title": "Verification boundaries",
+      "text": "## Verification boundaries\n\n- The attached original Word document is not overwritten. The revised Word file is a separately named local derivative.\n- Existing text in Tabs 01 through 17 and Tabs 22 through 24 is preserved. Tab 20 heading and the matching contents title are updated only to recognize the third Dril'thar language influence.\n- The 18-tab HTML atlas passed JavaScript syntax validation but not a full browser interaction smoke test, because the local headless Chromium instance blocked local and data-page navigation.\n- Writer Helper's William-persona `analyze` routine ran on all four revised naming tabs. It returned `ok=true` for all four, with two informational style notes in the long registry listing.\n- The invented race-specific word fragments, names, meanings, stress cues and phonotactic combinations require author approval; they do not purport to be authentic Navajo, Taa, Old Egyptian or other living-language words.",
+      "original_order": 4,
+      "status": "reference_only"
+    }
+  ],
+  "removed_superseded_paragraphs": 0,
+  "content_hash": "f99ec24e"
+}

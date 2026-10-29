@@ -1,0 +1,40 @@
+{
+  "id": "continuity-changelog",
+  "title": "Continuity Expansion Changelog",
+  "category": "audit",
+  "source_url": "https://drive.google.com/file/d/1KpcEyxjqOfQsd1OWrYy7j8MZEc-rUDao/view",
+  "source_mime": "text/markdown",
+  "status": "source_only",
+  "warnings": [
+    "Older text has been screened for several known direct contradictions but has not been promoted into active AWS canon.",
+    "Stored as text. HTML prototypes are not executed and cannot replace AWS code."
+  ],
+  "sections": [
+    {
+      "title": "Continued source-only Aza'ra pass",
+      "text": "# Continued source-only Aza'ra pass",
+      "original_order": 1,
+      "status": "reference_only"
+    },
+    {
+      "title": "Expanded content",
+      "text": "## Expanded content\n\n- Retained four independent 24-section DOCX guidebooks and four offline tabbed HTML readers.\n- Expanded the core Aza'raan merger and later cultural contact history, including Dril'thar heritage and historical mixed-ancestry communities.\n- Built the species and contact concordance with 32 research records. These are NOT 32 approved species. Exactly 12 names are in the current strict species JSON, alongside the distinct founding people Aza'raans, unapproved source-only candidates, and historical mixed communities.\n- Preserved canonical Bilqis, the 2082 time laws, 3013-era reign and 3021 displacement; no standalone Galaxy Era Bilqis clue ledger was created.\n- Recorded a 240-entry chronological manuscript planning index with empty confirmed chapter titles, avoiding invented manuscript facts.\n- Added the 52-sign interactive script workbench. Its handwritten strokes and translations require approval.\n- Added the seven-stage original MMORPG Shaping Hall planner with a 5,000-point budget. Individual selectable item costs are not established by the archival source and must be entered with author review.\n- Reviewed the specific archived 'Duplicate Aza_ra MMORPG Guide Book.docx' as a formatting/organization example only, without importing superseded lore.",
+      "original_order": 2,
+      "status": "reference_only"
+    },
+    {
+      "title": "Test results",
+      "text": "## Test results\n\n- Four DOCX files rendered in the document rendering workflow. Reviewed first, section and appendix pages.\n- All 96 guidebook sections passed the installed Writer Helper `WriterWilliamVoice.audit` call without warnings.\n- JavaScript modules pass `node --check`.\n- Pure-module checks passed for two-dice results, prohibited travel to destroyed Belavadös and merging the legacy Ampharils input into Dril'thar.\n- Full browser verification of the new workbench, planner and their UI buttons remains unverified. The Chromium environment blocked both localhost and file URLs as administrator restricted. Do not claim full end-to-end browser testing.",
+      "original_order": 3,
+      "status": "reference_only"
+    },
+    {
+      "title": "Open approval decisions",
+      "text": "## Open approval decisions",
+      "original_order": 4,
+      "status": "reference_only"
+    }
+  ],
+  "removed_superseded_paragraphs": 1,
+  "content_hash": "1a46d42c"
+}

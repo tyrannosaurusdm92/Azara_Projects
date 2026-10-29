@@ -1,0 +1,46 @@
+{
+  "id": "language-readme",
+  "title": "Language project README",
+  "category": "language",
+  "source_url": "https://drive.google.com/file/d/1lWZPQkKE7KsAXoNd3Sjt9CP-sLZHoSIp/view",
+  "source_mime": "text/markdown",
+  "status": "source_only",
+  "warnings": [
+    "Older text has been screened for several known direct contradictions but has not been promoted into active AWS canon.",
+    "Stored as text. HTML prototypes are not executed and cannot replace AWS code."
+  ],
+  "sections": [
+    {
+      "title": "Aza’ra Full | Original-source guidebooks",
+      "text": "# Aza’ra Full | Original-source guidebooks\n\nFour original guidebooks are supplied in DOCX and HTML. The Aza’raan Language guidebook now has 25 sections after integrating the complete 52-origin hieroglyph table; other guidebooks retain their original section counts.\n\nThe 52 sign glyph-origin atlas is based on the source Letter Evolution Table, with derived strokes explicitly labeled provisional. No old integrated builds were used.\n\nThe tabletop and MMORPG programs are starter tools and not a full live game or rewrite of all 240 manuscript chapters. Unconfirmed names and chronology remain flagged.\n\nShared canon information lives under Code/shared; source-specific guides live in their named folders.",
+      "original_order": 1,
+      "status": "reference_only"
+    },
+    {
+      "title": "Book Two and Galaxy Era correction",
+      "text": "## Book Two and Galaxy Era correction\n\nBook Two now owns the Bilqis / Queen of Sheba / Queen of Atlantis chronology, Göbekli Tepe discovery, Ubar connection, and the 3021 transfer into ancient history. The alternate-universe Galaxy Era TTRPG takes place around 3013 and only briefly mentions Bilqis as an astute queen who repeatedly violates time laws that began in 2082. The dedicated TTRPG Earth clue ledger, validator, and browser UI are removed. Previously stored legacy clue data is not deleted, but the revised program does not access it. The associated novel clues are editorial references only.\n\nNo previous integrated builds are used as narrative or mechanical source material. The DOCX layout is retained from the immediately preceding original-source handbook delivery.",
+      "original_order": 2,
+      "status": "reference_only"
+    },
+    {
+      "title": "Bilqis and language contact correction, October 2026",
+      "text": "## Bilqis and language contact correction, October 2026\n\nBilqis is the only approved spelling. Biliqis was a typo and is not a separate name. The book-series-only trail is the Queen of Sheba and Atlantis narrative through Göbekli Tepe and Ubar. The Galaxy Era table campaign refers to the queen only briefly and never has a special Bilqis clue ledger.\n\nAza’raan has **two foundational strands**, Proto-Oceanic-inspired Kaʻaheʻanua and Uxrowoiye / Uxrowo, but it is influenced by other original peoples on Aza’ra through historical contact. The contact data in `Language/azaaraan_multilingual_contact_atlas.json` and `Code/word-generator/contact-data.mjs` separates the confirmed community names from proposed linguistic mechanisms. The attached English alphabet reference supplies method examples, not a literal genealogy for the invented script. Original Egyptian-root assignments remain the starting forms.\n\nThis is a revision of the immediately preceding delivered source-based documents and runnable starter tools, **not** a lore import from a previous integrated build. Earlier integrated projects remain prohibited inputs.",
+      "original_order": 3,
+      "status": "reference_only"
+    },
+    {
+      "title": "2026-10-24 orthography and hieroglyph update",
+      "text": "## 2026-10-24 orthography and hieroglyph update\n\n* Original origin glyphs: 52; Ancient 52; Archaic 49; Classical 44; Traditional 32; Modern 21 letter families / 55 readings.\n* All 16 multi-reading Modern families carry an accent on **every** reading, including their primary. Only H, L, P, U and Z are written unaccented.\n* Nine protected ancient picture roots are 𓆠 T, 𓋜 N, 𓈌 B, 𓇰 K, 𓊲 O, 𓈚 I, 𓆣 E, 𓄣 A, 𓆇 S. Their evolving contours are inherited by all modern accented group readings.\n* 𓎱 (tz) is kept as a distinct glyph through Classical and merges with the 𓆠 lineage in Traditional. Other era mergers remain pending verification.\n* Punctuation: glottal apostrophe `'`, click `¡`, previous-syllable `<`, next-syllable `>`. The acute dead-key is backslash + apostrophe, not a literal glottal.\n* `modern-azaaraan-2036-orthography.json` is canonical; keyboard mappings, 24-section JSON and 25-section merged HTML guidebook have been synchronized with it. The 14 newly assigned primary accents are provisional pending approval.\n* Letter rendering uses accents only (as applicable) plus independent glottal and click descendant chains.",
+      "original_order": 4,
+      "status": "reference_only"
+    },
+    {
+      "title": "2026-10-25 revised Aza’raan origin and writing canon",
+      "text": "## 2026-10-25 revised Aza’raan origin and writing canon\n\nProtected group-parent hieroglyphs: 𓆠 T; 𓋜 N; 𓈌 B; 𓇰 K; 𓊲 O; 𓈚 I; 𓆣 E; 𓄣 A; 𓆇 S. All Modern readings in a family with multiple variants - including the primary reading - are accented; only H, L, P, U and Z lack accents. The special signs are glottal apostrophe **`'` (U+0027)**, click **`¡` (U+00A1)**, previous syllable **`<` (U+003C)** and next syllable **`>` (U+003E)**.\n\nThe original 24-section HTML language guide and the original five-column 52-sign origin HTML table are now unified in `Language/Language_24_Tab_Guidebook.html` (its file ID retained). The matching Word reference is `Language/Language_24_Tab_Guidebook.docx`, and `Language/historical-lineage-52.json` records every era, merger, winner, and source phoneme. Updated data files are in Language; a complete ZIP snapshot is `Language/Azaaraan_Canon_Complete_2026-10-25.zip`. Legacy images and unrelated manuscript/game content have not been redrawn or rewritten.",
+      "original_order": 5,
+      "status": "reference_only"
+    }
+  ],
+  "removed_superseded_paragraphs": 1,
+  "content_hash": "98a01a6b"
+}

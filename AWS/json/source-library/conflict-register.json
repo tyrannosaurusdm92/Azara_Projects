@@ -1,0 +1,22 @@
+{
+  "id": "conflict-register",
+  "title": "Historical Source Conflict Register",
+  "category": "audit",
+  "source_url": "https://drive.google.com/file/d/1s6u4859prWl99cCBXP-Ghkm-R3URPMox/view",
+  "source_mime": "text/markdown",
+  "status": "source_only",
+  "warnings": [
+    "Older text has been screened for several known direct contradictions but has not been promoted into active AWS canon.",
+    "Stored as text. HTML prototypes are not executed and cannot replace AWS code."
+  ],
+  "sections": [
+    {
+      "title": "Canon decisions applied",
+      "text": "# Canon decisions applied",
+      "original_order": 1,
+      "status": "reference_only"
+    }
+  ],
+  "removed_superseded_paragraphs": 1,
+  "content_hash": "82e67d1f"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "language-history",
+  "title": "Writer Helper Historical Language Notes",
+  "category": "language",
+  "source_url": "https://drive.google.com/file/d/1nHVnUCeVQgfN45rT1V_dsHGuJ-HzR2MY/view",
+  "source_mime": "text/markdown",
+  "status": "source_only",
+  "warnings": [
+    "Older text has been screened for several known direct contradictions but has not been promoted into active AWS canon.",
+    "Stored as text. HTML prototypes are not executed and cannot replace AWS code."
+  ],
+  "sections": [
+    {
+      "title": "Source notes 1",
+      "text": "Aza'raan did not become its modern form in a single clean jump. Its history is better read as layers: sounds shifting in ordinary speech, grammar being reanalyzed, borrowed words entering through contact, and writing sometimes preserving older habits long after pronunciation moved on.\n\nBy roughly year 1351 BCE, the model records Kaʻaheʻanua and Uxrowoiye speakers come into sustained contact; the source glyph tradition becomes a basis for shared writing. These changes are treated as pressures and outcomes in this constructed history, not as a claim that every speaker changed in the same way at once.\n\nBy roughly year Classical Belavadös, the model records regional speakers preserve formal particles; trade and multilingual households introduce borrowed names and words. These changes are treated as pressures and outcomes in this constructed history, not as a claim that every speaker changed in the same way at once.\n\nBy roughly year Industrial and Moonpunk eras, the model records transport and public administration spread contact registers; communities retain local pronunciations and cultural vocabulary. These changes are treated as pressures and outcomes in this constructed history, not as a claim that every speaker changed in the same way at once.\n\nStatus: modeled linguistic history, not attested Aza'raan quotations.",
+      "original_order": 1,
+      "status": "reference_only"
+    }
+  ],
+  "removed_superseded_paragraphs": 1,
+  "content_hash": "85105e73"
+}

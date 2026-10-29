@@ -1,0 +1,22 @@
+{
+  "id": "english-comparison",
+  "title": "English Alphabet to Aza'raan Comparison",
+  "category": "language",
+  "source_url": "https://drive.google.com/file/d/103TdP2SfdOwNCpDgaPNSZp7Xeiu5_fcr/view",
+  "source_mime": "text/markdown",
+  "status": "source_only",
+  "warnings": [
+    "Older text has been screened for several known direct contradictions but has not been promoted into active AWS canon.",
+    "Stored as text. HTML prototypes are not executed and cannot replace AWS code."
+  ],
+  "sections": [
+    {
+      "title": "Alphabet evolution as a modeling analogy",
+      "text": "# Alphabet evolution as a modeling analogy\n\nThe attached user-authored history documents a real script pathway: Egyptian hieroglyphic visual influence on early alphabetic inscriptions, followed by Phoenician, Greek, Etruscan or Old Italic, Latin and modern English. Some steps are contested and none provides a universal one-to-one mapping of every letter.\n\nFor Aza’raan, use four **processes**, not a copied family tree:\n\n1. **Illustrated ancestor:** a pictured Uxrowo sign retains diagnostic strokes from the author-assigned Egyptian hieroglyph.\n2. **Contact reuse:** speakers of the Proto-Oceanic-inspired founding strand and other original Aza’ran peoples adopt that root sign for a new phonetic or semantic purpose.\n3. **Administrative standardization:** repeated practical writing removes pictorial detail and develops letter-like signs.\n4. **Local adaptation:** Classical, Transitional and Modern scribes develop independent and subscript shapes, compounds, merges and renewed writing conventions.\n\nThe source history describes real acrophony and script borrowing. The four Aza’raan phases are fictional reconstructions. Do not describe Ancient Egyptian as a spoken ancestor of Aza’raan, or Phoenician or Latin as real ancestors of its original script.\n\nUse `Language/azaaraan_multilingual_contact_atlas.json` for known peoples and proposed contact domains. Do not treat a generated contact word as attested. Writer Helper voice guidance requires a cause, a community effect, and a linguistic consequence for every change.",
+      "original_order": 1,
+      "status": "reference_only"
+    }
+  ],
+  "removed_superseded_paragraphs": 0,
+  "content_hash": "243ab24f"
+}

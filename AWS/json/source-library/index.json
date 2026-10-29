@@ -92,6 +92,126 @@
       "sections": 13,
       "omitted_gameplay_sections": 11,
       "source_url": "https://drive.google.com/file/d/185EumFBs9zgwAw4lFuDFCE7Rk4ST5gM2/view"
+    },
+    {
+      "id": "root-readme",
+      "title": "Root project README",
+      "category": "audit",
+      "path": "./root-readme.json",
+      "sections": 5,
+      "removed_superseded_paragraphs": 1,
+      "source_url": "https://drive.google.com/file/d/1QvUfsg8_rDipiNnvRpmbwx6ufcTWKviV/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "language-readme",
+      "title": "Language project README",
+      "category": "language",
+      "path": "./language-readme.json",
+      "sections": 5,
+      "removed_superseded_paragraphs": 1,
+      "source_url": "https://drive.google.com/file/d/1lWZPQkKE7KsAXoNd3Sjt9CP-sLZHoSIp/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "approved-peoples-readme",
+      "title": "Approved Peoples README",
+      "category": "peoples",
+      "path": "./approved-peoples-readme.json",
+      "sections": 1,
+      "removed_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/1lBpuATGevJe0UnPL84GWQ8T7sjo0yKtw/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "naming-atlas",
+      "title": "Non-Aza'raan Naming Atlas",
+      "category": "language",
+      "path": "./naming-atlas.json",
+      "sections": 1,
+      "removed_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/1q0ncQptdV9an5RR5DowYKCcwZp6zhu_1/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "peoples-atlas",
+      "title": "Aza'ra Peoples Interactive Atlas",
+      "category": "peoples",
+      "path": "./peoples-atlas.json",
+      "sections": 1,
+      "removed_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/1WyP1WigsHT4O0LwTU59jPDWO3bZWSqXk/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "english-comparison",
+      "title": "English Alphabet to Aza'raan Comparison",
+      "category": "language",
+      "path": "./english-comparison.json",
+      "sections": 1,
+      "removed_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/103TdP2SfdOwNCpDgaPNSZp7Xeiu5_fcr/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "voice-notes",
+      "title": "Writer Helper Voice Notes",
+      "category": "language",
+      "path": "./voice-notes.json",
+      "sections": 5,
+      "removed_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/18I7h1LMuYMWLuwp8tbZHf3aw-biz_8JV/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "conflict-register",
+      "title": "Historical Source Conflict Register",
+      "category": "audit",
+      "path": "./conflict-register.json",
+      "sections": 1,
+      "removed_superseded_paragraphs": 1,
+      "source_url": "https://drive.google.com/file/d/1s6u4859prWl99cCBXP-Ghkm-R3URPMox/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "continuity-changelog",
+      "title": "Continuity Expansion Changelog",
+      "category": "audit",
+      "path": "./continuity-changelog.json",
+      "sections": 4,
+      "removed_superseded_paragraphs": 1,
+      "source_url": "https://drive.google.com/file/d/1KpcEyxjqOfQsd1OWrYy7j8MZEc-rUDao/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "language-history",
+      "title": "Writer Helper Historical Language Notes",
+      "category": "language",
+      "path": "./language-history.json",
+      "sections": 1,
+      "removed_superseded_paragraphs": 1,
+      "source_url": "https://drive.google.com/file/d/1nHVnUCeVQgfN45rT1V_dsHGuJ-HzR2MY/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "naming-readme",
+      "title": "Other Peoples Naming README",
+      "category": "language",
+      "path": "./naming-readme.json",
+      "sections": 4,
+      "removed_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/10yu-QQLG2Pd4TpQLQVWOZSBE1sq7KWmI/view",
+      "status": "reference_only"
+    },
+    {
+      "id": "original-generator",
+      "title": "Original Aza'raan Word Generator Prototype",
+      "category": "language",
+      "path": "./original-generator.json",
+      "sections": 1,
+      "removed_superseded_paragraphs": 0,
+      "source_url": "https://drive.google.com/file/d/1EXsKi23Mk8C3cH2b3HTwRcx9ouDWf5Qa/view",
+      "status": "reference_only"
     }
   ],
   "rules": [
@@ -100,5 +220,7 @@
     "Tzaphaer has one pronunciation: taz-uh-fear.",
     "Belavados was destroyed; any references to extant settlements are historical.",
     "Unapproved proposed character names are not automatically canonical."
-  ]
+  ],
+  "last_deep_scan": "2026-10-29",
+  "canon_priority": "19-letter alphabet and author-confirmed four continent pronunciations override older sources; no manuscript or backend replacements."
 }
