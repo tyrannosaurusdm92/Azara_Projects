@@ -35,3 +35,7 @@ Static file presence, unique Git hashes and JavaScript path wiring were checked.
 - Removed the two obsolete standalone settlement HTML files. Full original source text is backed up in `json/archive/merged-settlement-html-originals.json`.
 - The only HTML files are `ttrpg.html` and `assets/code/index.html`; the latter contains the merged province and Generator UI.
 - The original 225 Onyx worldbuilding file paths, referenced by 225 Git source SHAs, have now been archived in 11 additional inert JSON packs and activated in the existing Onyx Work retriever. No new UI controls or backend introduced.
+
+## Final knowledge import and entry-point cleanup
+
+See `docs/TTRPG_HTML_AND_ONYX_IMPORT_AUDIT.md` for the final two-HTML constraint, PWA preservation, 26-pack import, 411 source entries, and static verification.
