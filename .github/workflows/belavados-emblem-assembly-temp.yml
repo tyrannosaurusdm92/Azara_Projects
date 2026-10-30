@@ -1,0 +1,52 @@
+name: Temporary Belavadós emblem reconstruction
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'TTRPG/.belavados_emblem_import/READY'
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Assemble exact validated Belavadós emblem and remove staging
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, shutil
+          root=Path("TTRPG/.belavados_emblem_import")
+          if not (root/"READY").is_file():
+              raise SystemExit("Missing completion marker")
+          parts=sorted(root.glob("part-*.bin"))
+          if [p.name for p in parts]!=[f"part-{i:02}.bin" for i in range(6)]:
+              raise SystemExit("Exactly six ordered emblem parts are required")
+          data=b"".join(p.read_bytes() for p in parts)
+          expected="d4a267ac11f772abd430e43269ffb96caa84da70dfb513e360d201445902ae8b"
+          if len(data)!=3851854 or hashlib.sha256(data).hexdigest()!=expected:
+              raise SystemExit("Belavadós emblem size/hash mismatch. Nothing installed.")
+          dest=Path("TTRPG/assets/images/belavados-emblem.png")
+          dest.parent.mkdir(parents=True,exist_ok=True)
+          dest.write_bytes(data)
+          shutil.rmtree(root)
+          print("Validated",dest,len(data),"bytes; deleted staging.")
+          PY
+      - name: Commit only TTRPG emblem and cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- TTRPG/assets/images/belavados-emblem.png TTRPG/.belavados_emblem_import
+          if ! git diff --cached --quiet; then
+            git commit -m "TTRPG: install exact Belavados emblem, remove staging chunks"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
