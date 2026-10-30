@@ -1,0 +1,77 @@
+name: Temporary Belavadós TTRPG batch 2 import
+on:
+  push:
+    branches: [main]
+    paths:
+      - "TTRPG/.belavados_batch2/READY"
+permissions:
+  contents: write
+concurrency:
+  group: belavados-batch2-import
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Validate archive and unpack JS and docs only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, zipfile, shutil
+          root=Path("TTRPG/.belavados_batch2")
+          parts=sorted(root.glob("piece-*.bin"))
+          if len(parts)!=87 or [p.name for p in parts]!=[f"piece-{i:03}.bin" for i in range(87)]:
+              raise SystemExit(f"Expected all 87 numbered pieces; got {len(parts)}")
+          archive=Path("/tmp/belavados-batch2.zip")
+          h=hashlib.sha256()
+          with archive.open("wb") as output:
+              for part in parts:
+                  with part.open("rb") as source:
+                      while True:
+                          data=source.read(1024*1024)
+                          if not data: break
+                          h.update(data)
+                          output.write(data)
+          expected="b1e1f5694d264c935be29cb445ab7f912371c1d1a5c33dd8f7c7ab0f2f6af818"
+          if h.hexdigest()!=expected:
+              raise SystemExit(f"Archive checksum mismatch: {h.hexdigest()}")
+          with zipfile.ZipFile(archive) as z:
+              members=[m for m in z.infolist() if not m.is_dir()]
+              names=[m.filename for m in members]
+              if len(names)!=444 or len(set(names))!=444:
+                  raise SystemExit("Unexpected file count or duplicate path")
+              if sum(n.startswith("js/") for n in names)!=270 or sum(n.startswith("docs/") for n in names)!=174:
+                  raise SystemExit("Unexpected folder distribution")
+              for m in members:
+                  p=Path(m.filename)
+                  if p.is_absolute() or ".." in p.parts or not str(p).startswith(("js/","docs/")):
+                      raise SystemExit(f"Unsafe path in archive: {m.filename}")
+                  if ((m.external_attr>>16)&0o170000)==0o120000:
+                      raise SystemExit(f"Symlink not permitted: {m.filename}")
+              for m in members:
+                  target=Path("TTRPG")/m.filename
+                  target.parent.mkdir(parents=True,exist_ok=True)
+                  with z.open(m) as src,target.open("wb") as dst:
+                      shutil.copyfileobj(src,dst)
+              print(f"Validated and unpacked {len(members)} files: 270 JS, 174 docs")
+          PY
+          rm -rf TTRPG/.belavados_batch2
+      - name: Commit exact second-batch sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- TTRPG/js TTRPG/docs TTRPG/.belavados_batch2
+          if ! git diff --cached --quiet; then
+            git commit -m "TTRPG: import full Belavadós batch 2 JavaScript and docs"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
