@@ -27,3 +27,7 @@ html[data-runtime-mode="forge"] #onyxWorkFullscreenShell{display:none!important}
 #onyxWorkFullscreenShell:not([hidden]){display:block!important;z-index:2147483300!important}
 #onyxWorkFullscreenShell:not([hidden]) #onyxWorkFullscreenExit{display:grid!important;place-items:center!important;z-index:2147483500!important;right:max(14px,env(safe-area-inset-right))!important;top:max(12px,env(safe-area-inset-top))!important;background:#d40000!important;color:#fff!important}
 html[data-runtime-mode="work"] #belavadosForgeFullscreenExit{display:none!important}
+
+/* Explicit closed-state invariant after leaving fullscreen. */
+#onyxWidget:not(.open) #onyxPopout,
+#onyxWidget #onyxPopout[aria-hidden="true"]{display:none!important;visibility:hidden!important;pointer-events:none!important}

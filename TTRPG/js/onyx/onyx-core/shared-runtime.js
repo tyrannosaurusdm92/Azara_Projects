@@ -36,6 +36,8 @@
    if(forgeExit)forgeExit.hidden=true;
    root.dataset.runtimeMode='module';closeTransientSurfaces();
    window.OnyxVirtualPet?.setTab?.('work');
+   settleCollapsedBubble();
+   requestAnimationFrame(settleCollapsedBubble);
    $('#onyxBubble')?.focus?.({preventScroll:true});
  }
  function enterFastGame(){
@@ -59,12 +61,22 @@
    document.body.scrollTop=0;document.documentElement.scrollTop=0;
    setTimeout(()=>window.OnyxFullscreenShells?.focus?.('work'),0);
  }
+ function settleCollapsedBubble(){
+   if(root.dataset.runtimeMode!=='module')return;
+   if(window.OnyxVirtualPet?.getState?.()?.open)window.OnyxVirtualPet.close?.();
+   const widget=$('#onyxWidget');
+   if(widget){widget.classList.remove('open','tab-fullscreen','is-fullscreen');widget.dataset.sizeState='hyper-reduced';}
+   $('#onyxPopout')?.setAttribute('aria-hidden','true');
+   $('#onyxBubble')?.setAttribute('aria-expanded','false');
+ }
  function exitWorkFullscreen(){
    if(work)work.hidden=true;
    notifyWorkFrame(false);
    root.dataset.runtimeMode='module';
    closeTransientSurfaces();
    window.OnyxVirtualPet?.setTab?.('work');
+   settleCollapsedBubble();
+   requestAnimationFrame(settleCollapsedBubble);
    $('#onyxBubble')?.focus?.({preventScroll:true});
  }
  function exitToModule(){
