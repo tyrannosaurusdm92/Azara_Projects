@@ -1,0 +1,25 @@
+html[data-runtime-mode="module"] #slowPetGame,
+html[data-runtime-mode="module"] #onyxLeisureFullscreen{display:none!important}
+html[data-runtime-mode="module"] #onyxWidget{display:block!important}
+html[data-runtime-mode="fast-game"] #slowPetGame{display:none!important}
+html[data-runtime-mode="fast-game"] #onyxLeisureFullscreen{display:block!important}
+html[data-runtime-mode="slow-game"] #onyxLeisureFullscreen{display:none!important}
+html[data-runtime-mode="slow-game"] #slowPetGame{display:block!important}
+#slowPetGame,#onyxLeisureFullscreen{display:none}
+#onyxWidget{z-index:10000}
+.onyx-fullscreen-shell-host{position:fixed;inset:0;z-index:20000;background:#000;overflow:hidden}
+.onyx-fullscreen-shell-frame{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff}
+.onyx-leisure-game-host{position:fixed;inset:0;z-index:20000;background:#000;overflow:hidden}
+.onyx-leisure-game-frame{position:absolute;inset:0;width:100%;height:100%;border:0;background:#080b12}
+.fullscreen-shell-exit{position:fixed;z-index:22500;top:max(12px,calc(env(safe-area-inset-top) + 10px));bottom:auto;min-height:44px;border:2px solid #071014;border-radius:9px;font:900 28px/1 system-ui;box-shadow:0 0 0 2px #fff,0 4px 12px #0008}
+.fullscreen-shell-exit{right:12px;width:46px;background:#d40000;color:#fff}
+/* Fullscreen chat is the exact live module conversation surface; no duplicate iframe chat history exists. */
+html[data-runtime-mode="fast-game"] #onyxWidget,html[data-runtime-mode="slow-game"] #onyxWidget{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;pointer-events:none!important;z-index:30000!important}
+html[data-runtime-mode="fast-game"] #onyxWidget .jump-orb,html[data-runtime-mode="slow-game"] #onyxWidget .jump-orb,html[data-runtime-mode="fast-game"] #onyxFullscreenExit,html[data-runtime-mode="slow-game"] #onyxFullscreenExit{display:none!important}
+html[data-runtime-mode="fast-game"] #onyxWidget:not(.open) .jump-panel,html[data-runtime-mode="slow-game"] #onyxWidget:not(.open) .jump-panel{display:none!important}
+html[data-runtime-mode="fast-game"] #onyxWidget.open .jump-panel,html[data-runtime-mode="slow-game"] #onyxWidget.open .jump-panel{display:flex!important;pointer-events:auto!important;position:fixed!important;z-index:31000!important;top:max(62px,calc(env(safe-area-inset-top) + 58px))!important;right:10px!important;bottom:10px!important;left:auto!important;width:min(920px,calc(100vw - 20px))!important;height:min(760px,calc(100dvh - 78px))!important;max-height:calc(100dvh - 78px)!important;transform:none!important}
+html[data-runtime-mode="fast-game"] #onyxWidget.open .jump-tabs [data-tab]:not([data-tab="leisure"]),html[data-runtime-mode="slow-game"] #onyxWidget.open .jump-tabs [data-tab]:not([data-tab="health"]){display:none!important}
+html[data-runtime-mode="fast-game"] #onyxWidget.open .jump-tabs,html[data-runtime-mode="slow-game"] #onyxWidget.open .jump-tabs{grid-template-columns:1fr!important}
+html[data-runtime-mode="fast-game"] #onyxWidget.open [data-launch-game],html[data-runtime-mode="slow-game"] #onyxWidget.open [data-launch-slow-game]{display:none!important}
+html[data-runtime-mode="fast-game"] #onyxWidget.open .conversation-page-shell,html[data-runtime-mode="slow-game"] #onyxWidget.open .conversation-page-shell{height:100%!important;max-height:none!important}
+@media(max-width:620px){.fullscreen-shell-exit{top:max(10px,calc(env(safe-area-inset-top) + 8px));bottom:auto}}

@@ -1,0 +1,90 @@
+:root{--os-mode-bg:#000000;--os-mode-surface:#000000;--os-mode-text:#FFFFFF;--os-mode-cyan:#00FFFF;--os-mode-yellow:#FFF600;--os-mode-persimmon:#EC5800;--os-mode-primary:#1E90FF}
+html[data-color-mode="light"]{color-scheme:light;--os-mode-bg:#FFFFFF;--os-mode-surface:#FFFFFF;--os-mode-text:#000000}
+html[data-color-mode="dark"]{color-scheme:dark;--os-mode-bg:#000000;--os-mode-surface:#000000;--os-mode-text:#FFFFFF}
+html{zoom:1!important;width:100%;max-width:100%;overflow-x:hidden}
+body{width:100%;max-width:100%;overflow-x:hidden}
+#onyxWidget{zoom:1.3225;transform-origin:top right}
+#onyxWidget .onyx-popout{max-width:calc((100vw - 28px)/1.3225)!important;max-height:calc((100dvh - 28px)/1.3225)!important;overflow:auto}
+#onyxWidget .onyx-popout{color:var(--os-mode-text)!important;background:var(--os-mode-surface)!important;border:1.75px solid var(--os-mode-cyan)!important}
+#onyxWidget .onyx-popout :is(.onyx-panel-header,.onyx-speech,.module-body,.module-card,.tab-panel,.onyx-tab-panel){color:var(--os-mode-text)!important;background:var(--os-mode-surface)!important;border-color:var(--os-mode-yellow)!important}
+#onyxWidget .onyx-popout :is(h1,h2,h3,h4,p,label,small,span){color:var(--os-mode-text)}
+#onyxWidget .onyx-popout :is(button,.button,input[type=button],input[type=submit]){color:#FFFFFF!important;background:var(--os-mode-primary)!important;border:1.75px solid var(--os-mode-cyan)!important}
+#onyxWidget .onyx-popout :is(button,.button):nth-of-type(even){border-color:var(--os-mode-yellow)!important}
+#onyxWidget .onyx-popout :is(input,textarea,select){color:var(--os-mode-text)!important;background:var(--os-mode-surface)!important;border:1.75px solid var(--os-mode-cyan)!important}
+#onyxWidget .onyx-popout hr{border:0;border-top:1.75px solid var(--os-mode-persimmon)!important}
+#onyxWidget .onyx-popout :is(button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid var(--os-mode-yellow)!important;outline-offset:3px}
+@media(max-width:520px){#onyxWidget .onyx-popout{max-width:calc((100vw - 20px)/1.3225)!important;max-height:calc((100dvh - 20px)/1.3225)!important}}
+
+
+/* Keep the second size step scoped to Onyx's non-game widget. */
+:root{--os-mode-link:#000000}
+html[data-color-mode="light"]{--os-mode-link:#000000}
+html[data-color-mode="dark"]{--os-mode-link:#FFFFFF}
+#onyxWidget{zoom:1.520875!important;transform-origin:top right}
+#onyxWidget.is-fullscreen,#onyxWidget.tab-fullscreen{zoom:1!important}
+#onyxWidget .onyx-popout{max-width:calc((100vw - 28px)/1.520875)!important;max-height:calc((100dvh - 28px)/1.520875)!important;overflow:auto}
+#onyxWidget .onyx-popout :is(button,.button,input[type=button],input[type=submit]){color:#000000!important;background:#1E90FF!important;border:1.75px solid var(--os-mode-cyan)!important}
+#onyxWidget .onyx-popout :is(button,.button,input[type=button],input[type=submit]):nth-of-type(even){border-color:var(--os-mode-yellow)!important}
+#onyxWidget .onyx-popout a{color:var(--os-mode-text)!important;text-decoration:underline;text-decoration-color:var(--os-mode-link)!important;text-underline-offset:2px}
+@media(max-width:520px){#onyxWidget .onyx-popout{max-width:calc((100vw - 20px)/1.520875)!important;max-height:calc((100dvh - 20px)/1.520875)!important}}
+
+/* Visual pass 3: enlarge the non-game widget while leaving fullscreen games native. */
+:root{--os-mode-link:#FFFFFF}
+html[data-color-mode="light"]{--os-mode-link:#000000}
+html[data-color-mode="dark"]{--os-mode-link:#FFFFFF}
+#onyxWidget{zoom:1.74900625!important;transform-origin:top right}
+#onyxWidget.is-fullscreen,#onyxWidget.tab-fullscreen{zoom:1!important}
+#onyxWidget .onyx-popout{
+ max-width:calc((100vw - 28px)/1.74900625)!important;
+ max-height:calc((100dvh - 28px)/1.74900625)!important;overflow:auto
+}
+#onyxWidget .onyx-popout :is(button,.button,input[type=button],input[type=submit]){
+ color:#000000!important;background:#1E90FF!important;border:1.75px solid var(--os-mode-cyan)!important
+}
+#onyxWidget .onyx-popout :is(button,.button,input[type=button],input[type=submit]):nth-of-type(even){border-color:var(--os-mode-yellow)!important}
+#onyxWidget .onyx-popout a{color:var(--os-mode-text)!important;text-decoration:underline;text-decoration-color:var(--os-mode-link)!important;text-underline-offset:2px}
+@media(max-width:520px){
+ #onyxWidget .onyx-popout{
+  max-width:calc((100vw - 20px)/1.74900625)!important;
+  max-height:calc((100dvh - 20px)/1.74900625)!important
+ }
+}
+
+/* Visual pass 4: larger Onyx widget, exact high-contrast palette, and fullscreen Work chrome. */
+:root{--os-mode-bg:#000000;--os-mode-surface:#000000;--os-mode-text:#FFFFFF;--os-mode-cyan:#00FFFF;--os-mode-yellow:#FFF600;--os-mode-persimmon:#EC5800;--os-mode-primary:#1E90FF;--os-mode-link:#FFFFFF}
+html[data-color-mode="light"]{color-scheme:light;--os-mode-bg:#FFFFFF;--os-mode-surface:#FFFFFF;--os-mode-text:#000000;--os-mode-link:#000000}
+html[data-color-mode="dark"]{color-scheme:dark;--os-mode-bg:#000000;--os-mode-surface:#000000;--os-mode-text:#FFFFFF;--os-mode-link:#FFFFFF}
+#onyxWidget{zoom:2.0113571875!important;transform-origin:top right}
+#onyxWidget.is-fullscreen,#onyxWidget.tab-fullscreen{zoom:1!important}
+#onyxWidget .onyx-popout{max-width:calc((100vw - 28px)/2.0113571875)!important;max-height:calc((100dvh - 28px)/2.0113571875)!important;overflow:auto}
+@media(max-width:520px){#onyxWidget .onyx-popout{max-width:calc((100vw - 20px)/2.0113571875)!important;max-height:calc((100dvh - 20px)/2.0113571875)!important}}
+#onyxWidget .jump-panel{
+ --panel-bg:var(--os-mode-surface);--panel-text:var(--os-mode-text);--panel-border:var(--os-mode-cyan);
+ --surface-1:var(--os-mode-surface);--surface-2:var(--os-mode-surface);--surface-3:var(--os-mode-surface);
+ --header-bg:var(--os-mode-surface);--header-text:var(--os-mode-text);--tab-bg:var(--os-mode-surface);
+ --button-bg:var(--os-mode-primary);--button-text:#000000;--button-hover:var(--os-mode-primary);
+ --active-bg:var(--os-mode-primary);--active-text:#000000;--input-bg:var(--os-mode-surface);--input-text:var(--os-mode-text);
+ --link-text:var(--os-mode-text);--link-hover:var(--os-mode-primary);--muted:var(--os-mode-text);--focus:var(--os-mode-yellow);
+ --scroll-track:var(--os-mode-surface);--scroll-thumb:var(--os-mode-cyan);
+ color:var(--os-mode-text)!important;background-color:var(--os-mode-surface)!important;
+ background-image:radial-gradient(circle at 94% 6%,rgba(0,255,255,.045),transparent 22rem),radial-gradient(circle at 4% 96%,rgba(255,246,0,.03),transparent 20rem)!important;
+ border:1.75px solid var(--os-mode-cyan)!important
+}
+#onyxWidget .jump-panel :is(.module-design-section,.module-design-accessibility,.chat-message,.chat-prompt-chip,.channel-item,.history-thread,.module-design-preset,.chat-utility-section,.chat-server-workspace,.module-body,.module-card,.tab-panel,.onyx-tab-panel,.chat-conversation-section){color:var(--os-mode-text)!important;background-color:var(--os-mode-surface)!important;border:1.75px solid var(--os-mode-cyan)!important}
+#onyxWidget .jump-panel :is(.module-design-section,.module-design-accessibility,.chat-message,.chat-prompt-chip,.channel-item,.history-thread,.module-design-preset,.chat-utility-section,.chat-server-workspace,.module-body,.module-card,.tab-panel,.onyx-tab-panel,.chat-conversation-section):nth-of-type(even){border-color:var(--os-mode-yellow)!important}
+#onyxWidget .jump-panel :is(button,.button,input[type="button"],input[type="submit"],.jump-tab,.fullscreen-button,.chat-button,.module-design-button,.send-button){min-height:40px;color:#000000!important;background:#1E90FF!important;border:1.75px solid #00FFFF!important;box-shadow:none!important}
+#onyxWidget .jump-panel :is(button,.button,input[type="button"],input[type="submit"],.jump-tab,.fullscreen-button,.chat-button,.module-design-button,.send-button):nth-of-type(even){border-color:#FFF600!important}
+#onyxWidget .jump-panel :is(input:not([type="color"]),textarea,select){color:var(--os-mode-text)!important;background:var(--os-mode-surface)!important;border:1.75px solid #00FFFF!important}
+#onyxWidget .jump-panel :is(input:not([type="color"]),textarea,select):nth-of-type(even){border-color:#FFF600!important}
+#onyxWidget .jump-panel :is(.onyx-panel-header,.module-topbar,.pane-toolbar,.chat-header,.history-head,.server-workspace-head){color:var(--os-mode-text)!important;background:var(--os-mode-surface)!important;border-bottom:1.75px solid #EC5800!important}
+#onyxWidget .jump-panel :is(h1,h2,h3,h4,p,label,small){color:var(--os-mode-text)!important}
+#onyxWidget .jump-panel hr{border:0;border-top:1.75px solid #EC5800!important}
+#onyxWidget .jump-panel :is(a,.message-content a){color:var(--os-mode-text)!important;text-decoration:underline;text-decoration-color:var(--os-mode-link)!important;text-underline-offset:2px}
+#onyxWidget .jump-panel :is(button,input,textarea,select,[tabindex]):focus-visible{outline:3px solid #FFF600!important;outline-offset:3px}
+#onyxWidget .jump-panel :is(.module-design-button,.chat-button,.fullscreen-button,.send-button,.primary-button){color:#000000!important;background:#1E90FF!important}
+html[data-runtime-mode="work"] #onyxWorkFullscreenShell,html[data-runtime-mode="work"] #onyxWorkFullscreenFrame{background:var(--os-mode-bg)!important}
+#onyxWorkFullscreenExit{color:#000000!important;background:#1E90FF!important;border:1.75px solid #00FFFF!important;box-shadow:0 0 0 2px #FFF600,0 4px 12px rgba(0,0,0,.32)!important}
+#onyxWidget .onyx-popout :is(button,.button,input[type="button"],input[type="submit"]){color:#000000!important;background:#1E90FF!important;border:1.75px solid #00FFFF!important}
+#onyxWidget .onyx-popout :is(button,.button,input[type="button"],input[type="submit"]):nth-of-type(even){border-color:#FFF600!important}
+#onyxWidget .onyx-popout :is(input,textarea,select){color:var(--os-mode-text)!important;background:var(--os-mode-surface)!important;border:1.75px solid #00FFFF!important}
+
