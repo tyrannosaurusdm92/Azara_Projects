@@ -22,3 +22,11 @@ Browser checks on the local preview covered desktop navigation, section folds, p
 The final keyboard interaction test was blocked by the browser session's usage limit. Opening the keyboard and its screenshot-close sequence were not verified in this pass. Cloud authentication/sync, speech generation, installation and drag positioning were not exercised end to end. The existing keyboard scripts, glyph project implementation, language datasets and backend were preserved.
 
 The preview uses isolated browser storage. No preview draft text or responsive-test page is included in the published source.
+
+## Follow-up visual and structural pass (October 29, 2026)
+
+- Added creation, import, rename and Trash-restore protections so users do not accidentally generate a second canonical Language parent. Duplicate-name writing is retained as a normal Language notes page under the existing section; existing backup imports continue to use the lossless navigation normalizer.
+- Unified keyboard key chrome, glyph editing controls, modal dialogs, archive, rules, dictionary, and evolution surfaces using the same teal/brass design tokens, tightened spacing, reduced uncontrolled overflows, and improved narrow-viewport wrapping and keyboard focus indications.
+- Replaced the repeated studio/studio label inside blank manuscript paper with a page-specific caption. Removed conflicting duplicate browser theme-color metadata and bumped the PWA shell cache to v16.
+- The independent live browser audit (before this follow-up commit) confirmed one Language parent in its clean initial state, working era accordion, readable dictionary, usable Glyph Studio, and keyboard bubble opening/closing. It did not fully test Alphabet Evolution, Language Evolution Breakdown, cloud sync, keyboard entry, or all saved workspace migrations. Browser cache refresh and device-specific checks are still needed after deployment.
+- Regression script now asserts duplicate-name guards, restoration normalization, a single browser theme-color, and shared stylesheet coverage. The HTML asset audit found 60 local referenced assets and no missing paths or duplicate script includes.
