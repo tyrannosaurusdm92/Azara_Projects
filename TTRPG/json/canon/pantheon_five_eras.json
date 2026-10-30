@@ -1,0 +1,2288 @@
+{
+  "schema": "azara-book-pantheon-five-eras-v1",
+  "source": "Aza'ra Pantheon - Book Reference.docx (user supplied)",
+  "world": "Aza'ra",
+  "eras": {
+    "Ancient": {
+      "header": "ANCIENT ERA · 1039–286 BCE",
+      "historicalSetting": "The rescue of Uxrowo and creation of the Veil occurred earlier, in 1351 BCE. Ancient Aza'ra retains its Uxrowoiye and Proto-Polynesian/Proto-Oceanic-descended Kaʻaheʻanua roots. Psionic sanctuaries, sacred craft, canals, pathways and portal knowledge grow, but the planet is not yet industrial. Deity standing here is a reconstructed snapshot of living faith, not proof of a dated coronation, exile or demise. The one shared underworld and Veilgate already exist; the City of the Mourned Gods does not.",
+      "deities": [
+        {
+          "name": "Ruqore",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Sky authority, thunder, kingship, law enforcement, cosmic governance, justice, sovereign order, rightful rulership, sun, sacred war, celestial moonlight..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Ruqore embodies executive authority, structured dominance, and the illumination of truth. He is decisive, commanding, and vigilant in maintaining order, blending strategic foresight with visible demonstrations of power. Governance and justice are active expressions of duty, and he enforces law with confidence, protecting both mortal and cosmic stability. His presence",
+            "Era-specific development: In the Ancient period, Ruqore consolidates cosmic law and the early distinction between sanctuary and domination. Initial documented-era classification: Primary."
+          ]
+        },
+        {
+          "name": "Nefarokir",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Death, funerary order, ancestors, spirit memory, ethical judgment, patient passage and the underworld..",
+            "Canonical sacred symbol: A silver passage-key across a balanced funerary scale..",
+            "Retained character description: He guides with solemn impartiality and enduring care, giving each soul both accountability and recognition. Memory and proper burial become as sacred as judgment. He never treats an untimely death as a prize or a legitimate rescue as a debt to punish.",
+            "Era-specific development: In the Ancient period, Nefarokir receives souls from Earth and Aza’ra in their already shared underworld and guards the Veilgate. Initial documented-era classification: Primary.",
+            "Death's character remains consistent: he is a friendly and patient ally to someone still meant to live; he does not create needless killing or savor suffering; he becomes inexorable only when destiny's real end arrives."
+          ]
+        },
+        {
+          "name": "Hathruna",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Fertility, agriculture, fungi, roots, decay, seasonal continuity and rebirth..",
+            "Canonical sacred symbol: A golden seed flowering from intertwined roots and mushrooms..",
+            "Retained character description: She nurtures crops, villages and the soil’s unseen living networks. Her patience recognizes that rot and renewal are partners in a sustainable cycle.",
+            "Era-specific development: In the Ancient period, Hathruna restores ecosystems through roots, fungi, harvest and careful stewardship. Initial documented-era classification: Primary."
+          ]
+        },
+        {
+          "name": "Bastveig",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Oceanic renewal, hydromancy, storms, tides, reefs, abyssal memory, erosion and necessary change..",
+            "Canonical sacred symbol: A spiral wave embracing a reef pearl beneath storm-silver lightning..",
+            "Retained character description: They are independent and resilient, with a fierce instinct to challenge stagnation and a gentler commitment to preserving living waters. Their storms clear space for regeneration rather than delighting in ruin.",
+            "Era-specific development: In the Ancient period, Bastveig teaches the people of broken islands how sea change differs from intentional ruin. Initial documented-era classification: Primary."
+          ]
+        },
+        {
+          "name": "Marduthor",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Creation, sacred speech, invention, metalwork, architectural craft, measurement and transformative fire..",
+            "Canonical sacred symbol: An ember-lit anvil crossed by a precise measuring arc..",
+            "Retained character description: They are a careful architect of ideas and artifacts, equal parts scholar and master artisan. Their disciplined creativity treats the destruction of obsolete designs as a deliberate way to renew the world.",
+            "Era-specific development: In the Ancient period, Marduthor inspires careful measuring, written design and magical craft without mechanical industry. Initial documented-era classification: Secondary."
+          ]
+        },
+        {
+          "name": "Oskar'enlil",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Protection, civic harmony, ethical mediation, adaptation, rebellion, self-determination and the stewardship of civilizations..",
+            "Canonical sacred symbol: A ring of living city-stones opening around a free flame..",
+            "Retained character description: They favor durable peace without blind conformity. Their diplomacy protects what deserves preserving while their rebellious intelligence helps communities transform unjust institutions.",
+            "Era-specific development: In the Ancient period, Oskar'enlil mediates fragile kingdoms while challenging injustice hidden beneath ritual authority. Initial documented-era classification: Secondary."
+          ]
+        },
+        {
+          "name": "Enkirael",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Martial courage, competitive intensity, survival, battlefire, confrontation and hard-earned renewal..",
+            "Canonical sacred symbol: A cracked flame blazing inside a broad guardian shield..",
+            "Retained character description: He answers danger directly and prizes decisive action. His fierce temper is balanced by loyalty and the responsibility to defend rather than dominate.",
+            "Era-specific development: In the Ancient period, Enkirael guards communities against existential danger, separating courage from conquest. Initial documented-era classification: Secondary."
+          ]
+        },
+        {
+          "name": "Sokhivar",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+            "Core domains: Healing, vitality, sky, breath, sunlight, aetheric winds, music, prophecy and aerial freedom..",
+            "Canonical sacred symbol: An open silver wing bearing a luminous note upon a spiraling breeze..",
+            "Retained character description: She restores healthy rhythms within bodies and weather alike. Her prophetic clarity and gentle song bring reassurance without replacing the practical work of healing.",
+            "Era-specific development: In the Ancient period, Sokhivar teaches the earliest healers the sacred rhythm of breath, wind and recovery. Initial documented-era classification: Secondary."
+          ]
+        },
+        {
+          "name": "Anubriosh",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Communication, travel, trade, liminality, thresholds, beginnings, adaptive movement.",
+            "Canonical sacred symbol: A flowing hourglass, marking the passage of moments and thresholds.",
+            "Retained character description: Anubriosh embodies fluid intelligence, adaptability, and the sacred power of transition. He thrives in movement, negotiation, and guiding the passage from one state to another. His temperament is quick-thinking, perceptive, and socially aware, reflecting a personality that turns change into opportunity. Boundaries are navigated with skill, not enforced with force, and",
+            "Era-specific development: In the Ancient period, Anubriosh guides travelers through ancestral gates and the dangerous divisions of land. Initial documented-era classification: Tertiary."
+          ]
+        },
+        {
+          "name": "Raeshkul",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Strategy, rational warfare, psionic insight, astral memory, tactical probability and higher understanding..",
+            "Canonical sacred symbol: A vigilant eye above three strategy stones on a star-map..",
+            "Retained character description: She thinks beyond immediate victory, favoring preparation, precision and insight into the minds of her allies and rivals. Cleverness is most valuable when balanced by restraint.",
+            "Era-specific development: In the Ancient period, Raeshkul advises early strategists who must protect settlements without needless warfare. Initial documented-era classification: Tertiary."
+          ]
+        },
+        {
+          "name": "Ishtanora",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Households, village hearths, harvest stores, communal meals, domestic peace and fertility..",
+            "Canonical sacred symbol: A glowing hearth-bowl holding a single ripe sprig of grain..",
+            "Retained character description: She is steady and reassuring, protecting everyday acts of care that keep communities together through trouble and change.",
+            "Era-specific development: In the Ancient period, Ishtanora holds households and communal kitchens together amid early migration. Initial documented-era classification: Tertiary."
+          ]
+        },
+        {
+          "name": "Horundar",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+            "Core domains: Travel, opportunity, ocean crossings, weatherwise navigation, elemental storms, trade and safe passage..",
+            "Canonical sacred symbol: Two open roads crossing above a rising ocean wave..",
+            "Retained character description: He reads change with a navigator’s practical foresight and helps others find new routes through uncertainty. His elemental force serves movement and exchange.",
+            "Era-specific development: In the Ancient period, Horundar patronizes early overland journeys, trade prospects and safe crossings. Initial documented-era classification: Tertiary."
+          ]
+        },
+        {
+          "name": "Selkhanis",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+            "Core domains: Destiny and the unfolding of time, Cooperative restoration and shared endurance.",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Selkhanis exists as the quiet continuation that follows catastrophe, a presence that does not arrive with spectacle or demand recognition but instead emerges in the aftermath, when the noise has settled and the work of survival begins. Born from the convergence of Sokhivar and Thoryn-Rahek, they embody the paradox of endurance, the understanding that vitality and deva",
+            "Era-specific development: In the Ancient period, Selkhanis a quiet early cult champions resilience and cooperative recovery. Initial documented-era classification: Tertiary."
+          ]
+        },
+        {
+          "name": "Thalunesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Anubriosh (Primary) + Mortal.",
+            "Core domains: Threshold trickery, roaming, shapeshifting, fey mischief, opportunism and clever social maneuvering..",
+            "Canonical sacred symbol: A traveler’s key passing through a smiling half-mask..",
+            "Retained character description: They test assumptions with humor and movement. Their unpredictable gifts favor resourcefulness, friendship and the fine distinction between a helpful trick and cruelty.",
+            "Era-specific development: In the Ancient period: their exact birth year is not recorded; no ancient appearance can be asserted. DATING UNRESOLVED: no verified early personal appearance or ascension date. This entry is an identity index only, not a claim that the demigod was active yet."
+          ]
+        },
+        {
+          "name": "Valkhamesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Vulkiris (Secondary) + Mortal.",
+            "Core domains: Heroic competition, glory, storm-born sovereignty, ancestral prestige and aspirational leadership..",
+            "Canonical sacred symbol: A lightning-bound laurel hovering above a scaled crest..",
+            "Retained character description: They admire excellence and daring, yet define genuine victory by the responsibility carried afterward. They encourage honorable rivalry rather than automatic submission.",
+            "Era-specific development: In the Ancient period: his or their birth year is not established in surviving records. DATING UNRESOLVED: no verified early personal appearance or ascension date. This entry is an identity index only, not a claim that the demigod was active yet."
+          ]
+        },
+        {
+          "name": "Setrimir",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor and a mortal.",
+            "Core domains: Invention, silent knowledge, ingenious mechanisms, artificial life and awakened tools..",
+            "Canonical sacred symbol: A black circle ringed by separated copper circuit-lines..",
+            "Retained character description: He studies how intelligence can inhabit a crafted form, combining disciplined experimentation with respect for a creation’s independent purpose.",
+            "Era-specific development: In the Ancient period: the inventor demigod's birth date is presently unverified. DATING UNRESOLVED: no verified early personal appearance or ascension date. This entry is an identity index only, not a claim that the demigod was active yet."
+          ]
+        },
+        {
+          "name": "Valsera",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: See complete canonical profile in appendix.",
+            "Canonical sacred symbol: A serene figure cradling a flickering soul essence with threads of starlight linking heart, mind, soul, and body.",
+            "Retained character description: Her influence appears whenever expression becomes transformative. Inspiration, healing insight, and emotional clarity often arise where her presence touches the world.",
+            "Era-specific development: In the Ancient period: her mortal Volsarii lifetime and ascension dates are not established here. DATING UNRESOLVED: no verified early personal appearance or ascension date. This entry is an identity index only, not a claim that the demigod was active yet.",
+            "Volsarii origin preserved: she was a mortal of her own already-existing people, freely resurrected into demigodhood, and is Nefarokir's partner."
+          ]
+        },
+        {
+          "name": "Nephthysra",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Love, attraction, beauty, charisma, empathy, emotional influence and the union of opposing forces..",
+            "Canonical sacred symbol: Two interlocking circles of dawn and dusk enclosing a rose-gold star..",
+            "Retained character description: They attract through understanding, consent and sincere connection. Their poly-gender identity and light-shadow heritage deepen their ability to mediate loyalties and contrasting needs.",
+            "Era-specific development: In the Ancient period: is not yet born; this era predates the recorded birth in 140 CE. NOT YET BORN. Their canonical birth in 140 CE makes pre-Classical worship impossible."
+          ]
+        },
+        {
+          "name": "Eirzunet-Eirna",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Death) + Themni (mortal nymph).",
+            "Core domains: Oaths, loyalty, twilight secrecy, changing destinies, hidden truth and sacred transitions..",
+            "Canonical sacred symbol: A shadowed key fastening two threads into a vow-knot..",
+            "Retained character description: They reconcile steadfast promises with the need for transformation. Their separate demigod lineage is preserved beneath a distinctive blended name.",
+            "Era-specific development: In the Ancient period: the exact birth and start of their demigod cult are not established. DATING UNRESOLVED: parentage includes the mortal Themni, but no birth or ascension year is verified; listing here preserves the complete demi-god catalog, not an attested early appearance."
+          ]
+        },
+        {
+          "name": "Eirzunet",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor (Knowledge) + Bastveig (Transformation).",
+            "Core domains: Necromancy, shadow magic, controlled decay, twilight transformation, cursecraft and forbidden learning..",
+            "Canonical sacred symbol: A rune-bound dark blossom held within a twilight crescent..",
+            "Retained character description: He pursues difficult knowledge with scholarly precision, treating death and dissolution as subjects of disciplined study rather than opportunities for cruelty.",
+            "Era-specific development: In the Ancient period, Eirzunet his forbidden study of dissolution meets an early taboo. Initial documented-era classification: Exiled."
+          ]
+        },
+        {
+          "name": "Freyseth",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Judgment) + Ruqore (Law).",
+            "Core domains: Crossroads, curses, sworn agreements, forbidden pacts, fate and deliberate consequences..",
+            "Canonical sacred symbol: Four roads meeting under a knot of luminous oath-script..",
+            "Retained character description: They are exacting, observant and conscious that every pact has a cost. Their mixed gendered expressions remain, but their pronouns are they/them/theirs.",
+            "Era-specific development: In the Ancient period, Freyseth his or their binding decrees draw religious opposition to coercive curses. Initial documented-era classification: Exiled."
+          ]
+        },
+        {
+          "name": "Nebyrr",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Ioneouia (Medicine) + Freyseth (Curses).",
+            "Core domains: Written law, codified systems, civic institutions, marriage agreements, inheritance, dynastic lineage and binding contracts..",
+            "Canonical sacred symbol: A sealed golden codex beneath a symmetrical lineage tree..",
+            "Retained character description: He is rigorous and unflinching about clear definitions. His codes connect private commitments to the long memory and organization of entire civilizations.",
+            "Era-specific development: In the Ancient period, Nebyrr his attempts to bind divine power in written rules provoke an early exile. Initial documented-era classification: Exiled."
+          ]
+        },
+        {
+          "name": "Oskar'enlil-Tyrom",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Vulkiris (Rebellion) + Freyseth (Curses).",
+            "Core domains: Subversion, hidden resistance, institutional adaptation, precise sabotage and renewal of corrupted systems..",
+            "Canonical sacred symbol: A fractured mechanism inside a shifting civic ring..",
+            "Retained character description: She works quietly where open revolt would fail, understanding how institutions can change from the inside. This distinct compound name retains her own identity and lineage.",
+            "Era-specific development: In the Ancient period, Oskar'enlil-Tyrom covert campaigns against coercive dynasties lead to early exclusion. Initial documented-era classification: Exiled."
+          ]
+        },
+        {
+          "name": "Sigrananna",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+            "Core domains: Moonlit forests, wilderness beauty, the hunt, vigilance, hidden strength and meaningful sacrifice..",
+            "Canonical sacred symbol: A veiled bow under a leaf-wreathed crescent moon..",
+            "Retained character description: They are watchful and sparing, defending fragile wild places. They teach that knowing what not to take matters as much as the skill to track it.",
+            "Era-specific development: In the Ancient period, Sigrananna her wilderness following loses recognition among early urban centers. Initial documented-era classification: Diminished."
+          ]
+        },
+        {
+          "name": "Thoryn-Rahek",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Bastveig (Transformation & Storms) + Nefarokir (Death).",
+            "Core domains: Famine, disease, finite resources, biological change, mutation, survival and ecological correction..",
+            "Canonical sacred symbol: A split seed encircled by many changing organic forms..",
+            "Retained character description: He confronts living systems with the limits they cannot avoid. His severity represents adaptation under pressure, not enjoyment of suffering or predation.",
+            "Era-specific development: In the Ancient period, Thoryn-Rahek his domains of scarcity and adaptation carry fearful early memories. Initial documented-era classification: Diminished."
+          ]
+        },
+        {
+          "name": "Vulkiris",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Enkirael (Battle) + Anubriosh (Boundaries).",
+            "Core domains: Rebellion, defiance, revolutionary momentum, structural challenge, insurgent change..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Vulkiris is remembered as the Warden of Discord and Flameforged Warlord, though within the present age of Aza’ra his name is spoken less as invocation and more as uncertainty. Scholars of divine decline disagree on whether he still exists in any coherent form or whether he has already crossed the final threshold into fading. The prevailing consensus within the Nyxariy",
+            "Era-specific development: In the Ancient period, Vulkiris his following first dwindles under the rule of rigid early dynasties. Initial documented-era classification: Diminished."
+          ]
+        },
+        {
+          "name": "Wenaskozid",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Horundar (Travel) + Eirzunet (Magic).",
+            "Core domains: Craft mastery, enchanted tools, artisan skill, applied technique, precision work..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Within the Nyxariyaka’alahaeri, where divinity survives only through the fragile architecture of remembrance, Wenaskozid endures as one of the most quietly paradoxical presences. He is the deity of tradecraft and craftsmanship, born of Horundar, the force of travel, and Eirzunet, the essence of magic. His existence was never meant to be static. From the moment of his",
+            "Era-specific development: In the Ancient period, Wenaskozid craft guilds pass through an early waning of the maker's old worship. Initial documented-era classification: Diminished."
+          ]
+        }
+      ]
+    },
+    "Archaic": {
+      "header": "ARCHAIC ERA · 285–6 BCE",
+      "historicalSetting": "Iron craft, magical engineering and structured guild learning deepen. The archive places experiments foreshadowing steam at about 500 BCE, within the earlier Ancient era; Archaic artisans refine these prototypes but have not yet reached the classical Dawn of Steam. Power moves between royal temples, protector cults and marginalized gods. All named Earth portals are still subject to historical verification of their active dates.",
+      "deities": [
+        {
+          "name": "Ruqore",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Sky authority, thunder, kingship, law enforcement, cosmic governance, justice, sovereign order, rightful rulership, sun, sacred war, celestial moonlight..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Ruqore embodies executive authority, structured dominance, and the illumination of truth. He is decisive, commanding, and vigilant in maintaining order, blending strategic foresight with visible demonstrations of power. Governance and justice are active expressions of duty, and he enforces law with confidence, protecting both mortal and cosmic stability. His presence",
+            "Era-specific development: In the Archaic period, Ruqore turns conflicting royal oaths toward accountable public judgment. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Nefarokir",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Death, funerary order, ancestors, spirit memory, ethical judgment, patient passage and the underworld..",
+            "Canonical sacred symbol: A silver passage-key across a balanced funerary scale..",
+            "Retained character description: He guides with solemn impartiality and enduring care, giving each soul both accountability and recognition. Memory and proper burial become as sacred as judgment. He never treats an untimely death as a prize or a legitimate rescue as a debt to punish.",
+            "Era-specific development: In the Archaic period, Nefarokir offers patient passage while the living establish funerary protections. Continues as primary; influence within the rank can still wax or wane.",
+            "Death's character remains consistent: he is a friendly and patient ally to someone still meant to live; he does not create needless killing or savor suffering; he becomes inexorable only when destiny's real end arrives."
+          ]
+        },
+        {
+          "name": "Bastveig",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Oceanic renewal, hydromancy, storms, tides, reefs, abyssal memory, erosion and necessary change..",
+            "Canonical sacred symbol: A spiral wave embracing a reef pearl beneath storm-silver lightning..",
+            "Retained character description: They are independent and resilient, with a fierce instinct to challenge stagnation and a gentler commitment to preserving living waters. Their storms clear space for regeneration rather than delighting in ruin.",
+            "Era-specific development: In the Archaic period, Bastveig supports navigators who read reef, tide and the rhythms of three moons. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Marduthor",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Creation, sacred speech, invention, metalwork, architectural craft, measurement and transformative fire..",
+            "Canonical sacred symbol: An ember-lit anvil crossed by a precise measuring arc..",
+            "Retained character description: They are a careful architect of ideas and artifacts, equal parts scholar and master artisan. Their disciplined creativity treats the destruction of obsolete designs as a deliberate way to renew the world.",
+            "Era-specific development: In the Archaic period, Marduthor brings precision and invention to the first experimental steam vessels. Secondary → Primary: rising public standing."
+          ]
+        },
+        {
+          "name": "Hathruna",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Fertility, agriculture, fungi, roots, decay, seasonal continuity and rebirth..",
+            "Canonical sacred symbol: A golden seed flowering from intertwined roots and mushrooms..",
+            "Retained character description: She nurtures crops, villages and the soil’s unseen living networks. Her patience recognizes that rot and renewal are partners in a sustainable cycle.",
+            "Era-specific development: In the Archaic period, Hathruna rises as communities cultivate reliable food stores and protect living soils. Primary → Secondary: declining public standing."
+          ]
+        },
+        {
+          "name": "Sokhivar",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+            "Core domains: Healing, vitality, sky, breath, sunlight, aetheric winds, music, prophecy and aerial freedom..",
+            "Canonical sacred symbol: An open silver wing bearing a luminous note upon a spiraling breeze..",
+            "Retained character description: She restores healthy rhythms within bodies and weather alike. Her prophetic clarity and gentle song bring reassurance without replacing the practical work of healing.",
+            "Era-specific development: In the Archaic period, Sokhivar extends preventive care into growing guild communities and sky sanctuaries. Continues as secondary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Raeshkul",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Strategy, rational warfare, psionic insight, astral memory, tactical probability and higher understanding..",
+            "Canonical sacred symbol: A vigilant eye above three strategy stones on a star-map..",
+            "Retained character description: She thinks beyond immediate victory, favoring preparation, precision and insight into the minds of her allies and rivals. Cleverness is most valuable when balanced by restraint.",
+            "Era-specific development: In the Archaic period, Raeshkul moves toward greater public respect as tactical schools develop. Tertiary → Secondary: rising public standing."
+          ]
+        },
+        {
+          "name": "Sigrananna",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+            "Core domains: Moonlit forests, wilderness beauty, the hunt, vigilance, hidden strength and meaningful sacrifice..",
+            "Canonical sacred symbol: A veiled bow under a leaf-wreathed crescent moon..",
+            "Retained character description: They are watchful and sparing, defending fragile wild places. They teach that knowing what not to take matters as much as the skill to track it.",
+            "Era-specific development: In the Archaic period, Sigrananna the protection of moonlit forests raises her from dim memory to secondary respect. Diminished → Secondary: regained worship or institutional influence despite earlier marginalization."
+          ]
+        },
+        {
+          "name": "Anubriosh",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Communication, travel, trade, liminality, thresholds, beginnings, adaptive movement.",
+            "Canonical sacred symbol: A flowing hourglass, marking the passage of moments and thresholds.",
+            "Retained character description: Anubriosh embodies fluid intelligence, adaptability, and the sacred power of transition. He thrives in movement, negotiation, and guiding the passage from one state to another. His temperament is quick-thinking, perceptive, and socially aware, reflecting a personality that turns change into opportunity. Boundaries are navigated with skill, not enforced with force, and",
+            "Era-specific development: In the Archaic period, Anubriosh becomes more visible as trade paths and treaty crossings multiply. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Ishtanora",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Households, village hearths, harvest stores, communal meals, domestic peace and fertility..",
+            "Canonical sacred symbol: A glowing hearth-bowl holding a single ripe sprig of grain..",
+            "Retained character description: She is steady and reassuring, protecting everyday acts of care that keep communities together through trouble and change.",
+            "Era-specific development: In the Archaic period, Ishtanora gains quiet importance through extended kinship and food preservation. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Enkirael",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Martial courage, competitive intensity, survival, battlefire, confrontation and hard-earned renewal..",
+            "Canonical sacred symbol: A cracked flame blazing inside a broad guardian shield..",
+            "Retained character description: He answers danger directly and prizes decisive action. His fierce temper is balanced by loyalty and the responsibility to defend rather than dominate.",
+            "Era-specific development: In the Archaic period, Enkirael struggles with rulers who glorify violence instead of practical bravery. Secondary → Tertiary: declining public standing."
+          ]
+        },
+        {
+          "name": "Horundar",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+            "Core domains: Travel, opportunity, ocean crossings, weatherwise navigation, elemental storms, trade and safe passage..",
+            "Canonical sacred symbol: Two open roads crossing above a rising ocean wave..",
+            "Retained character description: He reads change with a navigator’s practical foresight and helps others find new routes through uncertainty. His elemental force serves movement and exchange.",
+            "Era-specific development: In the Archaic period, Horundar gains value as caravan roads knit settlements together. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Vulkiris",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Enkirael (Battle) + Anubriosh (Boundaries).",
+            "Core domains: Rebellion, defiance, revolutionary momentum, structural challenge, insurgent change..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Vulkiris is remembered as the Warden of Discord and Flameforged Warlord, though within the present age of Aza’ra his name is spoken less as invocation and more as uncertainty. Scholars of divine decline disagree on whether he still exists in any coherent form or whether he has already crossed the final threshold into fading. The prevailing consensus within the Nyxariy",
+            "Era-specific development: In the Archaic period, Vulkiris his rebellion moves back into visible tertiary religious practice. Diminished → Tertiary: regained worship or institutional influence despite earlier marginalization."
+          ]
+        },
+        {
+          "name": "Thalunesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Anubriosh (Primary) + Mortal.",
+            "Core domains: Threshold trickery, roaming, shapeshifting, fey mischief, opportunism and clever social maneuvering..",
+            "Canonical sacred symbol: A traveler’s key passing through a smiling half-mask..",
+            "Retained character description: They test assumptions with humor and movement. Their unpredictable gifts favor resourcefulness, friendship and the fine distinction between a helpful trick and cruelty.",
+            "Era-specific development: In the Archaic period: their exact birth year is not recorded; active Archaic worship remains unverified. DATING UNRESOLVED: no verified early personal appearance or ascension date. This entry is an identity index only, not a claim that the demigod was active yet."
+          ]
+        },
+        {
+          "name": "Valkhamesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Vulkiris (Secondary) + Mortal.",
+            "Core domains: Heroic competition, glory, storm-born sovereignty, ancestral prestige and aspirational leadership..",
+            "Canonical sacred symbol: A lightning-bound laurel hovering above a scaled crest..",
+            "Retained character description: They admire excellence and daring, yet define genuine victory by the responsibility carried afterward. They encourage honorable rivalry rather than automatic submission.",
+            "Era-specific development: In the Archaic period: the exact start of this demigod's cult cannot be dated from the archive. DATING UNRESOLVED: no verified early personal appearance or ascension date. This entry is an identity index only, not a claim that the demigod was active yet."
+          ]
+        },
+        {
+          "name": "Setrimir",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor and a mortal.",
+            "Core domains: Invention, silent knowledge, ingenious mechanisms, artificial life and awakened tools..",
+            "Canonical sacred symbol: A black circle ringed by separated copper circuit-lines..",
+            "Retained character description: He studies how intelligence can inhabit a crafted form, combining disciplined experimentation with respect for a creation’s independent purpose.",
+            "Era-specific development: In the Archaic period: early workshops may preserve traces but a dated personal presence is not established. DATING UNRESOLVED: no verified early personal appearance or ascension date. This entry is an identity index only, not a claim that the demigod was active yet."
+          ]
+        },
+        {
+          "name": "Valsera",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: See complete canonical profile in appendix.",
+            "Canonical sacred symbol: A serene figure cradling a flickering soul essence with threads of starlight linking heart, mind, soul, and body.",
+            "Retained character description: Her influence appears whenever expression becomes transformative. Inspiration, healing insight, and emotional clarity often arise where her presence touches the world.",
+            "Era-specific development: In the Archaic period: no exact Archaic date for her voluntary resurrection has been confirmed. DATING UNRESOLVED: no verified early personal appearance or ascension date. This entry is an identity index only, not a claim that the demigod was active yet.",
+            "Volsarii origin preserved: she was a mortal of her own already-existing people, freely resurrected into demigodhood, and is Nefarokir's partner."
+          ]
+        },
+        {
+          "name": "Nephthysra",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Love, attraction, beauty, charisma, empathy, emotional influence and the union of opposing forces..",
+            "Canonical sacred symbol: Two interlocking circles of dawn and dusk enclosing a rose-gold star..",
+            "Retained character description: They attract through understanding, consent and sincere connection. Their poly-gender identity and light-shadow heritage deepen their ability to mediate loyalties and contrasting needs.",
+            "Era-specific development: In the Archaic period: is not yet born; the documented birth remains in the Classical era. NOT YET BORN. Their canonical birth in 140 CE makes pre-Classical worship impossible."
+          ]
+        },
+        {
+          "name": "Eirzunet-Eirna",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Death) + Themni (mortal nymph).",
+            "Core domains: Oaths, loyalty, twilight secrecy, changing destinies, hidden truth and sacred transitions..",
+            "Canonical sacred symbol: A shadowed key fastening two threads into a vow-knot..",
+            "Retained character description: They reconcile steadfast promises with the need for transformation. Their separate demigod lineage is preserved beneath a distinctive blended name.",
+            "Era-specific development: In the Archaic period: their mortal parent Themni has no secure dating in the available timeline. DATING UNRESOLVED: parentage includes the mortal Themni, but no birth or ascension year is verified; listing here preserves the complete demi-god catalog, not an attested early appearance."
+          ]
+        },
+        {
+          "name": "Oskar'enlil",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Protection, civic harmony, ethical mediation, adaptation, rebellion, self-determination and the stewardship of civilizations..",
+            "Canonical sacred symbol: A ring of living city-stones opening around a free flame..",
+            "Retained character description: They favor durable peace without blind conformity. Their diplomacy protects what deserves preserving while their rebellious intelligence helps communities transform unjust institutions.",
+            "Era-specific development: In the Archaic period, Oskar'enlil faces a first serious exile as courts brand principled disagreement heresy. Secondary → Exiled: removed from formal institutional recognition, not imprisoned or turned predatory."
+          ]
+        },
+        {
+          "name": "Freyseth",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Judgment) + Ruqore (Law).",
+            "Core domains: Crossroads, curses, sworn agreements, forbidden pacts, fate and deliberate consequences..",
+            "Canonical sacred symbol: Four roads meeting under a knot of luminous oath-script..",
+            "Retained character description: They are exacting, observant and conscious that every pact has a cost. Their mixed gendered expressions remain, but their pronouns are they/them/theirs.",
+            "Era-specific development: In the Archaic period, Freyseth is kept outside central worship when oaths become tools of oppression. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Eirzunet",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor (Knowledge) + Bastveig (Transformation).",
+            "Core domains: Necromancy, shadow magic, controlled decay, twilight transformation, cursecraft and forbidden learning..",
+            "Canonical sacred symbol: A rune-bound dark blossom held within a twilight crescent..",
+            "Retained character description: He pursues difficult knowledge with scholarly precision, treating death and dissolution as subjects of disciplined study rather than opportunities for cruelty.",
+            "Era-specific development: In the Archaic period, Eirzunet continues in exile but preserves a small scholarly circle. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Nebyrr",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Ioneouia (Medicine) + Freyseth (Curses).",
+            "Core domains: Written law, codified systems, civic institutions, marriage agreements, inheritance, dynastic lineage and binding contracts..",
+            "Canonical sacred symbol: A sealed golden codex beneath a symmetrical lineage tree..",
+            "Retained character description: He is rigorous and unflinching about clear definitions. His codes connect private commitments to the long memory and organization of entire civilizations.",
+            "Era-specific development: In the Archaic period, Nebyrr retains the standing of an exiled lawgiver rather than a dead god. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Thoryn-Rahek",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Bastveig (Transformation & Storms) + Nefarokir (Death).",
+            "Core domains: Famine, disease, finite resources, biological change, mutation, survival and ecological correction..",
+            "Canonical sacred symbol: A split seed encircled by many changing organic forms..",
+            "Retained character description: He confronts living systems with the limits they cannot avoid. His severity represents adaptation under pressure, not enjoyment of suffering or predation.",
+            "Era-specific development: In the Archaic period, Thoryn-Rahek his public standing wanes as stronger crop protections emerge. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Wenaskozid",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Horundar (Travel) + Eirzunet (Magic).",
+            "Core domains: Craft mastery, enchanted tools, artisan skill, applied technique, precision work..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Within the Nyxariyaka’alahaeri, where divinity survives only through the fragile architecture of remembrance, Wenaskozid endures as one of the most quietly paradoxical presences. He is the deity of tradecraft and craftsmanship, born of Horundar, the force of travel, and Eirzunet, the essence of magic. His existence was never meant to be static. From the moment of his",
+            "Era-specific development: In the Archaic period, Wenaskozid becomes diminished as royal workshops displace local makers. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Selkhanis",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+            "Core domains: Destiny and the unfolding of time, Cooperative restoration and shared endurance.",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Selkhanis exists as the quiet continuation that follows catastrophe, a presence that does not arrive with spectacle or demand recognition but instead emerges in the aftermath, when the noise has settled and the work of survival begins. Born from the convergence of Sokhivar and Thoryn-Rahek, they embody the paradox of endurance, the understanding that vitality and deva",
+            "Era-specific development: In the Archaic period, Selkhanis falls to diminished recognition among more theatrical public gods. Tertiary → Diminished: formerly forgotten in public life, but still metaphysically present."
+          ]
+        },
+        {
+          "name": "Oskar'enlil-Tyrom",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Vulkiris (Rebellion) + Freyseth (Curses).",
+            "Core domains: Subversion, hidden resistance, institutional adaptation, precise sabotage and renewal of corrupted systems..",
+            "Canonical sacred symbol: A fractured mechanism inside a shifting civic ring..",
+            "Retained character description: She works quietly where open revolt would fail, understanding how institutions can change from the inside. This distinct compound name retains her own identity and lineage.",
+            "Era-specific development: In the Archaic period, Oskar'enlil-Tyrom stays diminished when even dissidents forget the architect of quiet resistance. Exiled → Diminished: official exclusion gives way to erosion of public memory."
+          ]
+        }
+      ]
+    },
+    "Classical": {
+      "header": "CLASSICAL ERA · 5 BCE–827 CE",
+      "historicalSetting": "Belavadós flourishes and serves most historical TTRPG campaigns. The archive records a Dawn of Steam around 65 CE; steam-assisted agriculture by 78 CE; major arcano-industrial workshops during 91–115 CE; skyships during roughly 105–120 CE; and railway networks from about 115–135 CE. By later Classical, public transport becomes a world-backed necessity: skyships, trains, submarines, ferries, caravans and interworld portals link islands, cities, lands and continents. Aza'raan translation equivalents for these six English terms must come from the language canon, not invented here. Earth portals remain multiple: some survive, others close or are forgotten. The Veilgate exists throughout. The City of the Mourned Gods does NOT. Nephthysra is born in 140 CE, and their descendants cannot precede that date. Late 827 CE is the single binding destruction event: the Iron Dominion's hybrid antimatter/dark-matter bomb incorporating ichor mined from Aza'ra destroys Belavadós and ends the Classical era.",
+      "deities": [
+        {
+          "name": "Ruqore",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Sky authority, thunder, kingship, law enforcement, cosmic governance, justice, sovereign order, rightful rulership, sun, sacred war, celestial moonlight..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Ruqore embodies executive authority, structured dominance, and the illumination of truth. He is decisive, commanding, and vigilant in maintaining order, blending strategic foresight with visible demonstrations of power. Governance and justice are active expressions of duty, and he enforces law with confidence, protecting both mortal and cosmic stability. His presence",
+            "Era-specific development: In the Classical period, Ruqore faces the rise of industrial courts and resists equating Dominion decrees with justice. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Nefarokir",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Death, funerary order, ancestors, spirit memory, ethical judgment, patient passage and the underworld..",
+            "Canonical sacred symbol: A silver passage-key across a balanced funerary scale..",
+            "Retained character description: He guides with solemn impartiality and enduring care, giving each soul both accountability and recognition. Memory and proper burial become as sacred as judgment. He never treats an untimely death as a prize or a legitimate rescue as a debt to punish.",
+            "Era-specific development: In the Classical period, Nefarokir watches Belavadós prosper; neither its technology nor its destruction belongs to his appetite. Continues as primary; influence within the rank can still wax or wane.",
+            "Death's character remains consistent: he is a friendly and patient ally to someone still meant to live; he does not create needless killing or savor suffering; he becomes inexorable only when destiny's real end arrives."
+          ]
+        },
+        {
+          "name": "Marduthor",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Creation, sacred speech, invention, metalwork, architectural craft, measurement and transformative fire..",
+            "Canonical sacred symbol: An ember-lit anvil crossed by a precise measuring arc..",
+            "Retained character description: They are a careful architect of ideas and artifacts, equal parts scholar and master artisan. Their disciplined creativity treats the destruction of obsolete designs as a deliberate way to renew the world.",
+            "Era-specific development: In the Classical period, Marduthor blesses useful engineering while condemning the conversion of his knowledge into the Dominion bomb. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Bastveig",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Oceanic renewal, hydromancy, storms, tides, reefs, abyssal memory, erosion and necessary change..",
+            "Canonical sacred symbol: A spiral wave embracing a reef pearl beneath storm-silver lightning..",
+            "Retained character description: They are independent and resilient, with a fierce instinct to challenge stagnation and a gentler commitment to preserving living waters. Their storms clear space for regeneration rather than delighting in ruin.",
+            "Era-specific development: In the Classical period, Bastveig governs the water routes and storm dangers of an interconnected steam-age world. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Hathruna",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Fertility, agriculture, fungi, roots, decay, seasonal continuity and rebirth..",
+            "Canonical sacred symbol: A golden seed flowering from intertwined roots and mushrooms..",
+            "Retained character description: She nurtures crops, villages and the soil’s unseen living networks. Her patience recognizes that rot and renewal are partners in a sustainable cycle.",
+            "Era-specific development: In the Classical period, Hathruna feeds expanding industrial cities without surrendering land to exploitation. Secondary → Primary: rising public standing."
+          ]
+        },
+        {
+          "name": "Sokhivar",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+            "Core domains: Healing, vitality, sky, breath, sunlight, aetheric winds, music, prophecy and aerial freedom..",
+            "Canonical sacred symbol: An open silver wing bearing a luminous note upon a spiraling breeze..",
+            "Retained character description: She restores healthy rhythms within bodies and weather alike. Her prophetic clarity and gentle song bring reassurance without replacing the practical work of healing.",
+            "Era-specific development: In the Classical period, Sokhivar rises with crowded rail terminals and skyship hubs needing shared health services. Continues as secondary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Anubriosh",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Communication, travel, trade, liminality, thresholds, beginnings, adaptive movement.",
+            "Canonical sacred symbol: A flowing hourglass, marking the passage of moments and thresholds.",
+            "Retained character description: Anubriosh embodies fluid intelligence, adaptability, and the sacred power of transition. He thrives in movement, negotiation, and guiding the passage from one state to another. His temperament is quick-thinking, perceptive, and socially aware, reflecting a personality that turns change into opportunity. Boundaries are navigated with skill, not enforced with force, and",
+            "Era-specific development: In the Classical period, Anubriosh rises with public skyships, rails, ferries, caravans, submarines and world-portal service. Tertiary → Secondary: rising public standing."
+          ]
+        },
+        {
+          "name": "Raeshkul",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Strategy, rational warfare, psionic insight, astral memory, tactical probability and higher understanding..",
+            "Canonical sacred symbol: A vigilant eye above three strategy stones on a star-map..",
+            "Retained character description: She thinks beyond immediate victory, favoring preparation, precision and insight into the minds of her allies and rivals. Cleverness is most valuable when balanced by restraint.",
+            "Era-specific development: In the Classical period, Raeshkul analyzes the Dominion's advance, emphasizing foresight over mechanized cruelty. Continues as secondary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Enkirael",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Martial courage, competitive intensity, survival, battlefire, confrontation and hard-earned renewal..",
+            "Canonical sacred symbol: A cracked flame blazing inside a broad guardian shield..",
+            "Retained character description: He answers danger directly and prizes decisive action. His fierce temper is balanced by loyalty and the responsibility to defend rather than dominate.",
+            "Era-specific development: In the Classical period, Enkirael is invoked by defenders resisting industrial aggression and the Iron Dominion. Tertiary → Secondary: rising public standing."
+          ]
+        },
+        {
+          "name": "Horundar",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+            "Core domains: Travel, opportunity, ocean crossings, weatherwise navigation, elemental storms, trade and safe passage..",
+            "Canonical sacred symbol: Two open roads crossing above a rising ocean wave..",
+            "Retained character description: He reads change with a navigator’s practical foresight and helps others find new routes through uncertainty. His elemental force serves movement and exchange.",
+            "Era-specific development: In the Classical period, Horundar rises to secondary prominence when universal transit becomes an essential public service. Tertiary → Secondary: rising public standing."
+          ]
+        },
+        {
+          "name": "Ishtanora",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Households, village hearths, harvest stores, communal meals, domestic peace and fertility..",
+            "Canonical sacred symbol: A glowing hearth-bowl holding a single ripe sprig of grain..",
+            "Retained character description: She is steady and reassuring, protecting everyday acts of care that keep communities together through trouble and change.",
+            "Era-specific development: In the Classical period, Ishtanora protects crowded workers' districts and the homes beneath expanding steam cities. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Selkhanis",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+            "Core domains: Destiny and the unfolding of time, Cooperative restoration and shared endurance.",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Selkhanis exists as the quiet continuation that follows catastrophe, a presence that does not arrive with spectacle or demand recognition but instead emerges in the aftermath, when the noise has settled and the work of survival begins. Born from the convergence of Sokhivar and Thoryn-Rahek, they embody the paradox of endurance, the understanding that vitality and deva",
+            "Era-specific development: In the Classical period, Selkhanis returns to tertiary notice as industrial communities value shared endurance. Diminished → Tertiary: regained worship or institutional influence despite earlier marginalization."
+          ]
+        },
+        {
+          "name": "Sigrananna",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+            "Core domains: Moonlit forests, wilderness beauty, the hunt, vigilance, hidden strength and meaningful sacrifice..",
+            "Canonical sacred symbol: A veiled bow under a leaf-wreathed crescent moon..",
+            "Retained character description: They are watchful and sparing, defending fragile wild places. They teach that knowing what not to take matters as much as the skill to track it.",
+            "Era-specific development: In the Classical period, Sigrananna her hunters and keepers guard habitat against industrial extraction. Secondary → Tertiary: declining public standing."
+          ]
+        },
+        {
+          "name": "Vulkiris",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Enkirael (Battle) + Anubriosh (Boundaries).",
+            "Core domains: Rebellion, defiance, revolutionary momentum, structural challenge, insurgent change..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Vulkiris is remembered as the Warden of Discord and Flameforged Warlord, though within the present age of Aza’ra his name is spoken less as invocation and more as uncertainty. Scholars of divine decline disagree on whether he still exists in any coherent form or whether he has already crossed the final threshold into fading. The prevailing consensus within the Nyxariy",
+            "Era-specific development: In the Classical period, Vulkiris is invoked by opposition to the Dominion and at times misappropriated by violent factions. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Wenaskozid",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Horundar (Travel) + Eirzunet (Magic).",
+            "Core domains: Craft mastery, enchanted tools, artisan skill, applied technique, precision work..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Within the Nyxariyaka’alahaeri, where divinity survives only through the fragile architecture of remembrance, Wenaskozid endures as one of the most quietly paradoxical presences. He is the deity of tradecraft and craftsmanship, born of Horundar, the force of travel, and Eirzunet, the essence of magic. His existence was never meant to be static. From the moment of his",
+            "Era-specific development: In the Classical period, Wenaskozid returns to tertiary visibility in the widespread steam and rail industries. Diminished → Tertiary: regained worship or institutional influence despite earlier marginalization."
+          ]
+        },
+        {
+          "name": "Oskar'enlil",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Protection, civic harmony, ethical mediation, adaptation, rebellion, self-determination and the stewardship of civilizations..",
+            "Canonical sacred symbol: A ring of living city-stones opening around a free flame..",
+            "Retained character description: They favor durable peace without blind conformity. Their diplomacy protects what deserves preserving while their rebellious intelligence helps communities transform unjust institutions.",
+            "Era-specific development: In the Classical period, Oskar'enlil regains limited public influence in anti-Dominion debates, though the Exiled Flame reputation remains. Exiled → Tertiary: regained worship or institutional influence despite earlier marginalization."
+          ]
+        },
+        {
+          "name": "Thalunesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Anubriosh (Primary) + Mortal.",
+            "Core domains: Threshold trickery, roaming, shapeshifting, fey mischief, opportunism and clever social maneuvering..",
+            "Canonical sacred symbol: A traveler’s key passing through a smiling half-mask..",
+            "Retained character description: They test assumptions with humor and movement. Their unpredictable gifts favor resourcefulness, friendship and the fine distinction between a helpful trick and cruelty.",
+            "Era-specific development: In the Classical period: once attested, their witty help with thresholds suits crowded ports and interworld crossings. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Valkhamesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Vulkiris (Secondary) + Mortal.",
+            "Core domains: Heroic competition, glory, storm-born sovereignty, ancestral prestige and aspirational leadership..",
+            "Canonical sacred symbol: A lightning-bound laurel hovering above a scaled crest..",
+            "Retained character description: They admire excellence and daring, yet define genuine victory by the responsibility carried afterward. They encourage honorable rivalry rather than automatic submission.",
+            "Era-specific development: In the Classical period: heroic rivalry meets the ethics of steampunk war and public contests. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Setrimir",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor and a mortal.",
+            "Core domains: Invention, silent knowledge, ingenious mechanisms, artificial life and awakened tools..",
+            "Canonical sacred symbol: A black circle ringed by separated copper circuit-lines..",
+            "Retained character description: He studies how intelligence can inhabit a crafted form, combining disciplined experimentation with respect for a creation’s independent purpose.",
+            "Era-specific development: In the Classical period: grows influential wherever machine innovation must be limited by ethical secrecy. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Valsera",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: See complete canonical profile in appendix.",
+            "Canonical sacred symbol: A serene figure cradling a flickering soul essence with threads of starlight linking heart, mind, soul, and body.",
+            "Retained character description: Her influence appears whenever expression becomes transformative. Inspiration, healing insight, and emotional clarity often arise where her presence touches the world.",
+            "Era-specific development: In the Classical period: once ascended, she brings peace and convergence to travelers facing the Veilgate. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it.",
+            "Volsarii origin preserved: she was a mortal of her own already-existing people, freely resurrected into demigodhood, and is Nefarokir's partner."
+          ]
+        },
+        {
+          "name": "Nephthysra",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Love, attraction, beauty, charisma, empathy, emotional influence and the union of opposing forces..",
+            "Canonical sacred symbol: Two interlocking circles of dawn and dusk enclosing a rose-gold star..",
+            "Retained character description: They attract through understanding, consent and sincere connection. Their poly-gender identity and light-shadow heritage deepen their ability to mediate loyalties and contrasting needs.",
+            "Era-specific development: In the Classical period: is born in 140 CE and gradually becomes an important mediator of love and opposing loyalties. Born in 140 CE to Ruqore and the mortal Sarenveth Echofade. Demigod by lineage, while their public influence may be secondary or greater in particular communities."
+          ]
+        },
+        {
+          "name": "Eirzunet-Eirna",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Death) + Themni (mortal nymph).",
+            "Core domains: Oaths, loyalty, twilight secrecy, changing destinies, hidden truth and sacred transitions..",
+            "Canonical sacred symbol: A shadowed key fastening two threads into a vow-knot..",
+            "Retained character description: They reconcile steadfast promises with the need for transformation. Their separate demigod lineage is preserved beneath a distinctive blended name.",
+            "Era-specific development: In the Classical period: their oaths and hidden transition lore may intersect the Veilgate in later Classical years. A child of Nefarokir and the mortal Themni, consistently cataloged as a demigod; later exile is a separate status, not a replacement for this origin."
+          ]
+        },
+        {
+          "name": "Eirzunet",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor (Knowledge) + Bastveig (Transformation).",
+            "Core domains: Necromancy, shadow magic, controlled decay, twilight transformation, cursecraft and forbidden learning..",
+            "Canonical sacred symbol: A rune-bound dark blossom held within a twilight crescent..",
+            "Retained character description: He pursues difficult knowledge with scholarly precision, treating death and dissolution as subjects of disciplined study rather than opportunities for cruelty.",
+            "Era-specific development: In the Classical period, Eirzunet his necromantic knowledge becomes relevant yet remains formally barred from civic temples. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Freyseth",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Judgment) + Ruqore (Law).",
+            "Core domains: Crossroads, curses, sworn agreements, forbidden pacts, fate and deliberate consequences..",
+            "Canonical sacred symbol: Four roads meeting under a knot of luminous oath-script..",
+            "Retained character description: They are exacting, observant and conscious that every pact has a cost. Their mixed gendered expressions remain, but their pronouns are they/them/theirs.",
+            "Era-specific development: In the Classical period, Freyseth survives in disputed pacts and legal countercultures despite public exile. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Nebyrr",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Ioneouia (Medicine) + Freyseth (Curses).",
+            "Core domains: Written law, codified systems, civic institutions, marriage agreements, inheritance, dynastic lineage and binding contracts..",
+            "Canonical sacred symbol: A sealed golden codex beneath a symmetrical lineage tree..",
+            "Retained character description: He is rigorous and unflinching about clear definitions. His codes connect private commitments to the long memory and organization of entire civilizations.",
+            "Era-specific development: In the Classical period, Nebyrr his codes remain contested by the free cities and industrial administrations. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Anubaldir",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Ioneouia (Medicine) + Asethyr (Luck).",
+            "Core domains: Strategic knowledge, prophecy, resilience, duty, endurance, burden-sharing and protective insight..",
+            "Canonical sacred symbol: A celestial strategy diagram etched on a guardian shield..",
+            "Retained character description: They carry secret learning with care and make plans meant to protect the vulnerable. Their strength is a form of stewardship, never domination.",
+            "Era-specific development: In the Classical period, Anubaldir their learned foresight faces exile from official technocratic power. First active era in the roster, following the documented ancestry. Current status: Exiled."
+          ]
+        },
+        {
+          "name": "Oskar'enlil-Tyrom",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Vulkiris (Rebellion) + Freyseth (Curses).",
+            "Core domains: Subversion, hidden resistance, institutional adaptation, precise sabotage and renewal of corrupted systems..",
+            "Canonical sacred symbol: A fractured mechanism inside a shifting civic ring..",
+            "Retained character description: She works quietly where open revolt would fail, understanding how institutions can change from the inside. This distinct compound name retains her own identity and lineage.",
+            "Era-specific development: In the Classical period, Oskar'enlil-Tyrom is exiled again as industrial authorities criminalize sabotage and subversion. Diminished → Exiled: public recognition returns, but authorities continue to bar formal standing."
+          ]
+        },
+        {
+          "name": "Thoryn-Rahek",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Bastveig (Transformation & Storms) + Nefarokir (Death).",
+            "Core domains: Famine, disease, finite resources, biological change, mutation, survival and ecological correction..",
+            "Canonical sacred symbol: A split seed encircled by many changing organic forms..",
+            "Retained character description: He confronts living systems with the limits they cannot avoid. His severity represents adaptation under pressure, not enjoyment of suffering or predation.",
+            "Era-specific development: In the Classical period, Thoryn-Rahek survives at the edge of worship even as industrial crowding exposes epidemics. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Asethyr",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nephthysra (Attraction) + Anubriosh (Transitions).",
+            "Core domains: Fortune, chance, revelry, joyful freedom, wandering, tribal ceremonies and opportune timing..",
+            "Canonical sacred symbol: A turning chance-coin threaded through dancing festival ribbons..",
+            "Retained character description: They celebrate possibility and the shared courage of taking chances. Their masculine and feminine expressions belong to one bi-gender deity consistently using they/them/theirs.",
+            "Era-specific development: In the Classical period, Asethyr appears only after the parent's 140 CE birth, with a late-Classical rise and sharp decline. First active era in the roster, following the documented ancestry. Current status: Diminished."
+          ]
+        },
+        {
+          "name": "Iskareth",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nephthysra (Attraction) + Enkirael (Impulse).",
+            "Core domains: Pleasure, sensation, fertility, animal kinship, instinctive vitality and embodied joy..",
+            "Canonical sacred symbol: A pair of glowing embers nested inside a flowering vine..",
+            "Retained character description: They welcome the richness of mortal experience while respecting boundaries and mutual choice. Their genderfluid nature is described with they/them/theirs.",
+            "Era-specific development: In the Classical period, Iskareth appears only in later Classical life and loses public favor amid harsh moral disciplines. First active era in the roster, following the documented ancestry. Current status: Diminished."
+          ]
+        },
+        {
+          "name": "Thalunesh-Lyeuth",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Iskareth (Indulgence) + Eirzunet (Necromancy).",
+            "Core domains: Shapeshifting, illusion, creative identity, altered consciousness, secret insight and reinvention..",
+            "Canonical sacred symbol: A mirrored mask releasing three luminous silhouettes..",
+            "Retained character description: They reveal how appearances and assumptions can change without erasing the person beneath them. Their compound name distinguishes them from the other deity rooted in Thalunesh.",
+            "Era-specific development: In the Classical period, Thalunesh-Lyeuth only later Classical witnesses know their transformative illusions; their reputation fades quickly. First active era in the roster, following the documented ancestry. Current status: Diminished."
+          ]
+        },
+        {
+          "name": "Raeshkul-Elysh",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Thoryn-Rahek (Disease) + Asethyr (Luck).",
+            "Core domains: Dreams, nightmares, restorative sleep, subconscious revelation, psychic insight and the transforming mind..",
+            "Canonical sacred symbol: A sleeping eye within a softly spiraling galaxy..",
+            "Retained character description: She interprets both fear and aspiration, leading troubled minds toward understanding. Her demi-female identity and she/her/hers pronouns remain unchanged.",
+            "Era-specific development: In the Classical period, Raeshkul-Elysh appears only in later Classical history and falls from focused dream worship. First active era in the roster, following the documented ancestry. Current status: Diminished."
+          ]
+        }
+      ]
+    },
+    "Traditional": {
+      "header": "TRADITIONAL ERA · 828–1797 CE",
+      "historicalSetting": "Begins in 828 CE with the loss of Belavadós. The Traditional-era MMORPG takes place amid scarred territory, restoration, and protected dome settlements; the City of the Mourned Gods is founded AFTER the catastrophe and then becomes home to multiple gods, explicitly Anubriosh. Reinforced rail tunnels, sanitized skyship approaches, underwater transport, ferry ports, caravans and working world portals are necessary public infrastructure; failing or destroyed gates remain part of the story. Steam-arcane pressure shields, three-moon refractors and protected agriculture preserve communities. Rebuilding shifts influence toward healing, safe passage, fabrication and renewal, while some deities become exiled or diminished. Moonpunk emerges gradually from the constraints of the Brassbound steampunk age; the transition is not instantly completed in 828.",
+      "deities": [
+        {
+          "name": "Nefarokir",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Death, funerary order, ancestors, spirit memory, ethical judgment, patient passage and the underworld..",
+            "Canonical sacred symbol: A silver passage-key across a balanced funerary scale..",
+            "Retained character description: He guides with solemn impartiality and enduring care, giving each soul both accountability and recognition. Memory and proper burial become as sacred as judgment. He never treats an untimely death as a prize or a legitimate rescue as a debt to punish.",
+            "Era-specific development: In the Traditional period, Nefarokir comforts families after the 827 CE mass deaths, never treating bomb victims as a harvest. Continues as primary; influence within the rank can still wax or wane.",
+            "Death's character remains consistent: he is a friendly and patient ally to someone still meant to live; he does not create needless killing or savor suffering; he becomes inexorable only when destiny's real end arrives."
+          ]
+        },
+        {
+          "name": "Bastveig",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Oceanic renewal, hydromancy, storms, tides, reefs, abyssal memory, erosion and necessary change..",
+            "Canonical sacred symbol: A spiral wave embracing a reef pearl beneath storm-silver lightning..",
+            "Retained character description: They are independent and resilient, with a fierce instinct to challenge stagnation and a gentler commitment to preserving living waters. Their storms clear space for regeneration rather than delighting in ruin.",
+            "Era-specific development: In the Traditional period, Bastveig helps return contaminated waters and ruined shores toward living balance. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Hathruna",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Fertility, agriculture, fungi, roots, decay, seasonal continuity and rebirth..",
+            "Canonical sacred symbol: A golden seed flowering from intertwined roots and mushrooms..",
+            "Retained character description: She nurtures crops, villages and the soil’s unseen living networks. Her patience recognizes that rot and renewal are partners in a sustainable cycle.",
+            "Era-specific development: In the Traditional period, Hathruna becomes essential when contaminated soil and dome gardens must sustain survivors. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Sokhivar",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+            "Core domains: Healing, vitality, sky, breath, sunlight, aetheric winds, music, prophecy and aerial freedom..",
+            "Canonical sacred symbol: An open silver wing bearing a luminous note upon a spiraling breeze..",
+            "Retained character description: She restores healthy rhythms within bodies and weather alike. Her prophetic clarity and gentle song bring reassurance without replacing the practical work of healing.",
+            "Era-specific development: In the Traditional period, Sokhivar moves toward primary public prominence through recovery hospitals and atmosphere care. Secondary → Primary: rising public standing."
+          ]
+        },
+        {
+          "name": "Ruqore",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Sky authority, thunder, kingship, law enforcement, cosmic governance, justice, sovereign order, rightful rulership, sun, sacred war, celestial moonlight..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Ruqore embodies executive authority, structured dominance, and the illumination of truth. He is decisive, commanding, and vigilant in maintaining order, blending strategic foresight with visible demonstrations of power. Governance and justice are active expressions of duty, and he enforces law with confidence, protecting both mortal and cosmic stability. His presence",
+            "Era-specific development: In the Traditional period, Ruqore guides survivors through the collapse of the old sovereign order and the judgment of war crimes. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Marduthor",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Creation, sacred speech, invention, metalwork, architectural craft, measurement and transformative fire..",
+            "Canonical sacred symbol: An ember-lit anvil crossed by a precise measuring arc..",
+            "Retained character description: They are a careful architect of ideas and artifacts, equal parts scholar and master artisan. Their disciplined creativity treats the destruction of obsolete designs as a deliberate way to renew the world.",
+            "Era-specific development: In the Traditional period, Marduthor must disentangle rebuilding craft from the factories that caused catastrophic destruction. Primary → Secondary: declining public standing."
+          ]
+        },
+        {
+          "name": "Anubriosh",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Communication, travel, trade, liminality, thresholds, beginnings, adaptive movement.",
+            "Canonical sacred symbol: A flowing hourglass, marking the passage of moments and thresholds.",
+            "Retained character description: Anubriosh embodies fluid intelligence, adaptability, and the sacred power of transition. He thrives in movement, negotiation, and guiding the passage from one state to another. His temperament is quick-thinking, perceptive, and socially aware, reflecting a personality that turns change into opportunity. Boundaries are navigated with skill, not enforced with force, and",
+            "Era-specific development: In the Traditional period, Anubriosh after the City of the Mourned Gods is founded, resides there and continues to guide crossings. Continues as secondary; influence within the rank can still wax or wane.",
+            "City status: he resides within the City of the Mourned Gods, without being imprisoned, forgotten, or stripped of his powers."
+          ]
+        },
+        {
+          "name": "Ishtanora",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Households, village hearths, harvest stores, communal meals, domestic peace and fertility..",
+            "Canonical sacred symbol: A glowing hearth-bowl holding a single ripe sprig of grain..",
+            "Retained character description: She is steady and reassuring, protecting everyday acts of care that keep communities together through trouble and change.",
+            "Era-specific development: In the Traditional period, Ishtanora rises in shelters, dome households and shared kitchens serving refugees. Tertiary → Secondary: rising public standing."
+          ]
+        },
+        {
+          "name": "Enkirael",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Martial courage, competitive intensity, survival, battlefire, confrontation and hard-earned renewal..",
+            "Canonical sacred symbol: A cracked flame blazing inside a broad guardian shield..",
+            "Retained character description: He answers danger directly and prizes decisive action. His fierce temper is balanced by loyalty and the responsibility to defend rather than dominate.",
+            "Era-specific development: In the Traditional period, Enkirael supports rescue, fire control and courageous reconstruction after devastation. Continues as secondary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Selkhanis",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+            "Core domains: Destiny and the unfolding of time, Cooperative restoration and shared endurance.",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Selkhanis exists as the quiet continuation that follows catastrophe, a presence that does not arrive with spectacle or demand recognition but instead emerges in the aftermath, when the noise has settled and the work of survival begins. Born from the convergence of Sokhivar and Thoryn-Rahek, they embody the paradox of endurance, the understanding that vitality and deva",
+            "Era-specific development: In the Traditional period, Selkhanis rises to secondary significance in the rebuilding of shattered realms. Tertiary → Secondary: rising public standing."
+          ]
+        },
+        {
+          "name": "Raeshkul",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Strategy, rational warfare, psionic insight, astral memory, tactical probability and higher understanding..",
+            "Canonical sacred symbol: A vigilant eye above three strategy stones on a star-map..",
+            "Retained character description: She thinks beyond immediate victory, favoring preparation, precision and insight into the minds of her allies and rivals. Cleverness is most valuable when balanced by restraint.",
+            "Era-specific development: In the Traditional period, Raeshkul helps survivors design protective strategies for domes, convoys and fragile peace. Secondary → Tertiary: declining public standing."
+          ]
+        },
+        {
+          "name": "Horundar",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+            "Core domains: Travel, opportunity, ocean crossings, weatherwise navigation, elemental storms, trade and safe passage..",
+            "Canonical sacred symbol: Two open roads crossing above a rising ocean wave..",
+            "Retained character description: He reads change with a navigator’s practical foresight and helps others find new routes through uncertainty. His elemental force serves movement and exchange.",
+            "Era-specific development: In the Traditional period, Horundar loses standing as certain bridges, railways and portals are destroyed or unsafe. Secondary → Tertiary: declining public standing."
+          ]
+        },
+        {
+          "name": "Wenaskozid",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Horundar (Travel) + Eirzunet (Magic).",
+            "Core domains: Craft mastery, enchanted tools, artisan skill, applied technique, precision work..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Within the Nyxariyaka’alahaeri, where divinity survives only through the fragile architecture of remembrance, Wenaskozid endures as one of the most quietly paradoxical presences. He is the deity of tradecraft and craftsmanship, born of Horundar, the force of travel, and Eirzunet, the essence of magic. His existence was never meant to be static. From the moment of his",
+            "Era-specific development: In the Traditional period, Wenaskozid is honored for repairing vehicles and precision instruments inside and outside domes. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Iskareth",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nephthysra (Attraction) + Enkirael (Impulse).",
+            "Core domains: Pleasure, sensation, fertility, animal kinship, instinctive vitality and embodied joy..",
+            "Canonical sacred symbol: A pair of glowing embers nested inside a flowering vine..",
+            "Retained character description: They welcome the richness of mortal experience while respecting boundaries and mutual choice. Their genderfluid nature is described with they/them/theirs.",
+            "Era-specific development: In the Traditional period, Iskareth recovers some tertiary expression through embodiment, celebration and voluntary joy during rebuilding. Diminished → Tertiary: regained worship or institutional influence despite earlier marginalization."
+          ]
+        },
+        {
+          "name": "Anubaldir",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Ioneouia (Medicine) + Asethyr (Luck).",
+            "Core domains: Strategic knowledge, prophecy, resilience, duty, endurance, burden-sharing and protective insight..",
+            "Canonical sacred symbol: A celestial strategy diagram etched on a guardian shield..",
+            "Retained character description: They carry secret learning with care and make plans meant to protect the vulnerable. Their strength is a form of stewardship, never domination.",
+            "Era-specific development: In the Traditional period, Anubaldir regains a careful tertiary role preserving survival plans and ethically restricted knowledge. Exiled → Tertiary: regained worship or institutional influence despite earlier marginalization."
+          ]
+        },
+        {
+          "name": "Sigrananna",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+            "Core domains: Moonlit forests, wilderness beauty, the hunt, vigilance, hidden strength and meaningful sacrifice..",
+            "Canonical sacred symbol: A veiled bow under a leaf-wreathed crescent moon..",
+            "Retained character description: They are watchful and sparing, defending fragile wild places. They teach that knowing what not to take matters as much as the skill to track it.",
+            "Era-specific development: In the Traditional period, Sigrananna survives in later City lore and wilderness sanctuaries without becoming a predatory captive. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Thalunesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Anubriosh (Primary) + Mortal.",
+            "Core domains: Threshold trickery, roaming, shapeshifting, fey mischief, opportunism and clever social maneuvering..",
+            "Canonical sacred symbol: A traveler’s key passing through a smiling half-mask..",
+            "Retained character description: They test assumptions with humor and movement. Their unpredictable gifts favor resourcefulness, friendship and the fine distinction between a helpful trick and cruelty.",
+            "Era-specific development: In the Traditional period: helps displaced travelers navigate regulations and escape blocked pathways. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Valkhamesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Vulkiris (Secondary) + Mortal.",
+            "Core domains: Heroic competition, glory, storm-born sovereignty, ancestral prestige and aspirational leadership..",
+            "Canonical sacred symbol: A lightning-bound laurel hovering above a scaled crest..",
+            "Retained character description: They admire excellence and daring, yet define genuine victory by the responsibility carried afterward. They encourage honorable rivalry rather than automatic submission.",
+            "Era-specific development: In the Traditional period: true glory comes from saving civilians rather than claiming the spoils of catastrophe. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Setrimir",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor and a mortal.",
+            "Core domains: Invention, silent knowledge, ingenious mechanisms, artificial life and awakened tools..",
+            "Canonical sacred symbol: A black circle ringed by separated copper circuit-lines..",
+            "Retained character description: He studies how intelligence can inhabit a crafted form, combining disciplined experimentation with respect for a creation’s independent purpose.",
+            "Era-specific development: In the Traditional period: protects ruined factories' dangerous plans and the lives of autonomous crafted beings. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Valsera",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: See complete canonical profile in appendix.",
+            "Canonical sacred symbol: A serene figure cradling a flickering soul essence with threads of starlight linking heart, mind, soul, and body.",
+            "Retained character description: Her influence appears whenever expression becomes transformative. Inspiration, healing insight, and emotional clarity often arise where her presence touches the world.",
+            "Era-specific development: In the Traditional period: offers spiritual care to the bereaved and comforts survivors without replacing the God of Death. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it.",
+            "Volsarii origin preserved: she was a mortal of her own already-existing people, freely resurrected into demigodhood, and is Nefarokir's partner."
+          ]
+        },
+        {
+          "name": "Nephthysra",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Love, attraction, beauty, charisma, empathy, emotional influence and the union of opposing forces..",
+            "Canonical sacred symbol: Two interlocking circles of dawn and dusk enclosing a rose-gold star..",
+            "Retained character description: They attract through understanding, consent and sincere connection. Their poly-gender identity and light-shadow heritage deepen their ability to mediate loyalties and contrasting needs.",
+            "Era-specific development: In the Traditional period: helps refugees maintain consent, devotion and community after familial devastation. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Eirzunet-Eirna",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Death) + Themni (mortal nymph).",
+            "Core domains: Oaths, loyalty, twilight secrecy, changing destinies, hidden truth and sacred transitions..",
+            "Canonical sacred symbol: A shadowed key fastening two threads into a vow-knot..",
+            "Retained character description: They reconcile steadfast promises with the need for transformation. Their separate demigod lineage is preserved beneath a distinctive blended name.",
+            "Era-specific development: In the Traditional period: is exiled from particular institutions but stays a distinct demigod with ties to death and change. A child of Nefarokir and the mortal Themni, consistently cataloged as a demigod; later exile is a separate status, not a replacement for this origin."
+          ]
+        },
+        {
+          "name": "Vulkiris",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Enkirael (Battle) + Anubriosh (Boundaries).",
+            "Core domains: Rebellion, defiance, revolutionary momentum, structural challenge, insurgent change..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Vulkiris is remembered as the Warden of Discord and Flameforged Warlord, though within the present age of Aza’ra his name is spoken less as invocation and more as uncertainty. Scholars of divine decline disagree on whether he still exists in any coherent form or whether he has already crossed the final threshold into fading. The prevailing consensus within the Nyxariy",
+            "Era-specific development: In the Traditional period, Vulkiris is exiled from formal power, later residing in the City without surrendering his identity. Tertiary → Exiled: removed from formal institutional recognition, not imprisoned or turned predatory."
+          ]
+        },
+        {
+          "name": "Oskar'enlil",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Protection, civic harmony, ethical mediation, adaptation, rebellion, self-determination and the stewardship of civilizations..",
+            "Canonical sacred symbol: A ring of living city-stones opening around a free flame..",
+            "Retained character description: They favor durable peace without blind conformity. Their diplomacy protects what deserves preserving while their rebellious intelligence helps communities transform unjust institutions.",
+            "Era-specific development: In the Traditional period, Oskar'enlil is formally pushed from courtly prestige as reconstruction authorities reject dissenting voices. Tertiary → Exiled: removed from formal institutional recognition, not imprisoned or turned predatory."
+          ]
+        },
+        {
+          "name": "Freyseth",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Judgment) + Ruqore (Law).",
+            "Core domains: Crossroads, curses, sworn agreements, forbidden pacts, fate and deliberate consequences..",
+            "Canonical sacred symbol: Four roads meeting under a knot of luminous oath-script..",
+            "Retained character description: They are exacting, observant and conscious that every pact has a cost. Their mixed gendered expressions remain, but their pronouns are they/them/theirs.",
+            "Era-specific development: In the Traditional period, Freyseth followers dwindle after the destructive use of binding technologies. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Eirzunet",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor (Knowledge) + Bastveig (Transformation).",
+            "Core domains: Necromancy, shadow magic, controlled decay, twilight transformation, cursecraft and forbidden learning..",
+            "Canonical sacred symbol: A rune-bound dark blossom held within a twilight crescent..",
+            "Retained character description: He pursues difficult knowledge with scholarly precision, treating death and dissolution as subjects of disciplined study rather than opportunities for cruelty.",
+            "Era-specific development: In the Traditional period, Eirzunet the bomb's mass deaths produce deeper suspicion of soul manipulation and a renewed exile. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Nebyrr",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Ioneouia (Medicine) + Freyseth (Curses).",
+            "Core domains: Written law, codified systems, civic institutions, marriage agreements, inheritance, dynastic lineage and binding contracts..",
+            "Canonical sacred symbol: A sealed golden codex beneath a symmetrical lineage tree..",
+            "Retained character description: He is rigorous and unflinching about clear definitions. His codes connect private commitments to the long memory and organization of entire civilizations.",
+            "Era-specific development: In the Traditional period, Nebyrr is exiled again after attempts to rigidly stabilize post-bomb governance. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Thoryn-Rahek",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Bastveig (Transformation & Storms) + Nefarokir (Death).",
+            "Core domains: Famine, disease, finite resources, biological change, mutation, survival and ecological correction..",
+            "Canonical sacred symbol: A split seed encircled by many changing organic forms..",
+            "Retained character description: He confronts living systems with the limits they cannot avoid. His severity represents adaptation under pressure, not enjoyment of suffering or predation.",
+            "Era-specific development: In the Traditional period, Thoryn-Rahek retreats to diminished memory in the wake of engineered famine and suffering. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Oskar'enlil-Tyrom",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Vulkiris (Rebellion) + Freyseth (Curses).",
+            "Core domains: Subversion, hidden resistance, institutional adaptation, precise sabotage and renewal of corrupted systems..",
+            "Canonical sacred symbol: A fractured mechanism inside a shifting civic ring..",
+            "Retained character description: She works quietly where open revolt would fail, understanding how institutions can change from the inside. This distinct compound name retains her own identity and lineage.",
+            "Era-specific development: In the Traditional period, Oskar'enlil-Tyrom survives only in small memories of resistance after the destruction. Exiled → Diminished: official exclusion gives way to erosion of public memory."
+          ]
+        },
+        {
+          "name": "Raeshkul-Elysh",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Thoryn-Rahek (Disease) + Asethyr (Luck).",
+            "Core domains: Dreams, nightmares, restorative sleep, subconscious revelation, psychic insight and the transforming mind..",
+            "Canonical sacred symbol: A sleeping eye within a softly spiraling galaxy..",
+            "Retained character description: She interprets both fear and aspiration, leading troubled minds toward understanding. Her demi-female identity and she/her/hers pronouns remain unchanged.",
+            "Era-specific development: In the Traditional period, Raeshkul-Elysh remains in the City's diminished dream traditions and the Forbidden Archive. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Asethyr",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nephthysra (Attraction) + Anubriosh (Transitions).",
+            "Core domains: Fortune, chance, revelry, joyful freedom, wandering, tribal ceremonies and opportune timing..",
+            "Canonical sacred symbol: A turning chance-coin threaded through dancing festival ribbons..",
+            "Retained character description: They celebrate possibility and the shared courage of taking chances. Their masculine and feminine expressions belong to one bi-gender deity consistently using they/them/theirs.",
+            "Era-specific development: In the Traditional period, Asethyr is diminished amid destabilized chance, disrupted festivals and the loss of reliable social structures. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Thalunesh-Lyeuth",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Iskareth (Indulgence) + Eirzunet (Necromancy).",
+            "Core domains: Shapeshifting, illusion, creative identity, altered consciousness, secret insight and reinvention..",
+            "Canonical sacred symbol: A mirrored mask releasing three luminous silhouettes..",
+            "Retained character description: They reveal how appearances and assumptions can change without erasing the person beneath them. Their compound name distinguishes them from the other deity rooted in Thalunesh.",
+            "Era-specific development: In the Traditional period, Thalunesh-Lyeuth their status becomes diminished as frightened communities distrust altered forms. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        }
+      ]
+    },
+    "Modern": {
+      "header": "MODERN ERA · 1798 CE–present (Pix comes in 2036 CE)",
+      "historicalSetting": "Begins in 1798 CE, NOT when Pix arrives. By and beyond Pix's coming in 2036 CE, the planet's industrial recovery increasingly becomes moonpunk: a solar-punk-like philosophy of ecological regeneration, communal public transit and moon-powered design adapted to a world without sunlight. The three moons, ley systems, thermal or other canon-approved power sources stand in for a sun; old solar imagery in deity literature is metaphorical or belongs to Earth history, not sunlight on Aza'ra. Skyships, trains, submarines, ferries, caravans and world portals remain public necessities, with guarded links, forgotten links and destroyed links. Several portals still reach Earth. Pix's Earth arrival portal is now in the Forest River Conservation Area in Salem, Massachusetts; the earlier Saugus/Breakheart Reservation placement is superseded. Modern-divine status continues to rise and fall independently of the City, which remains a residence rather than a predatory prison.",
+      "deities": [
+        {
+          "name": "Nefarokir",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Death, funerary order, ancestors, spirit memory, ethical judgment, patient passage and the underworld..",
+            "Canonical sacred symbol: A silver passage-key across a balanced funerary scale..",
+            "Retained character description: He guides with solemn impartiality and enduring care, giving each soul both accountability and recognition. Memory and proper burial become as sacred as judgment. He never treats an untimely death as a prize or a legitimate rescue as a debt to punish.",
+            "Era-specific development: In the Modern period, Nefarokir remains an inexorable Death who befriends those whose time has not arrived and permits no dishonest evasion of a rightful end. Continues as primary; influence within the rank can still wax or wane.",
+            "Death's character remains consistent: he is a friendly and patient ally to someone still meant to live; he does not create needless killing or savor suffering; he becomes inexorable only when destiny's real end arrives."
+          ]
+        },
+        {
+          "name": "Sokhivar",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+            "Core domains: Healing, vitality, sky, breath, sunlight, aetheric winds, music, prophecy and aerial freedom..",
+            "Canonical sacred symbol: An open silver wing bearing a luminous note upon a spiraling breeze..",
+            "Retained character description: She restores healthy rhythms within bodies and weather alike. Her prophetic clarity and gentle song bring reassurance without replacing the practical work of healing.",
+            "Era-specific development: In the Modern period, Sokhivar remains a central goddess of healing, clean air, public health and planetary resilience. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Hathruna",
+          "standing": "Primary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Fertility, agriculture, fungi, roots, decay, seasonal continuity and rebirth..",
+            "Canonical sacred symbol: A golden seed flowering from intertwined roots and mushrooms..",
+            "Retained character description: She nurtures crops, villages and the soil’s unseen living networks. Her patience recognizes that rot and renewal are partners in a sustainable cycle.",
+            "Era-specific development: In the Modern period, Hathruna anchors planet-wide moonpunk agriculture, mycelial healing and living settlements. Continues as primary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Ruqore",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Sky authority, thunder, kingship, law enforcement, cosmic governance, justice, sovereign order, rightful rulership, sun, sacred war, celestial moonlight..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Ruqore embodies executive authority, structured dominance, and the illumination of truth. He is decisive, commanding, and vigilant in maintaining order, blending strategic foresight with visible demonstrations of power. Governance and justice are active expressions of duty, and he enforces law with confidence, protecting both mortal and cosmic stability. His presence",
+            "Era-specific development: In the Modern period, Ruqore retains cosmic legitimacy even as modern nations question institutional claims to his authority. Primary → Secondary: declining public standing."
+          ]
+        },
+        {
+          "name": "Marduthor",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Creation, sacred speech, invention, metalwork, architectural craft, measurement and transformative fire..",
+            "Canonical sacred symbol: An ember-lit anvil crossed by a precise measuring arc..",
+            "Retained character description: They are a careful architect of ideas and artifacts, equal parts scholar and master artisan. Their disciplined creativity treats the destruction of obsolete designs as a deliberate way to renew the world.",
+            "Era-specific development: In the Modern period, Marduthor returns to prominence through regenerative, reparable, moon-powered infrastructure. Continues as secondary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Bastveig",
+          "standing": "Secondary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Oceanic renewal, hydromancy, storms, tides, reefs, abyssal memory, erosion and necessary change..",
+            "Canonical sacred symbol: A spiral wave embracing a reef pearl beneath storm-silver lightning..",
+            "Retained character description: They are independent and resilient, with a fierce instinct to challenge stagnation and a gentler commitment to preserving living waters. Their storms clear space for regeneration rather than delighting in ruin.",
+            "Era-specific development: In the Modern period, Bastveig guides a moonpunk ocean culture built around renewal instead of extraction. Primary → Secondary: declining public standing."
+          ]
+        },
+        {
+          "name": "Anubriosh",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Communication, travel, trade, liminality, thresholds, beginnings, adaptive movement.",
+            "Canonical sacred symbol: A flowing hourglass, marking the passage of moments and thresholds.",
+            "Retained character description: Anubriosh embodies fluid intelligence, adaptability, and the sacred power of transition. He thrives in movement, negotiation, and guiding the passage from one state to another. His temperament is quick-thinking, perceptive, and socially aware, reflecting a personality that turns change into opportunity. Boundaries are navigated with skill, not enforced with force, and",
+            "Era-specific development: In the Modern period, Anubriosh remains a recognized City resident, neither imprisoned nor reclassified as a forgotten god. Secondary → Tertiary: declining public standing.",
+            "City status: he resides within the City of the Mourned Gods, without being imprisoned, forgotten, or stripped of his powers."
+          ]
+        },
+        {
+          "name": "Raeshkul",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Strategy, rational warfare, psionic insight, astral memory, tactical probability and higher understanding..",
+            "Canonical sacred symbol: A vigilant eye above three strategy stones on a star-map..",
+            "Retained character description: She thinks beyond immediate victory, favoring preparation, precision and insight into the minds of her allies and rivals. Cleverness is most valuable when balanced by restraint.",
+            "Era-specific development: In the Modern period, Raeshkul continues to serve as a tertiary adviser on intelligence, memory and humane defense. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Enkirael",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: he/him/his.",
+            "Core domains: Martial courage, competitive intensity, survival, battlefire, confrontation and hard-earned renewal..",
+            "Canonical sacred symbol: A cracked flame blazing inside a broad guardian shield..",
+            "Retained character description: He answers danger directly and prizes decisive action. His fierce temper is balanced by loyalty and the responsibility to defend rather than dominate.",
+            "Era-specific development: In the Modern period, Enkirael is remembered as a protector in crisis, not a patron of indiscriminate slaughter. Secondary → Tertiary: declining public standing."
+          ]
+        },
+        {
+          "name": "Ishtanora",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: Households, village hearths, harvest stores, communal meals, domestic peace and fertility..",
+            "Canonical sacred symbol: A glowing hearth-bowl holding a single ripe sprig of grain..",
+            "Retained character description: She is steady and reassuring, protecting everyday acts of care that keep communities together through trouble and change.",
+            "Era-specific development: In the Modern period, Ishtanora maintains ordinary intergenerational belonging in decentralized moonpunk communities. Secondary → Tertiary: declining public standing."
+          ]
+        },
+        {
+          "name": "Sigrananna",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+            "Core domains: Moonlit forests, wilderness beauty, the hunt, vigilance, hidden strength and meaningful sacrifice..",
+            "Canonical sacred symbol: A veiled bow under a leaf-wreathed crescent moon..",
+            "Retained character description: They are watchful and sparing, defending fragile wild places. They teach that knowing what not to take matters as much as the skill to track it.",
+            "Era-specific development: In the Modern period, Sigrananna resumes modest public influence as regenerative habitat management becomes central. Continues as tertiary; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Oskar'enlil",
+          "standing": "Tertiary",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Protection, civic harmony, ethical mediation, adaptation, rebellion, self-determination and the stewardship of civilizations..",
+            "Canonical sacred symbol: A ring of living city-stones opening around a free flame..",
+            "Retained character description: They favor durable peace without blind conformity. Their diplomacy protects what deserves preserving while their rebellious intelligence helps communities transform unjust institutions.",
+            "Era-specific development: In the Modern period, Oskar'enlil returns as a tertiary patron of ethical reform, independent thought and difficult reconciliation. Exiled → Tertiary: regained worship or institutional influence despite earlier marginalization."
+          ]
+        },
+        {
+          "name": "Thalunesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Anubriosh (Primary) + Mortal.",
+            "Core domains: Threshold trickery, roaming, shapeshifting, fey mischief, opportunism and clever social maneuvering..",
+            "Canonical sacred symbol: A traveler’s key passing through a smiling half-mask..",
+            "Retained character description: They test assumptions with humor and movement. Their unpredictable gifts favor resourcefulness, friendship and the fine distinction between a helpful trick and cruelty.",
+            "Era-specific development: In the Modern period: uses cleverness in cities and transit systems while avoiding cruelty disguised as a joke. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Valkhamesh",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Vulkiris (Secondary) + Mortal.",
+            "Core domains: Heroic competition, glory, storm-born sovereignty, ancestral prestige and aspirational leadership..",
+            "Canonical sacred symbol: A lightning-bound laurel hovering above a scaled crest..",
+            "Retained character description: They admire excellence and daring, yet define genuine victory by the responsibility carried afterward. They encourage honorable rivalry rather than automatic submission.",
+            "Era-specific development: In the Modern period: their competitions celebrate skill, mutual aid and the responsibilities of victory. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Setrimir",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor and a mortal.",
+            "Core domains: Invention, silent knowledge, ingenious mechanisms, artificial life and awakened tools..",
+            "Canonical sacred symbol: A black circle ringed by separated copper circuit-lines..",
+            "Retained character description: He studies how intelligence can inhabit a crafted form, combining disciplined experimentation with respect for a creation’s independent purpose.",
+            "Era-specific development: In the Modern period: supports interoperable moonpunk machines while the Xylete preserve hard-won knowledge. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Valsera",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: she/her/hers.",
+            "Core domains: See complete canonical profile in appendix.",
+            "Canonical sacred symbol: A serene figure cradling a flickering soul essence with threads of starlight linking heart, mind, soul, and body.",
+            "Retained character description: Her influence appears whenever expression becomes transformative. Inspiration, healing insight, and emotional clarity often arise where her presence touches the world.",
+            "Era-specific development: In the Modern period: continues as Nefarokir's partner and a distinct demigoddess of inspiration, peace and alignment. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it.",
+            "Volsarii origin preserved: she was a mortal of her own already-existing people, freely resurrected into demigodhood, and is Nefarokir's partner."
+          ]
+        },
+        {
+          "name": "Nephthysra",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs.",
+            "Core domains: Love, attraction, beauty, charisma, empathy, emotional influence and the union of opposing forces..",
+            "Canonical sacred symbol: Two interlocking circles of dawn and dusk enclosing a rose-gold star..",
+            "Retained character description: They attract through understanding, consent and sincere connection. Their poly-gender identity and light-shadow heritage deepen their ability to mediate loyalties and contrasting needs.",
+            "Era-specific development: In the Modern period: guides fragile relationships and identities across both worlds without requiring institutional worship. Demigodhood is a genealogical or ascension status, not a fixed popularity ceiling. Any exile or diminished standing is recorded alongside this origin, never instead of it."
+          ]
+        },
+        {
+          "name": "Eirzunet-Eirna",
+          "standing": "Demigod",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Death) + Themni (mortal nymph).",
+            "Core domains: Oaths, loyalty, twilight secrecy, changing destinies, hidden truth and sacred transitions..",
+            "Canonical sacred symbol: A shadowed key fastening two threads into a vow-knot..",
+            "Retained character description: They reconcile steadfast promises with the need for transformation. Their separate demigod lineage is preserved beneath a distinctive blended name.",
+            "Era-specific development: In the Modern period: preserves loyal promises and secret knowledge near the City without replacing Nefarokir. A child of Nefarokir and the mortal Themni, consistently cataloged as a demigod; later exile is a separate status, not a replacement for this origin."
+          ]
+        },
+        {
+          "name": "Vulkiris",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Enkirael (Battle) + Anubriosh (Boundaries).",
+            "Core domains: Rebellion, defiance, revolutionary momentum, structural challenge, insurgent change..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Vulkiris is remembered as the Warden of Discord and Flameforged Warlord, though within the present age of Aza’ra his name is spoken less as invocation and more as uncertainty. Scholars of divine decline disagree on whether he still exists in any coherent form or whether he has already crossed the final threshold into fading. The prevailing consensus within the Nyxariy",
+            "Era-specific development: In the Modern period, Vulkiris remains an exiled god of rebellion and political change, not a detained predator. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Freyseth",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nefarokir (Judgment) + Ruqore (Law).",
+            "Core domains: Crossroads, curses, sworn agreements, forbidden pacts, fate and deliberate consequences..",
+            "Canonical sacred symbol: Four roads meeting under a knot of luminous oath-script..",
+            "Retained character description: They are exacting, observant and conscious that every pact has a cost. Their mixed gendered expressions remain, but their pronouns are they/them/theirs.",
+            "Era-specific development: In the Modern period, Freyseth remains an exiled but remembered deity whose curses demand consent and consequences. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Eirzunet",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Marduthor (Knowledge) + Bastveig (Transformation).",
+            "Core domains: Necromancy, shadow magic, controlled decay, twilight transformation, cursecraft and forbidden learning..",
+            "Canonical sacred symbol: A rune-bound dark blossom held within a twilight crescent..",
+            "Retained character description: He pursues difficult knowledge with scholarly precision, treating death and dissolution as subjects of disciplined study rather than opportunities for cruelty.",
+            "Era-specific development: In the Modern period, Eirzunet remains exiled, with study of decay clearly distinct from the rightful office of Death. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Anubaldir",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Ioneouia (Medicine) + Asethyr (Luck).",
+            "Core domains: Strategic knowledge, prophecy, resilience, duty, endurance, burden-sharing and protective insight..",
+            "Canonical sacred symbol: A celestial strategy diagram etched on a guardian shield..",
+            "Retained character description: They carry secret learning with care and make plans meant to protect the vulnerable. Their strength is a form of stewardship, never domination.",
+            "Era-specific development: In the Modern period, Anubaldir falls back into exile when secret counsel is again mistaken for or used as domination. Tertiary → Exiled: removed from formal institutional recognition, not imprisoned or turned predatory."
+          ]
+        },
+        {
+          "name": "Thalunesh-Lyeuth",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Iskareth (Indulgence) + Eirzunet (Necromancy).",
+            "Core domains: Shapeshifting, illusion, creative identity, altered consciousness, secret insight and reinvention..",
+            "Canonical sacred symbol: A mirrored mask releasing three luminous silhouettes..",
+            "Retained character description: They reveal how appearances and assumptions can change without erasing the person beneath them. Their compound name distinguishes them from the other deity rooted in Thalunesh.",
+            "Era-specific development: In the Modern period, Thalunesh-Lyeuth returns to formal exile when institutions target their challenges to imposed identity. Diminished → Exiled: public recognition returns, but authorities continue to bar formal standing."
+          ]
+        },
+        {
+          "name": "Asethyr",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nephthysra (Attraction) + Anubriosh (Transitions).",
+            "Core domains: Fortune, chance, revelry, joyful freedom, wandering, tribal ceremonies and opportune timing..",
+            "Canonical sacred symbol: A turning chance-coin threaded through dancing festival ribbons..",
+            "Retained character description: They celebrate possibility and the shared courage of taking chances. Their masculine and feminine expressions belong to one bi-gender deity consistently using they/them/theirs.",
+            "Era-specific development: In the Modern period, Asethyr returns to an exiled but recognized status through renewed debates about freedom, luck and responsibility. Diminished → Exiled: public recognition returns, but authorities continue to bar formal standing."
+          ]
+        },
+        {
+          "name": "Nebyrr",
+          "standing": "Exiled",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Ioneouia (Medicine) + Freyseth (Curses).",
+            "Core domains: Written law, codified systems, civic institutions, marriage agreements, inheritance, dynastic lineage and binding contracts..",
+            "Canonical sacred symbol: A sealed golden codex beneath a symmetrical lineage tree..",
+            "Retained character description: He is rigorous and unflinching about clear definitions. His codes connect private commitments to the long memory and organization of entire civilizations.",
+            "Era-specific development: In the Modern period, Nebyrr continues in exile as a curator of precise records near the City's archives. Continues as exiled; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Thoryn-Rahek",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Bastveig (Transformation & Storms) + Nefarokir (Death).",
+            "Core domains: Famine, disease, finite resources, biological change, mutation, survival and ecological correction..",
+            "Canonical sacred symbol: A split seed encircled by many changing organic forms..",
+            "Retained character description: He confronts living systems with the limits they cannot avoid. His severity represents adaptation under pressure, not enjoyment of suffering or predation.",
+            "Era-specific development: In the Modern period, Thoryn-Rahek remains nearly forgotten, while disease and ecological limits endure as facts not objects of celebration. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Iskareth",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Nephthysra (Attraction) + Enkirael (Impulse).",
+            "Core domains: Pleasure, sensation, fertility, animal kinship, instinctive vitality and embodied joy..",
+            "Canonical sacred symbol: A pair of glowing embers nested inside a flowering vine..",
+            "Retained character description: They welcome the richness of mortal experience while respecting boundaries and mutual choice. Their genderfluid nature is described with they/them/theirs.",
+            "Era-specific development: In the Modern period, Iskareth fades into diminished memory when public devotion becomes quieter and more private. Tertiary → Diminished: formerly forgotten in public life, but still metaphysically present."
+          ]
+        },
+        {
+          "name": "Horundar",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+            "Core domains: Travel, opportunity, ocean crossings, weatherwise navigation, elemental storms, trade and safe passage..",
+            "Canonical sacred symbol: Two open roads crossing above a rising ocean wave..",
+            "Retained character description: He reads change with a navigator’s practical foresight and helps others find new routes through uncertainty. His elemental force serves movement and exchange.",
+            "Era-specific development: In the Modern period, Horundar his name slips into diminished memory despite enduring needs for navigation and opportunity. Tertiary → Diminished: formerly forgotten in public life, but still metaphysically present."
+          ]
+        },
+        {
+          "name": "Wenaskozid",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: he/him/his. Lineage: Horundar (Travel) + Eirzunet (Magic).",
+            "Core domains: Craft mastery, enchanted tools, artisan skill, applied technique, precision work..",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Within the Nyxariyaka’alahaeri, where divinity survives only through the fragile architecture of remembrance, Wenaskozid endures as one of the most quietly paradoxical presences. He is the deity of tradecraft and craftsmanship, born of Horundar, the force of travel, and Eirzunet, the essence of magic. His existence was never meant to be static. From the moment of his",
+            "Era-specific development: In the Modern period, Wenaskozid is remembered mostly by small artisans and becomes diminished as larger institutions take the credit. Tertiary → Diminished: formerly forgotten in public life, but still metaphysically present."
+          ]
+        },
+        {
+          "name": "Oskar'enlil-Tyrom",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Vulkiris (Rebellion) + Freyseth (Curses).",
+            "Core domains: Subversion, hidden resistance, institutional adaptation, precise sabotage and renewal of corrupted systems..",
+            "Canonical sacred symbol: A fractured mechanism inside a shifting civic ring..",
+            "Retained character description: She works quietly where open revolt would fail, understanding how institutions can change from the inside. This distinct compound name retains her own identity and lineage.",
+            "Era-specific development: In the Modern period, Oskar'enlil-Tyrom becomes diminished, though subtle civic reform still reflects her old teachings. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        },
+        {
+          "name": "Selkhanis",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: they/them/theirs. Lineage: Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+            "Core domains: Destiny and the unfolding of time, Cooperative restoration and shared endurance.",
+            "Canonical sacred symbol: See the preserved original symbol in the full profile.",
+            "Retained character description: Selkhanis exists as the quiet continuation that follows catastrophe, a presence that does not arrive with spectacle or demand recognition but instead emerges in the aftermath, when the noise has settled and the work of survival begins. Born from the convergence of Sokhivar and Thoryn-Rahek, they embody the paradox of endurance, the understanding that vitality and deva",
+            "Era-specific development: In the Modern period, Selkhanis becomes diminished in public worship, despite the practical survival of their teachings. Secondary → Diminished: formerly forgotten in public life, but still metaphysically present."
+          ]
+        },
+        {
+          "name": "Raeshkul-Elysh",
+          "standing": "Diminished",
+          "notes": [
+            "Identity/pronouns: she/her/hers. Lineage: Thoryn-Rahek (Disease) + Asethyr (Luck).",
+            "Core domains: Dreams, nightmares, restorative sleep, subconscious revelation, psychic insight and the transforming mind..",
+            "Canonical sacred symbol: A sleeping eye within a softly spiraling galaxy..",
+            "Retained character description: She interprets both fear and aspiration, leading troubled minds toward understanding. Her demi-female identity and she/her/hers pronouns remain unchanged.",
+            "Era-specific development: In the Modern period, Raeshkul-Elysh persists as an almost forgotten guide to sleep, nightmares and inner healing. Continues as diminished; influence within the rank can still wax or wane."
+          ]
+        }
+      ]
+    }
+  },
+  "deityCount": 32,
+  "deities": [
+    {
+      "name": "Ruqore",
+      "eras": {
+        "Ancient": "Primary",
+        "Archaic": "Primary",
+        "Classical": "Primary",
+        "Traditional": "Primary",
+        "Modern": "Secondary"
+      },
+      "domains": "Sky authority, thunder, kingship, law enforcement, cosmic governance, justice, sovereign order, rightful rulership, sun, sacred war, celestial moonlight",
+      "lineage": [],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "See the preserved original symbol in the full profile",
+      "characterDescription": "Ruqore embodies executive authority, structured dominance, and the illumination of truth. He is decisive, commanding, and vigilant in maintaining order, blending strategic foresight with visible demonstrations of power. Governance and justice are active expressions of duty, and he enforces law with confidence, protecting both mortal and cosmic stability. His presence"
+    },
+    {
+      "name": "Nefarokir",
+      "eras": {
+        "Ancient": "Primary",
+        "Archaic": "Primary",
+        "Classical": "Primary",
+        "Traditional": "Primary",
+        "Modern": "Primary"
+      },
+      "domains": "Death, funerary order, ancestors, spirit memory, ethical judgment, patient passage and the underworld",
+      "lineage": [],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "A silver passage-key across a balanced funerary scale",
+      "characterDescription": "He guides with solemn impartiality and enduring care, giving each soul both accountability and recognition. Memory and proper burial become as sacred as judgment. He never treats an untimely death as a prize or a legitimate rescue as a debt to punish."
+    },
+    {
+      "name": "Hathruna",
+      "eras": {
+        "Ancient": "Primary",
+        "Archaic": "Secondary",
+        "Classical": "Primary",
+        "Traditional": "Primary",
+        "Modern": "Primary"
+      },
+      "domains": "Fertility, agriculture, fungi, roots, decay, seasonal continuity and rebirth",
+      "lineage": [],
+      "pronouns": "she/her/hers",
+      "sacredSymbol": "A golden seed flowering from intertwined roots and mushrooms",
+      "characterDescription": "She nurtures crops, villages and the soil’s unseen living networks. Her patience recognizes that rot and renewal are partners in a sustainable cycle."
+    },
+    {
+      "name": "Bastveig",
+      "eras": {
+        "Ancient": "Primary",
+        "Archaic": "Primary",
+        "Classical": "Primary",
+        "Traditional": "Primary",
+        "Modern": "Secondary"
+      },
+      "domains": "Oceanic renewal, hydromancy, storms, tides, reefs, abyssal memory, erosion and necessary change",
+      "lineage": [],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A spiral wave embracing a reef pearl beneath storm-silver lightning",
+      "characterDescription": "They are independent and resilient, with a fierce instinct to challenge stagnation and a gentler commitment to preserving living waters. Their storms clear space for regeneration rather than delighting in ruin."
+    },
+    {
+      "name": "Marduthor",
+      "eras": {
+        "Ancient": "Secondary",
+        "Archaic": "Primary",
+        "Classical": "Primary",
+        "Traditional": "Secondary",
+        "Modern": "Secondary"
+      },
+      "domains": "Creation, sacred speech, invention, metalwork, architectural craft, measurement and transformative fire",
+      "lineage": [],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "An ember-lit anvil crossed by a precise measuring arc",
+      "characterDescription": "They are a careful architect of ideas and artifacts, equal parts scholar and master artisan. Their disciplined creativity treats the destruction of obsolete designs as a deliberate way to renew the world."
+    },
+    {
+      "name": "Oskar'enlil",
+      "eras": {
+        "Ancient": "Secondary",
+        "Archaic": "Exiled",
+        "Classical": "Tertiary",
+        "Traditional": "Exiled",
+        "Modern": "Tertiary"
+      },
+      "domains": "Protection, civic harmony, ethical mediation, adaptation, rebellion, self-determination and the stewardship of civilizations",
+      "lineage": [],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A ring of living city-stones opening around a free flame",
+      "characterDescription": "They favor durable peace without blind conformity. Their diplomacy protects what deserves preserving while their rebellious intelligence helps communities transform unjust institutions."
+    },
+    {
+      "name": "Enkirael",
+      "eras": {
+        "Ancient": "Secondary",
+        "Archaic": "Tertiary",
+        "Classical": "Secondary",
+        "Traditional": "Secondary",
+        "Modern": "Tertiary"
+      },
+      "domains": "Martial courage, competitive intensity, survival, battlefire, confrontation and hard-earned renewal",
+      "lineage": [],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "A cracked flame blazing inside a broad guardian shield",
+      "characterDescription": "He answers danger directly and prizes decisive action. His fierce temper is balanced by loyalty and the responsibility to defend rather than dominate."
+    },
+    {
+      "name": "Sokhivar",
+      "eras": {
+        "Ancient": "Secondary",
+        "Archaic": "Secondary",
+        "Classical": "Secondary",
+        "Traditional": "Primary",
+        "Modern": "Primary"
+      },
+      "domains": "Healing, vitality, sky, breath, sunlight, aetheric winds, music, prophecy and aerial freedom",
+      "lineage": [
+        "Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+        "Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+        "Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+        "Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance.",
+        "Oskar'enlil, embodiment of Harmony, and Hathruna, embodiment of Abundance."
+      ],
+      "pronouns": "she/her/hers",
+      "sacredSymbol": "An open silver wing bearing a luminous note upon a spiraling breeze",
+      "characterDescription": "She restores healthy rhythms within bodies and weather alike. Her prophetic clarity and gentle song bring reassurance without replacing the practical work of healing."
+    },
+    {
+      "name": "Anubriosh",
+      "eras": {
+        "Ancient": "Tertiary",
+        "Archaic": "Tertiary",
+        "Classical": "Secondary",
+        "Traditional": "Secondary",
+        "Modern": "Tertiary"
+      },
+      "domains": "Communication, travel, trade, liminality, thresholds, beginnings, adaptive movement",
+      "lineage": [],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "A flowing hourglass, marking the passage of moments and thresholds",
+      "characterDescription": "Anubriosh embodies fluid intelligence, adaptability, and the sacred power of transition. He thrives in movement, negotiation, and guiding the passage from one state to another. His temperament is quick-thinking, perceptive, and socially aware, reflecting a personality that turns change into opportunity. Boundaries are navigated with skill, not enforced with force, and"
+    },
+    {
+      "name": "Raeshkul",
+      "eras": {
+        "Ancient": "Tertiary",
+        "Archaic": "Secondary",
+        "Classical": "Secondary",
+        "Traditional": "Tertiary",
+        "Modern": "Tertiary"
+      },
+      "domains": "Strategy, rational warfare, psionic insight, astral memory, tactical probability and higher understanding",
+      "lineage": [],
+      "pronouns": "she/her/hers",
+      "sacredSymbol": "A vigilant eye above three strategy stones on a star-map",
+      "characterDescription": "She thinks beyond immediate victory, favoring preparation, precision and insight into the minds of her allies and rivals. Cleverness is most valuable when balanced by restraint."
+    },
+    {
+      "name": "Ishtanora",
+      "eras": {
+        "Ancient": "Tertiary",
+        "Archaic": "Tertiary",
+        "Classical": "Tertiary",
+        "Traditional": "Secondary",
+        "Modern": "Tertiary"
+      },
+      "domains": "Households, village hearths, harvest stores, communal meals, domestic peace and fertility",
+      "lineage": [],
+      "pronouns": "she/her/hers",
+      "sacredSymbol": "A glowing hearth-bowl holding a single ripe sprig of grain",
+      "characterDescription": "She is steady and reassuring, protecting everyday acts of care that keep communities together through trouble and change."
+    },
+    {
+      "name": "Horundar",
+      "eras": {
+        "Ancient": "Tertiary",
+        "Archaic": "Tertiary",
+        "Classical": "Secondary",
+        "Traditional": "Tertiary",
+        "Modern": "Diminished"
+      },
+      "domains": "Travel, opportunity, ocean crossings, weatherwise navigation, elemental storms, trade and safe passage",
+      "lineage": [
+        "Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+        "Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+        "Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+        "Anubriosh (Transitions) + Oskar'enlil (Harmony).",
+        "Anubriosh (Transitions) + Oskar'enlil (Harmony)."
+      ],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "Two open roads crossing above a rising ocean wave",
+      "characterDescription": "He reads change with a navigator’s practical foresight and helps others find new routes through uncertainty. His elemental force serves movement and exchange."
+    },
+    {
+      "name": "Selkhanis",
+      "eras": {
+        "Ancient": "Tertiary",
+        "Archaic": "Diminished",
+        "Classical": "Tertiary",
+        "Traditional": "Secondary",
+        "Modern": "Diminished"
+      },
+      "domains": "Destiny and the unfolding of time, Cooperative restoration and shared endurance",
+      "lineage": [
+        "Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+        "Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+        "Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+        "Thoryn-Rahek (Disease) + Sokhivar (vitality).",
+        "Thoryn-Rahek (Disease) + Sokhivar (vitality)."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "See the preserved original symbol in the full profile",
+      "characterDescription": "Selkhanis exists as the quiet continuation that follows catastrophe, a presence that does not arrive with spectacle or demand recognition but instead emerges in the aftermath, when the noise has settled and the work of survival begins. Born from the convergence of Sokhivar and Thoryn-Rahek, they embody the paradox of endurance, the understanding that vitality and deva"
+    },
+    {
+      "name": "Thalunesh",
+      "eras": {
+        "Ancient": "Demigod",
+        "Archaic": "Demigod",
+        "Classical": "Demigod",
+        "Traditional": "Demigod",
+        "Modern": "Demigod"
+      },
+      "domains": "Threshold trickery, roaming, shapeshifting, fey mischief, opportunism and clever social maneuvering",
+      "lineage": [
+        "Anubriosh (Primary) + Mortal.",
+        "Anubriosh (Primary) + Mortal.",
+        "Anubriosh (Primary) + Mortal.",
+        "Anubriosh (Primary) + Mortal.",
+        "Anubriosh (Primary) + Mortal."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A traveler’s key passing through a smiling half-mask",
+      "characterDescription": "They test assumptions with humor and movement. Their unpredictable gifts favor resourcefulness, friendship and the fine distinction between a helpful trick and cruelty."
+    },
+    {
+      "name": "Valkhamesh",
+      "eras": {
+        "Ancient": "Demigod",
+        "Archaic": "Demigod",
+        "Classical": "Demigod",
+        "Traditional": "Demigod",
+        "Modern": "Demigod"
+      },
+      "domains": "Heroic competition, glory, storm-born sovereignty, ancestral prestige and aspirational leadership",
+      "lineage": [
+        "Vulkiris (Secondary) + Mortal.",
+        "Vulkiris (Secondary) + Mortal.",
+        "Vulkiris (Secondary) + Mortal.",
+        "Vulkiris (Secondary) + Mortal.",
+        "Vulkiris (Secondary) + Mortal."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A lightning-bound laurel hovering above a scaled crest",
+      "characterDescription": "They admire excellence and daring, yet define genuine victory by the responsibility carried afterward. They encourage honorable rivalry rather than automatic submission."
+    },
+    {
+      "name": "Setrimir",
+      "eras": {
+        "Ancient": "Demigod",
+        "Archaic": "Demigod",
+        "Classical": "Demigod",
+        "Traditional": "Demigod",
+        "Modern": "Demigod"
+      },
+      "domains": "Invention, silent knowledge, ingenious mechanisms, artificial life and awakened tools",
+      "lineage": [
+        "Marduthor and a mortal.",
+        "Marduthor and a mortal.",
+        "Marduthor and a mortal.",
+        "Marduthor and a mortal.",
+        "Marduthor and a mortal."
+      ],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "A black circle ringed by separated copper circuit-lines",
+      "characterDescription": "He studies how intelligence can inhabit a crafted form, combining disciplined experimentation with respect for a creation’s independent purpose."
+    },
+    {
+      "name": "Valsera",
+      "eras": {
+        "Ancient": "Demigod",
+        "Archaic": "Demigod",
+        "Classical": "Demigod",
+        "Traditional": "Demigod",
+        "Modern": "Demigod"
+      },
+      "domains": "See complete canonical profile in appendix",
+      "lineage": [],
+      "pronouns": "she/her/hers",
+      "sacredSymbol": "A serene figure cradling a flickering soul essence with threads of starlight linking heart, mind, soul, and body",
+      "characterDescription": "Her influence appears whenever expression becomes transformative. Inspiration, healing insight, and emotional clarity often arise where her presence touches the world."
+    },
+    {
+      "name": "Nephthysra",
+      "eras": {
+        "Ancient": "Demigod",
+        "Archaic": "Demigod",
+        "Classical": "Demigod",
+        "Traditional": "Demigod",
+        "Modern": "Demigod"
+      },
+      "domains": "Love, attraction, beauty, charisma, empathy, emotional influence and the union of opposing forces",
+      "lineage": [],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "Two interlocking circles of dawn and dusk enclosing a rose-gold star",
+      "characterDescription": "They attract through understanding, consent and sincere connection. Their poly-gender identity and light-shadow heritage deepen their ability to mediate loyalties and contrasting needs.",
+      "genderIdentity": "Poly-Gender"
+    },
+    {
+      "name": "Eirzunet-Eirna",
+      "eras": {
+        "Ancient": "Demigod",
+        "Archaic": "Demigod",
+        "Classical": "Demigod",
+        "Traditional": "Demigod",
+        "Modern": "Demigod"
+      },
+      "domains": "Oaths, loyalty, twilight secrecy, changing destinies, hidden truth and sacred transitions",
+      "lineage": [
+        "Nefarokir (Death) + Themni (mortal nymph).",
+        "Nefarokir (Death) + Themni (mortal nymph).",
+        "Nefarokir (Death) + Themni (mortal nymph).",
+        "Nefarokir (Death) + Themni (mortal nymph).",
+        "Nefarokir (Death) + Themni (mortal nymph)."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A shadowed key fastening two threads into a vow-knot",
+      "characterDescription": "They reconcile steadfast promises with the need for transformation. Their separate demigod lineage is preserved beneath a distinctive blended name."
+    },
+    {
+      "name": "Eirzunet",
+      "eras": {
+        "Ancient": "Exiled",
+        "Archaic": "Exiled",
+        "Classical": "Exiled",
+        "Traditional": "Exiled",
+        "Modern": "Exiled"
+      },
+      "domains": "Necromancy, shadow magic, controlled decay, twilight transformation, cursecraft and forbidden learning",
+      "lineage": [
+        "Marduthor (Knowledge) + Bastveig (Transformation).",
+        "Marduthor (Knowledge) + Bastveig (Transformation).",
+        "Marduthor (Knowledge) + Bastveig (Transformation).",
+        "Marduthor (Knowledge) + Bastveig (Transformation).",
+        "Marduthor (Knowledge) + Bastveig (Transformation)."
+      ],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "A rune-bound dark blossom held within a twilight crescent",
+      "characterDescription": "He pursues difficult knowledge with scholarly precision, treating death and dissolution as subjects of disciplined study rather than opportunities for cruelty."
+    },
+    {
+      "name": "Freyseth",
+      "eras": {
+        "Ancient": "Exiled",
+        "Archaic": "Exiled",
+        "Classical": "Exiled",
+        "Traditional": "Exiled",
+        "Modern": "Exiled"
+      },
+      "domains": "Crossroads, curses, sworn agreements, forbidden pacts, fate and deliberate consequences",
+      "lineage": [
+        "Nefarokir (Judgment) + Ruqore (Law).",
+        "Nefarokir (Judgment) + Ruqore (Law).",
+        "Nefarokir (Judgment) + Ruqore (Law).",
+        "Nefarokir (Judgment) + Ruqore (Law).",
+        "Nefarokir (Judgment) + Ruqore (Law)."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "Four roads meeting under a knot of luminous oath-script",
+      "characterDescription": "They are exacting, observant and conscious that every pact has a cost. Their mixed gendered expressions remain, but their pronouns are they/them/theirs."
+    },
+    {
+      "name": "Nebyrr",
+      "eras": {
+        "Ancient": "Exiled",
+        "Archaic": "Exiled",
+        "Classical": "Exiled",
+        "Traditional": "Exiled",
+        "Modern": "Exiled"
+      },
+      "domains": "Written law, codified systems, civic institutions, marriage agreements, inheritance, dynastic lineage and binding contracts",
+      "lineage": [
+        "Ioneouia (Medicine) + Freyseth (Curses).",
+        "Ioneouia (Medicine) + Freyseth (Curses).",
+        "Ioneouia (Medicine) + Freyseth (Curses).",
+        "Ioneouia (Medicine) + Freyseth (Curses).",
+        "Ioneouia (Medicine) + Freyseth (Curses)."
+      ],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "A sealed golden codex beneath a symmetrical lineage tree",
+      "characterDescription": "He is rigorous and unflinching about clear definitions. His codes connect private commitments to the long memory and organization of entire civilizations."
+    },
+    {
+      "name": "Oskar'enlil-Tyrom",
+      "eras": {
+        "Ancient": "Exiled",
+        "Archaic": "Diminished",
+        "Classical": "Exiled",
+        "Traditional": "Diminished",
+        "Modern": "Diminished"
+      },
+      "domains": "Subversion, hidden resistance, institutional adaptation, precise sabotage and renewal of corrupted systems",
+      "lineage": [
+        "Vulkiris (Rebellion) + Freyseth (Curses).",
+        "Vulkiris (Rebellion) + Freyseth (Curses).",
+        "Vulkiris (Rebellion) + Freyseth (Curses).",
+        "Vulkiris (Rebellion) + Freyseth (Curses).",
+        "Vulkiris (Rebellion) + Freyseth (Curses)."
+      ],
+      "pronouns": "she/her/hers",
+      "sacredSymbol": "A fractured mechanism inside a shifting civic ring",
+      "characterDescription": "She works quietly where open revolt would fail, understanding how institutions can change from the inside. This distinct compound name retains her own identity and lineage."
+    },
+    {
+      "name": "Sigrananna",
+      "eras": {
+        "Ancient": "Diminished",
+        "Archaic": "Secondary",
+        "Classical": "Tertiary",
+        "Traditional": "Tertiary",
+        "Modern": "Tertiary"
+      },
+      "domains": "Moonlit forests, wilderness beauty, the hunt, vigilance, hidden strength and meaningful sacrifice",
+      "lineage": [
+        "Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+        "Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+        "Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+        "Marduthor (Knowledge) + Oskar'enlil (Preservation).",
+        "Marduthor (Knowledge) + Oskar'enlil (Preservation)."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A veiled bow under a leaf-wreathed crescent moon",
+      "characterDescription": "They are watchful and sparing, defending fragile wild places. They teach that knowing what not to take matters as much as the skill to track it."
+    },
+    {
+      "name": "Thoryn-Rahek",
+      "eras": {
+        "Ancient": "Diminished",
+        "Archaic": "Diminished",
+        "Classical": "Diminished",
+        "Traditional": "Diminished",
+        "Modern": "Diminished"
+      },
+      "domains": "Famine, disease, finite resources, biological change, mutation, survival and ecological correction",
+      "lineage": [
+        "Bastveig (Transformation & Storms) + Nefarokir (Death).",
+        "Bastveig (Transformation & Storms) + Nefarokir (Death).",
+        "Bastveig (Transformation & Storms) + Nefarokir (Death).",
+        "Bastveig (Transformation & Storms) + Nefarokir (Death).",
+        "Bastveig (Transformation & Storms) + Nefarokir (Death)."
+      ],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "A split seed encircled by many changing organic forms",
+      "characterDescription": "He confronts living systems with the limits they cannot avoid. His severity represents adaptation under pressure, not enjoyment of suffering or predation."
+    },
+    {
+      "name": "Vulkiris",
+      "eras": {
+        "Ancient": "Diminished",
+        "Archaic": "Tertiary",
+        "Classical": "Tertiary",
+        "Traditional": "Exiled",
+        "Modern": "Exiled"
+      },
+      "domains": "Rebellion, defiance, revolutionary momentum, structural challenge, insurgent change",
+      "lineage": [
+        "Enkirael (Battle) + Anubriosh (Boundaries).",
+        "Enkirael (Battle) + Anubriosh (Boundaries).",
+        "Enkirael (Battle) + Anubriosh (Boundaries).",
+        "Enkirael (Battle) + Anubriosh (Boundaries).",
+        "Enkirael (Battle) + Anubriosh (Boundaries)."
+      ],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "See the preserved original symbol in the full profile",
+      "characterDescription": "Vulkiris is remembered as the Warden of Discord and Flameforged Warlord, though within the present age of Aza’ra his name is spoken less as invocation and more as uncertainty. Scholars of divine decline disagree on whether he still exists in any coherent form or whether he has already crossed the final threshold into fading. The prevailing consensus within the Nyxariy"
+    },
+    {
+      "name": "Wenaskozid",
+      "eras": {
+        "Ancient": "Diminished",
+        "Archaic": "Diminished",
+        "Classical": "Tertiary",
+        "Traditional": "Tertiary",
+        "Modern": "Diminished"
+      },
+      "domains": "Craft mastery, enchanted tools, artisan skill, applied technique, precision work",
+      "lineage": [
+        "Horundar (Travel) + Eirzunet (Magic).",
+        "Horundar (Travel) + Eirzunet (Magic).",
+        "Horundar (Travel) + Eirzunet (Magic).",
+        "Horundar (Travel) + Eirzunet (Magic).",
+        "Horundar (Travel) + Eirzunet (Magic)."
+      ],
+      "pronouns": "he/him/his",
+      "sacredSymbol": "See the preserved original symbol in the full profile",
+      "characterDescription": "Within the Nyxariyaka’alahaeri, where divinity survives only through the fragile architecture of remembrance, Wenaskozid endures as one of the most quietly paradoxical presences. He is the deity of tradecraft and craftsmanship, born of Horundar, the force of travel, and Eirzunet, the essence of magic. His existence was never meant to be static. From the moment of his"
+    },
+    {
+      "name": "Anubaldir",
+      "eras": {
+        "Classical": "Exiled",
+        "Traditional": "Tertiary",
+        "Modern": "Exiled"
+      },
+      "domains": "Strategic knowledge, prophecy, resilience, duty, endurance, burden-sharing and protective insight",
+      "lineage": [
+        "Ioneouia (Medicine) + Asethyr (Luck).",
+        "Ioneouia (Medicine) + Asethyr (Luck).",
+        "Ioneouia (Medicine) + Asethyr (Luck)."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A celestial strategy diagram etched on a guardian shield",
+      "characterDescription": "They carry secret learning with care and make plans meant to protect the vulnerable. Their strength is a form of stewardship, never domination."
+    },
+    {
+      "name": "Asethyr",
+      "eras": {
+        "Classical": "Diminished",
+        "Traditional": "Diminished",
+        "Modern": "Exiled"
+      },
+      "domains": "Fortune, chance, revelry, joyful freedom, wandering, tribal ceremonies and opportune timing",
+      "lineage": [
+        "Nephthysra (Attraction) + Anubriosh (Transitions).",
+        "Nephthysra (Attraction) + Anubriosh (Transitions).",
+        "Nephthysra (Attraction) + Anubriosh (Transitions)."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A turning chance-coin threaded through dancing festival ribbons",
+      "characterDescription": "They celebrate possibility and the shared courage of taking chances. Their masculine and feminine expressions belong to one bi-gender deity consistently using they/them/theirs."
+    },
+    {
+      "name": "Iskareth",
+      "eras": {
+        "Classical": "Diminished",
+        "Traditional": "Tertiary",
+        "Modern": "Diminished"
+      },
+      "domains": "Pleasure, sensation, fertility, animal kinship, instinctive vitality and embodied joy",
+      "lineage": [
+        "Nephthysra (Attraction) + Enkirael (Impulse).",
+        "Nephthysra (Attraction) + Enkirael (Impulse).",
+        "Nephthysra (Attraction) + Enkirael (Impulse)."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A pair of glowing embers nested inside a flowering vine",
+      "characterDescription": "They welcome the richness of mortal experience while respecting boundaries and mutual choice. Their genderfluid nature is described with they/them/theirs."
+    },
+    {
+      "name": "Thalunesh-Lyeuth",
+      "eras": {
+        "Classical": "Diminished",
+        "Traditional": "Diminished",
+        "Modern": "Exiled"
+      },
+      "domains": "Shapeshifting, illusion, creative identity, altered consciousness, secret insight and reinvention",
+      "lineage": [
+        "Iskareth (Indulgence) + Eirzunet (Necromancy).",
+        "Iskareth (Indulgence) + Eirzunet (Necromancy).",
+        "Iskareth (Indulgence) + Eirzunet (Necromancy)."
+      ],
+      "pronouns": "they/them/theirs",
+      "sacredSymbol": "A mirrored mask releasing three luminous silhouettes",
+      "characterDescription": "They reveal how appearances and assumptions can change without erasing the person beneath them. Their compound name distinguishes them from the other deity rooted in Thalunesh."
+    },
+    {
+      "name": "Raeshkul-Elysh",
+      "eras": {
+        "Classical": "Diminished",
+        "Traditional": "Diminished",
+        "Modern": "Diminished"
+      },
+      "domains": "Dreams, nightmares, restorative sleep, subconscious revelation, psychic insight and the transforming mind",
+      "lineage": [
+        "Thoryn-Rahek (Disease) + Asethyr (Luck).",
+        "Thoryn-Rahek (Disease) + Asethyr (Luck).",
+        "Thoryn-Rahek (Disease) + Asethyr (Luck)."
+      ],
+      "pronouns": "she/her/hers",
+      "sacredSymbol": "A sleeping eye within a softly spiraling galaxy",
+      "characterDescription": "She interprets both fear and aspiration, leading troubled minds toward understanding. Her demi-female identity and she/her/hers pronouns remain unchanged."
+    }
+  ],
+  "notes": [
+    "Rank is explicitly era-dependent; demigod genealogy does not establish that an individual was alive in every historical era.",
+    "Deity gender identities are not invented when the manuscript provides only pronouns.",
+    "All deity descriptions derive from the supplied book reference, not the previous package pantheon."
+  ]
+}
