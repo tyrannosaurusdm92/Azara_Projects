@@ -1,0 +1,10 @@
+REVISION GEOJSON OVERLAY NOTES This revision keeps the scanner/generator behavior while changing the GeoJSON editing model. Current behavior:
+- GeoJSON overlays remain above the map image and never replace the image.
+- Location names are never drawn directly on the map image; names/details/NPCs appear in the immersive inspector when clicked.
+- Each polygon/cell is normalized to 10 editable anchor points.
+- Anchor handles are white dots.
+- A center map pin is shown for each GeoJSON cell.
+- Center map pin color is driven by location type, including forest green for government, red for medical, and deep purple for worship.
+- The Move Cell checkbox controls center-pin dragging: when enabled, dragging the pin moves the whole cell; when disabled, anchors are the editing handles.
+- Zoom controls now run from 25% to 300%.
+- Save replacement GeoJSON exports a FeatureCollection suitable for replacing the currently imported GeoJSON file.

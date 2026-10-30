@@ -1,0 +1,122 @@
+A complete guide for players and Dungeon Masters
+By William Saville, also known as The Transgender T-Rex #TheTransgenderTRex
+I built this system to make alignment feel alive instead of frozen. Belavadós treats morality as a profile instead of a label, so characters can grow, slide, fail, recover, and surprise the table in a way that still stays easy to read.
+This guide is written for Dungeon Masters, veteran D&D; players who know the old alignment grid, and new players who need a clean way in. I keep the language direct, the rules visible, and the moving parts organized so the system can be learned without losing its depth.
+Nothing here is meant to trap a character in a box. Your choices shape your path, and your path reshapes your destiny.
+How I want you to use this guide
+For DMs, the recommendation is to start with the core axes, then move into the phase rules, and finally the XP sections. These pages establish how to run the system consistently and fairly at the table. For veteran players, the conversion material translates the old two-axis model into the newer four-axis profile system, preserving familiar ideas while adding precision and reducing ambiguity around labels. For new players, the first half of the guide is sufficient to begin play—focus on the axes, review the examples, and understand the difference between fit awards and shift awards. The appendices function as reference material you can consult when needed during play.
+What I built this system to do
+The system is designed to measure selfishness, lawfulness, cooperation, and honor as separate and independent questions rather than collapsing them into a single alignment label. This allows a character to be lawful yet selfish, cooperative yet dishonorable, or honorable while actively rejecting institutions. The result is a clearer moral shape that is easier to understand and roleplay.
+It also emphasizes long-term behavioral patterns over isolated actions. A single act of kindness does not elevate a character into sainthood, just as a single cruel decision does not erase a lifetime of decency. Instead, Belavadós tracks patterns, turning points, sacrifices, betrayals, and repeated behavior to build a more stable and meaningful moral profile.
+Quick Roadmap
+Audience Guidance
+What I built and why it is different
+Belavadós treats morality as a living profile rather than a single alignment label. Instead of compressing ethical identity into a fixed nine-box system like traditional D&D alignment, it evaluates a character through four independent axes. Each axis measures a different moral or behavioral pressure, allowing for more nuance and less forced categorization.
+Belavadós Moral Axes
+This separation is important because real characters rarely fit cleanly into a single moral box. A selfish mercenary is not the same as a dishonorable traitor. A lawful bureaucrat is not automatically cooperative. A cooperative rebel is not necessarily altruistic, and an honorable outlaw may still reject institutional authority entirely. By keeping these axes distinct, Belavadós preserves moral complexity instead of flattening it into broad labels.
+The system is also designed to reflect change over time. Each axis can shift as a character grows, deteriorates, or reacts to events. This turns morality into a dynamic record rather than a static label—allowing the system to track a character’s moral biography as they develop, rather than assigning them a single permanent identity.
+The four alignment axes
+Every character in Belavadós is measured across four independent moral dimensions. Each axis runs from 0 to 3000 points, and 1500 is the neutral center.
+If you only remember one thing from this page, remember this: the axes are separate. A character can be high on one axis and low on another without contradiction. That is the heart of the system.
+Alignment phases, position steps, and crossing boundaries
+I divide every axis into three phases. The low phase, the neutral phase, and the high phase each contain four tracked | positions on the character sheet. That gives me a simple, readable way to show not only where a character stands, | but how far they have moved.
+Here are your contents organized into clear tables:
+Phase Ranges
+Phase Tracking Positions
+Point Change System
+When a character reaches the edge of a phase, they step into the next phase at the correct corresponding position. A | change of 250 points moves the character one position. Larger changes can leap several positions at once when a | major event deserves it.
+Character creation and starting scores
+At character creation, or through birth, adoption, awakening, or transformation in game, I let players start in more than | one way. They may take a short scenario based alignment test, choose their alignment manually, or build from a | background, oath, faction, or backstory that clearly points in a direction.
+The default starting point for every axis is 1500. That means a new character begins at the neutral center unless the | fiction says otherwise. A DM may shift starting scores by about 100 to 300 points for an ordinary background, and by | larger amounts when divine influence, faction indoctrination, or a very strong concept justifies it.
+Strong concept or divine influence Larger shifts are allowed when the fiction justifies it.
+I use those modifiers to create distinct personalities without permanently locking anyone into a rigid moral box. The goal is to give the character a believable starting shape, then let play do the rest.
+Alignment is dynamic
+Your actions continuously shape your moral trajectory. I do not treat alignment as something a player gets stuck with forever. I treat it as something that evolves through play.
+A character can begin in one place and end up somewhere very different after one meaningful betrayal, sacrifice, or turning point. That is not a bug in the system. That is the point of it.
+In play, I usually think in patterns. One kind act matters, but a repeated pattern of sacrifice matters more. One cruel | choice matters, but a repeated habit of exploitation matters more. The score should reflect the true story of the | character, not a single scene taken in isolation.
+Why alignment matters at the table
+Belavadós is not just a label system. It is a living reputation system. When the table uses it well, the world can answer the characters in different ways depending on how they have actually behaved.
+That means the system can influence trust, fear, admiration, hostility, political standing, access to sacred spaces, rare dialogue, faction invitations, and the kind of legacy people speak about after the session ends.
+I want the world to react to the character in distinct ways, not just say they are good or evil. That is why I separate honor from lawfulness and cooperation from altruism.
+Running Belavadós in D&D; 5e
+Belavadós replaces the rigid old grid with four continuous behavioral axes. That makes it easier to model gradual | change, mixed motives, and morally complicated characters while still staying fully compatible with D&D; 5e roleplay, | factions, magic items, subclasses, divine systems, and reputation mechanics.
+When you need to translate old alignment language, I treat it as a threshold question rather than a binary label. 
+Here’s your content organized into a clear table format:
+Moral & Behavioral Trait Definitions
+Design Interpretation (Belavadós System)
+This is still D&D; at the table. I am not replacing the game. I am giving the table a finer tool for reading character identity and narrative consequence.
+Rewarding alignment play
+I use the same reward logic for both advancement modes. The difference is not what gets rewarded. The difference is | when the points are handed out. My rule of thumb is simple. If a choice is merely on brand, it gets a fit award. If it | genuinely changes the character's direction, it gets a shift award.
+A small repeatable behavior should not create a massive shift by itself. A meaningful scene choice should matter. A major moral decision should matter a lot. A campaign defining sacrifice, betrayal, or oath should matter even more.
+I also keep the table honest by tying rewards to visible narrative consequences, not to table noise or repetitive point | farming.
+Adventuring XP mode
+Adventuring XP is the granular version. I use it when the table likes seeing immediate progress and wants alignment to feel like part of the normal rhythm of play.
+I award points at the end of each notable scene. I only award for choices with risk, cost, or public consequence. I do | not award for filler talk, repeated probing, or harmless chatter. The system should reward meaningful roleplay, not | table noise.
+When a choice fits the current profile, I count that as a fit award. When the choice changes the profile in a way that matters later, I count that as a shift award. A single scene can earn both, but only when both parts are true.
+Milestone XP mode
+Milestone XP is the chapter based version. I use it when the campaign is narrative heavy, the table is open ended, or the group wants less bookkeeping during a session.
+Milestone mode solves the bookkeeping problem without changing the reward logic. I still reward the same kinds of alignment moments, but I log them during play and hand them out at the end of the session, chapter, or story beat.
+That keeps the table moving while still making the alignment system feel alive and responsive.
+Axis triggers
+These triggers are the practical heart of the system. When I look at a scene, I ask which axis the choice touches and whether the action is pushing the character up or down that axis.
+5e compatible examples
+I keep these examples simple on purpose. They give the DM a clean starting point, but they are not hard limits. The fiction matters more than the exact spell name or combat move.
+If an action has both mechanical and narrative weight, I lean into the narrative weight first. Saving an ally in a life or | death moment is not the same thing as casually helping with a small task. The difference should be visible in the | reward.
+Translating items, abilities, and world reactions
+When old 5e content references alignment, I translate it into thresholds instead of binary labels. That lets me keep the spirit of the item or effect while making the requirement fit the new system.
+Traditional requirement | Belavadós translation
+A clean DM rule and the veteran player conversion guide
+I use alignment as a living reputation system, not a punishment system. I award points only when actions meaningfully | impact story, relationships, faction standing, moral consequences, or character identity. I avoid rewarding repetitive | behavior farming.
+For veteran players, the old two axis model still helps as a memory aid. I just split the old idea into four questions so it becomes easier to read mixed characters.
+A traditional lawful good hero will usually read as lawful, altruistic, cooperative, and honorable. A chaotic good hero | will usually read as lawless, altruistic, cooperative, and honorable. A character that was simply neutral in the old model | can land in many different places here, because neutral in the old system often meant the label was not trying to | describe that axis very strongly.
+New player quick start and DM guardrails
+For new players, the easiest way to use this system is to play your character honestly, say why they are acting when the choice matters, and ask me which axis a decision touches if you are unsure.
+If two players make the same choice for different reasons, the motive can matter. Keep the table consistent and explain the rule before the campaign starts.
+My fairness rule is simple. If the table can explain the award in one sentence, the award is probably clear enough. If it takes five sentences, I log the moment and settle it at the end of the session.
+I do not punish imperfect roleplay. I reward intention and consequence. The goal is to help players explore the system, not to turn the table into a test they can fail by accident.
+Optional rules and a session tracker
+These rules keep the system tight when the campaign needs more control. They are optional, but I use them often when I want cleaner pacing and less argument.
+Example Session Tracker
+Example starting spreads and archetypes
+These starting spreads help me seed characters with a clear moral shape without locking them into a final identity. They are examples, not cages.
+I use spreads like these when a player wants a ready made concept that still leaves room to grow. A holy protector, a | criminal mastermind, and a survivalist drifter all begin with very different pressure points, but all of them can still | evolve in play.
+Core class tendencies, part 1
+These are tendencies, not hard restrictions. I use them as a quick starting point when a player wants a class based profile without choosing every axis by hand.
+Core class tendencies, part 2
+I keep the same logic for the remaining classes. The point is to give the table a useful baseline, not to limit roleplay or force a character into a box.
+Class and subclass mappings, part 1
+I use these mappings when a player wants the class identity to lean strongly into one of the four axes. These are narrative tendencies, not restrictions.
+Barbarian | Core: Berserker to Chaotic Marauder; Totem Warrior to Neutral Guardian; Zealot to Chaotic Crusader; Wild Magic | to Chaotic Knave; Beast to Neutral Marauder; Ancestral Guardian to Neutral Sentinel; Storm Herald to Chaotic | Defender.
+Bard | Core: Lore to Neutral Mediator; Valor to Neutral Champion; Glamour to Chaotic Mediator; Whispers to Neutral | Strategist; Swords to Chaotic Gladiator; Eloquence to Lawful Mediator; Spirits to Neutral Ethicist; Creation to | Chaotic Coordinator.
+Cleric | Core: Life to Lawful Guardian; Light to Neutral Crusader; War to Lawful Enforcer; Trickery to Chaotic Strategist; | Death to Neutral Avenger; Grave to Neutral Sentinel; Twilight to Neutral Guardian; Peace to Lawful Mediator; | Forge to Lawful Coordinator; Tempest to Chaotic Defender; Knowledge to Neutral Ethicist; Nature to Neutral | Arbiter; Arcana to Neutral Strategist.
+Druid | Core: Land to Neutral Arbiter; Moon to Neutral Warrior; Dreams to Neutral Guardian; Spores to Neutral Ethicist; | Wildfire to Chaotic Defender; Stars to Neutral Sentinel; Shepherd to Neutral Coordinator.
+Fighter | Core: Champion to Neutral Warrior; Battle Master to Lawful Strategist; Eldritch Knight to Lawful Sentinel; Arcane | Archer to Neutral Defender; Cavalier to Lawful Guardian; Samurai to Lawful Gladiator; Rune Knight to Neutral | Sentinel; Psi Warrior to Neutral Defender; Echo Knight to Neutral Adapter.
+Class and subclass mappings, part 2
+The same principle keeps applying. If the story pushes a subclass in a different direction, I let the character drift through roleplay, corruption, redemption, trauma, faction influence, or personal growth.
+Monk | Core: Open Hand to Lawful Sentinel; Shadow to Neutral Vigilante; Mercy to Neutral Guardian; Four Elements to | Neutral Arbiter; Kensei to Lawful Gladiator; Astral Self to Chaotic Ethicist; Drunken Master to Chaotic Drifter; Long | Death to Neutral Avenger.
+Paladin | Core: Devotion to Lawful Crusader; Ancients to Neutral Guardian; Vengeance to Lawful Avenger; Redemption to | Lawful Mediator; Oathbreaker to Chaotic Marauder; Glory to Neutral Champion; Conquest to Lawful Enforcer; | Crown to Lawful Guardian; Watchers to Lawful Sentinel.
+Ranger | Core: Hunter to Neutral Vigilante; Beast Master to Neutral Guardian; Gloom Stalker to Neutral Avenger; Fey | Wanderer to Chaotic Mediator; Horizon Walker to Neutral Sentinel; Swarmkeeper to Neutral Coordinator; | Drakewarden to Neutral Defender; Monster Slayer to Lawful Vigilante.
+Rogue | Core: Thief to Neutral Knave; Assassin to Chaotic Avenger; Arcane Trickster to Chaotic Strategist; Swashbuckler | to Chaotic Gladiator; Mastermind to Lawful Strategist; Phantom to Neutral Drifter; Soulknife to Neutral Adapter; | Inquisitive to Lawful Arbiter; Scout to Neutral Drifter.
+Sorcerer | Core: Wild Magic to Chaotic Knave; Draconic to Neutral Champion; Divine Soul to Neutral Crusader; Shadow to | Neutral Avenger; Clockwork to Lawful Arbiter; Aberrant Mind to Chaotic Strategist; Storm to Chaotic Defender.
+Class and subclass mappings, part 3
+These last mappings complete the class reference. I keep the labels and the guidance together so I can read them | quickly at the table.
+Warlock | Core: Fiend to Chaotic Renegade; Archfey to Chaotic Drifter; Great Old One to Neutral Strategist; Celestial to | Neutral Guardian; Hexblade to Neutral Avenger; Undead to Neutral Marauder; Genie to Chaotic Champion; | Fathomless to Neutral Sentinel.
+Wizard | Core: Abjuration to Lawful Defender; Divination to Neutral Ethicist; Evocation to Neutral Enforcer; Illusion to | Chaotic Strategist; Necromancy to Neutral Avenger; Enchantment to Chaotic Mediator; Chronurgy to Lawful | Arbiter; Graviturgy to Neutral Adapter; Bladesinging to Neutral Gladiator; Scribes to Neutral Collaborator; War | Magic to Lawful Enforcer.
+Artificer | Core: Alchemist to Neutral Coordinator; Armorer to Lawful Defender; Artillerist to Neutral Enforcer; Battle Smith to | Lawful Guardian.
+Blood Hunter | Core: Ghostslayer to Neutral Crusader; Lycan to Chaotic Marauder; Mutant to Neutral Strategist; Profane Soul to | Chaotic Renegade.
+Full alignment profiles, part 1
+This appendix is my compact reference for the full profile list. I keep each entry short enough to scan quickly while still showing the name, the axis shape, and the meaning.
+Full alignment profiles, part 2
+This appendix is my compact reference for the full profile list. I keep each entry short enough to scan quickly while still showing the name, the axis shape, and the meaning.
+Full alignment profiles, part 3
+This appendix is my compact reference for the full profile list. I keep each entry short enough to scan quickly while still showing the name, the axis shape, and the meaning.
+Full alignment profiles, part 4
+This appendix is my compact reference for the full profile list. I keep each entry short enough to scan quickly while still showing the name, the axis shape, and the meaning.
+Full alignment profiles, part 5
+This appendix is my compact reference for the full profile list. I keep each entry short enough to scan quickly while still showing the name, the axis shape, and the meaning.
+Final philosophy
+Belavadós is not about assigning permanent labels. It is about consequences, reputation, ideology, personal evolution, social perception, and moral complexity.
+Characters are remembered not for what box they were placed in, but for the choices they made when it mattered most. That is the idea I wanted this system to preserve.
+If you are a DM, I want this guide to be easy to run. If you are a veteran player, I want it to feel familiar but sharper. If you are new to the table, I want it to feel readable instead of intimidating. That is why I built the system the way I did.
+Quick reference
+I wrote this guide to be useful at the table. Keep it close, use the pieces you need, and let the characters earn the shape of who they become.

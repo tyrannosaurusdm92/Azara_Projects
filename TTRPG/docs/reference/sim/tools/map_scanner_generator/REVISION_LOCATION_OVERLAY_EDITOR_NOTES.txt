@@ -1,0 +1,8 @@
+Location overlay editor revision Changes made:
+1. Removed the hard-coded 5px GeoJSON overlay restriction from the live scanner.
+2. Removed the same fixed-size restriction from exported interactive settlement HTML.
+3. Updated visible GeoJSON overlays so they use the full stored polygon geometry.
+4. Removed DM-map, province, and cropping/framing language from the scanner-facing code, UI, and revision notes.
+5. Added scanner-native GeoJSON editing controls: - Edit selected GeoJSON - Move location pin moves all attached anchors - Save edited GeoJSON
+6. Editing behavior: - Select a GeoJSON location. - Click Edit selected GeoJSON. - Drag white anchors to reshape the polygon. - Enable Move location pin, then drag the center location pin to move the whole polygon. - Save edited GeoJSON exports the edited selected location as a replacement-ready GeoJSON file.
+7. Names are still never printed on the map image itself. Names, NPCs, schedules, residents, services, visitors, rumors, and intrigue remain in the immersive location panel. Merged with 10-anchor pin revision: all GeoJSON cells now use 10 white anchors, a type-colored center map pin, Move Cell dragging, 25%-300% zoom, Save selected GeoJSON, and Save replacement GeoJSON.

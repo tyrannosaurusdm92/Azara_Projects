@@ -1,0 +1,20 @@
+the source world Fantasy Map Scanner Merge Report
+========================================= Merged source packages:
+1. fantasy_map_scanner_geojson_highlightable(3).zip
+2. fantasy_map_scanner_settlement_generator_json_driven(1).zip Merge strategy:
+- Used the JSON-driven settlement generator version as the base because it already contains the GeoJSON-highlightable scanner behavior from the smaller package.
+- Preserved all latest generator files and lore assets.
+- Preserved GeoJSON import, highlightable/clickable feature parsing, hover/click selection, overlay rendering, GeoJSON export, JSON export, CSV export, and overlay PNG export.
+- Preserved settlement JSON import and JSON-driven generation behavior.
+- Preserved the source world lore expansion files, name generator files, generated NPC assignment tools, immersive location generation, visitor refresh, and interactive HTML export. Important retained files:
+- index.html: main scanner UI, GeoJSON tools, settlement JSON uploader, lore expansion controls, NPC/name generator panel.
+- app.js: combined scanner, GeoJSON/highlight, border drawing, terrain classification, export, settlement generation, NPC/location/lore integration logic.
+- styles.css: scanner styles plus embedded generator panel styles.
+- name_generator.js and name_generator.html: generator assets.
+- source_world_lore_data.js and source_world_lore_assets/: canon lore data and extracted corpus. Validation performed:
+- Confirmed both uploaded zip files were readable.
+- Compared the smaller GeoJSON scanner against the larger JSON-driven scanner.
+- Confirmed the larger app.js retains and expands the GeoJSON feature logic rather than removing it.
+- Ran JavaScript syntax checks on app.js, name_generator.js, and source_world_lore_data.js with Node.
+- Checked HTML element ids against JavaScript references. The only unresolved ids are inside the exported interactive HTML template string, not the main scanner page. Expected output:
+- A merged, latest scanner folder that should remain fully functional as the JSON-driven settlement generator while also keeping highlightable/clickable GeoJSON map areas.

@@ -1,0 +1,48 @@
+{
+  "schema": "belavados.integration.v1",
+  "date": "2026-10-29",
+  "sourceZips": [
+    "Life_Simulator FINAL (made for admin place).zip",
+    "player map (2)(3).zip",
+    "interactive_immersive_locations.zip"
+  ],
+  "root": [
+    "index.html",
+    "js",
+    "json",
+    "css",
+    "assets",
+    "docs"
+  ],
+  "namedProvinces": 28,
+  "namedSettlements": 163,
+  "unnamedSimulatorSettlementsRetainedInReference": 279,
+  "immersiveTemplates": 52,
+  "npcRecords": 2909,
+  "approvedSpecies": 16,
+  "approvedMixedHeritages": 6,
+  "filesCopied": {
+    "sim": {
+      "copied": 519,
+      "HTML_REPLACED": 82
+    },
+    "map": {
+      "copied": 34,
+      "HTML_REPLACED": 8
+    }
+  },
+  "unnamedProvinceHandling": "Original unnamed 28-province source data retained in JSON reference; active navigation uses exact 28 named map provinces",
+  "provinceWithoutNamedSettlements": [
+    "Valerune"
+  ],
+  "templateSecondPass": {
+    "source": "settlement_generator.html",
+    "styling": "css/settlement-template.css",
+    "overrides": "css/template-integration.css",
+    "controller": "js/template_dashboard.js",
+    "entries": 1,
+    "nativePages": "province-with-settlement-dropdown",
+    "baselineNpcRerollOnLoad": false,
+    "activeRacePolicy": "16 approved species and 6 mixed heritages only"
+  }
+}

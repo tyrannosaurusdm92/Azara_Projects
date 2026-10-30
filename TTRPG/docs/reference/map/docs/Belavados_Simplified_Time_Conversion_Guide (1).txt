@@ -1,0 +1,33 @@
+Belavadós Time Conversion Guide
+Earth-first table play, Belavadós-second lore time
+1. The New Rule
+Use Earth dates and Earth time first for players, schedules, sessions, travel, and deadlines.
+Use Belavadós dates second for lore, temples, festivals, legal records, journals, and immersion.
+A Belavadós year is 330.15 Belavadós solar days long. For table play, those 330.15 days are distributed evenly across the Earth year.
+2. Clean Math
+3. Conversion Formula
+daysInEarthYear = 365, or 366 in a leap year.
+earthProgress = (Earth day-of-year - 1 + fractionOfEarthDay) / daysInEarthYear.
+belSolarDayProgress = earthProgress x 330.15. Use this for sky, moon, season, and astronomy math.
+belCivilDateProgress = earthProgress x 330. Use this for the named calendar date.
+monthIndex = floor(belCivilDateProgress / 30), from 0 to 10.
+dayOfMonth = floor(belCivilDateProgress % 30) + 1.
+Belavadós clock time may use the fractional part of belSolarDayProgress x 24.
+4. Month Cycle
+5. Weekdays
+For player-facing schedules, keep the live Earth weekday mapping. This keeps sessions, transit boards, deadlines, and reminders easy to read.
+6. Night Sky Integration
+Use 330.15 Belavadós days as the astronomical year because the Night Sky file identifies Belavadós at 1.00 AU with a 330.15-day orbital period.
+Use 330 named civil dates for the calendar because the civil calendar is still 11 months of 30 days.
+Use solar progress, not month/date progress, for moon phases, planetary positions, constellations, tides, and sky omens.
+The larger moon Chandratecu-Seleneš has a 19.20 Belavadós-day orbit; the smaller moonlet Mictlindra-Nannara has a 2.02 Belavadós-day orbit. For Earth sessions, calculate their phase from belSolarDayProgress so the sky stays smooth all year.
+Because the solar correction is distributed, the Star-River, wandering worlds, and paired moons never need a special frozen/end-buffer period.
+7. Province Time Zones
+Each province now receives a primary Earth-style UTC label and, where useful, one neighboring secondary label. Settlement-specific exports should store the exact settlement UTC by longitude. Province summaries should show only the one or two labels below.
+Province UTC Table
+8. Formatting Standards
+General date: Earth Month Day, Year / Belavadós Month Day, Weekday.
+Exact time: Earth time with UTC or local label / Belavadós clock time.
+Settlement time: include the settlement UTC if it differs from the province primary UTC.
+Province summary: show one or two UTC labels only, never a long chain of every border band.
+Sky event: calculate from belSolarDayProgress and display Earth-first for players.

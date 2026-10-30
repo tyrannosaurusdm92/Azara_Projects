@@ -1,0 +1,1 @@
+# Godot Adapter Copy `addons/source_world_living_world` into your Godot 4 project. Put the generated `source_world_living_world.json` in `res://data/`, add the loader as an autoload or scene node, and call `load_world()`.

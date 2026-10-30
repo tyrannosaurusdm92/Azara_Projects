@@ -1,0 +1,12 @@
+Immersive Standardized Shopping Locations - Clean Build This package contains standardized HTML shop and service pages for each settlement type and biome. Changes applied:
+- Cannabis terminology standardized.
+- Translation-cleanup language and repeated corrected-name phrasing removed by rebuilding clean player-facing pages.
+- Audit and merge wording removed from the HTML package.
+- Modern device categories removed.
+- Thundercoil weapons and accessories retained and assigned to armories.
+- Meals assigned to hostels, taverns, inns, restaurants, hotels, tea houses, cafes, and market food stalls.
+- Bulk food assigned to general stores, grocers, granaries, and marketplaces.
+- Weapons and armor assigned to armories and blacksmiths.
+- Craft goods assigned to specific craft shops.
+- Stables sell, rent, treat, and board mounts.
+- Furniture, decor, textiles, clothing, potions, poisons, elixirs, food, tea, armor, mounts, housing, weapons, pets, magic items, jewelry, bags, wagons, repair services, healing kits, cooking kits, survival kits, and rope are all placed into designated shop/service locations.

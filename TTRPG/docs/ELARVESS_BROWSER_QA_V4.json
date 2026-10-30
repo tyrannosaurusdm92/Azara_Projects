@@ -1,0 +1,13 @@
+{
+  "headlessBrowser": "chromium",
+  "injectedLocalScripts": true,
+  "uiJavaScriptErrors": [],
+  "mappedPaths": 1312,
+  "npcOptions": 2016,
+  "buildingOptions": 1312,
+  "canonicalBuildingSearch": true,
+  "buildingClick": true,
+  "npcDaySixNavigation": true,
+  "oldAliasControlRemoved": true,
+  "status": "PASS"
+}

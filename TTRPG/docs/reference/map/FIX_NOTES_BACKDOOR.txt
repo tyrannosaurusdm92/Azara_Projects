@@ -1,0 +1,18 @@
+Belavadós Player Map Back-Door Fix
+
+Main URL:
+  belavados_map_PLAYER.html
+
+DM back-door URL:
+  belavados_map_PLAYER.html#dm-editor
+
+Fixes applied:
+  - DM mode now switches immediately when #dm-editor is present, before the full app finishes loading.
+  - LocalStorage quota/corrupt-save errors no longer stop the DM editor from rendering.
+  - Added a Clear Broken Local Save button in DM controls for old browser data that may have been causing a white/unusable page.
+  - Startup and render errors now show an in-page recovery message instead of leaving a blank page.
+  - Hidden player/DM pages are no longer fully rendered on every load, improving responsiveness.
+  - Existing SVG-only upload rule remains enforced; no manual pin creation was restored.
+
+GitHub Pages install:
+  Upload the contents of this zip to the repository root so belavados_map_PLAYER.html sits beside css/, js/, data/, docs/, and legacy/.

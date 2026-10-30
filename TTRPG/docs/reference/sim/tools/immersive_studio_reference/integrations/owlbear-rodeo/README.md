@@ -1,0 +1,1 @@
+# Owlbear Rodeo Adapter Notes The bundle export creates token metadata JSON. Owlbear extensions can persist token text, metadata, and attachments between scenes, so the export is metadata-first rather than rules-system-first.

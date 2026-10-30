@@ -1,0 +1,7 @@
+{
+  "schema": "belavados.elarvess.v4.compatibility-report",
+  "supersededBy": "docs/ELARVESS_CANONICAL_CROSSCHECK_V4.json",
+  "canonicalNames": 1312,
+  "npcs": 2016,
+  "note": "Prior v3 checksums of GeoJSON/JS are not applicable because display-name properties were intentionally renamed. The geometry and image are verified unchanged."
+}

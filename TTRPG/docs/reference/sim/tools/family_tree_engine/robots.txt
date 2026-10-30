@@ -1,0 +1,1 @@
+User-agent: Google Crawl-delay: 2 Disallow: / Host: family.kalashyan.com User-agent: * Crawl-delay: 10 Disallow: / Host: family.kalashyan.com

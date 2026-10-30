@@ -1,0 +1,247 @@
+
+(function(){
+  const U = window.Life SimulatorUtils;
+  class LifeGeneratorCore{
+    constructor(){
+      this.rules = window.LIFE_SIMULATOR_LIFE_GENERATOR_RULES;
+      this.raceData = window.LIFE_SIMULATOR_RACE_DROPDOWN;
+      this.assignments = window.LIFE_SIMULATOR_SETTLEMENT_ASSIGNMENTS || [];
+      this.time = window.LIFE_SIMULATOR_TIME_MODEL;
+      this.catalog = window.LIFE_SIMULATOR_LOCATION_CATALOG || {};
+      this.raceCategories = this.raceData?.raceCategories || [];
+      this.allRaces = this.raceCategories.flatMap(c => (c.races||[]).map(r=>({...r, creator:c.creator, category:c.label, categoryValue:c.value})));
+      this.deities = Array.from(new Set(this.raceCategories.map(c=>c.creator).filter(Boolean))).sort();
+      this.biomes = Object.keys(this.rules.biomeModifiers);
+      this.nameFirst=['Aer','Bel','Cal','Dar','Esh','Fen','Gar','Hal','Iri','Jor','Kel','Lum','Mor','Niv','Or','Pha','Quel','Ryn','Ser','Tal','Uri','Val','Wyn','Yar','Zel','Ash','Brin','Cor','Dae','El','Fyr','Glin','Hesh','Is','Kael','Lor','Myr','Ner','Oth','Pyr','Quin','Rael','Syl','Tham','Ul','Vesh','Wyr','Xan','Ysol','Zar'];
+      this.nameMid=['a','ae','an','ar','el','en','eth','ia','iel','in','ir','is','ith','on','or','os','oth','ra','ren','ryn','sha','thel','um','un','ur','wyn'];
+      this.nameLast=['barrow','brook','cinder','clock','dawn','deep','ember','fall','forge','glen','harbor','hollow','iron','keep','ledger','mere','mire','needle','quay','reed','ridge','river','rook','shale','spire','steam','stone','thorn','vale','ward','water','wharf','wind','writ'];
+      this.genderIdentities=['A-Gender','Bi-Gender','Cis-Female','Cis-Male','Demi-Female','Demi-Male','Gender-Flexible','Gender-Fluid','Gender-Less','Apagender','Non-Binary','Poly-Gender','Trans-Female','Trans-Male'];
+      this.relationshipKinds={familial:['Parent','Child','Sibling','Grandparent','Grandchild','Cousin','Half-sibling','Step-sibling','Adoptive parent','Adoptive child','Foster parent','Foster child','Guardian','Ward','Extended family member','Chosen family'],romantic:['Romantic partner','Fiancé','Spouse','Ex partner','Long-term partner','Dating partner','Primary partner','Secondary partner','Courtship partner'],professional:['Employer','Employee','Coworker','Colleague','Supervisor','Subordinate','Manager','Assistant','Apprentice','Mentor','Teacher','Student','Business partner','Contractor','Client','Customer','Supplier','Trade contact','Guild member','Guild leader','Fellow guard','Fellow priest','Fellow scholar','Fellow artisan','Rival professional','Competitor'],personal:['Friend','Close friend','Best friend','Acquaintance','Neighbor','Rival','Enemy','Frenemy','Confidant','Drinking companion','Travel companion','Protector','Benefactor','Debtor','Creditor','Ally','Political ally','Political rival','Informant','Trusted contact','Former friend']};
+      this.traits=['Ambitious','Bookish','Brave','Brooding','Charismatic','Clumsy','Creative','Curious','Dramatic','Dutiful','Family-Oriented','Foodie','Good-Natured','Gossip','Green Thumb','Hot-Headed','Inventive','Loner','Loyal','Lucky','Mischievous','Neat','Night Owl','Over-Emotional','Party-Loving','Perfectionist','Romantic','Shy','Snobbish','Supernatural Skeptic','Virtuoso','Workaholic','Protective','Secretive','Civic-minded','Haunted','Practical','Restless'];
+      this.hobbies=['clockwork tinkering','tea blending','street chess','river fishing','choir singing','family genealogy','rooftop gardening','map collecting','weapon drills','baking','bird keeping','rune calligraphy','rumor trading','shrine volunteering','skyship watching','caravan games','reading serialized fiction','dockside dancing','herbal brewing','miniature painting','ghost-story nights'];
+    }
+    defaultState(){
+      return {schema:'life_simulator.lifeGeneratorState.v1', generatedAt:new Date().toISOString(), settings:{}, locations:[], npcs:[], relationships:[], schedules:[], travel:[], geojson:{type:'FeatureCollection',features:[]}, imports:[], mapImage:null, logs:[]};
+    }
+    getProvinceTime(province){ return this.time.provinceTimeZones.find(p=>p.province===province) || {}; }
+    settlementsForProvince(province){ const row=this.assignments.find(p=>p.province===province); if(!row) return []; return [...(row.capital_cities||[]).map(name=>({name,type:'Capital City'})),...(row.cities||[]).map(name=>({name,type:'City'})),...(row.towns||[]).map(name=>({name,type:'Town'})),...(row.villages||[]).map(name=>({name,type:'Village'}))]; }
+    inferSettlementType(province, settlement){ return this.settlementsForProvince(province).find(s=>s.name===settlement)?.type || 'Village'; }
+    configFromInputs(inputs){
+      const scaling=this.rules.settlementScaling[inputs.settlementType] || this.rules.settlementScaling.Village;
+      return {...inputs, locationCount:Number(inputs.locationCount)||scaling.locations, npcCount:Number(inputs.npcCount)||scaling.npcs};
+    }
+    generate(config, existing=null){
+      const state = config.preserveExisting && existing ? U.clone(existing) : this.defaultState();
+      state.generatedAt = new Date().toISOString(); state.settings = U.clone(config);
+      const targets = this.expandTargets(config);
+      const allLocations=[]; const allNpcs=[]; const allRelationships=[]; const allSchedules=[]; const allTravel=[];
+      for(const target of targets){
+        const localConfig={...config, ...target};
+        const locCount = Math.max(1, Math.round(config.scopeMode==='settlement' ? config.locationCount : (this.rules.settlementScaling[localConfig.settlementType]?.locations || config.locationCount)));
+        const npcCount = Math.max(1, Math.round(config.scopeMode==='settlement' ? config.npcCount : (this.rules.settlementScaling[localConfig.settlementType]?.npcs || config.npcCount)));
+        const locations = this.generateLocations(localConfig, locCount);
+        const npcs = this.generateNPCs(localConfig, npcCount, locations);
+        const relationships = this.generateRelationships(localConfig, npcs, locations);
+        const schedules = npcs.map(n=>({npcId:n.id, npcName:n.name, settlement:n.settlement, province:n.province, routine:n.schedule, currentLocation:n.currentLocation, travelPlan:n.travelPlan}));
+        const travel = this.generateTravel(localConfig, npcs, config.scopeMode);
+        this.assignLocationPeople(locations, npcs);
+        allLocations.push(...locations); allNpcs.push(...npcs); allRelationships.push(...relationships); allSchedules.push(...schedules); allTravel.push(...travel);
+      }
+      if(config.generationMode==='missingOnly' && existing?.locations?.length){
+        const neededNames = new Set(existing.locations.map(l=>l.name));
+        state.locations = [...existing.locations, ...allLocations.filter(l=>!neededNames.has(l.name))];
+      } else if(config.generationMode==='expandSettlement' && existing?.locations?.length){
+        state.locations = [...existing.locations, ...allLocations];
+      } else {
+        state.locations = allLocations;
+      }
+      state.npcs = (config.generationMode==='expandSettlement' && existing?.npcs?.length) ? [...existing.npcs, ...allNpcs] : allNpcs;
+      state.relationships = allRelationships;
+      state.schedules = allSchedules;
+      state.travel = allTravel;
+      state.geojson = this.generateGeoJSON(state.locations, config);
+      state.logs.push(`Generated ${state.locations.length} locations and ${state.npcs.length} NPCs for ${config.scopeMode}.`);
+      return state;
+    }
+    expandTargets(config){
+      if(config.scopeMode==='world'){
+        return this.assignments.flatMap(row => this.settlementsForProvince(row.province).map(s=>({province:row.province, settlementName:s.name, settlementType:s.type, timezone:this.getProvinceTime(row.province).primaryUtc || config.timezone})));
+      }
+      if(config.scopeMode==='province'){
+        return this.settlementsForProvince(config.province).map(s=>({province:config.province, settlementName:s.name, settlementType:s.type, timezone:this.getProvinceTime(config.province).primaryUtc || config.timezone}));
+      }
+      return [{province:config.province, settlementName:config.settlementName, settlementType:config.settlementType, timezone:config.timezone}];
+    }
+    categoryWeights(config){
+      const size=config.settlementType || 'Village';
+      const base={}; for(const [cat, vals] of Object.entries(this.rules.settlementDistribution)){ base[cat]=Number(vals[size]||0); }
+      const boosts=this.rules.biomeModifiers[config.biome] || [];
+      boosts.forEach(cat=>{ if(base[cat]!==undefined) base[cat]*=1.25; });
+      return base;
+    }
+    generateLocations(config, count){
+      const targetCount = config.generationMode==='singleLocation' ? 1 : count;
+      const weights=this.categoryWeights(config);
+      const allocated=U.allocateCounts(targetCount, weights);
+      let desired=[]; Object.entries(allocated).forEach(([category,n])=>{ for(let i=0;i<n;i++) desired.push(category); });
+      desired = this.applyMandatoryTransport(desired, config);
+      const pool = this.locationNamePool(config);
+      const locations=[];
+      for(let i=0;i<desired.length;i++){
+        const category=desired[i];
+        const entries=this.rules.locationHierarchy.filter(x=>x.category===category || (category==='Special / Quest / Intrigue' && x.category==='Special / Quest / Intrigue'));
+        const meta=U.sample(entries) || U.sample(this.rules.locationHierarchy);
+        const rare = config.includeFivePercent && U.chance(.05);
+        const name = this.makeLocationName(config, meta, pool, i, rare);
+        const id=U.uid('loc');
+        const services=this.servicesFor(meta, config);
+        const pin={type:'svg-geojson-pin-shell', radiusPx:2, x:Number(U.rand(4,96).toFixed(2)), y:Number(U.rand(4,96).toFixed(2)), fill:meta.hex, stroke:'#101417', selected:false, anchors:this.makeAnchors()};
+        locations.push({id, name, settlement:config.settlementName, province:config.province, settlementType:config.settlementType, category:meta.category, subcategory:meta.subcategory, overlayColor:meta.overlayColor, hex:meta.hex, description:this.locationDescription(meta, config, rare), biome:config.biome, governmentType:config.governmentType, dangerLevel:rare?'Hidden / Unusual':config.dangerLevel, servicesOffered:services.services, itemsSold:services.items, prices:services.prices, inventoryAvailability:services.availability, supplySources:services.sources, tags:[...(config.tags||[]).slice(0,6), meta.category, meta.subcategory, rare?'5% rare location':null].filter(Boolean), employees:[], visitors:[], currentOccupants:[], peakHours:this.peakHours(meta), operatingHours:this.operatingHours(meta), dailyActivityLevel:U.sample(['quiet','steady','busy','crowded','seasonal surges']), visitorFrequency:U.sample(['local regulars','daily visitors','weekly travelers','market-day crowds','rare appointments']), transportationConnections:this.transportConnections(meta, config), geojsonPin:pin, notes:rare?U.sample(['Hidden patronage network','Unusual local landmark','Story-hook rumor embedded','Rare business license','Secret lower room','Uncommon service known to travelers']):''});
+      }
+      return locations.slice(0,targetCount);
+    }
+    applyMandatoryTransport(categories, config){
+      const out=[...categories];
+      const lc=(config.biome||'').toLowerCase();
+      const must=[];
+      if(!/underwater|ocean surface/.test(lc)) must.push('Train Station','Caravan Station');
+      if(/coastal|beach|river|ocean|reef|water|maritime/.test(lc)) must.push('Ferry Terminal');
+      if(/underwater/.test(lc)) must.push('Submarine Terminal');
+      if(['City','Capital City'].includes(config.settlementType)) must.push(/underwater/.test(lc)?'Submarine Terminal':'Skyship Port');
+      if(config.settlementType==='Capital City') must.push('Portal Facility');
+      const transportNeeded = must.length;
+      for(let i=0;i<transportNeeded && i<out.length;i++) out[i]='Transportation';
+      config._mandatoryTransport = must;
+      return out;
+    }
+    makeAnchors(){ return Array.from({length:10},(_,i)=>({id:`anchor_${i+1}`, x:Number(U.rand(-1.5,1.5).toFixed(2)), y:Number(U.rand(-1.5,1.5).toFixed(2)), draggable:true})); }
+    locationNamePool(config){
+      const all=this.catalog.settlementTypes||[];
+      const matches=all.filter(t=>t.size===config.settlementType && ((t.terrain||'')===config.biome || (t.variant||'')===config.biome));
+      return (matches.length?matches:all.filter(t=>t.size===config.settlementType)).flatMap(t=>t.locations||[]);
+    }
+    makeLocationName(config, meta, pool, i, rare){
+      const fromPool = U.sample(pool?.filter(n=>this.guessCategory(n)===meta.category || String(n).toLowerCase().includes(meta.subcategory.toLowerCase().split(' ')[0])) || []);
+      if(fromPool && U.chance(.62)) return rare ? `Hidden ${fromPool}` : fromPool;
+      const prefix=U.sample(['Bronze','Cyan','Ledger','Mist','River','Clockwork','Gilded','Wyrm','Moonlit','Ash','Root','Storm','Deep','Velvet','Hearth','Iron','Rook','Sable','Amber','Silver']);
+      const suffix=U.sample(['Hall','House','Yard','Row','Gate','Court','Works','Exchange','Rest','Spire','Wharf','Market','Ward','Garden','Vault','Forge','Harbor','Office']);
+      return `${rare?'Secret ':''}${prefix} ${meta.subcategory} ${suffix}`.replace(/\s+/g,' ');
+    }
+    guessCategory(name){ const n=String(name).toLowerCase(); for(const cat of Object.keys(this.catalog.masterCategories||{})){ if((this.catalog.masterCategories[cat]||[]).some(k=>n.includes(k))) return this.mapMasterCategory(cat); } return 'Special / Quest / Intrigue'; }
+    mapMasterCategory(cat){ if(/Food|Hospitality/.test(cat)) return 'Hospitality'; if(/Civic|Legal/.test(cat)) return 'Government & Civic'; if(/Transit|Transport/.test(cat)) return 'Transportation'; if(/Learning/.test(cat)) return 'Education'; if(/Danger/.test(cat)) return 'Criminal & Underground'; if(/Community/.test(cat)) return 'Residential'; return cat; }
+    servicesFor(meta, config){
+      const items=(this.catalog.serviceItems||[]).filter(s => String(s.place||'').toLowerCase().includes(meta.subcategory.toLowerCase().split(' ')[0]) || String(s.section||'').toLowerCase().includes(meta.category.toLowerCase().split(' ')[0]));
+      const picks=U.sampleMany(items, 4);
+      const fallback={Commercial:['common supplies','trade goods','local tools','household goods'],Hospitality:['meals','rooms','music','gossip'],Medical:['treatment','herbs','tonics','recovery beds'],Religious:['blessings','rites','confession','pilgrim aid'],Transportation:['tickets','route ledgers','freight booking','travel permits'],Education:['lessons','archives','research help','scribe work'],Residential:['rooms','household support','neighborhood news'],Agriculture:['produce','animal care','seed stock','farm tools'],Maritime:['boat hire','dock space','fish trade','rope repair'],Nature:['guided walks','herb gathering','quiet space','wardens'],['Industry & Crafting']:['repairs','custom work','materials','tool rental'],['Government & Civic']:['permits','records','hearings','security'],['Noble & Elite']:['patronage','estate audience','luxury services','formal events'],['Criminal & Underground']:['rumors','illicit goods','quiet introductions','debt records'],['Special / Quest / Intrigue']:['quest leads','rare access','secret notes','unique services']};
+      const itemList=picks.length?picks.map(p=>p.item):fallback[meta.category]||['local service'];
+      return {items:itemList, services:(fallback[meta.category]||['local service']).slice(0,4), prices:picks.length?picks.map(p=>`${p.item}: ${p.price||'varies'}`):['standard local rates','bulk or guild rates may vary'], availability:U.sample(['common','steady','seasonal','rare','appointment only']), sources:U.sampleMany(['local farms','guild suppliers','river caravans','rail freight','skyship cargo','temple donations','estate stores','black-market salvage','coastal trade'],3)};
+    }
+    locationDescription(meta, config, rare){
+      const base=`A ${meta.subcategory.toLowerCase()} in ${config.settlementName}, ${config.province}, shaped by ${config.biome} conditions and ${config.governmentType||'local civic'} rules.`;
+      const living='NPC employees, visitors, schedules, prices, relationships, and hidden notes appear only in the detail panels, not on map labels.';
+      return rare ? `${base} It carries a rare 5% variation: ${U.sample(['an unusual service','a hidden room','a plot hook','a secret sponsor','a landmark reputation'])}. ${living}` : `${base} ${living}`;
+    }
+    peakHours(meta){ if(meta.category==='Hospitality') return '18:00-23:00'; if(meta.category==='Commercial') return '10:00-16:00'; if(meta.category==='Transportation') return '05:30-21:30'; if(meta.category==='Religious') return 'dawn, noon, dusk'; return U.sample(['08:00-12:00','09:00-17:00','market days','seasonal','variable']); }
+    operatingHours(meta){ if(['Criminal & Underground','Special / Quest / Intrigue'].includes(meta.category)) return 'hidden / by contact'; if(meta.category==='Hospitality') return '06:00-01:00'; if(meta.category==='Transportation') return '04:30-23:30'; return '08:00-18:00'; }
+    transportConnections(meta, config){ const out=[]; if(meta.category==='Transportation') out.push(meta.subcategory); if(config._mandatoryTransport) out.push(...config._mandatoryTransport); return Array.from(new Set(out)).slice(0,6); }
+    generateNPCs(config, count, locations){
+      const npcs=[]; const residences=locations.filter(l=>l.category==='Residential' || l.subcategory.includes('Residence') || l.subcategory.includes('Housing')); const workplaces=locations.filter(l=>!['Residential'].includes(l.category));
+      for(let i=0;i<count;i++){
+        const race=this.pickRace(config, i);
+        const residence=U.sample(residences)||U.sample(locations);
+        const employment=U.sample(workplaces)||U.sample(locations);
+        const gender=U.sample(this.genderIdentities);
+        const pronouns=this.pronounsFor(gender);
+        const rare=config.includeFivePercent && U.chance(.05);
+        const traits=U.sampleMany(this.traits, rare?4:3);
+        if(rare) traits.push(U.sample(['rare hobby','secret relationship','unusual travel pattern','cross-province contact','atypical housing','notable rumor']));
+        const socialRole=this.socialRoleFor(employment);
+        const alignment=this.makeAlignmentProfile(race, employment, socialRole, config.alignmentPreference);
+        const travelPlan=this.makeTravelPlan(config, rare, employment);
+        const id=U.uid('npc');
+        const npc={id, name:this.makeName(race), race:race.label||race.sourceLabel||'Human', raceCategory:race.category, creatorGod:race.creator, genderIdentity:gender, pronouns, alignment, traits, personality:this.personality(traits), hobbies:U.sampleMany(this.hobbies, rare?3:2), residence:residence?.name||'', residenceId:residence?.id||'', employment:employment?.name||'', employmentId:employment?.id||'', socialRole, relationships:[], rumors:this.makeRumors(config, rare), schedule:this.makeSchedule(employment, residence, travelPlan, rare), notes:race.dmHook || race.description || '', settlement:config.settlementName, province:config.province, currentLocation:employment?.name||config.settlementName, icon:{shape:'circle', color:this.iconColor(alignment), x:Number(U.rand(4,96).toFixed(2)), y:Number(U.rand(4,96).toFixed(2)), moving:Boolean(travelPlan?.active)}, travelPlan, travelHistory:[]};
+        npcs.push(npc);
+      }
+      return npcs;
+    }
+    pickRace(config, index=0){
+      const category=this.raceCategories.find(c=>c.value===config.raceCategory || c.label===config.raceCategory) || U.sample(this.raceCategories);
+      if(config.raceMode==='race') return this.allRaces.find(r=>r.value===config.racePick || r.label===config.racePick) || U.sample(this.allRaces);
+      if(config.raceMode==='allInCategory') return (category.races||[])[index % (category.races||[]).length] || U.sample(this.allRaces);
+      if(config.raceMode==='category') return U.sample(category.races||[]) || U.sample(this.allRaces);
+      const biome=(config.biome||'').toLowerCase();
+      const weighted=this.allRaces.map(r=>{ let weight=8; const h=(r.habitatLabels||[]).join(' ').toLowerCase(); if(h && biome && (h.includes(biome.split(' ')[0]) || biome.split(/\s|&/).some(b=>b.length>4 && h.includes(b)))) weight+=12; if(/urban|civic|mixed/.test(h)) weight+=5; return {item:r, weight}; });
+      return U.weightedPick(weighted) || U.sample(this.allRaces);
+    }
+    makeName(race){ const first=U.sample(this.nameFirst)+U.sample(this.nameMid)+U.sample(['','n','r','th','s']); const last=U.sample(this.nameFirst)+U.sample(this.nameLast); return `${first} ${last}`; }
+    pronounsFor(g){ if(/female/i.test(g)) return 'she/her'; if(/male/i.test(g)) return 'he/him'; if(/fluid|flexible|non|Apagender|gender|a-gender|less/i.test(g)) return 'they/them'; return U.sample(['they/them','she/her','he/him']); }
+    socialRoleFor(work){ const c=work?.category||''; if(c==='Government & Civic') return U.sample(['clerk','peacekeeper','magistrate aide','records keeper','political whisperer']); if(c==='Transportation') return U.sample(['rail worker','skyship worker','caravan worker','ferry worker','route dispatcher','freight handler']); if(c==='Religious') return U.sample(['acolyte','priest','pilgrim guide','temple steward']); if(c==='Commercial') return U.sample(['merchant','shopkeeper','bookkeeper','supplier']); if(c==='Criminal & Underground') return U.sample(['informant','smuggler','debt runner','lookout']); return U.sample(['resident','artisan','helper','visitor liaison','guild associate','scholar','guard','host']); }
+    makeAlignmentProfile(race, work, socialRole, preference){
+      const axes={altruism:1500, lawfulness:1500, cooperation:1500, honor:1500};
+      const reading=race.axisReading||''; for(const k of Object.keys(axes)){ const m=reading.match(new RegExp(k+':\\s*(\\d+)', 'i')); if(m) axes[k]=Number(m[1]); }
+      for(const k of Object.keys(axes)){ axes[k]=this.clampAxis(axes[k] + U.int(-350,350)); }
+      const w=(work?.name||'').toLowerCase();
+      const nudge=(changes)=>Object.entries(changes).forEach(([k,v])=>axes[k]=this.clampAxis(axes[k]+v));
+      if(/guard|peacekeeper|court|jail|prison|customs|ministry|bureau|authority|office|registry|permit|tax|palace|council/.test(w)) nudge({lawfulness:180,cooperation:90,honor:60});
+      if(/temple|shrine|cathedral|monastery|chapel|worship|pilgrim/.test(w)) nudge({altruism:160,honor:160,cooperation:70});
+      if(/hospital|clinic|healer|apothecary|orphan|soup|poorhouse|refugee|school/.test(w)) nudge({altruism:170,cooperation:90,honor:50});
+      if(/guild|union|market|restaurant|inn|hotel|hostel|tavern|caravan|dock|harbor|rail|skyship|ferry|portal/.test(w)) nudge({cooperation:120,lawfulness:40});
+      if(/smuggler|pirate|black market|lawless|underground|vice|salvage/.test(w)) nudge({lawfulness:-230,honor:-120,cooperation:-40});
+      if(preference && preference!=='Any') this.applyAlignmentPreference(axes, preference);
+      const details={}; for(const [key,score] of Object.entries(axes)){ details[key]={score, phase:this.alignmentPhase(score), descriptor:this.alignmentDescriptor(key,score)}; }
+      const summary=Object.entries(details).sort((a,b)=>Math.abs(b[1].score-1500)-Math.abs(a[1].score-1500)).slice(0,2).map(([,v])=>v.descriptor).join(' / ');
+      return {system:'Life Simulator Four-Axis Alignment Profile', scale:'0-3000 with 1500 as neutral center', summary: summary || 'balanced neutral', axes:details};
+    }
+    applyAlignmentPreference(axes, pref){ const p=String(pref).toLowerCase(); if(p.includes('lawful')) axes.lawfulness+=180; if(p.includes('chaotic')) axes.lawfulness-=180; if(p.includes('altru')) axes.altruism+=180; if(p.includes('self')) axes.altruism-=140; if(p.includes('cooperative')) axes.cooperation+=180; if(p.includes('individual')) axes.cooperation-=150; if(p.includes('honor')) axes.honor+=160; Object.keys(axes).forEach(k=>axes[k]=this.clampAxis(axes[k])); }
+    clampAxis(v){ return Math.max(0, Math.min(3000, Math.round(v/50)*50)); }
+    alignmentPhase(score){ if(score<1000) return 'Extreme negative'; if(score<1500) return 'Skewed negative'; if(score===1500) return 'Neutral or balanced'; if(score<2000) return 'Skewed positive'; return 'Extreme positive'; }
+    alignmentDescriptor(axis,score){ const meta={altruism:['Self-serving','Altruistic'],lawfulness:['Chaotic','Lawful'],cooperation:['Individualistic','Cooperative'],honor:['Dishonorable','Honorable']}[axis]; if(score===1500)return `balanced ${axis}`; const pos=score<1500?meta[0]:meta[1]; const dist=Math.abs(score-1500); const degree=dist<300?'slightly':dist<650?'moderately':dist<1000?'very':'extremely'; return `${degree} ${pos}`; }
+    iconColor(alignment){ const s=alignment?.axes?.cooperation?.score||1500; if(s>1900)return '#69ffb0'; if(s<1100)return '#ff5a7a'; return '#00ffff'; }
+    personality(traits){ return `Known as ${traits.slice(0,2).join(' and ').toLowerCase()}, with ${U.sample(['a careful public mask','an open-hearted style','a guarded sense of humor','a habit of collecting secrets','a practical approach to danger'])}.`; }
+    makeRumors(config, rare){ const rumors=[`Has ties to ${U.sample(config.deities||this.deities)||'a local shrine'}.`, `Knows a useful route through ${config.settlementName}.`]; if(rare) rumors.push(U.sample(['Secretly supports a cross-settlement alliance.','Maintains a hidden family tie outside the province.','Carries a rumor about a divine prison record.','Has a travel pattern that does not match their job.'])); return rumors; }
+    makeSchedule(work, home, travel, rare){ return {morning:U.sample(['eats with household','checks market notices','visits well or shrine','handles chores','commutes to work']),work:work?`works at ${work.name}`:'odd jobs and errands',evening:U.sample(['shares dinner','socializes at a public venue','studies or crafts','visits friends or partners','attends civic or guild meeting']),night:rare?U.sample(['secret appointment','night shift','quiet travel','hidden research']):'sleeps at residence', commute:travel?.active?`${travel.mode} to ${travel.destination}`:U.sample(['walks locally','short cart ride','rail or ferry when needed'])}; }
+    makeTravelPlan(config, rare, employment){
+      if(!config.includeTravelers && !rare) return {active:false};
+      const active = config.scopeMode!=='settlement' ? U.chance(.35) : U.chance(.08) || rare;
+      if(!active) return {active:false};
+      const dest=this.randomSettlement(config.province);
+      const mode=this.modeForEmployment(employment) || U.sample(['rail','skyship','caravan','ferry','portal','walking route']);
+      return {active:true, reason:U.sample(['work trip','commute','trade','family visit','pilgrimage','education','recreation','vacation','political meeting','seasonal migration']), mode, destination:dest.name, destinationProvince:dest.province, departure:U.sample(['dawn','midday','evening','next market day','Wednesday rest day exception','seasonal window']), returnWindow:U.sample(['same day','2 days','1 week','uncertain','monthly rotation'])};
+    }
+    modeForEmployment(work){ const n=(work?.name||'').toLowerCase(); if(n.includes('rail')||n.includes('train')) return 'rail'; if(n.includes('skyship')) return 'skyship'; if(n.includes('caravan')) return 'caravan'; if(n.includes('ferry')) return 'ferry'; if(n.includes('portal')) return 'portal'; if(n.includes('submarine')) return 'submarine'; return null; }
+    randomSettlement(preferProvince){ const provinceRow=U.chance(.55)&&preferProvince ? this.assignments.find(p=>p.province===preferProvince) : U.sample(this.assignments); const s=U.sample(this.settlementsForProvince(provinceRow?.province)); return {province:provinceRow?.province, name:s?.name||'Unknown Settlement', type:s?.type||'Village'}; }
+    generateRelationships(config, npcs, locations){
+      const rel=[]; const byHome=new Map(); npcs.forEach(n=>{ const k=n.residenceId||'unhoused'; if(!byHome.has(k))byHome.set(k,[]); byHome.get(k).push(n); });
+      for(const group of byHome.values()){
+        for(let i=0;i<group.length-1;i++){ if(U.chance(.55)){ rel.push(this.makeRelationship(group[i], group[i+1], U.sample(this.relationshipKinds.familial), 'household')); } }
+      }
+      for(let i=0;i<Math.min(npcs.length*1.8, npcs.length+400);i++){
+        const a=U.sample(npcs), b=U.sample(npcs); if(!a||!b||a.id===b.id) continue;
+        const layer=U.weightedPick([{item:'professional',weight:38},{item:'personal',weight:42},{item:'romantic',weight:10},{item:'familial',weight:10}]);
+        const label=U.sample(this.relationshipKinds[layer]);
+        rel.push(this.makeRelationship(a,b,label,layer));
+      }
+      if(config.includeFivePercent){
+        for(let i=0;i<Math.max(1,Math.round(npcs.length*.05));i++){ const a=U.sample(npcs), b=U.sample(npcs); if(a&&b&&a.id!==b.id) rel.push(this.makeRelationship(a,b,U.sample(['Secret alliance','Former rivalry','Hidden family tie','Long-distance relationship','Multi-settlement social connection']),'5% rare relationship')); }
+      }
+      const byId=Object.fromEntries(npcs.map(n=>[n.id,n]));
+      rel.forEach(r=>{ const a=byId[r.fromId], b=byId[r.toId]; if(a) a.relationships.push({npcId:r.toId,name:r.toName,label:r.label,layer:r.layer}); if(b) b.relationships.push({npcId:r.fromId,name:r.fromName,label:r.reciprocalLabel,layer:r.layer}); });
+      return rel;
+    }
+    makeRelationship(a,b,label,layer){ return {id:U.uid('rel'), fromId:a.id, fromName:a.name, toId:b.id, toName:b.name, label, reciprocalLabel:this.reciprocal(label), layer, settlements:Array.from(new Set([a.settlement,b.settlement])), notes:U.sample(['stable','recently strained','publicly known','private','professionally useful','rumor-prone'])}; }
+    reciprocal(label){ const pairs={'Parent':'Child','Child':'Parent','Employer':'Employee','Employee':'Employer','Supervisor':'Subordinate','Subordinate':'Supervisor','Teacher':'Student','Student':'Teacher','Mentor':'Apprentice','Apprentice':'Mentor','Debtor':'Creditor','Creditor':'Debtor','Guardian':'Ward','Ward':'Guardian'}; return pairs[label]||label; }
+    generateTravel(config, npcs, scope){
+      return npcs.filter(n=>n.travelPlan?.active).map(n=>({id:U.uid('travel'), npcId:n.id, npcName:n.name, origin:n.settlement, originProvince:n.province, destination:n.travelPlan.destination, destinationProvince:n.travelPlan.destinationProvince, mode:n.travelPlan.mode, reason:n.travelPlan.reason, departure:n.travelPlan.departure, returnWindow:n.travelPlan.returnWindow, icon:n.icon, visibleOnWorldMap:scope!=='settlement'}));
+    }
+    assignLocationPeople(locations,npcs){
+      const byId=Object.fromEntries(locations.map(l=>[l.id,l]));
+      npcs.forEach(n=>{ const w=byId[n.employmentId]; if(w && w.employees.length<24) w.employees.push({id:n.id,name:n.name,role:n.socialRole}); const h=byId[n.residenceId]; if(h && h.currentOccupants.length<18) h.currentOccupants.push({id:n.id,name:n.name}); if(U.chance(.18)){ const v=U.sample(locations); if(v && v.visitors.length<18) v.visitors.push({id:n.id,name:n.name,reason:U.sample(['shopping','work errand','social visit','worship','study','travel transfer'])}); }});
+    }
+    generateGeoJSON(locations, config){
+      return {type:'FeatureCollection', name: U.normalizeFileName(config.settlementName||config.province||'Life Simulator','geojson','').replace(/\.$/,''), features: locations.map(l=>({type:'Feature', id:l.id, properties:{id:l.id,name:l.name,category:l.category,subcategory:l.subcategory,settlement:l.settlement,province:l.province,overlayColor:l.overlayColor,hex:l.hex,opacity:this.rules.overlayRendering.default.opacity,border:this.rules.overlayRendering.default.border,pinRadiusPx:2,hiddenMapData:true,locationRecordId:l.id}, geometry:{type:'Point', coordinates:[l.geojsonPin.x,l.geojsonPin.y]}}))};
+    }
+    rerollLocation(location, part='entire'){ const clone=U.clone(location); if(part==='name'||part==='entire') clone.name=this.makeLocationName({settlementName:clone.settlement, province:clone.province, biome:clone.biome, settlementType:clone.settlementType}, clone, [], 0, false); if(part==='description'||part==='entire') clone.description=this.locationDescription(clone,{settlementName:clone.settlement,province:clone.province,biome:clone.biome,governmentType:clone.governmentType}, false); if(part==='inventory'||part==='services'||part==='entire'){ const services=this.servicesFor(clone,{biome:clone.biome}); clone.servicesOffered=services.services; clone.itemsSold=services.items; clone.prices=services.prices; } clone.notes=[clone.notes,'Rerolled '+part+' on '+new Date().toLocaleString()].filter(Boolean).join('\n'); return clone; }
+    rerollNPC(npc, part='entire'){ const clone=U.clone(npc); if(part==='name'||part==='entire') clone.name=this.makeName({}); if(part==='traits'||part==='entire') clone.traits=U.sampleMany(this.traits,3); if(part==='personality'||part==='entire') clone.personality=this.personality(clone.traits||[]); if(part==='rumors'||part==='entire') clone.rumors=this.makeRumors({settlementName:clone.settlement,deities:this.deities}, U.chance(.05)); if(part==='schedule'||part==='entire') clone.schedule=this.makeSchedule({name:clone.employment},{name:clone.residence},clone.travelPlan,false); clone.notes=[clone.notes,'Rerolled '+part+' on '+new Date().toLocaleString()].filter(Boolean).join('\n'); return clone; }
+  }
+  window.Life SimulatorLifeGeneratorCore = LifeGeneratorCore;
+})();

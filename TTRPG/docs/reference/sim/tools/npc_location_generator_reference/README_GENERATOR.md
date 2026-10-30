@@ -1,0 +1,11 @@
+# the source world NPC & Location Generator Open `source_world_npc_location_generator.html` in the browser, or publish the folder to GitHub Pages. ## Main additions - Single-settlement, province, and world-scope generation controls.
+- Location generation modes: Generate Settlement, Generate Category, Generate Single Location, Generate Missing Locations Only, and Expand Existing Settlement.
+- Editable location and NPC tables. Select a row, choose a reroll field, and reroll only that selected record.
+- 5% variance layer for unusual locations, rare services, secrets, travel patterns, relationship twists, and irregular schedules.
+- Drag-and-drop import for JSON, GeoJSON, HTML, DOCX, PDF, SVG, and map images.
+- Text scanning/autofill for settlement tags, danger level, visitor alignment preference, deities, races, biome, settlement type, population, area, and time zone.
+- Blank imported GeoJSON pins can be autofilled from generated location records while preserving original geometry.
+- ZIP export writes settlement HTML, JSON, GeoJSON, DOCX summaries, NPC data, location data, relationship data, schedule data, embedded CSS, embedded JavaScript, and imported context. ## File naming Exported settlement HTML follows: `SettlementName_ProvinceName.html` The generator removes apostrophes, smart apostrophes, hyphens, accents, and uses only the first word of a multi-word settlement name. ## Notes The original uploaded `generator` files are preserved in this package. The new consolidated generator files are: - `source_world_npc_location_generator.html`
+- `generator/source_world-npc-location-generator.css`
+- `generator/source_world-npc-location-generator.js`
+- `generator/source_world-generator-extra-data.js` The app uses no external CDN dependency; ZIP and DOCX export are implemented in browser JavaScript.

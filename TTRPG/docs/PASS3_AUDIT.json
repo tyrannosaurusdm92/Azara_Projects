@@ -1,0 +1,58 @@
+{
+  "audit": "Belavadós Template Pass 3 - static file integrity and source parity",
+  "sourceArchive": "Belavados_Integrated_Settlement_Template_Pass2(1).zip",
+  "sourceTemplate": "settlement_generator(1).html",
+  "sourceBackgroundUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f16e2ef7-0b7b-419b-b057-1bd19a2289f5/d1io0wc-c5165550-8c01-487f-8651-146e1e14e111.jpg/v1/fill/w_1024%2Ch_640%2Cq_75%2Cstrp/steampunk_wallpaper_by_spaceturtlestudios_d1io0wc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQwIiwicGF0aCI6Ii9mL2YxNmUyZWY3LTBiN2ItNDE5Yi1iMDU3LTFiZDE5YTIyODlmNS9kMWlvMHdjLWM1MTY1NTUwLThjMDEtNDg3Zi04NjUxLTE0NmUxZTE0ZTExMS5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3SzTUeHWwjxvKxwZmrrWKMa3oiY0fxLBQ_yo0Zr-V-g",
+  "counts": {
+    "files": 673,
+    "provinces": 28,
+    "settlements": 163,
+    "npcs": 2909,
+    "raceSpecies": 16,
+    "mixedHeritages": 6,
+    "preservedDataAssetFiles": 505,
+    "scripts": 10,
+    "cssFiles": 7
+  },
+  "checks": {
+    "htmlOnlyIndex": true,
+    "folderStructure": true,
+    "originalBackgroundExactInActiveCss": true,
+    "originalBackgroundExactInSourceCss": true,
+    "originalBackgroundExactInManifest": true,
+    "originalBackgroundExactInAppLink": true,
+    "directBodyBackgroundRendering": true,
+    "navStillFixed": true,
+    "allLocalJsCssPathsPresent": true,
+    "duplicateHtmlIds": true,
+    "canonicalDataFilesUnchanged": true,
+    "approvedRaceRosterOnly": true,
+    "provinceCount28": true,
+    "settlementCount163": true,
+    "npcCount2909": true,
+    "allSettlementsWithNpcs": true,
+    "templateControlsPresent": true,
+    "provinceOnlyMasterNav": true,
+    "javascriptSyntaxActiveFiles": true
+  },
+  "failures": [],
+  "errors": {
+    "duplicateDomIds": [],
+    "missingPaths": [],
+    "changedProtectedFiles": [],
+    "unapprovedNpcRaces": [],
+    "jsSyntaxErrorsInActiveFiles": []
+  },
+  "limitations": [
+    "The CSS-only browser test passed; full JavaScript-driven browser smoke test did not complete in the current runtime, so interaction success is not claimed.",
+    "The remote steampunk wallpaper URL is exactly preserved, but offline checks cannot guarantee the remote signed link still serves an image.",
+    "HTML map uploads are previewed in a sandboxed iframe; they are not persisted across page reloads.",
+    "Original source HTML contained a legacy race list. The original script was not loaded, preserving the already approved species/heritage roster."
+  ],
+  "browserCssCheck": {
+    "computedBodyBackgroundUsesSourceImageUrl": true,
+    "masterNavigationComputedPosition": "fixed",
+    "desktopPageHorizontalOverflowPx": 0,
+    "testType": "styles-only screenshot with Chromium and all local CSS loaded; no script hydration"
+  }
+}

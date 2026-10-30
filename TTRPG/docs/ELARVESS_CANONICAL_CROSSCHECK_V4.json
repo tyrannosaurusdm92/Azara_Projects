@@ -1,0 +1,42 @@
+{
+  "schema": "belavados.elarvess.canonical-renaming-crossreference.v4",
+  "date": "2026-10-29",
+  "canonicalNpcCount": 2016,
+  "uniqueFullNames": 2016,
+  "renamedBuildingCount": 1312,
+  "buildingCount": 1312,
+  "uniqueCanonicalLocationNames": 1312,
+  "uniqueAddresses": 1312,
+  "originalAliasFieldsRemaining": 0,
+  "totalRelationshipLinks": 19050,
+  "scheduledActivityBlocks": 94613,
+  "sixDayNpcSchedules": 12096,
+  "sourceLocationAnchorsRekeyedByCanonicalName": 18,
+  "geojsonBuildingFeatures": 1312,
+  "geojsonAllFeatures": 5561,
+  "sourceBuildingFootprintPathsUnchanged": true,
+  "sourceMapPNGUnchanged": true,
+  "checks": {
+    "NPC names unique": true,
+    "Building names unique": true,
+    "Exact-map geometry preserved": true,
+    "Source NPCs crosslinked": true
+  },
+  "originalAndUpdatedAssetSha256": {
+    "assets/maps/elarvess.png": {
+      "before": "09f6b02eafca9489e269e9eddf25d7b99083e598ffde19f648da8d6c5d9c35e1",
+      "after": "09f6b02eafca9489e269e9eddf25d7b99083e598ffde19f648da8d6c5d9c35e1"
+    },
+    "assets/maps/elarvess.geojson": {
+      "before": "7eee45972e613b21097d0df1fa6a77d741f7230b8f6c11648d6446ec2a19156e",
+      "after": "3cb7d356d87f4e3eb95e7f3b985fadae4077c533a8624c0943e69df7fefe959c"
+    },
+    "js/elarvess_buildings.js": {
+      "before": "31cd6068773c49c341266a11cb0b8eb9f31359edb540a9affe6a78e06b282a71",
+      "after": "65c1dade8aa4d4cb0b855b17447f56f28ea9d8ded5d3d14a308b575faf31f834"
+    }
+  },
+  "violations": [],
+  "violationCount": 0,
+  "notes": "Only display-property names changed in GeoJSON, SVG building path JS; original geometry, path d and image remain fixed. No alias or originalMapName fields remain."
+}

@@ -1,0 +1,5 @@
+# Companion map asset catalogues — merged under `map_assets/` This folder contains the merged Companion map asset catalogue set. ## What changed - All catalogue JSON files are now inside one `map_assets/` folder.
+- A single all-assets merged catalogue was added: - `map_assets/map_assets_catalog_merged.catalog.json` - duplicate convenience alias: `map_assets/map_asset_map_assets_merged.catalog.json`
+- The per-source `.catalog.json` files are still included for backward compatibility.
+- `map_assets_catalog.json`, `map_assets_catalog_manifest.json`, and `map_assets_catalog_index.json` were rebuilt to point at the merged catalogue and all per-source catalogues. ## Counts - Source catalogues: 18
+- Unique assets: 2798 ## Image location The JSON entries point to your local unzipped asset root: `C:\Users\Public\Pictures\map_assets` The images are not embedded in this ZIP. ## Install Copy/drag this `map_assets/` folder into your `CompanionImagePackager` folder, replacing the older catalogue files when asked.

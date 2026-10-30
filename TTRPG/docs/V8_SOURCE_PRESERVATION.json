@@ -1,0 +1,19 @@
+{
+  "v7FileCount": 741,
+  "missingFromV7": [],
+  "modifiedV7Files": [
+    "docs/README.md",
+    "index.html",
+    "js/template_dashboard.js",
+    "js/world_app.js"
+  ],
+  "allowedModifiedFiles": [
+    "index.html",
+    "js/world_app.js",
+    "js/template_dashboard.js",
+    "docs/README.md"
+  ],
+  "unexpectedChanges": [],
+  "elarvessOriginalAssetsByteIdentical": true,
+  "allOriginalFilesPresent": true
+}

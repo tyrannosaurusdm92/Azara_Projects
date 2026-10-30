@@ -1,0 +1,47 @@
+{
+  "pass": "settlement_generator template-based integration",
+  "date": "2026-10-29",
+  "source_html": "settlement_generator.html",
+  "layout_used": [
+    "profile-topbar",
+    "three-column myspace-grid",
+    "window and window-header",
+    "map viewer",
+    "province window",
+    "generator controls",
+    "scale",
+    "clocks",
+    "alignment",
+    "location and NPC browsers",
+    "generated lists",
+    "import window",
+    "export and preview windows"
+  ],
+  "source_canon": {
+    "provinceCount": 28,
+    "namedSettlementCount": 163,
+    "prebuiltNpcCount": 2909,
+    "immersiveTemplateCount": 52,
+    "speciesCount": 16,
+    "mixedHeritageCount": 6
+  },
+  "browser_checks": {
+    "noExceptions": true,
+    "provinceNavButtons": 28,
+    "namedSettlementDropdownWorks": true,
+    "npcBrowserWorks": true,
+    "locationBrowserWorks": true,
+    "relationshipsFourTypes": true,
+    "scheduleRowsRender": true,
+    "sourceImmersiveTablesRender": true,
+    "originalSimulatorAvailable": true,
+    "residentImportWorks": true,
+    "emptyProvinceStateWorks": true
+  },
+  "behavior": "Original immutable NPCs and locations bound on load; generation not triggered automatically",
+  "limits": [
+    "Legacy unapproved-race generator engine from provided HTML deliberately not loaded",
+    "Reference HTML converted to JSON remains reference-only",
+    "Browser localStorage disabled under isolated browser set_content test; live site capability not assumed from preview"
+  ]
+}

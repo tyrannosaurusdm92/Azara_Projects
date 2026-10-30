@@ -1,0 +1,27 @@
+{
+  "schema": "belavados.V8.audit",
+  "base": "Belavados_V7.zip",
+  "townGeneratorSource": "TownGeneratorOS-master(1).zip",
+  "totalNamedSettlements": 163,
+  "newProceduralMaps": 162,
+  "untouchedElarvess": {
+    "buildings": 1312,
+    "npcs": 2016,
+    "map": "assets/maps/elarvess.png, unchanged"
+  },
+  "totals": {
+    "buildings": 99117,
+    "newNpcCount": 29081,
+    "originalNpcCount": 2894,
+    "goods": 41958,
+    "sourcePlaces": 57614,
+    "npcCount": 31975,
+    "schedules": 1338456
+  },
+  "distinctGeometryFingerprints": 162,
+  "legacyNpcSourceCount": 2909,
+  "otherHTMLFiles": 0,
+  "wallpaperUrlInActiveCSS": true,
+  "errors": [],
+  "errorCount": 0
+}

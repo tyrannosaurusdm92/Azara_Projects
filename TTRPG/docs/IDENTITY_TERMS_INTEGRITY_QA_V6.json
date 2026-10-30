@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "originalInputZip": "Belavados_Elarvess_Azara_Races_Pantheon_14_Genders_Canonical(1).zip",
+  "generatorMode": "integrated / internal dice only",
+  "identityCount": 14,
+  "identities": {
+    "Agender": 137,
+    "Apagender": 155,
+    "Bigender": 130,
+    "Cis-Female": 145,
+    "Cis-Male": 143,
+    "Demi-Female": 160,
+    "Demi-Male": 144,
+    "Gender-Flexible": 154,
+    "Genderfluid": 117,
+    "Genderless": 132,
+    "Nonbinary": 156,
+    "Poly-Gender": 140,
+    "Trans-Female": 143,
+    "Trans-Male": 160
+  },
+  "pronounCatalogueCount": 232,
+  "neopronounCount": 206,
+  "distinctFiveFormPronounsUsedInElarvess": 227,
+  "npcCountElarvess": 2016,
+  "npcCountOtherSettlements": 2909,
+  "canonicalElarvessNamesUnique": true,
+  "preservedOriginal15RecordsSynced": 15,
+  "buildingCount": 1312,
+  "geometrySha256Unchanged": {
+    "js/elarvess_buildings.js": "65c1dade8aa4d4cb0b855b17447f56f28ea9d8ded5d3d14a308b575faf31f834",
+    "assets/maps/elarvess.png": "09f6b02eafca9489e269e9eddf25d7b99083e598ffde19f648da8d6c5d9c35e1",
+    "assets/maps/elarvess.geojson": "3cb7d356d87f4e3eb95e7f3b985fadae4077c533a8624c0943e69df7fefe959c"
+  },
+  "unchangedNpcFieldsChecked": [
+    "id",
+    "name",
+    "age",
+    "race",
+    "home",
+    "job",
+    "homeBuildingId",
+    "workBuildingId",
+    "weeklySchedule",
+    "relationships",
+    "regularVisits",
+    "workDays",
+    "sourceSchedule",
+    "deityAffiliations"
+  ],
+  "cisFixedPronouns": {
+    "Cis-Male": "he/him",
+    "Cis-Female": "she/her"
+  },
+  "exactHalfOverrides": {
+    "Demi-Male": {
+      "total": 144,
+      "exactHalfOverrides": 72
+    },
+    "Trans-Male": {
+      "total": 160,
+      "exactHalfOverrides": 80
+    },
+    "Demi-Female": {
+      "total": 160,
+      "exactHalfOverrides": 80
+    },
+    "Trans-Female": {
+      "total": 143,
+      "exactHalfOverrides": 71
+    }
+  },
+  "romanticEndearmentsOffByDefault": true,
+  "existingFilesPreserved": true,
+  "newFiles": [
+    "docs/IDENTITY_PRONOUN_TERMS_V6.md",
+    "docs/IDENTITY_TERMS_TESTS.js",
+    "docs/IDENTITY_TERMS_UPGRADE_AUDIT.json",
+    "js/identity/dice.js",
+    "js/identity/identity-engine.js",
+    "js/identity/pronouns-data.js",
+    "js/identity/settings.js",
+    "js/identity/term-lexicon.js",
+    "js/identity/terms.js",
+    "json/identity/default-settings.json",
+    "json/identity/pronouns.json",
+    "json/identity/term-lexicon.json"
+  ],
+  "browserTest": "unavailable: chromium navigation blocked by administrator (file and local HTTP); Node VM/regression and JS syntax checks passed",
+  "nodeCommand": "node docs/IDENTITY_TERMS_TESTS.js"
+}

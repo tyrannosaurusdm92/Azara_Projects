@@ -1,0 +1,1 @@
+# Unity Adapter Copy `Assets/the source worldLivingWorld` into your Unity project. Put the generated JSON into `StreamingAssets` or `Application.persistentDataPath`, then attach `the source worldWorldLoader` to a scene object.

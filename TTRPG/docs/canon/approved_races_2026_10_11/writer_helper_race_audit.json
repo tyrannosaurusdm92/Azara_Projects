@@ -1,0 +1,142 @@
+{
+  "engine": "WriterHelperReady persona+index local audit",
+  "date": "2026-10-11",
+  "entries": 22,
+  "passed": 22,
+  "flagged": [],
+  "detail": [
+    {
+      "name": "Dril'thar",
+      "ok": true,
+      "issues": [],
+      "words": 181
+    },
+    {
+      "name": "Kaluseban",
+      "ok": true,
+      "issues": [],
+      "words": 162
+    },
+    {
+      "name": "Azrahai",
+      "ok": true,
+      "issues": [],
+      "words": 200
+    },
+    {
+      "name": "Panolima",
+      "ok": true,
+      "issues": [],
+      "words": 140
+    },
+    {
+      "name": "Jaspey",
+      "ok": true,
+      "issues": [],
+      "words": 71
+    },
+    {
+      "name": "Deorbasun",
+      "ok": true,
+      "issues": [],
+      "words": 79
+    },
+    {
+      "name": "Gandirosha",
+      "ok": true,
+      "issues": [],
+      "words": 54
+    },
+    {
+      "name": "Gwynis",
+      "ok": true,
+      "issues": [],
+      "words": 48
+    },
+    {
+      "name": "Geisamahi",
+      "ok": true,
+      "issues": [],
+      "words": 45
+    },
+    {
+      "name": "Tamhiogal",
+      "ok": true,
+      "issues": [],
+      "words": 56
+    },
+    {
+      "name": "Aburata",
+      "ok": true,
+      "issues": [],
+      "words": 56
+    },
+    {
+      "name": "Volsarii",
+      "ok": true,
+      "issues": [],
+      "words": 51
+    },
+    {
+      "name": "Zirramunis",
+      "ok": true,
+      "issues": [],
+      "words": 51
+    },
+    {
+      "name": "Garuraqets",
+      "ok": true,
+      "issues": [],
+      "words": 85
+    },
+    {
+      "name": "Iamhazira",
+      "ok": true,
+      "issues": [],
+      "words": 60
+    },
+    {
+      "name": "Kalus’aan",
+      "ok": true,
+      "issues": [],
+      "words": 134
+    },
+    {
+      "name": "Kalusogal",
+      "ok": true,
+      "issues": [],
+      "words": 71
+    },
+    {
+      "name": "Aza’zira",
+      "ok": true,
+      "issues": [],
+      "words": 64
+    },
+    {
+      "name": "Aza’raan",
+      "ok": true,
+      "issues": [],
+      "words": 158
+    },
+    {
+      "name": "Aza’raan with Deorbasun ancestry",
+      "ok": true,
+      "issues": [],
+      "words": 75
+    },
+    {
+      "name": "Aza’raan with Zirramunis ancestry",
+      "ok": true,
+      "issues": [],
+      "words": 70
+    },
+    {
+      "name": "Aza’raan with Gandirosha ancestry",
+      "ok": true,
+      "issues": [],
+      "words": 67
+    }
+  ],
+  "notes": "This is a style and voice diagnostic. All new physical descriptions are author-approved, while character-name coinages remain provisional."
+}

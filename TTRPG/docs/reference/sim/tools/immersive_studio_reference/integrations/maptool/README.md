@@ -1,0 +1,1 @@
+# MapTool Adapter Notes The bundle export creates token property JSON that can be converted into MapTool token properties/macros. The goal is to keep each NPC as a portable token-data object.

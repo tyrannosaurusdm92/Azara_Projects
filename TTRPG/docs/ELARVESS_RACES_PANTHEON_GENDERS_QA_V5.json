@@ -1,0 +1,81 @@
+{
+  "schema": "belavados-final-races-gods-gender-crosscheck-v5",
+  "canonicalInputRaceFolder": "https://drive.google.com/drive/folders/1wD7D7JMGRhab0zs3y6zponLwr6OqDFUg",
+  "canonicalPantheonReference": "User-provided Aza'ra Pantheon - Book Reference.docx",
+  "elarvessNPCs": 2016,
+  "otherSettlementSeedRecords": 2909,
+  "uniqueNPCsAcrossActiveWorldAndElarvess": 4910,
+  "clickableBuildings": 1312,
+  "genderIdentities": 14,
+  "approvedSpecies": 16,
+  "approvedMixedHeritages": 6,
+  "deities": 32,
+  "deitiesByEra": {
+    "Ancient": 27,
+    "Archaic": 27,
+    "Classical": 32,
+    "Traditional": 32,
+    "Modern": 32
+  },
+  "uniqueNPCFullNames": 2016,
+  "raceCoverage": {
+    "Aza’raan": 86,
+    "Dril'thar": 118,
+    "Gwynis": 93,
+    "Iamhazira": 110,
+    "Aza’raan with Gandirosha ancestry": 53,
+    "Gandirosha": 107,
+    "Garuraqets": 109,
+    "Aza’raan with Zirramunis ancestry": 50,
+    "Deorbasun": 103,
+    "Zirramunis": 107,
+    "Aza’raan with Deorbasun ancestry": 60,
+    "Jaspey": 120,
+    "Volsarii": 98,
+    "Aza’zira": 44,
+    "Panolima": 112,
+    "Azrahai": 94,
+    "Geisamahi": 128,
+    "Kaluseban": 98,
+    "Kalusogal": 62,
+    "Kalus’aan": 54,
+    "Aburata": 105,
+    "Tamhiogal": 105
+  },
+  "genderCoverage": {
+    "Demi-Female": 160,
+    "Demi-Male": 144,
+    "Bigender": 130,
+    "Agender": 137,
+    "Nonbinary": 156,
+    "Cis-Male": 143,
+    "Poly-Gender": 140,
+    "Genderfluid": 117,
+    "Trans-Male": 160,
+    "Genderless": 132,
+    "Gender-Flexible": 154,
+    "Trans-Female": 143,
+    "Cis-Female": 145,
+    "Apagender": 155
+  },
+  "relationLinks": 19050,
+  "weeklyScheduledBlocks": 94613,
+  "coordinateAssetsOriginalSHA256": {
+    "assets/maps/elarvess.png": "09f6b02eafca9489e269e9eddf25d7b99083e598ffde19f648da8d6c5d9c35e1",
+    "assets/maps/elarvess.geojson": "3cb7d356d87f4e3eb95e7f3b985fadae4077c533a8624c0943e69df7fefe959c",
+    "js/elarvess_buildings.js": "65c1dade8aa4d4cb0b855b17447f56f28ea9d8ded5d3d14a308b575faf31f834"
+  },
+  "coordinateAssetsFinalSHA256": {
+    "assets/maps/elarvess.png": "09f6b02eafca9489e269e9eddf25d7b99083e598ffde19f648da8d6c5d9c35e1",
+    "assets/maps/elarvess.geojson": "3cb7d356d87f4e3eb95e7f3b985fadae4077c533a8624c0943e69df7fefe959c",
+    "js/elarvess_buildings.js": "65c1dade8aa4d4cb0b855b17447f56f28ea9d8ded5d3d14a308b575faf31f834"
+  },
+  "coordinatesByteForByteUnchanged": true,
+  "invalidReferences": [],
+  "disallowedTermInEditableText": [],
+  "raceDeityInterfaceTest": "PASS: 22 race options, Classical=32, Ancient=27, Modern=32, deity detail, no JS errors",
+  "notes": [
+    "Previously attached original panth. and race sources included as documentary copies under docs/canon.",
+    "Unrelated legacy reference files remain for source provenance, but active generator choices and the two supplemental dropdown registries have been replaced."
+  ]
+}

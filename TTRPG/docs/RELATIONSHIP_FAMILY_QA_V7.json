@@ -1,0 +1,52 @@
+{
+  "schema": "belavados.v7.relationship-consent-audit",
+  "allDistinctNpcs": 4910,
+  "allAdultNpcs": 4366,
+  "allMinorNpcs": 544,
+  "currentPartneredNpcs": 3328,
+  "fractionOfAllNpcsPartnered": 0.6778,
+  "fractionOfAdultsPartnered": 0.7623,
+  "differentSettlementCounts": 163,
+  "settlementsBelow60Percent": 0,
+  "romanticDirectedEdges": 4812,
+  "nonMonogamousNpcs": 1318,
+  "historicalExLinks": 814,
+  "widowedNpcs": 235,
+  "minorNpcsWithMultipleParents": 544,
+  "minorsTotal": 544,
+  "minorNpcsWithThreePlusParents": 170,
+  "halfSiblingLinks": 796,
+  "stepFamilyLinks": 899,
+  "updatedElarvessSocialOrFamilyScheduleSlots": 2310,
+  "mapGeometryModified": false,
+  "newCurrentRomancePairings": 1698,
+  "exTypeCounts": {
+    "ex-fiancé": 137,
+    "ex-spouse": 137,
+    "ex-partner": 133
+  },
+  "issues": [],
+  "legacyParentChildDirectionCorrections": 858,
+  "consensualPolygynyNetworks": 8,
+  "consensualPolyandryNetworks": 15,
+  "fullFamilyAgeCheckViolations": 0,
+  "mapImageAndGeojsonUnchanged": true,
+  "issueCount": 0,
+  "finalValidation": {
+    "issues": [],
+    "originalGeometryByteIdentical": true,
+    "allBuildingsClickablePathsRetained": 1312,
+    "fullNpcsVerified": 4910,
+    "settlementCount": 163,
+    "headlessBrowserTest": "blocked by local-browser administrator restrictions (ERR_BLOCKED_BY_ADMINISTRATOR)",
+    "generatorSyntheticTests": [
+      "12 NPCs: 8 attached; 0 minors",
+      "100 NPCs: 64 attached; 0 minors",
+      "500 NPCs: 320 attached; 0 minors"
+    ]
+  },
+  "package": {
+    "onlyHtmlFile": "index.html",
+    "archivedRaceAtlasHtmlFilesPreservedAsText": 2
+  }
+}

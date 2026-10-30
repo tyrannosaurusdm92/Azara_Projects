@@ -1,0 +1,15 @@
+Merged scanner report
+===================== Base used: fantasy_map_scanner_generator_10_anchor_pin_revision(1).zip
+Merged in: fantasy_map_scanner_generator_location_overlay_editor(1).zip Kept from the 10-anchor pin revision:
+- 10 white draggable anchors per GeoJSON cell/location.
+- Center pointed map pin for each GeoJSON cell.
+- Type-colored pin rules: forest green government, red medical, deep purple worship, plus supporting categories.
+- Move Cell checkbox: when enabled, dragging the pin moves all attached anchors; when disabled, anchors reshape the cell.
+- Zoom range clamped to 25%-300%.
+- Save replacement GeoJSON exports a full replacement-ready FeatureCollection. Kept/restored from the location overlay editor revision:
+- Location/area wording instead of province/DM-map-facing wording in the scanner UI.
+- Names are never drawn on the image itself; they appear in the immersive inspector/location panel.
+- GeoJSON overlays remain a separate SVG layer above the map image and never replace the image.
+- Save selected GeoJSON button for exporting only the currently selected edited location. Notes:
+- Internal variable names such as state.borders are preserved where changing them would risk breaking existing scanner logic, but user-facing labels now refer to areas/locations.
+- Import compatibility remains broad: older JSON that uses border/province keys can still be read as location-area input.

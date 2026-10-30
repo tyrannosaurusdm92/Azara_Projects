@@ -1,0 +1,18 @@
+{
+  "files": 659,
+  "totalUncompressedBytes": 134806888,
+  "rootHtmlCount": 1,
+  "outsideHtmlCount": 0,
+  "nestedArchives": 0,
+  "provinces": 28,
+  "settlements": 163,
+  "npcCount": 2909,
+  "immersiveTemplates": 52,
+  "approvedSpecies": 16,
+  "approvedHeritages": 6,
+  "npcRelationEdges": 17508,
+  "missingRelationships": 0,
+  "nonreciprocalRelationships": 0,
+  "oldSpellingPlainTextMatches": 0,
+  "browserSmokeTest": "passed: 28 provinces, dropdown, residents, relationships, schedules, services, tool import, NPC generation, Valerune empty, no JS errors"
+}
