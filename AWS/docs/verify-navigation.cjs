@@ -85,4 +85,13 @@ const labels=()=>{const found=[];const walk=n=>{if(n.cls.split(' ').includes('aw
 for(const name of ['Root','Orphan','Orphan child','Cycle A','Cycle B'])assert.equal(labels().filter(x=>x===name).length,1,name);
 assert(!labels().includes('Hidden child'));
 search.value='Hidden child';vm.runInContext('nav()',navContext);assert(labels().includes('Root'));assert(labels().includes('Hidden child'));
+// Presentation/creation regression checks. Existing content and source assets must remain intact.
+assert(app.includes("ch.name='Language notes';ch.parentId=canonicalLanguage.id;ch.role='page'"));
+assert(app.includes("There is already one Language section"));
+assert(app.includes("c.deletedAt='';ensureLanguageTools(state)"));
+const html=fs.readFileSync(require.resolve('../index.html'),'utf8');
+assert.equal((html.match(/name="theme-color"/g)||[]).length,1,'one theme color');
+const theme=fs.readFileSync(require.resolve('../style/aws-unified.css'),'utf8');
+for(const selector of ['#aws-glyph-panel','#aws-evolution-panel','#keyboard','.aws-feature-panel'])assert(theme.includes(selector),selector);
+assert(theme.includes('Cohesion pass: one teal/brass vocabulary'));
 console.log('PASS: per-workspace consolidation, six unique tools, content/reference preservation, idempotence, restore, editor capture isolation, render event safety, folded/orphan/cyclic navigation and search.');
