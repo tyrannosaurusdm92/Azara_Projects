@@ -1,0 +1,25 @@
+{
+  "id": "./ttrpg.html",
+  "name": "Belavadós · TTRPG World Forge",
+  "short_name": "Belavadós",
+  "description": "Belavadós TTRPG World Forge with the unified Onyx World Forge + Work widget.",
+  "start_url": "./ttrpg.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07090a",
+  "theme_color": "#0b1722",
+  "icons": [
+    {
+      "src": "assets/images/belavados-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/belavados-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
