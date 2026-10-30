@@ -1,0 +1,3262 @@
+[
+  {
+    "id": "aelvanyr-drakesylva",
+    "province": "Aelvanyr",
+    "settlementName": "Drakesylva",
+    "settlementType": "Capital City",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Forest",
+    "size": "Capital City"
+  },
+  {
+    "id": "aelvanyr-elarvess",
+    "province": "Aelvanyr",
+    "settlementName": "Elarvess",
+    "settlementType": "Town",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "aelvanyr-everwake",
+    "province": "Aelvanyr",
+    "settlementName": "Everwake",
+    "settlementType": "Town",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Surface Docks Coastal",
+    "size": "Town"
+  },
+  {
+    "id": "aelvanyr-faeloryn",
+    "province": "Aelvanyr",
+    "settlementName": "Faeloryn",
+    "settlementType": "Village",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "aelvanyr-lunawyn",
+    "province": "Aelvanyr",
+    "settlementName": "Lunawyn",
+    "settlementType": "Village",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Hill Plateau",
+    "size": "Village"
+  },
+  {
+    "id": "aelvanyr-mythraelyn",
+    "province": "Aelvanyr",
+    "settlementName": "Mythraelyn",
+    "settlementType": "City",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "aelvanyr-rootmere",
+    "province": "Aelvanyr",
+    "settlementName": "Rootmere",
+    "settlementType": "Village",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Forest",
+    "size": "Village"
+  },
+  {
+    "id": "aelvanyr-sylvarielle",
+    "province": "Aelvanyr",
+    "settlementName": "Sylvarielle",
+    "settlementType": "City",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "aelvanyr-vaelithorne",
+    "province": "Aelvanyr",
+    "settlementName": "Vaelithorne",
+    "settlementType": "City",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "aelvanyr-wildbloom",
+    "province": "Aelvanyr",
+    "settlementName": "Wildbloom",
+    "settlementType": "City",
+    "governmentType": "Participatory Democracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-4, UTC-3",
+    "centerLongitude": -56.825,
+    "centerLatitude": -27.314,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "aelwynora-elarithen",
+    "province": "Aelwynora",
+    "settlementName": "Elarithen",
+    "settlementType": "Capital City",
+    "governmentType": "Consensus Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-2, UTC-1",
+    "centerLongitude": -25.982,
+    "centerLatitude": 61.114,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "aelwynora-ulwyn",
+    "province": "Aelwynora",
+    "settlementName": "Ulwyn",
+    "settlementType": "Town",
+    "governmentType": "Consensus Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-2, UTC-1",
+    "centerLongitude": -25.982,
+    "centerLatitude": 61.114,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "aelwynora-wilsara",
+    "province": "Aelwynora",
+    "settlementName": "Wilsara",
+    "settlementType": "Town",
+    "governmentType": "Consensus Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-2, UTC-1",
+    "centerLongitude": -25.982,
+    "centerLatitude": 61.114,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "aelwynora-yltharien",
+    "province": "Aelwynora",
+    "settlementName": "Yltharien",
+    "settlementType": "City",
+    "governmentType": "Consensus Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-2, UTC-1",
+    "centerLongitude": -25.982,
+    "centerLatitude": 61.114,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "astraevos-vaelunthir",
+    "province": "Astraevos",
+    "settlementName": "Vaelunthir",
+    "settlementType": "Capital City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+3, UTC+4",
+    "centerLongitude": 55.171,
+    "centerLatitude": 24.31,
+    "biome": "Hill Plateau",
+    "size": "Capital City"
+  },
+  {
+    "id": "astraevos-mythalora",
+    "province": "Astraevos",
+    "settlementName": "Mythalora",
+    "settlementType": "City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+3, UTC+4",
+    "centerLongitude": 55.171,
+    "centerLatitude": 24.31,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "astraevos-aelshoreth",
+    "province": "Astraevos",
+    "settlementName": "Aelshoreth",
+    "settlementType": "City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+3, UTC+4",
+    "centerLongitude": 55.171,
+    "centerLatitude": 24.31,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "astraevos-cyralune",
+    "province": "Astraevos",
+    "settlementName": "Cyralune",
+    "settlementType": "Village",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+3, UTC+4",
+    "centerLongitude": 55.171,
+    "centerLatitude": 24.31,
+    "biome": "Hill Plateau",
+    "size": "Village"
+  },
+  {
+    "id": "astraevos-orithalune",
+    "province": "Astraevos",
+    "settlementName": "Orithalune",
+    "settlementType": "City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+3, UTC+4",
+    "centerLongitude": 55.171,
+    "centerLatitude": 24.31,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "astraevos-caelmyros",
+    "province": "Astraevos",
+    "settlementName": "Caelmyros",
+    "settlementType": "City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+3, UTC+4",
+    "centerLongitude": 55.171,
+    "centerLatitude": 24.31,
+    "biome": "Hill Plateau",
+    "size": "City"
+  },
+  {
+    "id": "bravelyn-loxvire",
+    "province": "Bravelyn",
+    "settlementName": "Loxvire",
+    "settlementType": "Capital City",
+    "governmentType": "Federal Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -34.488,
+    "centerLatitude": -65.17,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "bravelyn-qasvire",
+    "province": "Bravelyn",
+    "settlementName": "Qasvire",
+    "settlementType": "Town",
+    "governmentType": "Federal Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -34.488,
+    "centerLatitude": -65.17,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "bravelyn-qelvandra",
+    "province": "Bravelyn",
+    "settlementName": "Qelvandra",
+    "settlementType": "City",
+    "governmentType": "Federal Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -34.488,
+    "centerLatitude": -65.17,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "bravelyn-solvaryn",
+    "province": "Bravelyn",
+    "settlementName": "Solvaryn",
+    "settlementType": "Village",
+    "governmentType": "Federal Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -34.488,
+    "centerLatitude": -65.17,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "bravelyn-sundervale",
+    "province": "Bravelyn",
+    "settlementName": "Sundervale",
+    "settlementType": "City",
+    "governmentType": "Federal Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -34.488,
+    "centerLatitude": -65.17,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "bravelyn-xelvoryn",
+    "province": "Bravelyn",
+    "settlementName": "Xelvoryn",
+    "settlementType": "Village",
+    "governmentType": "Federal Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-2",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -34.488,
+    "centerLatitude": -65.17,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "ceulrithan-gildri",
+    "province": "Ceulrithan",
+    "settlementName": "Gildri",
+    "settlementType": "Capital City",
+    "governmentType": "Confessional State",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -3.079,
+    "centerLatitude": -39.63,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "ceulrithan-cindrau",
+    "province": "Ceulrithan",
+    "settlementName": "Cindrau",
+    "settlementType": "Town",
+    "governmentType": "Confessional State",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -3.079,
+    "centerLatitude": -39.63,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "ceulrithan-turyne",
+    "province": "Ceulrithan",
+    "settlementName": "Turyne",
+    "settlementType": "Town",
+    "governmentType": "Confessional State",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -3.079,
+    "centerLatitude": -39.63,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "ceulrithan-qovei",
+    "province": "Ceulrithan",
+    "settlementName": "Qov’ei",
+    "settlementType": "Village",
+    "governmentType": "Confessional State",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -3.079,
+    "centerLatitude": -39.63,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "ceulrithan-rilvays",
+    "province": "Ceulrithan",
+    "settlementName": "Rilvays",
+    "settlementType": "Village",
+    "governmentType": "Confessional State",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -3.079,
+    "centerLatitude": -39.63,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "ceulrithan-faelith",
+    "province": "Ceulrithan",
+    "settlementName": "Faelith",
+    "settlementType": "Village",
+    "governmentType": "Confessional State",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -3.079,
+    "centerLatitude": -39.63,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "drakmorren-grimvald",
+    "province": "Drakmorren",
+    "settlementName": "Grimvald",
+    "settlementType": "Capital City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 132.232,
+    "centerLatitude": 64.92,
+    "biome": "Mountain",
+    "size": "Capital City"
+  },
+  {
+    "id": "drakmorren-vorakmar",
+    "province": "Drakmorren",
+    "settlementName": "Vorakmar",
+    "settlementType": "Town",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 132.232,
+    "centerLatitude": 64.92,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "drakmorren-fenwyrd",
+    "province": "Drakmorren",
+    "settlementName": "Fenwyrd",
+    "settlementType": "Town",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 132.232,
+    "centerLatitude": 64.92,
+    "biome": "Swamp Marsh",
+    "size": "Town"
+  },
+  {
+    "id": "drakmorren-kharrowfen",
+    "province": "Drakmorren",
+    "settlementName": "Kharrowfen",
+    "settlementType": "City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 132.232,
+    "centerLatitude": 64.92,
+    "biome": "Swamp Marsh",
+    "size": "City"
+  },
+  {
+    "id": "drakmorren-morvakar",
+    "province": "Drakmorren",
+    "settlementName": "Morvakar",
+    "settlementType": "Village",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 132.232,
+    "centerLatitude": 64.92,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "earrorim-glattonica",
+    "province": "Earrorim",
+    "settlementName": "Glattonica",
+    "settlementType": "Capital City",
+    "governmentType": "City-State League",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -101.697,
+    "centerLatitude": 35.305,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "earrorim-iciarene",
+    "province": "Earrorim",
+    "settlementName": "Iciarene",
+    "settlementType": "Town",
+    "governmentType": "City-State League",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -101.697,
+    "centerLatitude": 35.305,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "earrorim-wagriolyn",
+    "province": "Earrorim",
+    "settlementName": "Wagriolyn",
+    "settlementType": "City",
+    "governmentType": "City-State League",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -101.697,
+    "centerLatitude": 35.305,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "earrorim-ullunor",
+    "province": "Earrorim",
+    "settlementName": "Ullunor",
+    "settlementType": "Village",
+    "governmentType": "City-State League",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -101.697,
+    "centerLatitude": 35.305,
+    "biome": "Hill Plateau",
+    "size": "Village"
+  },
+  {
+    "id": "earrorim-obriasos",
+    "province": "Earrorim",
+    "settlementName": "Obriasos",
+    "settlementType": "Village",
+    "governmentType": "City-State League",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -101.697,
+    "centerLatitude": 35.305,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "earrorim-wrasserah",
+    "province": "Earrorim",
+    "settlementName": "Wrasserah",
+    "settlementType": "City",
+    "governmentType": "City-State League",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -101.697,
+    "centerLatitude": 35.305,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "el-dravire-riverrealm-lorangriel",
+    "province": "El'dravire Riverrealm",
+    "settlementName": "Lorangriel",
+    "settlementType": "Capital City",
+    "governmentType": "Parliamentary Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+4, UTC+5",
+    "centerLongitude": 61.119,
+    "centerLatitude": -16.033,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "el-dravire-riverrealm-merrinthal",
+    "province": "El'dravire Riverrealm",
+    "settlementName": "Merrinthal",
+    "settlementType": "City",
+    "governmentType": "Parliamentary Democracy",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+4, UTC+5",
+    "centerLongitude": 61.119,
+    "centerLatitude": -16.033,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "el-dravire-riverrealm-murethash",
+    "province": "El'dravire Riverrealm",
+    "settlementName": "Murethash",
+    "settlementType": "City",
+    "governmentType": "Parliamentary Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+4, UTC+5",
+    "centerLongitude": 61.119,
+    "centerLatitude": -16.033,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "el-dravire-riverrealm-yivanyr",
+    "province": "El'dravire Riverrealm",
+    "settlementName": "Yi’vanyr",
+    "settlementType": "Village",
+    "governmentType": "Parliamentary Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+4, UTC+5",
+    "centerLongitude": 61.119,
+    "centerLatitude": -16.033,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "el-dravire-riverrealm-veloraskkis",
+    "province": "El'dravire Riverrealm",
+    "settlementName": "Veloraskkis",
+    "settlementType": "City",
+    "governmentType": "Parliamentary Democracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+4",
+    "displayTimeZones": "UTC+4, UTC+5",
+    "centerLongitude": 61.119,
+    "centerLatitude": -16.033,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "eldermere-sylvanreach",
+    "province": "Eldermere",
+    "settlementName": "Sylvanreach",
+    "settlementType": "Capital City",
+    "governmentType": "Cooperative Commonwealth",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+8",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 123.461,
+    "centerLatitude": 40.833,
+    "biome": "Forest",
+    "size": "Capital City"
+  },
+  {
+    "id": "eldermere-oakenshire",
+    "province": "Eldermere",
+    "settlementName": "Oakenshire",
+    "settlementType": "City",
+    "governmentType": "Cooperative Commonwealth",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+8",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 123.461,
+    "centerLatitude": 40.833,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "eldermere-riverbloom",
+    "province": "Eldermere",
+    "settlementName": "Riverbloom",
+    "settlementType": "City",
+    "governmentType": "Cooperative Commonwealth",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+8",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 123.461,
+    "centerLatitude": 40.833,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "eldermere-aelgrove",
+    "province": "Eldermere",
+    "settlementName": "Aelgrove",
+    "settlementType": "Village",
+    "governmentType": "Cooperative Commonwealth",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+8",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 123.461,
+    "centerLatitude": 40.833,
+    "biome": "Forest",
+    "size": "Village"
+  },
+  {
+    "id": "eldermere-cloverfen",
+    "province": "Eldermere",
+    "settlementName": "Cloverfen",
+    "settlementType": "City",
+    "governmentType": "Cooperative Commonwealth",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+8",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 123.461,
+    "centerLatitude": 40.833,
+    "biome": "Swamp Marsh",
+    "size": "City"
+  },
+  {
+    "id": "eldermere-mossvale",
+    "province": "Eldermere",
+    "settlementName": "Mossvale",
+    "settlementType": "Village",
+    "governmentType": "Cooperative Commonwealth",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+8",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 123.461,
+    "centerLatitude": 40.833,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "eldermere-faelmere",
+    "province": "Eldermere",
+    "settlementName": "Faelmere",
+    "settlementType": "Village",
+    "governmentType": "Cooperative Commonwealth",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+8",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 123.461,
+    "centerLatitude": 40.833,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "eldermere-lunebriar",
+    "province": "Eldermere",
+    "settlementName": "Lunebriar",
+    "settlementType": "City",
+    "governmentType": "Cooperative Commonwealth",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+8",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 123.461,
+    "centerLatitude": 40.833,
+    "biome": "Hill Plateau",
+    "size": "City"
+  },
+  {
+    "id": "falthrakar-nellvaris",
+    "province": "Falthrakar",
+    "settlementName": "Nellvaris",
+    "settlementType": "Capital City",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -5.451,
+    "centerLatitude": 32.805,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "falthrakar-brokharn",
+    "province": "Falthrakar",
+    "settlementName": "Brokharn",
+    "settlementType": "Town",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -5.451,
+    "centerLatitude": 32.805,
+    "biome": "Mountain",
+    "size": "Town"
+  },
+  {
+    "id": "falthrakar-gorathkar",
+    "province": "Falthrakar",
+    "settlementName": "Gorathkar",
+    "settlementType": "City",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -5.451,
+    "centerLatitude": 32.805,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "falthrakar-lithvar",
+    "province": "Falthrakar",
+    "settlementName": "Lithvar",
+    "settlementType": "Village",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC-1, UTC",
+    "centerLongitude": -5.451,
+    "centerLatitude": 32.805,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "gruddirynn-sleakitika",
+    "province": "Gruddirynn",
+    "settlementName": "Sleakitika",
+    "settlementType": "Capital City",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+5",
+    "displayTimeZones": "UTC+5, UTC+6",
+    "centerLongitude": 78.009,
+    "centerLatitude": -62.445,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "gruddirynn-umiotope",
+    "province": "Gruddirynn",
+    "settlementName": "Umiotope",
+    "settlementType": "Town",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+5",
+    "displayTimeZones": "UTC+5, UTC+6",
+    "centerLongitude": 78.009,
+    "centerLatitude": -62.445,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "gruddirynn-wrobetopia",
+    "province": "Gruddirynn",
+    "settlementName": "Wrobetopia",
+    "settlementType": "City",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+5",
+    "displayTimeZones": "UTC+5, UTC+6",
+    "centerLongitude": 78.009,
+    "centerLatitude": -62.445,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "gruddirynn-bleosianys",
+    "province": "Gruddirynn",
+    "settlementName": "Bleosianys",
+    "settlementType": "City",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+5",
+    "displayTimeZones": "UTC+5, UTC+6",
+    "centerLongitude": 78.009,
+    "centerLatitude": -62.445,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "iazethas-mostrerah",
+    "province": "Iazethas",
+    "settlementName": "Mostrerah",
+    "settlementType": "Capital City",
+    "governmentType": "Plutocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-10",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -146.861,
+    "centerLatitude": -14.171,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "iazethas-bleasacia",
+    "province": "Iazethas",
+    "settlementName": "Bleasacia",
+    "settlementType": "City",
+    "governmentType": "Plutocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-10",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -146.861,
+    "centerLatitude": -14.171,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "iazethas-streccea",
+    "province": "Iazethas",
+    "settlementName": "Streccea",
+    "settlementType": "Town",
+    "governmentType": "Plutocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-10",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -146.861,
+    "centerLatitude": -14.171,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "iazethas-leammipa",
+    "province": "Iazethas",
+    "settlementName": "Leammipa",
+    "settlementType": "Village",
+    "governmentType": "Plutocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-10",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -146.861,
+    "centerLatitude": -14.171,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "jormaelis-mossirueth",
+    "province": "Jor’maelis",
+    "settlementName": "Mossirueth",
+    "settlementType": "Capital City",
+    "governmentType": "Protectorate",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 130.627,
+    "centerLatitude": -46.374,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "jormaelis-utchmyrith",
+    "province": "Jor’maelis",
+    "settlementName": "Utch’myrith",
+    "settlementType": "City",
+    "governmentType": "Protectorate",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 130.627,
+    "centerLatitude": -46.374,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "jormaelis-yirethaulor",
+    "province": "Jor’maelis",
+    "settlementName": "Yire’thaulor",
+    "settlementType": "City",
+    "governmentType": "Protectorate",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 130.627,
+    "centerLatitude": -46.374,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "jormaelis-limioreimn",
+    "province": "Jor’maelis",
+    "settlementName": "Li’mioreimn",
+    "settlementType": "City",
+    "governmentType": "Protectorate",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 130.627,
+    "centerLatitude": -46.374,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "jormaelis-rnzeuluun",
+    "province": "Jor’maelis",
+    "settlementName": "Rnzeuluun",
+    "settlementType": "City",
+    "governmentType": "Protectorate",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 130.627,
+    "centerLatitude": -46.374,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "jormaelis-ishvoryk",
+    "province": "Jor’maelis",
+    "settlementName": "Ish’voryk",
+    "settlementType": "City",
+    "governmentType": "Protectorate",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+9",
+    "displayTimeZones": "UTC+8, UTC+9",
+    "centerLongitude": 130.627,
+    "centerLatitude": -46.374,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "kaelvorrin-dunvyr",
+    "province": "Kaelvorrin",
+    "settlementName": "Dunvyr",
+    "settlementType": "Capital City",
+    "governmentType": "Meritocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC, UTC+1",
+    "centerLongitude": 5.828,
+    "centerLatitude": 6.383,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "kaelvorrin-mistval",
+    "province": "Kaelvorrin",
+    "settlementName": "Mistval",
+    "settlementType": "Town",
+    "governmentType": "Meritocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC, UTC+1",
+    "centerLongitude": 5.828,
+    "centerLatitude": 6.383,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "kaelvorrin-silverwake",
+    "province": "Kaelvorrin",
+    "settlementName": "Silverwake",
+    "settlementType": "City",
+    "governmentType": "Meritocracy",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC",
+    "displayTimeZones": "UTC, UTC+1",
+    "centerLongitude": 5.828,
+    "centerLatitude": 6.383,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-kharzund",
+    "province": "Kharvathen",
+    "settlementName": "Kharzund",
+    "settlementType": "Capital City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "Capital City"
+  },
+  {
+    "id": "kharvathen-ironwood",
+    "province": "Kharvathen",
+    "settlementName": "Ironwood",
+    "settlementType": "Town",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "Town"
+  },
+  {
+    "id": "kharvathen-dorghalun",
+    "province": "Kharvathen",
+    "settlementName": "Dorghalun",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-greybriar",
+    "province": "Kharvathen",
+    "settlementName": "Greybriar",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-zarveng",
+    "province": "Kharvathen",
+    "settlementName": "Zarveng",
+    "settlementType": "Village",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "Village"
+  },
+  {
+    "id": "kharvathen-thornbreak",
+    "province": "Kharvathen",
+    "settlementName": "Thornbreak",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-draskminn",
+    "province": "Kharvathen",
+    "settlementName": "Draskminn",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-rivenwild",
+    "province": "Kharvathen",
+    "settlementName": "Rivenwild",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-lorath",
+    "province": "Kharvathen",
+    "settlementName": "Lorath",
+    "settlementType": "Village",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "Village"
+  },
+  {
+    "id": "kharvathen-skarnfell",
+    "province": "Kharvathen",
+    "settlementName": "Skarnfell",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-bloodmire",
+    "province": "Kharvathen",
+    "settlementName": "Bloodmire",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Swamp Marsh",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-wildsunder",
+    "province": "Kharvathen",
+    "settlementName": "Wildsunder",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "kharvathen-pokbith",
+    "province": "Kharvathen",
+    "settlementName": "Pokbith",
+    "settlementType": "Village",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "Village"
+  },
+  {
+    "id": "kharvathen-thoyndor",
+    "province": "Kharvathen",
+    "settlementName": "Thoyndor",
+    "settlementType": "Village",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "Village"
+  },
+  {
+    "id": "kharvathen-hethsther",
+    "province": "Kharvathen",
+    "settlementName": "Heths’ther",
+    "settlementType": "City",
+    "governmentType": "Feudal Compact",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-3",
+    "displayTimeZones": "UTC-3, UTC-2",
+    "centerLongitude": -44.077,
+    "centerLatitude": -2.058,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "khorvaak-vorathun",
+    "province": "Khorvaak",
+    "settlementName": "Vorathûn",
+    "settlementType": "Capital City",
+    "governmentType": "Tribal Confederation",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+10",
+    "displayTimeZones": "UTC+9, UTC+10",
+    "centerLongitude": 149.446,
+    "centerLatitude": 21.738,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "khorvaak-khazovar",
+    "province": "Khorvaak",
+    "settlementName": "Khazovar",
+    "settlementType": "Town",
+    "governmentType": "Tribal Confederation",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+10",
+    "displayTimeZones": "UTC+9, UTC+10",
+    "centerLongitude": 149.446,
+    "centerLatitude": 21.738,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "luntharave-auralisthra",
+    "province": "Lun’tharavé",
+    "settlementName": "Auralisthra",
+    "settlementType": "Capital City",
+    "governmentType": "Diarchy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC+1, UTC+2",
+    "centerLongitude": 16.816,
+    "centerLatitude": -70.778,
+    "biome": "Hill Plateau",
+    "size": "Capital City"
+  },
+  {
+    "id": "luntharave-seralun",
+    "province": "Lun’tharavé",
+    "settlementName": "Seralun",
+    "settlementType": "Town",
+    "governmentType": "Diarchy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC+1, UTC+2",
+    "centerLongitude": 16.816,
+    "centerLatitude": -70.778,
+    "biome": "Hill Plateau",
+    "size": "Town"
+  },
+  {
+    "id": "luntharave-vireluna",
+    "province": "Lun’tharavé",
+    "settlementName": "Vireluna",
+    "settlementType": "Town",
+    "governmentType": "Diarchy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC+1, UTC+2",
+    "centerLongitude": 16.816,
+    "centerLatitude": -70.778,
+    "biome": "Hill Plateau",
+    "size": "Town"
+  },
+  {
+    "id": "luntharave-sylmaris",
+    "province": "Lun’tharavé",
+    "settlementName": "Sylmaris",
+    "settlementType": "Village",
+    "governmentType": "Diarchy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC+1, UTC+2",
+    "centerLongitude": 16.816,
+    "centerLatitude": -70.778,
+    "biome": "Hill Plateau",
+    "size": "Village"
+  },
+  {
+    "id": "luntharave-neruvea",
+    "province": "Lun’tharavé",
+    "settlementName": "Neruvéa",
+    "settlementType": "Village",
+    "governmentType": "Diarchy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC+1, UTC+2",
+    "centerLongitude": 16.816,
+    "centerLatitude": -70.778,
+    "biome": "Hill Plateau",
+    "size": "Village"
+  },
+  {
+    "id": "marrowynd-stormharrow",
+    "province": "Marrowynd",
+    "settlementName": "Stormharrow",
+    "settlementType": "Capital City",
+    "governmentType": "Pirate Compact",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-8, UTC-7",
+    "centerLongitude": -112.285,
+    "centerLatitude": 61.786,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "marrowynd-blacktide-reach",
+    "province": "Marrowynd",
+    "settlementName": "Blacktide Reach",
+    "settlementType": "City",
+    "governmentType": "Pirate Compact",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-8, UTC-7",
+    "centerLongitude": -112.285,
+    "centerLatitude": 61.786,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "marrowynd-thalmerrow",
+    "province": "Marrowynd",
+    "settlementName": "Thalmerrow",
+    "settlementType": "City",
+    "governmentType": "Pirate Compact",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-8, UTC-7",
+    "centerLongitude": -112.285,
+    "centerLatitude": 61.786,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "marrowynd-seawynd-hollow",
+    "province": "Marrowynd",
+    "settlementName": "Seawynd Hollow",
+    "settlementType": "City",
+    "governmentType": "Pirate Compact",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-8, UTC-7",
+    "centerLongitude": -112.285,
+    "centerLatitude": 61.786,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "marrowynd-myrkwake",
+    "province": "Marrowynd",
+    "settlementName": "Myrkwake",
+    "settlementType": "Village",
+    "governmentType": "Pirate Compact",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-8, UTC-7",
+    "centerLongitude": -112.285,
+    "centerLatitude": 61.786,
+    "biome": "Surface Docks Coastal",
+    "size": "Village"
+  },
+  {
+    "id": "marrowynd-vaelshore",
+    "province": "Marrowynd",
+    "settlementName": "Vaelshore",
+    "settlementType": "City",
+    "governmentType": "Pirate Compact",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-8, UTC-7",
+    "centerLongitude": -112.285,
+    "centerLatitude": 61.786,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "marrowynd-cindervale-coast",
+    "province": "Marrowynd",
+    "settlementName": "Cindervale Coast",
+    "settlementType": "City",
+    "governmentType": "Pirate Compact",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-8, UTC-7",
+    "centerLongitude": -112.285,
+    "centerLatitude": 61.786,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "marrowynd-kharrowport",
+    "province": "Marrowynd",
+    "settlementName": "Kharrowport",
+    "settlementType": "City",
+    "governmentType": "Pirate Compact",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-8, UTC-7",
+    "centerLongitude": -112.285,
+    "centerLatitude": 61.786,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "nalvessir-greenmire",
+    "province": "Nalvessir",
+    "settlementName": "Greenmire",
+    "settlementType": "Capital City",
+    "governmentType": "Parliamentary Marsh Council",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 109.263,
+    "centerLatitude": 19.376,
+    "biome": "Swamp Marsh",
+    "size": "Capital City"
+  },
+  {
+    "id": "nalvessir-porthelis",
+    "province": "Nalvessir",
+    "settlementName": "Porthelis",
+    "settlementType": "City",
+    "governmentType": "Parliamentary Marsh Council",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 109.263,
+    "centerLatitude": 19.376,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "nalvessir-briarwater",
+    "province": "Nalvessir",
+    "settlementName": "Briarwater",
+    "settlementType": "City",
+    "governmentType": "Parliamentary Marsh Council",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 109.263,
+    "centerLatitude": 19.376,
+    "biome": "Swamp Marsh",
+    "size": "City"
+  },
+  {
+    "id": "nalvessir-bentharys",
+    "province": "Nalvessir",
+    "settlementName": "Bentharys",
+    "settlementType": "City",
+    "governmentType": "Parliamentary Marsh Council",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 109.263,
+    "centerLatitude": 19.376,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "nalvessir-palevanna",
+    "province": "Nalvessir",
+    "settlementName": "Palevanna",
+    "settlementType": "City",
+    "governmentType": "Parliamentary Marsh Council",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 109.263,
+    "centerLatitude": 19.376,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "nalvessir-balmire",
+    "province": "Nalvessir",
+    "settlementName": "Balmire",
+    "settlementType": "Village",
+    "governmentType": "Parliamentary Marsh Council",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 109.263,
+    "centerLatitude": 19.376,
+    "biome": "Swamp Marsh",
+    "size": "Village"
+  },
+  {
+    "id": "nalvessir-frostfen",
+    "province": "Nalvessir",
+    "settlementName": "Frostfen",
+    "settlementType": "Village",
+    "governmentType": "Parliamentary Marsh Council",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 109.263,
+    "centerLatitude": 19.376,
+    "biome": "Swamp Marsh",
+    "size": "Village"
+  },
+  {
+    "id": "nalvessir-pellavess",
+    "province": "Nalvessir",
+    "settlementName": "Pellavess",
+    "settlementType": "City",
+    "governmentType": "Parliamentary Marsh Council",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 109.263,
+    "centerLatitude": 19.376,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "pelvoryn-belynthar",
+    "province": "Pelvoryn",
+    "settlementName": "Belynthar",
+    "settlementType": "Capital City",
+    "governmentType": "Aristocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC, UTC+1",
+    "centerLongitude": 11.487,
+    "centerLatitude": -12.748,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "pelvoryn-gavaryn",
+    "province": "Pelvoryn",
+    "settlementName": "Gavaryn",
+    "settlementType": "Town",
+    "governmentType": "Aristocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC, UTC+1",
+    "centerLongitude": 11.487,
+    "centerLatitude": -12.748,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "pelvoryn-lysvire",
+    "province": "Pelvoryn",
+    "settlementName": "Lysvire",
+    "settlementType": "Town",
+    "governmentType": "Aristocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC, UTC+1",
+    "centerLongitude": 11.487,
+    "centerLatitude": -12.748,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "pelvoryn-fensylth",
+    "province": "Pelvoryn",
+    "settlementName": "Fensylth",
+    "settlementType": "Village",
+    "governmentType": "Aristocracy",
+    "tags": [
+      "Swamp Marsh",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+1",
+    "displayTimeZones": "UTC, UTC+1",
+    "centerLongitude": 11.487,
+    "centerLatitude": -12.748,
+    "biome": "Swamp Marsh",
+    "size": "Village"
+  },
+  {
+    "id": "sylvaveryn-vaelthyros",
+    "province": "Sylvavéryn",
+    "settlementName": "Vaelthyros",
+    "settlementType": "Capital City",
+    "governmentType": "Theocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-6",
+    "displayTimeZones": "UTC-6, UTC-5",
+    "centerLongitude": -86.299,
+    "centerLatitude": 8.067,
+    "biome": "Forest",
+    "size": "Capital City"
+  },
+  {
+    "id": "sylvaveryn-elaravosk",
+    "province": "Sylvavéryn",
+    "settlementName": "Elaravosk",
+    "settlementType": "City",
+    "governmentType": "Theocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-6",
+    "displayTimeZones": "UTC-6, UTC-5",
+    "centerLongitude": -86.299,
+    "centerLatitude": 8.067,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "sylvaveryn-myrvaelun",
+    "province": "Sylvavéryn",
+    "settlementName": "Myrvaelûn",
+    "settlementType": "City",
+    "governmentType": "Theocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-6",
+    "displayTimeZones": "UTC-6, UTC-5",
+    "centerLongitude": -86.299,
+    "centerLatitude": 8.067,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "sylvaveryn-sylthados",
+    "province": "Sylvavéryn",
+    "settlementName": "Sylthadös",
+    "settlementType": "City",
+    "governmentType": "Theocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-6",
+    "displayTimeZones": "UTC-6, UTC-5",
+    "centerLongitude": -86.299,
+    "centerLatitude": 8.067,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "sylvaveryn-thalavaryn",
+    "province": "Sylvavéryn",
+    "settlementName": "Thalavaryn",
+    "settlementType": "City",
+    "governmentType": "Theocracy",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-6",
+    "displayTimeZones": "UTC-6, UTC-5",
+    "centerLongitude": -86.299,
+    "centerLatitude": 8.067,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "sylvaveryn-vaerundell",
+    "province": "Sylvavéryn",
+    "settlementName": "Vaerundell",
+    "settlementType": "City",
+    "governmentType": "Theocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-6",
+    "displayTimeZones": "UTC-6, UTC-5",
+    "centerLongitude": -86.299,
+    "centerLatitude": 8.067,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "sylvaveryn-lethyrvos",
+    "province": "Sylvavéryn",
+    "settlementName": "Lethyrvos",
+    "settlementType": "City",
+    "governmentType": "Theocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-6",
+    "displayTimeZones": "UTC-6, UTC-5",
+    "centerLongitude": -86.299,
+    "centerLatitude": 8.067,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "sylvaveryn-aelmyrwald",
+    "province": "Sylvavéryn",
+    "settlementName": "Aelmyrwald",
+    "settlementType": "City",
+    "governmentType": "Theocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-6",
+    "displayTimeZones": "UTC-6, UTC-5",
+    "centerLongitude": -86.299,
+    "centerLatitude": 8.067,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "thalryss-skulltide-expanse",
+    "province": "Thalryss",
+    "settlementName": "Skulltide Expanse",
+    "settlementType": "Capital City",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "Capital City"
+  },
+  {
+    "id": "thalryss-leviamor",
+    "province": "Thalryss",
+    "settlementName": "Leviamor",
+    "settlementType": "Town",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "Town"
+  },
+  {
+    "id": "thalryss-ocevaruun",
+    "province": "Thalryss",
+    "settlementName": "Ocevaruun",
+    "settlementType": "City",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "thalryss-blackwake-isles",
+    "province": "Thalryss",
+    "settlementName": "Blackwake Isles",
+    "settlementType": "City",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "thalryss-thalkazuun",
+    "province": "Thalryss",
+    "settlementName": "Thal’kazuun",
+    "settlementType": "City",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "thalryss-dreadcurrent",
+    "province": "Thalryss",
+    "settlementName": "Dreadcurrent",
+    "settlementType": "City",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "thalryss-vorthalass",
+    "province": "Thalryss",
+    "settlementName": "Vorthalass",
+    "settlementType": "City",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "thalryss-abyrros",
+    "province": "Thalryss",
+    "settlementName": "Abyrros",
+    "settlementType": "Village",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "Village"
+  },
+  {
+    "id": "thalryss-grimwater-reach",
+    "province": "Thalryss",
+    "settlementName": "Grimwater Reach",
+    "settlementType": "City",
+    "governmentType": "Maritime Regency",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-9",
+    "displayTimeZones": "UTC-10, UTC-9",
+    "centerLongitude": -138.357,
+    "centerLatitude": 15.56,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "vaelmyrith-eldryssar",
+    "province": "Vaelmyrith",
+    "settlementName": "Eldryssar",
+    "settlementType": "Capital City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+2",
+    "displayTimeZones": "UTC+2, UTC+3",
+    "centerLongitude": 36.153,
+    "centerLatitude": 65.988,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "vaelmyrith-lunethryl",
+    "province": "Vaelmyrith",
+    "settlementName": "Lunethryl",
+    "settlementType": "City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Hill Plateau",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+2",
+    "displayTimeZones": "UTC+2, UTC+3",
+    "centerLongitude": 36.153,
+    "centerLatitude": 65.988,
+    "biome": "Hill Plateau",
+    "size": "City"
+  },
+  {
+    "id": "vaelmyrith-velkynwood",
+    "province": "Vaelmyrith",
+    "settlementName": "Velkynwood",
+    "settlementType": "City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+2",
+    "displayTimeZones": "UTC+2, UTC+3",
+    "centerLongitude": 36.153,
+    "centerLatitude": 65.988,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "vaelmyrith-whispergrove",
+    "province": "Vaelmyrith",
+    "settlementName": "Whispergrove",
+    "settlementType": "City",
+    "governmentType": "Noocracy",
+    "tags": [
+      "Forest",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+2",
+    "displayTimeZones": "UTC+2, UTC+3",
+    "centerLongitude": 36.153,
+    "centerLatitude": 65.988,
+    "biome": "Forest",
+    "size": "City"
+  },
+  {
+    "id": "virelport-bronzewake",
+    "province": "Virelport",
+    "settlementName": "Bronzewake",
+    "settlementType": "Capital City",
+    "governmentType": "Merchant Republic",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+6",
+    "displayTimeZones": "UTC+5, UTC+6",
+    "centerLongitude": 82.978,
+    "centerLatitude": 74.861,
+    "biome": "Surface Docks Coastal",
+    "size": "Capital City"
+  },
+  {
+    "id": "virelport-veilstrand",
+    "province": "Virelport",
+    "settlementName": "Veilstrand",
+    "settlementType": "City",
+    "governmentType": "Merchant Republic",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+6",
+    "displayTimeZones": "UTC+5, UTC+6",
+    "centerLongitude": 82.978,
+    "centerLatitude": 74.861,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "virelport-straithaven",
+    "province": "Virelport",
+    "settlementName": "Straithaven",
+    "settlementType": "City",
+    "governmentType": "Merchant Republic",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+6",
+    "displayTimeZones": "UTC+5, UTC+6",
+    "centerLongitude": 82.978,
+    "centerLatitude": 74.861,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "virelport-stormgullet",
+    "province": "Virelport",
+    "settlementName": "Stormgullet",
+    "settlementType": "City",
+    "governmentType": "Merchant Republic",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+6",
+    "displayTimeZones": "UTC+5, UTC+6",
+    "centerLongitude": 82.978,
+    "centerLatitude": 74.861,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "vuelmora-hyselva",
+    "province": "Vuelmora",
+    "settlementName": "Hyselva",
+    "settlementType": "Capital City",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 108.95,
+    "centerLatitude": -17.703,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "vuelmora-oelnoreu",
+    "province": "Vuelmora",
+    "settlementName": "Oelnoreu",
+    "settlementType": "Town",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 108.95,
+    "centerLatitude": -17.703,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "vuelmora-mornelya",
+    "province": "Vuelmora",
+    "settlementName": "Mornelya",
+    "settlementType": "Town",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 108.95,
+    "centerLatitude": -17.703,
+    "biome": "Grassland Plains",
+    "size": "Town"
+  },
+  {
+    "id": "vuelmora-ithmora",
+    "province": "Vuelmora",
+    "settlementName": "Ithmora",
+    "settlementType": "Village",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 108.95,
+    "centerLatitude": -17.703,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "vuelmora-glysera",
+    "province": "Vuelmora",
+    "settlementName": "Glysera",
+    "settlementType": "Village",
+    "governmentType": "Council Republic",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC+7",
+    "displayTimeZones": "UTC+7, UTC+8",
+    "centerLongitude": 108.95,
+    "centerLatitude": -17.703,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "zaltharuun-sszaruun",
+    "province": "Zal’tharuun",
+    "settlementName": "Sszaruun",
+    "settlementType": "Capital City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Grassland Plains",
+    "size": "Capital City"
+  },
+  {
+    "id": "zaltharuun-thalzuroth",
+    "province": "Zal’tharuun",
+    "settlementName": "Thal’zuroth",
+    "settlementType": "City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Surface Docks Coastal",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Surface Docks Coastal",
+    "size": "City"
+  },
+  {
+    "id": "zaltharuun-xalvoroq",
+    "province": "Zal’tharuun",
+    "settlementName": "Xal’voroq",
+    "settlementType": "City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "zaltharuun-ithkazuun",
+    "province": "Zal’tharuun",
+    "settlementName": "Ithkazuun",
+    "settlementType": "City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "zaltharuun-varesh-ka",
+    "province": "Zal’tharuun",
+    "settlementName": "Varesh-Ka",
+    "settlementType": "City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "zaltharuun-zhurakthel",
+    "province": "Zal’tharuun",
+    "settlementName": "Zhurak’thel",
+    "settlementType": "City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "zaltharuun-vaelzahara",
+    "province": "Zal’tharuun",
+    "settlementName": "Vaelzahara",
+    "settlementType": "City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Moderate",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "zaltharuun-amazuul",
+    "province": "Zal’tharuun",
+    "settlementName": "Amazuul",
+    "settlementType": "Village",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Grassland Plains",
+    "size": "Village"
+  },
+  {
+    "id": "zaltharuun-kethmora",
+    "province": "Zal’tharuun",
+    "settlementName": "Keth’mora",
+    "settlementType": "City",
+    "governmentType": "Oligarchy",
+    "tags": [
+      "Grassland Plains",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "Low",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-7",
+    "displayTimeZones": "UTC-7, UTC-6",
+    "centerLongitude": -104.774,
+    "centerLatitude": -60.995,
+    "biome": "Grassland Plains",
+    "size": "City"
+  },
+  {
+    "id": "zharvokh-karag-thul",
+    "province": "Zharvokh",
+    "settlementName": "Karag-Thûl",
+    "settlementType": "Capital City",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-5, UTC-4",
+    "centerLongitude": -60.833,
+    "centerLatitude": 73.588,
+    "biome": "Mountain",
+    "size": "Capital City"
+  },
+  {
+    "id": "zharvokh-vulkradun",
+    "province": "Zharvokh",
+    "settlementName": "Vulkradûn",
+    "settlementType": "City",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-5, UTC-4",
+    "centerLongitude": -60.833,
+    "centerLatitude": 73.588,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "zharvokh-tharvokar",
+    "province": "Zharvokh",
+    "settlementName": "Tharvokar",
+    "settlementType": "City",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-5, UTC-4",
+    "centerLongitude": -60.833,
+    "centerLatitude": 73.588,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "zharvokh-moltharok",
+    "province": "Zharvokh",
+    "settlementName": "Moltharok",
+    "settlementType": "City",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-5, UTC-4",
+    "centerLongitude": -60.833,
+    "centerLatitude": 73.588,
+    "biome": "Mountain",
+    "size": "City"
+  },
+  {
+    "id": "zharvokh-drakzhul",
+    "province": "Zharvokh",
+    "settlementName": "Drakzhul",
+    "settlementType": "Village",
+    "governmentType": "Military Regency",
+    "tags": [
+      "Mountain",
+      "living settlement",
+      "player visible"
+    ],
+    "dangerLevel": "High",
+    "alignmentPreference": "Belavadós four-axis profile; varies by district and NPC",
+    "timeZone": "UTC-4",
+    "displayTimeZones": "UTC-5, UTC-4",
+    "centerLongitude": -60.833,
+    "centerLatitude": 73.588,
+    "biome": "Mountain",
+    "size": "Village"
+  }
+]

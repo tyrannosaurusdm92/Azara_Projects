@@ -1,0 +1,1491 @@
+{
+  "schema": "belavados.v9.data-index",
+  "note": "The full enhanced V9 settlement data is shipped in js/living_maps/*.js for offline access. json/living_maps/*.json remain byte-identical to V8 to preserve source data. Run docs/export_v9_json.py to obtain full V9 JSON files.",
+  "source": "Belavados V8 plus attached TownGeneratorOS architectural reference",
+  "world": {
+    "buildings": 187220,
+    "npcs": 267480,
+    "rooms": 949113,
+    "sourceNpcPreserved": 31975,
+    "sourceBuildingsPreserved": 99117,
+    "nonElarvessSettlements": 162
+  },
+  "ElarvessSourceProtected": {
+    "json/elarvess_living_population.json": {
+      "sha256": "175dee9f15fcaa183fb1336f89e238c4e459871efb4b1abadd3fc6f451299c2a",
+      "byteIdentical": true
+    },
+    "assets/maps/elarvess.png": {
+      "sha256": "09f6b02eafca9489e269e9eddf25d7b99083e598ffde19f648da8d6c5d9c35e1",
+      "byteIdentical": true
+    },
+    "js/elarvess_population_data.js": {
+      "sha256": "5bf498c669d74d8fd18f49bd79a3096e8a67e67d7d640112f402ea781f860bf1",
+      "byteIdentical": true
+    },
+    "json/elarvess_location_buildings.json": {
+      "sha256": "22976efbeb4d79ba8611fa1e455c51de5f708efcb91acee8eb43b0b1c35c8e9d",
+      "byteIdentical": true
+    }
+  },
+  "settlements": [
+    {
+      "id": "aelvanyr-drakesylva",
+      "name": "Drakesylva",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9031,
+      "js": "js/living_maps/aelvanyr-drakesylva.js"
+    },
+    {
+      "id": "aelvanyr-everwake",
+      "name": "Everwake",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4642,
+      "js": "js/living_maps/aelvanyr-everwake.js"
+    },
+    {
+      "id": "aelvanyr-faeloryn",
+      "name": "Faeloryn",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2153,
+      "js": "js/living_maps/aelvanyr-faeloryn.js"
+    },
+    {
+      "id": "aelvanyr-lunawyn",
+      "name": "Lunawyn",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2148,
+      "js": "js/living_maps/aelvanyr-lunawyn.js"
+    },
+    {
+      "id": "aelvanyr-mythraelyn",
+      "name": "Mythraelyn",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6656,
+      "js": "js/living_maps/aelvanyr-mythraelyn.js"
+    },
+    {
+      "id": "aelvanyr-rootmere",
+      "name": "Rootmere",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2136,
+      "js": "js/living_maps/aelvanyr-rootmere.js"
+    },
+    {
+      "id": "aelvanyr-sylvarielle",
+      "name": "Sylvarielle",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6673,
+      "js": "js/living_maps/aelvanyr-sylvarielle.js"
+    },
+    {
+      "id": "aelvanyr-vaelithorne",
+      "name": "Vaelithorne",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6616,
+      "js": "js/living_maps/aelvanyr-vaelithorne.js"
+    },
+    {
+      "id": "aelvanyr-wildbloom",
+      "name": "Wildbloom",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6659,
+      "js": "js/living_maps/aelvanyr-wildbloom.js"
+    },
+    {
+      "id": "aelwynora-elarithen",
+      "name": "Elarithen",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9072,
+      "js": "js/living_maps/aelwynora-elarithen.js"
+    },
+    {
+      "id": "aelwynora-ulwyn",
+      "name": "Ulwyn",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4642,
+      "js": "js/living_maps/aelwynora-ulwyn.js"
+    },
+    {
+      "id": "aelwynora-wilsara",
+      "name": "Wilsara",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4642,
+      "js": "js/living_maps/aelwynora-wilsara.js"
+    },
+    {
+      "id": "aelwynora-yltharien",
+      "name": "Yltharien",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6663,
+      "js": "js/living_maps/aelwynora-yltharien.js"
+    },
+    {
+      "id": "astraevos-aelshoreth",
+      "name": "Aelshoreth",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6646,
+      "js": "js/living_maps/astraevos-aelshoreth.js"
+    },
+    {
+      "id": "astraevos-caelmyros",
+      "name": "Caelmyros",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6654,
+      "js": "js/living_maps/astraevos-caelmyros.js"
+    },
+    {
+      "id": "astraevos-cyralune",
+      "name": "Cyralune",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2148,
+      "js": "js/living_maps/astraevos-cyralune.js"
+    },
+    {
+      "id": "astraevos-mythalora",
+      "name": "Mythalora",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6652,
+      "js": "js/living_maps/astraevos-mythalora.js"
+    },
+    {
+      "id": "astraevos-orithalune",
+      "name": "Orithalune",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6667,
+      "js": "js/living_maps/astraevos-orithalune.js"
+    },
+    {
+      "id": "astraevos-vaelunthir",
+      "name": "Vaelunthir",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9017,
+      "js": "js/living_maps/astraevos-vaelunthir.js"
+    },
+    {
+      "id": "bravelyn-loxvire",
+      "name": "Loxvire",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9045,
+      "js": "js/living_maps/bravelyn-loxvire.js"
+    },
+    {
+      "id": "bravelyn-qasvire",
+      "name": "Qasvire",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4655,
+      "js": "js/living_maps/bravelyn-qasvire.js"
+    },
+    {
+      "id": "bravelyn-qelvandra",
+      "name": "Qelvandra",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6654,
+      "js": "js/living_maps/bravelyn-qelvandra.js"
+    },
+    {
+      "id": "bravelyn-solvaryn",
+      "name": "Solvaryn",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2149,
+      "js": "js/living_maps/bravelyn-solvaryn.js"
+    },
+    {
+      "id": "bravelyn-sundervale",
+      "name": "Sundervale",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6608,
+      "js": "js/living_maps/bravelyn-sundervale.js"
+    },
+    {
+      "id": "bravelyn-xelvoryn",
+      "name": "Xelvoryn",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2145,
+      "js": "js/living_maps/bravelyn-xelvoryn.js"
+    },
+    {
+      "id": "ceulrithan-cindrau",
+      "name": "Cindrau",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4642,
+      "js": "js/living_maps/ceulrithan-cindrau.js"
+    },
+    {
+      "id": "ceulrithan-faelith",
+      "name": "Faelith",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2152,
+      "js": "js/living_maps/ceulrithan-faelith.js"
+    },
+    {
+      "id": "ceulrithan-gildri",
+      "name": "Gildri",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9064,
+      "js": "js/living_maps/ceulrithan-gildri.js"
+    },
+    {
+      "id": "ceulrithan-qovei",
+      "name": "Qov’ei",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2143,
+      "js": "js/living_maps/ceulrithan-qovei.js"
+    },
+    {
+      "id": "ceulrithan-rilvays",
+      "name": "Rilvays",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2152,
+      "js": "js/living_maps/ceulrithan-rilvays.js"
+    },
+    {
+      "id": "ceulrithan-turyne",
+      "name": "Turyne",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4654,
+      "js": "js/living_maps/ceulrithan-turyne.js"
+    },
+    {
+      "id": "drakmorren-fenwyrd",
+      "name": "Fenwyrd",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4642,
+      "js": "js/living_maps/drakmorren-fenwyrd.js"
+    },
+    {
+      "id": "drakmorren-grimvald",
+      "name": "Grimvald",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9016,
+      "js": "js/living_maps/drakmorren-grimvald.js"
+    },
+    {
+      "id": "drakmorren-kharrowfen",
+      "name": "Kharrowfen",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6644,
+      "js": "js/living_maps/drakmorren-kharrowfen.js"
+    },
+    {
+      "id": "drakmorren-morvakar",
+      "name": "Morvakar",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2147,
+      "js": "js/living_maps/drakmorren-morvakar.js"
+    },
+    {
+      "id": "drakmorren-vorakmar",
+      "name": "Vorakmar",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4648,
+      "js": "js/living_maps/drakmorren-vorakmar.js"
+    },
+    {
+      "id": "earrorim-glattonica",
+      "name": "Glattonica",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9037,
+      "js": "js/living_maps/earrorim-glattonica.js"
+    },
+    {
+      "id": "earrorim-iciarene",
+      "name": "Iciarene",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4645,
+      "js": "js/living_maps/earrorim-iciarene.js"
+    },
+    {
+      "id": "earrorim-obriasos",
+      "name": "Obriasos",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2150,
+      "js": "js/living_maps/earrorim-obriasos.js"
+    },
+    {
+      "id": "earrorim-ullunor",
+      "name": "Ullunor",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2142,
+      "js": "js/living_maps/earrorim-ullunor.js"
+    },
+    {
+      "id": "earrorim-wagriolyn",
+      "name": "Wagriolyn",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6665,
+      "js": "js/living_maps/earrorim-wagriolyn.js"
+    },
+    {
+      "id": "earrorim-wrasserah",
+      "name": "Wrasserah",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6653,
+      "js": "js/living_maps/earrorim-wrasserah.js"
+    },
+    {
+      "id": "el-dravire-riverrealm-lorangriel",
+      "name": "Lorangriel",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9026,
+      "js": "js/living_maps/el-dravire-riverrealm-lorangriel.js"
+    },
+    {
+      "id": "el-dravire-riverrealm-merrinthal",
+      "name": "Merrinthal",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6676,
+      "js": "js/living_maps/el-dravire-riverrealm-merrinthal.js"
+    },
+    {
+      "id": "el-dravire-riverrealm-murethash",
+      "name": "Murethash",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6653,
+      "js": "js/living_maps/el-dravire-riverrealm-murethash.js"
+    },
+    {
+      "id": "el-dravire-riverrealm-veloraskkis",
+      "name": "Veloraskkis",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6619,
+      "js": "js/living_maps/el-dravire-riverrealm-veloraskkis.js"
+    },
+    {
+      "id": "el-dravire-riverrealm-yivanyr",
+      "name": "Yi’vanyr",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2159,
+      "js": "js/living_maps/el-dravire-riverrealm-yivanyr.js"
+    },
+    {
+      "id": "eldermere-aelgrove",
+      "name": "Aelgrove",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2137,
+      "js": "js/living_maps/eldermere-aelgrove.js"
+    },
+    {
+      "id": "eldermere-cloverfen",
+      "name": "Cloverfen",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6658,
+      "js": "js/living_maps/eldermere-cloverfen.js"
+    },
+    {
+      "id": "eldermere-faelmere",
+      "name": "Faelmere",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2150,
+      "js": "js/living_maps/eldermere-faelmere.js"
+    },
+    {
+      "id": "eldermere-lunebriar",
+      "name": "Lunebriar",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6649,
+      "js": "js/living_maps/eldermere-lunebriar.js"
+    },
+    {
+      "id": "eldermere-mossvale",
+      "name": "Mossvale",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2145,
+      "js": "js/living_maps/eldermere-mossvale.js"
+    },
+    {
+      "id": "eldermere-oakenshire",
+      "name": "Oakenshire",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6675,
+      "js": "js/living_maps/eldermere-oakenshire.js"
+    },
+    {
+      "id": "eldermere-riverbloom",
+      "name": "Riverbloom",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6664,
+      "js": "js/living_maps/eldermere-riverbloom.js"
+    },
+    {
+      "id": "eldermere-sylvanreach",
+      "name": "Sylvanreach",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9049,
+      "js": "js/living_maps/eldermere-sylvanreach.js"
+    },
+    {
+      "id": "falthrakar-brokharn",
+      "name": "Brokharn",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4637,
+      "js": "js/living_maps/falthrakar-brokharn.js"
+    },
+    {
+      "id": "falthrakar-gorathkar",
+      "name": "Gorathkar",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6633,
+      "js": "js/living_maps/falthrakar-gorathkar.js"
+    },
+    {
+      "id": "falthrakar-lithvar",
+      "name": "Lithvar",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2154,
+      "js": "js/living_maps/falthrakar-lithvar.js"
+    },
+    {
+      "id": "falthrakar-nellvaris",
+      "name": "Nellvaris",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9016,
+      "js": "js/living_maps/falthrakar-nellvaris.js"
+    },
+    {
+      "id": "gruddirynn-bleosianys",
+      "name": "Bleosianys",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6657,
+      "js": "js/living_maps/gruddirynn-bleosianys.js"
+    },
+    {
+      "id": "gruddirynn-sleakitika",
+      "name": "Sleakitika",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9022,
+      "js": "js/living_maps/gruddirynn-sleakitika.js"
+    },
+    {
+      "id": "gruddirynn-umiotope",
+      "name": "Umiotope",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4654,
+      "js": "js/living_maps/gruddirynn-umiotope.js"
+    },
+    {
+      "id": "gruddirynn-wrobetopia",
+      "name": "Wrobetopia",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6650,
+      "js": "js/living_maps/gruddirynn-wrobetopia.js"
+    },
+    {
+      "id": "iazethas-bleasacia",
+      "name": "Bleasacia",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6634,
+      "js": "js/living_maps/iazethas-bleasacia.js"
+    },
+    {
+      "id": "iazethas-leammipa",
+      "name": "Leammipa",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2150,
+      "js": "js/living_maps/iazethas-leammipa.js"
+    },
+    {
+      "id": "iazethas-mostrerah",
+      "name": "Mostrerah",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9068,
+      "js": "js/living_maps/iazethas-mostrerah.js"
+    },
+    {
+      "id": "iazethas-streccea",
+      "name": "Streccea",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4656,
+      "js": "js/living_maps/iazethas-streccea.js"
+    },
+    {
+      "id": "jormaelis-ishvoryk",
+      "name": "Ish’voryk",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6664,
+      "js": "js/living_maps/jormaelis-ishvoryk.js"
+    },
+    {
+      "id": "jormaelis-limioreimn",
+      "name": "Li’mioreimn",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6681,
+      "js": "js/living_maps/jormaelis-limioreimn.js"
+    },
+    {
+      "id": "jormaelis-mossirueth",
+      "name": "Mossirueth",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9047,
+      "js": "js/living_maps/jormaelis-mossirueth.js"
+    },
+    {
+      "id": "jormaelis-rnzeuluun",
+      "name": "Rnzeuluun",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6629,
+      "js": "js/living_maps/jormaelis-rnzeuluun.js"
+    },
+    {
+      "id": "jormaelis-utchmyrith",
+      "name": "Utch’myrith",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6667,
+      "js": "js/living_maps/jormaelis-utchmyrith.js"
+    },
+    {
+      "id": "jormaelis-yirethaulor",
+      "name": "Yire’thaulor",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6618,
+      "js": "js/living_maps/jormaelis-yirethaulor.js"
+    },
+    {
+      "id": "kaelvorrin-dunvyr",
+      "name": "Dunvyr",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9052,
+      "js": "js/living_maps/kaelvorrin-dunvyr.js"
+    },
+    {
+      "id": "kaelvorrin-mistval",
+      "name": "Mistval",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4646,
+      "js": "js/living_maps/kaelvorrin-mistval.js"
+    },
+    {
+      "id": "kaelvorrin-silverwake",
+      "name": "Silverwake",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6690,
+      "js": "js/living_maps/kaelvorrin-silverwake.js"
+    },
+    {
+      "id": "kharvathen-bloodmire",
+      "name": "Bloodmire",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6643,
+      "js": "js/living_maps/kharvathen-bloodmire.js"
+    },
+    {
+      "id": "kharvathen-dorghalun",
+      "name": "Dorghalun",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6652,
+      "js": "js/living_maps/kharvathen-dorghalun.js"
+    },
+    {
+      "id": "kharvathen-draskminn",
+      "name": "Draskminn",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6668,
+      "js": "js/living_maps/kharvathen-draskminn.js"
+    },
+    {
+      "id": "kharvathen-greybriar",
+      "name": "Greybriar",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6655,
+      "js": "js/living_maps/kharvathen-greybriar.js"
+    },
+    {
+      "id": "kharvathen-hethsther",
+      "name": "Heths’ther",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6632,
+      "js": "js/living_maps/kharvathen-hethsther.js"
+    },
+    {
+      "id": "kharvathen-ironwood",
+      "name": "Ironwood",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4646,
+      "js": "js/living_maps/kharvathen-ironwood.js"
+    },
+    {
+      "id": "kharvathen-kharzund",
+      "name": "Kharzund",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 8979,
+      "js": "js/living_maps/kharvathen-kharzund.js"
+    },
+    {
+      "id": "kharvathen-lorath",
+      "name": "Lorath",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2139,
+      "js": "js/living_maps/kharvathen-lorath.js"
+    },
+    {
+      "id": "kharvathen-pokbith",
+      "name": "Pokbith",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2138,
+      "js": "js/living_maps/kharvathen-pokbith.js"
+    },
+    {
+      "id": "kharvathen-rivenwild",
+      "name": "Rivenwild",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6668,
+      "js": "js/living_maps/kharvathen-rivenwild.js"
+    },
+    {
+      "id": "kharvathen-skarnfell",
+      "name": "Skarnfell",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6670,
+      "js": "js/living_maps/kharvathen-skarnfell.js"
+    },
+    {
+      "id": "kharvathen-thornbreak",
+      "name": "Thornbreak",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6665,
+      "js": "js/living_maps/kharvathen-thornbreak.js"
+    },
+    {
+      "id": "kharvathen-thoyndor",
+      "name": "Thoyndor",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2135,
+      "js": "js/living_maps/kharvathen-thoyndor.js"
+    },
+    {
+      "id": "kharvathen-wildsunder",
+      "name": "Wildsunder",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6646,
+      "js": "js/living_maps/kharvathen-wildsunder.js"
+    },
+    {
+      "id": "kharvathen-zarveng",
+      "name": "Zarveng",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2143,
+      "js": "js/living_maps/kharvathen-zarveng.js"
+    },
+    {
+      "id": "khorvaak-khazovar",
+      "name": "Khazovar",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4658,
+      "js": "js/living_maps/khorvaak-khazovar.js"
+    },
+    {
+      "id": "khorvaak-vorathun",
+      "name": "Vorathûn",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9043,
+      "js": "js/living_maps/khorvaak-vorathun.js"
+    },
+    {
+      "id": "luntharave-auralisthra",
+      "name": "Auralisthra",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9039,
+      "js": "js/living_maps/luntharave-auralisthra.js"
+    },
+    {
+      "id": "luntharave-neruvea",
+      "name": "Neruvéa",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2136,
+      "js": "js/living_maps/luntharave-neruvea.js"
+    },
+    {
+      "id": "luntharave-seralun",
+      "name": "Seralun",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4644,
+      "js": "js/living_maps/luntharave-seralun.js"
+    },
+    {
+      "id": "luntharave-sylmaris",
+      "name": "Sylmaris",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2146,
+      "js": "js/living_maps/luntharave-sylmaris.js"
+    },
+    {
+      "id": "luntharave-vireluna",
+      "name": "Vireluna",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4643,
+      "js": "js/living_maps/luntharave-vireluna.js"
+    },
+    {
+      "id": "marrowynd-blacktide-reach",
+      "name": "Blacktide Reach",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6663,
+      "js": "js/living_maps/marrowynd-blacktide-reach.js"
+    },
+    {
+      "id": "marrowynd-cindervale-coast",
+      "name": "Cindervale Coast",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6663,
+      "js": "js/living_maps/marrowynd-cindervale-coast.js"
+    },
+    {
+      "id": "marrowynd-kharrowport",
+      "name": "Kharrowport",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6644,
+      "js": "js/living_maps/marrowynd-kharrowport.js"
+    },
+    {
+      "id": "marrowynd-myrkwake",
+      "name": "Myrkwake",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2146,
+      "js": "js/living_maps/marrowynd-myrkwake.js"
+    },
+    {
+      "id": "marrowynd-seawynd-hollow",
+      "name": "Seawynd Hollow",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6665,
+      "js": "js/living_maps/marrowynd-seawynd-hollow.js"
+    },
+    {
+      "id": "marrowynd-stormharrow",
+      "name": "Stormharrow",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9052,
+      "js": "js/living_maps/marrowynd-stormharrow.js"
+    },
+    {
+      "id": "marrowynd-thalmerrow",
+      "name": "Thalmerrow",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6637,
+      "js": "js/living_maps/marrowynd-thalmerrow.js"
+    },
+    {
+      "id": "marrowynd-vaelshore",
+      "name": "Vaelshore",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6636,
+      "js": "js/living_maps/marrowynd-vaelshore.js"
+    },
+    {
+      "id": "nalvessir-balmire",
+      "name": "Balmire",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2154,
+      "js": "js/living_maps/nalvessir-balmire.js"
+    },
+    {
+      "id": "nalvessir-bentharys",
+      "name": "Bentharys",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6640,
+      "js": "js/living_maps/nalvessir-bentharys.js"
+    },
+    {
+      "id": "nalvessir-briarwater",
+      "name": "Briarwater",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6642,
+      "js": "js/living_maps/nalvessir-briarwater.js"
+    },
+    {
+      "id": "nalvessir-frostfen",
+      "name": "Frostfen",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2145,
+      "js": "js/living_maps/nalvessir-frostfen.js"
+    },
+    {
+      "id": "nalvessir-greenmire",
+      "name": "Greenmire",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9054,
+      "js": "js/living_maps/nalvessir-greenmire.js"
+    },
+    {
+      "id": "nalvessir-palevanna",
+      "name": "Palevanna",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6672,
+      "js": "js/living_maps/nalvessir-palevanna.js"
+    },
+    {
+      "id": "nalvessir-pellavess",
+      "name": "Pellavess",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6644,
+      "js": "js/living_maps/nalvessir-pellavess.js"
+    },
+    {
+      "id": "nalvessir-porthelis",
+      "name": "Porthelis",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6651,
+      "js": "js/living_maps/nalvessir-porthelis.js"
+    },
+    {
+      "id": "pelvoryn-belynthar",
+      "name": "Belynthar",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9003,
+      "js": "js/living_maps/pelvoryn-belynthar.js"
+    },
+    {
+      "id": "pelvoryn-fensylth",
+      "name": "Fensylth",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2145,
+      "js": "js/living_maps/pelvoryn-fensylth.js"
+    },
+    {
+      "id": "pelvoryn-gavaryn",
+      "name": "Gavaryn",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4665,
+      "js": "js/living_maps/pelvoryn-gavaryn.js"
+    },
+    {
+      "id": "pelvoryn-lysvire",
+      "name": "Lysvire",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4653,
+      "js": "js/living_maps/pelvoryn-lysvire.js"
+    },
+    {
+      "id": "sylvaveryn-aelmyrwald",
+      "name": "Aelmyrwald",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6638,
+      "js": "js/living_maps/sylvaveryn-aelmyrwald.js"
+    },
+    {
+      "id": "sylvaveryn-elaravosk",
+      "name": "Elaravosk",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6634,
+      "js": "js/living_maps/sylvaveryn-elaravosk.js"
+    },
+    {
+      "id": "sylvaveryn-lethyrvos",
+      "name": "Lethyrvos",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6645,
+      "js": "js/living_maps/sylvaveryn-lethyrvos.js"
+    },
+    {
+      "id": "sylvaveryn-myrvaelun",
+      "name": "Myrvaelûn",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6624,
+      "js": "js/living_maps/sylvaveryn-myrvaelun.js"
+    },
+    {
+      "id": "sylvaveryn-sylthados",
+      "name": "Sylthadös",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6629,
+      "js": "js/living_maps/sylvaveryn-sylthados.js"
+    },
+    {
+      "id": "sylvaveryn-thalavaryn",
+      "name": "Thalavaryn",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6650,
+      "js": "js/living_maps/sylvaveryn-thalavaryn.js"
+    },
+    {
+      "id": "sylvaveryn-vaelthyros",
+      "name": "Vaelthyros",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9056,
+      "js": "js/living_maps/sylvaveryn-vaelthyros.js"
+    },
+    {
+      "id": "sylvaveryn-vaerundell",
+      "name": "Vaerundell",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6650,
+      "js": "js/living_maps/sylvaveryn-vaerundell.js"
+    },
+    {
+      "id": "thalryss-abyrros",
+      "name": "Abyrros",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2137,
+      "js": "js/living_maps/thalryss-abyrros.js"
+    },
+    {
+      "id": "thalryss-blackwake-isles",
+      "name": "Blackwake Isles",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6637,
+      "js": "js/living_maps/thalryss-blackwake-isles.js"
+    },
+    {
+      "id": "thalryss-dreadcurrent",
+      "name": "Dreadcurrent",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6653,
+      "js": "js/living_maps/thalryss-dreadcurrent.js"
+    },
+    {
+      "id": "thalryss-grimwater-reach",
+      "name": "Grimwater Reach",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6646,
+      "js": "js/living_maps/thalryss-grimwater-reach.js"
+    },
+    {
+      "id": "thalryss-leviamor",
+      "name": "Leviamor",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4652,
+      "js": "js/living_maps/thalryss-leviamor.js"
+    },
+    {
+      "id": "thalryss-ocevaruun",
+      "name": "Ocevaruun",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6624,
+      "js": "js/living_maps/thalryss-ocevaruun.js"
+    },
+    {
+      "id": "thalryss-skulltide-expanse",
+      "name": "Skulltide Expanse",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9013,
+      "js": "js/living_maps/thalryss-skulltide-expanse.js"
+    },
+    {
+      "id": "thalryss-thalkazuun",
+      "name": "Thal’kazuun",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6639,
+      "js": "js/living_maps/thalryss-thalkazuun.js"
+    },
+    {
+      "id": "thalryss-vorthalass",
+      "name": "Vorthalass",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6641,
+      "js": "js/living_maps/thalryss-vorthalass.js"
+    },
+    {
+      "id": "vaelmyrith-eldryssar",
+      "name": "Eldryssar",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9029,
+      "js": "js/living_maps/vaelmyrith-eldryssar.js"
+    },
+    {
+      "id": "vaelmyrith-lunethryl",
+      "name": "Lunethryl",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6645,
+      "js": "js/living_maps/vaelmyrith-lunethryl.js"
+    },
+    {
+      "id": "vaelmyrith-velkynwood",
+      "name": "Velkynwood",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6647,
+      "js": "js/living_maps/vaelmyrith-velkynwood.js"
+    },
+    {
+      "id": "vaelmyrith-whispergrove",
+      "name": "Whispergrove",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6634,
+      "js": "js/living_maps/vaelmyrith-whispergrove.js"
+    },
+    {
+      "id": "virelport-bronzewake",
+      "name": "Bronzewake",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9083,
+      "js": "js/living_maps/virelport-bronzewake.js"
+    },
+    {
+      "id": "virelport-stormgullet",
+      "name": "Stormgullet",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6652,
+      "js": "js/living_maps/virelport-stormgullet.js"
+    },
+    {
+      "id": "virelport-straithaven",
+      "name": "Straithaven",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6657,
+      "js": "js/living_maps/virelport-straithaven.js"
+    },
+    {
+      "id": "virelport-veilstrand",
+      "name": "Veilstrand",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6651,
+      "js": "js/living_maps/virelport-veilstrand.js"
+    },
+    {
+      "id": "vuelmora-glysera",
+      "name": "Glysera",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2151,
+      "js": "js/living_maps/vuelmora-glysera.js"
+    },
+    {
+      "id": "vuelmora-hyselva",
+      "name": "Hyselva",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9051,
+      "js": "js/living_maps/vuelmora-hyselva.js"
+    },
+    {
+      "id": "vuelmora-ithmora",
+      "name": "Ithmora",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2146,
+      "js": "js/living_maps/vuelmora-ithmora.js"
+    },
+    {
+      "id": "vuelmora-mornelya",
+      "name": "Mornelya",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4673,
+      "js": "js/living_maps/vuelmora-mornelya.js"
+    },
+    {
+      "id": "vuelmora-oelnoreu",
+      "name": "Oelnoreu",
+      "type": "Town",
+      "npcs": 1050,
+      "buildings": 900,
+      "rooms": 4664,
+      "js": "js/living_maps/vuelmora-oelnoreu.js"
+    },
+    {
+      "id": "zaltharuun-amazuul",
+      "name": "Amazuul",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2146,
+      "js": "js/living_maps/zaltharuun-amazuul.js"
+    },
+    {
+      "id": "zaltharuun-ithkazuun",
+      "name": "Ithkazuun",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6664,
+      "js": "js/living_maps/zaltharuun-ithkazuun.js"
+    },
+    {
+      "id": "zaltharuun-kethmora",
+      "name": "Keth’mora",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6661,
+      "js": "js/living_maps/zaltharuun-kethmora.js"
+    },
+    {
+      "id": "zaltharuun-sszaruun",
+      "name": "Sszaruun",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 9036,
+      "js": "js/living_maps/zaltharuun-sszaruun.js"
+    },
+    {
+      "id": "zaltharuun-thalzuroth",
+      "name": "Thal’zuroth",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6681,
+      "js": "js/living_maps/zaltharuun-thalzuroth.js"
+    },
+    {
+      "id": "zaltharuun-vaelzahara",
+      "name": "Vaelzahara",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6656,
+      "js": "js/living_maps/zaltharuun-vaelzahara.js"
+    },
+    {
+      "id": "zaltharuun-varesh-ka",
+      "name": "Varesh-Ka",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6639,
+      "js": "js/living_maps/zaltharuun-varesh-ka.js"
+    },
+    {
+      "id": "zaltharuun-xalvoroq",
+      "name": "Xal’voroq",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6658,
+      "js": "js/living_maps/zaltharuun-xalvoroq.js"
+    },
+    {
+      "id": "zaltharuun-zhurakthel",
+      "name": "Zhurak’thel",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6620,
+      "js": "js/living_maps/zaltharuun-zhurakthel.js"
+    },
+    {
+      "id": "zharvokh-drakzhul",
+      "name": "Drakzhul",
+      "type": "Village",
+      "npcs": 350,
+      "buildings": 420,
+      "rooms": 2141,
+      "js": "js/living_maps/zharvokh-drakzhul.js"
+    },
+    {
+      "id": "zharvokh-karag-thul",
+      "name": "Karag-Thûl",
+      "type": "Capital City",
+      "npcs": 2650,
+      "buildings": 1800,
+      "rooms": 8999,
+      "js": "js/living_maps/zharvokh-karag-thul.js"
+    },
+    {
+      "id": "zharvokh-moltharok",
+      "name": "Moltharok",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6666,
+      "js": "js/living_maps/zharvokh-moltharok.js"
+    },
+    {
+      "id": "zharvokh-tharvokar",
+      "name": "Tharvokar",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6647,
+      "js": "js/living_maps/zharvokh-tharvokar.js"
+    },
+    {
+      "id": "zharvokh-vulkradun",
+      "name": "Vulkradûn",
+      "type": "City",
+      "npcs": 2016,
+      "buildings": 1312,
+      "rooms": 6632,
+      "js": "js/living_maps/zharvokh-vulkradun.js"
+    }
+  ]
+}

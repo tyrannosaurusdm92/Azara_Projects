@@ -1,0 +1,2567 @@
+{
+  "schema": "source_world.locationGeneratorRules.v1",
+  "source": "source_world_location_npc_percentages_merged.docx",
+  "summary": {
+    "Capital City": {
+      "sourcePools": 14,
+      "minLocations": 327,
+      "maxLocations": 342,
+      "averageLocations": 335.0
+    },
+    "City": {
+      "sourcePools": 22,
+      "minLocations": 236,
+      "maxLocations": 252,
+      "averageLocations": 244.0
+    },
+    "Town": {
+      "sourcePools": 21,
+      "minLocations": 135,
+      "maxLocations": 151,
+      "averageLocations": 143.0
+    },
+    "Village": {
+      "sourcePools": 16,
+      "minLocations": 59,
+      "maxLocations": 71,
+      "averageLocations": 64.9
+    }
+  },
+  "canonicalTypes": {
+    "Government & Civic": "Town halls, courts, permits, registry offices, guard headquarters, ministries, civic bureaus, customs, command offices.",
+    "Religious & Spiritual": "Temples, shrines, cathedrals, monasteries, funerary sites, memorial necropolises, worship offices, divine containment liaison sites.",
+    "Medical, Alchemy & Ichor": "Apothecaries, clinics, hospitals, potion exchanges, alchemy stores, ichor-regulated medical offices, sanitariums.",
+    "Commercial & Retail": "Markets, general stores, provisioning, furniture, jewelry, exchanges, bazaars, supply counters, pawnshops, merchant streets.",
+    "Food, Drink & Hospitality": "Taverns, inns, hostels, hotels, bakeries, butcher shops, restaurants, tea houses, bathhouses, common houses.",
+    "Education, Archives & Lore": "Schools, universities, libraries, archives, museums, scroll offices, research districts, cartographers, newspapers.",
+    "Industry & Crafting": "Blacksmiths, foundries, workshops, mills, ropeworks, clockwork halls, engine works, shipwrights, forges, repair yards.",
+    "Agriculture, Animals & Food Supply": "Farms, stables, orchards, greenhouses, kennels, hunting lodges, fisheries, kelp farms, familiar breeders, granaries.",
+    "Nature & Wilderness": "Parks, gardens, groves, ranger sites, wilderness preserves, forest pools, sanctuaries, moss gardens.",
+    "Maritime & Waterfront": "Harbors, docks, piers, wharves, fishing sites, lighthouses, sailmakers, reef sites, coastal and water-facing places.",
+    "Residential & Social Care": "Houses, apartments, boarding houses, orphanages, poorhouses, refugee quarters, worker housing, tenements.",
+    "Noble, Elite & Prestige": "Palaces, noble estates, royal quarters, luxury districts, grand hotels, prestige institutions.",
+    "Criminal, Vice & Underground": "Black markets, smugglers, pirate sites, lawless alleys, undercities, gambling dens, hidden rebel platforms.",
+    "Transportation & Logistics": "Rail, caravan, ferry, steamship, skyship, submarine, portals, freight, warehouses, stations, terminals, route offices.",
+    "Special, Hazards & Adventure Sites": "Ruins, divine prison rumor-sites, storm shelters, disaster shelters, haunted pools, ancient hazards, unique hooks.",
+    "Other / Flexible": "Locations that can be assigned by DM or by additional rules based on settlement context."
+  },
+  "travelPercentages": {
+    "Settlement-bound residents": {
+      "Capital City": 52.0,
+      "City": 62.0,
+      "Town": 72.0,
+      "Village": 82.0
+    },
+    "Local district / daily commuters": {
+      "Capital City": 18.0,
+      "City": 17.0,
+      "Town": 12.0,
+      "Village": 7.0
+    },
+    "Same-province routine travelers": {
+      "Capital City": 12.0,
+      "City": 10.0,
+      "Town": 8.0,
+      "Village": 5.0
+    },
+    "Inter-province travelers": {
+      "Capital City": 8.0,
+      "City": 5.0,
+      "Town": 3.0,
+      "Village": 1.0
+    },
+    "Seasonal / itinerant travelers": {
+      "Capital City": 5.0,
+      "City": 4.0,
+      "Town": 4.0,
+      "Village": 4.0
+    },
+    "Elite, faction, or restricted-route travelers": {
+      "Capital City": 5.0,
+      "City": 2.0,
+      "Town": 1.0,
+      "Village": 1.0
+    }
+  },
+  "visitorPressure": {
+    "Capital City": {
+      "Day Visitors as % of Resident Population": "4-8%",
+      "Overnight Visitors": "1.5-3%",
+      "Transient / Route Workforce": "2-4%",
+      "Most Likely Transit Modes": "Rail, caravan, ferry/steamship, skyship, portal if capital"
+    },
+    "City": {
+      "Day Visitors as % of Resident Population": "2-5%",
+      "Overnight Visitors": "0.75-1.5%",
+      "Transient / Route Workforce": "1-2.5%",
+      "Most Likely Transit Modes": "Rail, caravan, ferry/steamship, skyship if large"
+    },
+    "Town": {
+      "Day Visitors as % of Resident Population": "1-3%",
+      "Overnight Visitors": "0.25-0.75%",
+      "Transient / Route Workforce": "0.5-1.5%",
+      "Most Likely Transit Modes": "Caravan, rail platform, ferry if water-linked"
+    },
+    "Village": {
+      "Day Visitors as % of Resident Population": "0.25-1%",
+      "Overnight Visitors": "0.05-0.25%",
+      "Transient / Route Workforce": "0.1-0.5%",
+      "Most Likely Transit Modes": "Caravan, ferry, foot/animal routes; rail only if strategically placed"
+    }
+  },
+  "travelFrequency": {
+    "Settlement-bound residents": {
+      "frequency": "Rarely leave settlement; may visit nearby outskirts monthly or seasonally.",
+      "bestUses": "Most homes, local shops, civic labor, elderly households, dependent households."
+    },
+    "Local district / daily commuters": {
+      "frequency": "Daily or weekly movement inside the settlement, district, harbor, rail stop, worksite, mine, farm, or shrine area.",
+      "bestUses": "Workers, students, guards, service staff, market workers, healers, apprentices."
+    },
+    "Same-province routine travelers": {
+      "frequency": "Weekly, monthly, or seasonal movement between settlements in one province.",
+      "bestUses": "Merchants, guild workers, clergy, couriers, artisans, caravan crews, fishers, harvest workers."
+    },
+    "Inter-province travelers": {
+      "frequency": "Monthly to quarterly, or whenever duty demands.",
+      "bestUses": "Faction agents, trade officers, diplomats, skyship crews, rail command, major clergy, nobles, expedition workers."
+    },
+    "Seasonal / itinerant travelers": {
+      "frequency": "Arrive for routes, harvests, storms, trade seasons, festivals, pilgrimages, repairs, and crisis work.",
+      "bestUses": "Performers, migrant labor, pilgrims, salvage crews, caravan workers, monster hunters, mercenary labor."
+    },
+    "Elite, faction, or restricted-route travelers": {
+      "frequency": "Irregular but high-impact; movement creates records, rumors, and faction consequences.",
+      "bestUses": "Tiered faction officers, ATA-cleared travelers, ambassadors, sanctioned couriers, high merchants, divine heralds."
+    }
+  },
+  "biomeProfiles": [
+    {
+      "id": "coastal_river_beach_and_grass_with_water",
+      "label": "Coastal River - Beach and grass with water",
+      "terrain": "Coastal River",
+      "variant": "Beach and grass with water",
+      "coverage": "Capital City: source (340 locations); City: source (250 locations); Town: source (149 locations); Village: source (70 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.3,
+          "City": 8.4,
+          "Town": 6.7,
+          "Village": 2.9
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.6,
+          "City": 5.2,
+          "Town": 5.4,
+          "Village": 5.7
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.2,
+          "City": 6.0,
+          "Town": 4.0,
+          "Village": 2.9
+        },
+        "Commercial & Retail": {
+          "Capital City": 12.9,
+          "City": 14.4,
+          "Town": 15.4,
+          "Village": 10.0
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.5,
+          "City": 8.0,
+          "Town": 10.1,
+          "Village": 10.0
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.8,
+          "City": 6.8,
+          "Town": 4.0,
+          "Village": 1.4
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.5,
+          "City": 9.2,
+          "Town": 11.4,
+          "Village": 14.3
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.1,
+          "City": 2.8,
+          "Town": 4.0,
+          "Village": 7.1
+        },
+        "Nature & Wilderness": {
+          "Capital City": 1.2,
+          "City": 1.2,
+          "Town": 1.3,
+          "Village": 1.4
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 5.9,
+          "City": 7.6,
+          "Town": 11.4,
+          "Village": 20.0
+        },
+        "Residential & Social Care": {
+          "Capital City": 5.0,
+          "City": 6.4,
+          "Town": 6.7,
+          "Village": 7.1
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.5,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.8,
+          "City": 3.6,
+          "Town": 2.7,
+          "Village": 1.4
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.6,
+          "City": 9.2,
+          "Town": 7.4,
+          "Village": 7.1
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.6,
+          "Town": 1.3,
+          "Village": 1.4
+        },
+        "Other / Flexible": {
+          "Capital City": 8.8,
+          "City": 8.4,
+          "Town": 8.1,
+          "Village": 7.1
+        }
+      }
+    },
+    {
+      "id": "coastal_river_beach_and_reefs_with_water",
+      "label": "Coastal River - Beach and reefs with water",
+      "terrain": "Coastal River",
+      "variant": "Beach and reefs with water",
+      "coverage": "Capital City: source (334 locations); City: source (244 locations); Town: source (144 locations); Village: source (65 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.8,
+          "City": 9.0,
+          "Town": 7.6,
+          "Village": 4.6
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.7,
+          "City": 5.3,
+          "Town": 5.6,
+          "Village": 6.2
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.6,
+          "City": 6.6,
+          "Town": 4.9,
+          "Village": 4.6
+        },
+        "Commercial & Retail": {
+          "Capital City": 12.6,
+          "City": 13.9,
+          "Town": 14.6,
+          "Village": 7.7
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.0,
+          "City": 7.4,
+          "Town": 9.0,
+          "Village": 7.7
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.9,
+          "City": 7.0,
+          "Town": 4.2,
+          "Village": 1.5
+        },
+        "Industry & Crafting": {
+          "Capital City": 7.8,
+          "City": 8.2,
+          "Town": 9.7,
+          "Village": 10.8
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 1.8,
+          "City": 2.5,
+          "Town": 3.5,
+          "Village": 6.2
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.9,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 6.9,
+          "City": 9.0,
+          "Town": 13.9,
+          "Village": 26.2
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.8,
+          "City": 6.1,
+          "Town": 6.2,
+          "Village": 6.2
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 4.2,
+          "City": 4.1,
+          "Town": 3.5,
+          "Village": 3.1
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.2,
+          "City": 8.6,
+          "Town": 6.9,
+          "Village": 6.2
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.1,
+          "City": 1.2,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Other / Flexible": {
+          "Capital City": 9.3,
+          "City": 9.0,
+          "Town": 9.0,
+          "Village": 9.2
+        }
+      }
+    },
+    {
+      "id": "lush_forest_deep_forest",
+      "label": "Lush Forest - Deep forest",
+      "terrain": "Lush Forest",
+      "variant": "Deep forest",
+      "coverage": "Capital City: derived: same variant average; City: source (249 locations); Town: source (148 locations); Village: source (69 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.7,
+          "City": 8.4,
+          "Town": 6.8,
+          "Village": 2.9
+        },
+        "Religious & Spiritual": {
+          "Capital City": 6.0,
+          "City": 5.6,
+          "Town": 6.1,
+          "Village": 7.2
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.2,
+          "City": 6.8,
+          "Town": 5.4,
+          "Village": 5.8
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.1,
+          "City": 14.9,
+          "Town": 16.2,
+          "Village": 11.6
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.6,
+          "City": 8.4,
+          "Town": 10.8,
+          "Village": 11.6
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.9,
+          "City": 6.8,
+          "Town": 4.1,
+          "Village": 1.4
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.7,
+          "City": 8.8,
+          "Town": 10.8,
+          "Village": 13.0
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.7,
+          "City": 4.8,
+          "Town": 7.4,
+          "Village": 14.5
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.9,
+          "City": 1.6,
+          "Town": 2.0,
+          "Village": 2.9
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.1,
+          "City": 2.4,
+          "Town": 2.7,
+          "Village": 1.4
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.8,
+          "City": 6.0,
+          "Town": 6.1,
+          "Village": 5.8
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.9,
+          "City": 3.6,
+          "Town": 2.7,
+          "Village": 1.4
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.4,
+          "City": 8.8,
+          "Town": 6.8,
+          "Village": 5.8
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 2.0,
+          "Town": 2.0,
+          "Village": 2.9
+        },
+        "Other / Flexible": {
+          "Capital City": 10.1,
+          "City": 9.6,
+          "Town": 10.1,
+          "Village": 11.6
+        }
+      }
+    },
+    {
+      "id": "lush_forest_hybrid_tree_and_forest_floor",
+      "label": "Lush Forest - Hybrid tree and forest floor",
+      "terrain": "Lush Forest",
+      "variant": "Hybrid tree and forest floor",
+      "coverage": "Capital City: derived: nearest available size (City); City: source (244 locations); Town: source (143 locations); Village: source (64 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 9.4,
+          "City": 9.4,
+          "Town": 8.4,
+          "Village": 6.2
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.3,
+          "City": 5.3,
+          "Town": 5.6,
+          "Village": 6.2
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.6,
+          "City": 6.6,
+          "Town": 4.9,
+          "Village": 4.7
+        },
+        "Commercial & Retail": {
+          "Capital City": 15.2,
+          "City": 15.2,
+          "Town": 16.8,
+          "Village": 12.5
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 8.2,
+          "City": 8.2,
+          "Town": 10.5,
+          "Village": 10.9
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.4,
+          "City": 7.4,
+          "Town": 4.9,
+          "Village": 3.1
+        },
+        "Industry & Crafting": {
+          "Capital City": 9.0,
+          "City": 9.0,
+          "Town": 11.2,
+          "Village": 14.1
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 3.3,
+          "City": 3.3,
+          "Town": 4.9,
+          "Village": 9.4
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.8,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.5,
+          "City": 2.5,
+          "Town": 2.8,
+          "Village": 1.6
+        },
+        "Residential & Social Care": {
+          "Capital City": 7.0,
+          "City": 7.0,
+          "Town": 7.7,
+          "Village": 9.4
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 1.2,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.7,
+          "City": 3.7,
+          "Town": 2.8,
+          "Village": 1.6
+        },
+        "Transportation & Logistics": {
+          "Capital City": 9.4,
+          "City": 9.4,
+          "Town": 7.7,
+          "Village": 7.8
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 1.6,
+          "City": 1.6,
+          "Town": 1.4,
+          "Village": 1.6
+        },
+        "Other / Flexible": {
+          "Capital City": 9.4,
+          "City": 9.4,
+          "Town": 9.8,
+          "Village": 10.9
+        }
+      }
+    },
+    {
+      "id": "lush_forest_marshes_and_swamps",
+      "label": "Lush Forest - Marshes and swamps",
+      "terrain": "Lush Forest",
+      "variant": "Marshes and swamps",
+      "coverage": "Capital City: derived: nearest available size (City); City: source (245 locations); Town: source (144 locations); Village: source (65 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 9.4,
+          "City": 9.4,
+          "Town": 8.3,
+          "Village": 6.2
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.7,
+          "City": 5.7,
+          "Town": 6.2,
+          "Village": 7.7
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.3,
+          "City": 7.3,
+          "Town": 6.2,
+          "Village": 7.7
+        },
+        "Commercial & Retail": {
+          "Capital City": 14.7,
+          "City": 14.7,
+          "Town": 16.0,
+          "Village": 10.8
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 9.0,
+          "City": 9.0,
+          "Town": 11.8,
+          "Village": 13.8
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.9,
+          "City": 6.9,
+          "Town": 4.2,
+          "Village": 1.5
+        },
+        "Industry & Crafting": {
+          "Capital City": 9.0,
+          "City": 9.0,
+          "Town": 11.1,
+          "Village": 13.8
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.9,
+          "City": 2.9,
+          "Town": 4.2,
+          "Village": 7.7
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.8,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.9,
+          "City": 2.9,
+          "Town": 3.5,
+          "Village": 3.1
+        },
+        "Residential & Social Care": {
+          "Capital City": 6.1,
+          "City": 6.1,
+          "Town": 6.2,
+          "Village": 6.2
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 1.2,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.7,
+          "City": 3.7,
+          "Town": 2.8,
+          "Village": 1.5
+        },
+        "Transportation & Logistics": {
+          "Capital City": 8.6,
+          "City": 8.6,
+          "Town": 6.2,
+          "Village": 4.6
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.0,
+          "City": 2.0,
+          "Town": 2.1,
+          "Village": 3.1
+        },
+        "Other / Flexible": {
+          "Capital City": 9.8,
+          "City": 9.8,
+          "Town": 10.4,
+          "Village": 12.3
+        }
+      }
+    },
+    {
+      "id": "lush_forest_partial_forest",
+      "label": "Lush Forest - Partial forest",
+      "terrain": "Lush Forest",
+      "variant": "Partial forest",
+      "coverage": "Capital City: derived: same variant average; City: source (236 locations); Town: source (135 locations); Village: source (59 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 11.0,
+          "City": 9.3,
+          "Town": 8.1,
+          "Village": 5.1
+        },
+        "Religious & Spiritual": {
+          "Capital City": 6.1,
+          "City": 5.5,
+          "Town": 5.9,
+          "Village": 6.8
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.7,
+          "City": 6.8,
+          "Town": 5.2,
+          "Village": 5.1
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.8,
+          "City": 15.7,
+          "Town": 17.8,
+          "Village": 13.6
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.1,
+          "City": 8.1,
+          "Town": 10.4,
+          "Village": 10.2
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.0,
+          "City": 7.2,
+          "Town": 4.4,
+          "Village": 1.7
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.0,
+          "City": 9.3,
+          "Town": 11.9,
+          "Village": 16.9
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.8,
+          "City": 4.2,
+          "Town": 6.7,
+          "Village": 13.6
+        },
+        "Nature & Wilderness": {
+          "Capital City": 1.2,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 1.7
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.1,
+          "City": 2.5,
+          "Town": 3.0,
+          "Village": 1.7
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.9,
+          "City": 6.4,
+          "Town": 6.7,
+          "Village": 6.8
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.7,
+          "City": 1.3,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 4.0,
+          "City": 3.8,
+          "Town": 3.0,
+          "Village": 1.7
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.7,
+          "City": 8.5,
+          "Town": 5.9,
+          "Village": 5.1
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.3,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Other / Flexible": {
+          "Capital City": 9.5,
+          "City": 9.3,
+          "Town": 9.6,
+          "Village": 10.2
+        }
+      }
+    },
+    {
+      "id": "lush_forest_treetops_treehouses",
+      "label": "Lush Forest - Treetops - treehouses",
+      "terrain": "Lush Forest",
+      "variant": "Treetops - treehouses",
+      "coverage": "Capital City: derived: nearest available size (City); City: source (239 locations); Town: source (138 locations); Village: source (61 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 8.8,
+          "City": 8.8,
+          "Town": 7.2,
+          "Village": 3.3
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.9,
+          "City": 5.9,
+          "Town": 6.5,
+          "Village": 8.2
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.1,
+          "City": 7.1,
+          "Town": 5.8,
+          "Village": 6.6
+        },
+        "Commercial & Retail": {
+          "Capital City": 15.5,
+          "City": 15.5,
+          "Town": 17.4,
+          "Village": 13.1
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 8.4,
+          "City": 8.4,
+          "Town": 10.9,
+          "Village": 11.5
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.5,
+          "City": 7.5,
+          "Town": 5.1,
+          "Village": 3.3
+        },
+        "Industry & Crafting": {
+          "Capital City": 9.2,
+          "City": 9.2,
+          "Town": 11.6,
+          "Village": 14.8
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.1,
+          "City": 2.1,
+          "Town": 2.9,
+          "Village": 6.6
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.8,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.9,
+          "City": 2.9,
+          "Town": 3.6,
+          "Village": 3.3
+        },
+        "Residential & Social Care": {
+          "Capital City": 7.5,
+          "City": 7.5,
+          "Town": 8.7,
+          "Village": 11.5
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 1.3,
+          "City": 1.3,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.3,
+          "City": 3.3,
+          "Town": 2.2,
+          "Village": 0.0
+        },
+        "Transportation & Logistics": {
+          "Capital City": 8.8,
+          "City": 8.8,
+          "Town": 6.5,
+          "Village": 6.6
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 1.3,
+          "City": 1.3,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Other / Flexible": {
+          "Capital City": 9.6,
+          "City": 9.6,
+          "Town": 10.1,
+          "Village": 11.5
+        }
+      }
+    },
+    {
+      "id": "mountainous_deep_cavern",
+      "label": "Mountainous - Deep cavern",
+      "terrain": "Mountainous",
+      "variant": "Deep cavern",
+      "coverage": "Capital City: source (341 locations); City: source (251 locations); Town: source (150 locations); Village: derived: nearest available size (Town).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.9,
+          "City": 9.2,
+          "Town": 8.0,
+          "Village": 8.0
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.9,
+          "City": 5.6,
+          "Town": 6.0,
+          "Village": 6.0
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.5,
+          "City": 6.4,
+          "Town": 4.7,
+          "Village": 4.7
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.5,
+          "City": 15.1,
+          "Town": 16.7,
+          "Village": 16.7
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.5,
+          "City": 8.0,
+          "Town": 10.0,
+          "Village": 10.0
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.0,
+          "City": 7.2,
+          "Town": 4.7,
+          "Village": 4.7
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.2,
+          "City": 8.8,
+          "Town": 10.7,
+          "Village": 10.7
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.6,
+          "City": 3.6,
+          "Town": 5.3,
+          "Village": 5.3
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.9,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.7
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.1,
+          "City": 2.4,
+          "Town": 2.7,
+          "Village": 2.7
+        },
+        "Residential & Social Care": {
+          "Capital City": 5.0,
+          "City": 6.4,
+          "Town": 6.7,
+          "Village": 6.7
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.5,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.8,
+          "City": 3.6,
+          "Town": 2.7,
+          "Village": 2.7
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.6,
+          "City": 9.2,
+          "Town": 7.3,
+          "Village": 7.3
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.3,
+          "City": 1.6,
+          "Town": 1.3,
+          "Village": 1.3
+        },
+        "Other / Flexible": {
+          "Capital City": 10.9,
+          "City": 11.2,
+          "Town": 12.7,
+          "Village": 12.7
+        }
+      }
+    },
+    {
+      "id": "mountainous_mountain_range",
+      "label": "Mountainous - Mountain range",
+      "terrain": "Mountainous",
+      "variant": "Mountain range",
+      "coverage": "Capital City: source (335 locations); City: source (245 locations); Town: source (143 locations); Village: derived: nearest available size (Town).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.4,
+          "City": 8.6,
+          "Town": 7.0,
+          "Village": 7.0
+        },
+        "Religious & Spiritual": {
+          "Capital City": 6.0,
+          "City": 5.7,
+          "Town": 6.3,
+          "Village": 6.3
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.6,
+          "City": 6.5,
+          "Town": 4.9,
+          "Village": 4.9
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.1,
+          "City": 14.7,
+          "Town": 16.1,
+          "Village": 16.1
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.6,
+          "City": 8.2,
+          "Town": 10.5,
+          "Village": 10.5
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.2,
+          "City": 7.3,
+          "Town": 4.9,
+          "Village": 4.9
+        },
+        "Industry & Crafting": {
+          "Capital City": 7.8,
+          "City": 8.2,
+          "Town": 9.8,
+          "Village": 9.8
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.7,
+          "City": 3.7,
+          "Town": 5.6,
+          "Village": 5.6
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.9,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.7
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.1,
+          "City": 2.4,
+          "Town": 2.8,
+          "Village": 2.8
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.8,
+          "City": 6.1,
+          "Town": 6.3,
+          "Village": 6.3
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.6,
+          "City": 3.3,
+          "Town": 2.1,
+          "Village": 2.1
+        },
+        "Transportation & Logistics": {
+          "Capital City": 11.3,
+          "City": 10.2,
+          "Town": 8.4,
+          "Village": 8.4
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.6,
+          "Town": 1.4,
+          "Village": 1.4
+        },
+        "Other / Flexible": {
+          "Capital City": 11.0,
+          "City": 11.4,
+          "Town": 13.3,
+          "Village": 13.3
+        }
+      }
+    },
+    {
+      "id": "mountainous_valley",
+      "label": "Mountainous - Valley",
+      "terrain": "Mountainous",
+      "variant": "Valley",
+      "coverage": "Capital City: source (331 locations); City: source (241 locations); Town: source (140 locations); Village: derived: nearest available size (Town).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 11.2,
+          "City": 9.5,
+          "Town": 8.6,
+          "Village": 8.6
+        },
+        "Religious & Spiritual": {
+          "Capital City": 6.0,
+          "City": 5.8,
+          "Town": 6.4,
+          "Village": 6.4
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.3,
+          "City": 6.2,
+          "Town": 4.3,
+          "Village": 4.3
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.3,
+          "City": 14.9,
+          "Town": 16.4,
+          "Village": 16.4
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.9,
+          "City": 8.7,
+          "Town": 11.4,
+          "Village": 11.4
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.9,
+          "City": 7.1,
+          "Town": 4.3,
+          "Village": 4.3
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.2,
+          "City": 8.7,
+          "Town": 10.7,
+          "Village": 10.7
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 3.3,
+          "City": 4.6,
+          "Town": 7.1,
+          "Village": 7.1
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.9,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.7
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.4,
+          "City": 2.9,
+          "Town": 3.6,
+          "Village": 3.6
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.8,
+          "City": 6.2,
+          "Town": 6.4,
+          "Village": 6.4
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.6,
+          "City": 3.3,
+          "Town": 2.1,
+          "Village": 2.1
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.3,
+          "City": 8.7,
+          "Town": 6.4,
+          "Village": 6.4
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.7,
+          "Town": 1.4,
+          "Village": 1.4
+        },
+        "Other / Flexible": {
+          "Capital City": 9.7,
+          "City": 9.5,
+          "Town": 10.0,
+          "Village": 10.0
+        }
+      }
+    },
+    {
+      "id": "ocean_ocean_surface_floating_settlement",
+      "label": "Ocean - Ocean Surface floating settlement",
+      "terrain": "Ocean",
+      "variant": "Ocean Surface floating settlement",
+      "coverage": "Capital City: source (338 locations); City: source (248 locations); Town: derived: nearest available size (City); Village: derived: nearest available size (City).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.7,
+          "City": 8.9,
+          "Town": 8.9,
+          "Village": 8.9
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.9,
+          "City": 5.6,
+          "Town": 5.6,
+          "Village": 5.6
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.5,
+          "City": 6.5,
+          "Town": 6.5,
+          "Village": 6.5
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.0,
+          "City": 14.5,
+          "Town": 14.5,
+          "Village": 14.5
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.5,
+          "City": 8.1,
+          "Town": 8.1,
+          "Village": 8.1
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.8,
+          "City": 6.9,
+          "Town": 6.9,
+          "Village": 6.9
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.0,
+          "City": 8.5,
+          "Town": 8.5,
+          "Village": 8.5
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.1,
+          "City": 2.8,
+          "Town": 2.8,
+          "Village": 2.8
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.9,
+          "City": 0.8,
+          "Town": 0.8,
+          "Village": 0.8
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 4.1,
+          "City": 5.2,
+          "Town": 5.2,
+          "Village": 5.2
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.7,
+          "City": 6.0,
+          "Town": 6.0,
+          "Village": 6.0
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 1.2,
+          "Village": 1.2
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 4.1,
+          "City": 4.0,
+          "Town": 4.0,
+          "Village": 4.0
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.9,
+          "City": 9.7,
+          "Town": 9.7,
+          "Village": 9.7
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.6,
+          "Town": 1.6,
+          "Village": 1.6
+        },
+        "Other / Flexible": {
+          "Capital City": 9.8,
+          "City": 9.7,
+          "Town": 9.7,
+          "Village": 9.7
+        }
+      }
+    },
+    {
+      "id": "ocean_underwater_with_reefs",
+      "label": "Ocean - Underwater with reefs",
+      "terrain": "Ocean",
+      "variant": "Underwater with reefs",
+      "coverage": "Capital City: source (337 locations); City: source (248 locations); Town: source (150 locations); Village: source (71 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.4,
+          "City": 8.5,
+          "Town": 6.7,
+          "Village": 2.8
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.9,
+          "City": 5.6,
+          "Town": 6.0,
+          "Village": 7.0
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.1,
+          "City": 7.3,
+          "Town": 6.0,
+          "Village": 7.0
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.6,
+          "City": 15.3,
+          "Town": 16.7,
+          "Village": 12.7
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 7.4,
+          "City": 9.3,
+          "Town": 12.0,
+          "Village": 14.1
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.1,
+          "City": 7.3,
+          "Town": 4.7,
+          "Village": 2.8
+        },
+        "Industry & Crafting": {
+          "Capital City": 7.7,
+          "City": 8.1,
+          "Town": 9.3,
+          "Village": 9.9
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 1.8,
+          "City": 2.4,
+          "Town": 4.0,
+          "Village": 7.0
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.6,
+          "City": 0.4,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 3.3,
+          "City": 4.0,
+          "Town": 5.3,
+          "Village": 7.0
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.7,
+          "City": 6.0,
+          "Town": 6.0,
+          "Village": 5.6
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.3,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.9,
+          "City": 3.6,
+          "Town": 2.7,
+          "Village": 1.4
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.1,
+          "City": 8.5,
+          "Town": 6.7,
+          "Village": 5.6
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.6,
+          "Town": 1.3,
+          "Village": 1.4
+        },
+        "Other / Flexible": {
+          "Capital City": 10.7,
+          "City": 10.9,
+          "Town": 12.0,
+          "Village": 15.5
+        }
+      }
+    },
+    {
+      "id": "ocean_underwater_without_reefs",
+      "label": "Ocean - Underwater without reefs",
+      "terrain": "Ocean",
+      "variant": "Underwater without reefs",
+      "coverage": "Capital City: source (332 locations); City: source (243 locations); Town: source (144 locations); Village: source (65 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.5,
+          "City": 8.6,
+          "Town": 6.9,
+          "Village": 3.1
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.7,
+          "City": 5.3,
+          "Town": 5.6,
+          "Village": 6.2
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.2,
+          "City": 7.4,
+          "Town": 6.2,
+          "Village": 7.7
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.6,
+          "City": 15.2,
+          "Town": 16.7,
+          "Village": 12.3
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.9,
+          "City": 8.6,
+          "Town": 11.1,
+          "Village": 12.3
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.2,
+          "City": 7.4,
+          "Town": 4.9,
+          "Village": 3.1
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.1,
+          "City": 8.6,
+          "Town": 10.4,
+          "Village": 12.3
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 1.8,
+          "City": 2.5,
+          "Town": 4.2,
+          "Village": 7.7
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.6,
+          "City": 0.4,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.7,
+          "City": 3.3,
+          "Town": 4.2,
+          "Village": 4.6
+        },
+        "Residential & Social Care": {
+          "Capital City": 5.1,
+          "City": 6.6,
+          "Town": 6.9,
+          "Village": 7.7
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.3,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.6,
+          "City": 3.3,
+          "Town": 2.1,
+          "Village": 0.0
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.5,
+          "City": 9.1,
+          "Town": 6.9,
+          "Village": 6.2
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.6,
+          "Town": 1.4,
+          "Village": 1.5
+        },
+        "Other / Flexible": {
+          "Capital City": 10.5,
+          "City": 10.7,
+          "Town": 11.8,
+          "Village": 15.4
+        }
+      }
+    },
+    {
+      "id": "plains_farming",
+      "label": "Plains - Farming",
+      "terrain": "Plains",
+      "variant": "Farming",
+      "coverage": "Capital City: source (342 locations); City: source (252 locations); Town: source (151 locations); Village: derived: nearest available size (Town).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.5,
+          "City": 8.7,
+          "Town": 7.3,
+          "Village": 7.3
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.8,
+          "City": 5.6,
+          "Town": 6.0,
+          "Village": 6.0
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.4,
+          "City": 6.3,
+          "Town": 4.6,
+          "Village": 4.6
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.5,
+          "City": 15.1,
+          "Town": 16.6,
+          "Village": 16.6
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.7,
+          "City": 8.3,
+          "Town": 10.6,
+          "Village": 10.6
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.0,
+          "City": 7.1,
+          "Town": 4.6,
+          "Village": 4.6
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.5,
+          "City": 9.1,
+          "Town": 11.3,
+          "Village": 11.3
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 4.1,
+          "City": 5.6,
+          "Town": 8.6,
+          "Village": 8.6
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.9,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.7
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.3,
+          "City": 2.8,
+          "Town": 3.3,
+          "Village": 3.3
+        },
+        "Residential & Social Care": {
+          "Capital City": 5.0,
+          "City": 6.3,
+          "Town": 6.6,
+          "Village": 6.6
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.5,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.8,
+          "City": 3.6,
+          "Town": 2.6,
+          "Village": 2.6
+        },
+        "Transportation & Logistics": {
+          "Capital City": 9.6,
+          "City": 7.9,
+          "Town": 5.3,
+          "Village": 5.3
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.0,
+          "City": 1.2,
+          "Town": 0.7,
+          "Village": 0.7
+        },
+        "Other / Flexible": {
+          "Capital City": 10.2,
+          "City": 10.3,
+          "Town": 11.3,
+          "Village": 11.3
+        }
+      }
+    },
+    {
+      "id": "plains_grassland",
+      "label": "Plains - Grassland",
+      "terrain": "Plains",
+      "variant": "Grassland",
+      "coverage": "Capital City: source (332 locations); City: source (242 locations); Town: source (141 locations); Village: source (68 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.8,
+          "City": 9.1,
+          "Town": 7.8,
+          "Village": 4.4
+        },
+        "Religious & Spiritual": {
+          "Capital City": 6.0,
+          "City": 5.8,
+          "Town": 6.4,
+          "Village": 7.4
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.3,
+          "City": 6.2,
+          "Town": 4.3,
+          "Village": 4.4
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.6,
+          "City": 15.3,
+          "Town": 17.0,
+          "Village": 13.2
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.6,
+          "City": 8.3,
+          "Town": 10.6,
+          "Village": 10.3
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.9,
+          "City": 7.0,
+          "Town": 4.3,
+          "Village": 1.5
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.4,
+          "City": 9.1,
+          "Town": 11.3,
+          "Village": 16.2
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.7,
+          "City": 3.7,
+          "Town": 5.7,
+          "Village": 10.3
+        },
+        "Nature & Wilderness": {
+          "Capital City": 1.2,
+          "City": 1.2,
+          "Town": 1.4,
+          "Village": 1.5
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.1,
+          "City": 2.5,
+          "Town": 2.8,
+          "Village": 1.5
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.8,
+          "City": 6.2,
+          "Town": 6.4,
+          "Village": 5.9
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.6,
+          "City": 3.3,
+          "Town": 2.1,
+          "Village": 0.0
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.5,
+          "City": 9.1,
+          "Town": 7.1,
+          "Village": 8.8
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.7,
+          "Town": 1.4,
+          "Village": 1.5
+        },
+        "Other / Flexible": {
+          "Capital City": 10.2,
+          "City": 10.3,
+          "Town": 11.3,
+          "Village": 13.2
+        }
+      }
+    },
+    {
+      "id": "plains_hybrid_farming_forest_grassland",
+      "label": "Plains - Hybrid farming forest grassland",
+      "terrain": "Plains",
+      "variant": "Hybrid farming forest grassland",
+      "coverage": "Capital City: source (332 locations); City: source (242 locations); Town: source (141 locations); Village: derived: nearest available size (Town).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.5,
+          "City": 8.7,
+          "Town": 7.1,
+          "Village": 7.1
+        },
+        "Religious & Spiritual": {
+          "Capital City": 6.0,
+          "City": 5.8,
+          "Town": 6.4,
+          "Village": 6.4
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.3,
+          "City": 6.2,
+          "Town": 4.3,
+          "Village": 4.3
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.9,
+          "City": 15.7,
+          "Town": 17.7,
+          "Village": 17.7
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.9,
+          "City": 8.7,
+          "Town": 11.3,
+          "Village": 11.3
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.9,
+          "City": 7.0,
+          "Town": 4.3,
+          "Village": 4.3
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.1,
+          "City": 8.7,
+          "Town": 10.6,
+          "Village": 10.6
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 3.0,
+          "City": 4.1,
+          "Town": 6.4,
+          "Village": 6.4
+        },
+        "Nature & Wilderness": {
+          "Capital City": 1.2,
+          "City": 1.2,
+          "Town": 1.4,
+          "Village": 1.4
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.4,
+          "City": 2.9,
+          "Town": 3.5,
+          "Village": 3.5
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.8,
+          "City": 6.2,
+          "Town": 6.4,
+          "Village": 6.4
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.6,
+          "City": 3.3,
+          "Town": 2.1,
+          "Village": 2.1
+        },
+        "Transportation & Logistics": {
+          "Capital City": 9.9,
+          "City": 8.3,
+          "Town": 5.7,
+          "Village": 5.7
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.7,
+          "Town": 1.4,
+          "Village": 1.4
+        },
+        "Other / Flexible": {
+          "Capital City": 10.2,
+          "City": 10.3,
+          "Town": 11.3,
+          "Village": 11.3
+        }
+      }
+    },
+    {
+      "id": "plains_prairie",
+      "label": "Plains - Prairie",
+      "terrain": "Plains",
+      "variant": "Prairie",
+      "coverage": "Capital City: source (334 locations); City: source (244 locations); Town: source (143 locations); Village: source (69 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.5,
+          "City": 8.6,
+          "Town": 7.0,
+          "Village": 2.9
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.7,
+          "City": 5.3,
+          "Town": 5.6,
+          "Village": 5.8
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.9,
+          "City": 7.0,
+          "Town": 5.6,
+          "Village": 5.8
+        },
+        "Commercial & Retail": {
+          "Capital City": 14.1,
+          "City": 16.0,
+          "Town": 18.2,
+          "Village": 15.9
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.6,
+          "City": 8.2,
+          "Town": 10.5,
+          "Village": 11.6
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.9,
+          "City": 7.0,
+          "Town": 4.2,
+          "Village": 1.4
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.4,
+          "City": 9.0,
+          "Town": 11.2,
+          "Village": 15.9
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.1,
+          "City": 2.9,
+          "Town": 4.2,
+          "Village": 7.2
+        },
+        "Nature & Wilderness": {
+          "Capital City": 1.2,
+          "City": 1.2,
+          "Town": 1.4,
+          "Village": 1.4
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.1,
+          "City": 2.5,
+          "Town": 2.8,
+          "Village": 1.4
+        },
+        "Residential & Social Care": {
+          "Capital City": 5.1,
+          "City": 6.6,
+          "Town": 7.0,
+          "Village": 7.2
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.6,
+          "City": 3.3,
+          "Town": 2.1,
+          "Village": 0.0
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.8,
+          "City": 9.4,
+          "Town": 7.7,
+          "Village": 8.7
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.6,
+          "Town": 1.4,
+          "Village": 1.4
+        },
+        "Other / Flexible": {
+          "Capital City": 10.2,
+          "City": 10.2,
+          "Town": 11.2,
+          "Village": 13.0
+        }
+      }
+    },
+    {
+      "id": "rainforest_deep_forest",
+      "label": "Rainforest - Deep forest",
+      "terrain": "Rainforest",
+      "variant": "Deep forest",
+      "coverage": "Capital City: source (335 locations); City: source (245 locations); Town: source (144 locations); Village: source (65 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 10.7,
+          "City": 9.0,
+          "Town": 7.6,
+          "Village": 4.6
+        },
+        "Religious & Spiritual": {
+          "Capital City": 6.0,
+          "City": 5.7,
+          "Town": 6.2,
+          "Village": 7.7
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.2,
+          "City": 7.3,
+          "Town": 6.2,
+          "Village": 7.7
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.1,
+          "City": 14.7,
+          "Town": 16.0,
+          "Village": 10.8
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.6,
+          "City": 8.2,
+          "Town": 10.4,
+          "Village": 10.8
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 6.9,
+          "City": 6.9,
+          "Town": 4.2,
+          "Village": 1.5
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.7,
+          "City": 9.4,
+          "Town": 11.8,
+          "Village": 15.4
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.7,
+          "City": 3.7,
+          "Town": 5.6,
+          "Village": 10.8
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.9,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.1,
+          "City": 2.4,
+          "Town": 2.8,
+          "Village": 1.5
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.8,
+          "City": 6.1,
+          "Town": 6.2,
+          "Village": 6.2
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.6,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.9,
+          "City": 3.7,
+          "Town": 2.8,
+          "Village": 1.5
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.4,
+          "City": 9.0,
+          "Town": 6.9,
+          "Village": 6.2
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.6,
+          "Town": 1.4,
+          "Village": 1.5
+        },
+        "Other / Flexible": {
+          "Capital City": 10.1,
+          "City": 10.2,
+          "Town": 11.1,
+          "Village": 13.8
+        }
+      }
+    },
+    {
+      "id": "rainforest_hybrid_tree_and_forest_floor",
+      "label": "Rainforest - Hybrid tree and forest floor",
+      "terrain": "Rainforest",
+      "variant": "Hybrid tree and forest floor",
+      "coverage": "Capital City: derived: nearest available size (City); City: source (241 locations); Town: source (140 locations); Village: source (61 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 9.1,
+          "City": 9.1,
+          "Town": 7.9,
+          "Village": 4.9
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.4,
+          "City": 5.4,
+          "Town": 5.7,
+          "Village": 6.6
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.5,
+          "City": 7.5,
+          "Town": 6.4,
+          "Village": 8.2
+        },
+        "Commercial & Retail": {
+          "Capital City": 15.4,
+          "City": 15.4,
+          "Town": 17.1,
+          "Village": 13.1
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 8.7,
+          "City": 8.7,
+          "Town": 11.4,
+          "Village": 13.1
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.1,
+          "City": 7.1,
+          "Town": 4.3,
+          "Village": 1.6
+        },
+        "Industry & Crafting": {
+          "Capital City": 9.1,
+          "City": 9.1,
+          "Town": 11.4,
+          "Village": 14.8
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.9,
+          "City": 2.9,
+          "Town": 4.3,
+          "Village": 8.2
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.8,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.5,
+          "City": 2.5,
+          "Town": 2.9,
+          "Village": 1.6
+        },
+        "Residential & Social Care": {
+          "Capital City": 6.2,
+          "City": 6.2,
+          "Town": 6.4,
+          "Village": 6.6
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 1.2,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.7,
+          "City": 3.7,
+          "Town": 2.9,
+          "Village": 1.6
+        },
+        "Transportation & Logistics": {
+          "Capital City": 8.7,
+          "City": 8.7,
+          "Town": 6.4,
+          "Village": 4.9
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 1.7,
+          "City": 1.7,
+          "Town": 1.4,
+          "Village": 1.6
+        },
+        "Other / Flexible": {
+          "Capital City": 10.0,
+          "City": 10.0,
+          "Town": 10.7,
+          "Village": 13.1
+        }
+      }
+    },
+    {
+      "id": "rainforest_marshes_and_swamps",
+      "label": "Rainforest - Marshes and swamps",
+      "terrain": "Rainforest",
+      "variant": "Marshes and swamps",
+      "coverage": "Capital City: derived: nearest available size (City); City: source (243 locations); Town: source (142 locations); Village: source (63 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 9.1,
+          "City": 9.1,
+          "Town": 7.7,
+          "Village": 4.8
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.8,
+          "City": 5.8,
+          "Town": 6.3,
+          "Village": 7.9
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.8,
+          "City": 7.8,
+          "Town": 7.0,
+          "Village": 9.5
+        },
+        "Commercial & Retail": {
+          "Capital City": 15.6,
+          "City": 15.6,
+          "Town": 17.6,
+          "Village": 14.3
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 8.2,
+          "City": 8.2,
+          "Town": 10.6,
+          "Village": 11.1
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.0,
+          "City": 7.0,
+          "Town": 4.2,
+          "Village": 1.6
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.2,
+          "City": 8.2,
+          "Town": 9.9,
+          "Village": 11.1
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 3.7,
+          "City": 3.7,
+          "Town": 5.6,
+          "Village": 11.1
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.8,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.9,
+          "City": 2.9,
+          "Town": 3.5,
+          "Village": 3.2
+        },
+        "Residential & Social Care": {
+          "Capital City": 6.6,
+          "City": 6.6,
+          "Town": 7.0,
+          "Village": 7.9
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 1.2,
+          "City": 1.2,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.7,
+          "City": 3.7,
+          "Town": 2.8,
+          "Village": 1.6
+        },
+        "Transportation & Logistics": {
+          "Capital City": 8.2,
+          "City": 8.2,
+          "Town": 5.6,
+          "Village": 3.2
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 1.6,
+          "City": 1.6,
+          "Town": 1.4,
+          "Village": 1.6
+        },
+        "Other / Flexible": {
+          "Capital City": 9.5,
+          "City": 9.5,
+          "Town": 9.9,
+          "Village": 11.1
+        }
+      }
+    },
+    {
+      "id": "rainforest_partial_forest",
+      "label": "Rainforest - Partial forest",
+      "terrain": "Rainforest",
+      "variant": "Partial forest",
+      "coverage": "Capital City: source (327 locations); City: source (237 locations); Town: source (136 locations); Village: source (63 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 11.0,
+          "City": 9.3,
+          "Town": 8.1,
+          "Village": 4.8
+        },
+        "Religious & Spiritual": {
+          "Capital City": 6.1,
+          "City": 5.9,
+          "Town": 6.6,
+          "Village": 7.9
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 6.7,
+          "City": 6.8,
+          "Town": 5.1,
+          "Village": 4.8
+        },
+        "Commercial & Retail": {
+          "Capital City": 13.8,
+          "City": 15.6,
+          "Town": 17.6,
+          "Village": 15.9
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 6.1,
+          "City": 7.6,
+          "Town": 9.6,
+          "Village": 11.1
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.0,
+          "City": 7.2,
+          "Town": 4.4,
+          "Village": 1.6
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.0,
+          "City": 8.4,
+          "Town": 10.3,
+          "Village": 12.7
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.8,
+          "City": 3.8,
+          "Town": 5.9,
+          "Village": 11.1
+        },
+        "Nature & Wilderness": {
+          "Capital City": 1.2,
+          "City": 1.3,
+          "Town": 2.2,
+          "Village": 3.2
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.1,
+          "City": 2.5,
+          "Town": 2.9,
+          "Village": 1.6
+        },
+        "Residential & Social Care": {
+          "Capital City": 4.9,
+          "City": 6.3,
+          "Town": 6.6,
+          "Village": 6.3
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 3.7,
+          "City": 1.3,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 4.0,
+          "City": 3.8,
+          "Town": 2.9,
+          "Village": 1.6
+        },
+        "Transportation & Logistics": {
+          "Capital City": 10.7,
+          "City": 9.3,
+          "Town": 6.6,
+          "Village": 6.3
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 2.4,
+          "City": 1.7,
+          "Town": 1.5,
+          "Village": 1.6
+        },
+        "Other / Flexible": {
+          "Capital City": 9.5,
+          "City": 9.3,
+          "Town": 9.6,
+          "Village": 9.5
+        }
+      }
+    },
+    {
+      "id": "rainforest_treetops",
+      "label": "Rainforest - Treetops",
+      "terrain": "Rainforest",
+      "variant": "Treetops",
+      "coverage": "Capital City: derived: nearest available size (City); City: source (239 locations); Town: source (138 locations); Village: source (61 locations).",
+      "percentages": {
+        "Government & Civic": {
+          "Capital City": 8.8,
+          "City": 8.8,
+          "Town": 7.2,
+          "Village": 3.3
+        },
+        "Religious & Spiritual": {
+          "Capital City": 5.4,
+          "City": 5.4,
+          "Town": 5.8,
+          "Village": 6.6
+        },
+        "Medical, Alchemy & Ichor": {
+          "Capital City": 7.1,
+          "City": 7.1,
+          "Town": 5.8,
+          "Village": 6.6
+        },
+        "Commercial & Retail": {
+          "Capital City": 15.5,
+          "City": 15.5,
+          "Town": 17.4,
+          "Village": 13.1
+        },
+        "Food, Drink & Hospitality": {
+          "Capital City": 8.4,
+          "City": 8.4,
+          "Town": 10.9,
+          "Village": 11.5
+        },
+        "Education, Archives & Lore": {
+          "Capital City": 7.5,
+          "City": 7.5,
+          "Town": 5.1,
+          "Village": 3.3
+        },
+        "Industry & Crafting": {
+          "Capital City": 8.4,
+          "City": 8.4,
+          "Town": 10.1,
+          "Village": 11.5
+        },
+        "Agriculture, Animals & Food Supply": {
+          "Capital City": 2.1,
+          "City": 2.1,
+          "Town": 2.9,
+          "Village": 6.6
+        },
+        "Nature & Wilderness": {
+          "Capital City": 0.8,
+          "City": 0.8,
+          "Town": 0.7,
+          "Village": 0.0
+        },
+        "Maritime & Waterfront": {
+          "Capital City": 2.9,
+          "City": 2.9,
+          "Town": 3.6,
+          "Village": 3.3
+        },
+        "Residential & Social Care": {
+          "Capital City": 7.5,
+          "City": 7.5,
+          "Town": 8.7,
+          "Village": 11.5
+        },
+        "Noble, Elite & Prestige": {
+          "Capital City": 1.3,
+          "City": 1.3,
+          "Town": 0.0,
+          "Village": 0.0
+        },
+        "Criminal, Vice & Underground": {
+          "Capital City": 3.3,
+          "City": 3.3,
+          "Town": 2.2,
+          "Village": 0.0
+        },
+        "Transportation & Logistics": {
+          "Capital City": 8.8,
+          "City": 8.8,
+          "Town": 6.5,
+          "Village": 6.6
+        },
+        "Special, Hazards & Adventure Sites": {
+          "Capital City": 1.7,
+          "City": 1.7,
+          "Town": 1.4,
+          "Village": 1.6
+        },
+        "Other / Flexible": {
+          "Capital City": 10.5,
+          "City": 10.5,
+          "Town": 11.6,
+          "Village": 14.8
+        }
+      }
+    }
+  ],
+  "biomeTravelAdjustments": [
+    {
+      "biomeSituation": "Ocean surface / coastal / reef",
+      "adjustment": "+3 to +8 percentage points to same-province and inter-province travel if harbors, ferries, steamships, or reef trade are active. Increase Maritime and Transit locations."
+    },
+    {
+      "biomeSituation": "Fully underwater",
+      "adjustment": "+5 to restricted-route and specialist travel; lower casual day visitors unless submarine terminals are common. Submarine crews, pressure engineers, reef surveyors, and salvage routes create transient worker pressure."
+    },
+    {
+      "biomeSituation": "Grassland / prairie / farming",
+      "adjustment": "+2 to seasonal/itinerant travel during harvest, herd movement, trade fairs, and caravan seasons. Villages stay more settlement-bound outside those periods."
+    },
+    {
+      "biomeSituation": "Mountain range",
+      "adjustment": "+3 to regional travel if mines, rail tunnels, gear-lifts, or sky-pass routes exist. Reduce casual visitors if passes are dangerous."
+    },
+    {
+      "biomeSituation": "Deep cavern",
+      "adjustment": "+4 to restricted-route, same-province, or faction movement; lower tourist movement unless the cavern is a trade hub. Underdeep routes and sealed corridors make travel political."
+    },
+    {
+      "biomeSituation": "Deep forest / rainforest",
+      "adjustment": "+2 to local and same-province travel through ranger, grove, hunter, and herbal routes; reduce inter-province travel unless rail, skyship, or portal access exists."
+    },
+    {
+      "biomeSituation": "Treetops / hybrid tree-floor",
+      "adjustment": "+3 to local commuter movement through ropeways, lifts, canopy paths, and vertical workplaces. Reduce heavy freight unless lift stations and ground depots exist."
+    },
+    {
+      "biomeSituation": "Marshes and swamps",
+      "adjustment": "+3 to same-province route movement by ferry, reed boat, guide path, smuggler route, or raised rail. Increase criminal/underground travel pressure if danger is high."
+    }
+  ],
+  "implementationSteps": [
+    {
+      "order": "Step 1",
+      "instruction": "Choose biome profile and settlement type."
+    },
+    {
+      "order": "Step 2",
+      "instruction": "Use the biome percentage table to allocate location types. Round only at the final location count."
+    },
+    {
+      "order": "Step 3",
+      "instruction": "Pull specific location names from the matching JSON pool when available; otherwise use nearest biome and settlement-size pool."
+    },
+    {
+      "order": "Step 4",
+      "instruction": "Apply danger level, alignment phase, race cache, faction pressure, and transit requirements as modifiers after the base location percentages."
+    },
+    {
+      "order": "Step 5",
+      "instruction": "Assign NPC travel behavior by settlement type. Then adjust for biome and transit infrastructure."
+    },
+    {
+      "order": "Step 6",
+      "instruction": "Ensure every generated settlement has food supply, housing, medical access, civic order, at least one transit path appropriate to biome, and a plausible reason people stay or travel."
+    }
+  ],
+  "generationTargets": {
+    "Capital City": {
+      "defaultCount": 335,
+      "min": 327,
+      "max": 342
+    },
+    "City": {
+      "defaultCount": 244,
+      "min": 236,
+      "max": 252
+    },
+    "Town": {
+      "defaultCount": 143,
+      "min": 135,
+      "max": 151
+    },
+    "Village": {
+      "defaultCount": 65,
+      "min": 59,
+      "max": 71
+    },
+    "District": {
+      "defaultCount": 36,
+      "min": 12,
+      "max": 90
+    },
+    "Individual building": {
+      "defaultCount": 1,
+      "min": 1,
+      "max": 1
+    },
+    "Business": {
+      "defaultCount": 1,
+      "min": 1,
+      "max": 1
+    },
+    "Landmark": {
+      "defaultCount": 1,
+      "min": 1,
+      "max": 1
+    },
+    "Quest location": {
+      "defaultCount": 1,
+      "min": 1,
+      "max": 3
+    },
+    "Dungeon": {
+      "defaultCount": 1,
+      "min": 1,
+      "max": 4
+    },
+    "Faction headquarters": {
+      "defaultCount": 1,
+      "min": 1,
+      "max": 2
+    }
+  }
+}
