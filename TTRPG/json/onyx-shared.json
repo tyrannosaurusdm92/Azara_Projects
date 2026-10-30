@@ -1,0 +1,49 @@
+{
+  "schema": "onyx.shared-runtime.v10",
+  "privateProfileData": false,
+  "backendAuthoritative": true,
+  "conversationCore": {
+    "master": "Pass 9 Fully Unified Master Dossier",
+    "masterSha256": "c19441d70441e3c5273b2a8a3750df6c563582a80378c67e4a8017eda35260ac",
+    "tabs": [
+      "virtual",
+      "health",
+      "leisure",
+      "work",
+      "design"
+    ],
+    "chatTabs": [
+      "virtual",
+      "health",
+      "leisure",
+      "work"
+    ],
+    "canonicalStates": [
+      "onyx_sleepy",
+      "onyx_snuggly",
+      "onyx_advising_professor",
+      "onyx_judgmental",
+      "onyx_listening",
+      "onyx_caring",
+      "onyx_hungry",
+      "onyx_purring",
+      "onyx_thinking",
+      "onyx_thoughtful"
+    ],
+    "rules": [
+      "higher-priority state wins",
+      "Design has no chat",
+      "Health defaults to no durable memory",
+      "profile-private facts are retrieved only by authenticated backend"
+    ]
+  },
+  "support": {
+    "retrieval": "backend-first",
+    "staticScope": "shared-safe-only"
+  },
+  "config": {
+    "attachmentLimit": 12,
+    "parallelFileParses": 3,
+    "parallelUrlFetches": 2
+  }
+}

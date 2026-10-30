@@ -1,0 +1,7 @@
+{
+  "schema":"onyx.work.project-catalog.v1",
+  "project":{"required":["id","name"],"fields":["id","name","category","status","priority","tags","summary","createdAt","updatedAt"]},
+  "catalogFile":{"required":["id","name"],"fields":["id","projectId","name","size","type","ext","kind","lastModified","addedAt"]},
+  "sorts":["updated","name","category","priority"],
+  "categories":["Coding","Gaming","Household","Idea Help","Image Creation","Writing","Research","Files","Planning","Other"]
+}

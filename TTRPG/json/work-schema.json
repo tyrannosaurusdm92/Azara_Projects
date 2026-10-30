@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "onyx.work.local-state.v1",
+  "title": "Onyx Work local workspace state",
+  "description": "Client-side structure only. No new backend table or Apps Script file is required.",
+  "type": "object",
+  "properties": {
+    "version": {"const": 1},
+    "activeServerId": {"type": "string"},
+    "activeChannelByServer": {"type": "object", "additionalProperties": {"type": "string"}},
+    "channelsByServer": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["id", "name"],
+          "properties": {
+            "id": {"type": "string"},
+            "name": {"type": "string"},
+            "topic": {"type": "string"},
+            "createdAt": {"type": "string"}
+          }
+        }
+      }
+    }
+  },
+  "required": ["version", "activeServerId", "activeChannelByServer", "channelsByServer"]
+}

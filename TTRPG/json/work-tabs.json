@@ -1,0 +1,83 @@
+{
+  "schema": "onyx.work.tabs.v1",
+  "tabs": [
+    {
+      "id": "coding",
+      "label": "Coding",
+      "icon": "</>",
+      "description": "Programming, debugging, architecture, APIs, web apps, and implementation help.",
+      "context": "Act as a capable coding collaborator. Preserve existing project constraints, inspect supplied context, explain material tradeoffs, and produce practical implementation help.",
+      "suggestions": ["Debug this error with me", "Plan an implementation before coding", "Review a code approach", "Help me refactor without changing behavior"],
+      "defaultChannels": [
+        {"id":"general","name":"general","topic":"General coding help."},
+        {"id":"debugging","name":"debugging","topic":"Errors, broken behavior, and debugging."},
+        {"id":"planning","name":"planning","topic":"Architecture, implementation plans, and technical decisions."}
+      ]
+    },
+    {
+      "id": "gaming",
+      "label": "Gaming",
+      "icon": "🎮",
+      "description": "Game design, builds, mechanics, balancing, walkthrough thinking, and multiplayer systems.",
+      "context": "Help with games and game development. Distinguish game-specific factual help from design brainstorming, preserve the user's stated constraints, and be concrete about mechanics.",
+      "suggestions": ["Help me design a game mechanic", "Compare two builds or strategies", "Balance this progression system", "Turn this idea into a gameplay loop"],
+      "defaultChannels": [
+        {"id":"general","name":"general","topic":"General gaming help."},
+        {"id":"game-design","name":"game-design","topic":"Mechanics, systems, progression, and level design."},
+        {"id":"strategy","name":"strategy","topic":"Builds, tactics, and game-specific planning."}
+      ]
+    },
+    {
+      "id": "household",
+      "label": "Household",
+      "icon": "⌂",
+      "description": "Home organization, routines, cleaning, planning, lists, and practical household problem-solving.",
+      "context": "Support practical household work with low-friction steps, adaptable checklists, and realistic sequencing. Do not turn ordinary household help into medical advice.",
+      "suggestions": ["Break this household task into steps", "Make a low-energy cleaning plan", "Help organize a room or storage area", "Build a reusable household checklist"],
+      "defaultChannels": [
+        {"id":"general","name":"general","topic":"General household help."},
+        {"id":"cleaning-organization","name":"cleaning-organization","topic":"Cleaning, decluttering, and organization."},
+        {"id":"planning","name":"planning","topic":"Household schedules, lists, and routines."}
+      ]
+    },
+    {
+      "id": "idea-help",
+      "label": "Idea Help",
+      "icon": "✦",
+      "description": "Brainstorming, comparing options, expanding rough ideas, and turning fragments into plans.",
+      "context": "Be an active brainstorming partner. Generate distinct possibilities, identify useful combinations, preserve the user's intent, and help narrow ideas without flattening creativity.",
+      "suggestions": ["Give me several different directions", "Help me combine these ideas", "Stress-test this concept", "Turn a rough thought into a usable plan"],
+      "defaultChannels": [
+        {"id":"brainstorm","name":"brainstorm","topic":"Fast, broad idea generation."},
+        {"id":"compare-options","name":"compare-options","topic":"Compare alternatives and tradeoffs."},
+        {"id":"flesh-it-out","name":"flesh-it-out","topic":"Develop a promising idea in depth."}
+      ]
+    },
+    {
+      "id": "image-creation",
+      "label": "Image Creation",
+      "icon": "▣",
+      "description": "Image generation, prompt development, composition, style direction, and visual iteration.",
+      "context": "Help develop image concepts and prompts. When generation mode is enabled, treat the user's message as the image request and preserve all stated composition and style constraints.",
+      "suggestions": ["Generate an image from this idea", "Improve this image prompt", "Plan the composition before generating", "Create a consistent visual style"],
+      "defaultChannels": [
+        {"id":"generate","name":"generate","topic":"Generate images with the existing Onyx AI Brain image action."},
+        {"id":"prompt-lab","name":"prompt-lab","topic":"Build and refine image prompts."},
+        {"id":"art-direction","name":"art-direction","topic":"Composition, visual language, and art direction."}
+      ]
+    },
+    {
+      "id": "writing",
+      "label": "Writing",
+      "icon": "Aa",
+      "description": "Drafting, rewriting, editing, creative writing, tone, structure, and language help.",
+      "context": "Act as a writing collaborator. Match requested voice and purpose, preserve important details, separate revision from critique, and avoid changing meaning unless asked.",
+      "suggestions": ["Draft this from my rough notes", "Rewrite this without changing the meaning", "Help with structure and flow", "Brainstorm a scene or piece of dialogue"],
+      "defaultChannels": [
+        {"id":"drafting","name":"drafting","topic":"Create new drafts from goals or notes."},
+        {"id":"rewrite-edit","name":"rewrite-edit","topic":"Rewrite, polish, proofread, and edit."},
+        {"id":"creative-writing","name":"creative-writing","topic":"Stories, scenes, dialogue, poetry, and other creative work."}
+      ]
+    }
+  ]
+}

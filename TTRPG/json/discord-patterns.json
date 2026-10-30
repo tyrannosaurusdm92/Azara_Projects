@@ -1,0 +1,30 @@
+{
+  "schema": "onyx.work.discord-reference.v1",
+  "implementation": "original-vanilla-html-css-js",
+  "copiedSourceCode": false,
+  "patternsApplied": [
+    "narrow server-style rail for top-level Work tabs",
+    "server-scoped channel/subtab sidebar",
+    "active server and active channel indicators",
+    "message viewport separated from the composer",
+    "auto-growing multiline composer with Enter-to-send and Shift+Enter",
+    "per-channel thread identity and message continuity",
+    "responsive channel drawer on narrow screens"
+  ],
+  "attachedArchivesReviewed": [
+    "discord-clone-main (3).zip",
+    "discord-clone-main (4).zip",
+    "discord-clone-main (5).zip",
+    "discord-clone-main (6).zip",
+    "discord-clone-main (7).zip",
+    "discord-clone-main (8).zip",
+    "discord-clone-master (1).zip",
+    "discord-clone-master (2).zip"
+  ],
+  "explicitMitRoots": [
+    "discord-clone-main (3)",
+    "discord-clone-main (6)",
+    "discord-clone-main (8)",
+    "discord-clone-master (1)"
+  ]
+}
