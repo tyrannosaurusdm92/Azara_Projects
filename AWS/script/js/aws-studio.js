@@ -240,8 +240,36 @@ function initDictionary(){
 }
 
 window.AWSStudio={syncUploads,importFiles,renderLibrary,downloadFromAWS};
+// Presentation preferences affect only the shell; no drafts, glyphs or resize positions change.
+function initPresentation(){
+ const focusButton=$('aws-focus-toggle'),densityButton=$('aws-density-toggle');
+ const saved=key=>{try{return localStorage.getItem(key)==='true'}catch{return false}};
+ const remember=(key,value)=>{try{localStorage.setItem(key,String(value))}catch{}};
+ let focused=saved('aws-focus-mode-v1'),roomy=saved('aws-roomy-layout-v1');
+ const paint=()=>{
+   document.body.classList.toggle('aws-focus-mode',focused);
+   document.body.classList.toggle('aws-roomy-layout',roomy);
+   focusButton.setAttribute('aria-pressed',String(focused));
+   focusButton.textContent=focused?'↩ Exit Focus':'⛶ Focus';
+   focusButton.title=focused?'Restore the planner and workspace tools':'Expand the workspace without changing your panel sizes';
+   densityButton.setAttribute('aria-pressed',String(roomy));
+   densityButton.textContent=roomy?'Roomier layout: On':'Roomier layout: Off';
+ };
+ focusButton.addEventListener('click',()=>{
+   focused=!focused;remember('aws-focus-mode-v1',focused);paint();
+ });
+ densityButton.addEventListener('click',()=>{
+   roomy=!roomy;remember('aws-roomy-layout-v1',roomy);paint();
+ });
+ document.addEventListener('keydown',event=>{
+   if(event.key!=='Escape'||!focused||event.defaultPrevented||expanded)return;
+   if(document.querySelector('dialog[open]')||($('keyboard')&&!$('keyboard').hidden))return;
+   focused=false;remember('aws-focus-mode-v1',false);paint();
+ });
+ paint();
+}
 let started=false;
-function startStudio(){if(started||!app()?.ready)return;started=true;initNav();initLibrary();initDictionary();initTTS();}
+function startStudio(){if(started||!app()?.ready)return;started=true;initNav();initPresentation();initLibrary();initDictionary();initTTS();}
 window.addEventListener('literaryfriend:ready',startStudio,{once:true});
 startStudio();
 })();
