@@ -108,7 +108,7 @@
   function chatTabIntro(server){return ({
     health:'Build Belavadós settlements, inhabitants, locations, relationships, and stories. The full World Forge is open behind this floating Onyx module.',
     leisure:'Use this space for games, hobbies, media, special interests, recommendations, walkthroughs, research, and relaxed conversation.',
-    work:'Local World Forge + Work: Onyx uses his installed 800-response library, with no backend. The World Forge generator and local chat channels remain available. Open either fullscreen workspace below.'
+    work:'Build settlements, explore your world, and work with Onyx.'
   })[server]||''}
   function paneTemplate(server){const label=SERVERS[server];const extras=server==='work'?`<div class="belavados-forge-actions" aria-label="World Forge tools"><button class="chat-button" data-forge-action="generateSettlement" type="button">Generate settlement</button><button class="chat-button" data-forge-action="addNPCs" type="button">Add 10 NPCs</button><button class="chat-button" data-forge-action="context" type="button">Bring settlement into chat</button></div>`:'';const tabAction=server==='work' ?'<div class="belavados-fullscreen-actions"><button class="fullscreen-button" data-launch-forge type="button">World Forge fullscreen</button><button class="fullscreen-button" data-launch-work type="button">Work fullscreen</button></div>':'';return `<div class="pane-toolbar server-pane-toolbar"><div class="server-pane-title"><span class="server-pane-kicker">Workspace</span><h2 class="pane-title">${escapeHtml(label)}</h2></div>${tabAction}</div>
     <div class="conversation-page-shell" data-chat-page="${server}">

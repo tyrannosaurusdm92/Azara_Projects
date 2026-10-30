@@ -2,18 +2,80 @@
  const root=document.documentElement,$=s=>document.querySelector(s),slow=$('#slowPetGame'),fast=$('#onyxLeisureFullscreen'),work=$('#onyxWorkFullscreenShell');
  const frameFor=tab=>window.OnyxFullscreenShells?.frameFor?.(tab);
  const forgeExit=$('#belavadosForgeFullscreenExit');
- function closeRuntimeChat(){const was=root.dataset.gameChat;root.dataset.gameChat='';window.OnyxVirtualPet?.close?.();}
+ function closeRuntimeChat(){root.dataset.gameChat='';window.OnyxVirtualPet?.close?.();}
  function openRuntimeChat(tab){if(tab!=='health'&&tab!=='leisure')return;root.dataset.gameChat=tab;window.OnyxRoundWidget?.setTab?.(tab);window.OnyxVirtualPet?.setTab?.(tab);window.OnyxVirtualPet?.open?.();setTimeout(()=>document.querySelector(`[data-chat-input="${tab}"]`)?.focus(),0)}
  function hideWork(){if(work)work.hidden=true}
- function enterForgeFullscreen(){window.OnyxVirtualPet?.close?.();root.dataset.gameChat='';root.dataset.runtimeMode='forge';if(slow)slow.hidden=true;if(fast)fast.hidden=true;hideWork();if(forgeExit)forgeExit.hidden=false;$('#belavadosProfileFrame')?.contentWindow?.focus?.();}
- function exitForgeFullscreen(){if(forgeExit)forgeExit.hidden=true;root.dataset.runtimeMode='module';window.OnyxVirtualPet?.setTab?.('work');window.OnyxVirtualPet?.open?.();}
-
- function enterFastGame(){window.OnyxVirtualPet?.close?.();root.dataset.gameChat='';root.dataset.runtimeMode='fast-game';if(slow)slow.hidden=true;if(fast)fast.hidden=false;hideWork();window.OnyxFullscreenShells?.load?.('leisure');document.body.scrollTop=0;document.documentElement.scrollTop=0;setTimeout(()=>window.OnyxFullscreenShells?.focus?.('leisure'),0)}
- function enterSlowGame(){window.OnyxVirtualPet?.close?.();root.dataset.gameChat='';root.dataset.runtimeMode='module';if(slow)slow.hidden=true;if(fast)fast.hidden=true;hideWork();const backdrop=document.getElementById('belavadosProfileFrame');backdrop?.focus?.();}
- function enterWorkFullscreen(){if(forgeExit)forgeExit.hidden=true;window.OnyxVirtualPet?.close?.();root.dataset.gameChat='';root.dataset.runtimeMode='work';if(slow)slow.hidden=true;if(fast)fast.hidden=true;if(work)work.hidden=false;window.OnyxFullscreenShells?.load?.('work');syncWorkDesign();requestAnimationFrame(syncWorkDesign);document.body.scrollTop=0;document.documentElement.scrollTop=0;setTimeout(()=>window.OnyxFullscreenShells?.focus?.('work'),0)}
- function exitWorkFullscreen(){if(forgeExit)forgeExit.hidden=true;if(work)work.hidden=true;root.dataset.runtimeMode='module';window.OnyxVirtualPet?.open?.()}
- function exitToModule(){if(root.dataset.runtimeMode==='forge'){exitForgeFullscreen();return}if(root.dataset.runtimeMode==='work'){exitWorkFullscreen();return}const returnTab='work';root.dataset.gameChat='';window.OnyxVirtualPet?.close?.();root.dataset.runtimeMode='module';if(slow)slow.hidden=true;if(fast)fast.hidden=true;hideWork();window.OnyxRoundWidget?.setTab?.(returnTab);window.OnyxVirtualPet?.setTab?.(returnTab);window.OnyxVirtualPet?.open?.()}
- function handleShellMessage(event){const d=event.data||{};if(d.source!=='belavados-onyx-fullscreen-shell')return;const expected=frameFor(d.tab==='leisure'?'leisure':d.tab==='work'?'work':'health');if(expected?.contentWindow&&event.source!==expected.contentWindow)return;if(d.type==='open-chat'){openRuntimeChat(d.tab);return}if(d.type==='shell-event'){const name=String(d.detail?.name||'');if(!name)return;window.dispatchEvent(new CustomEvent(name,{detail:{...(d.detail?.detail||{}),fullscreenProduct:d.product,fullscreenTab:d.tab,bridgedFromFullscreen:true}}));return}}
+ function closeTransientSurfaces(){
+   window.OnyxVirtualPet?.close?.();
+   document.querySelectorAll('#onyxWidget dialog[open]').forEach(d=>{try{d.close()}catch{d.removeAttribute('open')}});
+   const widget=$('#onyxWidget'),popout=$('#onyxPopout');
+   widget?.classList.remove('is-fullscreen','tab-fullscreen','open');
+   if(popout)popout.setAttribute('aria-hidden','true');
+   $('#onyxBubble')?.setAttribute('aria-expanded','false');
+   root.dataset.gameChat='';
+ }
+ function notifyWorkFrame(visible){
+   const frame=frameFor('work');
+   if(!frame?.contentWindow)return;
+   try{frame.contentWindow.postMessage({source:'belavados-onyx-parent',type:'shell-visibility',visible:Boolean(visible)},'*')}catch(_){}
+ }
+ function resetSurfaces(){
+   if(slow)slow.hidden=true;
+   if(fast)fast.hidden=true;
+   if(forgeExit)forgeExit.hidden=true;
+   hideWork();
+   closeTransientSurfaces();
+ }
+ function enterForgeFullscreen(){
+   resetSurfaces();root.dataset.runtimeMode='forge';
+   notifyWorkFrame(false);
+   if(forgeExit)forgeExit.hidden=false;
+   $('#belavadosProfileFrame')?.contentWindow?.focus?.();
+ }
+ function exitForgeFullscreen(){
+   if(forgeExit)forgeExit.hidden=true;
+   root.dataset.runtimeMode='module';closeTransientSurfaces();
+   window.OnyxVirtualPet?.setTab?.('work');
+   $('#onyxBubble')?.focus?.({preventScroll:true});
+ }
+ function enterFastGame(){
+   resetSurfaces();root.dataset.runtimeMode='fast-game';notifyWorkFrame(false);
+   if(fast)fast.hidden=false;
+   window.OnyxFullscreenShells?.load?.('leisure');
+   document.body.scrollTop=0;document.documentElement.scrollTop=0;
+   setTimeout(()=>window.OnyxFullscreenShells?.focus?.('leisure'),0);
+ }
+ function enterSlowGame(){
+   resetSurfaces();root.dataset.runtimeMode='module';notifyWorkFrame(false);
+   $('#belavadosProfileFrame')?.focus?.();
+ }
+ function enterWorkFullscreen(){
+   resetSurfaces();
+   root.dataset.runtimeMode='work';
+   if(work)work.hidden=false;
+   window.OnyxFullscreenShells?.load?.('work');
+   notifyWorkFrame(true);
+   syncWorkDesign();requestAnimationFrame(syncWorkDesign);
+   document.body.scrollTop=0;document.documentElement.scrollTop=0;
+   setTimeout(()=>window.OnyxFullscreenShells?.focus?.('work'),0);
+ }
+ function exitWorkFullscreen(){
+   if(work)work.hidden=true;
+   notifyWorkFrame(false);
+   root.dataset.runtimeMode='module';
+   closeTransientSurfaces();
+   window.OnyxVirtualPet?.setTab?.('work');
+   $('#onyxBubble')?.focus?.({preventScroll:true});
+ }
+ function exitToModule(){
+   if(root.dataset.runtimeMode==='forge'){exitForgeFullscreen();return}
+   if(root.dataset.runtimeMode==='work'){exitWorkFullscreen();return}
+   resetSurfaces();notifyWorkFrame(false);
+   root.dataset.runtimeMode='module';
+   window.OnyxRoundWidget?.setTab?.('work');window.OnyxVirtualPet?.setTab?.('work');
+   $('#onyxBubble')?.focus?.({preventScroll:true});
+ }
+  function handleShellMessage(event){const d=event.data||{};if(d.source!=='belavados-onyx-fullscreen-shell')return;const expected=frameFor(d.tab==='leisure'?'leisure':d.tab==='work'?'work':'health');if(expected?.contentWindow&&event.source!==expected.contentWindow)return;if(d.type==='open-chat'){openRuntimeChat(d.tab);return}if(d.type==='shell-event'){const name=String(d.detail?.name||'');if(!name)return;window.dispatchEvent(new CustomEvent(name,{detail:{...(d.detail?.detail||{}),fullscreenProduct:d.product,fullscreenTab:d.tab,bridgedFromFullscreen:true}}));return}}
  const designKeys={panelBg:'--panel-bg',panelText:'--panel-text',panelBorder:'--panel-border',tabBg:'--tab-bg',headerBg:'--header-bg',headerText:'--header-text',surface1:'--surface-1',surface2:'--surface-2',surface3:'--surface-3',railBg:'--rail-bg',chatBg:'--chat-bg',userMessageBg:'--user-message-bg',onyxMessageBg:'--onyx-message-bg',inputBg:'--input-bg',inputText:'--input-text',buttonBg:'--button-bg',buttonText:'--button-text',buttonHover:'--button-hover',activeBg:'--active-bg',activeText:'--active-text',linkText:'--link-text',linkHover:'--link-hover',muted:'--muted',focus:'--focus',scrollTrack:'--scroll-track',scrollThumb:'--scroll-thumb'};
  let lastDesign=null;
  function readModuleDesign(){const widget=$('#onyxWidget'),panel=$('#onyxPopout'),style=getComputedStyle(panel||widget),detail={scope:'onyx-five-tab-module-only',themeMode:widget?.dataset.moduleTheme||'auto'};for(const [key,name] of Object.entries(designKeys))detail[key]=style.getPropertyValue(name).trim();return detail}
@@ -21,7 +83,7 @@
  window.addEventListener('message',handleShellMessage);
  window.OnyxShell=Object.freeze({enterFastGame,enterSlowGame,enterForgeFullscreen,exitForgeFullscreen,enterWorkFullscreen,exitWorkFullscreen,exitToModule,openRuntimeChat,closeRuntimeChat,getMode:()=>root.dataset.runtimeMode||'module'});
  $('#slowGameExit')?.addEventListener('click',exitToModule);$('#onyxLeisureGameExit')?.addEventListener('click',exitToModule);$('#onyxWorkFullscreenExit')?.addEventListener('click',exitWorkFullscreen);$('#onyxOpenWorkFullscreen')?.addEventListener('click',enterWorkFullscreen);forgeExit?.addEventListener('click',exitForgeFullscreen);
- const workFrame=frameFor('work');workFrame?.addEventListener('load',syncWorkDesign);window.addEventListener('belavados:color-mode-change',syncWorkDesign);
+ const workFrame=frameFor('work');workFrame?.addEventListener('load',()=>{syncWorkDesign();notifyWorkFrame(root.dataset.runtimeMode==='work')});window.addEventListener('belavados:color-mode-change',syncWorkDesign);
  const widget=$('#onyxWidget');widget?.addEventListener('onyx-module-design-change',event=>{lastDesign=event.detail||readModuleDesign();syncWorkDesign()});
  if(widget&&typeof MutationObserver!=='undefined'){new MutationObserver(()=>{if(widget.classList.contains('open'))return;const tab=root.dataset.gameChat;if(tab==='health'||tab==='leisure')root.dataset.gameChat=''}).observe(widget,{attributes:true,attributeFilter:['class']})}
  document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(root.dataset.runtimeMode==='forge'){e.preventDefault();exitForgeFullscreen();return}if(root.dataset.runtimeMode==='work'){e.preventDefault();exitWorkFullscreen();return}if((root.dataset.runtimeMode==='slow-game'||root.dataset.runtimeMode==='fast-game')&&$('#onyxWidget')?.classList.contains('open')){e.preventDefault();closeRuntimeChat();return}if(root.dataset.runtimeMode==='slow-game'||root.dataset.runtimeMode==='fast-game'){e.preventDefault();exitToModule()}});

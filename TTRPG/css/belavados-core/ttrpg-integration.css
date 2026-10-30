@@ -13,3 +13,17 @@ html[data-runtime-mode="forge"] #onyxWidget{display:none!important}
 #onyxWidget .belavados-forge-actions{display:flex;gap:6px;flex-wrap:wrap;padding:8px 10px;border:1px solid rgba(141,224,220,.26);border-radius:9px;margin:6px 0;background:rgba(6,36,43,.5)}
 #onyxWidget .belavados-forge-actions .chat-button{flex:1 1 130px;min-height:34px;white-space:normal}
 #belavados-worldforge-root .hero .belavados-brandmark{height:90px;width:90px;object-fit:contain;float:right;margin:0 0 12px 18px;border-radius:50%;border:2px solid #c7a55f;box-shadow:0 0 18px rgba(43,225,242,.35)}
+
+/* Work and Forge are separate fullscreen surfaces. Never keep the floating widget
+   or an obsolete widget-level exit button above the red shell exit. */
+html[data-runtime-mode="work"] #onyxWidget,
+html[data-runtime-mode="forge"] #onyxWidget{display:none!important;visibility:hidden!important;pointer-events:none!important}
+html[data-runtime-mode="work"] #onyxPopout,
+html[data-runtime-mode="forge"] #onyxPopout,
+#onyxWidget [data-global-fullscreen-exit]{display:none!important}
+html[data-runtime-mode="module"] #onyxWorkFullscreenShell,
+html[data-runtime-mode="forge"] #onyxWorkFullscreenShell{display:none!important}
+#onyxWorkFullscreenShell[hidden],#onyxWorkFullscreenExit[hidden]{display:none!important}
+#onyxWorkFullscreenShell:not([hidden]){display:block!important;z-index:2147483300!important}
+#onyxWorkFullscreenShell:not([hidden]) #onyxWorkFullscreenExit{display:grid!important;place-items:center!important;z-index:2147483500!important;right:max(14px,env(safe-area-inset-right))!important;top:max(12px,env(safe-area-inset-top))!important;background:#d40000!important;color:#fff!important}
+html[data-runtime-mode="work"] #belavadosForgeFullscreenExit{display:none!important}

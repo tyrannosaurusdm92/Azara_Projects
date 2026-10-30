@@ -450,7 +450,7 @@ async function sendMessage(text) {
     const reply=entry?.text||'Papa, I am available in local Belavadós mode. The World Forge generator is ready, and I can respond using the dialogue library installed with this app.';
     const answer={id:uid('m'),role:'assistant',content:reply,createdAt:nowIso()};
     setThreadMessages([...threadMessages(),answer]);renderMessages();markChatMood(mood,'onyx-output');
-    setBrainStatus(true,'Local Onyx · no backend');
+    setBrainStatus(true,'Onyx ready');
   }finally{removeTyping();sending=false;updateSendState();renderOnyxMood()}
 }
 
@@ -529,23 +529,23 @@ function saveProjectFromDialog(){const name=els.projectName.value.trim();if(!nam
 function deleteProjectNow(){const p=projectById(editingProjectId);if(!p||!confirm(`Delete ${p.name}? Cataloged file metadata will be unassigned.`))return;projects=projects.filter(x=>x.id!==p.id);catalogFiles=catalogFiles.map(f=>f.projectId===p.id?{...f,projectId:""}:f);saveProjects();els.projectDialog.close?.();renderCatalog()}
 function reorderProject(from,to){if(!from||!to||from===to)return;const a=projects.findIndex(p=>p.id===from),b=projects.findIndex(p=>p.id===to);if(a<0||b<0)return;const [x]=projects.splice(a,1);projects.splice(b,0,x);saveProjects();renderCatalog()}
 function reorderChannel(from,to){if(!from||!to||from===to)return;const list=channels(),a=list.findIndex(c=>c.id===from),b=list.findIndex(c=>c.id===to);if(a<0||b<0)return;const[x]=list.splice(a,1);list.splice(b,0,x);persistState();renderChannels()}
-function openProjectChannel(p){const serverId=tabConfig.tabs.find(t=>t.label.toLowerCase()===String(p.category||"").toLowerCase())?.id||state.activeServerId;state.activeServerId=serverId;const list=state.channelsByServer[serverId];let c=list.find(x=>x.projectId===p.id);if(!c){let id=slugify(p.name),n=2;while(list.some(x=>x.id===id))id=`${slugify(p.name)}-${n++}`;c={id,name:p.name,topic:p.summary||`Project: ${p.name}`,projectId:p.id,createdAt:nowIso()};list.push(c)}state.activeChannelByServer[serverId]=c.id;persistState();render();els.catalogDrawer.classList.remove("open")}
-function openCatalog(){els.catalogDrawer.removeAttribute("inert");els.catalogDrawer.classList.add("open");els.catalogDrawer.setAttribute("aria-hidden","false");renderCatalog();requestAnimationFrame(()=>els.catalogSearch?.focus({preventScroll:true}))}
+function openProjectChannel(p){const serverId=tabConfig.tabs.find(t=>t.label.toLowerCase()===String(p.category||"").toLowerCase())?.id||state.activeServerId;state.activeServerId=serverId;const list=state.channelsByServer[serverId];let c=list.find(x=>x.projectId===p.id);if(!c){let id=slugify(p.name),n=2;while(list.some(x=>x.id===id))id=`${slugify(p.name)}-${n++}`;c={id,name:p.name,topic:p.summary||`Project: ${p.name}`,projectId:p.id,createdAt:nowIso()};list.push(c)}state.activeChannelByServer[serverId]=c.id;persistState();render();closeCatalog()}
+function openCatalog(){closeChannels();try{if(els.settingsDialog?.open)els.settingsDialog.close()}catch(_){};if(els.projectDialog?.open)els.projectDialog.close();els.catalogDrawer.removeAttribute("inert");els.catalogDrawer.classList.add("open");els.catalogDrawer.setAttribute("aria-hidden","false");renderCatalog();requestAnimationFrame(()=>els.catalogSearch?.focus({preventScroll:true}))}
 function closeCatalog(){if(!els.catalogDrawer.classList.contains("open"))return;els.catalogDrawer.classList.remove("open");els.catalogDrawer.setAttribute("aria-hidden","true");els.catalogDrawer.setAttribute("inert","");els.catalogButton?.focus({preventScroll:true})}
 
-function openSettings(){
+function openSettings(){closeCatalog();closeChannels();if(els.projectDialog?.open)els.projectDialog.close();
   els.sessionToken.value='';els.sessionToken.disabled=true;
-  els.backendUrl.value='Local · no backend';
-  els.settingsStatus.textContent='Belavadós TTRPG is local only; no server connection is necessary.';
+  els.backendUrl.value='Ready';
+  els.settingsStatus.textContent='Ready';
   if(typeof els.settingsDialog.showModal==='function')els.settingsDialog.showModal();else els.settingsDialog.setAttribute('open','');
 }
-async function testConnection(){els.settingsStatus.textContent='Local · no backend';setBrainStatus(true,'Local Onyx · no backend')}
-function saveSettings(){toast('Local mode');els.settingsDialog.close?.()}
-async function checkBrainStatus(){setBrainStatus(true,'Local Onyx · no backend')}
+async function testConnection(){els.settingsStatus.textContent='Ready';setBrainStatus(true,'Onyx ready')}
+function saveSettings(){toast('Saved');els.settingsDialog.close?.()}
+async function checkBrainStatus(){setBrainStatus(true,'Onyx ready')}
 
 function setBrainStatus(ok,text) { els.statusDot.classList.toggle("ok",!!ok); els.statusDot.classList.toggle("bad",!ok); els.statusText.textContent = text; }
 function toast(message) { clearTimeout(toastTimer); els.toast.textContent = message; els.toast.classList.add("show"); toastTimer = setTimeout(()=>els.toast.classList.remove("show"),2200); }
-function openChannels() { els.channelSidebar.classList.add("open"); }
+function openChannels() { closeCatalog();els.channelSidebar.classList.add("open"); }
 function closeChannels() { els.channelSidebar.classList.remove("open"); }
 
 function bindEvents() {
@@ -559,6 +559,14 @@ function bindEvents() {
   els.settings.addEventListener("click",openSettings); els.testConnection.addEventListener("click",testConnection); els.saveSettings.addEventListener("click",saveSettings);
   els.imageMode.addEventListener("change",updateComposerMode); els.openChannels.addEventListener("click",openChannels); els.closeChannels.addEventListener("click",closeChannels);
   window.addEventListener("keydown",event => { if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") { event.preventDefault(); openChannels(); } if (event.key === "Escape") { closeChannels(); closeCatalog(); } });
+  // Fullscreen work can be reopened without retaining a drawer or a dialog
+  // from the preceding session. Parent red X remains the only shell exit.
+  window.addEventListener('message',event=>{
+    if(event.source!==window.parent||event.data?.source!=='belavados-onyx-parent'||event.data.type!=='shell-visibility')return;
+    closeChannels();closeCatalog();
+    for(const dialog of [els.projectDialog,els.settingsDialog])if(dialog?.open){try{dialog.close()}catch(_){dialog.removeAttribute('open')}}
+  });
+  window.addEventListener('pagehide',()=>{closeChannels();closeCatalog();});
 }
 
 await loadConfig();
