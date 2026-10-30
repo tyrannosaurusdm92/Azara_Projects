@@ -71,7 +71,20 @@ function nav(){
  if(query&&!host.querySelector('.aws-nav-row'))host.append(line('p','aws-hint','No matching pages.'));
  host.scrollTop=scroll;
 }
+// Capture installability as soon as this deferred script runs. Waiting for
+// the workspace-ready event can miss beforeinstallprompt on faster devices.
 let expanded=false,installEvent=null;
+window.addEventListener('beforeinstallprompt',event=>{
+ event.preventDefault();
+ installEvent=event;
+ const hint=$('aws-install-hint');
+ if(hint)hint.textContent='Ready to install. Choose Download App to open your browser’s native installation prompt.';
+});
+window.addEventListener('appinstalled',()=>{
+ installEvent=null;
+ const hint=$('aws-install-hint');
+ if(hint)hint.textContent='App installed. Open it from your device’s home screen or app launcher.';
+});
 function clampNav(){
  const box=$('aws-master-nav'),r=box.getBoundingClientRect();
  box.style.left=Math.max(4,Math.min(innerWidth-r.width-4,r.left))+'px';
@@ -101,11 +114,50 @@ function initNav(){nav();setExpanded(false);
  handle.addEventListener('pointerup',stop);handle.addEventListener('pointercancel',stop);
  try{const pos=JSON.parse(localStorage.getItem('aws-master-position'));if(pos){navBox.style.left=pos.left;navBox.style.top=pos.top;navBox.style.right='auto'}}catch{}
  clampNav();
- window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;$('aws-install-hint').textContent='Your browser can install this studio as a device app. Choose Download App.'});
- window.addEventListener('appinstalled',()=>{$('aws-install-hint').textContent='App installed. Sign in on each device and use the same cloud snapshot to sync.';installEvent=null});
+ const installDialog=$('aws-install-dialog');
+ const closeInstall=()=>{if(installDialog?.open)installDialog.close()};
+ $('aws-install-close').onclick=closeInstall;
+ $('aws-install-done').onclick=closeInstall;
+ function showInstallHelp(message){
+   const ua=navigator.userAgent||'';
+   const ios=/iPhone|iPad|iPod/i.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+   const android=/Android/i.test(ua);
+   const isStandalone=window.matchMedia?.('(display-mode: standalone)').matches||navigator.standalone===true;
+   const steps=ios?
+     ['Open AWS in Safari or your preferred supported browser.','Tap Share (the square with an upward arrow).','Choose Add to Home Screen, then tap Add.']:
+     android?
+     ['Open the browser menu (usually ⋮).','Choose Install app or Add to Home screen.','Confirm Add/Install to place the Aza’ra Universe emblem on your home screen.']:
+     ['Open this AWS page in Chrome, Edge or another browser that supports installing sites.','Open the browser menu (⋮ or …), or look for an Install icon in the address bar.','Choose Install Aza’raan Writing Studio, Install app, or Apps → Install this site as an app.'];
+   $('aws-install-message').textContent=isStandalone?
+     'AWS is already running as an installed app. Open it from your device to continue writing.':
+     message||'Your browser has not offered a one-click install prompt. Follow these browser steps to install AWS using the Aza’ra Universe icon.';
+   const list=$('aws-install-steps');list.replaceChildren(...steps.map(text=>{
+     const li=document.createElement('li');li.textContent=text;return li;
+   }));
+   if(!installDialog.open)installDialog.showModal();
+ }
  $('aws-install').onclick=async()=>{
-   if(installEvent){const e=installEvent;installEvent=null;await e.prompt();await e.userChoice;return;}
-   $('aws-install-hint').textContent='To install: in Chrome/Edge use the address-bar Install icon or browser menu → Install app. On Android use browser menu → Add to Home screen; on iPhone Safari → Share → Add to Home Screen. Install requires an HTTPS site (such as GitHub Pages).';
+   if(window.matchMedia?.('(display-mode: standalone)').matches||navigator.standalone===true){
+     showInstallHelp();return;
+   }
+   if(installEvent){
+     const event=installEvent;installEvent=null;
+     try{
+       const response=await event.prompt();
+       const choice=response?.outcome?response:await event.userChoice;
+       if(choice?.outcome==='accepted'){
+         $('aws-install-hint').textContent='Installation accepted. Look for AWS in your device’s app list.';
+       }else{
+         $('aws-install-hint').textContent='Installation dismissed. You can try Download App again or follow the browser instructions.';
+         showInstallHelp('The install prompt was dismissed. You can also install the site using your browser menu.');
+       }
+     }catch(error){
+       console.warn('Native app install unavailable:',error);
+       showInstallHelp('Your browser could not open its native installation prompt. Follow the steps below instead.');
+     }
+     return;
+   }
+   showInstallHelp();
  };
 }
 function allEntries(){const st=app()?.getSnapshot?.();if(!st)return [];
