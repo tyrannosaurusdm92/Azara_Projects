@@ -1,0 +1,15 @@
+/* Belavadós TTRPG: original floating Onyx widget + unified Forge/Work chat. */
+#onyxWidget .jump-tabs{grid-template-columns:1fr!important}
+#onyxWidget .jump-tab{min-width:0!important;flex:1 1 auto!important}
+#onyxWidget .belavados-fullscreen-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+#onyxWidget .belavados-fullscreen-actions button{min-width:140px}
+html[data-runtime-mode="forge"] #onyxWidget{display:none!important}
+#belavadosForgeFullscreenExit[hidden]{display:none!important}
+#belavadosForgeFullscreenExit:not([hidden]){display:grid!important;place-items:center;position:fixed!important;right:max(18px,env(safe-area-inset-right));top:max(14px,env(safe-area-inset-top));z-index:2147483647!important;min-width:46px;height:46px;border-radius:8px;background:#6a1a25!important;color:#fff!important;font-size:30px;border:2px solid #e6bd6d;cursor:pointer}
+#onyxWidget .jump-tabs .jump-tab{background:linear-gradient(125deg,#123942,#1c2d3f)!important;color:#e4fff8!important;border:1px solid #a38a54!important}
+#belavadosProfileFrame{outline:none}
+@media(max-width:620px){#onyxWidget .belavados-fullscreen-actions{width:100%;justify-content:stretch}#onyxWidget .belavados-fullscreen-actions button{flex:1 1 130px}}
+
+#onyxWidget .belavados-forge-actions{display:flex;gap:6px;flex-wrap:wrap;padding:8px 10px;border:1px solid rgba(141,224,220,.26);border-radius:9px;margin:6px 0;background:rgba(6,36,43,.5)}
+#onyxWidget .belavados-forge-actions .chat-button{flex:1 1 130px;min-height:34px;white-space:normal}
+#belavados-worldforge-root .hero .belavados-brandmark{height:90px;width:90px;object-fit:contain;float:right;margin:0 0 12px 18px;border-radius:50%;border:2px solid #c7a55f;box-shadow:0 0 18px rgba(43,225,242,.35)}

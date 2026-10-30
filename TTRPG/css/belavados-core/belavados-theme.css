@@ -1,0 +1,28 @@
+/* Belavadós Forge + Onyx only. No former account, health, DBT or journal styling. */
+:root,html,html[data-theme],html[data-mode],html[data-color-mode]{
+ color-scheme:dark;--belavados-text:#f3e9db;--belavados-muted:#d4c6b6;
+ --belavados-teal:#3d9fa0;--belavados-teal-bright:#8de0dc;
+ --belavados-bronze:#b07a3a;--belavados-bronze-bright:#d7aa63;
+ --belavados-plum:#4d3658;--belavados-panel:#111720;--belavados-panel-dark:#0c1017;
+ --bg:#0c1017;--surface:#111720;--surface2:#0c1017;
+ --ink:#f3e9db;--text:#f3e9db;--muted:#d4c6b6;--line:#3d9fa0;
+ --accent:#8de0dc;--accent2:#b07a3a;--accent3:#d7aa63;
+ --teal:#3d9fa0;--aqua:#8de0dc;--bronze:#b07a3a;--bronze2:#d7aa63;
+ --orange:#b07a3a;--yellow:#d7aa63;--blue:#8de0dc;--cyan:#8de0dc;
+ --plum:#4d3658;--panel:#111720;--panel2:#0c1017;accent-color:#3d9fa0;
+}
+html,body{scrollbar-color:#b07a3a #0c1017}
+body[data-onyx-standalone-viewport="belavados-main-page"]{background:transparent!important;width:100%!important;min-height:100dvh!important;max-width:100%!important;margin:0!important;padding:0!important;overflow:hidden!important}
+body[data-onyx-standalone-viewport="belavados-main-page"]>.belavados-profile-iframe{display:block!important;position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;z-index:0!important;background:#0c1017!important;border:0!important}
+body[data-onyx-standalone-viewport="belavados-main-page"]>#onyxWidget{z-index:2147482000!important}
+.onyx-round-widget .onyx-popout,.onyx-round-widget .module-design-shell,.onyx-round-widget .module-design-section,.onyx-round-widget .jump-pane{--bg:#0c1017;--panel:#111720;--panel2:#0c1017;--surface:#111720;--text:#f3e9db;--muted:#d4c6b6;--accent:#8de0dc;--accent2:#b07a3a;color:#f3e9db;border-color:rgba(141,224,220,.28)}
+.onyx-round-widget .jump-tab.is-active,.onyx-round-widget .jump-tab[aria-selected="true"]{border-color:#d7aa63!important;color:#f3e9db!important;background-color:#4d3658!important}
+.onyx-round-widget :is(.module-design-button,.chat-button):not(:disabled){border-color:#3d9fa0}
+.onyx-round-widget :is(input:not([type=checkbox]):not([type=radio]),textarea,select){color:#f3e9db;background-color:#0c1017;border-color:#3d9fa0}
+.onyx-round-widget :is(button,textarea,input,select):focus-visible{outline:2px solid #8de0dc;outline-offset:2px}
+/* Protected original Onyx frame, static mood PNG, notification art, icons and red exit control. */
+.onyx-round-widget :is(.onyx-static-fallback,.jump-orb-frame,.onyx-alert-status,.onyx-alert-reaction,.onyx-protected-emoji){filter:none!important}
+.onyx-round-widget .onyx-static-fallback{image-rendering:auto!important;mix-blend-mode:normal!important;opacity:1!important;object-fit:contain!important}
+.onyx-round-widget .onyx-canvas{display:none!important}
+.onyx-round-widget .onyx-static-fallback[hidden]{display:none!important}
+:is(.fullscreen-exit,.fullscreen-shell-exit){background:#d40000!important;color:#fff!important;border-color:#7d0000!important}
