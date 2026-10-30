@@ -184,6 +184,78 @@ body.aws-single-nav .toast{background:#1c444c;color:var(--aws-text);border-color
  body.aws-single-nav #aws-master-nav{left:12px;top:12px}.aws-menu-tools button{font-size:11px!important}
  body.aws-single-nav .studio-surface{display:block}.studio-pane{width:100%;margin-bottom:10px}
 }
+
+/* Cohesion pass: one teal/brass vocabulary and compact spacing across every AWS tool. */
+body.aws-single-nav {
+  --aws-control-height:32px;
+  --aws-content-gap:10px;
+}
+body.aws-single-nav :is(.aws-feature-panel,#aws-glyph-panel,#aws-evolution-panel,.editor-section) {scrollbar-color:var(--aws-teal) #101e25;scrollbar-width:thin}
+body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) :is(h1,h2,h3,h4) {font-family:var(--serif);letter-spacing:.01em}
+body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) :is(p,ul,ol) {line-height:1.5}
+body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) :is(.aws-library-controls,.aws-source-controls,.aws-feature-actions,.aws-rules-toolbar,.aws-rules-era-tabs) {align-items:center;gap:8px}
+body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) :is(button,select,input:not([type="checkbox"])) {min-height:var(--aws-control-height)}
+body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) :is(button,[role="button"],summary) {transition:border-color .15s ease,background-color .15s ease}
+body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) :is(button,[role="button"],summary):focus-visible {outline:2px solid var(--aws-mint);outline-offset:2px}
+body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) :is(.aws-library-item,.aws-rules-card,.aws-rules-lexeme,.aws-source-section,.aws-important-item) {border-radius:8px;min-width:0}
+body.aws-single-nav .aws-feature-head {min-height:0}
+body.aws-single-nav .aws-feature-head p {max-width:75ch}
+body.aws-single-nav .aws-source-index {max-height:min(26dvh,220px)}
+body.aws-single-nav .aws-source-text,
+body.aws-single-nav .aws-tts-result,
+body.aws-single-nav .aws-rule-example {overflow-wrap:anywhere}
+body.aws-single-nav .aws-language-hub {margin:0;padding:8px 12px}
+body.aws-single-nav :is(.aws-tts-options,.aws-rules-grid,.aws-rules-lexemes) {align-items:start}
+body.aws-single-nav .aws-library-item {align-items:center}
+body.aws-single-nav .aws-library-item-info,
+body.aws-single-nav .aws-dictionary-entry {min-width:0;overflow-wrap:anywhere}
+body.aws-single-nav .aws-dictionary-dialog,
+body.aws-single-nav .app-dialog {background:var(--aws-panel);color:var(--aws-text);border-color:var(--aws-brass);border-radius:10px}
+body.aws-single-nav .app-dialog>header {padding:0 0 9px;border-bottom:1px solid var(--aws-border);background:transparent}
+body.aws-single-nav .app-dialog h2 {color:var(--aws-brass)}
+body.aws-single-nav :is(.app-dialog,.settings-modal,.aws-dictionary-dialog) :is(input,textarea) {max-width:100%}
+body.aws-single-nav .helper-window :is(.helper-content,.helper-body) {min-height:0}
+body.aws-single-nav .helper-tabs {gap:5px;flex-wrap:wrap;padding:7px}
+body.aws-single-nav #aws-glyph-panel .app-body {row-gap:8px;column-gap:8px}
+body.aws-single-nav #aws-glyph-panel .view-heading {padding:10px 12px}
+body.aws-single-nav #aws-glyph-panel :is(.toolbar-row,.canvas-action-bar,.summary-strip) {gap:6px;padding:8px}
+body.aws-single-nav #aws-glyph-panel :is(.panel,.card,.card-panel,.editor-panel,.left-rail) {box-shadow:none}
+body.aws-single-nav #aws-glyph-panel :is(.panel,.card,.card-panel) {padding:clamp(8px,1vw,12px)}
+body.aws-single-nav #aws-glyph-panel :is(input,textarea,select) {max-width:100%;min-width:0}
+body.aws-single-nav #aws-glyph-panel :is(.drawing-canvas,.glyph-canvas,.artwork-preview,canvas) {max-width:100%}
+body.aws-single-nav #aws-glyph-panel :is(.glyph-grid,.lineage-grid,.inventory-grid) {gap:8px}
+body.aws-single-nav #aws-evolution-panel :is(.detail,.legend,.evolution-intro) {margin-block:8px;padding:10px 12px}
+body.aws-single-nav #aws-evolution-panel .chart-frame {margin:8px 0;min-height:0}
+body.aws-single-nav #keyboard {color:var(--aws-text);border-color:var(--aws-brass);box-shadow:0 18px 50px #0009,inset 0 0 0 2px #143039;background-image:linear-gradient(145deg,#091b22ee,#162b33d9),var(--aws-steam-wallpaper)}
+body.aws-single-nav #keyboard :is(.drag-bar,.machine-label,.move-hint,.keyboard-footer,.panel-heading strong) {color:var(--aws-mint)}
+body.aws-single-nav #keyboard :is(.key,.round-tool,.panel-back,.panel-tabs button) {border-color:#b07a3a88;color:var(--aws-text)}
+body.aws-single-nav #keyboard .key {background:linear-gradient(#214048,#12242c)}
+body.aws-single-nav #keyboard .key:active {background:#3c7376}
+body.aws-single-nav #keyboard :is(.key,.round-tool,.panel-back,.panel-tabs button):focus-visible {outline:2px solid var(--aws-mint);outline-offset:2px}
+body.aws-single-nav #keyboard .key-panel {background:#101f28;border-color:var(--aws-border)}
+body.aws-single-nav #keyboard .panel-tabs button[aria-pressed="true"] {background:#28585d;color:#fff;border-color:var(--aws-brass)}
+body.aws-single-nav #keyboard :is(.keyboard-toolbar,.keyboard-footer) {gap:5px}
+body.aws-single-nav #aws-master-nav .aws-hint {margin:3px 0;line-height:1.4}
+body.aws-single-nav .aws-menu-tools {gap:5px;padding-top:7px}
+body.aws-single-nav :is(#aws-glyph-panel,#aws-evolution-panel,.aws-feature-panel) :is(.eyebrow,small,.aws-hint) {line-height:1.35}
+@media (max-width:900px) {
+  body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) .aws-feature-head {flex-wrap:wrap}
+  body.aws-single-nav .aws-feature-actions {width:100%;justify-content:flex-start}
+  body.aws-single-nav #aws-glyph-panel .app-body {max-width:100%;overflow-x:hidden}
+  body.aws-single-nav #aws-glyph-panel :is(.toolbar-row,.canvas-action-bar) {flex-wrap:wrap}
+}
+@media (max-width:520px) {
+  body.aws-single-nav .aws-feature-head {padding:8px 10px}
+  body.aws-single-nav :is(.aws-feature-panel,#aws-evolution-panel) {padding:8px}
+  body.aws-single-nav .aws-rules-grid,
+  body.aws-single-nav .aws-rules-lexemes {grid-template-columns:minmax(0,1fr)}
+  body.aws-single-nav #aws-master-nav.expanded {width:min(350px,calc(100vw - 8px))}
+  body.aws-single-nav #keyboard {max-width:calc(100vw - 8px);max-height:calc(100dvh - 8px)}
+}
+@media (prefers-reduced-motion:reduce) {
+  body.aws-single-nav :is(button,[role="button"],summary) {transition:none!important}
+}
+
 @media print{
  body.aws-single-nav :is(#aws-master-nav,#inspector,#keyboardBubble,#keyboard,.app-topbar,.editor-top,.editor-toolbar,.writing-footer,.aws-language-hub){display:none!important}
  html body.aws-single-nav,body.aws-single-nav :is(.app,.shell-main,.editor-section,.writing-surface,.paper){display:block!important;height:auto!important;overflow:visible!important;background:#fff!important;color:#111!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}
