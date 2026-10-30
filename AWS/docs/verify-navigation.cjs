@@ -94,4 +94,22 @@ assert.equal((html.match(/name="theme-color"/g)||[]).length,1,'one theme color')
 const theme=fs.readFileSync(require.resolve('../style/aws-unified.css'),'utf8');
 for(const selector of ['#aws-glyph-panel','#aws-evolution-panel','#keyboard','.aws-feature-panel'])assert(theme.includes(selector),selector);
 assert(theme.includes('Cohesion pass: one teal/brass vocabulary'));
+// Focus/spacing control regression checks: do not replace the existing editor, glyphs or resize handlers.
+assert(html.includes('id="aws-focus-toggle"'));
+assert(html.includes('id="aws-density-toggle"'));
+const studio=fs.readFileSync(require.resolve('../script/js/aws-studio.js'),'utf8');
+assert(studio.includes('function initPresentation()'));
+assert(studio.includes("initNav();initPresentation();initLibrary()"));
+assert(studio.includes('aws-focus-mode-v1'));
+assert(studio.includes('aws-roomy-layout-v1'));
+assert(theme.includes('.aws-focus-mode #inspector'));
+assert(theme.includes('#aws-glyph-panel .app-shell {min-height:0;height:auto;max-height:none}'));
+assert(theme.includes('.aws-roomy-layout'));
+assert(theme.includes('overflow:visible;min-height:0'));
+assert(html.includes('id="keyboardBubble"'));
+assert(html.includes('id="aws-glyph-panel"'));
+assert(html.includes('id="aws-evolution-panel"'));
+const sw=fs.readFileSync(require.resolve('../service-worker.js'),'utf8');
+assert(sw.includes('./style/aws-unified.css'));
+assert(sw.includes('./script/js/aws-studio.js'));
 console.log('PASS: per-workspace consolidation, six unique tools, content/reference preservation, idempotence, restore, editor capture isolation, render event safety, folded/orphan/cyclic navigation and search.');
