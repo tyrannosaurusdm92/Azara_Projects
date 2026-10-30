@@ -112,4 +112,22 @@ assert(html.includes('id="aws-evolution-panel"'));
 const sw=fs.readFileSync(require.resolve('../service-worker.js'),'utf8');
 assert(sw.includes('./style/aws-unified.css'));
 assert(sw.includes('./script/js/aws-studio.js'));
+// Install and brand regression: correct emblem everywhere; do not reintroduce legacy launchers.
+assert(html.includes('id="aws-install-dialog"'));
+assert(html.includes('id="aws-install-message"'));
+assert(html.includes('id="aws-install-close"'));
+assert(html.includes('manifest.webmanifest?v=aws-install-20261030'));
+assert(studio.includes("window.addEventListener('beforeinstallprompt'"));
+assert(studio.includes("showInstallHelp("));
+assert(studio.includes("await event.prompt()"));
+assert(theme.includes('width:calc(33px * 2.5)'));
+assert(theme.includes('height:calc(32px * 2.5)'));
+const pwaManifest=JSON.parse(fs.readFileSync(require.resolve('../manifest.webmanifest'),'utf8'));
+assert(pwaManifest.icons.some(icon=>icon.src.includes('azara-universe-logo.svg')&&icon.sizes==='any'));
+assert(pwaManifest.icons.some(icon=>icon.src.includes('azara-universe-app.webp')));
+assert(pwaManifest.icons.every(icon=>/azara-universe/.test(icon.src)));
+for(const legacy of ['aws-icon-192.png','aws-icon-512.png','literary-icon-192.png','literary-icon-512.png'])
+ assert(!fs.existsSync(require('node:path').join(__dirname,'../assets',legacy)),legacy+' must not remain');
+assert(sw.includes('aws-writing-studio-unified-v21'));
+assert(sw.includes('./assets/azara-universe-app.webp'));
 console.log('PASS: per-workspace consolidation, six unique tools, content/reference preservation, idempotence, restore, editor capture isolation, render event safety, folded/orphan/cyclic navigation and search.');
