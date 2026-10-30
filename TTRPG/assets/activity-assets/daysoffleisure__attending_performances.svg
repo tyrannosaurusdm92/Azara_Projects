@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Attending performances activity icon">
+  <rect width="128" height="128" rx="24" fill="#07131d"/>
+  <circle cx="64" cy="64" r="55" fill="#102436" stroke="#5fe7ff" stroke-opacity="0.55" stroke-width="3"/>
+  <text x="64" y="74" text-anchor="middle" font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif" font-size="42">🎭</text>
+</svg>
