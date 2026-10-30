@@ -155,7 +155,7 @@
     if(ch.type==='studio'){
       surface.append(createStudioPane(ch,'left','Draft',ch.leftHtml),createStudioPane(ch,'right','Reference / alternate draft',ch.rightHtml));
     }else{
-      const paper=make('div','paper');paper.append(make('div','paper-topline'),make('div','paper-meta',"AZA'RAAN WRITING STUDIO  /  "+ws.name.toUpperCase()));paper.append(createRichEditor(ch,'single',ch.html));surface.append(paper);
+      const paper=make('div','paper');paper.append(make('div','paper-topline'),make('div','paper-meta',(ws.name.toLowerCase()===`aza'raan writing studio`?'WRITING PAGE · '+ch.name:ws.name+' / '+ch.name).toUpperCase()));paper.append(createRichEditor(ch,'single',ch.html));surface.append(paper);
     }
     $('channel-notes').value=ch.notes||'';
     activeEditor=document.querySelector('.rich-editor');lastRange=null;lastBookmark=null;
@@ -218,7 +218,13 @@
       {name:'parentId',label:'Inside section',type:'select',value:parent,required:false,options},
       {name:'kind',label:'Type',type:'select',value:'page',options:[{value:'page',label:'Editable writing page'},{value:'section',label:'Section (editable overview + child pages)'}]}
     ],'Create',values=>{
-      const ch=defaultChannel(state.selectedWorkspaceId,cleanName(values.name),type,values.parentId||null,values.kind);state.channels.push(ch);
+      const ch=defaultChannel(state.selectedWorkspaceId,cleanName(values.name),type,values.parentId||null,values.kind);
+       const canonicalLanguage=state.channels.find(c=>c.workspaceId===ch.workspaceId&&!c.deletedAt&&c.role==='section'&&window.AWSNavigationModel.isLanguage(c));
+       if(canonicalLanguage&&window.AWSNavigationModel.isLanguage(ch)){
+         ch.name='Language notes';ch.parentId=canonicalLanguage.id;ch.role='page';
+         toast('There is already one Language section. This page was placed inside it as Language notes.');
+       }
+       state.channels.push(ch);
       if(values.parentId)state.collapsed[values.parentId]=false;selectChannel(ch.id);toast('Page added to library');
     })
   }
@@ -228,7 +234,13 @@
       {value:'new',label:'Add child page / subcategory'},{value:'rename',label:'Rename'},{value:'duplicate',label:'Duplicate page'},{value:'move',label:'Move to section'},{value:'delete',label:'Move to Library Trash'}
     ]}],'Continue',v=>{
       if(v.action==='new')return channelCreate('document',ch.id);
-      if(v.action==='rename')return openDialog('Rename page',[{name:'name',label:'New name',value:ch.name}],'Save',x=>{ch.name=cleanName(x.name);renderAll();scheduleSave()});
+      if(v.action==='rename')return openDialog('Rename page',[{name:'name',label:'New name',value:ch.name}],'Save',x=>{const proposed=cleanName(x.name);
+          const existingLanguage=state.channels.find(c=>c!==ch&&c.workspaceId===ch.workspaceId&&!c.deletedAt&&c.role==='section'&&window.AWSNavigationModel.isLanguage(c));
+          if(existingLanguage&&window.AWSNavigationModel.isLanguage({name:proposed})){
+            ch.name='Language notes';ch.parentId=existingLanguage.id;ch.role='page';
+            toast('There is already one Language section. The renamed page was moved inside it.');
+          }else ch.name=proposed;
+          ensureLanguageTools(state);renderAll();scheduleSave()});
       if(v.action==='duplicate'){captureEditor();const cp={...ch,id:uid(),parentId:ch.parentId,name:ch.name+' Copy',updatedAt:nowDate(),deletedAt:'',role:['library','glyph','tts','glyph-evolution','language-evolution','dictionary'].includes(ch.role)?'page':ch.role};state.channels.push(cp);selectChannel(cp.id);toast('Page duplicated');return}
       if(v.action==='move'){const excludes=childIds(ch.id);return openDialog('Move page',[{name:'parentId',label:'Destination section',type:'select',required:false,value:ch.parentId||'',options:[{value:'',label:'Top level'},...state.channels.filter(x=>x.workspaceId===ch.workspaceId&&!x.deletedAt&&!excludes.has(x.id)).map(x=>({value:x.id,label:x.name}))]}],'Move',x=>{ch.parentId=x.parentId||null;renderAll();scheduleSave()})}
       if(v.action==='delete'){if(!confirm('Move "'+ch.name+'" and its subpages to Library Trash? You can restore them later.'))return;
@@ -500,10 +512,13 @@
     goToRole(role){if(ensureLanguageTools(state))scheduleSave();const ch=state.channels.find(c=>c.role===role&&!c.deletedAt&&c.workspaceId===state.selectedWorkspaceId);if(ch){selectChannel(ch.id);return true}return false},
     openPage(id){selectChannel(id)},
     newPage(parentId){channelCreate('document',parentId)},
-    createPageFromText(name,html,parentId){const ch=defaultChannel(state.selectedWorkspaceId,cleanName(name),'document',parentId||null,'page');ch.html=cleanHTML(html);state.channels.push(ch);renderAll();scheduleSave();return ch.id},
+    createPageFromText(name,html,parentId){const ch=defaultChannel(state.selectedWorkspaceId,cleanName(name),'document',parentId||null,'page');
+       const canonicalLanguage=state.channels.find(c=>c.workspaceId===ch.workspaceId&&!c.deletedAt&&c.role==='section'&&window.AWSNavigationModel.isLanguage(c));
+       if(canonicalLanguage&&window.AWSNavigationModel.isLanguage(ch)){ch.name='Language notes';ch.parentId=canonicalLanguage.id}
+       ch.html=cleanHTML(html);state.channels.push(ch);renderAll();scheduleSave();return ch.id},
     duplicatePage(id){const c=state.channels.find(x=>x.id===id);if(!c||c.deletedAt)return;captureEditor();const copy={...c,id:uid(),name:c.name+' Copy',updatedAt:nowDate()};state.channels.push(copy);renderAll();scheduleSave()},
     deletePage(id){const ids=childIds(id);for(const c of state.channels)if(ids.has(c.id))c.deletedAt=nowDate();const fallback=state.channels.find(c=>!c.deletedAt&&c.role==='library')||state.channels.find(c=>!c.deletedAt);state.selectedChannelId=fallback?.id;renderAll();scheduleSave()},
-    restorePage(id){const ids=childIds(id);for(const c of state.channels)if(ids.has(c.id))c.deletedAt='';renderAll();scheduleSave()},
+    restorePage(id){const ids=childIds(id);for(const c of state.channels)if(ids.has(c.id))c.deletedAt='';ensureLanguageTools(state);renderAll();scheduleSave()},
     purgePage(id){const ids=childIds(id);state.channels=state.channels.filter(c=>!ids.has(c.id));state.tasks=state.tasks.filter(t=>!ids.has(t.channelId));state.important=state.important.filter(q=>!ids.has(q.channelId));renderAll();scheduleSave()},
     getFiles(){return state.files},
     addFile(record){state.files.push(record);renderImportant();scheduleSave();window.dispatchEvent(new Event('aws:library-changed'))},
