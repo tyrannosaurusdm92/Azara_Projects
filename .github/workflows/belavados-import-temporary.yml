@@ -1,0 +1,68 @@
+name: Temporary Belavados JSON import
+on:
+  push:
+    branches: [main]
+    paths:
+      - "TTRPG/.belavados_import/TEST"
+      - "TTRPG/.belavados_import/READY"
+permissions:
+  contents: write
+concurrency:
+  group: belavados-json-import
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Verify and unpack only requested TTRPG JSON data
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f TTRPG/.belavados_import/READY ]; then
+            printf 'workflow permitted\n' > TTRPG/.belavados_import/SMOKE_SUCCESS
+          else
+            python3 - <<'PY'
+          from pathlib import Path
+          import zipfile, hashlib, shutil
+          root=Path("TTRPG/.belavados_import")
+          parts=sorted(root.glob("part-*.bin"))
+          if len(parts)!=61:
+              raise SystemExit(f"Expected 61 parts; found {len(parts)}")
+          out=Path("/tmp/belavados-json.zip")
+          with out.open("wb") as dest:
+              for p in parts:
+                  with p.open("rb") as inp: shutil.copyfileobj(inp,dest)
+          digest=hashlib.sha256(out.read_bytes()).hexdigest()
+          expected="be2ae4d55c5cab78364dc81196a49521241db78e59a4713c171d90573059a168"
+          if digest != expected:
+              raise SystemExit(f"SHA256 mismatch {digest}")
+          with zipfile.ZipFile(out) as z:
+              names=[x for x in z.namelist() if not x.endswith("/")]
+              if len(names)!=350 or any(not x.startswith("json/") or ".." in Path(x).parts for x in names):
+                  raise SystemExit("Unexpected archive file paths/count")
+              for n in names:
+                  target=Path("TTRPG")/n
+                  target.parent.mkdir(parents=True,exist_ok=True)
+                  with z.open(n) as src, target.open("wb") as dst: shutil.copyfileobj(src,dst)
+          print(f"Restored {len(names)} JSON files (hash verified)")
+          PY
+            rm -rf TTRPG/.belavados_import
+            rm -f TTRPG/placeholder
+          fi
+      - name: Commit verified TTRPG changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- TTRPG
+          if ! git diff --cached --quiet; then
+            git commit -m "TTRPG: restore complete Belavados JSON batch and remove placeholder"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
