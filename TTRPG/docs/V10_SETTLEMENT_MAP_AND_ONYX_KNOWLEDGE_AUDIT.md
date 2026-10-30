@@ -22,10 +22,16 @@ Source: https://github.com/watabou/TownGeneratorOS
 
 Onyx source repository: https://github.com/tyrannosaurusdm92/LifeHelpers/tree/main/Onyx
 
-- 225 Onyx worldbuilding source paths indexed with their original Git SHAs in `json/onyx/worldbuilding-source-index.json`.
-- 60 reference entries covering 57 distinct Onyx source files are archived as inert JSON across five knowledge packs under `json/onyx/`, with source provenance and a canon-overrides-reference rule. The source index contains additional paths that were NOT copied in full.
+- 225 Onyx worldbuilding source paths indexed with their original Git SHAs in `json/onyx/worldbuilding-source-index.json`, and all 225 now have complete archived source text.
+- 246 reference entries covering 243 distinct Onyx worldbuilding and cross-domain source paths are now archived as inert JSON across sixteen knowledge packs under `json/onyx/`. All 225 indexed worldbuilding source files are included. Source provenance and the canon-overrides-reference rule are retained.
 - `js/onyx/onyx-core/onyx-knowledge-bridge.js` lazily retrieves those packs in the existing local Work chat, without new panels or backend hooks. The model/dialogue layer is local and source-excerpt based, not a full generative LLM.
 
 ## Verification limitations
 
 Static file presence, unique Git hashes and JavaScript path wiring were checked. A full interactive visual regression across all 163 settlements and mobile browsers has not been performed. Seed-derived differences and per-settlement V9 records do not constitute a pixel-by-pixel visual-difference proof.
+
+## 2026-10-30 completion audit
+
+- Removed the two obsolete standalone settlement HTML files. Full original source text is backed up in `json/archive/merged-settlement-html-originals.json`.
+- The only HTML files are `ttrpg.html` and `assets/code/index.html`; the latter contains the merged province and Generator UI.
+- The original 225 Onyx worldbuilding file paths, referenced by 225 Git source SHAs, have now been archived in 11 additional inert JSON packs and activated in the existing Onyx Work retriever. No new UI controls or backend introduced.

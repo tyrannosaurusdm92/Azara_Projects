@@ -1,7 +1,7 @@
 /* Onyx Work reference retriever. Loads source code as knowledge DATA, never runs it.
    No panel, remote backend or network service. Canonical TTRPG data takes priority. */
 (function(){'use strict';
-const packs=['worldbuilding-core-knowledge.json','worldbuilding-deep-knowledge.json','worldbuilding-cross-domain.json','worldbuilding-canon-and-writing.json','worldbuilding-advanced-variants.json'];
+const packs=['worldbuilding-core-knowledge.json','worldbuilding-deep-knowledge.json','worldbuilding-cross-domain.json','worldbuilding-canon-and-writing.json','worldbuilding-advanced-variants.json',...Array.from({length:11},(_,i)=>'worldbuilding-completion-'+String(i+1).padStart(2,'0')+'.json')];
 const stop=new Set('the and for with from this that into have there them they their your about then what where when which why how should would could also only does will make more some than every each these those work please help create world build building my our onyx me i a an of to in is it by or at as be do can are was were has had'.split(' '));
 let bank=null,promise=null;
 const tokenize=s=>[...new Set(String(s||'').toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(x=>x.length>=3&&!stop.has(x)))];
@@ -13,17 +13,22 @@ async function load(){
  if(promise)return promise;
  promise=(async()=>{
   const out=[];
-  for(const file of packs){
+  const seen=new Set();
+  // Bounded parallelism avoids 16 serial HTTP requests without overwhelming static hosting.
+  async function ingest(file){
    try{
     const response=await fetch('json/onyx/'+file,{cache:'force-cache'});
-    if(!response.ok)continue;
+    if(!response.ok)return;
     const p=await response.json();
     for(const e of p.entries||[]){
-     const path=e.sourcePath;
+     const path=String(e.sourcePath||'');
+     if(!path||seen.has(path)||!e.content)continue;
+     seen.add(path);
      for(const [i,value] of chunks(e.content).entries())out.push({source:path,sourceBlob:e.sourceBlob,text:value,ordinal:i});
     }
    }catch(error){console.warn('Onyx knowledge pack unavailable:',file,error);}
   }
+  for(let i=0;i<packs.length;i+=4)await Promise.all(packs.slice(i,i+4).map(ingest));
   bank=out;return out;
  })();
  return promise;
