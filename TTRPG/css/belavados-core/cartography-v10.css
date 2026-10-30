@@ -1,0 +1,9 @@
+/* Settlement cartography: editable neighborhood inspection without new panels. */
+#bvs-settlements-root .bv10-neighborhood{cursor:pointer}
+#bvs-settlements-root .bv10-neighborhood:focus circle,#bvs-settlements-root .bv10-neighborhood:hover circle{stroke:#fff4c1;stroke-width:8}
+#bvs-settlements-root .bv10-district-detail h3{color:#aee9e6}
+#bvs-settlements-root .bv10-district-tags{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}
+#bvs-settlements-root .bv10-district-tags span{padding:4px 8px;border-radius:12px;background:#234146;border:1px solid #8b947a;font-size:12px}
+#bvs-settlements-root .bv10-district-places{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:7px;max-height:440px;overflow-y:auto}
+#bvs-settlements-root .bv10-district-places button{background:#15363d;border:1px solid #827854;border-radius:7px;padding:8px;text-align:left;color:#e8f4ee}
+#bvs-settlements-root .bv10-district-places small{display:block;opacity:.75}
