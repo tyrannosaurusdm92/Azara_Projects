@@ -23,7 +23,7 @@ Source: https://github.com/watabou/TownGeneratorOS
 Onyx source repository: https://github.com/tyrannosaurusdm92/LifeHelpers/tree/main/Onyx
 
 - 225 Onyx worldbuilding source paths indexed with their original Git SHAs in `json/onyx/worldbuilding-source-index.json`.
-- Reference code archived as inert JSON data packs under `json/onyx/`, with source provenance and a canon-overrides-reference rule. The index contains additional paths that were NOT copied in full.
+- 60 reference entries covering 57 distinct Onyx source files are archived as inert JSON across five knowledge packs under `json/onyx/`, with source provenance and a canon-overrides-reference rule. The source index contains additional paths that were NOT copied in full.
 - `js/onyx/onyx-core/onyx-knowledge-bridge.js` lazily retrieves those packs in the existing local Work chat, without new panels or backend hooks. The model/dialogue layer is local and source-excerpt based, not a full generative LLM.
 
 ## Verification limitations
