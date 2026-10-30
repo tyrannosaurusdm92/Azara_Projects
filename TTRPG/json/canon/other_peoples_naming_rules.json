@@ -1,0 +1,834 @@
+{
+  "schema": "azara-non-azaaraan-naming-v1",
+  "source_files": [
+    "Language_24_Tab_Guidebook.docx",
+    "[RACES] Races.docx",
+    "[RACES] Current Short Reference.docx",
+    "Legacy Races - Short Reference (superseded).docx",
+    "Azara_Pantheon_Strict_Homebrew_Species_Azrahai(2).json"
+  ],
+  "exclusion": "No previous integrated builds used",
+  "root_policy": "Do not change Aza’raan languages or naming",
+  "clicks": {
+    "inspiration": "Taa (!Xóõ)",
+    "places": [
+      {
+        "ipa": "ǀ",
+        "place": "dental"
+      },
+      {
+        "ipa": "ǃ",
+        "place": "alveolar"
+      },
+      {
+        "ipa": "ǁ",
+        "place": "lateral"
+      },
+      {
+        "ipa": "ǂ",
+        "place": "palatal"
+      },
+      {
+        "ipa": "ʘ",
+        "place": "bilabial"
+      }
+    ],
+    "status": "phonology inspiration; Dril’thar inventory provisional"
+  },
+  "entries": [
+    {
+      "name": "Kaluseban",
+      "influences": [
+        "Korean",
+        "French"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Kalusebans",
+      "syllable_pattern": "(C)V.CV.CV; usually 3-5 syllables",
+      "phonetic_design": "Korean-inspired consonant economy and rhythmic syllables meet French-style flowing vowels and r/l transitions. Allow occasional nasal final in historical names.",
+      "naming_template": "Fuse a Korean-inspired meaningful root and French-inspired root. Transform both for the fictional Kaluseban phonology; avoid simply attaching two unchanged real words.",
+      "constructed_semantic_roots": "gyer = constancy; fer = resolution; mer = devoted care; thal = enduring bond (all fictional Kaluseban root interpretations).",
+      "custom_notes": "User supplied the ten sample fusions. \"Han-gyeol\" means steady or consistent in the user example and French ferme means firm. The new blends are Kaluseban proposals, not Korean or French words.",
+      "examples": [
+        {
+          "name": "Yermifana",
+          "reading": "Yehr-mee-FAH-nah",
+          "proposed_meaning": "A steadfast spirit whose resolve never breaks"
+        },
+        {
+          "name": "Meryefina",
+          "reading": "Mehr-yeh-FEE-nah",
+          "proposed_meaning": "Unwavering devotion of heart and purpose"
+        },
+        {
+          "name": "Salmyeoro",
+          "reading": "Sahl-myeh-OH-roh",
+          "proposed_meaning": "Firmly grounded, enduring through every change"
+        },
+        {
+          "name": "Gyerfima",
+          "reading": "Gyehr-FEE-mah",
+          "proposed_meaning": "Consistent strength, courage and reliability"
+        },
+        {
+          "name": "Constefaria",
+          "reading": "Kohn-steh-FAH-ree-ah",
+          "proposed_meaning": "Everlasting loyalty and unchanging conviction"
+        },
+        {
+          "name": "Stanyefeo",
+          "reading": "Stahn-yeh-FEH-oh",
+          "proposed_meaning": "One who remains steadfast against all adversity"
+        },
+        {
+          "name": "Thalferye",
+          "reading": "Thahl-FEHR-yeh",
+          "proposed_meaning": "Enduring strength, stability and inner peace"
+        },
+        {
+          "name": "Thagyermi",
+          "reading": "Thah-GYEHR-mee",
+          "proposed_meaning": "An unshakable will and resolute spirit"
+        },
+        {
+          "name": "Marangiye",
+          "reading": "Mah-rahn-GYEH",
+          "proposed_meaning": "Resilient, dependable and unwavering"
+        },
+        {
+          "name": "Yufergyel",
+          "reading": "Yoo-fehr-GYEHL",
+          "proposed_meaning": "One whose existence and convictions cannot be shaken"
+        }
+      ],
+      "variants": [
+        "Psionic",
+        "Swamp",
+        "Arcane",
+        "Dark",
+        "Stone",
+        "Oceanic"
+      ],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Tamhiogal",
+      "influences": [
+        "Arabic",
+        "Polish"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Tamhiogals",
+      "syllable_pattern": "CV.CCV.CV or CV.CV.CCV; 2-4 syllables",
+      "phonetic_design": "Arabic-inspired emphatic or pharyngeal-feeling transitions are adapted for fiction; Polish-inspired sibilants, soft consonants and clusters are smoothed for Tamhiogal speech. Never require difficult clusters for every speaker.",
+      "naming_template": "Meaning root + water or family root; the second root may modify the first. Endings -a, -in and -eya are optional regional inventions.",
+      "constructed_semantic_roots": "nur = light or beacon; fala = returning wave; mir = sheltered reef; zaw = pledge (fictional Tamhiogal root meanings, not claims about Earth translation).",
+      "custom_notes": "Arabic nūr and Polish fala are real lexical examples meaning light and wave. The blends are inventions, not phrases in either language.",
+      "examples": [
+        {
+          "name": "Nurfaleya",
+          "reading": "noor-fah-LEH-yah",
+          "proposed_meaning": "A light returning with the tide"
+        },
+        {
+          "name": "Mirszanira",
+          "reading": "meer-shah-NEE-rah",
+          "proposed_meaning": "Shelter offered to the lost"
+        },
+        {
+          "name": "Zawadira",
+          "reading": "zah-wah-DEE-rah",
+          "proposed_meaning": "One who keeps a promise across the sea"
+        },
+        {
+          "name": "Falnurina",
+          "reading": "fahl-noo-REE-nah",
+          "proposed_meaning": "Beacon over the living water"
+        },
+        {
+          "name": "Mazrelya",
+          "reading": "mahz-REHL-yah",
+          "proposed_meaning": "A safe channel through storms"
+        },
+        {
+          "name": "Sahwirena",
+          "reading": "sah-wee-REH-nah",
+          "proposed_meaning": "Patient keeper of the shore"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Dril'thar",
+      "influences": [
+        "Ancient or Old Egyptian",
+        "Navajo (Diné Bizaad)",
+        "Taa (!Xóõ / !Xoon)"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Dril’thars",
+      "syllable_pattern": "Optional CLICK + CV.CV or CV.CV.CV; do not require a click in every name",
+      "phonetic_design": "Egyptian transliteration inspires consonant-rich pictorial ancestry, Navajo inspires controlled vowel length, nasality, tone and selected glottalic contrasts; Taa supplies the click articulation model. No literal Navajo or Taa words are copied.",
+      "naming_template": "Honor name = optional click onset + one or two fictional roots + community ending. A click may also appear medially; ceremonial and everyday names can differ.",
+      "constructed_semantic_roots": "khe = river memory; sena = refuge; maru = glimmer; naki = ancestral path; tsu = listening (all constructed Dril’thar roots).",
+      "custom_notes": "All Dril’thar naming traditions belong to Dril’thar communities. Taa click symbols indicate distinct sounds, not decoration. No direct Egyptian-era vowel pronunciation is claimed.",
+      "examples": [
+        {
+          "name": "ǃKhemaru",
+          "reading": "[alveolar click] kheh-MAH-roo",
+          "proposed_meaning": "One who guards river memory"
+        },
+        {
+          "name": "ǀSenaki",
+          "reading": "[dental click] seh-NAH-kee",
+          "proposed_meaning": "Listener along the sheltered path"
+        },
+        {
+          "name": "ǁNamaru",
+          "reading": "[lateral click] nah-MAH-roo",
+          "proposed_meaning": "The water remembers their light"
+        },
+        {
+          "name": "ǂTsenahe",
+          "reading": "[palatal click] tseh-NAH-heh",
+          "proposed_meaning": "A guide through mist"
+        },
+        {
+          "name": "ʘMekanu",
+          "reading": "[bilabial click] meh-KAH-noo",
+          "proposed_meaning": "Guardian of the living spring"
+        },
+        {
+          "name": "Nakiǃra",
+          "reading": "nah-kee [alveolar click] rah",
+          "proposed_meaning": "One whose voice returns with the tide"
+        },
+        {
+          "name": "Khenáru",
+          "reading": "kheh-NAH-roo",
+          "proposed_meaning": "Glow in the marsh at night"
+        },
+        {
+          "name": "ǀTsumare",
+          "reading": "[dental click] tsoo-MAH-reh",
+          "proposed_meaning": "Protector of healing waters"
+        },
+        {
+          "name": "ǁHénaki",
+          "reading": "[lateral click] HEH-nah-kee",
+          "proposed_meaning": "Remembrance shared with family"
+        },
+        {
+          "name": "ǃTsenamaru",
+          "reading": "[alveolar click] tseh-nah-MAH-roo",
+          "proposed_meaning": "Bright memory carried in the current"
+        }
+      ],
+      "variants": [
+        "Grassland",
+        "Lush Forest",
+        "Marsh",
+        "Rainforest",
+        "Ocean",
+        "Reef"
+      ],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Azrahai",
+      "influences": [
+        "Georgian",
+        "Japanese"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Azh’raim in the old MMORPG",
+      "syllable_pattern": "CV.CV.CV or CVC.CV.CV",
+      "phonetic_design": "Georgian-inspired consonant clusters are tempered by Japanese-inspired open, mora-like rhythms.",
+      "naming_template": "Clan root + chosen element or vocation root; historical lineage titles remain unchanged.",
+      "constructed_semantic_roots": "zari = vow; koro = storm; mera = shelter; tavi = beginning.",
+      "custom_notes": "Strict JSON establishes the canonical Azrahai name and nine named lineages. Azh’raim is the ancient name of the same people now called Azrahai; its pronunciation and spelling simplified through history.",
+      "examples": [
+        {
+          "name": "Zarikome",
+          "reading": "zah-ree-KOH-meh",
+          "proposed_meaning": "A vow protected by the storm"
+        },
+        {
+          "name": "Korotavi",
+          "reading": "koh-roh-TAH-vee",
+          "proposed_meaning": "One who opens a new path"
+        },
+        {
+          "name": "Merazuki",
+          "reading": "meh-rah-ZOO-kee",
+          "proposed_meaning": "Shelter beneath the night sky"
+        },
+        {
+          "name": "Tavikoro",
+          "reading": "tah-vee-KOH-roh",
+          "proposed_meaning": "First watcher of the high wind"
+        }
+      ],
+      "variants": [
+        "Noitzideq",
+        "Saelftum",
+        "Jazwed",
+        "Khoalaros",
+        "Gauksneth",
+        "Tuorszom",
+        "Taudinax",
+        "Gouxelq",
+        "Vautaces"
+      ],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Gandirosha",
+      "influences": [
+        "Irish",
+        "Yoruba"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Gandiroshas",
+      "syllable_pattern": "CV.CV.CV, sometimes initial consonant groups",
+      "phonetic_design": "Irish-inspired slender versus broad consonant coloring alongside Yoruba-inspired clear vowel sequences and optional melody; no claim that fictional tones carry Yoruba meanings.",
+      "naming_template": "Personal root + relationship or journey root. The same name may appear in two community pronunciations.",
+      "constructed_semantic_roots": "gora = road; eni = quick wit; sefa = goodwill; muni = fortunate meeting.",
+      "custom_notes": "Keep dream and mischief lore separate from stereotypes based on source languages.",
+      "examples": [
+        {
+          "name": "Goraeni",
+          "reading": "GOH-rah-EH-nee",
+          "proposed_meaning": "A fortunate meeting on the road"
+        },
+        {
+          "name": "Sefamuni",
+          "reading": "seh-fah-MOO-nee",
+          "proposed_meaning": "Kindness found in uncertainty"
+        },
+        {
+          "name": "Enigora",
+          "reading": "EH-nee-GOH-rah",
+          "proposed_meaning": "One who sees an unexpected route"
+        },
+        {
+          "name": "Munesefa",
+          "reading": "moo-neh-SEH-fah",
+          "proposed_meaning": "A welcome companion"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Panolima",
+      "influences": [
+        "Icelandic",
+        "Swahili"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Panolimas",
+      "syllable_pattern": "CV.CV.CV or CVC.CV",
+      "phonetic_design": "Icelandic-inspired fricative and compound-root density meet Swahili-inspired open final vowels and rhythmic affixation.",
+      "naming_template": "Given name + optional elemental kin term; elemental affinity must not be inferred from the name.",
+      "constructed_semantic_roots": "svali = stability; nuru = glow; kima = balance; thara = renewal.",
+      "custom_notes": "All five established elements share one broad naming tradition with voluntary local variations.",
+      "examples": [
+        {
+          "name": "Svalinuru",
+          "reading": "SVAH-lee-NOO-roo",
+          "proposed_meaning": "Light held inside stone"
+        },
+        {
+          "name": "Tharakima",
+          "reading": "THAH-rah-KEE-mah",
+          "proposed_meaning": "Restored balance"
+        },
+        {
+          "name": "Nurathara",
+          "reading": "noo-rah-THAH-rah",
+          "proposed_meaning": "New warmth after destruction"
+        },
+        {
+          "name": "Kimasvali",
+          "reading": "kee-mah-SVAH-lee",
+          "proposed_meaning": "One who endures through change"
+        }
+      ],
+      "variants": [
+        "Earth",
+        "Fire",
+        "Water",
+        "Air",
+        "Aether"
+      ],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Gwynis",
+      "influences": [
+        "Welsh",
+        "Tamil"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Gwynises",
+      "syllable_pattern": "CV.CV.CVC or CV.CV.CV",
+      "phonetic_design": "Welsh-inspired liquids and initial consonant combinations meet Tamil-inspired long vowel timing, retroflex contrast and rhythmic name endings.",
+      "naming_template": "Dream image root + memory or witness root.",
+      "constructed_semantic_roots": "gwen = luminous trace; amil = memory; rathi = dream threshold; vena = revelation.",
+      "custom_notes": "Meanings belong to the fictional Gwynis lexicon, not to the Earth inspirations.",
+      "examples": [
+        {
+          "name": "Gwenamila",
+          "reading": "gwen-ah-MEE-lah",
+          "proposed_meaning": "A dream held in memory"
+        },
+        {
+          "name": "Rathivena",
+          "reading": "rah-thee-VEH-nah",
+          "proposed_meaning": "Witness to a hidden truth"
+        },
+        {
+          "name": "Venamili",
+          "reading": "veh-nah-MEE-lee",
+          "proposed_meaning": "A light through illusion"
+        },
+        {
+          "name": "Amilgwen",
+          "reading": "ah-MEEL-gwen",
+          "proposed_meaning": "Keeper of the remembered dream"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Geisamahi",
+      "influences": [
+        "Finnish",
+        "Tagalog"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Geisamahis",
+      "syllable_pattern": "CV.CV.CV, vowel harmony preferred within long names",
+      "phonetic_design": "Finnish-inspired vowel harmony and consonant length combine with Tagalog-inspired repeated syllables or personal relational particles.",
+      "naming_template": "Place or craft root + playful or affectionate repetition, chosen by the individual.",
+      "constructed_semantic_roots": "sumi = fast path; tala = tool; kani = curiosity; mika = patient work.",
+      "custom_notes": "Repeat syllables for rhythm without asserting a literal Tagalog translation.",
+      "examples": [
+        {
+          "name": "Sumitala",
+          "reading": "soo-mee-TAH-lah",
+          "proposed_meaning": "One who finds the hidden route"
+        },
+        {
+          "name": "Kanimika",
+          "reading": "kah-nee-MEE-kah",
+          "proposed_meaning": "Curiosity joined with care"
+        },
+        {
+          "name": "Talatala",
+          "reading": "TAH-lah-TAH-lah",
+          "proposed_meaning": "Builder who teaches others"
+        },
+        {
+          "name": "Mikasumi",
+          "reading": "mee-kah-SOO-mee",
+          "proposed_meaning": "Quick hands, careful heart"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Jaspey",
+      "influences": [
+        "Basque",
+        "Thai"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Jaspey",
+      "syllable_pattern": "CV.CV.CV or V.CV.CV",
+      "phonetic_design": "Basque-inspired compact stems and consonant alternations pair with Thai-inspired smooth syllable boundaries and distinctive vowel length.",
+      "naming_template": "Personal root + mushroom or shelter theme only by choice, not enforced by biological form.",
+      "constructed_semantic_roots": "zuri = pale morning; mai = gentle care; keri = shelter; lun = lantern.",
+      "custom_notes": "Mosscap, Gloomtail and Rotcap are forms, not separate species or mandatory naming castes.",
+      "examples": [
+        {
+          "name": "Zurimai",
+          "reading": "ZOO-ree-my",
+          "proposed_meaning": "Morning kindness"
+        },
+        {
+          "name": "Keriluna",
+          "reading": "keh-ree-LOO-nah",
+          "proposed_meaning": "Lantern in safe shelter"
+        },
+        {
+          "name": "Mailuri",
+          "reading": "my-LOO-ree",
+          "proposed_meaning": "Friend who returns"
+        },
+        {
+          "name": "Lunkerai",
+          "reading": "loon-keh-RY",
+          "proposed_meaning": "A light hidden in the grove"
+        }
+      ],
+      "variants": [
+        "Mosscap",
+        "Gloomtail",
+        "Rotcap"
+      ],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Aburata",
+      "influences": [
+        "Persian",
+        "Māori"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Aburatas",
+      "syllable_pattern": "CV.CV.CV; internal r/v transitions allowed",
+      "phonetic_design": "Persian-inspired consonant and flowing vowel connections meet Māori-inspired open syllables and steady vowel sequencing.",
+      "naming_template": "Chosen attribute root + kin or place root; reject automatic evil-coded names.",
+      "constructed_semantic_roots": "rava = warmth; mana = belonging; zeri = perseverance; aro = shared bond.",
+      "custom_notes": "These are fictional name meanings; do not copy culturally protected names or religious titles.",
+      "examples": [
+        {
+          "name": "Ravamanua",
+          "reading": "rah-vah-mah-NOO-ah",
+          "proposed_meaning": "Warmth found in belonging"
+        },
+        {
+          "name": "Arozeria",
+          "reading": "ah-roh-ZEH-ree-ah",
+          "proposed_meaning": "A bond enduring hardship"
+        },
+        {
+          "name": "Zerimana",
+          "reading": "zeh-ree-MAH-nah",
+          "proposed_meaning": "One who does not abandon family"
+        },
+        {
+          "name": "Manaravo",
+          "reading": "mah-nah-RAH-voh",
+          "proposed_meaning": "A welcoming hearth"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Deorbasun",
+      "influences": [
+        "Quechua",
+        "Turkish"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Deorbasuns",
+      "syllable_pattern": "CV.CV.CV or CVC.CV",
+      "phonetic_design": "Quechua-inspired syllable shaping meets Turkish-inspired vowel harmony and suffix chains.",
+      "naming_template": "Soul-animal relationship is optional in a given name. Family, habitat and earned titles may follow the name.",
+      "constructed_semantic_roots": "kira = watchful bond; suni = high path; talka = steadiness; aru = returning kin.",
+      "custom_notes": "Soul-animal selection remains an open lineage rather than a forced species-specific personality.",
+      "examples": [
+        {
+          "name": "Kirasuni",
+          "reading": "KEE-rah-SOO-nee",
+          "proposed_meaning": "Guardian of a distant trail"
+        },
+        {
+          "name": "Arutalka",
+          "reading": "ah-roo-TAHL-kah",
+          "proposed_meaning": "One who returns to the family"
+        },
+        {
+          "name": "Sunikira",
+          "reading": "soo-nee-KEE-rah",
+          "proposed_meaning": "Watchful at the ridge"
+        },
+        {
+          "name": "Talkaeru",
+          "reading": "tahl-kah-EH-roo",
+          "proposed_meaning": "Strength that carries others"
+        }
+      ],
+      "variants": [
+        "Open Soul-Animal"
+      ],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Volsarii",
+      "influences": [
+        "Latin",
+        "Japanese"
+      ],
+      "status": "strict_original_species",
+      "source_name": "Volsariis",
+      "syllable_pattern": "CV.CV.CV.CV, optional historical title",
+      "phonetic_design": "Latin-inspired inflectional-looking endings meet Japanese-inspired syllable timing. Fictional morphology must not be passed off as Latin grammar.",
+      "naming_template": "Given name + service title only when actually held; life-stage titles are not compulsory.",
+      "constructed_semantic_roots": "vita = continuity of life; sora = open sky; mira = crossing; sen = compassionate witness.",
+      "custom_notes": "The number of lives is undetermined. Wing acquisition in the final life is established.",
+      "examples": [
+        {
+          "name": "Mirasora",
+          "reading": "MEE-rah-SOH-rah",
+          "proposed_meaning": "Guide at the crossing"
+        },
+        {
+          "name": "Senavita",
+          "reading": "seh-nah-VEE-tah",
+          "proposed_meaning": "One who watches with mercy"
+        },
+        {
+          "name": "Soramira",
+          "reading": "soh-rah-MEE-rah",
+          "proposed_meaning": "A passage under the open sky"
+        },
+        {
+          "name": "Vitasena",
+          "reading": "vee-tah-SEH-nah",
+          "proposed_meaning": "Memory carried across lives"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Zirramunis",
+      "influences": [
+        "Armenian",
+        "Indonesian"
+      ],
+      "status": "current_mmorpg_document",
+      "source_name": "Zirramunis",
+      "syllable_pattern": "CVC.CV.CV or CV.CV.CV",
+      "phonetic_design": "Armenian-inspired stop and fricative combinations meet Indonesian-inspired open vowels and transparent compound formation.",
+      "naming_template": "Apprenticeship or personal value root + craft or place root.",
+      "constructed_semantic_roots": "zir = enduring craft; ruma = household workshop; tan = tempered; sari = shared knowledge.",
+      "custom_notes": "Source-supported people, but not a named entry in the strict 12-species register; final playable status requires reconciliation.",
+      "examples": [
+        {
+          "name": "Zirruma",
+          "reading": "ZEER-roo-mah",
+          "proposed_meaning": "House of enduring craft"
+        },
+        {
+          "name": "Tansari",
+          "reading": "tahn-SAH-ree",
+          "proposed_meaning": "Knowledge tested by fire"
+        },
+        {
+          "name": "Rumazira",
+          "reading": "roo-mah-ZEE-rah",
+          "proposed_meaning": "One who teaches the forge"
+        },
+        {
+          "name": "Saritanu",
+          "reading": "sah-ree-TAH-noo",
+          "proposed_meaning": "Patient maker of tools"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Garuraqets",
+      "influences": [
+        "Amharic",
+        "Indonesian"
+      ],
+      "status": "current_mmorpg_document",
+      "source_name": "Garuraqets",
+      "syllable_pattern": "CV.CV.CV or CVC.CV.CV",
+      "phonetic_design": "Amharic-inspired emphatic-looking consonant contrast pairs with Indonesian-inspired regular vowel grouping and optional reduplication.",
+      "naming_template": "Nature or feeling root + flight, shelter or friendship root.",
+      "constructed_semantic_roots": "gura = leaflight; qeti = whispered path; mali = bloom; teru = belonging.",
+      "custom_notes": "Source-supported people, but not a named entry in the strict 12-species register. Do not claim real Amharic etymologies.",
+      "examples": [
+        {
+          "name": "Guraqeti",
+          "reading": "GOO-rah-KEH-tee",
+          "proposed_meaning": "A path visible among leaves"
+        },
+        {
+          "name": "Maliteru",
+          "reading": "mah-lee-TEH-roo",
+          "proposed_meaning": "Belonging where flowers grow"
+        },
+        {
+          "name": "Qetimali",
+          "reading": "keh-tee-MAH-lee",
+          "proposed_meaning": "One who notices the hidden bloom"
+        },
+        {
+          "name": "Terugura",
+          "reading": "teh-roo-GOO-rah",
+          "proposed_meaning": "A home beneath the canopy"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Iamhazira",
+      "influences": [
+        "Punjabi",
+        "Nahuatl"
+      ],
+      "status": "current_mmorpg_document",
+      "source_name": "Iamhaziras",
+      "syllable_pattern": "CV.CVC.CV or CV.CV.CV",
+      "phonetic_design": "Punjabi-inspired aspirated and retroflex contrasts meet Nahuatl-inspired lateral /tl/-like sequences and word-shaping affixes.",
+      "naming_template": "An earned promise root + place, clan or perseverance root.",
+      "constructed_semantic_roots": "iam = strength through practice; haz = vigilance; tlani = oath; vira = resilience.",
+      "custom_notes": "Source-supported people; strict register inclusion requires author confirmation. Honor and courage are optional themes, not inherent personality traits.",
+      "examples": [
+        {
+          "name": "Iamtlani",
+          "reading": "ee-ahm-TLAH-nee",
+          "proposed_meaning": "Oath held through hardship"
+        },
+        {
+          "name": "Hazavira",
+          "reading": "hah-zah-VEE-rah",
+          "proposed_meaning": "Watchfulness and endurance"
+        },
+        {
+          "name": "Tlanihaza",
+          "reading": "tlah-nee-HAH-zah",
+          "proposed_meaning": "Keeper of the promise"
+        },
+        {
+          "name": "Viraiamu",
+          "reading": "vee-rah-EE-ah-moo",
+          "proposed_meaning": "A resilient companion"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Kalus’aan",
+      "influences": [
+        "Korean",
+        "French"
+      ],
+      "status": "documented_mixed_ancestry",
+      "source_name": "Kalus’aans",
+      "syllable_pattern": "Kaluseban-inspired CV.CV.CV with optional family variant",
+      "phonetic_design": "Parentage includes Aza’raan and Kaluseban; this is a mixed-ancestry identity, not proof of an independently evolved separate ancestral language.",
+      "naming_template": "Select any family name tradition. One common option is the Kaluseban fusion; never require a genetic mixing of syllables.",
+      "constructed_semantic_roots": "gyer = constancy; mera = shelter; fani = friendship.",
+      "custom_notes": "Aza’raan is intentionally NOT given new naming or grammar rules in this pass.",
+      "examples": [
+        {
+          "name": "Gyermeria",
+          "reading": "gyehr-meh-REE-ah",
+          "proposed_meaning": "Steadfast care across households"
+        },
+        {
+          "name": "Fanigyel",
+          "reading": "fah-nee-GYEHL",
+          "proposed_meaning": "A friend who stands firm"
+        },
+        {
+          "name": "Meryefina",
+          "reading": "mehr-yeh-FEE-nah",
+          "proposed_meaning": "Devotion of heart and purpose"
+        },
+        {
+          "name": "Yermifana",
+          "reading": "yehr-mee-FAH-nah",
+          "proposed_meaning": "Resolve that does not break"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Kalusogal",
+      "influences": [
+        "Korean",
+        "Arabic"
+      ],
+      "status": "documented_mixed_ancestry",
+      "source_name": "Kalusogals",
+      "syllable_pattern": "CV.CV.CV, softened clusters and long mid vowels",
+      "phonetic_design": "Parentage includes Tideborn Kaluseban and Tamhiogal. Korean and Arabic supply contrasting inspiration; Polish and French may influence inherited family forms without mandating four-way blends.",
+      "naming_template": "Tidal family root + chosen individual meaning root. Either parent culture may supply the full name.",
+      "constructed_semantic_roots": "mara = joined tides; nur = guiding light; gyena = lasting union.",
+      "custom_notes": "Recorded mixed identity; not an additional strict registry species.",
+      "examples": [
+        {
+          "name": "Gyenura",
+          "reading": "gyeh-NOO-rah",
+          "proposed_meaning": "Long-lasting light over water"
+        },
+        {
+          "name": "Maragyena",
+          "reading": "mah-rah-GYEH-nah",
+          "proposed_meaning": "Two currents choosing one home"
+        },
+        {
+          "name": "Nurmarea",
+          "reading": "noor-mah-REH-ah",
+          "proposed_meaning": "Beacon of the shared coast"
+        },
+        {
+          "name": "Gyemarina",
+          "reading": "gyeh-mah-REE-nah",
+          "proposed_meaning": "Kin across the tide"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    },
+    {
+      "name": "Aza’zira",
+      "influences": [
+        "Punjabi",
+        "Nahuatl"
+      ],
+      "status": "documented_mixed_ancestry",
+      "source_name": "Aza’ziras",
+      "syllable_pattern": "CV.CVC.CV with optional /tl/ cluster",
+      "phonetic_design": "Parentage includes Aza’raan and Iamhazira. Punjabi and Nahuatl remain the specific phonetic inspiration for Iamhazira-side names; no separate Aza’raan rules are rewritten.",
+      "naming_template": "Personal name may follow Iamhazira tradition, another family tradition or an entirely chosen name.",
+      "constructed_semantic_roots": "iam = steady practice; tlan = promise; vira = endurance; aza = kinship (fictional name roots).",
+      "custom_notes": "Documented mixed community, not automatically a distinct species.",
+      "examples": [
+        {
+          "name": "Viratlana",
+          "reading": "vee-rah-TLAH-nah",
+          "proposed_meaning": "A promise that endures"
+        },
+        {
+          "name": "Iamazira",
+          "reading": "ee-ah-mah-ZEE-rah",
+          "proposed_meaning": "One who practices with devotion"
+        },
+        {
+          "name": "Tlanivira",
+          "reading": "tlah-nee-VEE-rah",
+          "proposed_meaning": "Loyalty carried forward"
+        },
+        {
+          "name": "Aziratla",
+          "reading": "ah-ZEE-rah-tlah",
+          "proposed_meaning": "Kinship chosen and protected"
+        }
+      ],
+      "variants": [],
+      "name_status": "proposed for author approval"
+    }
+  ],
+  "current_draconic_name": "Azrahai",
+  "ancient_draconic_name": "Azh’raim",
+  "canonical_amphibian_name": "Dril'thar"
+}
