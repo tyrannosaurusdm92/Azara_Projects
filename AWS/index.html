@@ -8,7 +8,7 @@
 <meta content="Aza'raan Writing Studio (AWS): series and book writing, Aza'raan keyboards, glyphs, library, pronunciation and language evolution." name="description"/>
 <title>Aza'raan Writing Studio</title>
 <link href="manifest.webmanifest" rel="manifest"/>
-<link href="assets/azara-universe-logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/azara-universe-logo.svg?v=20261030" rel="icon" type="image/svg+xml"/><link href="assets/azara-universe-app.webp?v=20261030" rel="icon" sizes="180x180" type="image/webp"/>
 <link href="style/luxury-editor.css" rel="stylesheet"/>
 <link href="style/glyph-studio-scoped.css" rel="stylesheet"/>
 <link href="style/aws-studio.css" rel="stylesheet"/>
@@ -42,7 +42,7 @@
 <script defer="" src="script/js/pwa.js"></script>
 <link href="style/keyboard/keyboard.css" rel="stylesheet"/><link href="style/keyboard/evolution.css" rel="stylesheet"/><link href="style/keyboard/aza-merge.css" rel="stylesheet"/><script defer="" src="script/js/keyboard/keyboard-data.js"></script><script defer="" src="script/js/keyboard/html2canvas.min.js"></script><script defer="" src="script/js/keyboard/aza-config.js"></script><script defer="" src="script/js/keyboard/aza-data.js"></script><script defer="" src="script/js/keyboard/aza-phonetic-data.js"></script><script defer="" src="script/js/keyboard/aza-phonetic.js"></script><script defer="" src="script/js/keyboard/aza-sound-data.js"></script><script defer="" src="script/js/keyboard/aza-tts-data.js"></script><script defer="" src="script/js/keyboard/aza-ipa-data.js"></script><script defer="" src="script/js/keyboard/aza-ipa.js"></script><script defer="" src="script/js/keyboard/aza-tts.js"></script><script defer="" src="script/js/keyboard/aza-evolution.js"></script><script defer="" src="script/js/keyboard/notes.js"></script><script defer="" src="script/js/keyboard/azaaraan-bridge.js"></script><script defer="" src="script/js/keyboard/keyboard.js"></script><script defer="" src="script/js/keyboard/capture.js"></script><script defer="" src="script/js/keyboard/aws-keyboard-app.js"></script>
 <script defer src="script/js/aws-language-rules.js"></script>
-<link href="style/aws-source-library.css" rel="stylesheet"/><script defer src="script/js/aws-source-library.js"></script><link rel="apple-touch-icon" href="assets/azara-universe-logo.svg"/><meta name="theme-color" content="#071b29"/><script defer src="script/js/aws-language-restoration.js"></script><link href="style/aws-unified.css?v=aws-layout-20261029" rel="stylesheet"/>
+<link href="style/aws-source-library.css" rel="stylesheet"/><script defer src="script/js/aws-source-library.js"></script><link rel="apple-touch-icon" href="assets/azara-universe-app.webp?v=20261030"/><meta name="theme-color" content="#071b29"/><script defer src="script/js/aws-language-restoration.js"></script><link href="style/aws-unified.css?v=aws-layout-20261029" rel="stylesheet"/>
 </head>
 <body class="aws-single-nav">
 <nav aria-label="Movable master navigation" class="aws-master-nav" id="aws-master-nav">
@@ -50,10 +50,17 @@
 <div class="aws-master-content" hidden="" id="aws-master-content">
 <label class="aws-nav-search"><span class="sr-only">Find a section or page</span><input id="aws-nav-search" type="search" placeholder="Find a section or page…" aria-label="Find a section or page"/></label>
 <div class="aws-master-links" id="aws-master-links"></div>
-<div class="aws-menu-tools"><button id="aws-new-section" type="button">+ New section / page</button><button id="aws-new-studio" type="button">+ Parallel writing studio</button><button id="aws-master-library" type="button">Library</button><button id="aws-master-tasks" type="button">Tasks &amp; deadlines</button><button id="aws-master-settings" type="button">Cloud sync / settings</button><button class="aws-install" id="aws-install" type="button">↓ Download App</button></div>
-<p class="aws-hint" id="aws-install-hint">Install on desktop or mobile, then connect the same AWS account in Settings for snapshot sync.</p>
+<div class="aws-menu-tools"><button id="aws-new-section" type="button">+ New section / page</button><button id="aws-new-studio" type="button">+ Parallel writing studio</button><button id="aws-master-library" type="button">Library</button><button id="aws-master-tasks" type="button">Tasks &amp; deadlines</button><button id="aws-master-settings" type="button">Cloud sync / settings</button><button class="aws-install" id="aws-install" type="button" aria-haspopup="dialog" aria-controls="aws-install-dialog">↓ Download App</button></div>
+<p class="aws-hint" id="aws-install-hint" role="status" aria-live="polite">Install AWS on your device. The button opens a native installation prompt where supported, or guided installation steps.</p>
 </div>
 </nav>
+<dialog class="aws-install-dialog" id="aws-install-dialog" aria-labelledby="aws-install-title">
+ <header class="aws-install-dialog-header"><img src="assets/azara-universe-logo.svg" alt="" width="58" height="58"/><div><div class="eyebrow">AZA'RAAN WRITING STUDIO</div><h2 id="aws-install-title">Install the writing studio</h2></div><button id="aws-install-close" type="button" aria-label="Close installation instructions">×</button></header>
+ <p id="aws-install-message" role="status">This browser has not offered an automatic installation prompt. You can still add the studio as an app using your browser's installation menu.</p>
+ <ol id="aws-install-steps"><li>Open your browser's menu.</li><li>Choose Install app or Add to Home Screen.</li><li>Confirm installation to add the Aza'ra Universe icon to your device.</li></ol>
+ <p class="aws-install-note">The app opens this AWS site in its own window or home-screen shortcut. To sync across devices, sign in and use the existing cloud sync in Settings. Installing itself does not automatically sync accounts.</p>
+ <footer><button class="btn green" id="aws-install-done" type="button">Got it</button></footer>
+</dialog>
 <div class="app" id="app">
 <aside aria-label="Workspaces" class="workspace-rail">
 <div class="rail-head" title="Aza'raan Writing Studio"><img alt="Aza'raan Writing Studio" height="34" src="assets/azara-universe-logo.svg" width="34"/></div>
