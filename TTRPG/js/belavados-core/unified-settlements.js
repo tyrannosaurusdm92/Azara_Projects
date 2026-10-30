@@ -79,8 +79,8 @@ function init(){
   if(e.target.closest('[data-bvs-generator]'))openGenerator();
   else if(e.target.closest('[data-province-id]'))showPage('province');
  });
- provinceSelect.addEventListener('change',e=>{const p=findProvince(e.target.value);if(p)atlasApp()?.changeProvince(p);feedGenerator();refreshPickers();});
- settlementSelect.addEventListener('change',e=>{atlasApp()?.changeSettlement(e.target.value);feedGenerator();refreshPickers();});
+ provinceSelect.addEventListener('change',e=>{const p=findProvince(e.target.value);if(p)atlasApp()?.changeProvince(p);feedGenerator();if(page==='generator'&&location.hash.startsWith('#province/'))history.replaceState(null,'',location.pathname+location.search);refreshPickers();});
+ settlementSelect.addEventListener('change',e=>{atlasApp()?.changeSettlement(e.target.value);feedGenerator();if(page==='generator'&&location.hash.startsWith('#province/'))history.replaceState(null,'',location.pathname+location.search);refreshPickers();});
  $('belavados-unified-open-settlement').addEventListener('click',()=>openSettlement(provinceSelect.value,settlementSelect.value));
  $('belavados-unified-open-generator').addEventListener('click',openGenerator);
  document.addEventListener('belavados:viewchange',updatedByAtlas);
