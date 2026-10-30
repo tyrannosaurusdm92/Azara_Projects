@@ -9,70 +9,84 @@ const safeName=name=>String(name||'File').replace(/[\\/:*?"<>|]+/g,'_').slice(0,
 function downloadBlob(name,blob){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=safeName(name);document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),20000)}
 const uid=()=>id();
 function escapeHTML(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-const awsCollapsedSections=new Set((()=>{try{return JSON.parse(localStorage.getItem('aws-collapsed-language-sections')||'[]')}catch{return []}})());
-function persistSectionFolds(){try{localStorage.setItem('aws-collapsed-language-sections',JSON.stringify([...awsCollapsedSections]))}catch{}}
+const awsFolds=(()=>{try{const saved=JSON.parse(localStorage.getItem('aws-nav-folds-v2')||'{}');return saved&&typeof saved==='object'&&!Array.isArray(saved)?saved:{}}catch{return {}}})();
 function nav(){
- const state=app()?.getSnapshot?.();if(!state)return;
- const host=$('aws-master-links');host.replaceChildren();
- const title=txt=>host.append(line('h3','aws-nav-section-title',txt));
- const item=(label,click,cls='',depth=0)=>{
-  const b=line('button','aws-nav-item '+cls,label);b.type='button';b.style.paddingLeft=(12+Math.min(depth,7)*12)+'px';b.onclick=click;host.append(b);return b;
- };
- title('Workspaces');
- for(const w of state.workspaces){
-  item('◧ '+w.name,()=>app()?.switchWorkspace?.(w.id),(w.id===state.selectedWorkspaceId?'active aws-workspace-current':''),0);
- }
+ const state=app()?.getNavigationSnapshot?.();if(!state)return;
+ const host=$('aws-master-links'),scroll=host.scrollTop;host.replaceChildren();
+ const query=($('aws-nav-search')?.value||'').trim().toLowerCase();
+ const heading=txt=>host.append(line('h3','aws-nav-section-title',txt));
+ const item=(label,action,cls='')=>{const b=line('button','aws-nav-item '+cls,label);b.type='button';b.onclick=action;host.append(b);return b};
+ heading('Workspace');
+ for(const w of state.workspaces)item('◧ '+w.name,()=>{app()?.switchWorkspace?.(w.id);setExpanded(false)},w.id===state.selectedWorkspaceId?'active':'');
  item('+ New workspace',()=>app()?.newWorkspace?.(),'aws-nav-action');
- title('Sections, channels and categories');
- const visible=state.channels.filter(c=>c.workspaceId===state.selectedWorkspaceId&&!c.deletedAt),seen=new Set();
- function append(parentId,depth=0){
+ heading('Sections & pages');
+ const visible=state.channels.filter(c=>c.workspaceId===state.selectedWorkspaceId&&!c.deletedAt),byId=new Map(visible.map(c=>[c.id,c]));
+ const ancestors=new Set();let ancestor=byId.get(state.selectedChannelId);
+ while(ancestor&&!ancestors.has(ancestor.id)){ancestors.add(ancestor.id);ancestor=byId.get(ancestor.parentId)}
+ const matches=new Set();
+ if(query)for(const c of visible)if(c.name.toLowerCase().includes(query)){
+  let p=c;const path=new Set();while(p&&!path.has(p.id)){path.add(p.id);matches.add(p.id);p=byId.get(p.parentId)}
+ }
+ const seen=new Set();
+ function append(parentId,depth=0,show=true,parentMatch=false){
   for(const c of visible.filter(x=>(x.parentId||null)===(parentId||null))){
    if(seen.has(c.id))continue;seen.add(c.id);
-   const row=line('div','aws-nav-row');
-   const hasChildren=visible.some(x=>x.parentId===c.id);
-   if(hasChildren){
-    const fold=line('button','aws-nav-fold',awsCollapsedSections.has(c.id)?'▸':'▾');fold.type='button';
-    fold.title=(awsCollapsedSections.has(c.id)?'Expand ':'Collapse ')+c.name;
-    fold.setAttribute('aria-expanded',String(!awsCollapsedSections.has(c.id)));
-    fold.onclick=()=>{if(awsCollapsedSections.has(c.id))awsCollapsedSections.delete(c.id);else awsCollapsedSections.add(c.id);persistSectionFolds();nav()};
-    row.append(fold);
+   const ownMatch=!!query&&c.name.toLowerCase().includes(query);
+   const display=show&&(!query||matches.has(c.id)||parentMatch);
+   const glyphViews=c.role==='glyph'?Array.from(document.querySelectorAll('#aws-glyph-panel .nav-item[data-view]')).filter(b=>!['glyphs','evolution'].includes(b.dataset.view)):[];
+   const children=visible.some(x=>x.parentId===c.id)||glyphViews.length;
+   const folded=Object.hasOwn(awsFolds,c.id)?awsFolds[c.id]:!ancestors.has(c.id);
+   if(display){
+    const row=line('div','aws-nav-row');row.style.setProperty('--nav-depth',Math.min(depth,7));row.dataset.channelId=c.id;
+    if(children){
+     const fold=line('button','aws-nav-fold',folded&&!query?'▸':'▾');fold.type='button';
+     fold.setAttribute('aria-label',(folded?'Expand ':'Collapse ')+c.name);fold.setAttribute('aria-expanded',String(!folded||!!query));
+     fold.onclick=()=>{awsFolds[c.id]=!folded;try{localStorage.setItem('aws-nav-folds-v2',JSON.stringify(awsFolds))}catch{}nav()};row.append(fold);
+    }else row.append(line('span','aws-nav-spacer',''));
+    const b=line('button','aws-nav-item'+(c.id===state.selectedChannelId?' active':''),c.name);b.type='button';
+    if(c.id===state.selectedChannelId)b.setAttribute('aria-current','page');
+    b.onclick=()=>{app().openPage(c.id);setExpanded(false)};
+    const menu=line('button','aws-nav-manage','⋯');menu.type='button';menu.setAttribute('aria-label','Manage '+c.name);menu.onclick=()=>app()?.managePage?.(c.id);
+    row.append(b,menu);host.append(row);
+    if(glyphViews.length&&(!folded||query))for(const source of glyphViews){
+     const label=source.querySelector('span:nth-child(2)')?.textContent||source.textContent;
+     const button=item(label.trim(),()=>{app().openPage(c.id);window.AWSGlyphStudio?.setView?.(source.dataset.view);setExpanded(false)},'aws-nav-glyph');
+     button.style.paddingLeft=(42+(depth+1)*12)+'px';
+    }
    }
-   const b=line('button','aws-nav-item'+(c.id===state.selectedChannelId?' active':''),(depth?'↳ ':'')+c.name);
-   b.type='button';b.style.paddingLeft=(12+Math.min(depth,7)*12)+'px';b.onclick=()=>{app().openPage(c.id);if(window.innerWidth<760)setExpanded(false)};
-   const menu=line('button','aws-nav-manage','⋯');menu.type='button';menu.title='Manage '+c.name;
-   menu.setAttribute('aria-label','Manage '+c.name);menu.onclick=()=>app()?.managePage?.(c.id);
-   row.append(b,menu);host.append(row);
-   if(!awsCollapsedSections.has(c.id))append(c.id,depth+1);
+   append(c.id,depth+1,display&&(!folded||!!query),parentMatch||ownMatch);
   }
  }
  append(null);
+ // Display only genuine orphans, not descendants deliberately hidden by a fold.
+ for(const c of visible.filter(c=>!seen.has(c.id)&&(!c.parentId||!byId.has(c.parentId)))){
+  if(seen.has(c.id))continue;seen.add(c.id);
+  if(!query||c.name.toLowerCase().includes(query))item(c.name,()=>{app().openPage(c.id);setExpanded(false)});
+  append(c.id,1);
+ }
  for(const c of visible.filter(c=>!seen.has(c.id))){
-  item('↳ '+c.name,()=>app().openPage(c.id),c.id===state.selectedChannelId?'active':'',1);
+  if(seen.has(c.id))continue;
+  seen.add(c.id);if(!query||c.name.toLowerCase().includes(query))item(c.name,()=>{app().openPage(c.id);setExpanded(false)});append(c.id,1);
  }
- // Language section access remains visible even when its subsection is collapsed.
- const languageParent=visible.find(c=>c.role==='section'&&c.name==='Language');
- if(languageParent){
-  title('Language tools');
-  for(const [label,role] of [['Glyph Studio','glyph'],['Alphabet Evolution','glyph-evolution'],['Language Evolution Breakdown','language-evolution'],['Language Rules & Orthography','rules'],['Dictionary','dictionary'],['Pronunciation & TTS','tts']]){
-   item('◈ '+label,()=>{app()?.goToRole?.(role);if(window.innerWidth<760)setExpanded(false)},'aws-nav-language-tool'+(visible.find(c=>c.id===state.selectedChannelId)?.role===role?' active':''),1);
-  }
- }
- const selected=visible.find(c=>c.id===state.selectedChannelId);
- if(selected?.role==='glyph'||selected?.role==='glyph-evolution'){
-  title('Glyph Studio views');
-  document.querySelectorAll('#aws-glyph-panel .nav-item[data-view]').forEach(b=>{
-   const v=b.dataset.view;item('◈ '+b.textContent.trim(),()=>{
-    app()?.openPage?.(selected.id);
-    window.AWSGlyphStudio?.setView?.(v);
-    if(window.innerWidth<760)setExpanded(false);
-   },'aws-nav-glyph');
-  });
- }
+ if(query&&!host.querySelector('.aws-nav-row'))host.append(line('p','aws-hint','No matching pages.'));
+ host.scrollTop=scroll;
 }
 let expanded=false,installEvent=null;
-function setExpanded(next){expanded=!!next;$('aws-master-nav').classList.toggle('expanded',expanded);$('aws-master-content').hidden=!expanded;$('aws-menu-toggle').setAttribute('aria-expanded',String(expanded));}
+function clampNav(){
+ const box=$('aws-master-nav'),r=box.getBoundingClientRect();
+ box.style.left=Math.max(4,Math.min(innerWidth-r.width-4,r.left))+'px';
+ box.style.top=Math.max(4,Math.min(innerHeight-r.height-4,r.top))+'px';
+}
+function setExpanded(next){
+ expanded=!!next;$('aws-master-nav').classList.toggle('expanded',expanded);$('aws-master-content').hidden=!expanded;
+ $('aws-menu-toggle').setAttribute('aria-expanded',String(expanded));
+ $('aws-menu-toggle').setAttribute('aria-label',expanded?'Collapse master navigation':'Expand master navigation');
+ clampNav();
+}
 function initNav(){nav();setExpanded(false);
  $('aws-menu-toggle').onclick=()=>setExpanded(!expanded);
+ $('aws-nav-search').addEventListener('input',nav);
+ window.addEventListener('resize',clampNav);
  $('aws-new-section').onclick=()=>app()?.newPage?.();
  $('aws-new-studio').onclick=()=>app()?.newStudio?.();
  $('aws-master-library').onclick=()=>{app()?.goToRole?.('library')};
@@ -86,6 +100,7 @@ function initNav(){nav();setExpanded(false);
  const stop=()=>{if(!drag)return;drag=null;try{localStorage.setItem('aws-master-position',JSON.stringify({left:navBox.style.left,top:navBox.style.top}))}catch{}};
  handle.addEventListener('pointerup',stop);handle.addEventListener('pointercancel',stop);
  try{const pos=JSON.parse(localStorage.getItem('aws-master-position'));if(pos){navBox.style.left=pos.left;navBox.style.top=pos.top;navBox.style.right='auto'}}catch{}
+ clampNav();
  window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;$('aws-install-hint').textContent='Your browser can install this studio as a device app. Choose Download App.'});
  window.addEventListener('appinstalled',()=>{$('aws-install-hint').textContent='App installed. Sign in on each device and use the same cloud snapshot to sync.';installEvent=null});
  $('aws-install').onclick=async()=>{
@@ -95,7 +110,7 @@ function initNav(){nav();setExpanded(false);
 }
 function allEntries(){const st=app()?.getSnapshot?.();if(!st)return [];
  const pages=st.channels.filter(c=>c.workspaceId===st.selectedWorkspaceId).map(c=>({id:c.id,kind:'page',title:c.name,category:c.role==='section'?'section':c.role==='page'?'page':c.role,updatedAt:c.updatedAt||'',deletedAt:c.deletedAt||'',value:c}));
- const notes=st.channels.filter(c=>c.notes?.trim()).map(c=>({id:'note:'+c.id,kind:'note',title:c.name+' · Notes',category:'note',updatedAt:c.updatedAt||'',deletedAt:c.deletedAt||'',value:c}));
+ const notes=st.channels.filter(c=>c.workspaceId===st.selectedWorkspaceId&&c.notes?.trim()).map(c=>({id:'note:'+c.id,kind:'note',title:c.name+' · Notes',category:'note',updatedAt:c.updatedAt||'',deletedAt:c.deletedAt||'',value:c}));
  const files=(st.files||[]).map(f=>({id:f.id,kind:'upload',title:f.name,category:f.category||'attachment',updatedAt:f.updatedAt||'',deletedAt:f.deletedAt||'',value:f}));
  return [...pages,...notes,...files];
 }
@@ -225,5 +240,8 @@ function initDictionary(){
 }
 
 window.AWSStudio={syncUploads,importFiles,renderLibrary,downloadFromAWS};
-window.addEventListener('literaryfriend:ready',()=>{initNav();initLibrary();initDictionary();initTTS()},{once:true});
+let started=false;
+function startStudio(){if(started||!app()?.ready)return;started=true;initNav();initLibrary();initDictionary();initTTS();}
+window.addEventListener('literaryfriend:ready',startStudio,{once:true});
+startStudio();
 })();

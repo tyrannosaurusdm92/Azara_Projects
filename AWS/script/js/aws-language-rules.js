@@ -70,7 +70,7 @@ function render(){
  if(eraOrder.indexOf(activeEra)>=3){
   const markBox=el('section','aws-rules-card aws-rules-wide');
   row(markBox,'h3','','Independent letters, dependent subscripts and accents');
-  row(markBox,'p','','20 bases: '+data['alphabet-and-sounds'].alphabet+' · Maximum two subscripts per host · One semantic accent per atomic letter. Historical W, F and V appear in the B family.');
+  row(markBox,'p','',data['alphabet-and-sounds'].independent_letters.length+' bases: '+data['alphabet-and-sounds'].alphabet+' · Maximum two subscripts per host · One semantic accent per atomic letter. Historical W, F and V appear in the B family.');
   const letters=el('div','aws-rules-letters');
   for(const item of data['alphabet-and-sounds'].independent_letters){const b=el('details','aws-rules-letter');row(b,'summary','',item.letter);row(b,'p','',item.ipa.join(', '));row(b,'p','',item.notes);letters.append(b)}
   markBox.append(letters);host.append(markBox);

@@ -26,7 +26,7 @@
       ['Synopsis','Book Outline','Manuscript','Chapters','Characters','Plot Threads','Research','Notes & Continuity'].forEach(name=>page(name,root));});
     return {version:2,workspaces:[w],channels,tasks:[],files:[],lexicon:[],important:[],collapsed:{},awsSeeded:true,selectedWorkspaceId:w.id,selectedChannelId:series.id,inspectorOpen:window.innerWidth>1080}
   }
-  let state,activeEditor=null,lastRange=null,lastBookmark=null,savingTimer=null,saveQueue=Promise.resolve(),fonts=[],dialogCallback=null,notificationChecking=false;
+  let state,renderedChannelId=null,activeEditor=null,lastRange=null,lastBookmark=null,savingTimer=null,saveQueue=Promise.resolve(),fonts=[],dialogCallback=null,notificationChecking=false;
   const currentWorkspace=()=>state.workspaces.find(x=>x.id===state.selectedWorkspaceId);
   const currentChannel=()=>state.channels.find(x=>x.id===state.selectedChannelId);
   function toast(message){const el=document.createElement('div');el.className='toast';el.textContent=message;$('toast-region').append(el);setTimeout(()=>el.remove(),4500)}
@@ -39,7 +39,7 @@
     try{await saveQueue;status('Saved locally');window.dispatchEvent(new CustomEvent('literaryfriend:saved',{detail:{snapshot}}))}catch(error){status('Save failed');toast('Could not save: '+error.message)}
   }
   function scheduleSave(){status('Saving…');clearTimeout(savingTimer);savingTimer=setTimeout(()=>{persist()},500)}
-  function captureEditor(){const ch=currentChannel();if(!ch)return;document.querySelectorAll('.rich-editor').forEach(el=>{const value=cleanHTML(el.innerHTML);if(el.dataset.part==='single')ch.html=value;else if(el.dataset.part==='left')ch.leftHtml=value;else if(el.dataset.part==='right')ch.rightHtml=value;});ch.notes=$('channel-notes').value;ch.updatedAt=nowDate()}
+  function captureEditor(){const ch=currentChannel();if(!ch||renderedChannelId!==ch.id)return;document.querySelectorAll('.rich-editor').forEach(el=>{const value=cleanHTML(el.innerHTML);if(el.dataset.part==='single')ch.html=value;else if(el.dataset.part==='left')ch.leftHtml=value;else if(el.dataset.part==='right')ch.rightHtml=value;});ch.notes=$('channel-notes').value;ch.updatedAt=nowDate()}
   const allowedElements=new Set('p div br h1 h2 h3 h4 blockquote strong b em i u s strike span a ul ol li hr pre code sup sub'.split(' '));
   const removeEntirely=new Set('script style iframe object embed svg math form input textarea select video audio link meta base button template'.split(' '));
   const allowedStyleProps=new Set(['font-family','font-size','font-weight','font-style','color','background-color','text-align','text-decoration','text-decoration-line','line-height','margin-left','margin-right','direction']);
@@ -80,34 +80,11 @@
     const tasks=input.tasks.slice(0,10000).filter(t=>t&&typeof t.id==='string'&&wsIds.has(t.workspaceId)).map(t=>({id:t.id.slice(0,150),workspaceId:t.workspaceId,channelId:channelIds.has(t.channelId)?t.channelId:null,title:cleanName(t.title),details:String(t.details||'').slice(0,2000),due:String(t.due||'').slice(0,40),remindAt:String(t.remindAt||'').slice(0,40),done:!!t.done,notified:!!t.notified}));
     const selectedWorkspaceId=wsIds.has(input.selectedWorkspaceId)?input.selectedWorkspaceId:workspaces[0].id;
     const selectedChannelId=channelIds.has(input.selectedChannelId)&&channels.find(c=>c.id===input.selectedChannelId)?.workspaceId===selectedWorkspaceId&&!channels.find(c=>c.id===input.selectedChannelId).deletedAt?input.selectedChannelId:channels.find(c=>c.workspaceId===selectedWorkspaceId&&!c.deletedAt)?.id;
-    return {version:2,workspaces,channels,tasks,files:(Array.isArray(input.files)?input.files:[]).slice(0,10000).filter(f=>f&&typeof f.id==='string').map(f=>({id:f.id,name:cleanName(f.name),mime:String(f.mime||''),size:Math.max(0,Number(f.size)||0),category:String(f.category||'attachment'),folderId:String(f.folderId||''),updatedAt:String(f.updatedAt||nowDate()),deletedAt:String(f.deletedAt||''),inlineData:typeof f.inlineData==='string'&&f.inlineData.length<1500000?f.inlineData:'',cloudId:String(f.cloudId||'')})),lexicon:(Array.isArray(input.lexicon)?input.lexicon:[]).slice(0,15000).filter(x=>x&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),word:String(x.word||'').slice(0,150),ipa:String(x.ipa||'').slice(0,200),meaning:String(x.meaning||'').slice(0,2000),era:String(x.era||'modern').slice(0,40),partOfSpeech:String(x.partOfSpeech||'').slice(0,100),notes:String(x.notes||'').slice(0,5000)})),important:(Array.isArray(input.important)?input.important:[]).slice(0,5000).map(q=>({id:String(q.id||uid()),channelId:String(q.channelId||''),text:String(q.text||'').slice(0,10000),createdAt:String(q.createdAt||nowDate())})),collapsed:input.collapsed&&typeof input.collapsed==='object'&&!Array.isArray(input.collapsed)?input.collapsed:{},awsSeeded:!!input.awsSeeded,selectedWorkspaceId,selectedChannelId,inspectorOpen:input.inspectorOpen!==false};
+    return {version:2,navigationArchive:Array.isArray(input.navigationArchive)?input.navigationArchive:[],workspaces,channels,tasks,files:(Array.isArray(input.files)?input.files:[]).slice(0,10000).filter(f=>f&&typeof f.id==='string').map(f=>({id:f.id,name:cleanName(f.name),mime:String(f.mime||''),size:Math.max(0,Number(f.size)||0),category:String(f.category||'attachment'),folderId:String(f.folderId||''),updatedAt:String(f.updatedAt||nowDate()),deletedAt:String(f.deletedAt||''),inlineData:typeof f.inlineData==='string'&&f.inlineData.length<1500000?f.inlineData:'',cloudId:String(f.cloudId||'')})),lexicon:(Array.isArray(input.lexicon)?input.lexicon:[]).slice(0,15000).filter(x=>x&&typeof x.id==='string').map(x=>({id:x.id.slice(0,150),word:String(x.word||'').slice(0,150),ipa:String(x.ipa||'').slice(0,200),meaning:String(x.meaning||'').slice(0,2000),era:String(x.era||'modern').slice(0,40),partOfSpeech:String(x.partOfSpeech||'').slice(0,100),notes:String(x.notes||'').slice(0,5000)})),important:(Array.isArray(input.important)?input.important:[]).slice(0,5000).map(q=>({id:String(q.id||uid()),channelId:String(q.channelId||''),text:String(q.text||'').slice(0,10000),createdAt:String(q.createdAt||nowDate())})),collapsed:input.collapsed&&typeof input.collapsed==='object'&&!Array.isArray(input.collapsed)?input.collapsed:{},awsSeeded:!!input.awsSeeded,selectedWorkspaceId,selectedChannelId,inspectorOpen:input.inspectorOpen!==false};
   }
-  // Additive repair for older saved libraries. Never discard pages, glyphs, book text, or notes.
+  // Consolidate duplicate navigation without losing manuscript or note content.
   function ensureLanguageTools(st){
-    let changed=false;
-    for(const ws of st.workspaces){
-      const active=()=>st.channels.filter(c=>c.workspaceId===ws.id&&!c.deletedAt);
-      let parent=active().find(c=>c.name?.trim().toLowerCase()==='language'&&c.role==='section')
-        ||active().find(c=>c.name?.trim().toLowerCase()==='language');
-      // Reuse a preexisting Language page. Change its section role without touching its text.
-      if(parent&&parent.role!=='section'){parent.role='section';changed=true;}
-      if(!parent){
-        parent=defaultChannel(ws.id,'Language','document',null,'section');
-        st.channels.push(parent);changed=true;
-      }
-      const needed=[
-        ['Glyph Studio','glyph'],
-        ['Alphabet Evolution','glyph-evolution'],
-        ['Language Evolution Breakdown','language-evolution']
-      ];
-      for(const [name,role] of needed){
-        if(active().some(c=>c.parentId===parent.id&&c.role===role))continue;
-        // Preserve any ordinary pages with the same title and their contents.
-        st.channels.push(defaultChannel(ws.id,name,'document',parent.id,role));
-        changed=true;
-      }
-    }
-    return changed;
+    return window.AWSNavigationModel.normalize(st,defaultChannel);
   }
   function seedSourceLibrary(st){
     const ws=st.workspaces.find(w=>w.id===st.selectedWorkspaceId)||st.workspaces[0];
@@ -157,15 +134,17 @@
   }
   function renderDoc(){
     const ch=currentChannel();if(!ch)return;
+    renderedChannelId=null;
     const ws=currentWorkspace();$('crumb-workspace').textContent=ws.name;$('crumb-channel').textContent=ch.name;
     const rulesPage=ch.role==='rules'||ch.name==='Language Rules & Orthography';
     const languageHub=ch.role==='section'&&ch.name==='Language';
+    $('app').dataset.view=ch.role||'page';
     const languageHubPanel=$('aws-language-hub-panel');if(languageHubPanel)languageHubPanel.hidden=!languageHub;
     const special=rulesPage||['library','glyph','glyph-evolution','language-evolution','tts','dictionary','source-library'].includes(ch.role);
     $('aws-evolution-panel').hidden=ch.role!=='language-evolution';$('panel-evolution').hidden=ch.role!=='language-evolution';window.dispatchEvent(new CustomEvent('aws:keyboard-visibility',{detail:{hidden:ch.role==='language-evolution'}}));
     $('aws-library-panel').hidden=ch.role!=='library';$('aws-glyph-panel').hidden=!['glyph','glyph-evolution'].includes(ch.role);$('aws-tts-panel').hidden=ch.role!=='tts';$('aws-dictionary-panel').hidden=ch.role!=='dictionary';$('aws-rules-panel').hidden=!rulesPage;$('aws-source-library-panel').hidden=ch.role!=='source-library';if(ch.role==='glyph-evolution')window.AWSGlyphStudio?.setView?.('evolution');if(ch.role==='glyph')window.AWSGlyphStudio?.setView?.('glyphs');
     document.querySelector('.editor-section').hidden=special;
-    if(special){$('writing-surface').replaceChildren();$('channel-notes').value=ch.notes||'';activeEditor=null;lastRange=null;lastBookmark=null;window.dispatchEvent(new CustomEvent('aws:view',{detail:{role:rulesPage?'rules':ch.role}}));return;}
+    if(special){$('writing-surface').replaceChildren();$('channel-notes').value=ch.notes||'';activeEditor=null;lastRange=null;lastBookmark=null;renderedChannelId=ch.id;window.dispatchEvent(new CustomEvent('aws:view',{detail:{role:rulesPage?'rules':ch.role}}));return;}
     $('document-title').value=ch.name;$('channel-type').textContent=ch.type==='studio'?'TWO-PANE WRITING STUDIO':'DOCUMENT CHANNEL';
     $('document-subtitle').textContent=ch.type==='studio'?'Draft alongside notes, references or another version.':'A quiet place for the next chapter.';
     $('type-mark').textContent=ch.type==='studio'?'◫':'✒';
@@ -180,6 +159,7 @@
     }
     $('channel-notes').value=ch.notes||'';
     activeEditor=document.querySelector('.rich-editor');lastRange=null;lastBookmark=null;
+    renderedChannelId=ch.id;
     updateWordCount();
   }
   function createRichEditor(ch,part,html){
@@ -207,7 +187,7 @@
     const charCount=Array.from(document.querySelectorAll('.rich-editor')).reduce((n,el)=>n+Array.from(el.textContent||'').length,0);
     $('word-count').textContent=words.toLocaleString()+' words';$('character-count').textContent=charCount.toLocaleString()+' characters';
   }
-  function renderAll(){renderRail();renderChannels();fontOptions();renderDoc();renderTasks();renderInspector();renderFonts();window.dispatchEvent(new Event('aws:library-changed'))}
+  function renderAll(){renderRail();fontOptions();renderDoc();renderChannels();renderTasks();renderInspector();renderFonts();window.dispatchEvent(new Event('aws:library-changed'))}
   function renderInspector(){
     $('inspector').classList.toggle('hidden',!state.inspectorOpen);
     $('toggle-inspector').setAttribute('aria-expanded',String(state.inspectorOpen));
@@ -435,7 +415,7 @@
         const font={id:f.id,name:f.name,family:f.family,blob:new Blob([array],{type:f.type||'font/ttf'})};await loadFont(font);await store.putFont(font)
       }catch(err){toast('Skipped an unreadable font: '+String(f.name||''))}
     }
-    fonts=await store.allFonts();state=restored;renderAll();await persist();if(data.state?.glyphProject)await window.AWSGlyphStudio?.replaceSnapshot?.(data.state.glyphProject);toast('Library restored');
+    fonts=await store.allFonts();state=restored;renderedChannelId=null;ensureLanguageTools(state);renderAll();await persist();if(data.state?.glyphProject)await window.AWSGlyphStudio?.replaceSnapshot?.(data.state.glyphProject);toast('Library restored');
   }
   async function importDocument(file){
     if(file.size>5*1024*1024)throw Error('Document exceeds 5 MB.');const ch=currentChannel();const raw=await file.text();
@@ -505,11 +485,12 @@
     document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkReminders()});
   }
   window.AWSApp=window.LiteraryFriendApp={
+    getNavigationSnapshot(){return state?{workspaces:state.workspaces,channels:state.channels,selectedWorkspaceId:state.selectedWorkspaceId,selectedChannelId:state.selectedChannelId}:null},
     getSnapshot(){captureEditor();const snapshot=JSON.parse(JSON.stringify(state));const glyph=window.AWSGlyphStudio?.getSnapshot?.();if(glyph)snapshot.glyphProject=glyph;return snapshot},
     currentDocument(){captureEditor();const c=currentChannel();if(!c)return null;return {id:c.id,title:c.name,html:c.type==='studio'?c.leftHtml:c.html,notes:c.notes,type:c.type,lang:c.lang,workspace:currentWorkspace()?.name||''}},
     updateCurrent(html){const c=currentChannel();if(!c)throw Error('No selected document');if(c.type==='studio')c.leftHtml=cleanHTML(html);else c.html=cleanHTML(html);renderDoc();scheduleSave()},
     appendCurrent(html){const c=currentChannel();if(!c)throw Error('No selected document');if(c.type==='studio')c.leftHtml+=cleanHTML(html);else c.html+=cleanHTML(html);renderDoc();scheduleSave()},
-    async replaceSnapshot(input){captureEditor();state=validateState(input);ensureLanguageTools(state);renderAll();await persist();if(input.glyphProject)await window.AWSGlyphStudio?.replaceSnapshot?.(input.glyphProject)},
+    async replaceSnapshot(input){captureEditor();state=validateState(input);renderedChannelId=null;ensureLanguageTools(state);renderAll();await persist();if(input.glyphProject)await window.AWSGlyphStudio?.replaceSnapshot?.(input.glyphProject)},
     getSelectedWorkspace(){return currentWorkspace()?.name||''},
     switchWorkspace(id){selectWorkspace(id)},
     newWorkspace(){workspaceCreate()},
@@ -544,7 +525,9 @@
     for(const f of fonts){try{await loadFont(f)}catch(error){console.warn('Font could not be loaded:',f.name,error)}}
     renderAll();
     if(state.inspectorOpen!==true){renderInspector()}
+    window.LiteraryFriendApp.ready=true;
     checkReminders();setInterval(checkReminders,20000);window.dispatchEvent(new Event('literaryfriend:ready'));
   }
-  init().catch(err=>{console.error(err);toast('Initialization error: '+err.message)});
+  const start=()=>init().catch(err=>{console.error(err);toast('Initialization error: '+err.message)});
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
