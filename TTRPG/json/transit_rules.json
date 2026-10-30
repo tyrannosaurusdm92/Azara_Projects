@@ -1,0 +1,72 @@
+{
+  "schema": "source_world.lifeSimulator.transitRules.v1",
+  "modes": [
+    {
+      "id": "rail",
+      "name": "Rail",
+      "range": "land routes between settlements",
+      "scheduleUse": "commute, freight, official travel",
+      "visual": {
+        "emoji": "🚉",
+        "asset": "transit-assets/train.png"
+      }
+    },
+    {
+      "id": "caravan",
+      "name": "Caravan",
+      "range": "roads, wilderness edges, hard routes",
+      "scheduleUse": "trade, personal travel, low-access travel",
+      "visual": {
+        "emoji": "🛤"
+      }
+    },
+    {
+      "id": "ferry",
+      "name": "Ferry",
+      "range": "rivers, canals, lakes, short water crossings",
+      "scheduleUse": "daily work and market travel",
+      "visual": {
+        "emoji": "⛵"
+      }
+    },
+    {
+      "id": "steamship",
+      "name": "Steamship",
+      "range": "rivers, lakes, bays, reefs, and seas",
+      "scheduleUse": "regional water travel and cargo",
+      "visual": {
+        "emoji": "⛵",
+        "asset": "transit-assets/steamship.png"
+      }
+    },
+    {
+      "id": "skyship",
+      "name": "Skyship",
+      "range": "airborne civic transit between major settlements",
+      "scheduleUse": "long-distance official and commercial travel",
+      "visual": {
+        "emoji": "🪽",
+        "asset": "transit-assets/skyship.png"
+      }
+    },
+    {
+      "id": "submarine",
+      "name": "Submarine",
+      "range": "underwater settlements and deep-water routes",
+      "scheduleUse": "underwater travel, covert cargo, prison routes",
+      "visual": {
+        "emoji": "⚓",
+        "asset": "transit-assets/Submarine.png"
+      }
+    },
+    {
+      "id": "portal",
+      "name": "Regulated Portal",
+      "range": "licensed gates only",
+      "scheduleUse": "tiered faction travel, emergency warrants, legal risk",
+      "visual": {
+        "emoji": "🌀✨"
+      }
+    }
+  ]
+}

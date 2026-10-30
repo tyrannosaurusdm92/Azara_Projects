@@ -1,0 +1,103 @@
+{
+  "world": "Aza'ra",
+  "cataclysm": -1351,
+  "bomb_author": "Iron Dominion",
+  "bomb_target": "Belavadós",
+  "newest_language_proto_letters": 52,
+  "newest_language_modern_letters": 38,
+  "classical_particles": "approximately 80%",
+  "modern_particles": "approximately 90%",
+  "books": [
+    [
+      "The Door In The Tree",
+      18
+    ],
+    [
+      "The Drowned Queen",
+      19
+    ],
+    [
+      "The Unwilling Spy",
+      23
+    ],
+    [
+      "The Hollow Throne",
+      38
+    ],
+    [
+      "Never-Ending Loss",
+      32
+    ],
+    [
+      "Threats Of Space",
+      39
+    ],
+    [
+      "Collision Of Worlds",
+      44
+    ],
+    [
+      "Unraveled",
+      27
+    ]
+  ],
+  "separate_universe": "Galaxy Era circa 3013 CE, alternate universe",
+  "time_travel": {
+    "invented_ce": 2082,
+    "first_time_laws_ce": 2082,
+    "galaxy_era_ce_approx": 3013
+  },
+  "book_series_bilqis": {
+    "canonical_name": "Bilqis",
+    "queen_galaxy_era_ce_approx": 3013,
+    "displaced_to_ancient_earth_ce": 3021,
+    "remembered_as": [
+      "Queen of Sheba",
+      "Queen of Atlantis"
+    ],
+    "narrative_location": "The Drowned Queen, Book 2",
+    "pix_story_year_ce": 2036,
+    "confirmed_clue_site": "Göbekli Tepe",
+    "related_legend": "Ubar",
+    "authoritative_scope": "book series only",
+    "name_correction": "Biliqis was a typo, not a character variant"
+  },
+  "azaraan_language_contact": {
+    "foundations": [
+      "proto-oceanic",
+      "uxrowo"
+    ],
+    "other_peoples": [
+      "Kaluseban",
+      "Azrahai",
+      "Gandirosha",
+      "Panolima",
+      "Gwynis",
+      "Geisamahi",
+      "Dril'thar",
+      "Tamhiogal",
+      "Jaspey",
+      "Aburata",
+      "Deorbasun",
+      "Volsarii"
+    ],
+    "language_history": "multilingual convergence and borrowing over many eras",
+    "source": "User correction 2026-10-10 and strict homebrew people registry",
+    "phonotactic_models_approved": false
+  },
+  "race_appearance_canon": {
+    "approved": "2026-10-11",
+    "ancient_draconic_name": "Azh’raim",
+    "modern_draconic_name": "Azrahai",
+    "same_nine_bloodlines": true,
+    "drilthar_permanent_name": "Dril'thar",
+    "jaspey_approved_forms": {
+      "Mosscap": "Moss-textured head or crown and soft green-brown highlights",
+      "Gloomtail": "Shadow-adapted tail or low-light markings",
+      "Rotcap": "Dark fungal or decay-associated patterning"
+    },
+    "species_registry_file": "species_physical_registry.json",
+    "mixed_ancestry_is_not_new_species": true
+  },
+  "pix_family_appearance": "Pix family appearance canon: Pix is a transgender man who can pass as human despite his visibly pointed, backward-swept ears. The childhood name 'Pix' came from those conspicuous ears, which his parents explained as an old inherited abnormality. Pix and his father have the tell-tale pointed ears. Pix's mother, Jacob and Clarahmizah have ordinary-looking human ears without points. Pix's mother eventually explains that much of the protector bloodline shared by her and Clarahmizah has Gandirosha and Zirramunis ancestry, and many descendants lost the conspicuous Aza'raan ear shape. Pix inherited the unmistakable ears through his father. The absence of pointed ears does not erase anyone's Aza'raan lineage or protector heritage."
+}

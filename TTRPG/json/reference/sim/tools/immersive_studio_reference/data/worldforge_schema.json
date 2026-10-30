@@ -1,0 +1,2 @@
+{ "$schema":"https://json-schema.org/draft/2020-12/schema", "title":"the source world WorldForge Export", "type":"object", "required":["kind","version","settlements"], "properties":{ "kind":{"const":"the source worldWorldForge"}, "version":{"type":"number"}, "settlements":{"type":"array","items":{"type":"object","required":["id","name","provinceKey","districts","npcs","routes","geojson"]}} }
+}

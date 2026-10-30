@@ -1,0 +1,12 @@
+{
+  "pronounMode": "prioritized",
+  "termPolicy": "linked",
+  "romantic": false,
+  "seedDice": {
+    "village": 3,
+    "town": 6,
+    "city": 10,
+    "capital": 18
+  },
+  "note": "UI defaults mirrored here for editing via js/terms.js, not loaded from JSON on file://."
+}

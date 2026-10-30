@@ -1,0 +1,365 @@
+{
+  "schema": "source_world.lifeSimulator.factionRules.v1",
+  "factions": [
+    {
+      "id": "fac_crucible_wardens",
+      "name": "The Crucible Wardens",
+      "role": "Relic containment, rail escorts, technology licensing.",
+      "primarySeats": [
+        "Kharzund",
+        "Kharvathen"
+      ],
+      "patrons": [
+        "Marduthor",
+        "Setrimir",
+        "Nebyrr",
+        "Valkhamesh",
+        "Nefarokir"
+      ],
+      "jobKeywords": [
+        "warden",
+        "rail",
+        "relic",
+        "license",
+        "engineer",
+        "marshal",
+        "armory",
+        "foundry",
+        "artifact"
+      ],
+      "classOptions": [
+        "Artificer:Artillerist",
+        "Fighter:Battle Master",
+        "Paladin:Watchers",
+        "Wizard:Abjuration",
+        "Ranger:Horizon Walker"
+      ]
+    },
+    {
+      "id": "fac_obsidian_diadem",
+      "name": "The Obsidian Diadem",
+      "role": "Authoritarian courts, occupation, pact cavalry.",
+      "primarySeats": [
+        "Sszaruun",
+        "Zal-tharuun"
+      ],
+      "patrons": [
+        "Valkhamesh",
+        "Enkirael",
+        "Freyseth"
+      ],
+      "jobKeywords": [
+        "court",
+        "occupation",
+        "cavalry",
+        "inquisitor",
+        "warcaster",
+        "magistrate",
+        "barracks"
+      ],
+      "classOptions": [
+        "Paladin:Conquest",
+        "Warlock:Fiend",
+        "Warlock:Hexblade",
+        "Sorcerer:Shadow",
+        "Fighter:Psi Warrior"
+      ]
+    },
+    {
+      "id": "fac_choral_synod",
+      "name": "The Choral Synod",
+      "role": "Healing faith, pilgrim debt, sacred transit.",
+      "primarySeats": [
+        "Auralisthra",
+        "Lun-tharave"
+      ],
+      "patrons": [
+        "Sokhivar",
+        "Nefarokir",
+        "Ishtanora"
+      ],
+      "jobKeywords": [
+        "temple",
+        "shrine",
+        "healer",
+        "hospital",
+        "pilgrim",
+        "cathedral",
+        "licensed worship",
+        "monastery"
+      ],
+      "classOptions": [
+        "Cleric:Light",
+        "Cleric:War",
+        "Paladin:Crown",
+        "Bard:Spirits",
+        "Fighter:Cavalier"
+      ]
+    },
+    {
+      "id": "fac_brass_concordat",
+      "name": "The Brass Concordat",
+      "role": "Treaty law, legal cover, lantern agents.",
+      "primarySeats": [
+        "Avarelyn",
+        "Valerune"
+      ],
+      "patrons": [
+        "Nebyrr",
+        "Raeshkul"
+      ],
+      "jobKeywords": [
+        "treaty",
+        "court",
+        "permit",
+        "embassy",
+        "diplomat",
+        "customs",
+        "archives",
+        "census"
+      ],
+      "classOptions": [
+        "Rogue:Inquisitive",
+        "Rogue:Mastermind",
+        "Bard:Eloquence",
+        "Wizard:Divination",
+        "Cleric:Peace"
+      ]
+    },
+    {
+      "id": "fac_nefaric_veil",
+      "name": "The Nefaric Veil",
+      "role": "Death-ledger contracts and eerie justice.",
+      "primarySeats": [
+        "Grimvald",
+        "Drakmorren"
+      ],
+      "patrons": [
+        "Nefarokir"
+      ],
+      "jobKeywords": [
+        "death",
+        "ledger",
+        "funeral",
+        "grave",
+        "necropolis",
+        "shadow",
+        "record",
+        "undertaker"
+      ],
+      "classOptions": [
+        "Rogue:Phantom",
+        "Monk:Shadow",
+        "Warlock:Undead",
+        "Cleric:Grave",
+        "Ranger:Gloom Stalker"
+      ]
+    },
+    {
+      "id": "fac_black_maw_myriad",
+      "name": "The Black-Maw Myriad",
+      "role": "Ichor ecology, mutation, adaptive broods.",
+      "primarySeats": [
+        "Greenmire",
+        "Nalvessir"
+      ],
+      "patrons": [
+        "Thoryn-Rahek",
+        "Hathruna"
+      ],
+      "jobKeywords": [
+        "ichor",
+        "black market",
+        "mutation",
+        "spores",
+        "swamp",
+        "undercity",
+        "salvage",
+        "apothecary"
+      ],
+      "classOptions": [
+        "Druid:Spores",
+        "Druid:Moon",
+        "Ranger:Swarmkeeper",
+        "Barbarian:Beast",
+        "Warlock:Great Old One"
+      ]
+    },
+    {
+      "id": "fac_glasswell_institute",
+      "name": "The Glasswell Institute",
+      "role": "Arcane science, test chambers, personhood horror.",
+      "primarySeats": [
+        "Gildri",
+        "Ceulrithan"
+      ],
+      "patrons": [
+        "Raeshkul",
+        "Setrimir"
+      ],
+      "jobKeywords": [
+        "research",
+        "university",
+        "archive",
+        "laboratory",
+        "wizard",
+        "arcane",
+        "clinic",
+        "experiment",
+        "institute"
+      ],
+      "classOptions": [
+        "Artificer:Alchemist",
+        "Wizard:Scribes",
+        "Wizard:Graviturgy",
+        "Rogue:Inquisitive",
+        "Cleric:Arcana"
+      ]
+    },
+    {
+      "id": "fac_freeblade_veil",
+      "name": "The Freeblade Veil",
+      "role": "Liberation cells, forged papers, sabotage.",
+      "primarySeats": [
+        "Mythraelyn",
+        "Aelvanyr"
+      ],
+      "patrons": [
+        "Asethyr",
+        "Thalunesh"
+      ],
+      "jobKeywords": [
+        "safehouse",
+        "liberation",
+        "forged",
+        "sabotage",
+        "smuggler",
+        "scout",
+        "rival",
+        "refugee"
+      ],
+      "classOptions": [
+        "Rogue:Scout",
+        "Rogue:Swashbuckler",
+        "Monk:Open Hand",
+        "Ranger:Fey Wanderer",
+        "Fighter:Battle Master"
+      ]
+    },
+    {
+      "id": "fac_cog_sanctum_synod",
+      "name": "The Cog-Sanctum Synod",
+      "role": "Machine-priests, augmetics, foundry rites.",
+      "primarySeats": [
+        "Sleakitika",
+        "Gruddirynn"
+      ],
+      "patrons": [
+        "Setrimir",
+        "Marduthor"
+      ],
+      "jobKeywords": [
+        "machine",
+        "clockwork",
+        "foundry",
+        "forge",
+        "construct",
+        "steam",
+        "engine",
+        "sanctum"
+      ],
+      "classOptions": [
+        "Artificer:Armorer",
+        "Artificer:Battle Smith",
+        "Cleric:Forge",
+        "Wizard:War Magic",
+        "Fighter:Rune Knight"
+      ]
+    },
+    {
+      "id": "fac_regent_lattice",
+      "name": "The Regent Lattice",
+      "role": "Surveillance, ration control, civic assimilation.",
+      "primarySeats": [
+        "Glattonica",
+        "Earrorim"
+      ],
+      "patrons": [
+        "Nebyrr",
+        "Raeshkul"
+      ],
+      "jobKeywords": [
+        "registry",
+        "ration",
+        "surveillance",
+        "civic",
+        "assimilation",
+        "peacekeeper",
+        "records",
+        "inspection"
+      ],
+      "classOptions": [
+        "Paladin:Crown",
+        "Wizard:Enchantment",
+        "Artificer:Armorer",
+        "Rogue:Mastermind",
+        "Fighter:Battle Master"
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "tier": 0,
+      "name": "Associated / Civilian / Unsworn",
+      "meaning": "Connected but not sworn in."
+    },
+    {
+      "tier": 1,
+      "name": "Sworn / Trained / Working Member",
+      "meaning": "Official working member with basic duties."
+    },
+    {
+      "tier": 2,
+      "name": "Specialist / Officer / Veteran",
+      "meaning": "Trusted specialist, officer, captain, priest, mage, spy, or master worker."
+    },
+    {
+      "tier": 3,
+      "name": "Leader / Elite / Champion",
+      "meaning": "Faction leader, elite agent, high priest, master mage, commander, or recognized authority."
+    }
+  ],
+  "badgeRanks": [
+    "No Badge",
+    "Bronze Badge",
+    "Silver Badge",
+    "Gold Badge"
+  ],
+  "portalPassTypes": [
+    "Local Gate Writ",
+    "Provincial Portal Pass",
+    "Inter-Province Portal Pass",
+    "Emergency Seal Warrant",
+    "Retinue Endorsement",
+    "Diplomatic Gate Seal",
+    "Blackfile Transit Key",
+    "Artifact Quarantine Pass"
+  ],
+  "ataTier3Titles": [
+    "Portal Weaver",
+    "Riftwalker",
+    "Leyline Researcher",
+    "Diplomat",
+    "Emissary",
+    "Strategic Courier",
+    "Arcane Sentinel",
+    "Shadow Operative",
+    "Warcaster",
+    "High Merchant",
+    "Grand Negotiator",
+    "Artifact Trader",
+    "Dream Weaver",
+    "Veilkeeper",
+    "Divine Herald"
+  ]
+}

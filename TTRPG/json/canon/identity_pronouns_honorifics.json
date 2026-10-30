@@ -1,0 +1,119 @@
+{
+  "schema": "azara-identity-v2",
+  "identities": [
+    "Agender",
+    "Apagender",
+    "Bigender",
+    "Cis-Female",
+    "Cis-Male",
+    "Demi-Female",
+    "Demi-Male",
+    "Gender-Flexible",
+    "Genderfluid",
+    "Genderless",
+    "Nonbinary",
+    "Poly-Gender",
+    "Trans-Female",
+    "Trans-Male"
+  ],
+  "removedIdentities": [],
+  "pronounSets": {
+    "he/him": {
+      "subject": "he",
+      "object": "him",
+      "possessiveDeterminer": "his",
+      "possessivePronoun": "his",
+      "reflexive": "himself"
+    },
+    "she/her": {
+      "subject": "she",
+      "object": "her",
+      "possessiveDeterminer": "her",
+      "possessivePronoun": "hers",
+      "reflexive": "herself"
+    },
+    "they/them": {
+      "subject": "they",
+      "object": "them",
+      "possessiveDeterminer": "their",
+      "possessivePronoun": "theirs",
+      "reflexive": "themself"
+    },
+    "xe/xem": {
+      "subject": "xe",
+      "object": "xem",
+      "possessiveDeterminer": "xyr",
+      "possessivePronoun": "xyrs",
+      "reflexive": "xemself"
+    },
+    "ze/zir": {
+      "subject": "ze",
+      "object": "zir",
+      "possessiveDeterminer": "zir",
+      "possessivePronoun": "zirs",
+      "reflexive": "zirself"
+    },
+    "fae/faer": {
+      "subject": "fae",
+      "object": "faer",
+      "possessiveDeterminer": "faer",
+      "possessivePronoun": "faers",
+      "reflexive": "faerself"
+    },
+    "ae/aer": {
+      "subject": "ae",
+      "object": "aer",
+      "possessiveDeterminer": "aer",
+      "possessivePronoun": "aers",
+      "reflexive": "aerself"
+    },
+    "e/em": {
+      "subject": "e",
+      "object": "em",
+      "possessiveDeterminer": "eir",
+      "possessivePronoun": "eirs",
+      "reflexive": "emself"
+    }
+  },
+  "familyTerms": {
+    "parent": "parent",
+    "child": "child",
+    "sibling": "sibling",
+    "siblingChild": "nibling",
+    "parentSibling": "pibling",
+    "grandparent": "grandparent",
+    "partner": "partner",
+    "spouse": "spouse",
+    "cousin": "cousin",
+    "relative": "relative"
+  },
+  "honorificOptions": [
+    "Mx.",
+    "Mu.",
+    "Ser",
+    "M.",
+    "Mr.",
+    "Ms.",
+    "Dr.",
+    "Professor",
+    "Citizen",
+    "none"
+  ],
+  "notes": [
+    "Gender identity, pronouns, and honorific are separate personal properties, not an automatic inference.",
+    "For titles, prefer the individual’s recorded choice. Family relationships describe connections, not assumed gender.",
+    "Neopronoun forms are stored as explicit components; no generated dialogue should guess inflection."
+  ],
+  "sources": [
+    "https://universalenglish.org/gender-neutral-honorifics/",
+    "https://www.genderspecialist.com/blog/gender-neutral-family-language",
+    "https://pronounslist.com/"
+  ],
+  "pronounCatalogue": "json/identity/pronouns.json",
+  "termLexicon": "json/identity/term-lexicon.json",
+  "generator": "js/identity/identity-engine.js",
+  "pronounSetsCount": 232,
+  "neopronounSetsCount": 206,
+  "identityAssignment": "Six unbiased opening dice pools weighted by identity, plus per-NPC d20 face, fixed cis and exact-half trans/demi overrides per population generation.",
+  "termGuidance": "Linked or neutral term suggestions only; formal/professional/romantic/familial role cannot be inferred from pronouns."
+}

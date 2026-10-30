@@ -1,0 +1,333 @@
+{
+  "months": [
+    {
+      "number": 1,
+      "name": "Thoryn-Rahek",
+      "civilDates": "1-30",
+      "theme": "aberrant life, primordial mutation, dangerous origins"
+    },
+    {
+      "number": 2,
+      "name": "Freysethysra",
+      "civilDates": "1-30",
+      "theme": "crossroads, curses, beauty, temptation, forbidden pacts"
+    },
+    {
+      "number": 3,
+      "name": "Nefarokir",
+      "civilDates": "1-30",
+      "theme": "death, spirits, memory, burial, cosmic ledgers"
+    },
+    {
+      "number": 4,
+      "name": "Thalunesh",
+      "civilDates": "1-30",
+      "theme": "dreamers, tricksters, shapeshifters, wanderers, fey mischief"
+    },
+    {
+      "number": 5,
+      "name": "Horundar",
+      "civilDates": "1-30",
+      "theme": "storms, oceans, floods, earthquakes, raw elemental force"
+    },
+    {
+      "number": 6,
+      "name": "Raeshkul",
+      "civilDates": "1-30",
+      "theme": "intellect, psionics, strategy, higher understanding"
+    },
+    {
+      "number": 7,
+      "name": "Asethrimir",
+      "civilDates": "1-30",
+      "theme": "freedom, revelry, wilderness survival, constructs, awakened machinery"
+    },
+    {
+      "number": 8,
+      "name": "Sokhivar",
+      "civilDates": "1-30",
+      "theme": "sunlight, music, prophecy, divine freedom"
+    },
+    {
+      "number": 9,
+      "name": "Iskazunet",
+      "civilDates": "1-30",
+      "theme": "beasts, instinct, fertility, shadows, curses, twilight-born peoples"
+    },
+    {
+      "number": 10,
+      "name": "Bastve'enlil",
+      "civilDates": "1-30",
+      "theme": "tides, reefs, trenches, adaptation, civilization, instinct"
+    },
+    {
+      "number": 11,
+      "name": "Hathruna",
+      "civilDates": "1-30",
+      "theme": "rebirth, rot, fungi, roots, decay cycles"
+    }
+  ],
+  "weekdays": [
+    {
+      "earthWeekday": "Monday",
+      "belavadosWeekday": "Nebday",
+      "function": "Standard civic day"
+    },
+    {
+      "earthWeekday": "Tuesday",
+      "belavadosWeekday": "Sigranday",
+      "function": "Standard civic day"
+    },
+    {
+      "earthWeekday": "Wednesday",
+      "belavadosWeekday": "Ishtaday",
+      "function": "Rest / sync day"
+    },
+    {
+      "earthWeekday": "Thursday",
+      "belavadosWeekday": "Marduday",
+      "function": "Standard civic day"
+    },
+    {
+      "earthWeekday": "Friday",
+      "belavadosWeekday": "Enkirday",
+      "function": "Standard civic day"
+    },
+    {
+      "earthWeekday": "Saturday",
+      "belavadosWeekday": "Anubaday",
+      "function": "Standard civic day"
+    },
+    {
+      "earthWeekday": "Sunday",
+      "belavadosWeekday": "Valkhaday",
+      "function": "Standard civic day"
+    }
+  ],
+  "provinces": [
+    {
+      "province": "Aelvanyr",
+      "primaryUTC": "UTC-4",
+      "displayUTCs": "UTC-4, UTC-3",
+      "centerLongitude": -56.825,
+      "centerLatitude": -27.314,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Aelwynora",
+      "primaryUTC": "UTC-2",
+      "displayUTCs": "UTC-2, UTC-1",
+      "centerLongitude": -25.982,
+      "centerLatitude": 61.114,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Astraevos",
+      "primaryUTC": "UTC+4",
+      "displayUTCs": "UTC+3, UTC+4",
+      "centerLongitude": 55.171,
+      "centerLatitude": 24.31,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Bravelyn",
+      "primaryUTC": "UTC-2",
+      "displayUTCs": "UTC-3, UTC-2",
+      "centerLongitude": -34.488,
+      "centerLatitude": -65.17,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Ceulrithan",
+      "primaryUTC": "UTC",
+      "displayUTCs": "UTC-1, UTC",
+      "centerLongitude": -3.079,
+      "centerLatitude": -39.63,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Drakmorren",
+      "primaryUTC": "UTC+9",
+      "displayUTCs": "UTC+8, UTC+9",
+      "centerLongitude": 132.232,
+      "centerLatitude": 64.92,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Earrorim",
+      "primaryUTC": "UTC-7",
+      "displayUTCs": "UTC-7, UTC-6",
+      "centerLongitude": -101.697,
+      "centerLatitude": 35.305,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "El'dravire Riverrealm",
+      "primaryUTC": "UTC+4",
+      "displayUTCs": "UTC+4, UTC+5",
+      "centerLongitude": 61.119,
+      "centerLatitude": -16.033,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Eldermere",
+      "primaryUTC": "UTC+8",
+      "displayUTCs": "UTC+8, UTC+9",
+      "centerLongitude": 123.461,
+      "centerLatitude": 40.833,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Falthrakar",
+      "primaryUTC": "UTC",
+      "displayUTCs": "UTC-1, UTC",
+      "centerLongitude": -5.451,
+      "centerLatitude": 32.805,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Gruddirynn",
+      "primaryUTC": "UTC+5",
+      "displayUTCs": "UTC+5, UTC+6",
+      "centerLongitude": 78.009,
+      "centerLatitude": -62.445,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Iazethas",
+      "primaryUTC": "UTC-10",
+      "displayUTCs": "UTC-10, UTC-9",
+      "centerLongitude": -146.861,
+      "centerLatitude": -14.171,
+      "notes": "Crosses antimeridian; settlement longitude should decide exact side."
+    },
+    {
+      "province": "Jor’maelis",
+      "primaryUTC": "UTC+9",
+      "displayUTCs": "UTC+8, UTC+9",
+      "centerLongitude": 130.627,
+      "centerLatitude": -46.374,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Kaelvorrin",
+      "primaryUTC": "UTC",
+      "displayUTCs": "UTC, UTC+1",
+      "centerLongitude": 5.828,
+      "centerLatitude": 6.383,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Kharvathen",
+      "primaryUTC": "UTC-3",
+      "displayUTCs": "UTC-3, UTC-2",
+      "centerLongitude": -44.077,
+      "centerLatitude": -2.058,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Khorvaak",
+      "primaryUTC": "UTC+10",
+      "displayUTCs": "UTC+9, UTC+10",
+      "centerLongitude": 149.446,
+      "centerLatitude": 21.738,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Lun’tharavé",
+      "primaryUTC": "UTC+1",
+      "displayUTCs": "UTC+1, UTC+2",
+      "centerLongitude": 16.816,
+      "centerLatitude": -70.778,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Marrowynd",
+      "primaryUTC": "UTC-7",
+      "displayUTCs": "UTC-8, UTC-7",
+      "centerLongitude": -112.285,
+      "centerLatitude": 61.786,
+      "notes": "Crosses antimeridian; settlement longitude should decide exact side."
+    },
+    {
+      "province": "Nalvessir",
+      "primaryUTC": "UTC+7",
+      "displayUTCs": "UTC+7, UTC+8",
+      "centerLongitude": 109.263,
+      "centerLatitude": 19.376,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Pelvoryn",
+      "primaryUTC": "UTC+1",
+      "displayUTCs": "UTC, UTC+1",
+      "centerLongitude": 11.487,
+      "centerLatitude": -12.748,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Sylvavéryn",
+      "primaryUTC": "UTC-6",
+      "displayUTCs": "UTC-6, UTC-5",
+      "centerLongitude": -86.299,
+      "centerLatitude": 8.067,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Thalryss",
+      "primaryUTC": "UTC-9",
+      "displayUTCs": "UTC-10, UTC-9",
+      "centerLongitude": -138.357,
+      "centerLatitude": 15.56,
+      "notes": "Crosses antimeridian; settlement longitude should decide exact side."
+    },
+    {
+      "province": "Vaelmyrith",
+      "primaryUTC": "UTC+2",
+      "displayUTCs": "UTC+2, UTC+3",
+      "centerLongitude": 36.153,
+      "centerLatitude": 65.988,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Valerune",
+      "primaryUTC": "UTC+5",
+      "displayUTCs": "UTC+4, UTC+5",
+      "centerLongitude": 69.651,
+      "centerLatitude": -33.735,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Virelport",
+      "primaryUTC": "UTC+6",
+      "displayUTCs": "UTC+5, UTC+6",
+      "centerLongitude": 82.978,
+      "centerLatitude": 74.861,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Vuelmora",
+      "primaryUTC": "UTC+7",
+      "displayUTCs": "UTC+7, UTC+8",
+      "centerLongitude": 108.95,
+      "centerLatitude": -17.703,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    },
+    {
+      "province": "Zal’tharuun",
+      "primaryUTC": "UTC-7",
+      "displayUTCs": "UTC-7, UTC-6",
+      "centerLongitude": -104.774,
+      "centerLatitude": -60.995,
+      "notes": "Crosses antimeridian; settlement longitude should decide exact side."
+    },
+    {
+      "province": "Zharvokh",
+      "primaryUTC": "UTC-4",
+      "displayUTCs": "UTC-5, UTC-4",
+      "centerLongitude": -60.833,
+      "centerLatitude": 73.588,
+      "notes": "Use secondary UTC only for settlements near that side of the province."
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+[
+  {
+    "id": 1,
+    "category": "Humans, Near-Humans, and Mixed Heritage",
+    "god": "Nebyrr",
+    "description": "Creator of civilization, lineage, dynasties, marriage, and social order.",
+    "races": [
+      "Human",
+      "Half-Elf",
+      "Half-Orc",
+      "Khoravar",
+      "Umbral Human"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Elven Peoples",
+    "god": "Sigrananna",
+    "description": "Mistress of forests, moonlight, wilderness, and graceful hunters.",
+    "races": [
+      "Elf",
+      "High Elf",
+      "Wood Elf",
+      "Drow",
+      "Eladrin",
+      "Astral Elf",
+      "Sea Elf",
+      "Shadar-Kai",
+      "Pallid Elf",
+      "Star Elf",
+      "Avariel",
+      "Snow Elf",
+      "Sun Elf",
+      "Moon Elf",
+      "Shadowmoor Elf",
+      "Celestial Elf"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Dwarven and Gnomish Kin",
+    "god": "Marduthor",
+    "description": "Divine smith and architect of invention, craft, metalwork, and underground halls.",
+    "races": [
+      "Dwarf",
+      "Duergar",
+      "Gnome",
+      "Deep Gnome",
+      "Autognome"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Halfling and Smallfolk",
+    "god": "Ishtanora",
+    "description": "Patron of hearths, harvests, humble villages, and peaceful rural life.",
+    "races": [
+      "Halfling",
+      "Kender",
+      "Kithkin",
+      "Qickstep",
+      "Hedge",
+      "Jerbeen"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Orcs, Goblinoids, and Brutish Humanoids",
+    "god": "Enkirael",
+    "description": "Born from conflict, conquest, fury, survival, and martial dominance.",
+    "races": [
+      "Orc",
+      "Goblin",
+      "Hobgoblin",
+      "Bugbear",
+      "Gnoll",
+      "Gobboc",
+      "Shadow Goblin"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Giantkin and Powerful Humanoids",
+    "god": "Anubaldir",
+    "description": "Titan of endurance, burden, colossal strength, and primal might.",
+    "races": [
+      "Goliath",
+      "Firbolg",
+      "Cyclopian",
+      "Giff",
+      "Minotaur"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Draconic and Reptilian Races",
+    "god": "Valkhamesh",
+    "description": "Creator of thunder-blooded sovereign races tied to ancient power and domination.",
+    "races": [
+      "Dragonborn",
+      "Kobold",
+      "Lizardfolk",
+      "Yuan-Ti"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Celestial, Fiendish, and Planar Bloodlines",
+    "god": "Freyseth",
+    "description": "Mistress of crossroads, curses, planar mysteries, and supernatural bloodlines.",
+    "races": [
+      "Aasimar",
+      "Tiefling",
+      "Feral Tiefling",
+      "Hexblood",
+      "Accursed",
+      "Curseborn"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "Undead and Death-Touched Races",
+    "god": "Nefarokir",
+    "description": "Lord of death, the underworld, spirits, and the forgotten dead.",
+    "races": [
+      "Dhampir",
+      "Darakhul",
+      "Reborn",
+      "Arisen",
+      "Graveborn",
+      "Shade",
+      "Downcast"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "Fey and Trickster Folk",
+    "god": "Thalunesh",
+    "description": "Patron of tricksters, shapeshifters, wanderers, dreamers, and magical mischief.",
+    "races": [
+      "Faerie",
+      "Fairy",
+      "Changeling",
+      "Lorwyn Changeling",
+      "Satyr",
+      "Dreamer"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "Elemental and Energy-Born Peoples",
+    "god": "Horundar",
+    "description": "Master of storms, seas, earthquakes, floods, and untamed elemental force.",
+    "races": [
+      "Air Genasi",
+      "Earth Genasi",
+      "Fire Genasi",
+      "Water Genasi",
+      "Flamekin",
+      "Rimekin",
+      "Ashborn",
+      "Azureborn",
+      "Bogborn",
+      "Deepborn",
+      "Snowborn",
+      "Stoneborn"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "Psionic, Astral, and Alien Minds",
+    "god": "Raeshkul",
+    "description": "Goddess of intellect, strategy, psionic discipline, and higher understanding.",
+    "races": [
+      "Kalashtar",
+      "Githyanki",
+      "Githzerai",
+      "Plasmoid",
+      "Disembodied"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "Constructed and Artificial Beings",
+    "god": "Setrimir",
+    "description": "Shaper of artificial life, stolen knowledge, innovation, and awakened constructs.",
+    "races": [
+      "Warforged",
+      "Geppettin",
+      "Relicborn",
+      "Wechselkind"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "Birdfolk and Avian Races",
+    "god": "Sokhivar",
+    "description": "Sky-soaring creator tied to sunlight, prophecy, music, and divine freedom.",
+    "races": [
+      "Aarakocra",
+      "Kenku",
+      "Owlin",
+      "Ravenfolk",
+      "Corvum",
+      "Gallus",
+      "Strig",
+      "Feathren",
+      "Raptor"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "Beastfolk and Mammalian Anthropomorphs",
+    "god": "Iskareth",
+    "description": "Primordial mother of beasts, fertility, instinct, and natural kinship.",
+    "races": [
+      "Harengon",
+      "Leonin",
+      "Loxodon",
+      "Tabaxi",
+      "Bearfolk",
+      "Canisar",
+      "Cervan",
+      "Erina",
+      "Mapach",
+      "Ratatosk",
+      "Rakin",
+      "Sattare",
+      "Vulpin"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "Amphibious and Aquatic Peoples",
+    "god": "Bastveig",
+    "description": "Ancient mother of tides, reefs, hidden waters, and oceanic civilizations.",
+    "races": [
+      "Triton",
+      "Locathah",
+      "Grung",
+      "Merfolk",
+      "Sahuagin",
+      "Lotol",
+      "Nakudama",
+      "Dril’thar",
+      "Tamhiogals"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "Insectoid, Ooze, and Aberrant Creatures",
+    "god": "Thoryn-Rahek",
+    "description": "Creator of ancient malformed beings born from primordial chaos and forgotten ages.",
+    "races": [
+      "Thri-Kreen",
+      "Cnidarin",
+      "Oozekin",
+      "Opteran",
+      "Silkborn"
+    ]
+  },
+  {
+    "id": 18,
+    "category": "Plantfolk and Nature-Bound Races",
+    "god": "Hathruna",
+    "description": "Goddess of seasonal rebirth, decay, fungi, roots, and living wilderness.",
+    "races": [
+      "Mandrake",
+      "Mycelian",
+      "Gnarlborn",
+      "Harvestborn",
+      "Jaspeys"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "Shadow, Umbral, and Darkness-Aligned Peoples",
+    "god": "Eirzunet",
+    "description": "Creator of cursed shadows, transformations, forbidden magic, and eerie twilight races.",
+    "races": [
+      "Ombrask",
+      "Ruinbound",
+      "Blagueborn",
+      "Threadborn"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "Animalistic Hybrids and Experimental Races",
+    "god": "Oskar'enlil",
+    "description": "Shaped experimental peoples to test balance between civilization, instinct, and adaptation.",
+    "races": [
+      "Simic Hybrid",
+      "Shifter",
+      "Verdan",
+      "Vedalken",
+      "Hadozee",
+      "Tortle"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "Primitive, Tribal, and Wilderness Humanoids",
+    "god": "Asethyr",
+    "description": "God of primal freedom, tribal rites, revelry, instinct, and untamed cultures.",
+    "races": [
+      "Boggart",
+      "Centaur",
+      "Grudgel",
+      "Hederan",
+      "Laneshi",
+      "Terandus"
+    ]
+  },
+  {
+    "id": 22,
+    "category": "Miscellaneous and Hard-to-Classify Races",
+    "god": "Nephthysra",
+    "description": "Created rare and enigmatic peoples defined by uniqueness, beauty, charisma, and emotional influence.",
+    "races": [
+      "Dara",
+      "Golynn",
+      "Luma"
+    ]
+  }
+]

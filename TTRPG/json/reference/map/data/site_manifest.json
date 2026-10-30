@@ -1,0 +1,23 @@
+{
+  "title": "Belavadós Player Map + Hidden DM Settlement Editor",
+  "mainFile": "belavados_map_PLAYER.html",
+  "dmBackdoor": "belavados_map_PLAYER.html#dm-editor",
+  "createdFrom": [
+    "Belavados_Living_SVG_Settlement_Template_MERGED.zip",
+    "Belavados_Living_SVG_Settlement_Template_CATALOGUE_DOCX_REVISED.html",
+    "settlement_generator_svg_autofill.html",
+    "settlement_generator.html",
+    "generator_base_npc_location_alignment_overlay_clock_added.html",
+    "Belavados_Living_Settlement_Generator_sims_lives.html",
+    "Belavados_Living_Settlement_Generator_alignment_added.html",
+    "belavados_dm_settlement_html_uploader.html",
+    "Belavados_Visitable_Locations_Catalogue.json",
+    "Belavados_Immersive_Locations_Google_Doc.docx",
+    "Belavados_Simplified_Time_Conversion_Guide (1).docx"
+  ],
+  "notes": [
+    "Use normal URL for players. Add #dm-editor for DM mode.",
+    "DM mode can import/export settlements, upload SVG maps, generate locations/NPCs, tweak names, and save to the player map.",
+    "Player mode has province/settlement selectors, live Earth/DM/Belavadós time, clickable map/location drawer, item-only search, and full NPC list."
+  ]
+}

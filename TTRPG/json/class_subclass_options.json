@@ -1,0 +1,162 @@
+{
+  "schema": "source_world.lifeSimulator.classSubclasses.v1",
+  "classes": {
+    "Barbarian": [
+      "—",
+      "Berserker",
+      "Totem Warrior",
+      "Zealot",
+      "Wild Magic",
+      "Beast",
+      "Ancestral Guardian",
+      "Storm Herald"
+    ],
+    "Bard": [
+      "—",
+      "Lore",
+      "Valor",
+      "Glamour",
+      "Whispers",
+      "Swords",
+      "Eloquence",
+      "Spirits",
+      "Creation"
+    ],
+    "Cleric": [
+      "—",
+      "Life",
+      "Light",
+      "War",
+      "Trickery",
+      "Death",
+      "Grave",
+      "Twilight",
+      "Peace",
+      "Forge",
+      "Tempest",
+      "Knowledge",
+      "Nature",
+      "Arcana"
+    ],
+    "Druid": [
+      "—",
+      "Land",
+      "Moon",
+      "Dreams",
+      "Spores",
+      "Wildfire",
+      "Stars",
+      "Shepherd"
+    ],
+    "Fighter": [
+      "—",
+      "Champion",
+      "Battle Master",
+      "Eldritch Knight",
+      "Arcane Archer",
+      "Cavalier",
+      "Samurai",
+      "Rune Knight",
+      "Psi Warrior",
+      "Echo Knight"
+    ],
+    "Monk": [
+      "—",
+      "Open Hand",
+      "Shadow",
+      "Mercy",
+      "Four Elements",
+      "Kensei",
+      "Astral Self",
+      "Drunken Master",
+      "Long Death"
+    ],
+    "Paladin": [
+      "—",
+      "Devotion",
+      "Ancients",
+      "Vengeance",
+      "Redemption",
+      "Oathbreaker",
+      "Glory",
+      "Conquest",
+      "Crown",
+      "Watchers"
+    ],
+    "Ranger": [
+      "—",
+      "Hunter",
+      "Beast Master",
+      "Gloom Stalker",
+      "Fey Wanderer",
+      "Horizon Walker",
+      "Swarmkeeper",
+      "Drakewarden",
+      "Monster Slayer"
+    ],
+    "Rogue": [
+      "—",
+      "Thief",
+      "Assassin",
+      "Arcane Trickster",
+      "Swashbuckler",
+      "Mastermind",
+      "Phantom",
+      "Soulknife",
+      "Inquisitive",
+      "Scout"
+    ],
+    "Sorcerer": [
+      "—",
+      "Wild Magic",
+      "Draconic",
+      "Divine Soul",
+      "Shadow",
+      "Clockwork",
+      "Aberrant Mind",
+      "Storm"
+    ],
+    "Warlock": [
+      "—",
+      "Fiend",
+      "Archfey",
+      "Great Old One",
+      "Celestial",
+      "Hexblade",
+      "Undead",
+      "Genie",
+      "Fathomless"
+    ],
+    "Wizard": [
+      "—",
+      "Abjuration",
+      "Divination",
+      "Evocation",
+      "Illusion",
+      "Necromancy",
+      "Enchantment",
+      "Chronurgy",
+      "Graviturgy",
+      "Bladesinging",
+      "Scribes",
+      "War Magic"
+    ],
+    "Artificer": [
+      "—",
+      "Alchemist",
+      "Armorer",
+      "Artillerist",
+      "Battle Smith"
+    ],
+    "Blood Hunter": [
+      "—",
+      "Ghostslayer",
+      "Lycan",
+      "Mutant",
+      "Profane Soul"
+    ],
+    "Multi-Class": [
+      "—"
+    ]
+  }
+}

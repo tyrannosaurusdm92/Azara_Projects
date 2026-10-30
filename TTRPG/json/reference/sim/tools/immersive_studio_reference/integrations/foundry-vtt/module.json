@@ -1,0 +1,2 @@
+{ "id": "source_world-living-world", "title": "the source world Living World Export", "description": "Imports the source world generated NPCs, locations, relationships, schedules, and travel data into Foundry as journals and optional NPC actors.", "version": "1.0.0", "compatibility": { "minimum": "12", "verified": "13" }, "authors": [{ "name": "Andrew Blake-Newton / the source world Generator" }], "esmodules": ["scripts/import_living_world.js"], "packs": [], "license": "UNLICENSED-LIFE_SIMULATOR-HOMEBREW-CONTENT"
+}

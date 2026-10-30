@@ -1,0 +1,9 @@
+{
+  "usedSources": [
+    "uploaded living settlement generator HTML",
+    "life_simulator_race_category_dropdown_complete_package (1).zip",
+    "settlement_assignments.json",
+    "Life Simulator_Simplified_Time_Conversion_Guide (1).docx"
+  ],
+  "notes": "The package externalizes data and code into separate files and uses imported race dropdown, settlement, location catalog, and time model data."
+}

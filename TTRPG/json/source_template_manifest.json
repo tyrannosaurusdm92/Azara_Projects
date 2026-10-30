@@ -1,0 +1,28 @@
+{
+  "origin": "settlement_generator(1).html",
+  "title": "Belavadös Merged Map + NPC Life Settlement Editor",
+  "styleBlockCount": 3,
+  "styleSha256": [
+    "0d8d035593faf6324b95e8756e581d8162b9975734d3c99e7536f5bacf27e322",
+    "734f56461304cba57de63e8088cdb4101101ff8aa907ea41e3e0b39718a1672b",
+    "43d84e3904064b7f2b36d8d66580af157e6b68bc8ee5d19079820064feec7852"
+  ],
+  "backgroundImageUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f16e2ef7-0b7b-419b-b057-1bd19a2289f5/d1io0wc-c5165550-8c01-487f-8651-146e1e14e111.jpg/v1/fill/w_1024%2Ch_640%2Cq_75%2Cstrp/steampunk_wallpaper_by_spaceturtlestudios_d1io0wc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQwIiwicGF0aCI6Ii9mL2YxNmUyZWY3LTBiN2ItNDE5Yi1iMDU3LTFiZDE5YTIyODlmNS9kMWlvMHdjLWM1MTY1NTUwLThjMDEtNDg3Zi04NjUxLTE0NmUxZTE0ZTExMS5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3SzTUeHWwjxvKxwZmrrWKMa3oiY0fxLBQ_yo0Zr-V-g",
+  "sourceTemplateSections": [
+    "Province Window",
+    "Generator Controls",
+    "Scale Window",
+    "Belavadós Live Clock System",
+    "Settlement Preference Alignment",
+    "Premade Settlement Image / HTML Map",
+    "Selected Location — Auto-loaded Info",
+    "NPC Browser",
+    "Generated Lists",
+    "Drag + Drop Upload Window",
+    "Selected NPC Alignment",
+    "Alignment JSON Export / Import",
+    "Export Window",
+    "Preview Window"
+  ],
+  "dataBinding": "Existing Belavadós world dataset from uploaded Pass 2 ZIP; original obsolete race list is not imported."
+}
