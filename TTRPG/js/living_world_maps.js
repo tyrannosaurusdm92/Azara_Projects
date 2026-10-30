@@ -148,7 +148,8 @@ function showTown(){if(!data)return;mode='town';active=true;overlay.hidden=false
  $('bvs-worldTemplateMapImage').hidden=true;$('bvs-worldTemplateMapFrame').hidden=true;
  toggle.hidden=true;renderMap();if(status)status.textContent=`Living map of ${data.settlementName}; select or search any building or resident. Source V7 records retained.`;}
 function showAtlas(){active=false;mode='atlas';overlay.hidden=true;inspector.hidden=true;mapViewer.classList.remove('living-town-active');$('bvs-worldMapCanvas').hidden=false;toggle.hidden=false;}
-function changeView(){const sid=app.ui.settlement?.id;
+function changeView(){if(document.getElementById('belavados-unified-app')?.dataset.view==='generator')return;
+ const sid=app.ui.settlement?.id;
  if(sid==='aelvanyr-elarvess'){requestedId='';data=null;showAtlas();toggle.hidden=true;return;}
  if(!sid){requestedId='';data=null;showAtlas();toggle.hidden=true;return;}
  if(sid===loadedId&&data){showTown();return;}
@@ -191,6 +192,7 @@ toggle.addEventListener('click',showTown);
 $('bvs-worldRestoreAtlas')?.addEventListener('click',()=>{if(active)showAtlas();});
 $('bvs-worldMapRefresh')?.addEventListener('click',()=>{if(data&&mode==='town')setTimeout(()=>showTown(),0);});
 document.addEventListener('belavados:viewchange',()=>setTimeout(changeView,0));
+document.addEventListener('belavados:unified-viewchange',()=>setTimeout(changeView,0));
 $('bvs-worldNpcSelect')?.addEventListener('change',e=>{if(active&&lookupNpc.has(e.target.value)&&selectedNpc!==e.target.value)setSelectedNpc(e.target.value,false);});
 $('bvs-worldLocationSelect')?.addEventListener('change',e=>{if(!active)return;const name=e.target.selectedOptions?.[0]?.textContent;const b=data?.buildings.find(b=>norm(b.name)===norm(name)||b.sourceAliases.some(t=>norm(t)===norm(name)));if(b&&selectedBuilding!==b.id)setSelectedBuilding(b.id,false);});
 let prevClock='';document.addEventListener('aza-calendar:change',()=>{if(!active)return;const st=calendar?.getState(),key=st?.day+'-'+st?.hour+'-'+st?.minute;if(key===prevClock)return;prevClock=key;drawPeople();

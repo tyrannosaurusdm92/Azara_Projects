@@ -1,7 +1,7 @@
 /* Onyx Work reference retriever. Loads source code as knowledge DATA, never runs it.
    No panel, remote backend or network service. Canonical TTRPG data takes priority. */
 (function(){'use strict';
-const packs=['worldbuilding-core-knowledge.json','worldbuilding-deep-knowledge.json','worldbuilding-cross-domain.json'];
+const packs=['worldbuilding-core-knowledge.json','worldbuilding-deep-knowledge.json','worldbuilding-cross-domain.json','worldbuilding-canon-and-writing.json'];
 const stop=new Set('the and for with from this that into have there them they their your about then what where when which why how should would could also only does will make more some than every each these those work please help create world build building my our onyx me i a an of to in is it by or at as be do can are was were has had'.split(' '));
 let bank=null,promise=null;
 const tokenize=s=>[...new Set(String(s||'').toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(x=>x.length>=3&&!stop.has(x)))];
