@@ -1,0 +1,40 @@
+/* Canonical Elarvess living records. Art, GeoJSON, viewbox and existing map hit shapes are untouched. */
+.elarvess-living {margin-top:18px;padding-top:15px;border-top:1px solid rgba(202,166,100,.50);color:#efe4d0}
+.elarvess-living h3,.elarvess-living h4,.elarvess-living h5{margin:.75em 0 .45em;color:#e9c991}
+.elarvess-living h4 small {font-size:.73em;color:#baa88c}
+.elarvess-living p {line-height:1.5}
+.elf-living-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.elf-living-card{background:rgba(18,15,12,.78);padding:14px;border:1px solid rgba(196,152,92,.33);border-radius:10px;min-width:0;max-height:640px;overflow:auto}
+.elarvess-living .elf-actions{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}
+.elarvess-living button{white-space:normal;text-align:left;line-height:1.36;max-width:100%;cursor:pointer}
+.elarvess-living button small{display:block;font-weight:400;opacity:.75;font-size:.78em}
+.elarvess-living .elf-schedule-list{display:grid;gap:5px}
+.elarvess-living .elf-schedule{padding:8px;border:1px solid rgba(196,152,92,.25);border-radius:5px}
+.elarvess-living .elf-schedule span,.elarvess-living .elf-schedule b{display:block}
+.elarvess-living .elf-schedule b small {font-weight:400;opacity:.7}
+.elarvess-living .elf-muted{color:#bcae99;font-size:.88em}
+.elarvess-living .elf-good{padding:7px 2px;border-bottom:1px solid rgba(196,152,92,.18);display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:space-between}
+.elarvess-living .elf-good small{display:block;opacity:.7}.elarvess-living .elf-good>b{color:#f2c77c}
+.elarvess-living .elf-goods{max-height:400px;overflow:auto}
+.elarvess-living input[type=search]{min-width:100%;padding:10px}
+.elarvess-living .elf-tabs button[aria-pressed=true]{outline:2px solid #efc87f}
+.elarvess-living details {border-top:1px solid rgba(200,160,100,.24);padding:8px 2px}
+.elarvess-living details summary{cursor:pointer;font-weight:600}
+.elarvess-living .elf-line {display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.elarvess-living .elf-line select{max-width:100%;min-width:220px;flex:1}
+.aza-canon,.aza-clock-panel{background:rgba(14,18,21,.50);border:1px solid rgba(179,139,83,.38);padding:12px;margin-top:11px;border-radius:9px}
+.aza-canon p{line-height:1.54}.aza-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.aza-fields label{display:flex;flex-direction:column;font-size:.9rem;min-width:0}.aza-fields input{width:100%;min-width:0;margin-top:5px}
+.aza-controls{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.aza-controls button{flex:1 1 110px}
+.aza-clock-display{font-size:1.1rem;font-weight:700;color:#edcb8d}
+@media(max-width:900px){.elf-living-grid{grid-template-columns:1fr}.aza-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Living-world address book, page-size controls and six-day schedules */
+.elf-statline{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+.elf-statline span{padding:5px 7px;background:rgba(167,121,67,.2);border:1px solid rgba(226,186,126,.3);border-radius:6px;font-size:.82rem}
+.elarvess-living .elf-day-select{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;margin:12px 0}
+.elarvess-living .elf-day-select button{min-width:0;text-align:center;padding:7px 2px}
+.elarvess-living .elf-day-select button[aria-pressed=true]{outline:2px solid #efc87f;background:rgba(228,183,105,.2)}
+.elarvess-living .elf-actions button{max-width:100%;overflow-wrap:anywhere}
+.elarvess-living .elf-search-meta{color:#dfc6a1;margin:8px 0}
+.elarvess-living button:disabled{opacity:.42;cursor:default}
+@media(max-width:620px){.elarvess-living .elf-day-select{grid-template-columns:repeat(3,minmax(0,1fr))}}

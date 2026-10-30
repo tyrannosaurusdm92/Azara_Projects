@@ -1,0 +1,13 @@
+/* Author-supplied steampunk wallpaper, exact unchanged URL from settlement_generator(1).html.
+   Render as a body background (rather than a negative-z-index pseudo-element)
+   so the image remains visible on every province/settlement/editor page. */
+:root{--bg-home:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f16e2ef7-0b7b-419b-b057-1bd19a2289f5/d1io0wc-c5165550-8c01-487f-8651-146e1e14e111.jpg/v1/fill/w_1024%2Ch_640%2Cq_75%2Cstrp/steampunk_wallpaper_by_spaceturtlestudios_d1io0wc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQwIiwicGF0aCI6Ii9mL2YxNmUyZWY3LTBiN2ItNDE5Yi1iMDU3LTFiZDE5YTIyODlmNS9kMWlvMHdjLWM1MTY1NTUwLThjMDEtNDg3Zi04NjUxLTE0NmUxZTE0ZTExMS5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3SzTUeHWwjxvKxwZmrrWKMa3oiY0fxLBQ_yo0Zr-V-g");}
+html{background-color:#07090a;}
+body{background-color:#07090a!important;background-image:linear-gradient(180deg,rgba(5,8,9,.28),rgba(5,8,9,.49)),var(--bg-home)!important;background-position:center center!important;background-repeat:no-repeat!important;background-size:cover!important;background-attachment:fixed!important;}
+body::before{display:none!important;}
+body::after{pointer-events:none;z-index:0;}
+body > .myspace-shell, body > #integratedToolWindow, body > .doc-modal, body > .npc-window-overlay{position:relative;z-index:1;}
+body > .master-province-nav{position:fixed;z-index:180;}
+/* Preserve template geometry and an unobscured backdrop at all widths. */
+.myspace-shell{isolation:isolate;}
+@media (max-width:860px){body{background-position:center center!important;background-attachment:fixed!important;}}

@@ -1,0 +1,16 @@
+.scaffolding { fill: none; stroke: darkgray; stroke-width: 0.7px;
+} .person.deceased circle { opacity: 0.4;
+} .sex-male { --person-color: rgb(142, 178, 189);
+} .sex-female { --person-color: rgb(232, 144, 150);
+} .sex-other { --person-color: gray;
+} .root { --person-color: rgb(231, 174, 68);
+} .person.infant circle { stroke: var(--person-color); stroke-width: 3px; fill: none;
+} .person:not(.infant) circle { fill: var(--person-color);
+} .person { font-family: Arial;
+} .person .name { font-size: 16px;
+} .person .dates { font-size: 12px; transform: translate(0, 3px);
+} .person.root .name { font-size: 24px; transform: translate(0, 52px);
+} .person.root .dates { font-size: 17px; transform: translate(0, 52px);
+} .legend .person.infant circle { stroke-width: 2px;
+} .hidpi-image { transform: scale(0.5, 0.5);
+}

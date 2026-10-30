@@ -1,0 +1,17 @@
+html, body { padding: 0; margin: 0; background-color: #fdf9ef; font-family: arial; color: #333; position: relative;
+} .overlay { position: absolute; left: calc(50% - 550px); right: calc(50% - 550px); top: 0; bottom: 0; pointer-events: none; display: flex; flex-direction: column;
+} .overlay header { flex-grow: 0; pointer-events: auto; transition: transform 0.1s ease-in-out; display: flex; background-color: rgba(253, 249, 239, 0.75); justify-content: space-between; padding-top: 1em; margin: 0 1em; font-family: Iowan Old Style;
+} .hidden-overlay header { transform: translateY(-100%);
+} .overlay header .title { font-weight: 600; font-size: 1.5em; color: #183EA0;
+} .overlay header .subtitle { font-size: 0.9em;
+} .overlay header .tutorial { font-size: 0.8em;
+} .overlay header .top-right { text-align: right; margin-top: 18px;
+} .overlay .viewport { flex-grow: 1;
+} .hidden-overlay footer { transform: translateY(100%);
+} .overlay footer { flex-grow: 0; background-color: rgba(253, 249, 239, 0.75); transition: transform 0.1s ease-in-out; display: flex; align-items: flex-start;
+} .stories { display: flex; pointer-events: auto; font-size: 0.9em;
+} .stories .story { margin: 1em;
+} .map-legend { display: flex; flex-direction: column; flex-shrink: 0; margin: 1em; pointer-events: auto; font-size: 0.9em;
+} .map-legend .legend-line { display: flex; flex-direction: row; align-items: center;
+} .map-legend .legend-text { margin: 5px 5px 5px 7px;
+}

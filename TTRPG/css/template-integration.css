@@ -1,0 +1,101 @@
+/* Uses the supplied settlement_generator.html visual system in every province and settlement. */
+:root{--waccent:var(--teal2);--province-nav-width:256px}
+html{scroll-behavior:smooth}
+body{padding-bottom:2rem; background:#07090a}
+.myspace-shell{width:min(1840px,calc(100% - 26px));margin:0 auto;padding-top:18px}
+.profile-topbar{min-height:105px;margin-left:0;overflow:visible}
+.profile-seal{display:grid;place-items:center;color:#dafcff;font-size:2rem;flex-shrink:0}
+.profile-title .eyebrow{font-size:.73rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze2);margin:0 0 4px}
+.profile-title h1{font-size:clamp(1.45rem,2.5vw,2.3rem)!important;color:var(--text)!important;line-height:1.12}
+.profile-title p{color:var(--muted)}
+.profile-nav{gap:8px}
+.profile-nav button{font-size:.83rem;padding:8px 11px;min-height:38px}
+.province-page{display:block;margin:0;width:100%;max-width:none}
+.province-inner-bar{margin:0 0 14px;display:block;padding:12px 16px;border:2px ridge rgba(141,224,220,.25);border-radius:10px;background:#0c141d;box-shadow:var(--shadow)}
+.province-header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.province-caption{font-size:.8rem;color:var(--muted);margin:7px 0 0}
+.settlement-menu-label{font-size:.8rem;display:block;margin:0;min-width:min(380px,100%)}
+.settlement-menu-label span{display:block;margin-bottom:4px;font-size:.72rem;color:var(--teal2);text-transform:uppercase;letter-spacing:.06em}
+.settlement-menu-label select{min-width:0;width:100%;max-width:520px;background:#090e16;color:var(--text)}
+.province-clock{font-size:.88rem;border-color:rgba(141,224,220,.29);background:#11222a;color:var(--teal2)}
+.myspace-grid{grid-template-columns:minmax(250px,285px) minmax(340px,1fr) minmax(265px,310px);gap:14px}
+.myspace-grid>*{min-width:0}
+.window{margin-bottom:14px}
+.window .window-header{font-size:.9rem}
+.window-body{min-width:0}
+.window-body>h4{color:var(--teal2);margin:14px 0 8px;font-size:.89rem}
+.myspace-grid label{margin-bottom:9px;color:var(--muted)}
+.myspace-grid label span{display:block;color:var(--teal2);font-size:.71rem;text-transform:uppercase;letter-spacing:.045em;margin-bottom:4px}
+.myspace-grid button,.myspace-grid .button-like{font:900 .8rem/1.15 Georgia,serif;min-height:36px;min-width:0;box-shadow:0 6px 16px #0005;padding:8px 11px}
+.myspace-grid button.ghost{box-shadow:none}
+.myspace-grid .button-row button{flex:1 1 95px}
+.myspace-grid input,.myspace-grid select,.myspace-grid textarea{min-height:38px;font-size:.85rem}
+.myspace-grid input[readonly]{color:#d6e1de;background:#0c1318;opacity:.9}
+.myspace-grid .file-note{line-height:1.48}
+.myspace-grid .clock-card{background:#141f27}
+.map-module{min-height:390px}
+.map-viewer.world-map-viewer{height:42vh;min-height:310px;max-height:580px;background:#091017}
+.world-map-canvas{position:relative;width:100%;height:100%;background:radial-gradient(ellipse at 40% 43%,#285b61 0%,#102a35 58%,#080e17 100%);overflow:hidden}
+.world-map-canvas:before{content:'';position:absolute;inset:0;opacity:.13;background-image:linear-gradient(90deg,#a2d4d2 1px,transparent 1px),linear-gradient(#a2d4d2 1px,transparent 1px);background-size:30px 30px;pointer-events:none}
+.world-map-canvas:after{content:'BELAVADÓS · PROVINCIAL ATLAS';position:absolute;bottom:12px;right:14px;font-size:.67rem;letter-spacing:.13em;color:#e9f3ef88;pointer-events:none}
+.world-pin{position:absolute;transform:translate(-50%,-50%);display:flex!important;flex-direction:column;align-items:center;gap:3px;background:transparent!important;border:0!important;color:#e9fcfc!important;box-shadow:none!important;padding:2px!important;z-index:1;max-width:145px;font-size:.72rem!important;text-shadow:0 2px 5px #000}
+.world-pin .pin-dot{width:17px;height:17px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#f6f9e8,var(--teal2) 45%,#27606b);border:2px solid #09131b;box-shadow:0 4px 12px #000}
+.world-pin .pin-label{border:1px solid #28596b;border-radius:7px;background:#091c25e8;padding:3px 6px;line-height:1.15;white-space:normal}
+.world-pin.active .pin-label{color:#08161e;background:#9deae4;border-color:#e1ffff;font-weight:900;text-shadow:none}
+.world-pin:hover .pin-dot{transform:scale(1.2)}
+.world-map-empty{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:30px;color:var(--muted);max-width:100%}
+.map-status{font-size:.74rem;color:var(--muted)}
+#worldNpcInfo p,#worldLocationInfo p{font-size:.86rem;margin:6px 0}
+#worldNpcInfo h3,#worldLocationInfo h3{font-size:1rem;color:var(--teal2);margin:2px 0 7px}
+#worldNpcInfo .pill-row{margin:8px 0}
+#worldLocationNpcs{max-height:195px}
+#worldLocationNpcs button{display:block;text-align:left;width:100%;padding:6px 8px;font-size:.76rem;margin:3px 0}
+#worldGeneratedList{max-height:390px}
+#worldGeneratedList .generated-card{padding:9px}
+#worldGeneratedList .generated-card p{font-size:.78rem;margin:3px 0}
+#worldGeneratedList .generated-card h4{margin:0;color:var(--teal2);font-size:.9rem}
+#worldGeneratedList .generated-card button{min-height:28px;font-size:.7rem;padding:5px 8px}
+#worldSettlementAxes label,#worldNpcAxes label{display:block}
+.axis-readout{margin-top:4px}
+.axis-box input[type=range]{height:20px;min-height:20px;padding:0;accent-color:var(--teal)}
+#worldNpcAlignmentNote{font-size:.77rem}
+#worldAlignmentJson{min-height:144px;font-size:.75rem}
+.province-page-tabs{gap:7px;justify-content:flex-start;margin:0 0 14px}
+.province-page-tabs button{font-size:.78rem!important;border:1px solid #3b6867!important;border-radius:9px!important;background:#1b2c32!important;color:#e7f2ea!important;box-shadow:none!important;min-height:36px!important}
+.province-page-tabs button.active{background:linear-gradient(180deg,var(--teal2),var(--teal))!important;color:#07111a!important}
+.explorer-content{padding:1px 0 4px}
+.explorer-pane{background:#111d28;border:1px solid rgba(141,224,220,.2);border-radius:9px;padding:14px}
+.explorer-pane h2,.explorer-pane h3{color:var(--teal2)}
+.explorer-grid{grid-template-columns:repeat(auto-fit,minmax(min(195px,100%),1fr));gap:10px}
+.explorer-pane p{font-size:.87rem;color:var(--muted)}
+.explorer-tags{gap:5px}
+.explorer-tag{font-size:.72rem;padding:4px 6px;background:#24353a;border-color:#38565a}
+.resident-list{grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr));gap:8px}
+.resident-card{border-radius:9px;padding:10px;background:#1c2730;border-color:#3c5f65}
+.resident-card h3{font-size:.93rem;color:var(--teal2)}
+.resident-card p{font-size:.81rem;line-height:1.45}
+.immersive-original .immersive-source{overflow:auto;max-height:75vh}
+.immersive-source .card{background:#182733!important}
+#explorerOverview .settlement-map,#explorerOverview .settlement-map-caption{display:none}
+#explorerOverview .explorer-pane:last-child:has(.settlement-map){display:none}
+.immersive-source{overflow-wrap:anywhere}
+#integratedToolWindow{margin-top:4px;scroll-margin-top:16px}
+#integratedToolWindow[hidden]{display:none!important}
+#integratedToolWindow>.window-body{padding:16px}
+#integratedToolWindow .app-shell{max-width:unset;width:100%;margin:12px 0}
+#integratedToolWindow .top-actions{margin:10px 0;justify-content:flex-start}
+#integratedToolWindow .control-panel{top:12px}
+#integratedToolWindow .app-page:not(.active){display:none!important}
+#integratedToolWindow .app-page.active{display:grid}
+#integratedToolWindow #locationToolsPage.active{display:block}
+#integratedToolWindow button{font-family:inherit}
+#integratedToolWindow h2{color:var(--teal2)}
+.master-province-nav{border:2px ridge rgba(141,224,220,.42);background:#0b131bef;z-index:300;max-width:calc(100vw - 12px)}
+.province-drag{background:linear-gradient(180deg,var(--teal2),var(--teal));color:#07111a;font-weight:900}
+#provinceNavItems button{background:transparent;border:0;border-bottom:1px solid rgba(141,224,220,.15);color:#ede6df;box-shadow:none}
+#provinceNavItems button:hover,#provinceNavItems button.active{background:#2a6161;color:#fff}
+.master-province-nav.collapsed{width:72px}
+@media(min-width:1100px){.world-hero,.province-page{margin-left:0;width:100%}}
+@media(max-width:1370px){.myspace-grid{grid-template-columns:minmax(220px,270px) minmax(320px,1fr)}.right-column{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.right-column .window{margin:0}}
+@media(max-width:860px){.myspace-shell{width:calc(100% - 16px)}.myspace-grid,.right-column{display:grid;grid-template-columns:1fr}.profile-topbar{grid-template-columns:auto 1fr}.profile-nav{grid-column:1/-1;justify-content:flex-start}.profile-nav button{flex:1 1 120px}.map-viewer.world-map-viewer{min-height:320px;height:55vh}.world-pin .pin-label{max-width:110px}.province-page{width:100%;margin-left:0}.province-inner-bar{margin-top:0}.master-province-nav{top:8px}}
+@media(max-width:480px){.myspace-shell{padding-top:78px}.myspace-grid{gap:8px}.profile-topbar{gap:8px}.profile-seal{width:44px;height:44px}.profile-title h1{font-size:1.25rem!important}.profile-nav button{flex:1 1 100%}.world-pin{font-size:.64rem!important}.province-clock{font-size:.72rem}}

@@ -1,0 +1,63 @@
+/* Distinct interactive settlement maps; doesn't override Elarvess original editor. */
+#livingMapLayer{position:absolute;inset:0;z-index:22;overflow:hidden;background:#7b977b}
+#livingMapLayer[hidden],#livingMapInspector[hidden],#livingShowTown[hidden]{display:none!important}
+#mapViewer.living-town-active{height:min(81vh,940px);min-height:510px;max-height:none;background:#667a66}
+#livingMapSvg{width:100%;height:100%;display:block;touch-action:none;user-select:none;cursor:grab}
+#livingMapSvg:active{cursor:grabbing}
+#livingBuildingGlyphs .lv-building{cursor:pointer;stroke:#4c4539;stroke-width:1.8;vector-effect:non-scaling-stroke;fill-opacity:.94;pointer-events:all;transition:fill-opacity .08s,stroke .08s}
+#livingBuildingGlyphs .lv-building:hover,#livingBuildingGlyphs .lv-building:focus-visible{stroke:#00f0ff;stroke-width:3.4;fill-opacity:.75;outline:none}
+#livingBuildingGlyphs .lv-building.selected{stroke:#ffc442;stroke-width:5;fill:#e3b851;fill-opacity:.94}
+#livingBuildingGlyphs.outline-all .lv-building:not(.selected){stroke:#167b89;stroke-width:2.6}
+#livingBuildingGlyphs .lv-filtered{opacity:.16;pointer-events:none}
+#livingNpcGlyphs .lv-person{cursor:pointer;vector-effect:non-scaling-stroke;pointer-events:all;filter:drop-shadow(1px 1px 1px #222)}
+#livingNpcGlyphs .lv-person:hover,#livingNpcGlyphs .lv-person:focus-visible{stroke:#16f2fa;stroke-width:4}
+#livingNpcGlyphs .lv-person.chosen{filter:drop-shadow(0 0 5px gold)}
+.lv-map-toolbar{position:absolute;left:10px;right:10px;top:12px;z-index:15;display:flex;gap:5px;flex-wrap:wrap;align-items:center;pointer-events:none}
+.lv-map-toolbar>*{pointer-events:auto;min-height:34px!important;padding:5px 8px!important;width:auto!important;max-width:100%;font-size:12px!important;border-radius:7px!important;background:rgba(13,28,34,.94)!important;color:#e6f8f5!important;border:1px solid #bead7d!important;box-shadow:0 2px 8px #1118}
+.lv-map-toolbar input{flex:1 1 200px;min-width:120px;max-width:430px}
+.lv-map-toolbar select{flex:0 0 128px;max-width:180px}
+.lv-map-toolbar button:hover{background:#265962!important}
+.lv-map-legend{position:absolute;bottom:8px;left:8px;right:8px;z-index:6;pointer-events:none;text-align:center;color:#f2f4eb;background:rgba(10,24,30,.84);border-radius:8px;font:12px Georgia,serif;padding:5px 8px}
+.lv-search-results{position:absolute;top:62px;left:8px;z-index:21;max-height:53%;width:min(480px,90%);overflow:auto;background:rgba(12,25,32,.96);box-shadow:0 4px 18px #0009;border:1px solid #b19f75;border-radius:8px;pointer-events:none}
+.lv-search-results:not(:empty){pointer-events:auto}
+.lv-search-section{padding:8px;display:grid;gap:4px}
+.lv-search-section>b{color:#9ce1e1;padding:7px 4px 2px}
+.lv-search-section button{min-height:30px;padding:6px;text-align:left;justify-content:flex-start;display:block;background:rgba(255,255,255,.06);color:#faf3e2;font-size:13px}
+.lv-search-section small{display:block;color:#bdc7be;font-size:11px}
+#livingMapInspector{margin:12px 0 14px;background:rgba(12,16,23,.97)}
+#livingMapInspector .window-header{gap:12px;flex-wrap:wrap}
+.lv-inspector-actions{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.lv-inspector-actions button{font-size:13px;min-height:32px}
+.lv-inside{display:grid;gap:7px;max-height:630px;overflow:auto}
+.lv-inside h3{color:#a1eeee;font-size:1.4rem;margin:4px 0}
+.lv-inside h4{color:#b5dcde;font-size:1.1rem;margin:10px 0 2px}
+.lv-inside p{margin:2px 0}
+.lv-inside .lv-origin{font-size:13px;color:#e9bc71}
+.lv-features{display:flex;flex-wrap:wrap;gap:6px}
+.lv-features span{border:1px solid #b7a771;display:inline-flex;border-radius:5px;padding:4px 7px;background:#344040;font-size:12px}
+.lv-person-links{display:flex;gap:7px;flex-wrap:wrap;margin:4px 0}
+.lv-person-links button{display:inline-flex;flex-direction:column;align-items:start;min-height:34px;flex:1 0 145px;text-align:left;justify-content:flex-start;font-size:12px;padding:7px;gap:3px}
+.lv-person-links button small{font-weight:400;font-size:11px;color:#164046}
+.lv-list{border:1px solid #243c40;border-radius:8px;padding:8px;background:#0a1a1d}
+.lv-list h4{margin:0 0 7px}
+.lv-stock{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px}
+.lv-stock>div{display:grid;grid-template-columns:1fr auto;gap:2px 10px;border:1px solid #476065;padding:7px;border-radius:6px;background:#16262a}
+.lv-stock strong{font-size:13px;color:#ecf9f0}.lv-stock span{color:#ecc989;font-weight:bold}
+.lv-stock small{grid-column:span 2;color:#b6c6c6}
+.lv-days{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0}
+.lv-days button{min-height:29px;padding:4px 7px;font-size:12px}
+.lv-days button.current{background:#e8bd74;color:#101616}
+.lv-schedule{padding-left:25px}.lv-schedule li{margin:5px 0;color:#d6e8e4;font-size:13px}
+.lv-schedule time{color:#ffda8a;font-weight:bold}
+.lv-schedule button{min-height:28px;padding:3px 7px;display:inline;font-size:12px}
+.lv-schedule small{display:block;color:#bfc7cb}
+.lv-person-extra{white-space:pre-wrap;overflow-wrap:anywhere;max-height:350px;overflow:auto;background:#0b1c21;border:1px solid #4a666a;border-radius:5px;padding:8px;font-size:12px}
+.lv-inside details{border:1px solid #40545b;border-radius:5px;padding:7px;background:#0b1b20}
+.lv-inside summary{cursor:pointer;color:#e4c28e;font-weight:bold}
+.lv-index{display:flex;gap:5px;flex-wrap:wrap;max-height:350px;overflow:auto}
+.lv-index button{min-height:36px;padding:6px;flex:1 1 160px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;font-size:12px}
+.lv-index button small{font-weight:normal;font-size:11px}
+@media(max-width:700px){#mapViewer.living-town-active{height:68vh;min-height:400px}.lv-map-toolbar{top:5px;left:4px;right:4px}.lv-map-toolbar button{font-size:11px!important;padding:4px!important}.lv-search-results{top:84px}.lv-stock{grid-template-columns:1fr}}
+
+/* V9 TownGeneratorOS-style patch wards and visitable indoor layouts */
+.lv-room-plan{border:1px solid #a68756;background:#efe4c9;padding:10px;border-radius:9px;margin:10px 0;color:#25211c}.lv-room-plan svg{width:100%;max-height:320px;display:block;background:#f8f0dc}.lv-room-plan svg [data-room]{cursor:pointer}.lv-room-plan svg [data-room]:hover rect,.lv-room-plan svg [data-room]:focus rect{stroke:#bc7830;stroke-width:5;fill:#f4d48d}.lv-room-plan p{font-size:.82rem;color:#28211a}.lv-biography{line-height:1.65}

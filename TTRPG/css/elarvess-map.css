@@ -1,0 +1,39 @@
+/* Elarvess: the raster, shape hit targets, selections and panning share one SVG viewBox. */
+#mapViewer.elarvess-active{height:min(78vh,880px);max-height:none;min-height:440px;background:#213328}
+#elarvessMapLayer{position:absolute;inset:0;z-index:15;overflow:hidden;background:#829875}
+#elarvessMapLayer[hidden],#elarvessMapInspector[hidden],#elarvessShowMap[hidden]{display:none!important}
+#elarvessSvg{display:block;width:100%;height:100%;touch-action:none;user-select:none;cursor:grab;background:#8da17d}
+#elarvessSvg.elf-dragging{cursor:grabbing}
+#elarvessBuildings .elf-building{pointer-events:all;fill:rgba(13,220,230,.015);stroke:rgba(17,40,37,.12);stroke-width:.85;vector-effect:non-scaling-stroke;cursor:pointer;transition:fill .07s,stroke .07s}
+#elarvessBuildings .elf-building:hover,#elarvessBuildings .elf-building:focus{fill:rgba(0,240,250,.25);stroke:#00e5ee;stroke-width:2;outline:none}
+#elarvessBuildings .elf-building.elf-selected{fill:rgba(255,194,56,.33);stroke:#ffce39;stroke-width:2.7;filter:drop-shadow(0 0 2px #1f2222)}
+#elarvessBuildings.elf-outlines .elf-building:not(.elf-selected){stroke:rgba(4,190,214,.8);stroke-width:1.5;fill:rgba(0,230,255,.06)}
+#elarvessBuildings .elf-building.elf-filtered{display:none}
+.elarvess-toolbar{position:absolute;top:9px;left:9px;right:9px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;pointer-events:none;z-index:2}
+.elarvess-toolbar>*{pointer-events:auto}
+.elarvess-toolbar button,.elarvess-toolbar select,.elarvess-toolbar input{border:1px solid rgba(246,213,153,.65);border-radius:8px;min-height:35px;color:#f5f7ec;background:rgba(15,24,25,.92);font-size:13px;box-shadow:0 4px 14px #09131375;padding:6px 10px;max-width:100%}
+.elarvess-toolbar button{width:auto;min-width:35px;flex:0 0 auto;cursor:pointer}
+.elarvess-toolbar button:hover,.elarvess-toolbar button:focus-visible{background:#19454c}
+.elarvess-toolbar .elf-search{flex:1 1 160px;min-width:130px;width:195px}
+.elarvess-toolbar .elf-filter{flex:0 1 145px;width:145px}
+.elarvess-toolbar .elf-toggle[aria-pressed="true"]{background:#16556b}
+.elarvess-zoom{position:absolute;right:12px;bottom:10px;z-index:2;background:rgba(13,23,22,.91);color:#f3eddb;border:1px solid #e0b96c;border-radius:9px;padding:5px 8px;font-size:12px;pointer-events:none}
+#elarvessMapInspector{padding:12px 14px;background:rgba(7,22,25,.94);border:1px solid rgba(176,218,216,.35);border-top:0;border-radius:0 0 9px 9px;color:#e3f5f6}
+#elarvessMapInspector h3{margin:0 0 5px;font-size:1.15rem;color:#fff3c6}
+#elarvessMapInspector p{margin:5px 0 9px;color:#c4d9db}
+#elarvessMapInspector .elf-line{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+#elarvessMapInspector .elf-line>*{flex:0 1 auto}
+#elarvessMapInspector select{max-width:100%;min-width:220px;flex:1 1 250px;background:#152b30;color:white;border:1px solid #579da5;border-radius:7px;padding:8px}
+#elarvessMapInspector button{width:auto;min-height:34px;padding:6px 11px;border:1px solid #66babb;border-radius:7px;background:#17454b;color:white;cursor:pointer}
+#elarvessMapInspector button:hover{background:#26646a}
+#elarvessMapInspector button:disabled{opacity:.45;cursor:default}
+#elarvessMapInspector .elf-muted{font-size:.88rem;color:#a7c3c8}
+#elarvessMapInspector .elf-people{display:flex;flex-wrap:wrap;gap:7px;padding:7px 0}
+#elarvessMapInspector .elf-people button{border-color:#799fa9;background:#20323b}
+#elarvessMapInspector .elf-results{display:grid;gap:4px;max-height:200px;overflow:auto;margin-top:8px}
+#elarvessMapInspector .elf-results button{text-align:left;font-size:.87rem;background:#192c35}
+#elarvessMapInspector .elf-results button small{opacity:.75}
+#elarvessMapInspector .elf-tools{border-top:1px solid rgba(255,255,255,.14);margin-top:10px;padding-top:10px}
+#elarvessMapInspector .elf-tools label{color:#d3e9ec}
+#elarvessMapInspector .elf-notice{color:#f6d18d;font-size:.85rem}
+@media(max-width:700px){#mapViewer.elarvess-active{height:68vh;min-height:350px}.elarvess-toolbar{top:5px;left:5px;right:5px;gap:4px}.elarvess-toolbar button,.elarvess-toolbar select,.elarvess-toolbar input{font-size:12px;min-height:32px;padding:5px 7px}.elarvess-toolbar .elf-search{min-width:115px}.elarvess-toolbar .elf-filter{flex:0 1 104px;width:104px}#elarvessMapInspector{padding:9px}}
