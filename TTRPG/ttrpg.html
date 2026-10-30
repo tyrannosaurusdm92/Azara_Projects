@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-profile="shared" data-belavados-profile="shared" data-onyx-host="unified">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+
+<script src="js/belavados-core/unified-context.js"></script>
+<title>Belavadós | TTRPG World Forge with Onyx</title>
+<meta name="theme-color" content="#0b1722">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/images/belavados-icon-192.png">
+<link rel="stylesheet" href="css/onyx/onyx-core/onyx.css?v=20261016-visual-pass-2">
+<link rel="stylesheet" href="css/onyx/onyx-core/onyx-module.css?v=20261021-onyx-widget-below-nav-1">
+<script src="js/onyx/onyx-core/shared-onyx-currency.js"></script>
+
+<link rel="stylesheet" href="css/onyx/onyx-core/shared-runtime.css?v=feedhim-embedded-20261015-1">
+
+<link rel="stylesheet" href="css/belavados-core/belavados-theme.css?v=20261029-unified-pass2">
+<link rel="stylesheet" href="css/belavados-core/ttrpg-integration.css">
+</head>
+<body data-onyx-standalone-viewport="belavados-main-page" data-profile="shared">
+<iframe id="belavadosProfileFrame" class="belavados-profile-iframe" title="Belavadós World Forge, with Onyx floating above" src="assets/code/index.html" loading="eager" tabindex="-1"></iframe>
+<script src="js/onyx/onyx-core/shared-bootstrap.js"></script>
+
+
+<div id="onyxWidget" class="onyx-widget jump-nav profile-jump onyx-round-widget onyx-bubble-widget movable discord-layout-shell" data-jump-nav="onyx-widget" data-movable="true" data-layout="discord-inspired" data-size-state="hyper-reduced" data-state="listening" data-mood="listening" data-onyx-tab="work">
+  <button id="onyxBubble" class="onyx-bubble jump-orb" data-design-protected="bubble-interior" type="button" aria-label="Open Onyx" aria-expanded="false" aria-controls="onyxPopout">
+    <img data-design-protected="frame" class="jump-orb-frame" src="assets/images/shared/frame-black.svg" alt="" aria-hidden="true" draggable="false">
+    <span data-design-protected="alerts" class="onyx-alert-status" data-onyx-alert-status aria-hidden="true">
+      <span class="onyx-alert-reaction" data-onyx-alert-reaction></span>
+      <span class="onyx-alert-count" data-onyx-alert-count hidden></span>
+    </span>
+    <canvas aria-hidden="true" data-design-protected="avatar" id="onyxCanvas" class="onyx-canvas" width="216" height="216" aria-label="Onyx pixel renderer disabled"></canvas>
+    <img data-design-protected="avatar" id="onyxFallback" class="onyx-static-fallback" alt="Onyx, showing his current mood">
+    <span data-design-protected="bubble-status" id="onyxBubbleState" class="onyx-state-label">Listening</span>
+  </button>
+  <span class="onyx-sr-only" data-onyx-alert-live role="status" aria-live="polite" aria-atomic="true"></span>
+
+  <div id="onyxPopout" class="onyx-popout jump-panel bottom-drag-surface" data-bottom-drag-surface="widget" role="region" aria-label="Onyx" aria-hidden="true" tabindex="-1">
+    <header class="onyx-panel-header module-topbar">
+      <div class="onyx-panel-title"><strong>Onyx · Belavadós</strong><span id="onyxMoodText">Listening</span><span id="onyxMomentText">Listening</span><small id="onyxBackendStatus" class="onyx-backend-status" aria-live="polite">Local · no backend</small></div>
+      <output class="onyx-wallet-badge" data-onyx-currency-balance aria-label="Shared Onyx wallet" title="Local Onyx wallet">🟤0 ⚪0 🪙0 🔘0</output>
+      <button id="onyxClose" class="onyx-close" type="button" aria-label="Close">×</button>
+    </header>
+    <div id="onyxSpeech" class="onyx-speech module-speech" aria-live="polite">I am listening.</div>
+
+    <div class="jump-tabs" role="tablist" aria-label="Onyx chat">
+      <button class="jump-tab is-active" id="onyx-tab-work" data-tab="work" data-onyx-tab-button="work" role="tab" aria-selected="true" aria-controls="onyx-pane-work" type="button">World Forge + Work</button>
+    </div>
+    <div class="jump-content">
+      <section class="jump-pane is-active" id="onyx-pane-work" data-pane="work" data-onyx-tab-panel="work" role="tabpanel" aria-labelledby="onyx-tab-work"></section>
+    </div>
+  </div>
+  <button id="onyxFullscreenExit" class="fullscreen-exit" data-global-fullscreen-exit type="button" aria-label="Exit Game" title="Exit Game">×</button>
+  <div class="widget-toast" role="status" aria-live="polite"></div>
+</div>
+<button id="belavadosForgeFullscreenExit" class="fullscreen-shell-exit belavados-forge-exit" type="button" title="Close World Forge fullscreen" aria-label="Close World Forge fullscreen" hidden>×</button>
+<section id="onyxWorkFullscreenShell" class="onyx-fullscreen-shell-host onyx-work-fullscreen-host" aria-label="Belavadós Work fullscreen" hidden>
+  <iframe id="onyxWorkFullscreenFrame" class="onyx-fullscreen-shell-frame" title="Belavadós Onyx Work" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-downloads"></iframe>
+  <button id="onyxWorkFullscreenExit" class="fullscreen-shell-exit" type="button" aria-label="Exit Work" title="Exit Work">×</button>
+</section>
+
+
+
+
+
+<script src="js/world-forge/onyx-dialogue.js"></script>
+<script src="js/onyx/onyx-core/onyx-config.js"></script>
+<script src="js/onyx/onyx-core/onyx-mood.js"></script>
+<script src="js/onyx/onyx-core/onyx-scanner.js"></script>
+
+
+<script src="js/onyx/onyx-core/onyx-behavior.js"></script>
+<script src="js/onyx/onyx-core/onyx-voice.js"></script>
+
+<script src="js/onyx/onyx-core/onyx-media.js"></script>
+<script src="js/onyx/onyx-core/onyx-ui.js?v=9af239327b64"></script>
+<script src="js/onyx/onyx-core/onyx-responsive-resize.js"></script>
+<script src="js/onyx/onyx-core/onyx-signature-parts.js"></script>
+<script src="js/onyx/onyx-core/onyx-core.js"></script>
+<script src="js/onyx/onyx-core/onyx-runtime.js"></script>
+<script src="js/onyx/onyx-core/shared-shells.js?v=20261016-visual-pass-4"></script>
+<script src="js/onyx/onyx-core/shared-runtime.js?v=20261016-visual-pass-4"></script>
+<script src="js/onyx/onyx-core/shared-onyx-income.js"></script>
+<script src="js/onyx/onyx-core/shared-onyx-audio-votes.js"></script>
+<script src="js/belavados-core/theme-runtime.js"></script>
+<script src="js/belavados-core/forge-work-bridge.js"></script>
+<script>if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')){
+  window.addEventListener('load',()=>navigator.serviceWorker.getRegistrations().then(async registrations=>{for(const registration of registrations){if(registration.active?.scriptURL.endsWith('/service-worker.js'))await registration.unregister();}return navigator.serviceWorker.register(new URL('belavados-service-worker.js',document.baseURI).href)}).catch(()=>{}),{once:true});
+}</script>
+</body>
+</html>
