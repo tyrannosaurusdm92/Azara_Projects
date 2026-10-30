@@ -330,11 +330,11 @@ body.aws-single-nav.aws-roomy-layout .aws-feature-head {padding:17px}
 
 
 /* Collapsed navigation: original 33 × 32px button enlarged exactly 2.5×. */
-body.aws-single-nav #aws-master-nav:not(.expanded){width:calc(43px * 2.5);min-width:calc(43px * 2.5)}
-body.aws-single-nav #aws-master-nav:not(.expanded) #aws-master-handle{min-height:calc(41px * 2.5);height:calc(41px * 2.5);padding:4px;justify-content:center}
+body.aws-single-nav #aws-master-nav:not(.expanded){width:107.5px;min-width:107.5px}
+body.aws-single-nav #aws-master-nav:not(.expanded) #aws-master-handle{min-height:102.5px;height:102.5px;padding:4px;justify-content:center}
 body.aws-single-nav #aws-master-nav:not(.expanded) #aws-menu-toggle{
- width:calc(33px * 2.5);min-width:calc(33px * 2.5);height:calc(32px * 2.5);
- font-size:calc(23px * 2.5);line-height:1;border-radius:10px;display:grid;place-items:center;
+ width:82.5px;min-width:82.5px;height:80px;
+ font-size:57.5px;line-height:1;border-radius:10px;display:grid;place-items:center;
 }
 body.aws-single-nav:has(#aws-master-nav:not(.expanded)) .app-topbar{padding-left:136px}
 body.aws-single-nav #aws-master-nav.expanded #aws-menu-toggle{width:33px;min-width:33px;height:32px;font-size:23px}
