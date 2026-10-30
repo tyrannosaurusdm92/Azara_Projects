@@ -73,7 +73,7 @@
     const p=ui.province, s=ui.settlement;
     $('bvs-provinceHeading').textContent=p.name;
     $('bvs-provinceDescription').textContent=`${p.settlements.length} named settlements • ${p.governmentType||'Provincial administration'} • ${p.primaryUtc||'Local time zone unavailable'}`;
-    navItems.innerHTML=world.provinces.map(x=>`<button type="button" data-province-id="${escape(x.id)}" class="${x.id===p.id?'active':''}" aria-current="${x.id===p.id?'page':'false'}">${escape(x.name)}</button>`).join('');
+    navItems.innerHTML=(document.getElementById('belavados-unified-app')?'<button type="button" data-bvs-generator="true">Generator</button>':'')+world.provinces.map(x=>`<button type="button" data-province-id="${escape(x.id)}" class="${x.id===p.id?'active':''}" aria-current="${x.id===p.id?'page':'false'}">${escape(x.name)}</button>`).join('');
     $('bvs-provinceSettlementDropdown').innerHTML=p.settlements.length?p.settlements.map(x=>`<option value="${escape(x.id)}" ${x.id===s?.id?'selected':''}>${escape(x.name)} (${escape(x.type)})</option>`).join(''):'<option value="">No named settlements in the source</option>';
     $('bvs-provinceSettlementDropdown').disabled=!p.settlements.length;
     renderOverview();
@@ -212,7 +212,7 @@
     $('bvs-npcImportStatus').textContent=`Imported ${newRows.length} new resident records from ${ui.settlement.name}; ${records.length-newRows.length} were already in the generator.`;
     renderResidents();renderRelationships();renderSchedules();
   });
-  let navState={collapsed:true,left:12,top:95};try{navState={...navState,...JSON.parse(localStorage.getItem(navStore)||'{}')}}catch{}
+  let navState={collapsed:!document.getElementById('belavados-unified-app'),left:12,top:95};try{navState={...navState,...JSON.parse(localStorage.getItem(navStore)||'{}')}}catch{}
   const saveNav=()=>{try{localStorage.setItem(navStore,JSON.stringify(navState))}catch{}};
   function applyNav(){nav.classList.toggle('collapsed',!!navState.collapsed);nav.style.left=`${Math.max(0,Math.min(window.innerWidth-72,navState.left))}px`;nav.style.top=`${Math.max(0,Math.min(window.innerHeight-48,navState.top))}px`;}
   $('bvs-navCollapse').addEventListener('click',e=>{e.stopPropagation();navState.collapsed=!navState.collapsed;applyNav();saveNav();});

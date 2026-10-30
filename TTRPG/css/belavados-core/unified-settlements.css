@@ -1,0 +1,32 @@
+
+/* Unified Belavadós: master nav relocated outside the scoped living-settlement surface. */
+#belavados-unified-app{min-height:100vh;background:#07090a;color:#f3e9db;position:relative}
+#belavados-unified-app *{box-sizing:border-box}
+#belavados-unified-app [hidden]{display:none!important}
+#belavados-unified-app .belavados-unified-header{display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between;padding:12px 18px 12px 65px;background:linear-gradient(120deg,#0c1d25,#132934);border-bottom:1px solid #3d9fa0;min-height:90px}
+#belavados-unified-app .belavados-unified-heading{flex:1 1 240px;min-width:160px}
+#belavados-unified-app .belavados-unified-heading>span{color:#d7aa63;letter-spacing:.07em;font-size:12px}
+#belavados-unified-app .belavados-unified-heading h1{color:#8de0dc;font-size:clamp(1.25rem,2.5vw,2rem);margin:0}
+#belavados-unified-app .belavados-unified-heading p{color:#d5c9b8;margin:2px 0;font-size:13px}
+#belavados-unified-app .belavados-unified-controls{flex:2 1 550px;display:flex;align-items:end;justify-content:flex-end;flex-wrap:wrap;gap:9px}
+#belavados-unified-app .belavados-unified-controls label{flex:1 1 170px;font-size:12px;font-weight:700;color:#d7aa63}
+#belavados-unified-app .belavados-unified-controls select{display:block;width:100%;min-width:0;margin-top:4px;padding:9px 10px;font:inherit;font-size:14px;min-height:39px;border-radius:8px;border:1px solid #476d70;color:#f3e9db;background:#0f2028}
+#belavados-unified-app .belavados-unified-controls button{font:inherit;font-size:13px;min-height:39px;padding:8px 13px;border-radius:9px;border:1px solid #a38a54;color:#f3e9db;background:#16434b;cursor:pointer}
+#belavados-unified-app .belavados-unified-controls button:disabled{opacity:.5;cursor:not-allowed}
+#belavados-unified-app :is(button,select):focus-visible{outline:2px solid #8de0dc;outline-offset:2px}
+#belavados-unified-app #belavados-generator-page{min-height:50vh}
+#belavados-unified-app #belavados-generator-target{width:100%}
+#belavados-unified-app #belavados-worldforge-root{min-height:0}
+#belavados-unified-app #bvs-settlements-root{min-height:calc(100vh - 90px)}
+#bvs-masterProvinceNav{position:fixed;z-index:2147480000;top:95px;left:12px;width:min(265px,calc(100vw - 24px));background:#101e26;border:1px solid #a38a54;box-shadow:0 14px 32px #0009;border-radius:12px;overflow:hidden;font:13px/1.4 system-ui,Segoe UI,sans-serif;color:#f3e9db}
+#bvs-masterProvinceNav #bvs-navDrag{display:flex;align-items:center;gap:8px;padding:7px 9px;user-select:none;touch-action:none;cursor:grab;background:linear-gradient(115deg,#123e49,#1d2d3c);font-weight:750}
+#bvs-masterProvinceNav #bvs-navDrag:active{cursor:grabbing}
+#bvs-masterProvinceNav #bvs-navTitle{flex:1}
+#bvs-masterProvinceNav #bvs-navCollapse{background:#102a30;color:#f3e9db;border:1px solid #bb9b62;border-radius:7px;padding:5px 10px;cursor:pointer;font-size:17px}
+#bvs-masterProvinceNav #bvs-provinceNavItems{display:flex;flex-direction:column;gap:4px;max-height:min(68vh,650px);overflow-y:auto;overflow-x:hidden;padding:8px;touch-action:pan-y}
+#bvs-masterProvinceNav #bvs-provinceNavItems button{display:block;flex:none;width:100%;text-align:left;font:inherit;padding:9px 10px;color:#e2faf2;background:#122d34;border:1px solid #365b60;border-radius:7px;cursor:pointer}
+#bvs-masterProvinceNav #bvs-provinceNavItems button.active{background:#24636a;border-color:#d7aa63;color:#fff;font-weight:750}
+#bvs-masterProvinceNav #bvs-provinceNavItems button:hover{background:#20505a}
+#bvs-masterProvinceNav.collapsed{width:auto;min-width:144px}
+#bvs-masterProvinceNav.collapsed #bvs-provinceNavItems{display:none}
+@media(max-width:700px){#belavados-unified-app .belavados-unified-header{padding:48px 10px 10px;gap:8px}#belavados-unified-app .belavados-unified-controls{justify-content:stretch}#belavados-unified-app .belavados-unified-heading{width:100%}#bvs-masterProvinceNav{max-width:calc(100vw - 20px)}}
