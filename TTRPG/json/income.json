@@ -1,0 +1,49 @@
+{
+  "schema": "belavados.onyx.income.v1",
+  "storageKey": "belavados.onyx.currency.v1",
+  "baseUnit": "copper",
+  "denominations": {
+    "copper": { "copperEquivalent": 1, "displayMaximum": 9 },
+    "silver": { "copperEquivalent": 10, "displayMaximum": 9 },
+    "gold": { "copperEquivalent": 100, "displayMaximum": 9 },
+    "platinum": { "copperEquivalent": 1000, "displayMaximum": null }
+  },
+  "conversion": [
+    "10 copper = 1 silver",
+    "10 silver = 1 gold",
+    "10 gold = 1 platinum"
+  ],
+  "sharedAcross": [
+    "Feed Him MEOW",
+    "Virtual Health store",
+    "widget non-game features",
+    "fullscreen Work"
+  ],
+  "widgetRewardsCopper": {
+    "conversation": 2,
+    "fileTool": 2,
+    "channel": 1,
+    "savedOutput": 1,
+    "designAction": 1,
+    "responseFeedback": 1,
+    "imageTool": 2
+  },
+  "workRewardsCopper": {
+    "conversation": 3,
+    "attachment": 2,
+    "subtab": 2,
+    "export": 2,
+    "projectSave": 3,
+    "catalogedFiles": 3,
+    "catalogUse": 1,
+    "settingsSave": 1
+  },
+  "rules": [
+    "All rewards and purchases normalize through total copper.",
+    "Copper, silver, and gold display only values from 0 through 9.",
+    "Platinum has no maximum.",
+    "Room design actions never spend currency.",
+    "Store purchases require a positive price and sufficient shared balance.",
+    "Short per-action cooldowns prevent duplicate browser events from awarding twice; there is no lifetime currency cap."
+  ]
+}

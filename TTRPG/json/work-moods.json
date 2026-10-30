@@ -1,0 +1,33 @@
+{
+  "schema": "onyx.work.moods.v1",
+  "surface": "work",
+  "activeStates": [
+    {
+      "id": "listening",
+      "asset": "assets/images/shared/legacy-static/onyx_listening.png",
+      "source": "input/output"
+    },
+    {
+      "id": "thinking",
+      "asset": "assets/images/shared/legacy-static/onyx_thinking.png",
+      "source": "input/output"
+    },
+    {
+      "id": "judgmental",
+      "asset": "assets/images/shared/legacy-static/onyx_judgmental.png",
+      "source": "input/output"
+    }
+  ],
+  "idleStates": [
+    {
+      "id": "snuggly",
+      "afterMs": 180000,
+      "asset": "assets/images/shared/legacy-static/onyx_snuggly.png"
+    }
+  ],
+  "notes": [
+    "This manifest is intentionally Work-only.",
+    "Active mood selection is semantic and based on user input, backend mood when Work-safe, and Onyx output.",
+    "Idle timing is measured from the most recent successful user or Onyx chat activity."
+  ]
+}

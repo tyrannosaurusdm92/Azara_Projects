@@ -1,0 +1,11 @@
+{
+  "schema": "onyx.runtime-policy.v10",
+  "privacy": {
+    "privateProfileKnowledge": "backend-only",
+    "clientScopeIsSecurityBoundary": false
+  },
+  "retrieval": {
+    "drive": "explicit-or-bound-context-only",
+    "attachments": "per-message"
+  }
+}
