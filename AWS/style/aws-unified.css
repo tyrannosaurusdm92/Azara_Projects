@@ -328,6 +328,41 @@ body.aws-single-nav.aws-roomy-layout .aws-feature-head {padding:17px}
  body.aws-single-nav #aws-glyph-panel .main-content {overflow:visible}
 }
 
+
+/* Collapsed navigation: original 33 × 32px button enlarged exactly 2.5×. */
+body.aws-single-nav #aws-master-nav:not(.expanded){width:calc(43px * 2.5);min-width:calc(43px * 2.5)}
+body.aws-single-nav #aws-master-nav:not(.expanded) #aws-master-handle{min-height:calc(41px * 2.5);height:calc(41px * 2.5);padding:4px;justify-content:center}
+body.aws-single-nav #aws-master-nav:not(.expanded) #aws-menu-toggle{
+ width:calc(33px * 2.5);min-width:calc(33px * 2.5);height:calc(32px * 2.5);
+ font-size:calc(23px * 2.5);line-height:1;border-radius:10px;display:grid;place-items:center;
+}
+body.aws-single-nav:has(#aws-master-nav:not(.expanded)) .app-topbar{padding-left:136px}
+body.aws-single-nav #aws-master-nav.expanded #aws-menu-toggle{width:33px;min-width:33px;height:32px;font-size:23px}
+/* Install instructions are usable on desktop and mobile, including when no native install prompt is offered. */
+body.aws-single-nav .aws-install-dialog{
+ width:min(520px,calc(100vw - 20px));max-height:calc(100dvh - 24px);overflow:auto;
+ border:1px solid var(--aws-brass);border-radius:12px;padding:18px;
+ background:linear-gradient(150deg,#182d36,#0b151e);color:var(--aws-text);
+ box-shadow:0 22px 70px #000b;
+}
+body.aws-single-nav .aws-install-dialog::backdrop{background:#030a13c9;backdrop-filter:blur(3px)}
+body.aws-single-nav .aws-install-dialog-header{display:flex;align-items:center;gap:12px;padding:0 0 12px;border-bottom:1px solid var(--aws-border)}
+body.aws-single-nav .aws-install-dialog-header img{flex:0 0 auto;object-fit:contain;border-radius:9px}
+body.aws-single-nav .aws-install-dialog-header>div{flex:1;min-width:0}
+body.aws-single-nav .aws-install-dialog-header h2{margin:2px 0 0;color:var(--aws-brass);font:700 23px/1.2 var(--serif)}
+body.aws-single-nav .aws-install-dialog-header #aws-install-close{border:1px solid var(--aws-border);background:#19363c;color:var(--aws-text);font-size:22px;border-radius:7px;min-width:35px;min-height:35px}
+body.aws-single-nav .aws-install-dialog p{font-size:13px;line-height:1.55;color:var(--aws-text);margin:12px 0}
+body.aws-single-nav .aws-install-dialog ol{margin:12px 0;padding-left:25px;display:grid;gap:11px;line-height:1.45}
+body.aws-single-nav .aws-install-dialog li{padding-left:4px}
+body.aws-single-nav .aws-install-dialog .aws-install-note{font-size:11px;color:var(--aws-muted);padding:10px;border:1px solid var(--aws-border);border-radius:7px}
+body.aws-single-nav .aws-install-dialog footer{display:flex;justify-content:flex-end;margin-top:10px}
+@media(max-width:720px){
+ body.aws-single-nav:has(#aws-master-nav:not(.expanded)) .app-topbar{padding-left:120px}
+ body.aws-single-nav #aws-master-nav:not(.expanded){max-width:calc(100vw - 8px)}
+ body.aws-single-nav .aws-install-dialog{padding:12px}
+ body.aws-single-nav .aws-install-dialog-header h2{font-size:19px}
+}
+
 @media print{
  body.aws-single-nav :is(#aws-master-nav,#inspector,#keyboardBubble,#keyboard,.app-topbar,.editor-top,.editor-toolbar,.writing-footer,.aws-language-hub){display:none!important}
  html body.aws-single-nav,body.aws-single-nav :is(.app,.shell-main,.editor-section,.writing-surface,.paper){display:block!important;height:auto!important;overflow:visible!important;background:#fff!important;color:#111!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}
