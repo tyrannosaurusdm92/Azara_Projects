@@ -336,6 +336,7 @@ function worldForgeDialogue(text,tab){
 }
 async function backendConversation(text,tab,mode,options={}){
   if(options.signal?.aborted)return{error:true,cancelled:true,publicError:'Stopped.'};
+  if(tab==='work'&&window.BelavadosOnyxKnowledge?.answer){try{const reference=await window.BelavadosOnyxKnowledge.answer(text);if(reference)return reference;}catch(error){console.warn('Onyx reference retrieval failed',error);}}
   return worldForgeDialogue(text,tab)||{text:'Papa, I am here in local Belavadós mode. The World Forge generator works without a server, and I can respond from my installed dialogue library.',state:'listening',localOnly:true};
 }
 
