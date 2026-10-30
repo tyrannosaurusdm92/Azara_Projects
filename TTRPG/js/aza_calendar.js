@@ -23,12 +23,12 @@ function persist(){try{localStorage.setItem(KEY,JSON.stringify({...state,playing
 function broadcast(){document.dispatchEvent(new CustomEvent('aza-calendar:change',{detail:{...state,time:time()}}));}
 function render(){
  for(const k of Object.keys(LIMITS)){if($('aza-'+k))$('aza-'+k).value=String(state[k]);}
- if($('aza-clock-display'))$('aza-clock-display').textContent=display();
- if($('aza-moon-display'))$('aza-moon-display').textContent=`${period()[0]} · ${period()[1]} · hour ${state.hour%7+1} of 7`;
- if($('aza-play'))$('aza-play').textContent=state.playing?'Pause time':'Play time';
- if($('worldBelavadosClock'))$('worldBelavadosClock').textContent=`${period()[0]} ${time()}`;
- if($('worldClockSource'))$('worldClockSource').textContent=`Aza’raan campaign clock · ${date()}`;
- if($('provinceClock'))$('provinceClock').textContent=display();
+ if($('bvs-aza-clock-display'))$('bvs-aza-clock-display').textContent=display();
+ if($('bvs-aza-moon-display'))$('bvs-aza-moon-display').textContent=`${period()[0]} · ${period()[1]} · hour ${state.hour%7+1} of 7`;
+ if($('bvs-aza-play'))$('bvs-aza-play').textContent=state.playing?'Pause time':'Play time';
+ if($('bvs-worldBelavadosClock'))$('bvs-worldBelavadosClock').textContent=`${period()[0]} ${time()}`;
+ if($('bvs-worldClockSource'))$('bvs-worldClockSource').textContent=`Aza’raan campaign clock · ${date()}`;
+ if($('bvs-provinceClock'))$('bvs-provinceClock').textContent=display();
  persist();broadcast();
 }
 function apply(raw){for(const k of Object.keys(LIMITS))if(raw[k]!==undefined)state[k]=cap(k,raw[k]);render();}
@@ -37,16 +37,16 @@ function setDayIndex(day){const d=Math.max(0,Math.floor(day));state.day=(d%6)+1;
 function stepMinutes(delta){const mins=state.hour*60+state.minute+delta,carry=Math.floor(mins/(21*60)),left=((mins%(21*60))+(21*60))%(21*60);setDayIndex(dayIndex()+carry);state.hour=Math.floor(left/60);state.minute=left%60;render();}
 function onReady(){
  for(const k of Object.keys(LIMITS))$('aza-'+k)?.addEventListener('change',()=>apply({[k]:$('aza-'+k).value}));
- $('aza-hour-plus')?.addEventListener('click',()=>stepMinutes(60));
- $('aza-hour-minus')?.addEventListener('click',()=>stepMinutes(-60));
- $('aza-day-plus')?.addEventListener('click',()=>stepMinutes(1260));
- $('aza-day-minus')?.addEventListener('click',()=>stepMinutes(-1260));
- $('aza-play')?.addEventListener('click',()=>{state.playing=!state.playing;render();});
- $('aza-reset')?.addEventListener('click',()=>{Object.assign(state,defaults);render();});
+ $('bvs-aza-hour-plus')?.addEventListener('click',()=>stepMinutes(60));
+ $('bvs-aza-hour-minus')?.addEventListener('click',()=>stepMinutes(-60));
+ $('bvs-aza-day-plus')?.addEventListener('click',()=>stepMinutes(1260));
+ $('bvs-aza-day-minus')?.addEventListener('click',()=>stepMinutes(-1260));
+ $('bvs-aza-play')?.addEventListener('click',()=>{state.playing=!state.playing;render();});
+ $('bvs-aza-reset')?.addEventListener('click',()=>{Object.assign(state,defaults);render();});
  // 1 real second equals 1 Aza'raan minute while Play is active; offline time is NOT inferred.
- setInterval(()=>{if(state.playing)stepMinutes(1);else{if($('worldBelavadosClock'))$('worldBelavadosClock').textContent=`${period()[0]} ${time()}`;if($('worldClockSource'))$('worldClockSource').textContent=`Aza’raan campaign clock · ${date()}`;}},1000);
+ setInterval(()=>{if(state.playing)stepMinutes(1);else{if($('bvs-worldBelavadosClock'))$('bvs-worldBelavadosClock').textContent=`${period()[0]} ${time()}`;if($('bvs-worldClockSource'))$('bvs-worldClockSource').textContent=`Aza’raan campaign clock · ${date()}`;}},1000);
  // Existing province renderer may update local-time label: restore the Aza display.
- document.addEventListener('belavados:viewchange',()=>{if($('provinceClock'))$('provinceClock').textContent=display();});
+ document.addEventListener('belavados:viewchange',()=>{if($('bvs-provinceClock'))$('bvs-provinceClock').textContent=display();});
  render();
 }
 window.AzaCalendar={getState:()=>({...state,time:time(),period:period()[0]}),apply,stepMinutes,display,source24,period};

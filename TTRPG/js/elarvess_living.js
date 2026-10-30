@@ -3,7 +3,7 @@
 'use strict';
 const population=window.ELARVESS_POPULATION,source=window.ELARVESS_ENRICHMENT,map=window.BelavadosElarvessMap,cal=window.AzaCalendar;
 const $=id=>document.getElementById(id);
-if(!population||!map||!$('elarvessMapInspector'))return;
+if(!population||!map||!$('bvs-elarvessMapInspector'))return;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').trim().toLocaleLowerCase();
 const byBuilding=new Map(population.buildings.map(s=>[s.id,s]));
@@ -56,32 +56,32 @@ const count=items.length,max=Math.ceil(count/SIZE);page=Math.min(page,Math.max(0
 const rows=(tab==='people'||tab==='visits')?chunk.map(n=>nbtn(n.id,`${n.job.title} · ${byBuilding.get(n.homeBuildingId).ward}`)).join(''):chunk.map(b=>bbtn(b.id,b.name,`${b.purpose} · ${b.address}`)).join('');
 return `<div class="elf-search-meta">${count.toLocaleString()} result${count===1?'':'s'} · Page ${page+1} of ${Math.max(1,max)}</div><div class="elf-actions">${rows||'<span class="elf-muted">No matching records</span>'}</div><div class="elf-line"><button type="button" data-ep-page="prev" ${page<=0?'disabled':''}>Previous</button><button type="button" data-ep-page="next" ${page+1>=max?'disabled':''}>Next</button></div>`;
 }
-const panel=document.createElement('section');panel.id='elarvessLivingPanel';panel.className='elarvess-living';$('elarvessMapInspector').append(panel);
+const panel=document.createElement('section');panel.id='bvs-elarvessLivingPanel';panel.className='elarvess-living';$('bvs-elarvessMapInspector').append(panel);
 function render(){const b=byBuilding.get(selectedBuilding),n=byNpc.get(selectedNpc);panel.innerHTML=`
 <h3>Elarvess · Living settlement directory</h3>
 <p><b>${population.npcCount.toLocaleString()} unique NPCs</b> · <b>${population.buildingCount.toLocaleString()} addressed clickable buildings</b> · 6 Aza’raan days · 21 hours per day. Every NPC has a residence, work/school, and weekly visit destinations. At least 60% have current consensual romantic attachments, including plural unions and co-parent families.</p>
 <p class="elf-muted">${esc(cal?.display()||'Year 1 · Month 1 · Week 1 · Day 1')} · generated place assignments are scenario lore, not historical map survey data.</p>
 <div class="elf-living-grid"><section class="elf-living-card"><h4>Selected building</h4>${renderBuilding(b)}</section><section class="elf-living-card"><h4>Selected NPC</h4>${renderNpc(n)}</section></div>
-<h4>Search town population, addresses, and venues</h4><input id="ev-search" type="search" value="${esc(searchTerm)}" placeholder="Name, street, business, profession, species, service…">
+<h4>Search town population, addresses, and venues</h4><input id="bvs-ev-search" type="search" value="${esc(searchTerm)}" placeholder="Name, street, business, profession, species, service…">
 <div class="elf-actions elf-tabs">${[['people','NPC directory'],['buildings','All 1,312 buildings'],['visits','Visitor network'],['goods','Goods & services']].map(([t,l])=>`<button type="button" data-ep-tab="${t}" aria-pressed="${t===tab}">${l}</button>`).join('')}</div>
-<div id="ev-search-results">${results()}</div>
+<div id="bvs-ev-search-results">${results()}</div>
 <details><summary>15 founding NPC profiles and mapped source sites</summary><p>Founding NPC profiles, relationships, and historical timetable values are included with destinations fully renamed to the canonical buildings. The six-day schedules are active for simulation.</p><div class="elf-actions">${source?.npcs?.map(n=>nbtn(n.id,'Founding roster')).join('')||''}</div><div class="elf-actions">${Object.entries(roleMap).map(([name,id])=>bbtn(id,null,'Canonical site')).join('')}</div></details>
 <div class="elf-actions"><button type="button" data-ep-export="npcs">Export all NPCs JSON</button><button type="button" data-ep-export="buildings">Export building address book JSON</button></div>`;}
-function focusNpc(id){if(!byNpc.has(id))return;selectedNpc=id;const sel=$('worldNpcSelect');if(sel&&[...sel.options].some(o=>o.value===id)&&sel.value!==id){sel.value=id;sel.dispatchEvent(new Event('change',{bubbles:true}));}render();}
+function focusNpc(id){if(!byNpc.has(id))return;selectedNpc=id;const sel=$('bvs-worldNpcSelect');if(sel&&[...sel.options].some(o=>o.value===id)&&sel.value!==id){sel.value=id;sel.dispatchEvent(new Event('change',{bubbles:true}));}render();}
 function focusBuilding(id){const bid=Number(id);if(!byBuilding.has(bid))return;selectedBuilding=bid;map.selectBuilding(bid,true);/* selected event renders */}
 function download(filename,object){const u=URL.createObjectURL(new Blob([JSON.stringify(object,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1500);}
 panel.addEventListener('click',e=>{const el=e.target.closest('button');if(!el)return;
 if(el.dataset.epBuilding){focusBuilding(el.dataset.epBuilding);return;}
 if(el.dataset.epNpc){focusNpc(el.dataset.epNpc);return;}
 if(el.dataset.epDay){day=Number(el.dataset.epDay);render();return;}
-if(el.dataset.epTab){tab=el.dataset.epTab;page=0;render();$('ev-search')?.focus();return;}
+if(el.dataset.epTab){tab=el.dataset.epTab;page=0;render();$('bvs-ev-search')?.focus();return;}
 if(el.dataset.epPage){page+=el.dataset.epPage==='next'?1:-1;render();return;}
 if(el.dataset.epExport){download(el.dataset.epExport==='npcs'?'elarvess_2016_npcs.json':'elarvess_1312_buildings.json',el.dataset.epExport==='npcs'?population.npcs:population.buildings);}
 });
-panel.addEventListener('input',e=>{if(e.target.id==='ev-search'){searchTerm=e.target.value;page=0;$('ev-search-results').innerHTML=results();}});
+panel.addEventListener('input',e=>{if(e.target.id==='bvs-ev-search'){searchTerm=e.target.value;page=0;$('bvs-ev-search-results').innerHTML=results();}});
 document.addEventListener('elarvess:building-selected',e=>{selectedBuilding=Number(e.detail?.id||0);render();});
-let lastClock='';document.addEventListener('aza-calendar:change',()=>{const s=cal?.getState();const t=s?.day+'-'+s?.hour;if(t===lastClock)return;lastClock=t;day=weekDay();if(document.activeElement?.id!=='ev-search')render();});
-$('worldNpcSelect')?.addEventListener('change',e=>{if(byNpc.has(e.target.value) && selectedNpc!==e.target.value){selectedNpc=e.target.value;render();}});
+let lastClock='';document.addEventListener('aza-calendar:change',()=>{const s=cal?.getState();const t=s?.day+'-'+s?.hour;if(t===lastClock)return;lastClock=t;day=weekDay();if(document.activeElement?.id!=='bvs-ev-search')render();});
+$('bvs-worldNpcSelect')?.addEventListener('change',e=>{if(byNpc.has(e.target.value) && selectedNpc!==e.target.value){selectedNpc=e.target.value;render();}});
 window.ElarvessLiving={focusBuilding,focusNpc,linkedLocationId:name=>roleMap[name],roster:population.npcs,sourcePlaceNames:Object.keys(roleMap),getBuilding:id=>byBuilding.get(Number(id)),getNpc:id=>byNpc.get(id),getPresent:(id,d=weekDay(),hour=cal?.getState()?.hour||0)=>{const b=byBuilding.get(Number(id));return b?[...new Set([...b.residentNpcIds,...b.employeeNpcIds,...b.visitorNpcIds])].filter(pid=>byNpc.get(pid)?.weeklySchedule[d-1].some(s=>s.buildingId===b.id && Number(s.start.slice(0,2))<=hour&&hour<Number(s.end.slice(0,2)))):[];}};
 render();
 })();

@@ -43,27 +43,27 @@
   }
 
   function bindEvents() {
-    $("showNpcSimulatorPageBtn")?.addEventListener("click", () => switchPage("npc"));
-    $("showLocationToolsPageBtn")?.addEventListener("click", () => switchPage("locations"));
-    $("locationRefreshBtn")?.addEventListener("click", renderAllLocationTools);
-    $("locationScopeSelect")?.addEventListener("change", () => { hydrateLocationSelectors(); updateLocationCountDefault(); renderStats(); });
-    $("locationProvinceSelect")?.addEventListener("change", () => { hydrateLocationSettlementSelect(); updateLocationCountDefault(); });
-    $("locationSettlementSelect")?.addEventListener("change", updateLocationCountDefault);
-    $("locationSettlementTypeSelect")?.addEventListener("change", updateLocationCountDefault);
-    $("locationKindSelect")?.addEventListener("change", updateLocationCountDefault);
-    $("locationBiomeProfileSelect")?.addEventListener("change", () => updateRuleSummary());
-    $("generateLocationsBtn")?.addEventListener("click", generateFromUI);
-    $("lockUploadedNpcLocationsBtn")?.addEventListener("click", () => { gen().createLockedLocationsFromUploadedNpcs(); renderAllLocationTools(); });
-    $("assignGeneratedNpcsBtn")?.addEventListener("click", () => { gen().assignGeneratedNpcsToLocations(gen().allLocations()); renderAllLocationTools(); a().warnOnce?.("Generated NPCs were auto-assigned to existing generated/editable locations."); });
-    $("randomizeLocationNamesBtn")?.addEventListener("click", () => { gen().randomizeLocationNames(0.05); renderAllLocationTools(); });
-    $("locationExportJsonBtn")?.addEventListener("click", () => gen().exportLocations());
-    $("locationSearchInput")?.addEventListener("input", renderDirectory);
+    $("bvs-showNpcSimulatorPageBtn")?.addEventListener("click", () => switchPage("npc"));
+    $("bvs-showLocationToolsPageBtn")?.addEventListener("click", () => switchPage("locations"));
+    $("bvs-locationRefreshBtn")?.addEventListener("click", renderAllLocationTools);
+    $("bvs-locationScopeSelect")?.addEventListener("change", () => { hydrateLocationSelectors(); updateLocationCountDefault(); renderStats(); });
+    $("bvs-locationProvinceSelect")?.addEventListener("change", () => { hydrateLocationSettlementSelect(); updateLocationCountDefault(); });
+    $("bvs-locationSettlementSelect")?.addEventListener("change", updateLocationCountDefault);
+    $("bvs-locationSettlementTypeSelect")?.addEventListener("change", updateLocationCountDefault);
+    $("bvs-locationKindSelect")?.addEventListener("change", updateLocationCountDefault);
+    $("bvs-locationBiomeProfileSelect")?.addEventListener("change", () => updateRuleSummary());
+    $("bvs-generateLocationsBtn")?.addEventListener("click", generateFromUI);
+    $("bvs-lockUploadedNpcLocationsBtn")?.addEventListener("click", () => { gen().createLockedLocationsFromUploadedNpcs(); renderAllLocationTools(); });
+    $("bvs-assignGeneratedNpcsBtn")?.addEventListener("click", () => { gen().assignGeneratedNpcsToLocations(gen().allLocations()); renderAllLocationTools(); a().warnOnce?.("Generated NPCs were auto-assigned to existing generated/editable locations."); });
+    $("bvs-randomizeLocationNamesBtn")?.addEventListener("click", () => { gen().randomizeLocationNames(0.05); renderAllLocationTools(); });
+    $("bvs-locationExportJsonBtn")?.addEventListener("click", () => gen().exportLocations());
+    $("bvs-locationSearchInput")?.addEventListener("input", renderDirectory);
     document.querySelectorAll("[data-location-filter]").forEach(button => button.addEventListener("click", () => {
       ui.locationFilter = button.dataset.locationFilter || "all";
       document.querySelectorAll("[data-location-filter]").forEach(b => { b.classList.toggle("active", b === button); b.setAttribute("aria-selected", String(b === button)); });
       renderDirectory();
     }));
-    $("locationDirectory")?.addEventListener("click", event => {
+    $("bvs-locationDirectory")?.addEventListener("click", event => {
       const button = event.target.closest("[data-edit-location]");
       if (button) selectLocation(button.dataset.editLocation);
       const assignButton = event.target.closest("[data-assign-location]");
@@ -72,23 +72,23 @@
         if (loc) { gen().assignGeneratedNpcsToLocations([loc]); renderAllLocationTools(); }
       }
     });
-    $("newManualLocationBtn")?.addEventListener("click", newManualLocation);
-    $("locationEditorForm")?.addEventListener("submit", saveLocationFromForm);
-    $("deleteLocationBtn")?.addEventListener("click", deleteSelectedLocation);
-    $("expandLockedLocationBtn")?.addEventListener("click", expandSelectedLocation);
+    $("bvs-newManualLocationBtn")?.addEventListener("click", newManualLocation);
+    $("bvs-locationEditorForm")?.addEventListener("submit", saveLocationFromForm);
+    $("bvs-deleteLocationBtn")?.addEventListener("click", deleteSelectedLocation);
+    $("bvs-expandLockedLocationBtn")?.addEventListener("click", expandSelectedLocation);
     window.addEventListener("life_simulator:locations-changed", renderAllLocationTools);
     window.addEventListener("life-simulator:core-rendered", () => { renderStats(); renderDirectory(); });
     window.addEventListener("life-simulator:ready", () => { hydrateLocationSelectors(); hydrateEditorSelects(); renderAllLocationTools(); });
   }
 
   function switchPage(page) {
-    const npcPage = $("npcSimulatorPage");
-    const locationPage = $("locationToolsPage");
+    const npcPage = $("bvs-npcSimulatorPage");
+    const locationPage = $("bvs-locationToolsPage");
     const showLocations = page === "locations";
     if (npcPage) { npcPage.hidden = showLocations; npcPage.classList.toggle("active", !showLocations); }
     if (locationPage) { locationPage.hidden = !showLocations; locationPage.classList.toggle("active", showLocations); }
-    $("showNpcSimulatorPageBtn")?.classList.toggle("active", !showLocations);
-    $("showLocationToolsPageBtn")?.classList.toggle("active", showLocations);
+    $("bvs-showNpcSimulatorPageBtn")?.classList.toggle("active", !showLocations);
+    $("bvs-showLocationToolsPageBtn")?.classList.toggle("active", showLocations);
     if (showLocations) renderAllLocationTools();
   }
 
@@ -96,9 +96,9 @@
     const s = state();
     if (!s?.data) return;
     const provinces = h().flattenProvinces ? h().flattenProvinces() : [];
-    const scopeSelect = $("locationScopeSelect");
+    const scopeSelect = $("bvs-locationScopeSelect");
     if (scopeSelect) scopeSelect.value = s.scope || "settlement";
-    const provinceSelect = $("locationProvinceSelect");
+    const provinceSelect = $("bvs-locationProvinceSelect");
     if (provinceSelect) {
       provinceSelect.innerHTML = provinces.map(p => `<option value="${escapeHTML(p.id)}">${escapeHTML(p.name)}</option>`).join("");
       provinceSelect.value = s.provinceId || provinces[0]?.id || "";
@@ -108,14 +108,14 @@
 
   function hydrateLocationSettlementSelect() {
     const s = state();
-    const provinceId = $("locationProvinceSelect")?.value || s?.provinceId || "";
+    const provinceId = $("bvs-locationProvinceSelect")?.value || s?.provinceId || "";
     const settlements = h().flattenSettlements ? h().flattenSettlements().filter(set => set.provinceId === provinceId || set.province === provinceNameById(provinceId)) : [];
-    const select = $("locationSettlementSelect");
+    const select = $("bvs-locationSettlementSelect");
     if (!select) return;
     select.innerHTML = settlements.map(set => `<option value="${escapeHTML(set.id)}">${escapeHTML(set.name)} — ${escapeHTML(set.type)}</option>`).join("");
     select.value = settlements.some(set => set.id === s?.settlementId) ? s.settlementId : settlements[0]?.id || "";
     const selected = settlements.find(set => set.id === select.value);
-    if (selected) $("locationSettlementTypeSelect").value = selected.type || "Town";
+    if (selected) $("bvs-locationSettlementTypeSelect").value = selected.type || "Town";
   }
 
   function provinceNameById(id) {
@@ -123,7 +123,7 @@
   }
 
   function hydrateBiomeProfiles() {
-    const select = $("locationBiomeProfileSelect");
+    const select = $("bvs-locationBiomeProfileSelect");
     if (!select || !gen()?.rules) return;
     const profiles = gen().profilesForSelect();
     select.innerHTML = `<option value="">Auto-match settlement biome</option>` + profiles.map(profile => `<option value="${escapeHTML(profile.id)}">${escapeHTML(profile.label)}</option>`).join("");
@@ -131,11 +131,11 @@
   }
 
   function hydrateEditorSelects() {
-    const typeSelect = $("editLocationType");
+    const typeSelect = $("bvs-editLocationType");
     if (typeSelect && gen()?.CANONICAL_TO_SIMPLE) {
       typeSelect.innerHTML = Object.keys(gen().CANONICAL_TO_SIMPLE).map(type => `<option value="${escapeHTML(type)}">${escapeHTML(type)}</option>`).join("");
     }
-    const settlementSelect = $("editLocationSettlement");
+    const settlementSelect = $("bvs-editLocationSettlement");
     if (settlementSelect && h().flattenSettlements) {
       settlementSelect.innerHTML = h().flattenSettlements().map(set => `<option value="${escapeHTML(set.id)}">${escapeHTML(set.name)} — ${escapeHTML(set.provinceName || set.province || "")}</option>`).join("");
     }
@@ -143,7 +143,7 @@
   }
 
   function hydrateGeneratedNpcAssignmentSelect(selectedIds = []) {
-    const select = $("editLocationNpcAssignments");
+    const select = $("bvs-editLocationNpcAssignments");
     if (!select) return;
     const npcs = (state()?.npcs || []).filter(isGeneratedNpc);
     const selected = new Set(selectedIds);
@@ -159,39 +159,39 @@
   }
 
   function selectedLocationSettlement() {
-    const id = $("locationSettlementSelect")?.value || state()?.settlementId;
+    const id = $("bvs-locationSettlementSelect")?.value || state()?.settlementId;
     return (h().flattenSettlements ? h().flattenSettlements() : []).find(set => set.id === id) || h().currentSettlement?.();
   }
 
   function updateLocationCountDefault() {
     const set = selectedLocationSettlement();
-    const type = $("locationSettlementTypeSelect")?.value || set?.type || "Town";
-    const kind = $("locationKindSelect")?.value || "settlement";
+    const type = $("bvs-locationSettlementTypeSelect")?.value || set?.type || "Town";
+    const kind = $("bvs-locationKindSelect")?.value || "settlement";
     const count = gen()?.getDefaultCount(type, kind === "settlement" ? type : kind) || 24;
-    const input = $("locationCountInput");
+    const input = $("bvs-locationCountInput");
     if (input) input.value = count;
     updateRuleSummary();
   }
 
   function updateRuleSummary() {
-    const summary = $("locationRuleSummary");
+    const summary = $("bvs-locationRuleSummary");
     if (!summary || !gen()?.rules) return;
     const set = selectedLocationSettlement();
-    const type = $("locationSettlementTypeSelect")?.value || set?.type || "Town";
-    const profileId = $("locationBiomeProfileSelect")?.value || "auto";
-    const kind = $("locationKindSelect")?.value || "settlement";
+    const type = $("bvs-locationSettlementTypeSelect")?.value || set?.type || "Town";
+    const profileId = $("bvs-locationBiomeProfileSelect")?.value || "auto";
+    const kind = $("bvs-locationKindSelect")?.value || "settlement";
     summary.textContent = `Rules loaded from ${gen().rules.source || "location_generator_rules.json"}. Current target: ${kind}, ${type}, ${set?.name || "selected settlement"}; biome profile: ${profileId}.`;
   }
 
   function generateFromUI() {
     const created = gen().generateLocations({
-      scope: $("locationScopeSelect")?.value || state()?.scope || "settlement",
-      provinceId: $("locationProvinceSelect")?.value || state()?.provinceId,
-      settlementId: $("locationSettlementSelect")?.value || state()?.settlementId,
-      settlementType: $("locationSettlementTypeSelect")?.value || selectedLocationSettlement()?.type || "Town",
-      generationKind: $("locationKindSelect")?.value || "settlement",
-      biomeProfileId: $("locationBiomeProfileSelect")?.value || "",
-      count: Number($("locationCountInput")?.value || 0)
+      scope: $("bvs-locationScopeSelect")?.value || state()?.scope || "settlement",
+      provinceId: $("bvs-locationProvinceSelect")?.value || state()?.provinceId,
+      settlementId: $("bvs-locationSettlementSelect")?.value || state()?.settlementId,
+      settlementType: $("bvs-locationSettlementTypeSelect")?.value || selectedLocationSettlement()?.type || "Town",
+      generationKind: $("bvs-locationKindSelect")?.value || "settlement",
+      biomeProfileId: $("bvs-locationBiomeProfileSelect")?.value || "",
+      count: Number($("bvs-locationCountInput")?.value || 0)
     });
     if (created?.[0]) ui.selectedLocationId = created[0].id;
     renderAllLocationTools();
@@ -208,7 +208,7 @@
   }
 
   function renderStats() {
-    const grid = $("locationStatsGrid");
+    const grid = $("bvs-locationStatsGrid");
     if (!grid || !gen()) return;
     const all = gen().allLocations();
     const generated = all.filter(loc => loc.source === "generated-location-editor" || loc.locationSystem === "expanded-location-generator" && !loc.lockedCore && !String(loc.source || "").startsWith("imported"));
@@ -226,7 +226,7 @@
   }
 
   function filteredLocations() {
-    const query = String($("locationSearchInput")?.value || "").toLowerCase().trim();
+    const query = String($("bvs-locationSearchInput")?.value || "").toLowerCase().trim();
     let rows = gen()?.allLocations?.() || [];
     if (ui.locationFilter === "generated") rows = rows.filter(loc => !loc.lockedCore && loc.source === "generated-location-editor");
     if (ui.locationFilter === "locked") rows = rows.filter(loc => loc.lockedCore);
@@ -242,8 +242,8 @@
   }
 
   function renderDirectory() {
-    const wrap = $("locationDirectory");
-    const summary = $("locationDirectorySummary");
+    const wrap = $("bvs-locationDirectory");
+    const summary = $("bvs-locationDirectorySummary");
     if (!wrap || !gen()) return;
     const rows = filteredLocations();
     if (summary) summary.textContent = `${rows.length} matching location${rows.length === 1 ? "" : "s"}.`;
@@ -288,41 +288,41 @@
     if (!loc) return;
     ui.selectedLocationId = id;
     populateEditor(loc);
-    $("locationEditorForm")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    $("bvs-locationEditorForm")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
   function populateEditor(loc) {
     if (!loc) return;
-    $("editingLocationId").value = loc.id || "";
-    $("editLocationName").value = loc.name || "";
-    $("editLocationType").value = loc.locationType || loc.category || "Other / Flexible";
-    $("editLocationSettlement").value = loc.settlementId || "";
-    $("editLocationBiome").value = loc.biomeAssignment || "";
-    $("editLocationDescription").value = loc.description || "";
-    $("editLocationPurpose").value = loc.purpose || "";
-    $("editLocationOwnership").value = loc.ownership || "";
-    $("editLocationHours").value = loc.hours || "";
-    $("editLocationServices").value = arrayToLines(loc.services);
-    $("editLocationPricing").value = loc.pricing || "";
-    $("editLocationReputation").value = loc.reputation || "";
-    $("editLocationHooks").value = arrayToLines(loc.storyHooks);
-    $("editLocationTags").value = (loc.tags || []).join(", ");
-    $("editPinX").value = loc.pin?.x ?? 50;
-    $("editPinY").value = loc.pin?.y ?? 50;
-    $("editPlacementRecommendations").value = arrayToLines(loc.placementRecommendations || loc.pin?.recommendations);
-    $("editTerrainRequirements").value = arrayToLines(loc.terrainRequirements || loc.pin?.terrainRequirements);
+    $("bvs-editingLocationId").value = loc.id || "";
+    $("bvs-editLocationName").value = loc.name || "";
+    $("bvs-editLocationType").value = loc.locationType || loc.category || "Other / Flexible";
+    $("bvs-editLocationSettlement").value = loc.settlementId || "";
+    $("bvs-editLocationBiome").value = loc.biomeAssignment || "";
+    $("bvs-editLocationDescription").value = loc.description || "";
+    $("bvs-editLocationPurpose").value = loc.purpose || "";
+    $("bvs-editLocationOwnership").value = loc.ownership || "";
+    $("bvs-editLocationHours").value = loc.hours || "";
+    $("bvs-editLocationServices").value = arrayToLines(loc.services);
+    $("bvs-editLocationPricing").value = loc.pricing || "";
+    $("bvs-editLocationReputation").value = loc.reputation || "";
+    $("bvs-editLocationHooks").value = arrayToLines(loc.storyHooks);
+    $("bvs-editLocationTags").value = (loc.tags || []).join(", ");
+    $("bvs-editPinX").value = loc.pin?.x ?? 50;
+    $("bvs-editPinY").value = loc.pin?.y ?? 50;
+    $("bvs-editPlacementRecommendations").value = arrayToLines(loc.placementRecommendations || loc.pin?.recommendations);
+    $("bvs-editTerrainRequirements").value = arrayToLines(loc.terrainRequirements || loc.pin?.terrainRequirements);
     hydrateGeneratedNpcAssignmentSelect((loc.employees || []).map(e => e.npcId).filter(Boolean));
     setCoreLock(Boolean(loc.lockedCore));
   }
 
   function setCoreLock(locked) {
-    ["editLocationName", "editLocationType", "editLocationSettlement", "editLocationBiome"].forEach(id => { if ($(id)) $(id).disabled = locked; });
-    const notice = $("locationLockedNotice");
+    ["bvs-editLocationName", "bvs-editLocationType", "bvs-editLocationSettlement", "bvs-editLocationBiome"].forEach(id => { if ($(id)) $(id).disabled = locked; });
+    const notice = $("bvs-locationLockedNotice");
     if (notice) {
       notice.classList.toggle("hidden", !locked);
       notice.textContent = locked ? "This location was created from uploaded NPC data. Its core name, type, settlement, and biome are locked, but you can expand descriptions, services, pricing, hooks, pins, and generated-NPC assignments." : "";
     }
-    if ($("deleteLocationBtn")) $("deleteLocationBtn").disabled = locked;
+    if ($("bvs-deleteLocationBtn")) $("bvs-deleteLocationBtn").disabled = locked;
   }
 
   function arrayToLines(value) {
@@ -339,7 +339,7 @@
 
   function saveLocationFromForm(event) {
     event.preventDefault();
-    const id = $("editingLocationId").value;
+    const id = $("bvs-editingLocationId").value;
     let loc = id ? findLocation(id) : null;
     const isNew = !loc;
     if (isNew) {
@@ -350,28 +350,28 @@
     const locked = Boolean(loc.lockedCore);
     const settlement = selectedEditorSettlement();
     if (!locked) {
-      loc.name = $("editLocationName").value.trim() || loc.name || "Unnamed Location";
-      loc.locationType = $("editLocationType").value || loc.locationType || "Other / Flexible";
+      loc.name = $("bvs-editLocationName").value.trim() || loc.name || "Unnamed Location";
+      loc.locationType = $("bvs-editLocationType").value || loc.locationType || "Other / Flexible";
       loc.category = loc.locationType;
       loc.settlementId = settlement?.id || loc.settlementId || "";
       loc.settlementName = settlement?.name || loc.settlementName || "";
       loc.province = settlement?.provinceName || settlement?.province || loc.province || "";
       loc.provinceId = settlement?.provinceId || loc.provinceId || "";
       loc.timeZone = settlement?.timeZone || loc.timeZone || "";
-      loc.biomeAssignment = $("editLocationBiome").value.trim() || loc.biomeAssignment || "Manual";
+      loc.biomeAssignment = $("bvs-editLocationBiome").value.trim() || loc.biomeAssignment || "Manual";
     }
-    loc.description = $("editLocationDescription").value.trim();
-    loc.purpose = $("editLocationPurpose").value.trim();
-    loc.ownership = $("editLocationOwnership").value.trim();
-    loc.hours = $("editLocationHours").value.trim();
-    loc.services = linesToArray($("editLocationServices").value);
-    loc.pricing = $("editLocationPricing").value.trim();
-    loc.reputation = $("editLocationReputation").value.trim();
-    loc.storyHooks = linesToArray($("editLocationHooks").value);
-    loc.tags = csvToArray($("editLocationTags").value);
-    loc.pin = { ...(loc.pin || {}), x: Number($("editPinX").value || 50), y: Number($("editPinY").value || 50) };
-    loc.placementRecommendations = linesToArray($("editPlacementRecommendations").value);
-    loc.terrainRequirements = linesToArray($("editTerrainRequirements").value);
+    loc.description = $("bvs-editLocationDescription").value.trim();
+    loc.purpose = $("bvs-editLocationPurpose").value.trim();
+    loc.ownership = $("bvs-editLocationOwnership").value.trim();
+    loc.hours = $("bvs-editLocationHours").value.trim();
+    loc.services = linesToArray($("bvs-editLocationServices").value);
+    loc.pricing = $("bvs-editLocationPricing").value.trim();
+    loc.reputation = $("bvs-editLocationReputation").value.trim();
+    loc.storyHooks = linesToArray($("bvs-editLocationHooks").value);
+    loc.tags = csvToArray($("bvs-editLocationTags").value);
+    loc.pin = { ...(loc.pin || {}), x: Number($("bvs-editPinX").value || 50), y: Number($("bvs-editPinY").value || 50) };
+    loc.placementRecommendations = linesToArray($("bvs-editPlacementRecommendations").value);
+    loc.terrainRequirements = linesToArray($("bvs-editTerrainRequirements").value);
     loc.updatedAt = new Date().toISOString();
     applyNpcAssignmentsFromEditor(loc);
     a().warnOnce?.(`${loc.name} saved${locked ? " as an expanded locked location" : ""}.`);
@@ -381,14 +381,14 @@
   }
 
   function selectedEditorSettlement() {
-    const id = $("editLocationSettlement")?.value || state()?.settlementId;
+    const id = $("bvs-editLocationSettlement")?.value || state()?.settlementId;
     return (h().flattenSettlements ? h().flattenSettlements() : []).find(set => set.id === id) || h().currentSettlement?.();
   }
 
   function makeManualLocationShell() {
     const settlement = selectedEditorSettlement();
-    const name = $("editLocationName").value.trim() || "Manual Location";
-    const type = $("editLocationType").value || "Other / Flexible";
+    const name = $("bvs-editLocationName").value.trim() || "Manual Location";
+    const type = $("bvs-editLocationType").value || "Other / Flexible";
     return {
       id: `manual_loc_${slug(settlement?.id || settlement?.name || "settlement")}_${slug(name)}_${Date.now().toString(36)}`,
       name,
@@ -428,7 +428,7 @@
   }
 
   function applyNpcAssignmentsFromEditor(loc) {
-    const selectedIds = [...($("editLocationNpcAssignments")?.selectedOptions || [])].map(option => option.value).filter(Boolean);
+    const selectedIds = [...($("bvs-editLocationNpcAssignments")?.selectedOptions || [])].map(option => option.value).filter(Boolean);
     const npcs = (state()?.npcs || []).filter(npc => selectedIds.includes(npc.id) && isGeneratedNpc(npc));
     loc.employees = npcs.map(npc => ({ npcId: npc.id, name: npc.name, role: npc.job?.title || "Assigned generated NPC", assignmentSource: "manual editor" }));
     if (npcs[0]) {
@@ -444,19 +444,19 @@
 
   function newManualLocation() {
     ui.selectedLocationId = "";
-    $("locationEditorForm")?.reset();
-    $("editingLocationId").value = "";
+    $("bvs-locationEditorForm")?.reset();
+    $("bvs-editingLocationId").value = "";
     hydrateEditorSelects();
     setCoreLock(false);
     const set = selectedLocationSettlement();
-    if (set && $("editLocationSettlement")) $("editLocationSettlement").value = set.id;
-    if ($("editLocationType")) $("editLocationType").value = "Other / Flexible";
-    if ($("editLocationName")) $("editLocationName").value = "New Location";
-    $("locationEditorForm")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    if (set && $("bvs-editLocationSettlement")) $("bvs-editLocationSettlement").value = set.id;
+    if ($("bvs-editLocationType")) $("bvs-editLocationType").value = "Other / Flexible";
+    if ($("bvs-editLocationName")) $("bvs-editLocationName").value = "New Location";
+    $("bvs-locationEditorForm")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
   function deleteSelectedLocation() {
-    const id = $("editingLocationId")?.value;
+    const id = $("bvs-editingLocationId")?.value;
     const loc = findLocation(id);
     if (!loc) return;
     if (loc.lockedCore) {
@@ -478,7 +478,7 @@
   }
 
   function expandSelectedLocation() {
-    const loc = findLocation($("editingLocationId")?.value);
+    const loc = findLocation($("bvs-editingLocationId")?.value);
     if (!loc) return;
     const additions = ["local rumors", "expanded inventory", "NPC schedule hooks"];
     loc.services = [...new Set([...(loc.services || []), ...additions])];

@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const RULES_PATH = "json/location_generator_rules.json";
+  const RULES_PATH = "../../json/location_generator_rules.json";
   let rules = null;
 
   const CANONICAL_TO_SIMPLE = Object.freeze({

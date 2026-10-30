@@ -4,13 +4,13 @@
   const STORE_KEY = "lifeSimulator.state.v1";
   const MAP_ASSET_HANDOFF_KEY = "lifeSimulator.handoff";
   const DATA_PATHS = {
-    raceData: "json/race_categories.json",
-    classData: "json/class_subclass_options.json",
-    provinceData: "json/provinces_settlements.json",
-    factionRules: "json/faction_rules.json",
-    livingRules: "json/living_world_rules.json",
-    transitRules: "json/transit_rules.json",
-    visitableLocations: "json/visitable_locations.json"
+    raceData: "../../json/race_categories.json",
+    classData: "../../json/class_subclass_options.json",
+    provinceData: "../../json/provinces_settlements.json",
+    factionRules: "../../json/faction_rules.json",
+    livingRules: "../../json/living_world_rules.json",
+    transitRules: "../../json/transit_rules.json",
+    visitableLocations: "../../json/visitable_locations.json"
   };
 
   const AXES = ["Altruism", "Lawfulness", "Cooperation", "Honor"];
@@ -157,7 +157,7 @@
     addedStates: [["Vacationing", "🏖️"]]
   });
   const ACTIVITY_EMOJIS = Object.freeze(Object.fromEntries(Object.values(ACTIVITY_EMOJI_GROUPS).flat()));
-  const ACTIVITY_ASSET_ROOT = "assets/activity-assets/";
+  const ACTIVITY_ASSET_ROOT = "../../assets/activity-assets/";
   const ACTIVITY_VISUALS = Object.freeze(Object.fromEntries(
     Object.entries(ACTIVITY_EMOJI_GROUPS).flatMap(([group, rows]) => rows.map(([activity, emoji]) => [activity, {
       activity,
@@ -179,10 +179,10 @@
   const TRANSIT_MODE_VISUALS = Object.freeze({
     ferry: { emoji: "⛵", activity: "Sailing", label: "Boat & Ferry" },
     caravan: { emoji: "🛤", activity: "Taking a caravan", label: "Caravan Routes" },
-    rail: { emoji: "🚉", activity: "Boarding a train", label: "Train", icon: { type:"image", src:"assets/transit-assets/train.png", alt:"Train transit" } },
-    steamship: { emoji: "⛵", activity: "Sailing", label: "Steamship", icon: { type:"image", src:"assets/transit-assets/steamship.png", alt:"Steamship transit" } },
-    skyship: { emoji: "🪽", activity: "Flying", label: "Skyship", icon: { type:"image", src:"assets/transit-assets/skyship.png", alt:"Skyship transit" } },
-    submarine: { emoji: "⚓", activity: "Entering a port", label: "Submarine", icon: { type:"image", src:"assets/transit-assets/Submarine.png", alt:"Submarine transit" } },
+    rail: { emoji: "🚉", activity: "Boarding a train", label: "Train", icon: { type:"image", src:"../../assets/transit-assets/train.png", alt:"Train transit" } },
+    steamship: { emoji: "⛵", activity: "Sailing", label: "Steamship", icon: { type:"image", src:"../../assets/transit-assets/steamship.png", alt:"Steamship transit" } },
+    skyship: { emoji: "🪽", activity: "Flying", label: "Skyship", icon: { type:"image", src:"../../assets/transit-assets/skyship.png", alt:"Skyship transit" } },
+    submarine: { emoji: "⚓", activity: "Entering a port", label: "Submarine", icon: { type:"image", src:"../../assets/transit-assets/Submarine.png", alt:"Submarine transit" } },
     portal: { emoji: "🌀✨", activity: "Teleporting", label: "Regulated Portal" }
   });
 
@@ -479,55 +479,55 @@
   }
 
   function hydrateControls() {
-    const scopeSelect = $("scopeSelect");
+    const scopeSelect = $("bvs-scopeSelect");
     scopeSelect.value = state.scope;
-    const dangerSelect = $("dangerSelect");
+    const dangerSelect = $("bvs-dangerSelect");
     dangerSelect.innerHTML = state.data.livingRules.dangerLevels.map(d => `<option value="${escapeHTML(d)}">${escapeHTML(d)}</option>`).join("");
     dangerSelect.value = state.danger;
 
-    const psel = $("provinceSelect");
+    const psel = $("bvs-provinceSelect");
     psel.innerHTML = flattenProvinces().map(p => `<option value="${escapeHTML(p.id)}">${escapeHTML(p.name)}</option>`).join("");
     state.provinceId = state.provinceId || (flattenProvinces()[0]?.id || "");
     psel.value = state.provinceId;
     hydrateSettlements();
 
-    const raceCat = $("raceCategorySelect");
+    const raceCat = $("bvs-raceCategorySelect");
     raceCat.innerHTML = state.data.raceData.categories.map(c => `<option value="${escapeHTML(c.categoryId)}">${escapeHTML(c.category)}</option>`).join("");
     hydrateRaceSelect();
 
-    const biomeCat = $("biomeCategorySelect");
+    const biomeCat = $("bvs-biomeCategorySelect");
     biomeCat.innerHTML = (state.data.provinceData.biomeCategories || []).map(c => `<option value="${escapeHTML(c.category)}">${escapeHTML(c.category)}</option>`).join("");
     hydrateBiomeSelect();
-    const alignmentModeSelect = $("alignmentModeSelect");
+    const alignmentModeSelect = $("bvs-alignmentModeSelect");
     if (alignmentModeSelect) alignmentModeSelect.value = state.alignmentMode || "axis";
-    const traditionalAlignmentSelect = $("traditionalAlignmentSelect");
+    const traditionalAlignmentSelect = $("bvs-traditionalAlignmentSelect");
     if (traditionalAlignmentSelect) traditionalAlignmentSelect.value = state.traditionalAlignment || "random";
     hydrateAlignmentControls();
   }
 
   function hydrateSettlements() {
     const p = currentProvince();
-    const ssel = $("settlementSelect");
+    const ssel = $("bvs-settlementSelect");
     ssel.innerHTML = (p?.settlements || []).map(s => `<option value="${escapeHTML(s.id)}">${escapeHTML(s.name)} — ${escapeHTML(s.type)}</option>`).join("");
     if (!state.settlementId || !(p?.settlements || []).some(s => s.id === state.settlementId)) state.settlementId = p?.settlements?.[0]?.id || "";
     ssel.value = state.settlementId;
   }
 
   function hydrateRaceSelect() {
-    const catId = $("raceCategorySelect").value || state.data.raceData.categories[0]?.categoryId;
+    const catId = $("bvs-raceCategorySelect").value || state.data.raceData.categories[0]?.categoryId;
     const cat = state.data.raceData.categories.find(c => c.categoryId === catId) || state.data.raceData.categories[0];
-    $("raceSelect").innerHTML = (cat?.racesDetailed || []).map(r => `<option value="${escapeHTML(r.id)}">${escapeHTML(r.name)}</option>`).join("");
+    $("bvs-raceSelect").innerHTML = (cat?.racesDetailed || []).map(r => `<option value="${escapeHTML(r.id)}">${escapeHTML(r.name)}</option>`).join("");
   }
 
   function hydrateBiomeSelect() {
-    const catName = $("biomeCategorySelect").value || state.data.provinceData.biomeCategories?.[0]?.category;
+    const catName = $("bvs-biomeCategorySelect").value || state.data.provinceData.biomeCategories?.[0]?.category;
     const cat = (state.data.provinceData.biomeCategories || []).find(c => c.category === catName);
-    $("biomeSelect").innerHTML = (cat?.biomes || []).map(b => `<option value="${escapeHTML(b.id)}">${escapeHTML(b.name)}</option>`).join("");
+    $("bvs-biomeSelect").innerHTML = (cat?.biomes || []).map(b => `<option value="${escapeHTML(b.id)}">${escapeHTML(b.name)}</option>`).join("");
   }
 
   function hydrateAlignmentControls() {
-    const wrap = $("alignmentControls");
-    const traditionalField = $("traditionalAlignmentField");
+    const wrap = $("bvs-alignmentControls");
+    const traditionalField = $("bvs-traditionalAlignmentField");
     const usingTraditional = state.alignmentMode === "dnd";
     if (traditionalField) traditionalField.hidden = !usingTraditional;
     if (!wrap) return;
@@ -549,52 +549,52 @@
   }
 
   function bindEvents() {
-    $("scopeSelect").addEventListener("change", () => { state.scope = $("scopeSelect").value; applyScopeRules(); renderAll(); });
-    $("provinceSelect").addEventListener("change", () => { state.provinceId = $("provinceSelect").value; hydrateSettlements(); state.settlementId = $("settlementSelect").value; renderAll(); });
-    $("settlementSelect").addEventListener("change", () => { state.settlementId = $("settlementSelect").value; renderAll(); });
-    $("dangerSelect").addEventListener("change", () => { state.danger = $("dangerSelect").value; renderAll(); });
-    $("alignmentModeSelect")?.addEventListener("change", () => { state.alignmentMode = $("alignmentModeSelect").value || "axis"; hydrateAlignmentControls(); renderAll(); });
-    $("traditionalAlignmentSelect")?.addEventListener("change", () => { state.traditionalAlignment = $("traditionalAlignmentSelect").value || "random"; hydrateAlignmentControls(); });
-    $("seedInput").addEventListener("input", () => { state.seed = $("seedInput").value; });
-    $("npcCount").addEventListener("input", () => { state.npcCount = parseInt($("npcCount").value, 10) || 1; });
-    $("raceCategorySelect").addEventListener("change", hydrateRaceSelect);
-    $("biomeCategorySelect").addEventListener("change", hydrateBiomeSelect);
-    $("addRaceBtn").addEventListener("click", addRaceToCache);
-    $("addBiomeBtn").addEventListener("click", addBiomeToCache);
-    $("generateNpcsBtn").addEventListener("click", generateNPCs);
-    $("clearNpcsBtn").addEventListener("click", () => { state.npcs = []; state.generatedAt = null; renderAll(); });
-    $("saveStateBtn").addEventListener("click", saveProgress);
-    $("loadStateBtn").addEventListener("click", loadProgress);
-    $("resetStateBtn").addEventListener("click", resetState);
+    $("bvs-scopeSelect").addEventListener("change", () => { state.scope = $("bvs-scopeSelect").value; applyScopeRules(); renderAll(); });
+    $("bvs-provinceSelect").addEventListener("change", () => { state.provinceId = $("bvs-provinceSelect").value; hydrateSettlements(); state.settlementId = $("bvs-settlementSelect").value; renderAll(); });
+    $("bvs-settlementSelect").addEventListener("change", () => { state.settlementId = $("bvs-settlementSelect").value; renderAll(); });
+    $("bvs-dangerSelect").addEventListener("change", () => { state.danger = $("bvs-dangerSelect").value; renderAll(); });
+    $("bvs-alignmentModeSelect")?.addEventListener("change", () => { state.alignmentMode = $("bvs-alignmentModeSelect").value || "axis"; hydrateAlignmentControls(); renderAll(); });
+    $("bvs-traditionalAlignmentSelect")?.addEventListener("change", () => { state.traditionalAlignment = $("bvs-traditionalAlignmentSelect").value || "random"; hydrateAlignmentControls(); });
+    $("bvs-seedInput").addEventListener("input", () => { state.seed = $("bvs-seedInput").value; });
+    $("bvs-npcCount").addEventListener("input", () => { state.npcCount = parseInt($("bvs-npcCount").value, 10) || 1; });
+    $("bvs-raceCategorySelect").addEventListener("change", hydrateRaceSelect);
+    $("bvs-biomeCategorySelect").addEventListener("change", hydrateBiomeSelect);
+    $("bvs-addRaceBtn").addEventListener("click", addRaceToCache);
+    $("bvs-addBiomeBtn").addEventListener("click", addBiomeToCache);
+    $("bvs-generateNpcsBtn").addEventListener("click", generateNPCs);
+    $("bvs-clearNpcsBtn").addEventListener("click", () => { state.npcs = []; state.generatedAt = null; renderAll(); });
+    $("bvs-saveStateBtn").addEventListener("click", saveProgress);
+    $("bvs-loadStateBtn").addEventListener("click", loadProgress);
+    $("bvs-resetStateBtn").addEventListener("click", resetState);
     $("openCompanionButton")?.addEventListener("click", openCompanion);
-    $("exportAllBtn").addEventListener("click", () => exportNPCs("all"));
-    $("exportWorldBtn").addEventListener("click", () => exportNPCs("world"));
-    $("exportProvinceBtn").addEventListener("click", () => exportNPCs("province"));
-    $("exportSettlementBtn").addEventListener("click", () => exportNPCs("settlement"));
-    $("exportProvinceDataBtn").addEventListener("click", exportProvinceData);
-    $("importProvinceFile").addEventListener("change", importProvinceFile);
-    $("importSaveFile").addEventListener("change", importSaveFile);
-    $("importNpcDocsFile")?.addEventListener("change", importNpcDocumentsFile);
-    $("randomizeFiveBtn")?.addEventListener("click", fivePercentRandomize);
-    $("reconcileLocationsBtn")?.addEventListener("click", reconcileLocationsFromMenu);
-    $("clearLocationsBtn")?.addEventListener("click", clearImportedLocationsFromMenu);
+    $("bvs-exportAllBtn").addEventListener("click", () => exportNPCs("all"));
+    $("bvs-exportWorldBtn").addEventListener("click", () => exportNPCs("world"));
+    $("bvs-exportProvinceBtn").addEventListener("click", () => exportNPCs("province"));
+    $("bvs-exportSettlementBtn").addEventListener("click", () => exportNPCs("settlement"));
+    $("bvs-exportProvinceDataBtn").addEventListener("click", exportProvinceData);
+    $("bvs-importProvinceFile").addEventListener("change", importProvinceFile);
+    $("bvs-importSaveFile").addEventListener("change", importSaveFile);
+    $("bvs-importNpcDocsFile")?.addEventListener("change", importNpcDocumentsFile);
+    $("bvs-randomizeFiveBtn")?.addEventListener("click", fivePercentRandomize);
+    $("bvs-reconcileLocationsBtn")?.addEventListener("click", reconcileLocationsFromMenu);
+    $("bvs-clearLocationsBtn")?.addEventListener("click", clearImportedLocationsFromMenu);
     bindDropZone();
-    $("npcSearch").addEventListener("input", renderNPCs);
+    $("bvs-npcSearch").addEventListener("input", renderNPCs);
     document.querySelectorAll("[data-npc-page]").forEach(btn => btn.addEventListener("click", () => {
       state.npcPage = btn.dataset.npcPage || "world";
       renderNPCs();
       renderRelationshipTracker();
     }));
-    $("refreshRelationshipTrackerBtn")?.addEventListener("click", renderRelationshipTracker);
-    $("relationshipFocusSelect")?.addEventListener("change", () => {
-      state.relationshipFocusId = $("relationshipFocusSelect").value;
+    $("bvs-refreshRelationshipTrackerBtn")?.addEventListener("click", renderRelationshipTracker);
+    $("bvs-relationshipFocusSelect")?.addEventListener("change", () => {
+      state.relationshipFocusId = $("bvs-relationshipFocusSelect").value;
       renderRelationshipTracker();
     });
-    $("npcWindowCloseBtn")?.addEventListener("click", closeNpcWindow);
-    $("npcWindowPreviousBtn")?.addEventListener("click", previousNpcWindowPage);
-    $("npcWindowBackToGeneratorBtn")?.addEventListener("click", backToGeneratorFromNpcWindow);
-    $("npcWindowOverlay")?.addEventListener("click", (e) => { if (e.target?.id === "npcWindowOverlay") closeNpcWindow(); });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("npcWindowOverlay")?.classList.contains("hidden")) closeNpcWindow(); });
+    $("bvs-npcWindowCloseBtn")?.addEventListener("click", closeNpcWindow);
+    $("bvs-npcWindowPreviousBtn")?.addEventListener("click", previousNpcWindowPage);
+    $("bvs-npcWindowBackToGeneratorBtn")?.addEventListener("click", backToGeneratorFromNpcWindow);
+    $("bvs-npcWindowOverlay")?.addEventListener("click", (e) => { if (e.target?.id === "bvs-npcWindowOverlay") closeNpcWindow(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("bvs-npcWindowOverlay")?.classList.contains("hidden")) closeNpcWindow(); });
     document.addEventListener("click", (e) => {
       const openBtn = e.target.closest?.("[data-open-npc]");
       if (openBtn) {
@@ -614,23 +614,23 @@
   }
 
   function applyScopeRules() {
-    $("scopeSelect").value = state.scope;
+    $("bvs-scopeSelect").value = state.scope;
     const rules = state.data?.livingRules?.scopeRules?.[state.scope];
-    const p = $("provinceSelect");
-    const s = $("settlementSelect");
+    const p = $("bvs-provinceSelect");
+    const s = $("bvs-settlementSelect");
     p.disabled = !rules?.provinceEnabled;
     s.disabled = !rules?.settlementEnabled;
     if (state.biomeCache.length > biomeLimit()) state.biomeCache = state.biomeCache.slice(0, biomeLimit());
-    $("scopeHint").textContent = state.scope === "world"
+    $("bvs-scopeHint").textContent = state.scope === "world"
       ? "Whole World selected: province and settlement selection are locked, biome cache expands to 15, and NPC travel can cross the world."
       : state.scope === "province"
       ? "Whole Province selected: settlement selection is locked, and NPC travel stays inside the selected province."
       : "Single Settlement selected: NPCs stay mostly inside their selected settlement with occasional local errands.";
-    $("biomeLimitHint").textContent = `Biome cache limit: ${biomeLimit()} selected biome${biomeLimit() === 1 ? "" : "s"}.`;
+    $("bvs-biomeLimitHint").textContent = `Biome cache limit: ${biomeLimit()} selected biome${biomeLimit() === 1 ? "" : "s"}.`;
   }
 
   function addRaceToCache() {
-    const raceId = $("raceSelect").value;
+    const raceId = $("bvs-raceSelect").value;
     const race = allRaceDetails().find(r => r.id === raceId);
     if (!race) return;
     if (!state.raceCache.some(r => r.id === race.id)) state.raceCache.push(race);
@@ -639,7 +639,7 @@
   }
 
   function addBiomeToCache() {
-    const biomeId = $("biomeSelect").value;
+    const biomeId = $("bvs-biomeSelect").value;
     const biome = allBiomeOptions().find(b => b.id === biomeId);
     if (!biome) return;
     if (state.biomeCache.some(b => b.id === biome.id)) return;
@@ -658,8 +658,8 @@
   }
 
   function renderCaches() {
-    $("raceCache").innerHTML = state.raceCache.length ? state.raceCache.map(r => `<span class="chip">${escapeHTML(r.name)} <button data-remove-race="${escapeHTML(r.id)}" title="Remove">×</button></span>`).join("") : `<span class="hint">No race cache yet. Add at least one race or generation will use all races.</span>`;
-    $("biomeCache").innerHTML = state.biomeCache.length ? state.biomeCache.map(b => `<span class="chip">${escapeHTML(b.category)}: ${escapeHTML(b.name)} <button data-remove-biome="${escapeHTML(b.id)}" title="Remove">×</button></span>`).join("") : `<span class="hint">No biome cache yet. Add biomes to guide location and travel assignment.</span>`;
+    $("bvs-raceCache").innerHTML = state.raceCache.length ? state.raceCache.map(r => `<span class="chip">${escapeHTML(r.name)} <button data-remove-race="${escapeHTML(r.id)}" title="Remove">×</button></span>`).join("") : `<span class="hint">No race cache yet. Add at least one race or generation will use all races.</span>`;
+    $("bvs-biomeCache").innerHTML = state.biomeCache.length ? state.biomeCache.map(b => `<span class="chip">${escapeHTML(b.category)}: ${escapeHTML(b.name)} <button data-remove-biome="${escapeHTML(b.id)}" title="Remove">×</button></span>`).join("") : `<span class="hint">No biome cache yet. Add biomes to guide location and travel assignment.</span>`;
     document.querySelectorAll("[data-remove-race]").forEach(btn => btn.addEventListener("click", () => { state.raceCache = state.raceCache.filter(r => r.id !== btn.dataset.removeRace); renderCaches(); renderWarnings(); }));
     document.querySelectorAll("[data-remove-biome]").forEach(btn => btn.addEventListener("click", () => { state.biomeCache = state.biomeCache.filter(b => b.id !== btn.dataset.removeBiome); renderCaches(); renderWarnings(); }));
   }
@@ -678,9 +678,9 @@
       sanitizeRaceCache();
     }
 
-    $("seedInput").value = state.seed;
-    $("npcCount").value = state.npcCount;
-    $("dangerSelect").value = state.danger;
+    $("bvs-seedInput").value = state.seed;
+    $("bvs-npcCount").value = state.npcCount;
+    $("bvs-dangerSelect").value = state.danger;
     applyScopeRules();
     renderCaches();
     renderSummary();
@@ -695,11 +695,11 @@
     const province = currentProvince();
     const settlement = currentSettlement();
     const scopeName = state.data.livingRules.scopeRules[state.scope].label;
-    $("summaryLine").textContent = `${scopeName}. ${province ? province.name : "No province"}${state.scope === "settlement" && settlement ? ` → ${settlement.name}` : ""}. ${state.npcs.length} NPCs in memory.`;
+    $("bvs-summaryLine").textContent = `${scopeName}. ${province ? province.name : "No province"}${state.scope === "settlement" && settlement ? ` → ${settlement.name}` : ""}. ${state.npcs.length} NPCs in memory.`;
     const factionCount = new Set(state.npcs.map(n => n.faction?.name).filter(Boolean)).size;
     const settlementCount = new Set(state.npcs.map(n => n.assignment?.settlementId).filter(Boolean)).size;
     const provinceCount = new Set(state.npcs.map(n => n.assignment?.provinceId).filter(Boolean)).size;
-    $("statsGrid").innerHTML = [
+    $("bvs-statsGrid").innerHTML = [
       [state.npcs.length, "NPCs in Memory"], [state.customLocations.length, "Imported / Custom Locations"], [state.importedDocuments.length, "Scanned Documents"], [state.raceCache.length || "All", "Race Cache"], [state.biomeCache.length, `Biome Cache / ${biomeLimit()}`], [provinceCount, "Used Provinces"], [settlementCount, "Used Settlements"], [factionCount, "Active Factions"]
     ].map(([num,label]) => `<div class="stat"><strong>${escapeHTML(num)}</strong><span>${escapeHTML(label)}</span></div>`).join("");
   }
@@ -720,7 +720,7 @@
 
   function renderWarnings() {
     validate();
-    $("warnings").innerHTML = state.warnings.length ? state.warnings.map(w => `<div class="warning">${escapeHTML(w)}</div>`).join("") : `<div class="hint">No validation warnings.</div>`;
+    $("bvs-warnings").innerHTML = state.warnings.length ? state.warnings.map(w => `<div class="warning">${escapeHTML(w)}</div>`).join("") : `<div class="hint">No validation warnings.</div>`;
   }
 
   function describeAxis(axis, value) {
@@ -737,8 +737,8 @@
   }
 
   function generateNPCs() {
-    state.seed = $("seedInput").value || "Life Simulator";
-    state.npcCount = clamp(parseInt($("npcCount").value, 10) || 1, 1, 500);
+    state.seed = $("bvs-seedInput").value || "Life Simulator";
+    state.npcCount = clamp(parseInt($("bvs-npcCount").value, 10) || 1, 1, 500);
     const rng = makeRng(`${state.seed}|${state.scope}|${Date.now()}`);
     sanitizeRaceCache();
     const selectedSettlements = settlementsForScope();
@@ -1304,12 +1304,12 @@
   }
 
   function renderNPCs() {
-    const q = ($("npcSearch")?.value || "").toLowerCase().trim();
+    const q = ($("bvs-npcSearch")?.value || "").toLowerCase().trim();
     const pageList = npcsForPage(state.npcPage);
     let list = pageList;
     if (q) list = list.filter(n => JSON.stringify(n).toLowerCase().includes(q));
-    const tpl = $("npcCardTemplate");
-    const dir = $("npcDirectory");
+    const tpl = $("bvs-npcCardTemplate");
+    const dir = $("bvs-npcDirectory");
     renderNpcPageTabs(pageList.length, list.length);
     if (!state.npcs.length) {
       dir.innerHTML = `<p class="hint">No NPCs generated yet. Choose a scope, add cache entries as desired, then generate NPCs.</p>`;
@@ -1367,7 +1367,7 @@
       btn.classList.toggle("active", active);
       btn.setAttribute("aria-selected", active ? "true" : "false");
     });
-    const summary = $("npcPageSummary");
+    const summary = $("bvs-npcPageSummary");
     if (!summary) return;
     const province = currentProvince();
     const settlement = currentSettlement();
@@ -1451,16 +1451,16 @@
       else if (!state.npcWindowCurrentId) state.npcWindowHistory.push({ type:"page", page:state.npcPage, scrollY:window.scrollY || 0 });
     }
     state.npcWindowCurrentId = id;
-    const overlay = $("npcWindowOverlay");
-    $("npcWindowTitle").textContent = npc.name;
-    $("npcWindowBody").innerHTML = npcWindowHTML(npc);
+    const overlay = $("bvs-npcWindowOverlay");
+    $("bvs-npcWindowTitle").textContent = npc.name;
+    $("bvs-npcWindowBody").innerHTML = npcWindowHTML(npc);
     overlay?.classList.remove("hidden");
     document.body.classList.add("modal-open");
-    $("npcWindowPreviousBtn").disabled = !state.npcWindowHistory.length;
+    $("bvs-npcWindowPreviousBtn").disabled = !state.npcWindowHistory.length;
   }
 
   function closeNpcWindow() {
-    $("npcWindowOverlay")?.classList.add("hidden");
+    $("bvs-npcWindowOverlay")?.classList.add("hidden");
     document.body.classList.remove("modal-open");
     state.npcWindowCurrentId = null;
     state.npcWindowHistory = [];
@@ -1517,7 +1517,7 @@
   // branch-style family-tree layout; the visible player label is Relationship Tracker.
   function renderRelationshipTracker() {
     renderRelationshipFocusSelect();
-    const tracker = $("relationshipTracker");
+    const tracker = $("bvs-relationshipTracker");
     if (!tracker) return;
     const visible = npcsForPage(state.npcPage);
     if (!visible.length) {
@@ -1563,7 +1563,7 @@
   }
 
   function renderRelationshipFocusSelect() {
-    const select = $("relationshipFocusSelect");
+    const select = $("bvs-relationshipFocusSelect");
     if (!select) return;
     const visible = npcsForPage(state.npcPage);
     const old = select.value || state.relationshipFocusId;
@@ -1578,7 +1578,7 @@
   }
 
   function defsRelationshipSvg() {
-    return `<defs><filter id="trackerGlow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>`;
+    return `<defs><filter id="bvs-trackerGlow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>`;
   }
 
   function relationshipCurve(x1, y1, x2, y2, index, category) {
@@ -1746,7 +1746,7 @@
 
 
   function bindDropZone() {
-    const zone = $("npcDropZone");
+    const zone = $("bvs-npcDropZone");
     if (!zone) return;
     ["dragenter", "dragover"].forEach(type => zone.addEventListener(type, (e) => { e.preventDefault(); zone.classList.add("dragging"); }));
     ["dragleave", "drop"].forEach(type => zone.addEventListener(type, (e) => { e.preventDefault(); zone.classList.remove("dragging"); }));
