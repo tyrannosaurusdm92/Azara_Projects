@@ -239,52 +239,6 @@ html[data-onyx-design-linked="true"] .send-button:disabled{background:var(--work
 html[data-onyx-design-linked="true"] .toast{background:var(--work-surface-1);border-color:var(--work-border);color:var(--work-text)}
 html[data-onyx-design-linked="true"] .channel-footer{background:var(--work-surface-1);border-color:var(--work-border)}
 
-/* Shared four-denomination wallet and Work income feedback. */
-.work-wallet{
-  position:fixed;
-  top:12px;
-  right:72px;
-  z-index:120;
-  display:block;
-  min-height:32px;
-  padding:8px 10px;
-  border:1px solid var(--line,#494949);
-  border-radius:999px;
-  background:var(--panel,#171a1e);
-  color:var(--text,#f5f7f8);
-  font:850 11px/1 system-ui,sans-serif;
-  letter-spacing:.01em;
-  white-space:nowrap;
-  box-shadow:0 5px 18px rgba(0,0,0,.2);
-}
-.work-wallet.earned{animation:work-wallet-earned .8s ease-out}
-.work-income-toast{
-  position:fixed;
-  top:52px;
-  right:72px;
-  z-index:121;
-  padding:7px 10px;
-  border:1px solid var(--line,#494949);
-  border-radius:8px;
-  background:var(--panel,#171a1e);
-  color:var(--text,#f5f7f8);
-  font:800 11px/1.2 system-ui,sans-serif;
-  opacity:0;
-  transform:translateY(-5px);
-  pointer-events:none;
-  transition:opacity .15s ease,transform .15s ease;
-}
-.work-income-toast.show{opacity:1;transform:translateY(0)}
-html[data-onyx-design-linked="true"] :is(.work-wallet,.work-income-toast){
-  background:var(--work-surface-3);
-  border-color:var(--work-border);
-  color:var(--work-text);
-  box-shadow:none;
-}
-@keyframes work-wallet-earned{0%{transform:scale(1)}35%{transform:scale(1.07);background:var(--work-active);color:var(--work-active-text)}100%{transform:scale(1)}}
-@media (max-width:720px){.work-wallet{top:9px;right:58px;font-size:9px;padding:7px}.work-income-toast{top:45px;right:58px}}
-@media (prefers-reduced-motion:reduce){.work-wallet.earned{animation:none}.work-income-toast{transition:none}}
-
 /* Visual pass 4: high-contrast mode, subtle geometry, and a 15% larger fullscreen Work canvas. */
 :root{
   color-scheme:dark;

@@ -40,3 +40,19 @@
  .catalog-head{padding:9px 58px 8px 10px}
 }
 @media(prefers-reduced-motion:reduce){.server-button,.channel-item,.catalog-drawer{transition:none}}
+
+/* Shared panel tone. Existing design-link palettes and explicit light mode are respected. */
+html[data-theme="dark"]:not([data-onyx-design-linked="true"]){
+ --os-work-bg:#0c1017;--os-work-surface:#111b24;--os-work-text:#f3e9db;
+ --os-work-muted:#d4c6b6;--os-work-cyan:#3d9fa0;--os-work-yellow:#d7aa63;
+ --os-work-persimmon:#b07a3a;--os-work-primary:#3d9fa0;
+}
+html[data-theme="dark"]:not([data-onyx-design-linked="true"]) #workApp
+:is(.small-button,.secondary-button,.icon-button,.rail-button,.channel-item,.category-chip:not(.active),.prompt-suggestion,.catalog-close-button){
+ background:#17363e!important;color:#f3e9db!important;border:1px solid #3d9fa0!important;
+ min-height:34px!important;
+}
+html[data-theme="dark"]:not([data-onyx-design-linked="true"]) #workApp
+:is(.server-button[aria-selected="true"],.channel-item.active,.primary-button,.send-button){
+ background:#3d9fa0!important;color:#09151b!important;border:1px solid #8de0dc!important;
+}

@@ -78,7 +78,7 @@
 #belavados-unified-app #bvs-settlements-root .myspace-grid :is(input,textarea,select){
  max-width:100%;font-size:.84rem;
 }
-#belavados-unified-app #bvs-settlements-root .myspace-grid :is(input:not([type=checkbox]),select){
+#belavados-unified-app #bvs-settlements-root .myspace-grid :is(input[type="text"],input[type="number"],input[type="search"],select){
  min-height:34px;padding:6px 8px;
 }
 #belavados-unified-app #bvs-settlements-root .myspace-grid textarea{padding:7px 8px;line-height:1.3}

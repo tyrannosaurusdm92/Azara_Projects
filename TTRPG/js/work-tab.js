@@ -92,7 +92,7 @@ const FALLBACK_TABS = {
   ].map(([id,label,icon,description]) => ({
     id,label,icon,description,context:`Work mode: ${label}. Preserve the user's constraints and provide practical help.`,
     suggestions:[`Help me with ${label.toLowerCase()}`,"Break this into a practical plan","Give me several distinct options","Review what I have and improve it"],
-    defaultChannels:[{id:"general",name:"general",topic:`General ${label.toLowerCase()} help.`}]
+    defaultChannels:id==="worldbuilding" ? [{id:"settlements",name:"settlements",topic:"Provinces, people and places."},{id:"characters",name:"characters",topic:"NPCs and relationships."},{id:"history",name:"history",topic:"Culture and lore."}] : [{id:"general",name:"general",topic:`General ${label.toLowerCase()} help.`}]
   }))
 };
 
@@ -264,7 +264,7 @@ function previewMoodFromDraft() {
 
 async function loadConfig() {
   // Direct-open support: browsers commonly block fetch() from file:// pages.
-  // The complete six-tab config is embedded above, so local previews still work.
+  // Keep local previews functional when the JSON configuration cannot be loaded.
   if (location.protocol !== "file:") {
     try {
       const url = new URL("./json/work-tabs.json", document.baseURI);
@@ -582,5 +582,5 @@ checkBrainStatus();
 })().catch(error => {
   console.error("Onyx Work failed to initialize", error);
   const host = document.getElementById("serverList");
-  if (host) host.innerHTML = '<div style="padding:8px;color:#ffb9c2;font:700 10px/1.4 system-ui">Work UI failed to initialize. Open the browser console for details.</div>';
+  if (host) host.innerHTML = '<div style="padding:8px;color:#ffb9c2;font:700 10px/1.4 system-ui">Work is unavailable. Reload to try again.</div>';
 });
