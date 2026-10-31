@@ -4,8 +4,6 @@
 #onyxWidget .belavados-fullscreen-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 #onyxWidget .belavados-fullscreen-actions button{min-width:140px}
 html[data-runtime-mode="forge"] #onyxWidget{display:none!important}
-#belavadosForgeFullscreenExit[hidden]{display:none!important}
-#belavadosForgeFullscreenExit:not([hidden]){display:grid!important;place-items:center;position:fixed!important;right:max(18px,env(safe-area-inset-right));top:max(14px,env(safe-area-inset-top));z-index:2147483647!important;min-width:46px;height:46px;border-radius:8px;background:#6a1a25!important;color:#fff!important;font-size:30px;border:2px solid #e6bd6d;cursor:pointer}
 #onyxWidget .jump-tabs .jump-tab{background:linear-gradient(125deg,#123942,#1c2d3f)!important;color:#e4fff8!important;border:1px solid #a38a54!important}
 #belavadosProfileFrame{outline:none}
 @media(max-width:620px){#onyxWidget .belavados-fullscreen-actions{width:100%;justify-content:stretch}#onyxWidget .belavados-fullscreen-actions button{flex:1 1 130px}}
@@ -26,8 +24,14 @@ html[data-runtime-mode="forge"] #onyxWorkFullscreenShell{display:none!important}
 #onyxWorkFullscreenShell[hidden],#onyxWorkFullscreenExit[hidden]{display:none!important}
 #onyxWorkFullscreenShell:not([hidden]){display:block!important;z-index:2147483300!important}
 #onyxWorkFullscreenShell:not([hidden]) #onyxWorkFullscreenExit{display:grid!important;place-items:center!important;z-index:2147483500!important;right:max(14px,env(safe-area-inset-right))!important;top:max(12px,env(safe-area-inset-top))!important;background:#d40000!important;color:#fff!important}
-html[data-runtime-mode="work"] #belavadosForgeFullscreenExit{display:none!important}
 
 /* Explicit closed-state invariant after leaving fullscreen. */
 #onyxWidget:not(.open) #onyxPopout,
 #onyxWidget #onyxPopout[aria-hidden="true"]{display:none!important;visibility:hidden!important;pointer-events:none!important}
+
+/* Single intentional fullscreen: Onyx Work. Keep the red exit and preserve movable widget sizing. */
+#onyxWidget .belavados-fullscreen-actions{margin:0;justify-content:flex-end}
+#onyxWidget [data-launch-work]{flex:0 1 auto;min-width:128px}
+#onyxWidget .chat-page-intro,#onyxWidget .chat-output-hint{display:none!important}
+#onyxWidget .chat-server-workspace{margin-top:4px!important}
+#onyxWidget [data-capability-state="unavailable"]:disabled{display:none!important}

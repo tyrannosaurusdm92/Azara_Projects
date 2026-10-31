@@ -27,9 +27,10 @@
    closeTransientSurfaces();
  }
  function enterForgeFullscreen(){
-   resetSurfaces();root.dataset.runtimeMode='forge';
+   // World Forge already occupies the starting page. Reuse it instead of creating a second fullscreen mode.
+   resetSurfaces();root.dataset.runtimeMode='module';
    notifyWorkFrame(false);
-   if(forgeExit)forgeExit.hidden=false;
+   window.BelavadosTTRPG?.openGenerator?.();
    $('#belavadosProfileFrame')?.contentWindow?.focus?.();
  }
  function exitForgeFullscreen(){

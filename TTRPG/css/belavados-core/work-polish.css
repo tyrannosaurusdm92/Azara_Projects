@@ -1,0 +1,42 @@
+/* Shared Belavadós geometry for the Work overlay. Preserve Onyx's custom design bridge. */
+:root:not([data-onyx-design-linked="true"]){
+ --bg:#0c1017;--bg2:#101f27;--panel:#111720;--panel2:#18313a;--panel3:#18313a;
+ --ink:#f3e9db;--text:#f3e9db;--muted:#d4c6b6;--faint:#aac8cb;--line:#35595a;
+ --accent:#8de0dc;--accent2:#d7aa63;--accent-soft:#18383c;
+}
+:root{--rail:68px;--channels:clamp(190px,20vw,244px);--radius:11px}
+.work-app{width:100%;max-width:100%;grid-template-columns:var(--rail) var(--channels) minmax(0,1fr)}
+.server-rail{padding:9px 6px;gap:7px}
+.brand-orb,.server-button{width:46px;height:46px;border-radius:13px}
+.channel-header,.chat-header{min-height:54px;padding:8px 12px}
+.channel-header h1{font-size:16px}
+.channel-list{padding:4px 7px 8px}
+.channel-item{min-height:35px;padding:5px 7px}
+.server-description{padding:6px 10px;font-size:11px}
+.onyx-idle-window{margin:7px 8px 2px;border-radius:10px}
+.onyx-idle-stage{height:92px}
+#onyxMoodImage{width:90px;height:90px}
+.onyx-idle-meta{min-height:25px;padding:4px 8px}
+.channel-footer{padding:7px}
+.message-viewport .messages{padding:14px 16px 18px;gap:12px}
+.chat-header .chat-heading span{font-size:11px}
+.catalog-head{min-height:55px;grid-template-columns:minmax(0,1fr) max-content;grid-template-areas:"title close";padding:9px 64px 9px 13px}
+.catalog-head>div{grid-area:title}
+.catalog-head>.catalog-close-button{grid-area:close}
+.composer-note,.composer-hint{font-size:11px}
+@media(max-width:760px){
+ :root{--rail:58px;--channels:208px}
+ .work-app{grid-template-columns:var(--rail) minmax(0,1fr)}
+ .channel-header,.chat-header{min-height:48px}
+ .chat-header{padding-right:65px}
+ .catalog-head{padding-right:65px}
+ .server-button,.brand-orb{width:41px;height:41px}
+}
+@media(max-width:480px){
+ :root{--rail:52px}
+ .server-rail{padding:7px 4px}
+ .channel-header,.chat-header{padding:7px 9px}
+ .message-viewport .messages{padding:11px 9px 14px}
+ .catalog-head{padding:9px 58px 8px 10px}
+}
+@media(prefers-reduced-motion:reduce){.server-button,.channel-item,.catalog-drawer{transition:none}}

@@ -1,6 +1,6 @@
 (async function(){
 "use strict";
-const FALLBACK_BACKEND_URL = ""; // No backend for Belavadós TTRPG.
+const FALLBACK_BACKEND_URL = "";
 const STORAGE = Object.freeze({
   state: "onyx.work.state.v1",
   messages: "onyx.work.messages.v1",
@@ -85,7 +85,7 @@ const FALLBACK_TABS = {
   tabs: [
     ["coding","Coding","</>","Programming, debugging, architecture, APIs, web apps, and implementation help."],
     ["gaming","Gaming","🎮","Game design, builds, mechanics, balancing, walkthrough thinking, and multiplayer systems."],
-    ["household","Household","⌂","Home organization, routines, cleaning, planning, lists, and practical household problem-solving."],
+    ["worldbuilding","Worldbuilding","✦","Settlements, cultures, histories, inhabitants and maps."],
     ["idea-help","Idea Help","✦","Brainstorming, comparing options, expanding rough ideas, and turning fragments into plans."],
     ["image-creation","Image Creation","▣","Image generation, prompt development, composition, style direction, and visual iteration."],
     ["writing","Writing","Aa","Drafting, rewriting, editing, creative writing, tone, structure, and language help."]
@@ -111,7 +111,7 @@ let draggedChannelId = "";
 let moodRuntime = loadJson(STORAGE.mood, { activeMood:"thinking", lastChatAt:0, reason:"startup" });
 let moodInterval = 0;
 let moodPreview = "";
-const DEFAULT_CATEGORIES = ["Coding","Gaming","Household","Idea Help","Image Creation","Writing","Research","Files","Planning","Other"];
+const DEFAULT_CATEGORIES = ["Worldbuilding","Settlements","Maps","Characters","Lore","Campaign","Coding","Gaming","Idea Help","Image Creation","Writing","Research","Files","Planning","Other"];
 
 
 function loadJson(key, fallback) {
@@ -276,12 +276,13 @@ async function loadConfig() {
       console.info("Using embedded Work tab config fallback.", error);
     }
   }
-  tabConfig.tabs.sort((a,b) => a.label.localeCompare(b.label));
+  tabConfig.tabs = tabConfig.tabs.filter(tab => tab.id !== "household");
+  tabConfig.tabs.sort((a,b) => a.id==="worldbuilding" ? -1 : b.id==="worldbuilding" ? 1 : a.label.localeCompare(b.label));
 }
 
 function createInitialState() {
   const saved = loadJson(STORAGE.state, null);
-  const next = saved && saved.version === 1 ? saved : { version:1, activeServerId:tabConfig.tabs[0]?.id || "coding", activeChannelByServer:{}, channelsByServer:{} };
+  const next = saved && saved.version === 1 ? saved : { version:1, activeServerId:tabConfig.tabs[0]?.id || "worldbuilding", activeChannelByServer:{}, channelsByServer:{} };
   for (const server of tabConfig.tabs) {
     if (!Array.isArray(next.channelsByServer[server.id]) || !next.channelsByServer[server.id].length) {
       next.channelsByServer[server.id] = (server.defaultChannels || [{id:"general",name:"general",topic:"General help."}]).map(c => ({...c,createdAt:c.createdAt || nowIso()}));
@@ -427,7 +428,7 @@ function formatBytes(bytes) { const n = Number(bytes)||0; if (n < 1024) return `
 
 function getSessionToken(){return ''} // Local-only TTRPG; no credentials.
 
-async function api(action,data={},timeoutMs=0){throw new Error('This workspace uses local dialogue only; no backend API is configured.')}
+async function api(action,data={},timeoutMs=0){throw new Error("Action unavailable.")}
 
 function workContext() {
   const server = currentServer(), channel = currentChannel();
@@ -447,7 +448,7 @@ async function sendMessage(text) {
     const local=window.parent?.OnyxDialogue;
     const mood=local?.classify?.(clean,{activity:'work'})||inferWorkMood(clean,'user');
     const entry=local?.select?.({mood,topic:clean});
-    const reply=entry?.text||'Papa, I am available in local Belavadós mode. The World Forge generator is ready, and I can respond using the dialogue library installed with this app.';
+    const reply=entry?.text||'Papa, tell me which part of Belavadós you would like to build next.';
     const answer={id:uid('m'),role:'assistant',content:reply,createdAt:nowIso()};
     setThreadMessages([...threadMessages(),answer]);renderMessages();markChatMood(mood,'onyx-output');
     setBrainStatus(true,'Onyx ready');
