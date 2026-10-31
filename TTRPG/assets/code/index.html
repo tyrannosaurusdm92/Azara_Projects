@@ -10,7 +10,7 @@
 html,body{margin:0;min-height:100%;background:#07090a;color:var(--paper);font:16px/1.5 Georgia,"Times New Roman",serif;}
 body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 /* The attached code creates its own markup and CSS. Override only its shared palette. */
-#belavados-worldforge-root{--bg:#07090a;--panel:#111720;--panel2:#17232c;--line:#35595a;--text:#f3e9db;--muted:#d4c6b6;--cyan:#8de0dc;--gold:#d7aa63;min-height:100vh;}
+#belavados-worldforge-root{--bg:#07090a;--panel:#111720;--panel2:#17232c;--line:#35595a;--text:#f3e9db;--muted:#d4c6b6;--cyan:#8de0dc;--gold:#d7aa63;min-height:0;}
 #belavados-worldforge-root button,#belavados-worldforge-root input,#belavados-worldforge-root select,#belavados-worldforge-root textarea{accent-color:#3d9fa0;}
 #belavados-worldforge-root .hero .belavados-brandmark{height:96px;width:96px;float:right;margin:0 0 12px 18px;object-fit:contain;border-radius:50%;border:2px solid #d7aa63;box-shadow:0 0 22px rgba(141,224,220,.4)}
 </style>
@@ -21,6 +21,7 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 <link rel="stylesheet" href="../../css/settlements-embed.css">
 <link rel="stylesheet" href="../../css/belavados-core/unified-settlements.css">
 <link rel="stylesheet" href="../../css/belavados-core/cartography-v10.css">
+<link rel="stylesheet" href="../../css/belavados-core/site-polish.css?v=20261030-unified-3">
 <script defer src="../../js/belavados-core/unified-settlements.js"></script>
 <script defer src="../../js/cartography-v10.js"></script>
 </head>
@@ -32,7 +33,7 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
  <nav id="bvs-provinceNavItems" aria-label="Generator followed by provinces"></nav>
 </div>
 <header class="belavados-unified-header">
- <div class="belavados-unified-heading"><span>Belavadós · World and Settlement Forge</span><h1 id="belavados-unified-page-title">Generator</h1><p id="belavados-unified-page-description">Generate settlements or choose a named province.</p></div>
+ <div class="belavados-unified-heading"><span>Belavadós · World Forge</span><h1 id="belavados-unified-page-title">Generator</h1><p id="belavados-unified-page-description">Create and explore settlements.</p></div>
  <div class="belavados-unified-controls">
   <label for="belavados-unified-province">Province <select id="belavados-unified-province" aria-label="Choose province"></select></label>
   <label for="belavados-unified-settlement">Settlement <select id="belavados-unified-settlement" aria-label="Choose settlement"></select></label>
@@ -43,7 +44,6 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 <main id="belavados-unified-content">
 <section id="belavados-generator-page" aria-label="Generator starting page"><div id="belavados-generator-target"></div></section>
 <section hidden id="bvs-settlements-root" data-belavados-settlements="true">
-
 
 <div class="myspace-shell">
  <header class="profile-topbar">
@@ -58,7 +58,7 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
   </div>
   <div class="myspace-grid">
    <aside class="left-column">
-    <section class="window"><div class="window-header">Province Window</div><div class="window-body">
+    <section class="window"><div class="window-header">Settlement Details</div><div class="window-body">
      <label><span>Province Name (canonical)</span><input id="bvs-worldProvinceName" readonly></label>
      <label><span>Settlement Name (canonical)</span><input id="bvs-worldSettlementName" readonly></label>
      <label><span>Government Type</span><input id="bvs-worldGovernment" placeholder="Government type"></label>
@@ -80,14 +80,14 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
       <div class="button-row"><button type="button" id="bvs-worldLaunchNpcGenerator">NPC Generator</button><button type="button" id="bvs-worldLaunchLocationGenerator">Location Generator</button><button type="button" class="ghost" id="bvs-worldImportExisting">Load Existing Residents Into Tools</button></div>
       <p id="bvs-generatorStatus" class="file-note"></p>
     </div></section>
-    <section class="window"><div class="window-header">Scale Window</div><div class="window-body">
-      <label><span>Overall Population (optional)</span><input type="number" id="bvs-worldPopulation" min="0" placeholder="Unknown, enter if known"></label>
-      <div class="form-grid-2"><label><span>Square Miles (optional)</span><input type="number" id="bvs-worldSquareMiles" min="0" step="0.01" placeholder="Unknown"></label><label><span>Square Kilometers (optional)</span><input type="number" id="bvs-worldSquareKm" min="0" step="0.01" placeholder="Unknown"></label></div>
+    <section class="window"><div class="window-header">Population &amp; Area</div><div class="window-body">
+      <label><span>Population</span><input type="number" id="bvs-worldPopulation" min="0" placeholder="Unknown, enter if known"></label>
+      <div class="form-grid-2"><label><span>Area (mi²)</span><input type="number" id="bvs-worldSquareMiles" min="0" step="0.01" placeholder="Unknown"></label><label><span>Area (km²)</span><input type="number" id="bvs-worldSquareKm" min="0" step="0.01" placeholder="Unknown"></label></div>
       <label><span>Threat / Danger Rating</span><select id="bvs-worldDanger"><option>Peaceful</option><option>Low</option><option>Moderate</option><option>High</option><option>Severe</option><option>Catastrophic</option></select></label>
     </div></section>
-    <section class="window"><div class="window-header bronze">Aza’raan World &amp; Campaign Calendar</div><div class="window-body">
+    <section class="window"><div class="window-header bronze">World Calendar</div><div class="window-body">
       <div class="belavados-clock-grid"><div class="clock-card"><b>Player Time</b><div id="bvs-worldPlayerClock" class="clock-main">—</div><div class="clock-sub">Your browser's local time</div></div><div class="clock-card"><b>DM Time</b><div id="bvs-worldDmClock" class="clock-main">—</div><div class="clock-sub">America/New_York</div></div><div class="clock-card"><b>Aza’raan Campaign Time</b><div id="bvs-worldBelavadosClock" class="clock-main">—</div><div id="bvs-worldClockSource" class="clock-sub">Source UTC offset</div></div></div>
-<div class="clock-config"><label><span>Legacy Earth UTC offset (reference only)</span><input id="bvs-worldUtcOffsetInput" placeholder="UTC-5, UTC+7, -05:00"></label><button type="button" class="ghost" id="bvs-worldApplyUtcOffset">Apply Earth offset</button></div>
+<div class="clock-config"><label><span>UTC offset</span><input id="bvs-worldUtcOffsetInput" placeholder="UTC-5, UTC+7, -05:00"></label><button type="button" class="ghost" id="bvs-worldApplyUtcOffset">Apply Earth offset</button></div>
       <div class="aza-canon"><h3>Aza’ra • The World Beneath the Veil</h3><p>Aza’ra is a shattered, disc-shaped world suspended in the Void. Four continents, Dakaroth, Arzuhan, Tzaphaer and Belavadós, share the Veil, a mostly transparent magical dome. Floating islands drift above; a fractured cone twists beneath. Its sun is dead or nearly dead, and the Veil illuminates three moons. Nothing survives outside the Veil.</p><p><b>21 hours/day • 6 days/week • 5 weeks/month • 8 months/year • 240 days/year</b></p><p>Seven hours of <b>Ae</b> (Duvaen, red), seven hours of <b>W’i</b> (W'iosamn, silver), and seven hours of <b>La</b> (Arvalla, blue-silver and ringed).</p></div>
       <div class="aza-clock-panel"><div id="bvs-aza-clock-display" class="aza-clock-display">Year 1 · Month 1/8 · Week 1/5 · Day 1/6 · W’i 13:30</div><p id="bvs-aza-moon-display" class="elf-muted">W’i · W'iosamn</p><div class="aza-fields">
       <label>Year<input type="number" id="bvs-aza-year" min="1" max="999999" value="1"></label>
@@ -99,13 +99,13 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
       <div class="aza-controls"><button type="button" id="bvs-aza-day-minus">− Day</button><button type="button" id="bvs-aza-day-plus">+ Day</button><button type="button" id="bvs-aza-hour-minus">− Hour</button><button type="button" id="bvs-aza-hour-plus">+ Hour</button><button type="button" id="bvs-aza-play">Play time</button><button type="button" id="bvs-aza-reset">Reset campaign clock</button></div><p class="clock-note">Play: 1 second = 1 campaign minute.</p>
       </div>
     </div></section>
-    <section class="window"><div class="window-header bronze">Settlement Preference Alignment</div><div class="window-body"><div class="axis-box" id="bvs-worldSettlementAxes"></div></div></section>
+    <section class="window"><div class="window-header bronze">Settlement Alignment</div><div class="window-body"><div class="axis-box" id="bvs-worldSettlementAxes"></div></div></section>
    </aside>
    <section class="center-column">
-    <section class="window map-module"><div class="window-header"><span>Premade Province &amp; Settlement Map</span><span class="map-status" id="bvs-mapStatus">Source locations</span></div><div class="map-viewer world-map-viewer" id="bvs-mapViewer"><div id="bvs-worldMapCanvas" class="world-map-canvas" aria-label="Existing named settlements in the selected province"></div><img id="bvs-worldTemplateMapImage" class="uploaded-map-layer" alt="Uploaded settlement map image" hidden><iframe id="bvs-worldTemplateMapFrame" class="uploaded-map-layer" title="Uploaded HTML settlement map" sandbox="allow-scripts" hidden></iframe></div><div class="window-footer"><div class="map-toolbar"><span class="map-status" id="bvs-worldMapHint">Select a marker to open its named settlement</span><button type="button" class="ghost" id="bvs-worldMapRefresh">Refresh Map</button></div>
-<div class="map-import-row"><label><span>Premade Settlement Image / HTML Map</span><input type="file" id="bvs-worldMapTemplateInput" accept=".html,.htm,.png,.jpg,.jpeg,.webp,.gif,.svg,image/*,text/html"></label><button type="button" class="ghost" id="bvs-worldRestoreAtlas">Show Province Atlas</button></div>
-<p id="bvs-worldMapTemplateStatus" class="file-note" aria-live="polite">Select a map or upload a template.</p></div></section>
-    <section class="window"><div class="window-header bronze">Selected Location — Auto-loaded Info</div><div class="window-body"><div class="select-row"><label><span>Location</span><select id="bvs-worldLocationSelect"></select></label><button type="button" class="ghost" id="bvs-worldRandomLocation">Random Location</button></div><div class="generated-card" id="bvs-worldLocationInfo"><p class="muted">Choose a settlement to see its named locations.</p></div><h4>NPCs Working, Living, or Visiting Here</h4><div id="bvs-worldLocationNpcs" class="generated-list"></div></div></section>
+    <section class="window map-module"><div class="window-header"><span>Settlement Map</span><span class="map-status" id="bvs-mapStatus">Source locations</span></div><div class="map-viewer world-map-viewer" id="bvs-mapViewer"><div id="bvs-worldMapCanvas" class="world-map-canvas" aria-label="Existing named settlements in the selected province"></div><img id="bvs-worldTemplateMapImage" class="uploaded-map-layer" alt="Uploaded settlement map image" hidden><iframe id="bvs-worldTemplateMapFrame" class="uploaded-map-layer" title="Uploaded HTML settlement map" sandbox="allow-scripts" hidden></iframe></div><div class="window-footer"><div class="map-toolbar"><span class="map-status" id="bvs-worldMapHint">Select a marker to open its named settlement</span><button type="button" class="ghost" id="bvs-worldMapRefresh">Refresh Map</button></div>
+<div class="map-import-row"><label><span>Map image or HTML</span><input type="file" id="bvs-worldMapTemplateInput" accept=".html,.htm,.png,.jpg,.jpeg,.webp,.gif,.svg,image/*,text/html"></label><button type="button" class="ghost" id="bvs-worldRestoreAtlas">Show Province Atlas</button></div>
+<p id="bvs-worldMapTemplateStatus" class="file-note" aria-live="polite">Select or upload a map.</p></div></section>
+    <section class="window"><div class="window-header bronze">Location Details</div><div class="window-body"><div class="select-row"><label><span>Location</span><select id="bvs-worldLocationSelect"></select></label><button type="button" class="ghost" id="bvs-worldRandomLocation">Random Location</button></div><div class="generated-card" id="bvs-worldLocationInfo"><p class="muted">Choose a settlement to see its named locations.</p></div><h4>NPCs Working, Living, or Visiting Here</h4><div id="bvs-worldLocationNpcs" class="generated-list"></div></div></section>
     <section class="window"><div class="window-header">NPC Browser</div><div class="window-body"><div class="select-row"><label><span>Selected NPC</span><select id="bvs-worldNpcSelect"></select></label><button type="button" class="ghost" id="bvs-worldRandomNpc">Random NPC</button></div><div class="generated-card" id="bvs-worldNpcInfo"><p class="muted">Choose a resident to browse relationships and schedules.</p></div></div></section>
     <section class="window"><div class="window-header bronze">Settlement Pages</div><div class="window-body"><div id="bvs-provincePageTabs" class="province-page-tabs" role="tablist" aria-label="Sections within this province">
        <button type="button" data-explorer-tab="overview" class="active">Settlement</button><button type="button" data-explorer-tab="residents">Residents</button><button type="button" data-explorer-tab="relationships">Relationships</button><button type="button" data-explorer-tab="schedules">Schedules</button><button type="button" data-explorer-tab="services">Immersive Locations</button><button type="button" data-explorer-tab="tools">Editor Tools</button></div>
@@ -115,24 +115,21 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
     <section class="window"><div class="window-header">Generated Lists</div><div class="window-body"><div class="button-row"><button id="bvs-worldListLocations" type="button" class="ghost">Show Locations</button><button id="bvs-worldListNpcs" type="button" class="ghost">Show NPCs</button><button id="bvs-worldListRelations" type="button" class="ghost">Show Relationships</button></div><div id="bvs-worldGeneratedList" class="generated-list" style="margin-top:12px"></div></div></section>
    </section>
    <aside class="right-column">
-    <section class="window"><div class="window-header">Drag + Drop Upload Window</div><div class="window-body"><div id="bvs-worldDropZone" class="drop-zone" role="button" tabindex="0">Drop files here</div><input id="bvs-worldMultiFileInput" type="file" multiple accept=".json,.html,.htm,.pdf,.docx,application/json,text/html,application/pdf" style="margin-top:10px"><p class="file-note" id="bvs-worldUploadStatus"></p></div></section>
-    <section class="window"><div class="window-header bronze">Selected NPC Alignment</div><div class="window-body"><p id="bvs-worldNpcAlignmentNote" class="file-note">Set NPC alignment.</p><div id="bvs-worldNpcAxes" class="axis-box"></div><button id="bvs-worldSaveNpcAlignment" type="button" class="ghost">Save NPC Alignment</button></div></section>
+    <section class="window"><div class="window-header">Imports</div><div class="window-body"><div id="bvs-worldDropZone" class="drop-zone" role="button" tabindex="0">Drop files here</div><input id="bvs-worldMultiFileInput" type="file" multiple accept=".json,.html,.htm,.pdf,.docx,application/json,text/html,application/pdf" style="margin-top:10px"><p class="file-note" id="bvs-worldUploadStatus"></p></div></section>
+    <section class="window"><div class="window-header bronze">NPC Alignment</div><div class="window-body"><p id="bvs-worldNpcAlignmentNote" class="file-note">Set NPC alignment.</p><div id="bvs-worldNpcAxes" class="axis-box"></div><button id="bvs-worldSaveNpcAlignment" type="button" class="ghost">Save NPC Alignment</button></div></section>
     <section class="window"><div class="window-header">Alignment JSON Export / Import</div><div class="window-body"><div class="subhead">Settlement Preference / NPC Alignment Bars</div><textarea id="bvs-worldAlignmentJson" class="export-json" spellcheck="false"></textarea><div class="button-row"><button id="bvs-worldCopyAlignment" type="button" class="secondary">Copy JSON</button><button id="bvs-worldDownloadAlignment" type="button" class="ghost">Download JSON</button><button id="bvs-worldApplyAlignment" type="button">Apply JSON</button></div><p class="file-note" id="bvs-worldAlignmentStatus" aria-live="polite"></p></div></section>
-    <section class="window"><div class="window-header bronze">Export Window</div><div class="window-body"><div class="button-row"><button id="bvs-worldExportSettlement" type="button">Settlement JSON</button><button id="bvs-worldExportProvince" class="secondary" type="button">Province JSON</button><button id="bvs-worldExportNpcsCsv" class="ghost" type="button">NPC CSV</button></div><p class="file-note"></p></div></section>
-    <section class="window"><div class="window-header">Preview Window</div><div class="window-body"><div class="stat-list"><div class="stat-row"><b>Province</b><span id="bvs-previewProvince">—</span></div><div class="stat-row"><b>Settlement</b><span id="bvs-previewSettlement">—</span></div><div class="stat-row"><b>Government</b><span id="bvs-previewGovernment">—</span></div><div class="stat-row"><b>Named NPCs</b><span id="bvs-previewPopulation">—</span></div><div class="stat-row"><b>Threat</b><span id="bvs-previewDanger">—</span></div><div class="stat-row"><b>Catalogued</b><span id="bvs-previewGenerated">—</span></div></div></div></section>
+    <section class="window"><div class="window-header bronze">Exports</div><div class="window-body"><div class="button-row"><button id="bvs-worldExportSettlement" type="button">Settlement JSON</button><button id="bvs-worldExportProvince" class="secondary" type="button">Province JSON</button><button id="bvs-worldExportNpcsCsv" class="ghost" type="button">NPC CSV</button></div><p class="file-note"></p></div></section>
+    <section class="window"><div class="window-header">Settlement Summary</div><div class="window-body"><div class="stat-list"><div class="stat-row"><b>Province</b><span id="bvs-previewProvince">—</span></div><div class="stat-row"><b>Settlement</b><span id="bvs-previewSettlement">—</span></div><div class="stat-row"><b>Government</b><span id="bvs-previewGovernment">—</span></div><div class="stat-row"><b>Named NPCs</b><span id="bvs-previewPopulation">—</span></div><div class="stat-row"><b>Threat</b><span id="bvs-previewDanger">—</span></div><div class="stat-row"><b>Catalogued</b><span id="bvs-previewGenerated">—</span></div></div></div></section>
    </aside>
   </div>
-  <section id="bvs-integratedToolWindow" class="window" hidden><div class="window-header bronze">NPC / Location Editor — Existing Simulator Tools</div><div class="window-body">
+  <section id="bvs-integratedToolWindow" class="window" hidden><div class="window-header bronze">NPC &amp; Location Editors</div><div class="window-body">
   
 
 <p class="hint">Import existing residents to edit them here.</p>
 
-
 <button id="bvs-importSettlementNpcsBtn" type="button">Import This Settlement’s Residents Into NPC Tools</button>
 
-
 <p aria-live="polite" class="hint" id="bvs-npcImportStatus"></p>
-
 
 <nav aria-label="Primary actions" class="top-actions province-tool-actions">
 <button class="page-switch active" id="bvs-showNpcSimulatorPageBtn" type="button">NPC Simulator</button>
@@ -141,7 +138,6 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 <button id="bvs-loadStateBtn" type="button">Load Progress</button>
 <button class="danger" id="bvs-resetStateBtn" type="button">Reset</button>
 </nav>
-
 
 <div class="app-shell app-page active" data-app-page="npc" id="bvs-npcSimulatorPage">
 <aside class="control-panel card">
@@ -323,7 +319,6 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 </section>
 </div>
 
-
 <div class="app-page location-tools-page" data-app-page="locations" hidden="" id="bvs-locationToolsPage">
 <section class="location-page-header card">
 <div>
@@ -500,7 +495,6 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 </section>
 </section>
 </div>
-
 
   </div></section>
  </div>

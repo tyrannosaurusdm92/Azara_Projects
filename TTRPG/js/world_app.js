@@ -171,17 +171,17 @@
     const t=world.templates[key];
     if(!t){el.innerHTML=`<p>Missing location profile: ${escape(key)}</p>`;return}
     el.innerHTML=`<section class="explorer-pane"><h2>${escape(ui.settlement.name)} · ${escape(t.title)}</h2>
-     <p>Immersive settlement profile adapted from the ${escape(t.size)} / ${escape(t.biome)} source page. All tables, locations, merchandise and price entries are available here without opening another HTML file.</p>
-     <div class="catalog-search-row"><input id="bvs-catalogSearch" type="search" placeholder="Search goods, services, prices or locations…" value="${escape(ui.itemSearch)}"><strong>${t.inventory.length} catalogue entries</strong></div>
+     <p>Explore ${escape(t.size)} ${escape(t.biome)} locations, services, and trade.</p>
+     <div class="catalog-search-row"><input id="bvs-catalogSearch" type="search" placeholder="Search goods, services, prices or locations…" value="${escape(ui.itemSearch)}"><strong>${t.inventory.length} entries</strong></div>
      <div id="bvs-catalogResults" class="catalog-results"></div>
-     <details class="immersive-original" open><summary>Full immersive settlement guide</summary><div class="immersive-source">${t.html}</div></details>
+     <details class="immersive-original" open><summary>Settlement guide</summary><div class="immersive-source">${t.html}</div></details>
      </section>`;
     $('bvs-catalogSearch').addEventListener('input', e=>{ui.itemSearch=e.target.value;renderItemResults(t)});
     renderItemResults(t);
   }
   function renderItemResults(t){
     const q=ui.itemSearch.trim().toLowerCase(),out=$('bvs-catalogResults');if(!out)return;
-    if(!q){out.innerHTML='<p class="hint">Search the original 52-template catalogue for items, places, services and prices. The full immersive guide is available below.</p>';return}
+    if(!q){out.innerHTML='<p class="hint">Search goods, services, locations, and prices.</p>';return}
     const result=t.inventory.filter(x=>[x.item,x.category,x.price,x.location,x.notes].join(' ').toLowerCase().includes(q)).slice(0,80);
     out.innerHTML=`<p class="hint">${result.length}${result.length===80?'+':''} matching entries</p>`+(result.length?result.map(x=>`<div class="catalog-row"><span>${escape(x.item)}</span><strong>${escape(x.price)}</strong><span>${escape(x.location)}</span></div>`).join(''):'<p>No matching location services found.</p>');
   }
@@ -212,7 +212,7 @@
     $('bvs-npcImportStatus').textContent=`Imported ${newRows.length} new resident records from ${ui.settlement.name}; ${records.length-newRows.length} were already in the generator.`;
     renderResidents();renderRelationships();renderSchedules();
   });
-  let navState={collapsed:!document.getElementById('belavados-unified-app'),left:12,top:95};try{navState={...navState,...JSON.parse(localStorage.getItem(navStore)||'{}')}}catch{}
+  let navState={collapsed:!document.getElementById('belavados-unified-app')||window.innerWidth<900,left:12,top:95};try{navState={...navState,...JSON.parse(localStorage.getItem(navStore)||'{}')}}catch{}
   const saveNav=()=>{try{localStorage.setItem(navStore,JSON.stringify(navState))}catch{}};
   function applyNav(){nav.classList.toggle('collapsed',!!navState.collapsed);nav.style.left=`${Math.max(0,Math.min(window.innerWidth-72,navState.left))}px`;nav.style.top=`${Math.max(0,Math.min(window.innerHeight-48,navState.top))}px`;}
   $('bvs-navCollapse').addEventListener('click',e=>{e.stopPropagation();navState.collapsed=!navState.collapsed;applyNav();saveNav();});

@@ -41,7 +41,7 @@ function showPage(destination){
  page=destination==='province'?'province':'generator';
  root.dataset.view=page;generator.hidden=page!=='generator';atlas.hidden=page!=='province';
  const ui=selected();heading.textContent=page==='generator'?'Generator':ui.province?.name||'Province';
- subtitle.textContent=page==='generator'?'Create a settlement or choose an existing province and settlement to provide its source information.':(ui.settlement?.name||'Choose settlement')+' · Province settlement records';
+ subtitle.textContent=page==='generator'?'Create or edit a settlement.':(ui.settlement?.name||'Choose a settlement');
  if(page==='generator'){feedGenerator();if(location.hash.startsWith('#province/'))history.replaceState(null,'',location.pathname+location.search);}
  refreshPickers();refreshNav();
  document.dispatchEvent(new CustomEvent('belavados:unified-viewchange',{detail:context()}));notify('viewchange');return context();
@@ -59,7 +59,7 @@ function openSettlement(provinceId,settlementId){
 }
 function openGenerator(){showPage('generator');return true;}
 function updatedByAtlas(){
- refreshPickers();if(page==='province'){heading.textContent=selected().province?.name||'Province';subtitle.textContent=(selected().settlement?.name||'Choose settlement')+' · Province settlement records';}refreshNav();notify('contextchange');
+ refreshPickers();if(page==='province'){heading.textContent=selected().province?.name||'Province';subtitle.textContent=(selected().settlement?.name||'Choose a settlement');}refreshNav();notify('contextchange');
 }
 window.BelavadosUnified=Object.freeze({getContext:context,getAtlas:atlasApp,getForge:()=>window.BelavadosWorldForge||null,openGenerator,openProvince,openSettlement,refresh:()=>{refreshPickers();refreshNav();return context();}});
 window.addEventListener('message',event=>{
