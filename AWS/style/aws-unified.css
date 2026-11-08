@@ -139,6 +139,14 @@ body.aws-single-nav #aws-evolution-panel:not([hidden]){
 body.aws-single-nav #aws-evolution-panel:not([hidden]) #panel-evolution:not([hidden]){
  display:block;max-width:100%;min-width:0;
 }
+/* Last-resort presentation guard: neither keyboard surface may obscure the
+   historical chart while the evolution view is selected, even if an old
+   keyboard handler attempts to reopen a saved floating window. */
+body.aws-single-nav:has(#app[data-view="language-evolution"]) #keyboard,
+body.aws-single-nav:has(#app[data-view="language-evolution"]) #keyboardBubble{
+ display:none!important;visibility:hidden!important;pointer-events:none!important;
+}
+
 body.aws-single-nav #aws-evolution-panel .chart-frame{
  width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;
 }
