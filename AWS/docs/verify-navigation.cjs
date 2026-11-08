@@ -128,7 +128,7 @@ assert(pwaManifest.icons.some(icon=>icon.src.includes('azara-universe-app.webp')
 assert(pwaManifest.icons.every(icon=>/azara-universe/.test(icon.src)));
 for(const legacy of ['aws-icon-192.png','aws-icon-512.png','literary-icon-192.png','literary-icon-512.png'])
  assert(!fs.existsSync(require('node:path').join(__dirname,'../assets',legacy)),legacy+' must not remain');
-assert(sw.includes('aws-writing-studio-unified-v21'));
+assert(/aws-writing-studio-unified-v\\d+/.test(sw),'versioned offline cache');
 assert(sw.includes('./assets/azara-universe-app.webp'));
 // Original letter evolution chart belongs inside the visible AWS shell-main,
 // not below the full-height application. Preserve all six eras and 52 roots.
@@ -150,4 +150,6 @@ assert(letterDataEnd>letterDataStart);
 const letterEvolution=JSON.parse(html.slice(letterDataStart+letterDataStartTag.length,letterDataEnd));
 assert.equal(letterEvolution.stages.length,6,'six historical eras');
 assert.equal(letterEvolution.roots.length,52,'all 52 Proto roots');
+assert(theme.includes('body.aws-single-nav:has(#app[data-view="language-evolution"]) #keyboard'));
+assert(theme.includes('body.aws-single-nav:has(#app[data-view="language-evolution"]) #keyboardBubble'));
 console.log('PASS: per-workspace consolidation, six unique tools, content/reference preservation, idempotence, restore, editor capture isolation, render event safety, folded/orphan/cyclic navigation and search.');
