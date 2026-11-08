@@ -138,6 +138,7 @@
 </section>
 <section id="aws-language-hub-panel" class="aws-language-hub" aria-label="Language workspace summary" hidden>
 <p><strong>Language workshop</strong> · Rules, dictionary, pronunciation, Glyph Studio and both evolution views are together under <strong>Language</strong> in the movable menu. Use this page for your language notes.</p>
+<button type="button" class="btn gold" data-aws-open-role="language-evolution">Open Letter Evolution Chart · 52 roots · six eras</button>
 </section>
 <section aria-label="Integrated Aza'raan glyph studio" class="aws-glyph-panel" hidden="" id="aws-glyph-panel">
 <div class="app-shell">
@@ -415,6 +416,28 @@
 <div aria-hidden="true" class="global-drop-hint" id="global-drop-hint"><span>Drop image files to add them to your glyph set</span></div>
 <div aria-atomic="true" aria-live="polite" class="toast-stack" id="toast-stack"></div>
 </section>
+
+<section class="aws-evolution-panel" hidden="" id="aws-evolution-panel"><section aria-labelledby="tab-evolution" class="tab-panel evolution-pane" hidden="" id="panel-evolution" role="tabpanel">
+<div class="evo-draft-dock"><strong>Evolution reference</strong><output aria-live="polite" id="evolutionDraftPreview">Explore the historical eras here. Open a writing or notes page to type with the keyboard.</output><small>The floating keyboard is intentionally disabled in Language Evolution Breakdown.</small></div>
+<div class="evolution-intro">The original six-stage lineage chart and its 52 source slots are preserved, including Ancient artwork, arrows and interactive tracing. Latin labels describe historical readings; modern copy controls use the keyboard’s Khmer mapping.</div>
+<header class="site-top">
+<div><h1>Evolution of the Aza’raan Alphabet</h1><p class="sub">A selectable, text-and-vector reconstruction of the supplied six-era Aza’raan letter family tree. The Proto-Aza’raan row shows the 52 ancestral hieroglyph roots; Ancient, Archaic, Classical, Traditional, and Modern use the individual glyph artwork in this package. Dotted arrows trace changes and mergers. Click a glyph to inspect its lineage and copy its reading.</p></div>
+<div class="toolbar"><label for="focus" style="font-size:.85rem;color:#c4cad9">Trace a letter</label><select aria-label="Choose modern Aza’raan letter to trace" class="tool" id="focus"><option value="">All letters</option></select><button class="tool" id="evo-clear" type="button">Show all</button></div>
+</header>
+<section aria-label="Scrollable six-row Aza’raan letter evolution diagram; select a glyph to examine its lineage" class="chart-frame">
+<div class="chart" id="alphabetChart">
+<div class="headline">Evolution of the Aza’raan Alphabet</div>
+<svg aria-hidden="true" class="connectors" id="connectors" viewbox="0 0 2630 960" xmlns="http://www.w3.org/2000/svg"></svg>
+</div>
+</section>
+<div class="chart-caption">Read downward; dotted arrows trace glyph descent, sound-group relationships, and mergers across eras. Click a glyph to view its historical reading and copy the text equivalent. The chart scrolls horizontally to keep all 52 ancestral roots in reading order.</div>
+<section class="detail"><div aria-live="polite" class="detail-card" id="detail"><div class="detail-title">Select a glyph or modern letter</div><div class="detail-note">Choose a modern letter above or click a glyph in the chart to see its Proto-Aza’raan root, historical forms, and modern correspondence.</div></div></section>
+<section class="legend"><h2>Modern Khmer-encoded correspondences and historical roots</h2><p>The table groups each modern letter with its ancestral source roots and surviving historical forms. The Proto-Aza’raan source signs are the original hieroglyphs; later glyph artwork remains in its individual era folder. A dash means the group has no separate glyph in that era.</p>
+<div class="table-scroll"><table><thead><tr><th>Modern</th><th>Historical source group</th><th>Ancient</th><th>Archaic</th><th>Classical</th><th>Traditional</th></tr></thead><tbody id="letterRows"></tbody></table></div>
+<div class="note"><strong>Historical accuracy note:</strong> This figure follows the supplied root register and merger schedule. Some merger placements are working proposals and remain identified in <code>merger-schedule.csv</code>. Modern letters are shown as selectable Unicode readings; custom era glyphs are SVG artwork and do not claim standardized Unicode codepoints. The modern click sign is <strong>¡ (U+00A1)</strong>, outside the 21-letter inventory.</div>
+<p><strong>Era inventory:</strong> Proto-Aza’raan 52 roots · Ancient 52 · Archaic 49 · Classical 44 · Traditional 32 · Modern 21 independent letters, with glottal and click special signs.</p>
+</section>
+</section></section>
 </div>
 <aside aria-label="Planner and channel details" class="inspector" id="inspector">
 <div class="inspector-header"><span class="eyebrow">THE PLANNER</span><button aria-label="Close planner" class="icon-button subtle" id="close-inspector" title="Close planner">×</button></div>
@@ -455,27 +478,7 @@
 <div class="bridge-buttons"><button class="btn green" id="bridge-connect">Connect / sign in</button><button class="btn outline" id="bridge-verify">Verify code</button><button class="btn outline" id="bridge-push">Sync local → cloud</button><button class="btn outline" id="bridge-pull">Restore cloud → local</button><button class="btn outline" id="bridge-signout">Disconnect</button></div>
 <small>Cloud functions require this website's origin to be authorized by the existing backend. Cloud restore replaces the current local library after confirmation. No AI-generation routes are used.</small>
 </div><h3>Uploaded fonts</h3><div id="uploaded-fonts-list">No uploaded fonts.</div><h3>Selected workspace</h3><button class="btn danger" id="delete-workspace">Delete selected workspace</button><p class="fine-print">Reminders are checked while this app is open. Browser notifications require permission and a supported context. Cloud synchronization works only after successful connection to the existing backend bridge.</p></div></dialog>
-<section class="aws-evolution-panel" hidden="" id="aws-evolution-panel"><section aria-labelledby="tab-evolution" class="tab-panel evolution-pane" hidden="" id="panel-evolution" role="tabpanel">
-<div class="evo-draft-dock"><strong>Evolution reference</strong><output aria-live="polite" id="evolutionDraftPreview">Explore the historical eras here. Open a writing or notes page to type with the keyboard.</output><small>The floating keyboard is intentionally disabled in Language Evolution Breakdown.</small></div>
-<div class="evolution-intro">The original six-stage lineage chart and its 52 source slots are preserved, including Ancient artwork, arrows and interactive tracing. Latin labels describe historical readings; modern copy controls use the keyboard’s Khmer mapping.</div>
-<header class="site-top">
-<div><h1>Evolution of the Aza’raan Alphabet</h1><p class="sub">A selectable, text-and-vector reconstruction of the supplied six-era Aza’raan letter family tree. The Proto-Aza’raan row shows the 52 ancestral hieroglyph roots; Ancient, Archaic, Classical, Traditional, and Modern use the individual glyph artwork in this package. Dotted arrows trace changes and mergers. Click a glyph to inspect its lineage and copy its reading.</p></div>
-<div class="toolbar"><label for="focus" style="font-size:.85rem;color:#c4cad9">Trace a letter</label><select aria-label="Choose modern Aza’raan letter to trace" class="tool" id="focus"><option value="">All letters</option></select><button class="tool" id="evo-clear" type="button">Show all</button></div>
-</header>
-<section aria-label="Scrollable six-row Aza’raan letter evolution diagram; select a glyph to examine its lineage" class="chart-frame">
-<div class="chart" id="alphabetChart">
-<div class="headline">Evolution of the Aza’raan Alphabet</div>
-<svg aria-hidden="true" class="connectors" id="connectors" viewbox="0 0 2630 960" xmlns="http://www.w3.org/2000/svg"></svg>
-</div>
-</section>
-<div class="chart-caption">Read downward; dotted arrows trace glyph descent, sound-group relationships, and mergers across eras. Click a glyph to view its historical reading and copy the text equivalent. The chart scrolls horizontally to keep all 52 ancestral roots in reading order.</div>
-<section class="detail"><div aria-live="polite" class="detail-card" id="detail"><div class="detail-title">Select a glyph or modern letter</div><div class="detail-note">Choose a modern letter above or click a glyph in the chart to see its Proto-Aza’raan root, historical forms, and modern correspondence.</div></div></section>
-<section class="legend"><h2>Modern Khmer-encoded correspondences and historical roots</h2><p>The table groups each modern letter with its ancestral source roots and surviving historical forms. The Proto-Aza’raan source signs are the original hieroglyphs; later glyph artwork remains in its individual era folder. A dash means the group has no separate glyph in that era.</p>
-<div class="table-scroll"><table><thead><tr><th>Modern</th><th>Historical source group</th><th>Ancient</th><th>Archaic</th><th>Classical</th><th>Traditional</th></tr></thead><tbody id="letterRows"></tbody></table></div>
-<div class="note"><strong>Historical accuracy note:</strong> This figure follows the supplied root register and merger schedule. Some merger placements are working proposals and remain identified in <code>merger-schedule.csv</code>. Modern letters are shown as selectable Unicode readings; custom era glyphs are SVG artwork and do not claim standardized Unicode codepoints. The modern click sign is <strong>¡ (U+00A1)</strong>, outside the 21-letter inventory.</div>
-<p><strong>Era inventory:</strong> Proto-Aza’raan 52 roots · Ancient 52 · Archaic 49 · Classical 44 · Traditional 32 · Modern 21 independent letters, with glottal and click special signs.</p>
-</section>
-</section></section><button aria-label="Open keyboard; drag to move" class="keyboard-bubble" id="keyboardBubble" title="Click to open · drag to move" type="button"><span aria-hidden="true">⌨️</span></button><section aria-label="Floating QWERTY or Aza’raan keyboard" class="keyboard" hidden="" id="keyboard">
+<button aria-label="Open keyboard; drag to move" class="keyboard-bubble" id="keyboardBubble" title="Click to open · drag to move" type="button"><span aria-hidden="true">⌨️</span></button><section aria-label="Floating QWERTY or Aza’raan keyboard" class="keyboard" hidden="" id="keyboard">
 <div aria-label="Move keyboard. Drag or use arrow keys." class="drag-bar" id="dragBar" role="button" tabindex="0" title="Drag to move · arrows move when focused">
 <span class="machine-label">QWERTY + AZA’RAAN</span><span aria-hidden="true" class="grip">⠿⠿</span><span class="move-hint">DRAG TO MOVE</span>
 </div>
