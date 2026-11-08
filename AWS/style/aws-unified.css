@@ -129,6 +129,28 @@ body.aws-single-nav #aws-glyph-panel :is(.left-rail,.editor-panel).is-collapsed{
 body.aws-single-nav .app:has(#aws-glyph-panel:not([hidden])){grid-template-columns:minmax(0,1fr)!important}
 body.aws-single-nav .app:has(#aws-glyph-panel:not([hidden]))>#inspector:not(.hidden){position:fixed;z-index:2800;right:12px;top:80px;width:min(var(--inspector-w,320px),calc(100vw - 24px));height:calc(100dvh - 94px)}
 body.aws-single-nav #aws-evolution-panel .evolution-pane{display:block;background:transparent;color:var(--aws-text)}
+/* The original 52-root evolution chart lives in the shell-main flex workspace,
+   not below the full-height app. Give its own panel an accessible scroll area. */
+body.aws-single-nav #aws-evolution-panel:not([hidden]){
+ display:block;flex:1 1 auto;min-height:0;min-width:0;
+ overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;
+ scrollbar-gutter:stable;
+}
+body.aws-single-nav #aws-evolution-panel:not([hidden]) #panel-evolution:not([hidden]){
+ display:block;max-width:100%;min-width:0;
+}
+body.aws-single-nav #aws-evolution-panel .chart-frame{
+ width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;
+}
+body.aws-single-nav .aws-nav-letter-chart{
+ background:linear-gradient(135deg,#1f414a,#18333b);
+ border:1px solid var(--aws-brass);color:var(--aws-text);
+ font-weight:700;
+}
+body.aws-single-nav .aws-language-hub [data-aws-open-role="language-evolution"]{
+ margin-top:10px;max-width:100%;white-space:normal;
+}
+
 body.aws-single-nav #aws-evolution-panel :is(.site-top,.evolution-intro,.detail,.legend,.chart-caption){background:#152e36;color:var(--aws-text);border:1px solid var(--aws-border);border-radius:8px;padding:12px}
 #aws-evolution-panel .chart-frame{background:#101b23;border:1px solid var(--aws-bronze);border-radius:8px;overflow:auto;max-width:100%;touch-action:pan-x pan-y}#aws-evolution-panel .chart{min-width:max-content}#aws-evolution-panel .stage-label{color:var(--aws-muted)}
 body.aws-single-nav #aws-glyph-panel .canvas-adjustments{background:#183139;color:var(--aws-text);border-color:var(--aws-border)}
