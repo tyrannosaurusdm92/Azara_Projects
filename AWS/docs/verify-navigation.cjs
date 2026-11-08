@@ -128,7 +128,7 @@ assert(pwaManifest.icons.some(icon=>icon.src.includes('azara-universe-app.webp')
 assert(pwaManifest.icons.every(icon=>/azara-universe/.test(icon.src)));
 for(const legacy of ['aws-icon-192.png','aws-icon-512.png','literary-icon-192.png','literary-icon-512.png'])
  assert(!fs.existsSync(require('node:path').join(__dirname,'../assets',legacy)),legacy+' must not remain');
-assert(/aws-writing-studio-unified-v\\d+/.test(sw),'versioned offline cache');
+assert(/aws-writing-studio-unified-v[0-9]+/.test(sw),'versioned offline cache');
 assert(sw.includes('./assets/azara-universe-app.webp'));
 // Original letter evolution chart belongs inside the visible AWS shell-main,
 // not below the full-height application. Preserve all six eras and 52 roots.
