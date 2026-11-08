@@ -130,4 +130,24 @@ for(const legacy of ['aws-icon-192.png','aws-icon-512.png','literary-icon-192.pn
  assert(!fs.existsSync(require('node:path').join(__dirname,'../assets',legacy)),legacy+' must not remain');
 assert(sw.includes('aws-writing-studio-unified-v21'));
 assert(sw.includes('./assets/azara-universe-app.webp'));
+// Original letter evolution chart belongs inside the visible AWS shell-main,
+// not below the full-height application. Preserve all six eras and 52 roots.
+const shellMainStart=html.indexOf('<div class="shell-main">');
+const letterChartStart=html.indexOf('id="aws-evolution-panel"');
+const shellMainEnd=html.indexOf('<aside aria-label="Planner and channel details"');
+assert(shellMainStart>=0&&letterChartStart>shellMainStart&&letterChartStart<shellMainEnd,
+ 'Letter Evolution Chart must remain within the main workspace');
+assert(html.includes('id="alphabetChart"'));
+assert(html.includes('id="panel-evolution"'));
+assert(html.includes('data-aws-open-role="language-evolution"'));
+assert(studio.includes('↗ Letter Evolution Chart · 52 roots'));
+assert(studio.includes("app()?.goToRole?.('language-evolution')"));
+const letterDataStartTag='<script id="letterData" type="application/json">';
+const letterDataStart=html.indexOf(letterDataStartTag);
+assert(letterDataStart>=0,'Original embedded letter data present');
+const letterDataEnd=html.indexOf('</script>',letterDataStart);
+assert(letterDataEnd>letterDataStart);
+const letterEvolution=JSON.parse(html.slice(letterDataStart+letterDataStartTag.length,letterDataEnd));
+assert.equal(letterEvolution.stages.length,6,'six historical eras');
+assert.equal(letterEvolution.roots.length,52,'all 52 Proto roots');
 console.log('PASS: per-workspace consolidation, six unique tools, content/reference preservation, idempotence, restore, editor capture isolation, render event safety, folded/orphan/cyclic navigation and search.');
