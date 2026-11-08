@@ -19,6 +19,11 @@ function nav(){
  heading('Workspace');
  for(const w of state.workspaces)item('◧ '+w.name,()=>{app()?.switchWorkspace?.(w.id);setExpanded(false)},w.id===state.selectedWorkspaceId?'active':'');
  item('+ New workspace',()=>app()?.newWorkspace?.(),'aws-nav-action');
+ heading('Quick access');
+ const chartShortcut=item('↗ Letter Evolution Chart · 52 roots',()=>{
+  if(app()?.goToRole?.('language-evolution'))setExpanded(false);
+ },'aws-nav-action aws-nav-letter-chart');
+ chartShortcut.title='Open the original six-era letter evolution chart (the Language Evolution Breakdown page)';
  heading('Sections & pages');
  const visible=state.channels.filter(c=>c.workspaceId===state.selectedWorkspaceId&&!c.deletedAt),byId=new Map(visible.map(c=>[c.id,c]));
  const ancestors=new Set();let ancestor=byId.get(state.selectedChannelId);
