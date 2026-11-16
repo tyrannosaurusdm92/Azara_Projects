@@ -88,9 +88,10 @@
           "label": "Glottal stop"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_1.svg",
-          "reading": "'",
-          "label": "Glottal stop; source of syllable emphasis signs"
+          "src": null,
+          "reading": "Glottal stop",
+          "label": "Modern Glottal stop · ៏",
+          "text": "៏"
         }
       }
     },
@@ -2108,9 +2109,10 @@
           "label": "Click consonant"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_52.svg",
-          "reading": "¡",
-          "label": "Click /ǃ/; independent modern special sign"
+          "src": null,
+          "reading": "Click",
+          "label": "Modern Click · ះ",
+          "text": "ះ"
         }
       }
     }
@@ -4654,7 +4656,7 @@
       "meaning": "Glottal stop /ʔ/; ancestor of previous/next syllable emphasis",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": "assets/svg/evolution/modern/modern_1.svg",
+      "src": null,
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
@@ -4679,7 +4681,8 @@
       },
       "historicalLatinCodepoint": "U+0027",
       "khmer": "៏",
-      "modernOnly": true
+      "modernOnly": true,
+      "modernFontGlyph": true
     },
     {
       "sign": "¡",
@@ -4688,7 +4691,7 @@
       "meaning": "Click /ǃ/; independent modern special sign",
       "origin": "𓐎",
       "rootSlot": 52,
-      "src": "assets/svg/evolution/modern/modern_52.svg",
+      "src": null,
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_52.svg",
@@ -4713,7 +4716,8 @@
       },
       "historicalLatinCodepoint": "U+00A1",
       "khmer": "ះ",
-      "modernOnly": true
+      "modernOnly": true,
+      "modernFontGlyph": true
     },
     {
       "sign": "<",
@@ -4722,7 +4726,7 @@
       "meaning": "Emphasizes the previous syllable; descended from glottal stop",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": "assets/svg/evolution/modern/modern_1_U003C.svg",
+      "src": null,
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
@@ -4747,7 +4751,8 @@
       },
       "historicalLatinCodepoint": "U+003C",
       "khmer": "ិ",
-      "modernOnly": true
+      "modernOnly": true,
+      "modernFontGlyph": true
     },
     {
       "sign": ">",
@@ -4756,7 +4761,7 @@
       "meaning": "Emphasizes the next syllable; descended from glottal stop",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": "assets/svg/evolution/modern/modern_1_U003E.svg",
+      "src": null,
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
@@ -4781,7 +4786,8 @@
       },
       "historicalLatinCodepoint": "U+003E",
       "khmer": "ូ",
-      "modernOnly": true
+      "modernOnly": true,
+      "modernFontGlyph": true
     }
   ],
   "colors": {
