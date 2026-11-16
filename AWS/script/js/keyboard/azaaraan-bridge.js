@@ -8,7 +8,11 @@
   const C = window.AZA_CONFIG, P = window.AzaaraanPhonetics;
   const rows = [['A','B','D','E','F','G','H','I'], ['J','K','L','M','N','O','P','R'], ['S','T','U','V','W','Y','Z'], ['SYMBOLS','AZA_GLOTTAL','AZA_CLICK','AZA_PREV','AZA_NEXT','SPACE','BACK','ENTER']];
   const letters = new Set(C.keyOrder.split(''));
-  const modernIndependent = new Set('ABDEGHIJKLMNOPRSTYZ'.split(''));
+  const modernSpec = C.modernOrthography;
+  const modernIndependent = new Set((modernSpec?.alphabet || C.modernIndependentAlphabet).split(''));
+  const modernMarks = (modernSpec?.marks || []).map(m => ({...m, meaning:m.name, ipa:m.codepoint}));
+  const modernMarksById = new Map(modernMarks.map(m => [m.id,m]));
+  const modernSounds = modernSpec?.sounds || [];
   const allMarks = [...C.accents, ...C.specials];
   const markMap = new Map(allMarks.map(m=>[m.id,m]));
   const preferenceKey = 'steampunk-azaaraan-keyboard-preferences-v1';
@@ -26,7 +30,18 @@
   function tryEncode(base,marks=[],era='Modern') {
     try {
       if (!isLetter(base)) throw new Error('Unrecognized Aza’raan letter: '+base);
-       if (era==='Modern'&&!modernIndependent.has(base)) throw new Error('Modern Aza’raan uses the 19-letter alphabet; choose a family accent instead of '+base+'.');
+       if (era==='Modern'&&!modernIndependent.has(base)) throw new Error('Not an independent Modern Aza’raan letter: '+base+'.');
+      if (era==='Modern') {
+        const set = new Set(marks);
+        if (marks.length>2 || set.size !== marks.length) throw new Error('Maximum two different phonetic marks per letter.');
+        if (set.has('voiced')&&set.has('unvoiced')) throw new Error('Voiced and Unvoiced cannot combine.');
+        if (set.has('separate')) throw new Error('Separated Vowel requires a vowel-bearing host and a true vowel subscript; use the full cluster composer.');
+        if(marks.some(id=>!modernMarksById.has(id))) throw new Error('Unknown Modern phonetic mark.');
+        const host = modernSpec.independentUnicode[base];
+        const reading = modernSounds.find(x=>x.host===base && x.marks.join('|')===marks.join('|'));
+        const encoded = host + marks.map(id=>modernMarksById.get(id).khmer).join('');
+        return {value:encoded, ipa:reading?.ipa||'', provisional:reading?.provisional||false};
+      }
       const allowed = new Set(availableMarks(era).map(m=>m.id));
       if (marks.some(id=>!allowed.has(id))) throw new Error('This special mark is unavailable in '+era+'.');
       if (marks.length>3) throw new Error('Maximum three marks per letter.');
@@ -43,12 +58,14 @@
   function glyph(base,era){return encode(base,[],era);}
   function soundOptions(base,era){
     const soundData=window.AZA_SOUND_DATA;
+    if(era==='Modern') return modernSounds.filter(x=>x.host===base).map(x=>({...x,base:x.host,label:x.label,ipa:x.ipa.replace(/^\//,'').replace(/\/$/,'')}));
     return (soundData?.sounds||[]).filter(x=>x.letter===base && x.marks?.length<=3 && tryEncode(x.base,x.marks,era).value);
   }
   function availableMarks(era){
+    if(era==='Modern')return modernMarks;
     return era==='Archaic' ? C.accents : allMarks;
   }
-  function markName(id){return markMap.get(id)?.name || markMap.get(id)?.label || id;}
+  function markName(id){return modernMarksById.get(id)?.name || markMap.get(id)?.name || markMap.get(id)?.label || id;}
   function handle(raw,era,notes){
     if(isLetter(raw)){
       const encoded=tryEncode(raw,[],era);
