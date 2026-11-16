@@ -82,7 +82,7 @@ function renderFamily(familyKey){
  const note=document.createElement('div');note.className='detail-note';
  const readings=(fam.readings||[]).map(x=>x.name+' '+x.unicode+(x.ipa?' '+x.ipa:'')).join(' · ');
  const origins=members.map(r=>r.origin+' ('+r.sound+')').join(' · ');
- note.textContent='Historical source roots: '+origins+'. Legacy Latin readings: '+readings+'. Current encoding uses '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' plus the revised accents in the typing tab.';
+ note.textContent='Historical source roots: '+origins+'. Legacy Latin readings: '+readings+'. Current encoding uses '+((window.AZA_CONFIG?.modernLetterMap||{})[fam.family]||fam.letter)+' plus the revised accents in the typing tab.';
  detail.appendChild(note);detail.appendChild(copyButton((window.AZA_LETTERS||{})[fam.family]||fam.letter,'Copy Aza’raan '+fam.letter));
  highlight(new Set([familyKey]),null);
 }
@@ -115,8 +115,8 @@ function renderTable(){
  for(const fam of D.families){
   const members=D.roots.filter(r=>r.family===fam.family);
   const tr=document.createElement('tr');
-  const modern=document.createElement('td');modern.className='symbol-cell table-letter';modern.textContent=fam.letter;
-  const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' · 24 contemporary marks';modern.appendChild(variants);
+  const modern=document.createElement('td');modern.className='symbol-cell table-letter';modern.textContent=fam.historicalOnly ? '—' : fam.letter;
+  const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_CONFIG?.modernLetterMap||{})[fam.family]||fam.letter)+' · 12 Modern marks';modern.appendChild(variants);
   tr.appendChild(modern);
   const source=document.createElement('td');const rootsBox=document.createElement('div');rootsBox.className='source-roots';
   members.forEach(r=>{const node=r.stages.proto;const b=mark(node.src,'table-glyph',r.slot,'proto',rootDesc(D.stages[0],r,node));rootsBox.appendChild(b)});

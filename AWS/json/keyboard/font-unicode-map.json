@@ -2108,7 +2108,13 @@
           "U+17AF"
         ],
         "sourceImage": "archaic_34.png",
-        "advanceUnits": 737
+        "advanceUnits": 737,
+        "sharedLatinKey": "A",
+        "canonicalModernUnicode": "អ",
+        "canonicalModernCodepoints": [
+          "U+17A2"
+        ],
+        "preservedFontEncodedUnicode": "ឯ"
       },
       {
         "key": "B",
@@ -2117,7 +2123,13 @@
           "U+1794"
         ],
         "sourceImage": "archaic_18.png",
-        "advanceUnits": 765
+        "advanceUnits": 765,
+        "sharedLatinKey": "B",
+        "canonicalModernUnicode": "ប",
+        "canonicalModernCodepoints": [
+          "U+1794"
+        ],
+        "preservedFontEncodedUnicode": "ប"
       },
       {
         "key": "D",
@@ -2126,7 +2138,13 @@
           "U+178A"
         ],
         "sourceImage": "archaic_6.png",
-        "advanceUnits": 706
+        "advanceUnits": 706,
+        "sharedLatinKey": "D",
+        "canonicalModernUnicode": "ដ",
+        "canonicalModernCodepoints": [
+          "U+178A"
+        ],
+        "preservedFontEncodedUnicode": "ដ"
       },
       {
         "key": "E",
@@ -2135,7 +2153,13 @@
           "U+17A5"
         ],
         "sourceImage": "archaic_36.png",
-        "advanceUnits": 870
+        "advanceUnits": 870,
+        "sharedLatinKey": "E",
+        "canonicalModernUnicode": "ឆ",
+        "canonicalModernCodepoints": [
+          "U+1786"
+        ],
+        "preservedFontEncodedUnicode": "ឥ"
       },
       {
         "key": "G",
@@ -2144,7 +2168,13 @@
           "U+1781"
         ],
         "sourceImage": "archaic_8.png",
-        "advanceUnits": 602
+        "advanceUnits": 602,
+        "sharedLatinKey": "G",
+        "canonicalModernUnicode": "គ",
+        "canonicalModernCodepoints": [
+          "U+1782"
+        ],
+        "preservedFontEncodedUnicode": "ខ"
       },
       {
         "key": "H",
@@ -2153,7 +2183,13 @@
           "U+17A0"
         ],
         "sourceImage": "archaic_22.png",
-        "advanceUnits": 887
+        "advanceUnits": 887,
+        "sharedLatinKey": "H",
+        "canonicalModernUnicode": "ហ",
+        "canonicalModernCodepoints": [
+          "U+17A0"
+        ],
+        "preservedFontEncodedUnicode": "ហ"
       },
       {
         "key": "I",
@@ -2162,7 +2198,13 @@
           "U+17B0"
         ],
         "sourceImage": "archaic_35.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "sharedLatinKey": "I",
+        "canonicalModernUnicode": "ញ",
+        "canonicalModernCodepoints": [
+          "U+1789"
+        ],
+        "preservedFontEncodedUnicode": "ឰ"
       },
       {
         "key": "J",
@@ -2171,7 +2213,13 @@
           "U+1785"
         ],
         "sourceImage": "archaic_9.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "sharedLatinKey": "J",
+        "canonicalModernUnicode": "ជ",
+        "canonicalModernCodepoints": [
+          "U+1787"
+        ],
+        "preservedFontEncodedUnicode": "ច"
       },
       {
         "key": "K",
@@ -2180,7 +2228,13 @@
           "U+1782"
         ],
         "sourceImage": "archaic_24.png",
-        "advanceUnits": 759
+        "advanceUnits": 759,
+        "sharedLatinKey": "K",
+        "canonicalModernUnicode": "ក",
+        "canonicalModernCodepoints": [
+          "U+1780"
+        ],
+        "preservedFontEncodedUnicode": "គ"
       },
       {
         "key": "L",
@@ -2189,7 +2243,13 @@
           "U+17A1"
         ],
         "sourceImage": "archaic_23.png",
-        "advanceUnits": 579
+        "advanceUnits": 579,
+        "sharedLatinKey": "L",
+        "canonicalModernUnicode": "ល",
+        "canonicalModernCodepoints": [
+          "U+179B"
+        ],
+        "preservedFontEncodedUnicode": "ឡ"
       },
       {
         "key": "M",
@@ -2198,7 +2258,13 @@
           "U+1798"
         ],
         "sourceImage": "archaic_11.png",
-        "advanceUnits": 919
+        "advanceUnits": 919,
+        "sharedLatinKey": "M",
+        "canonicalModernUnicode": "ម",
+        "canonicalModernCodepoints": [
+          "U+1798"
+        ],
+        "preservedFontEncodedUnicode": "ម"
       },
       {
         "key": "N",
@@ -2207,7 +2273,13 @@
           "U+1793"
         ],
         "sourceImage": "archaic_20.png",
-        "advanceUnits": 727
+        "advanceUnits": 727,
+        "sharedLatinKey": "N",
+        "canonicalModernUnicode": "ន",
+        "canonicalModernCodepoints": [
+          "U+1793"
+        ],
+        "preservedFontEncodedUnicode": "ន"
       },
       {
         "key": "O",
@@ -2216,7 +2288,13 @@
           "U+17A7"
         ],
         "sourceImage": "archaic_33.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "sharedLatinKey": "O",
+        "canonicalModernUnicode": "ង",
+        "canonicalModernCodepoints": [
+          "U+1784"
+        ],
+        "preservedFontEncodedUnicode": "ឧ"
       },
       {
         "key": "P",
@@ -2225,7 +2303,13 @@
           "U+1796"
         ],
         "sourceImage": "archaic_12.png",
-        "advanceUnits": 661
+        "advanceUnits": 661,
+        "sharedLatinKey": "P",
+        "canonicalModernUnicode": "ព",
+        "canonicalModernCodepoints": [
+          "U+1796"
+        ],
+        "preservedFontEncodedUnicode": "ព"
       },
       {
         "key": "R",
@@ -2234,7 +2318,13 @@
           "U+179A"
         ],
         "sourceImage": "archaic_14.png",
-        "advanceUnits": 918
+        "advanceUnits": 918,
+        "sharedLatinKey": "R",
+        "canonicalModernUnicode": "រ",
+        "canonicalModernCodepoints": [
+          "U+179A"
+        ],
+        "preservedFontEncodedUnicode": "រ"
       },
       {
         "key": "S",
@@ -2243,7 +2333,13 @@
           "U+179F"
         ],
         "sourceImage": "archaic_21.png",
-        "advanceUnits": 718
+        "advanceUnits": 718,
+        "sharedLatinKey": "S",
+        "canonicalModernUnicode": "ស",
+        "canonicalModernCodepoints": [
+          "U+179F"
+        ],
+        "preservedFontEncodedUnicode": "ស"
       },
       {
         "key": "T",
@@ -2252,7 +2348,13 @@
           "U+178F"
         ],
         "sourceImage": "archaic_3.png",
-        "advanceUnits": 641
+        "advanceUnits": 641,
+        "sharedLatinKey": "T",
+        "canonicalModernUnicode": "ត",
+        "canonicalModernCodepoints": [
+          "U+178F"
+        ],
+        "preservedFontEncodedUnicode": "ត"
       },
       {
         "key": "U",
@@ -2270,7 +2372,13 @@
           "U+1786"
         ],
         "sourceImage": "archaic_44.png",
-        "advanceUnits": 801
+        "advanceUnits": 801,
+        "sharedLatinKey": "W",
+        "canonicalModernUnicode": "វ",
+        "canonicalModernCodepoints": [
+          "U+179C"
+        ],
+        "preservedFontEncodedUnicode": "ឆ"
       },
       {
         "key": "Y",
@@ -2279,7 +2387,13 @@
           "U+1799"
         ],
         "sourceImage": "archaic_50.png",
-        "advanceUnits": 887
+        "advanceUnits": 887,
+        "sharedLatinKey": "Y",
+        "canonicalModernUnicode": "យ",
+        "canonicalModernCodepoints": [
+          "U+1799"
+        ],
+        "preservedFontEncodedUnicode": "យ"
       },
       {
         "key": "Z",
@@ -2288,7 +2402,13 @@
           "U+1787"
         ],
         "sourceImage": "archaic_19.png",
-        "advanceUnits": 771
+        "advanceUnits": 771,
+        "sharedLatinKey": "Z",
+        "canonicalModernUnicode": "ឝ",
+        "canonicalModernCodepoints": [
+          "U+179D"
+        ],
+        "preservedFontEncodedUnicode": "ជ"
       },
       {
         "key": "F",
@@ -2317,7 +2437,13 @@
           "U+17AF"
         ],
         "sourceImage": "classical_34.png",
-        "advanceUnits": 723
+        "advanceUnits": 723,
+        "sharedLatinKey": "A",
+        "canonicalModernUnicode": "អ",
+        "canonicalModernCodepoints": [
+          "U+17A2"
+        ],
+        "preservedFontEncodedUnicode": "ឯ"
       },
       {
         "key": "B",
@@ -2326,7 +2452,13 @@
           "U+1794"
         ],
         "sourceImage": "classical_18.png",
-        "advanceUnits": 665
+        "advanceUnits": 665,
+        "sharedLatinKey": "B",
+        "canonicalModernUnicode": "ប",
+        "canonicalModernCodepoints": [
+          "U+1794"
+        ],
+        "preservedFontEncodedUnicode": "ប"
       },
       {
         "key": "D",
@@ -2335,7 +2467,13 @@
           "U+178A"
         ],
         "sourceImage": "classical_6.png",
-        "advanceUnits": 636
+        "advanceUnits": 636,
+        "sharedLatinKey": "D",
+        "canonicalModernUnicode": "ដ",
+        "canonicalModernCodepoints": [
+          "U+178A"
+        ],
+        "preservedFontEncodedUnicode": "ដ"
       },
       {
         "key": "E",
@@ -2344,7 +2482,13 @@
           "U+17A5"
         ],
         "sourceImage": "classical_36.png",
-        "advanceUnits": 868
+        "advanceUnits": 868,
+        "sharedLatinKey": "E",
+        "canonicalModernUnicode": "ឆ",
+        "canonicalModernCodepoints": [
+          "U+1786"
+        ],
+        "preservedFontEncodedUnicode": "ឥ"
       },
       {
         "key": "G",
@@ -2353,7 +2497,13 @@
           "U+1781"
         ],
         "sourceImage": "classical_8.png",
-        "advanceUnits": 563
+        "advanceUnits": 563,
+        "sharedLatinKey": "G",
+        "canonicalModernUnicode": "គ",
+        "canonicalModernCodepoints": [
+          "U+1782"
+        ],
+        "preservedFontEncodedUnicode": "ខ"
       },
       {
         "key": "H",
@@ -2362,7 +2512,13 @@
           "U+17A0"
         ],
         "sourceImage": "classical_22.png",
-        "advanceUnits": 858
+        "advanceUnits": 858,
+        "sharedLatinKey": "H",
+        "canonicalModernUnicode": "ហ",
+        "canonicalModernCodepoints": [
+          "U+17A0"
+        ],
+        "preservedFontEncodedUnicode": "ហ"
       },
       {
         "key": "I",
@@ -2371,7 +2527,13 @@
           "U+17B0"
         ],
         "sourceImage": "classical_35.png",
-        "advanceUnits": 844
+        "advanceUnits": 844,
+        "sharedLatinKey": "I",
+        "canonicalModernUnicode": "ញ",
+        "canonicalModernCodepoints": [
+          "U+1789"
+        ],
+        "preservedFontEncodedUnicode": "ឰ"
       },
       {
         "key": "J",
@@ -2380,7 +2542,13 @@
           "U+1785"
         ],
         "sourceImage": "classical_9.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "sharedLatinKey": "J",
+        "canonicalModernUnicode": "ជ",
+        "canonicalModernCodepoints": [
+          "U+1787"
+        ],
+        "preservedFontEncodedUnicode": "ច"
       },
       {
         "key": "K",
@@ -2389,7 +2557,13 @@
           "U+1782"
         ],
         "sourceImage": "classical_24.png",
-        "advanceUnits": 590
+        "advanceUnits": 590,
+        "sharedLatinKey": "K",
+        "canonicalModernUnicode": "ក",
+        "canonicalModernCodepoints": [
+          "U+1780"
+        ],
+        "preservedFontEncodedUnicode": "គ"
       },
       {
         "key": "L",
@@ -2398,7 +2572,13 @@
           "U+17A1"
         ],
         "sourceImage": "classical_23.png",
-        "advanceUnits": 557
+        "advanceUnits": 557,
+        "sharedLatinKey": "L",
+        "canonicalModernUnicode": "ល",
+        "canonicalModernCodepoints": [
+          "U+179B"
+        ],
+        "preservedFontEncodedUnicode": "ឡ"
       },
       {
         "key": "M",
@@ -2407,7 +2587,13 @@
           "U+1798"
         ],
         "sourceImage": "classical_11.png",
-        "advanceUnits": 832
+        "advanceUnits": 832,
+        "sharedLatinKey": "M",
+        "canonicalModernUnicode": "ម",
+        "canonicalModernCodepoints": [
+          "U+1798"
+        ],
+        "preservedFontEncodedUnicode": "ម"
       },
       {
         "key": "N",
@@ -2416,7 +2602,13 @@
           "U+1793"
         ],
         "sourceImage": "classical_20.png",
-        "advanceUnits": 587
+        "advanceUnits": 587,
+        "sharedLatinKey": "N",
+        "canonicalModernUnicode": "ន",
+        "canonicalModernCodepoints": [
+          "U+1793"
+        ],
+        "preservedFontEncodedUnicode": "ន"
       },
       {
         "key": "O",
@@ -2425,7 +2617,13 @@
           "U+17A7"
         ],
         "sourceImage": "classical_33.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "sharedLatinKey": "O",
+        "canonicalModernUnicode": "ង",
+        "canonicalModernCodepoints": [
+          "U+1784"
+        ],
+        "preservedFontEncodedUnicode": "ឧ"
       },
       {
         "key": "P",
@@ -2434,7 +2632,13 @@
           "U+1796"
         ],
         "sourceImage": "classical_12.png",
-        "advanceUnits": 603
+        "advanceUnits": 603,
+        "sharedLatinKey": "P",
+        "canonicalModernUnicode": "ព",
+        "canonicalModernCodepoints": [
+          "U+1796"
+        ],
+        "preservedFontEncodedUnicode": "ព"
       },
       {
         "key": "R",
@@ -2443,7 +2647,13 @@
           "U+179A"
         ],
         "sourceImage": "classical_14.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "sharedLatinKey": "R",
+        "canonicalModernUnicode": "រ",
+        "canonicalModernCodepoints": [
+          "U+179A"
+        ],
+        "preservedFontEncodedUnicode": "រ"
       },
       {
         "key": "S",
@@ -2452,7 +2662,13 @@
           "U+179F"
         ],
         "sourceImage": "classical_21.png",
-        "advanceUnits": 713
+        "advanceUnits": 713,
+        "sharedLatinKey": "S",
+        "canonicalModernUnicode": "ស",
+        "canonicalModernCodepoints": [
+          "U+179F"
+        ],
+        "preservedFontEncodedUnicode": "ស"
       },
       {
         "key": "T",
@@ -2461,7 +2677,13 @@
           "U+178F"
         ],
         "sourceImage": "classical_3.png",
-        "advanceUnits": 632
+        "advanceUnits": 632,
+        "sharedLatinKey": "T",
+        "canonicalModernUnicode": "ត",
+        "canonicalModernCodepoints": [
+          "U+178F"
+        ],
+        "preservedFontEncodedUnicode": "ត"
       },
       {
         "key": "U",
@@ -2479,7 +2701,13 @@
           "U+1786"
         ],
         "sourceImage": "classical_44.png",
-        "advanceUnits": 758
+        "advanceUnits": 758,
+        "sharedLatinKey": "W",
+        "canonicalModernUnicode": "វ",
+        "canonicalModernCodepoints": [
+          "U+179C"
+        ],
+        "preservedFontEncodedUnicode": "ឆ"
       },
       {
         "key": "Y",
@@ -2488,7 +2716,13 @@
           "U+1799"
         ],
         "sourceImage": "classical_50.png",
-        "advanceUnits": 922
+        "advanceUnits": 922,
+        "sharedLatinKey": "Y",
+        "canonicalModernUnicode": "យ",
+        "canonicalModernCodepoints": [
+          "U+1799"
+        ],
+        "preservedFontEncodedUnicode": "យ"
       },
       {
         "key": "Z",
@@ -2497,7 +2731,13 @@
           "U+1787"
         ],
         "sourceImage": "classical_19.png",
-        "advanceUnits": 708
+        "advanceUnits": 708,
+        "sharedLatinKey": "Z",
+        "canonicalModernUnicode": "ឝ",
+        "canonicalModernCodepoints": [
+          "U+179D"
+        ],
+        "preservedFontEncodedUnicode": "ជ"
       },
       {
         "key": "F",
@@ -2526,7 +2766,13 @@
           "U+17AF"
         ],
         "sourceImage": "traditional_34.png",
-        "advanceUnits": 715
+        "advanceUnits": 715,
+        "sharedLatinKey": "A",
+        "canonicalModernUnicode": "អ",
+        "canonicalModernCodepoints": [
+          "U+17A2"
+        ],
+        "preservedFontEncodedUnicode": "ឯ"
       },
       {
         "key": "B",
@@ -2535,7 +2781,13 @@
           "U+1794"
         ],
         "sourceImage": "traditional_18.png",
-        "advanceUnits": 640
+        "advanceUnits": 640,
+        "sharedLatinKey": "B",
+        "canonicalModernUnicode": "ប",
+        "canonicalModernCodepoints": [
+          "U+1794"
+        ],
+        "preservedFontEncodedUnicode": "ប"
       },
       {
         "key": "D",
@@ -2544,7 +2796,13 @@
           "U+178A"
         ],
         "sourceImage": "traditional_6.png",
-        "advanceUnits": 698
+        "advanceUnits": 698,
+        "sharedLatinKey": "D",
+        "canonicalModernUnicode": "ដ",
+        "canonicalModernCodepoints": [
+          "U+178A"
+        ],
+        "preservedFontEncodedUnicode": "ដ"
       },
       {
         "key": "E",
@@ -2553,7 +2811,13 @@
           "U+17A5"
         ],
         "sourceImage": "traditional_36.png",
-        "advanceUnits": 761
+        "advanceUnits": 761,
+        "sharedLatinKey": "E",
+        "canonicalModernUnicode": "ឆ",
+        "canonicalModernCodepoints": [
+          "U+1786"
+        ],
+        "preservedFontEncodedUnicode": "ឥ"
       },
       {
         "key": "G",
@@ -2562,7 +2826,13 @@
           "U+1781"
         ],
         "sourceImage": "traditional_8.png",
-        "advanceUnits": 646
+        "advanceUnits": 646,
+        "sharedLatinKey": "G",
+        "canonicalModernUnicode": "គ",
+        "canonicalModernCodepoints": [
+          "U+1782"
+        ],
+        "preservedFontEncodedUnicode": "ខ"
       },
       {
         "key": "H",
@@ -2571,7 +2841,13 @@
           "U+17A0"
         ],
         "sourceImage": "traditional_22.png",
-        "advanceUnits": 750
+        "advanceUnits": 750,
+        "sharedLatinKey": "H",
+        "canonicalModernUnicode": "ហ",
+        "canonicalModernCodepoints": [
+          "U+17A0"
+        ],
+        "preservedFontEncodedUnicode": "ហ"
       },
       {
         "key": "I",
@@ -2580,7 +2856,13 @@
           "U+17B0"
         ],
         "sourceImage": "traditional_35.png",
-        "advanceUnits": 806
+        "advanceUnits": 806,
+        "sharedLatinKey": "I",
+        "canonicalModernUnicode": "ញ",
+        "canonicalModernCodepoints": [
+          "U+1789"
+        ],
+        "preservedFontEncodedUnicode": "ឰ"
       },
       {
         "key": "J",
@@ -2589,7 +2871,13 @@
           "U+1785"
         ],
         "sourceImage": "traditional_9.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "sharedLatinKey": "J",
+        "canonicalModernUnicode": "ជ",
+        "canonicalModernCodepoints": [
+          "U+1787"
+        ],
+        "preservedFontEncodedUnicode": "ច"
       },
       {
         "key": "K",
@@ -2598,7 +2886,13 @@
           "U+1782"
         ],
         "sourceImage": "traditional_24.png",
-        "advanceUnits": 550
+        "advanceUnits": 550,
+        "sharedLatinKey": "K",
+        "canonicalModernUnicode": "ក",
+        "canonicalModernCodepoints": [
+          "U+1780"
+        ],
+        "preservedFontEncodedUnicode": "គ"
       },
       {
         "key": "L",
@@ -2607,7 +2901,13 @@
           "U+17A1"
         ],
         "sourceImage": "traditional_23.png",
-        "advanceUnits": 526
+        "advanceUnits": 526,
+        "sharedLatinKey": "L",
+        "canonicalModernUnicode": "ល",
+        "canonicalModernCodepoints": [
+          "U+179B"
+        ],
+        "preservedFontEncodedUnicode": "ឡ"
       },
       {
         "key": "M",
@@ -2616,7 +2916,13 @@
           "U+1798"
         ],
         "sourceImage": "traditional_11.png",
-        "advanceUnits": 801
+        "advanceUnits": 801,
+        "sharedLatinKey": "M",
+        "canonicalModernUnicode": "ម",
+        "canonicalModernCodepoints": [
+          "U+1798"
+        ],
+        "preservedFontEncodedUnicode": "ម"
       },
       {
         "key": "N",
@@ -2625,7 +2931,13 @@
           "U+1793"
         ],
         "sourceImage": "traditional_20.png",
-        "advanceUnits": 596
+        "advanceUnits": 596,
+        "sharedLatinKey": "N",
+        "canonicalModernUnicode": "ន",
+        "canonicalModernCodepoints": [
+          "U+1793"
+        ],
+        "preservedFontEncodedUnicode": "ន"
       },
       {
         "key": "O",
@@ -2634,7 +2946,13 @@
           "U+17A7"
         ],
         "sourceImage": "traditional_33.png",
-        "advanceUnits": 919
+        "advanceUnits": 919,
+        "sharedLatinKey": "O",
+        "canonicalModernUnicode": "ង",
+        "canonicalModernCodepoints": [
+          "U+1784"
+        ],
+        "preservedFontEncodedUnicode": "ឧ"
       },
       {
         "key": "P",
@@ -2643,7 +2961,13 @@
           "U+1796"
         ],
         "sourceImage": "traditional_12.png",
-        "advanceUnits": 615
+        "advanceUnits": 615,
+        "sharedLatinKey": "P",
+        "canonicalModernUnicode": "ព",
+        "canonicalModernCodepoints": [
+          "U+1796"
+        ],
+        "preservedFontEncodedUnicode": "ព"
       },
       {
         "key": "R",
@@ -2652,7 +2976,13 @@
           "U+179A"
         ],
         "sourceImage": "traditional_14.png",
-        "advanceUnits": 918
+        "advanceUnits": 918,
+        "sharedLatinKey": "R",
+        "canonicalModernUnicode": "រ",
+        "canonicalModernCodepoints": [
+          "U+179A"
+        ],
+        "preservedFontEncodedUnicode": "រ"
       },
       {
         "key": "S",
@@ -2661,7 +2991,13 @@
           "U+179F"
         ],
         "sourceImage": "traditional_21.png",
-        "advanceUnits": 649
+        "advanceUnits": 649,
+        "sharedLatinKey": "S",
+        "canonicalModernUnicode": "ស",
+        "canonicalModernCodepoints": [
+          "U+179F"
+        ],
+        "preservedFontEncodedUnicode": "ស"
       },
       {
         "key": "T",
@@ -2670,7 +3006,13 @@
           "U+178F"
         ],
         "sourceImage": "traditional_3.png",
-        "advanceUnits": 593
+        "advanceUnits": 593,
+        "sharedLatinKey": "T",
+        "canonicalModernUnicode": "ត",
+        "canonicalModernCodepoints": [
+          "U+178F"
+        ],
+        "preservedFontEncodedUnicode": "ត"
       },
       {
         "key": "U",
@@ -2688,7 +3030,13 @@
           "U+1786"
         ],
         "sourceImage": "traditional_44.png",
-        "advanceUnits": 767
+        "advanceUnits": 767,
+        "sharedLatinKey": "W",
+        "canonicalModernUnicode": "វ",
+        "canonicalModernCodepoints": [
+          "U+179C"
+        ],
+        "preservedFontEncodedUnicode": "ឆ"
       },
       {
         "key": "Y",
@@ -2697,7 +3045,13 @@
           "U+1799"
         ],
         "sourceImage": "traditional_50.png",
-        "advanceUnits": 922
+        "advanceUnits": 922,
+        "sharedLatinKey": "Y",
+        "canonicalModernUnicode": "យ",
+        "canonicalModernCodepoints": [
+          "U+1799"
+        ],
+        "preservedFontEncodedUnicode": "យ"
       },
       {
         "key": "Z",
@@ -2706,7 +3060,13 @@
           "U+1787"
         ],
         "sourceImage": "traditional_19.png",
-        "advanceUnits": 728
+        "advanceUnits": 728,
+        "sharedLatinKey": "Z",
+        "canonicalModernUnicode": "ឝ",
+        "canonicalModernCodepoints": [
+          "U+179D"
+        ],
+        "preservedFontEncodedUnicode": "ជ"
       },
       {
         "key": "F",
@@ -2735,7 +3095,12 @@
           "U+17AF"
         ],
         "sourceImage": "modern_34.png",
-        "advanceUnits": 720
+        "advanceUnits": 720,
+        "sharedLatinKey": "A",
+        "canonicalModernUnicode": "អ",
+        "canonicalModernCodepoints": [
+          "U+17A2"
+        ]
       },
       {
         "key": "B",
@@ -2744,7 +3109,12 @@
           "U+1794"
         ],
         "sourceImage": "modern_18.png",
-        "advanceUnits": 833
+        "advanceUnits": 833,
+        "sharedLatinKey": "B",
+        "canonicalModernUnicode": "ប",
+        "canonicalModernCodepoints": [
+          "U+1794"
+        ]
       },
       {
         "key": "D",
@@ -2753,7 +3123,12 @@
           "U+178A"
         ],
         "sourceImage": "modern_6.png",
-        "advanceUnits": 753
+        "advanceUnits": 753,
+        "sharedLatinKey": "D",
+        "canonicalModernUnicode": "ដ",
+        "canonicalModernCodepoints": [
+          "U+178A"
+        ]
       },
       {
         "key": "E",
@@ -2762,7 +3137,12 @@
           "U+17A5"
         ],
         "sourceImage": "modern_36.png",
-        "advanceUnits": 820
+        "advanceUnits": 820,
+        "sharedLatinKey": "E",
+        "canonicalModernUnicode": "ឆ",
+        "canonicalModernCodepoints": [
+          "U+1786"
+        ]
       },
       {
         "key": "G",
@@ -2771,7 +3151,12 @@
           "U+1781"
         ],
         "sourceImage": "modern_8.png",
-        "advanceUnits": 919
+        "advanceUnits": 919,
+        "sharedLatinKey": "G",
+        "canonicalModernUnicode": "គ",
+        "canonicalModernCodepoints": [
+          "U+1782"
+        ]
       },
       {
         "key": "H",
@@ -2780,7 +3165,12 @@
           "U+17A0"
         ],
         "sourceImage": "modern_22.png",
-        "advanceUnits": 377
+        "advanceUnits": 377,
+        "sharedLatinKey": "H",
+        "canonicalModernUnicode": "ហ",
+        "canonicalModernCodepoints": [
+          "U+17A0"
+        ]
       },
       {
         "key": "I",
@@ -2789,7 +3179,12 @@
           "U+17B0"
         ],
         "sourceImage": "modern_35.png",
-        "advanceUnits": 749
+        "advanceUnits": 749,
+        "sharedLatinKey": "I",
+        "canonicalModernUnicode": "ញ",
+        "canonicalModernCodepoints": [
+          "U+1789"
+        ]
       },
       {
         "key": "J",
@@ -2798,7 +3193,12 @@
           "U+1785"
         ],
         "sourceImage": "modern_9.png",
-        "advanceUnits": 578
+        "advanceUnits": 578,
+        "sharedLatinKey": "J",
+        "canonicalModernUnicode": "ជ",
+        "canonicalModernCodepoints": [
+          "U+1787"
+        ]
       },
       {
         "key": "K",
@@ -2807,7 +3207,12 @@
           "U+1782"
         ],
         "sourceImage": "modern_24.png",
-        "advanceUnits": 530
+        "advanceUnits": 530,
+        "sharedLatinKey": "K",
+        "canonicalModernUnicode": "ក",
+        "canonicalModernCodepoints": [
+          "U+1780"
+        ]
       },
       {
         "key": "L",
@@ -2816,7 +3221,12 @@
           "U+17A1"
         ],
         "sourceImage": "modern_23.png",
-        "advanceUnits": 580
+        "advanceUnits": 580,
+        "sharedLatinKey": "L",
+        "canonicalModernUnicode": "ល",
+        "canonicalModernCodepoints": [
+          "U+179B"
+        ]
       },
       {
         "key": "M",
@@ -2825,7 +3235,12 @@
           "U+1798"
         ],
         "sourceImage": "modern_11.png",
-        "advanceUnits": 844
+        "advanceUnits": 844,
+        "sharedLatinKey": "M",
+        "canonicalModernUnicode": "ម",
+        "canonicalModernCodepoints": [
+          "U+1798"
+        ]
       },
       {
         "key": "N",
@@ -2834,7 +3249,12 @@
           "U+1793"
         ],
         "sourceImage": "modern_20.png",
-        "advanceUnits": 601
+        "advanceUnits": 601,
+        "sharedLatinKey": "N",
+        "canonicalModernUnicode": "ន",
+        "canonicalModernCodepoints": [
+          "U+1793"
+        ]
       },
       {
         "key": "O",
@@ -2843,7 +3263,12 @@
           "U+17A7"
         ],
         "sourceImage": "modern_33.png",
-        "advanceUnits": 919
+        "advanceUnits": 919,
+        "sharedLatinKey": "O",
+        "canonicalModernUnicode": "ង",
+        "canonicalModernCodepoints": [
+          "U+1784"
+        ]
       },
       {
         "key": "P",
@@ -2852,7 +3277,12 @@
           "U+1796"
         ],
         "sourceImage": "modern_12.png",
-        "advanceUnits": 523
+        "advanceUnits": 523,
+        "sharedLatinKey": "P",
+        "canonicalModernUnicode": "ព",
+        "canonicalModernCodepoints": [
+          "U+1796"
+        ]
       },
       {
         "key": "R",
@@ -2861,7 +3291,12 @@
           "U+179A"
         ],
         "sourceImage": "modern_14.png",
-        "advanceUnits": 857
+        "advanceUnits": 857,
+        "sharedLatinKey": "R",
+        "canonicalModernUnicode": "រ",
+        "canonicalModernCodepoints": [
+          "U+179A"
+        ]
       },
       {
         "key": "S",
@@ -2870,7 +3305,12 @@
           "U+179F"
         ],
         "sourceImage": "modern_21.png",
-        "advanceUnits": 666
+        "advanceUnits": 666,
+        "sharedLatinKey": "S",
+        "canonicalModernUnicode": "ស",
+        "canonicalModernCodepoints": [
+          "U+179F"
+        ]
       },
       {
         "key": "T",
@@ -2879,7 +3319,12 @@
           "U+178F"
         ],
         "sourceImage": "modern_3.png",
-        "advanceUnits": 540
+        "advanceUnits": 540,
+        "sharedLatinKey": "T",
+        "canonicalModernUnicode": "ត",
+        "canonicalModernCodepoints": [
+          "U+178F"
+        ]
       },
       {
         "key": "U",
@@ -2897,7 +3342,12 @@
           "U+1786"
         ],
         "sourceImage": "modern_44.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "sharedLatinKey": "W",
+        "canonicalModernUnicode": "វ",
+        "canonicalModernCodepoints": [
+          "U+179C"
+        ]
       },
       {
         "key": "Y",
@@ -2906,7 +3356,12 @@
           "U+1799"
         ],
         "sourceImage": "modern_50.png",
-        "advanceUnits": 918
+        "advanceUnits": 918,
+        "sharedLatinKey": "Y",
+        "canonicalModernUnicode": "យ",
+        "canonicalModernCodepoints": [
+          "U+1799"
+        ]
       },
       {
         "key": "Z",
@@ -2915,7 +3370,12 @@
           "U+1787"
         ],
         "sourceImage": "modern_19.png",
-        "advanceUnits": 790
+        "advanceUnits": 790,
+        "sharedLatinKey": "Z",
+        "canonicalModernUnicode": "ឝ",
+        "canonicalModernCodepoints": [
+          "U+179D"
+        ]
       },
       {
         "key": "F",
@@ -2936,5 +3396,30 @@
         "familyVariant": true
       }
     ]
-  }
+  },
+  "modernLogicalAlphabet": "ABDEGHIJKLMNOPRSTWYZ",
+  "modernCanonicalMap": {
+    "A": "អ",
+    "B": "ប",
+    "D": "ដ",
+    "E": "ឆ",
+    "G": "គ",
+    "H": "ហ",
+    "I": "ញ",
+    "J": "ជ",
+    "K": "ក",
+    "L": "ល",
+    "M": "ម",
+    "N": "ន",
+    "O": "ង",
+    "P": "ព",
+    "R": "រ",
+    "S": "ស",
+    "T": "ត",
+    "W": "វ",
+    "Y": "យ",
+    "Z": "ឝ"
+  },
+  "historicalFontCompatibility": "Historical font cmap Unicode mappings retained; canonical Modern mapping provided as additional semantic field to avoid incorrect glyph display.",
+  "modernCanonicalReference": "json/keyboard/modern-orthography-2026.json"
 }

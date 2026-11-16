@@ -46,6 +46,7 @@
     if (document.getElementById('view-preview').classList.contains('active')) renderSpacingPreview(false);
   }
   function setActiveEra(eraId) {
+    selectedMarks = []; // keep historical and Modern mark selections separate
     if (!project.eras[eraId]) return;
     project.activeEra = eraId; selectedId = orderedGlyphs(eraId)[0]?.id || null; lineageId = selectedId;
     document.querySelectorAll('.era-selector').forEach(select => { if (select.value !== eraId) select.value = eraId; });
@@ -224,9 +225,11 @@
     if (!lineageId || !glyphs().some(g => g.id === lineageId)) lineageId = selectedId || orderedGlyphs()[0]?.id || null;
     LineageView.render(project, lineageId, $('lineage-mode').value);
   }
+  const currentOrdinaryMarks = () => project.activeEra === 'modern' ? (project.modernMarks || []) : project.marks;
+  const currentSpecialMarks = () => project.activeEra === 'modern' ? (project.modernSpecialMarks || []) : project.specialMarks;
   function renderMarks() {
-    $('ordinary-mark-count').textContent = project.marks.length; $('special-mark-count').textContent = project.specialMarks.length;
-    const entries = markGroup === 'ordinary' ? project.marks.map(mark => ({ ...mark, special: false })) : project.specialMarks.map(mark => ({ ...mark, special: true }));
+    $('ordinary-mark-count').textContent = currentOrdinaryMarks().length; $('special-mark-count').textContent = currentSpecialMarks().length;
+    const entries = markGroup === 'ordinary' ? currentOrdinaryMarks().map(mark => ({ ...mark, special: false })) : currentSpecialMarks().map(mark => ({ ...mark, special: true }));
     const selectedBaseId = $('mark-base-select').value;
     $('mark-grid').innerHTML = entries.map(mark => `<button type="button" class="mark-card${selectedMarks.includes(mark.id) ? ' selected' : ''}" data-mark-id="${html(mark.id)}" data-mark-special="${mark.special}"><span class="mark-char">${html(mark.character)}</span><strong>${html(mark.name)}</strong><small>${html(mark.ipa || mark.kind)} · ${html(mark.kind)}</small></button>`).join('');
     $('mark-grid').querySelectorAll('[data-mark-id]').forEach(button => button.addEventListener('click', () => toggleMark(button.dataset.markId, button.dataset.markSpecial === 'true')));
@@ -236,22 +239,24 @@
   function toggleMark(id, isSpecial) {
     const selected = selectedMarks.findIndex(item => item.id === id);
     if (selected >= 0) selectedMarks.splice(selected, 1);
-    else if (selectedMarks.length >= Number(project.rules.maxStackedMarks || 3)) { toast(`The stack limit is ${project.rules.maxStackedMarks || 3} marks.`, true); return; }
+    else if (!isSpecial && selectedMarks.filter(item => !item.special).length >= (project.activeEra === 'modern' ? 2 : Number(project.rules.maxStackedMarks || 3))) { toast('Ordinary diacritic limit reached for this era.', true); return; }
     else selectedMarks.push({ id, special: isSpecial });
     renderMarks();
   }
   function updateMarkPreview() {
     const base = glyphs().find(g => g.id === $('mark-base-select').value);
-    const entries = selectedMarks.map(item => (item.special ? project.specialMarks : project.marks).find(mark => mark.id === item.id)).filter(Boolean);
-    const baseMark = entries.some(mark => mark.kind === 'base'); const vowelCount = entries.filter(mark => mark.kind === 'vowel').length;
+    const entries = selectedMarks.map(item => (item.special ? currentSpecialMarks() : currentOrdinaryMarks()).find(mark => mark.id === item.id)).filter(Boolean);
+    const baseMark = entries.some(mark => mark.kind === 'base'); const vowelCount = entries.filter(mark => mark.kind === 'vowel').length; const modernMode = project.activeEra === 'modern';
     const archaicStandalone = currentEra().backendEra === 'archaic' && entries.some(mark => ['glottal', 'click'].includes(mark.id));
     const issues = [];
-    if (vowelCount > Number(project.rules.maxVowelMarks || 1)) issues.push(`Only ${project.rules.maxVowelMarks || 1} vowel mark is allowed.`);
+    if (!modernMode && vowelCount > Number(project.rules.maxVowelMarks || 1)) issues.push(`Only ${project.rules.maxVowelMarks || 1} vowel mark is allowed.`);
     if (baseMark && (entries.length > 1 || base)) issues.push('The base mark must be used alone.');
     if (archaicStandalone && (base || entries.length > 1)) issues.push('Proto glottal and click are standalone marks.');
     if (!base && entries.length && !archaicStandalone && !baseMark) issues.push('Choose a base glyph to attach these marks.');
-    if (entries.length > Number(project.rules.maxStackedMarks || 3)) issues.push('This stack exceeds the mark limit.');
-    $('mark-stack-count').textContent = `${entries.length} / ${project.rules.maxStackedMarks || 3} marks`;
+    if (modernMode ? entries.filter(mark => mark.kind !== 'special').length > 2 : entries.length > Number(project.rules.maxStackedMarks || 3)) issues.push('This stack exceeds the era mark limit.');
+    if (modernMode && entries.some(mark => mark.id === 'M06') && entries.some(mark => mark.id === 'M07')) issues.push('Voiced and Unvoiced Sound cannot be combined.');
+    if (modernMode && entries.some(mark => mark.id === 'M08')) issues.push('Separated Vowel needs an additional vowel subscript. Choose it using a keyboard composition that supplies that subscript.');
+    $('mark-stack-count').textContent = `${modernMode ? entries.filter(mark => mark.kind !== 'special').length : entries.length} / ${modernMode ? 2 : (project.rules.maxStackedMarks || 3)} ordinary marks`;
     $('selected-mark-chips').innerHTML = entries.map(mark => `<span class="mark-chip">${html(mark.character)} <small>${html(mark.name)}</small></span>`).join('');
     $('mark-validation').textContent = issues.join(' '); $('mark-validation').classList.toggle('invalid', issues.length > 0);
     const sequence = archaicStandalone && entries.length === 1 ? entries[0].character : `${base ? base.character : ''}${entries.map(mark => mark.character).join('')}`;
@@ -482,6 +487,8 @@
       });
       project.eraOrder = eraData.eras.map(era => era.id); project.rules = Object.assign({}, eraData.rules, project.rules || {});
       project.marks = project.marks.length ? project.marks : JSON.parse(JSON.stringify(aws.marks));
+      project.modernMarks = JSON.parse(JSON.stringify(aws.modernMarks || []));
+      project.modernSpecialMarks = JSON.parse(JSON.stringify(aws.modernSpecialMarks || []));
       project.specialMarks = project.specialMarks.length ? project.specialMarks : JSON.parse(JSON.stringify(aws.specialMarks));
       project.keyLabels = aws.keyLabels.slice();
       ensureUnicodeVault();
