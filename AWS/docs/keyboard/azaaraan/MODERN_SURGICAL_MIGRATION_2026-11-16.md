@@ -1,7 +1,7 @@
 # Modern Aza'raan surgical migration — 16 November 2026
 
 ## Scope
-This is a deliberately **Modern-focused** migration of AWS, based on the attached user-approved 12-diacritic reference and standalone keyboard/TTF. The AWS UI structure, keyboard layout styling, Glyph Studio styling, and earlier-era TTF binaries are preserved. It is intended for a review branch rather than a silent change to production.
+This is a deliberately **Modern-focused** migration of AWS, based on the attached user-approved 12-diacritic reference and standalone keyboard/TTF. The AWS UI structure, keyboard layout styling, Glyph Studio styling, and earlier-era TTF binaries are preserved. Applied to the AWS default branch following the author's request. This audit records implemented changes and limitations; it is not a claim that the unresolved historical remapping has been completed.
 
 ## Applied
 - Modern uses 20 independent host letters: `ABDEGHIJKLMNOPRSTWYZ`; U is retired and P remains independent.
@@ -32,4 +32,4 @@ The Modern TTF has matching codepoints but no GPOS/GSUB mark-attachment tables; 
 Pronunciation TTS was not rewritten; its older 24-mark internal phonetic engine remains for historical compatibility. The Modern sound choices and new Unicode encoding are routed through `AzaaraanBridge`.
 
 ## Preservation policy
-Do not overwrite historical TTF glyph outlines, erase saved user artwork, change CSS layouts, or replace the existing AWS keyboard/Glyph Studio HTML. Review separately before merging to main.
+Do not overwrite historical TTF glyph outlines, erase saved user artwork, change CSS layouts, or replace the existing AWS keyboard/Glyph Studio HTML. Preserve the documented font compatibility conflicts until a verified solution is available.
