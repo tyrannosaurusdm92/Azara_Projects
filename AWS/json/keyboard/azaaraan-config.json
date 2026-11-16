@@ -463,12 +463,191 @@
     "Traditional": "assets/ttf/Azaaraan-Traditional.ttf",
     "Modern": "assets/ttf/Azaaraan-Modern.ttf"
   },
-  "modernIndependentAlphabet": "ABDEGHIJKLMNOPRSTYZ",
+  "modernIndependentAlphabet": "ABDEGHIJKLMNOPRSTWYZ",
   "modernFamilyMergers": {
     "F": "B",
     "V": "B",
-    "W": "B",
-    "U": "A for uh, O for oo"
+    "Q": "K",
+    "X": "K",
+    "U": "A(/ʌ/) or O(/uː/)"
   },
-  "historicalKeyOrder": "ABDEGHIJKLMNOPRSTUWYZ"
+  "historicalKeyOrder": "ABDEGHIJKLMNOPRSTUWYZ",
+  "modernLetterMap": {
+    "A": "អ",
+    "B": "ប",
+    "D": "ដ",
+    "E": "ឆ",
+    "G": "គ",
+    "H": "ហ",
+    "I": "ញ",
+    "J": "ជ",
+    "K": "ក",
+    "L": "ល",
+    "M": "ម",
+    "N": "ន",
+    "O": "ង",
+    "P": "ព",
+    "R": "រ",
+    "S": "ស",
+    "T": "ត",
+    "W": "វ",
+    "Y": "យ",
+    "Z": "ឝ"
+  },
+  "modernDiacritics": [
+    {
+      "id": "held",
+      "name": "Held Consonant",
+      "khmer": "៌",
+      "display": "◌̎",
+      "kind": "phonetic",
+      "meaning": "Held Consonant",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "central",
+      "name": "Central Vowel",
+      "khmer": "ឹ",
+      "display": "◌̽",
+      "kind": "phonetic",
+      "meaning": "Central Vowel",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "open",
+      "name": "Open Vowel",
+      "khmer": "ា",
+      "display": "◌̞",
+      "kind": "phonetic",
+      "meaning": "Open Vowel",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "short",
+      "name": "Short Vowel",
+      "khmer": "់",
+      "display": "◌̆",
+      "kind": "phonetic",
+      "meaning": "Short Vowel",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "long",
+      "name": "Long Vowel",
+      "khmer": "ី",
+      "display": "◌̄",
+      "kind": "phonetic",
+      "meaning": "Long Vowel",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "unvoiced",
+      "name": "Unvoiced Sound",
+      "khmer": "៍",
+      "display": "◌̥",
+      "kind": "phonetic",
+      "meaning": "Unvoiced Sound",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "voiced",
+      "name": "Voiced Sound",
+      "khmer": "័",
+      "display": "◌̬",
+      "kind": "phonetic",
+      "meaning": "Voiced Sound",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "separate",
+      "name": "Separated Vowel",
+      "khmer": "ៈ",
+      "display": "◌̈",
+      "kind": "phonetic",
+      "meaning": "Host only, and only when a second vowel is supplied by an attached vowel subscript",
+      "hostOnly": true,
+      "requiresVowelSubscript": true
+    },
+    {
+      "id": "nasal",
+      "name": "Nasalization",
+      "khmer": "ំ",
+      "display": "◌̃",
+      "kind": "phonetic",
+      "meaning": "Nasalization",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "soft",
+      "name": "Soft Sound",
+      "khmer": "៉",
+      "display": "◌̡",
+      "kind": "phonetic",
+      "meaning": "Soft Sound",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "hard",
+      "name": "Hard Sound",
+      "khmer": "៊",
+      "display": "◌̣",
+      "kind": "phonetic",
+      "meaning": "Hard Sound",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    },
+    {
+      "id": "glide",
+      "name": "Glide Sound",
+      "khmer": "៎",
+      "display": "◌̯",
+      "kind": "phonetic",
+      "meaning": "Glide Sound",
+      "hostOnly": false,
+      "requiresVowelSubscript": false
+    }
+  ],
+  "modernSpecials": [
+    {
+      "id": "S01",
+      "name": "Glottal Stop",
+      "khmer": "៏",
+      "display": "'",
+      "special": true
+    },
+    {
+      "id": "S02",
+      "name": "Click Sound",
+      "khmer": "ះ",
+      "display": "¡",
+      "special": true
+    },
+    {
+      "id": "S03",
+      "name": "Emphasis before",
+      "khmer": "ិ",
+      "display": "<",
+      "special": true
+    },
+    {
+      "id": "S04",
+      "name": "Emphasis after",
+      "khmer": "ូ",
+      "display": ">",
+      "special": true
+    }
+  ],
+  "modernSoundSource": "json/keyboard/modern-sound-catalog.json",
+  "modernMaxPhoneticDiacritics": 2,
+  "modernMaxSubscripts": 2,
+  "modernSubscriptScale": 0.2
 }

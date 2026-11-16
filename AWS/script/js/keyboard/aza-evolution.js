@@ -10,6 +10,7 @@ const detail=document.getElementById('detail');
 const NS='http://www.w3.org/2000/svg';
 const roots=new Map(D.roots.map(r=>[r.slot,r]));
 const families=new Map(D.families.map(f=>[f.family,f]));
+const modernKhmer=window.AZA_MODERN?.independentLetters||{};
 const mergeBySlot=new Map(D.mergers.map(m=>[m.slot,m]));
 const stageIndex=new Map(D.stages.map((s,i)=>[s.key,i]));
 const stageY=new Map(D.stages.map(s=>[s.key,s.y]));
@@ -42,7 +43,7 @@ function drawLineageChips(slot){
  const wrap=document.createElement('div');wrap.className='detail-glyphs';
  D.stages.forEach((stage,i)=>{
   const owner=resolveOwner(slot,i), r=owner===null?null:roots.get(owner), node=r&&r.stages[stage.key];
-  const chip=document.createElement('span');chip.className='lineage-chip';chip.style.color=r?colorFor(r):'#aeb7c7';
+  const chip=document.createElement('span');chip.className='lineage-chip';chip.dataset.stage=stage.key;chip.style.color=r?colorFor(r):'#aeb7c7';
   if(node&&node.src){const m=document.createElement('img');m.className='mini-mark';setMask(m,node.src);chip.appendChild(m)}
   else if(node&&node.text){const t=document.createElement('span');t.className='mini-text';t.textContent=node.text;chip.appendChild(t)}
   else{const t=document.createElement('span');t.className='mini-text';t.textContent='—';chip.appendChild(t)}
@@ -82,8 +83,8 @@ function renderFamily(familyKey){
  const note=document.createElement('div');note.className='detail-note';
  const readings=(fam.readings||[]).map(x=>x.name+' '+x.unicode+(x.ipa?' '+x.ipa:'')).join(' · ');
  const origins=members.map(r=>r.origin+' ('+r.sound+')').join(' · ');
- note.textContent='Historical source roots: '+origins+'. Legacy Latin readings: '+readings+'. Current encoding uses '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' plus the revised accents in the typing tab.';
- detail.appendChild(note);detail.appendChild(copyButton((window.AZA_LETTERS||{})[fam.family]||fam.letter,'Copy Aza’raan '+fam.letter));
+ note.textContent='Historical source roots: '+origins+'. Legacy Latin readings: '+readings+'. Current encoding uses '+(modernKhmer[fam.family]||fam.letter)+' plus the revised accents in the typing tab.';
+ detail.appendChild(note);detail.appendChild(copyButton(modernKhmer[fam.family]||fam.letter,'Copy Aza’raan '+fam.letter));
  highlight(new Set([familyKey]),null);
 }
 function selectGlyph(stageKey,slot){
@@ -96,7 +97,7 @@ function selectGlyph(stageKey,slot){
  title.textContent=picked+' · '+r.origin+' · '+r.sound;detail.appendChild(title);
  detail.appendChild(drawLineageChips(slot));
  const note=document.createElement('div');note.className='detail-note';
- const specialRootCodes={'1':'៉','52':'្ឃ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&(window.AZA_LETTERS||{})[family.family])))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
+ const specialRootCodes={'1':window.AZA_MODERN?.specials?.find(x=>x.id==='S01')?.khmer||'','52':window.AZA_MODERN?.specials?.find(x=>x.id==='S02')?.khmer||''};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&modernKhmer[family.family])))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
  note.textContent=rootDesc(stage,r,node)+'. '+(node&&node.label?node.label+'. ':'')+'The modern reading is '+(family?family.letter:(node&&node.text)||r.reflex)+'.';
  detail.appendChild(note);detail.appendChild(copyButton(copyText,'Copy reading '+copyText));
  highlight(new Set([familyFor(r)]),[stageKey,slot]);pick.value='';
@@ -115,8 +116,8 @@ function renderTable(){
  for(const fam of D.families){
   const members=D.roots.filter(r=>r.family===fam.family);
   const tr=document.createElement('tr');
-  const modern=document.createElement('td');modern.className='symbol-cell table-letter';modern.textContent=fam.letter;
-  const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' · 24 contemporary marks';modern.appendChild(variants);
+  const modern=document.createElement('td');modern.className='symbol-cell table-letter aza-modern';modern.textContent=modernKhmer[fam.family]||fam.letter;
+  const variants=document.createElement('small');variants.textContent=fam.letter+' · 12 Modern diacritics';modern.appendChild(variants);
   tr.appendChild(modern);
   const source=document.createElement('td');const rootsBox=document.createElement('div');rootsBox.className='source-roots';
   members.forEach(r=>{const node=r.stages.proto;const b=mark(node.src,'table-glyph',r.slot,'proto',rootDesc(D.stages[0],r,node));rootsBox.appendChild(b)});
@@ -134,7 +135,7 @@ function renderTable(){
   const tr=document.createElement('tr');tr.className='special-row';
   const tdSign=document.createElement('td');tdSign.className='symbol-cell';
   if(sign.src){const wrap=document.createElement('div');wrap.className='table-glyphs';wrap.appendChild(mark(sign.src,'table-glyph',sign.rootSlot,'modern',sign.name+' · '+sign.meaning));tdSign.appendChild(wrap)}
-  else{tdSign.textContent=sign.sign}
+  else{tdSign.textContent=sign.khmer||sign.sign;tdSign.classList.add('aza-modern')}
   tr.appendChild(tdSign);
   const tdSource=document.createElement('td');tdSource.textContent='Special sign · '+sign.name+' · '+sign.meaning+' · '+sign.origin;tr.appendChild(tdSource);
   const ptd=document.createElement('td');addTableGlyphs(ptd,[{root,node:root.stages.proto}],'proto');tr.appendChild(ptd);

@@ -117,7 +117,46 @@ function canonicalCompound(key,markIds,extraUnknown=false){
  const legacy=compound(base,ids,extraUnknown);
  return {...legacy,warnings:[...new Set([...warnings,...legacy.warnings])]};
 }
-function khmerPart(unit){const first=Array.from(unit)[0];const key=baseToKey[first];if(!key)return {ipa:'',speech:'',warnings:['Unknown Khmer letter']};
+
+function modernActive(){return window.AzaaraanBridge?.loadChoice?.().era==='Modern';}
+function modernKhmerPart(unit){
+ const M=window.AZA_MODERN;
+ if(!M)return {ipa:'',speech:'',warnings:['Modern catalogue unavailable']};
+ const baseMap=Object.fromEntries(Object.entries(M.independentLetters).map(([k,v])=>[v,k]));
+ const code=Array.from(unit),key=baseMap[code.shift()];
+ if(!key)return {ipa:'',speech:'',warnings:['Unknown Modern Aza’raan independent letter']};
+ const reverse=Object.fromEntries(M.marks.map(m=>[m.khmer,m.id]));
+ const additions=[],markIds=[],warnings=[];
+ let target=markIds,needBase=false;
+ for(const ch of code){
+  if(ch==='\u17D2'){needBase=true;continue;}
+  if(needBase){
+   const partKey=baseMap[ch];if(!partKey){warnings.push('Unknown Modern dependent letter');needBase=false;continue;}
+   const part={base:partKey,marks:[]};additions.push(part);target=part.marks;needBase=false;continue;
+  }
+  if(reverse[ch])target.push(reverse[ch]);
+  else if(!M.specials.some(x=>x.khmer===ch))warnings.push('Unrecognized Modern phonetic mark');
+ }
+ function selected(b,ids){
+   const catalog=[...M.sounds,...M.additional];
+   const same=(a,z)=>a.length===z.length&&a.every(v=>z.includes(v));
+   const hit=catalog.find(x=>x.base===b&&same(x.marks,ids));
+   if(!hit){warnings.push('Unregistered Modern '+b+' family recipe');return '';}
+   return String(hit.ipa).replace(/^\/|\/$/g,'');
+ }
+ const main=selected(key,markIds.filter(x=>x!=='separate'));
+ const pieces=additions.map(x=>selected(x.base,x.marks));
+ if(markIds.includes('separate')){
+  if(!pieces.length)warnings.push('Separated Vowel lacks a vowel subscript');
+  else return {ipa:[main,...pieces].join('.'),speech:IPA.plan([main,...pieces].join('.')).speech,warnings};
+ }
+ const ipa=main+pieces.join('');
+ return {ipa,speech:IPA.plan(ipa).speech,warnings};
+}
+function khmerPart(unit){
+ if(modernActive()&&window.AZA_MODERN)return modernKhmerPart(unit);
+ const first=Array.from(unit)[0],key=baseToKey[first];
+ if(!key)return {ipa:'',speech:'',warnings:['Unknown Khmer letter']};
  const parsed=readKhmerIds(unit);return canonicalCompound(key,parsed.ids,parsed.unknown);
 }
 function romanWord(word){
