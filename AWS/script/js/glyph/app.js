@@ -126,7 +126,7 @@
     $('era-target-count').textContent = era.id === 'modern' ? `${list.length} glyphs · ${era.targetCount} base-key target` : `${list.length} / ${era.targetCount} target rows`;
   }
   function symbol(glyph) {
-    if (glyph.artwork) return `<img src="${glyph.artwork}" alt="${html(glyph.name)} artwork">`;
+    if (project.activeEra !== 'modern' && glyph.artwork) return `<img src="${glyph.artwork}" alt="${html(glyph.name)} artwork">`;
     return `<span class="glyph-symbol">${html(glyph.character || '＋')}</span><span class="glyph-fallback">${html(StudioModel.codepointLabel(glyph))}</span>`;
   }
   function renderGlyphCards() {
@@ -155,7 +155,7 @@
       document.querySelectorAll('.editor-scroll input,.editor-scroll textarea').forEach(input => { if (input.type !== 'range' && input.type !== 'color') input.value = ''; });
       GlyphEditor.select(null); return Promise.resolve();
     }
-    remove.disabled = false; $('selected-glyph').innerHTML = glyph.artwork ? `<img src="${glyph.artwork}" alt="">` : html(glyph.character || '＋');
+    remove.disabled = false; $('selected-glyph').innerHTML = project.activeEra !== 'modern' && glyph.artwork ? `<img src="${glyph.artwork}" alt="">` : html(glyph.character || '＋');
     $('selected-codepoint').textContent = StudioModel.codepointLabel(glyph); $('selected-glyph-name').textContent = glyph.name || 'Unnamed glyph';
     $('glyph-character-input').value = glyph.character || ''; $('glyph-name-input').value = glyph.name || '';
     $('glyph-origin-input').value = glyph.origin || '';$('glyph-type-letter').checked = glyph.category==='letter'||glyph.category==='independent'||glyph.category==='consonant';$('glyph-type-accent').checked = glyph.category==='accent'||glyph.category==='mark';
@@ -224,9 +224,11 @@
     if (!lineageId || !glyphs().some(g => g.id === lineageId)) lineageId = selectedId || orderedGlyphs()[0]?.id || null;
     LineageView.render(project, lineageId, $('lineage-mode').value);
   }
+  const shownMarks = () => project.activeEra === 'modern' ? (project.modernMarks || []) : project.marks;
+  const shownSpecialMarks = () => project.activeEra === 'modern' ? (project.modernSpecialMarks || []) : project.specialMarks;
   function renderMarks() {
-    $('ordinary-mark-count').textContent = project.marks.length; $('special-mark-count').textContent = project.specialMarks.length;
-    const entries = markGroup === 'ordinary' ? project.marks.map(mark => ({ ...mark, special: false })) : project.specialMarks.map(mark => ({ ...mark, special: true }));
+    $('ordinary-mark-count').textContent = shownMarks().length; $('special-mark-count').textContent = shownSpecialMarks().length;
+    const entries = markGroup === 'ordinary' ? shownMarks().map(mark => ({ ...mark, special: false })) : shownSpecialMarks().map(mark => ({ ...mark, special: true }));
     const selectedBaseId = $('mark-base-select').value;
     $('mark-grid').innerHTML = entries.map(mark => `<button type="button" class="mark-card${selectedMarks.includes(mark.id) ? ' selected' : ''}" data-mark-id="${html(mark.id)}" data-mark-special="${mark.special}"><span class="mark-char">${html(mark.character)}</span><strong>${html(mark.name)}</strong><small>${html(mark.ipa || mark.kind)} · ${html(mark.kind)}</small></button>`).join('');
     $('mark-grid').querySelectorAll('[data-mark-id]').forEach(button => button.addEventListener('click', () => toggleMark(button.dataset.markId, button.dataset.markSpecial === 'true')));
@@ -236,22 +238,22 @@
   function toggleMark(id, isSpecial) {
     const selected = selectedMarks.findIndex(item => item.id === id);
     if (selected >= 0) selectedMarks.splice(selected, 1);
-    else if (selectedMarks.length >= Number(project.rules.maxStackedMarks || 3)) { toast(`The stack limit is ${project.rules.maxStackedMarks || 3} marks.`, true); return; }
+    else if (selectedMarks.filter(item=>!item.special).length >= (project.activeEra==='modern'?2:Number(project.rules.maxStackedMarks || 3)) && !isSpecial) { toast('Maximum permitted phonetic diacritics reached.', true); return; }
     else selectedMarks.push({ id, special: isSpecial });
     renderMarks();
   }
   function updateMarkPreview() {
     const base = glyphs().find(g => g.id === $('mark-base-select').value);
-    const entries = selectedMarks.map(item => (item.special ? project.specialMarks : project.marks).find(mark => mark.id === item.id)).filter(Boolean);
+    const entries = selectedMarks.map(item => (item.special ? shownSpecialMarks() : shownMarks()).find(mark => mark.id === item.id)).filter(Boolean);
     const baseMark = entries.some(mark => mark.kind === 'base'); const vowelCount = entries.filter(mark => mark.kind === 'vowel').length;
     const archaicStandalone = currentEra().backendEra === 'archaic' && entries.some(mark => ['glottal', 'click'].includes(mark.id));
     const issues = [];
-    if (vowelCount > Number(project.rules.maxVowelMarks || 1)) issues.push(`Only ${project.rules.maxVowelMarks || 1} vowel mark is allowed.`);
+    if (project.activeEra !== 'modern' && vowelCount > Number(project.rules.maxVowelMarks || 1)) issues.push(`Only ${project.rules.maxVowelMarks || 1} vowel mark is allowed.`);
     if (baseMark && (entries.length > 1 || base)) issues.push('The base mark must be used alone.');
     if (archaicStandalone && (base || entries.length > 1)) issues.push('Proto glottal and click are standalone marks.');
     if (!base && entries.length && !archaicStandalone && !baseMark) issues.push('Choose a base glyph to attach these marks.');
-    if (entries.length > Number(project.rules.maxStackedMarks || 3)) issues.push('This stack exceeds the mark limit.');
-    $('mark-stack-count').textContent = `${entries.length} / ${project.rules.maxStackedMarks || 3} marks`;
+    if (project.activeEra==='modern') { const normal=selectedMarks.filter(x=>!x.special).map(x=>x.id); if(normal.length>2)issues.push('Modern permits no more than two phonetic marks.'); if(normal.includes('voiced')&&normal.includes('unvoiced'))issues.push('Voiced and Unvoiced conflict.'); if(normal.includes('separate'))issues.push('Separated Vowel requires a real attached vowel subscript; use the keyboard composer.'); } else if(entries.length>Number(project.rules.maxStackedMarks||3)) issues.push('This historical stack exceeds the mark limit.');
+    $('mark-stack-count').textContent = project.activeEra==='modern' ? `${selectedMarks.filter(x=>!x.special).length} / 2 phonetic marks` : `${entries.length} / ${project.rules.maxStackedMarks || 3} marks`;
     $('selected-mark-chips').innerHTML = entries.map(mark => `<span class="mark-chip">${html(mark.character)} <small>${html(mark.name)}</small></span>`).join('');
     $('mark-validation').textContent = issues.join(' '); $('mark-validation').classList.toggle('invalid', issues.length > 0);
     const sequence = archaicStandalone && entries.length === 1 ? entries[0].character : `${base ? base.character : ''}${entries.map(mark => mark.character).join('')}`;
@@ -271,6 +273,7 @@
   }
   function renderAll(loadCanvas = true) {
     if(project)renderUnicodeVault();
+    document.getElementById('aws-glyph-panel')?.setAttribute('data-active-era',project.activeEra);
     $('project-name').value = project.name; populateEraSelectors(); $('inventory-era-selector').value = project.activeEra; $('lineage-era-selector').value = project.activeEra;
     if (!glyphs().some(g => g.id === selectedId)) selectedId = orderedGlyphs()[0]?.id || null;
     $('era-selector').value = project.activeEra;
@@ -344,7 +347,7 @@
     const relations = project.eraOrder.flatMap(eraId => project.eras[eraId].glyphs.filter(g => g.parents.length || g.lineageNote).map(g => ({ era: eraId, glyphId: g.id, character: g.character, ipa: g.ipa, parents: g.parents, confidence: g.confidence, note: g.lineageNote })));
     exportJson({ schemaVersion: 1, projectId: project.projectId, relationships: relations }, `${safeFileName(project.name)}-lineage.json`);
   }
-  function exportMarks() { exportJson({ rules: project.rules, marks: project.marks, specialMarks: project.specialMarks }, `${safeFileName(project.name)}-marks.json`); }
+  function exportMarks() { exportJson({ rules: project.rules, marks: shownMarks(), specialMarks: shownSpecialMarks() }, `${safeFileName(project.name)}-marks.json`); }
   function exportFont(eraId, format) {
     try { const result = FontExporter.exportEra(project, eraId, format); $('font-output-status').textContent = `${project.eras[eraId].label} ${format.toUpperCase()} downloaded · ${result.glyphCount} outlined characters.`; }
     catch (error) { $('font-output-status').textContent = error.message; toast(error.message, true); }
@@ -484,6 +487,22 @@
       project.marks = project.marks.length ? project.marks : JSON.parse(JSON.stringify(aws.marks));
       project.specialMarks = project.specialMarks.length ? project.specialMarks : JSON.parse(JSON.stringify(aws.specialMarks));
       project.keyLabels = aws.keyLabels.slice();
+      // Surgical Modern-only upgrade. Archive removed historical Modern slots rather than erasing artwork.
+      const oldModern = project.eras.modern.glyphs || [];
+      const modernKeys = new Set(aws.baseLetters.map(x => x.key));
+      const retired = oldModern.filter(g => !modernKeys.has(g.key));
+      if(retired.length){
+        project.retiredModernGlyphs = [...(project.retiredModernGlyphs || []),...retired.filter(g => !(project.retiredModernGlyphs || []).some(x => x.id === g.id))];
+      }
+      project.eras.modern.glyphs = aws.baseLetters.map((source, index) => {
+        const current = oldModern.find(g=>g.key===source.key) || JSON.parse(JSON.stringify(seeded.eras.modern.glyphs.find(g=>g.key===source.key)));
+        return { ...current, key:source.key, character:source.character, codepoint:source.character.codePointAt(0),
+          ipa:source.ipa, latinSubstitute:source.key, transliteration:source.key,
+          category:'independent', order:index, name:'Modern '+source.key };
+      });
+      project.modernMarks = JSON.parse(JSON.stringify(aws.modernMarks || []));
+      project.modernSpecialMarks = JSON.parse(JSON.stringify(aws.modernSpecialMarks || []));
+      project.keyboard = StudioModel.defaultKeyboard(aws.baseLetters);
       ensureUnicodeVault();
       const modern = project.eras.modern;
       const defaultModern = seeded.eras.modern.glyphs;

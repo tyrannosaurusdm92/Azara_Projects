@@ -231,13 +231,13 @@
       scroller.append(grid); builder.append(toolbar, scroller); $('panelContent').append(builder);
     }
   }
-  function showAza(base, view='sounds', selectedMarks=[]) {
+  function showAza(base, view='sounds', selectedMarks=[], selectedSubscripts=[]) {
     if (!window.AzaaraanBridge.isLetter(base)) return;
     state.panel = { type:'azaaraan', base, view };
     const bridge=window.AzaaraanBridge, era=state.era;
-    panel(`Aza’raan · ${base} · ${era}`,view==='sounds'?'Choose a pronunciation':'Maximum 3 marks');
+    panel(`Aza’raan · ${base} · ${era}`,view==='sounds'?'Choose a pronunciation':(era==='Modern'?'Maximum 2 phonetic marks':'Maximum 3 marks'));
     tab('Pronunciation choices',view==='sounds',()=>showAza(base,'sounds'));
-    tab('Build 24 accents',view==='marks',()=>showAza(base,'marks',selectedMarks));
+    tab(era==='Modern'?'Build 12 diacritics':'Build 24 accents',view==='marks',()=>showAza(base,'marks',selectedMarks,selectedSubscripts));
     if(view==='sounds'){
       const list=bridge.soundOptions(base,era),grid=make('div','choices-grid aza-choices');
       const simple=bridge.encode(base,[],era);
@@ -255,21 +255,23 @@
       $('panelContent').append(info,grid);
     } else {
       const selections=[...selectedMarks];
+      const subscripts=selectedSubscripts.map(s=>({...s,marks:[...(s.marks||[])]}));
       const builder=make('div','builder aza-builder');
       const preview=make('output','builder-preview aza-glyph-preview aza-'+era.toLowerCase());
-      const description=make('p','emoji-help','Select up to three different marks (including specials), with at most one vowel. Earlier eras restrict special signs.');
+      const description=make('p','emoji-help',era==='Modern'?'Select up to two phonetic diacritics per letter; punctuation does not count. Up to two dependent letters may be selected beneath the host.':'Historical era: up to three original marks.');
       const action=make('div','builder-top');
       const undo=make('button','','⌫ Undo'),clear=make('button','','Clear'),insert=make('button','insert-accent','Insert glyph');
       const msg=make('small','aza-mark-warning');
       const grid=make('div','choices-grid aza-mark-grid');
       function update(){
-        const checked=bridge.tryEncode(base,selections,era); preview.textContent=checked.value||'—';
+        const checked=bridge.tryEncode(base,selections,era,subscripts); preview.textContent=checked.value||'—';
         msg.textContent=checked.error||selections.map(id=>bridge.markName(id)).join(' + ')||'Base letter';
         insert.disabled=!!checked.error;
         for(const b of grid.querySelectorAll('[data-mark]'))b.setAttribute('aria-pressed',String(selections.includes(b.dataset.mark)));
+        for(const b of grid.querySelectorAll('[data-subscript]'))b.setAttribute('aria-pressed',String(subscripts.some(s=>s.base===b.dataset.subscript)));
       }
-      undo.onclick=()=>{selections.pop();update()};clear.onclick=()=>{selections.length=0;update()};
-      insert.onclick=()=>{const composed=bridge.tryEncode(base,selections,era);if(composed.error){notes.toast(composed.error);return;}notes.insert(composed.value);closePanel();};
+      undo.onclick=()=>{if(selections.length)selections.pop();else subscripts.pop();update()};clear.onclick=()=>{selections.length=0;subscripts.length=0;update()};
+      insert.onclick=()=>{const composed=bridge.tryEncode(base,selections,era,subscripts);if(composed.error){notes.toast(composed.error);return;}notes.insert(composed.value);closePanel();};
       action.append(preview,undo,clear,insert);
       const marks=bridge.availableMarks(era);
       for(const mark of marks){
@@ -283,7 +285,38 @@
           update();
         };grid.append(button);
       }
-      if (era==='Modern'&&window.AWSExtraAccents?.length){for(const extra of window.AWSExtraAccents){const b=make('button','choice',extra.value);b.type='button';b.title=extra.name+' · '+(extra.ipa||'');b.onclick=()=>{notes.insert(extra.value);closePanel()};grid.append(b);}}
+      if(era==='Modern'){
+        const subTitle=make('p','emoji-help','Dependent letters · up to two · 20% size in the written cluster');
+        const subGrid=make('div','choices-grid aza-mark-grid');
+        for(const letter of bridge.rowsForEra('Modern').flat().filter(k=>window.AZA_MODERN.independentLetters[k])){
+          const btn=make('button','choice aza-mark-option');btn.type='button';btn.dataset.subscript=letter;
+          btn.append(make('span','aza-mark-symbol',letter),make('span','aza-mark-text','Subscript '+letter));
+          btn.onclick=()=>{
+            const i=subscripts.findIndex(s=>s.base===letter);
+            if(i>=0)subscripts.splice(i,1);
+            else if(subscripts.length<2)subscripts.push({base:letter,marks:[]});
+            else{notes.toast('At most two dependent letters.');return;}
+            update();
+          };
+          subGrid.append(btn);
+        }
+        const subMarkTitle=make('p','emoji-help','Subscript diacritics · applied to the last selected dependent letter');
+        const subMarkGrid=make('div','choices-grid aza-mark-grid');
+        for(const mark of window.AZA_MODERN.marks.filter(x=>x.id!=='separate')){
+          const btn=make('button','choice aza-mark-option');btn.type='button';
+          btn.append(make('span','aza-mark-symbol',mark.display),make('span','aza-mark-text',mark.name));
+          btn.onclick=()=>{
+            const last=subscripts[subscripts.length-1];if(!last){notes.toast('Choose a subscript first.');return;}
+            const i=last.marks.indexOf(mark.id);
+            if(i>=0)last.marks.splice(i,1);
+            else if(last.marks.length<2)last.marks.push(mark.id);
+            else{notes.toast('Maximum two marks on a dependent letter.');return;}
+            update();
+          };
+          subMarkGrid.append(btn);
+        }
+        grid.append(subTitle,subGrid,subMarkTitle,subMarkGrid);
+      }
       builder.append(action,msg,description,grid);$('panelContent').append(builder);update();
     }
   }

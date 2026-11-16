@@ -6,7 +6,7 @@
     { "id": "preclassical", "label": "Pre-Classical", "backendEra": "archaic", "targetCount": 52, "description": "Transition layer for gradual shape changes." },
     { "id": "classical", "label": "Classical", "backendEra": "classical", "targetCount": 49, "description": "Classical inventory and sound assignments." },
     { "id": "traditional", "label": "Traditional", "backendEra": "traditional", "targetCount": 44, "description": "Traditional cursive inventory." },
-    { "id": "modern", "label": "Modern", "backendEra": "modern", "targetCount": 21, "description": "Modern 21-key Aza'raan base inventory plus auxiliary F and V family glyphs from the tested AWS backend." }
+    { "id": "modern", "label": "Modern", "backendEra": "modern", "targetCount": 20, "description": "Modern 21-key Aza'raan base inventory plus auxiliary F and V family glyphs from the tested AWS backend." }
   ],
   "rules": {
     "oneCodepointPerGlyph": true,
@@ -15,6 +15,9 @@
     "maxStackedMarks": 3,
     "maxVowelMarks": 1,
     "baseMarkExclusive": true,
-    "modernKeyCount": 21
+    "modernKeyCount": 20,
+    "modernMaxDiacritics": 2,
+    "modernMaxSubscripts": 2,
+    "modernSubscriptScale": 0.2
   }
 }

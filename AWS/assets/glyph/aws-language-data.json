@@ -1,20 +1,29 @@
 {
   "source": "Aza'raan language constants copied from the supplied tested AWS backend for frontend compatibility.",
-  "keyLabels": ["A", "B", "D", "E", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "W", "Y", "Z"],
+  "keyLabels": ["A","B","D","E","G","H","I","J","K","L","M","N","O","P","R","S","T","W","Y","Z"],
   "baseLetters": [
-    { "key": "A", "character": "ឯ", "ipa": "a" }, { "key": "B", "character": "ប", "ipa": "b" },
-    { "key": "D", "character": "ដ", "ipa": "d" }, { "key": "E", "character": "ឥ", "ipa": "e" },
-    { "key": "G", "character": "ខ", "ipa": "g" }, { "key": "H", "character": "ហ", "ipa": "h" },
-    { "key": "I", "character": "ឰ", "ipa": "i" }, { "key": "J", "character": "ច", "ipa": "dʒ" },
-    { "key": "K", "character": "គ", "ipa": "k" }, { "key": "L", "character": "ឡ", "ipa": "l" },
-    { "key": "M", "character": "ម", "ipa": "m" }, { "key": "N", "character": "ន", "ipa": "n" },
-    { "key": "O", "character": "ឧ", "ipa": "o" }, { "key": "P", "character": "ព", "ipa": "p" },
-    { "key": "R", "character": "រ", "ipa": "r" }, { "key": "S", "character": "ស", "ipa": "s" },
-    { "key": "T", "character": "ត", "ipa": "t" }, { "key": "U", "character": "ឩ", "ipa": "u" },
-    { "key": "W", "character": "ឆ", "ipa": "w" }, { "key": "Y", "character": "យ", "ipa": "j" },
-    { "key": "Z", "character": "ជ", "ipa": "z" }
+    {"key":"A","character":"អ","ipa":"æ"},
+    {"key":"B","character":"ប","ipa":"b"},
+    {"key":"D","character":"ដ","ipa":"d"},
+    {"key":"E","character":"ឆ","ipa":"ɛ"},
+    {"key":"G","character":"គ","ipa":"g"},
+    {"key":"H","character":"ហ","ipa":"h"},
+    {"key":"I","character":"ញ","ipa":"aɪ"},
+    {"key":"J","character":"ជ","ipa":"dʒ"},
+    {"key":"K","character":"ក","ipa":"k"},
+    {"key":"L","character":"ល","ipa":"l"},
+    {"key":"M","character":"ម","ipa":"m"},
+    {"key":"N","character":"ន","ipa":"n"},
+    {"key":"O","character":"ង","ipa":"oʊ"},
+    {"key":"P","character":"ព","ipa":"p"},
+    {"key":"R","character":"រ","ipa":"r"},
+    {"key":"S","character":"ស","ipa":"s"},
+    {"key":"T","character":"ត","ipa":"t"},
+    {"key":"W","character":"វ","ipa":"wɑ"},
+    {"key":"Y","character":"យ","ipa":"ja"},
+    {"key":"Z","character":"ឝ","ipa":"z"}
   ],
-  "familyGlyphs": [{ "key": "F", "character": "ផ", "ipa": "f" }, { "key": "V", "character": "វ", "ipa": "v" }],
+  "familyGlyphs": [],
   "marks": [
     { "id": "short-a", "name": "Short A", "character": "៊", "ipa": "æ", "kind": "vowel" },
     { "id": "short-e", "name": "Short E", "character": "៎", "ipa": "ɛ", "kind": "vowel" },
@@ -48,5 +57,10 @@
     { "id": "emphasis-next", "name": "Next-syllable emphasis", "character": "៑", "ipa": "", "kind": "special" }
   ],
   "standaloneArchaic": { "glottal": "៉", "click": "្ឃ" },
-  "eraRules": { "archaic": "Glottal and click are standalone glyphs.", "classicalAndLater": "Four special marks attach to base glyphs." }
+  "eraRules": { "archaic": "Glottal and click are standalone glyphs.", "classicalAndLater": "Four special marks attach to base glyphs." },
+  "modernLegacyBaseLetters": [{"key":"U","formerCharacter":"ឩ","mergedInto":"A/O"}],
+  "modernMarks": [{"id":"held","name":"Held Consonant","character":"៌","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"central","name":"Central Vowel","character":"ឹ","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"open","name":"Open Vowel","character":"ា","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"short","name":"Short Vowel","character":"់","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"long","name":"Long Vowel","character":"ី","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"unvoiced","name":"Unvoiced Sound","character":"៍","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"voiced","name":"Voiced Sound","character":"័","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"separate","name":"Separated Vowel","character":"ៈ","ipa":"","kind":"phonetic","hostOnly":true,"requiresVowelSubscript":true},{"id":"nasal","name":"Nasalization","character":"ំ","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"soft","name":"Soft Sound","character":"៉","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"hard","name":"Hard Sound","character":"៊","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false},{"id":"glide","name":"Glide Sound","character":"៎","ipa":"","kind":"phonetic","hostOnly":false,"requiresVowelSubscript":false}],
+  "modernSpecialMarks": [{"id":"S01","name":"Glottal Stop","character":"៏","kind":"punctuation"},{"id":"S02","name":"Click Sound","character":"ះ","kind":"punctuation"},{"id":"S03","name":"Emphasis before","character":"ិ","kind":"punctuation"},{"id":"S04","name":"Emphasis after","character":"ូ","kind":"punctuation"}],
+  "modernLetterCount": 20,
+  "modernSoundIds": ["a.apple","a.father","a.awe","a.ay","a.uh","b.b","b.soft","d.d","d.tap","e.eh","e.ee","f.f","f.voiced","g.g","g.gh","h.h","h.voiced","i.eye","i.ih","j.j","j.zh","k.k","k.kh","k.kw","k.ks","l.l","l.dark","m.m","m.syllabic","n.n","n.ng","n.ny","n.syllabic","o.oh","o.ow","o.oy","o.oo","p.p","p.aspirated","r.rolled","r.tap","r.r","s.s","s.sh","s.softsh","t.t","t.th","t.tch","t.taz","t.aspirated","u.oo","u.uh","v.v","v.glide","w.wah","w.weh","w.wih","w.woo","w.woe","w.wee","y.yah","y.yeh","y.yu","y.yih","y.yee","y.yoh","z.z","z.zn","t.voiced-th","t.aspirated-tch","t.taahzi","k.aspirated-kw","k.x-fricative","n.ngg","n.nj","s.z","d.j"]
 }

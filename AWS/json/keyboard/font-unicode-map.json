@@ -47,8 +47,8 @@
       "fontFile": "fonts/Azaaraan-Modern.ttf",
       "subfamily": "Modern",
       "weightClass": 400,
-      "baseGlyphCount": 21,
-      "accentCount": 24,
+      "baseGlyphCount": 20,
+      "accentCount": 12,
       "specialMarkerCount": 4,
       "codepointCount": 58,
       "features": [
@@ -58,7 +58,7 @@
       ]
     }
   },
-  "keyOrder": "ABDEGHIJKLMNOPRSTUWYZ",
+  "keyOrder": "ABDEGHIJKLMNOPRSTWYZ",
   "unicodePolicy": "All language letters and marks use Khmer assignments from the attached keyboard HTML. Latin-mark filenames are artwork labels only and are not font encodings.",
   "latinLettersEncoded": false,
   "baseLetters": [],
@@ -2108,7 +2108,11 @@
           "U+17AF"
         ],
         "sourceImage": "archaic_34.png",
-        "advanceUnits": 737
+        "advanceUnits": 737,
+        "canonicalLatinKey": "A",
+        "modernCanonicalUnicode": "អ",
+        "modernCanonicalCodepoint": "U+17A2",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "B",
@@ -2117,7 +2121,11 @@
           "U+1794"
         ],
         "sourceImage": "archaic_18.png",
-        "advanceUnits": 765
+        "advanceUnits": 765,
+        "canonicalLatinKey": "B",
+        "modernCanonicalUnicode": "ប",
+        "modernCanonicalCodepoint": "U+1794",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "D",
@@ -2126,7 +2134,11 @@
           "U+178A"
         ],
         "sourceImage": "archaic_6.png",
-        "advanceUnits": 706
+        "advanceUnits": 706,
+        "canonicalLatinKey": "D",
+        "modernCanonicalUnicode": "ដ",
+        "modernCanonicalCodepoint": "U+178A",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "E",
@@ -2135,7 +2147,11 @@
           "U+17A5"
         ],
         "sourceImage": "archaic_36.png",
-        "advanceUnits": 870
+        "advanceUnits": 870,
+        "canonicalLatinKey": "E",
+        "modernCanonicalUnicode": "ឆ",
+        "modernCanonicalCodepoint": "U+1786",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "G",
@@ -2144,7 +2160,11 @@
           "U+1781"
         ],
         "sourceImage": "archaic_8.png",
-        "advanceUnits": 602
+        "advanceUnits": 602,
+        "canonicalLatinKey": "G",
+        "modernCanonicalUnicode": "គ",
+        "modernCanonicalCodepoint": "U+1782",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "H",
@@ -2153,7 +2173,11 @@
           "U+17A0"
         ],
         "sourceImage": "archaic_22.png",
-        "advanceUnits": 887
+        "advanceUnits": 887,
+        "canonicalLatinKey": "H",
+        "modernCanonicalUnicode": "ហ",
+        "modernCanonicalCodepoint": "U+17A0",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "I",
@@ -2162,7 +2186,11 @@
           "U+17B0"
         ],
         "sourceImage": "archaic_35.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "canonicalLatinKey": "I",
+        "modernCanonicalUnicode": "ញ",
+        "modernCanonicalCodepoint": "U+1789",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "J",
@@ -2171,7 +2199,11 @@
           "U+1785"
         ],
         "sourceImage": "archaic_9.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "canonicalLatinKey": "J",
+        "modernCanonicalUnicode": "ជ",
+        "modernCanonicalCodepoint": "U+1787",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "K",
@@ -2180,7 +2212,11 @@
           "U+1782"
         ],
         "sourceImage": "archaic_24.png",
-        "advanceUnits": 759
+        "advanceUnits": 759,
+        "canonicalLatinKey": "K",
+        "modernCanonicalUnicode": "ក",
+        "modernCanonicalCodepoint": "U+1780",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "L",
@@ -2189,7 +2225,11 @@
           "U+17A1"
         ],
         "sourceImage": "archaic_23.png",
-        "advanceUnits": 579
+        "advanceUnits": 579,
+        "canonicalLatinKey": "L",
+        "modernCanonicalUnicode": "ល",
+        "modernCanonicalCodepoint": "U+179B",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "M",
@@ -2198,7 +2238,11 @@
           "U+1798"
         ],
         "sourceImage": "archaic_11.png",
-        "advanceUnits": 919
+        "advanceUnits": 919,
+        "canonicalLatinKey": "M",
+        "modernCanonicalUnicode": "ម",
+        "modernCanonicalCodepoint": "U+1798",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "N",
@@ -2207,7 +2251,11 @@
           "U+1793"
         ],
         "sourceImage": "archaic_20.png",
-        "advanceUnits": 727
+        "advanceUnits": 727,
+        "canonicalLatinKey": "N",
+        "modernCanonicalUnicode": "ន",
+        "modernCanonicalCodepoint": "U+1793",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "O",
@@ -2216,7 +2264,11 @@
           "U+17A7"
         ],
         "sourceImage": "archaic_33.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "canonicalLatinKey": "O",
+        "modernCanonicalUnicode": "ង",
+        "modernCanonicalCodepoint": "U+1784",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "P",
@@ -2225,7 +2277,11 @@
           "U+1796"
         ],
         "sourceImage": "archaic_12.png",
-        "advanceUnits": 661
+        "advanceUnits": 661,
+        "canonicalLatinKey": "P",
+        "modernCanonicalUnicode": "ព",
+        "modernCanonicalCodepoint": "U+1796",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "R",
@@ -2234,7 +2290,11 @@
           "U+179A"
         ],
         "sourceImage": "archaic_14.png",
-        "advanceUnits": 918
+        "advanceUnits": 918,
+        "canonicalLatinKey": "R",
+        "modernCanonicalUnicode": "រ",
+        "modernCanonicalCodepoint": "U+179A",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "S",
@@ -2243,7 +2303,11 @@
           "U+179F"
         ],
         "sourceImage": "archaic_21.png",
-        "advanceUnits": 718
+        "advanceUnits": 718,
+        "canonicalLatinKey": "S",
+        "modernCanonicalUnicode": "ស",
+        "modernCanonicalCodepoint": "U+179F",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "T",
@@ -2252,7 +2316,11 @@
           "U+178F"
         ],
         "sourceImage": "archaic_3.png",
-        "advanceUnits": 641
+        "advanceUnits": 641,
+        "canonicalLatinKey": "T",
+        "modernCanonicalUnicode": "ត",
+        "modernCanonicalCodepoint": "U+178F",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "U",
@@ -2261,7 +2329,9 @@
           "U+17A9"
         ],
         "sourceImage": "archaic_37.png",
-        "advanceUnits": 710
+        "advanceUnits": 710,
+        "modernMergeFamily": "A/O",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "W",
@@ -2270,7 +2340,11 @@
           "U+1786"
         ],
         "sourceImage": "archaic_44.png",
-        "advanceUnits": 801
+        "advanceUnits": 801,
+        "canonicalLatinKey": "W",
+        "modernCanonicalUnicode": "វ",
+        "modernCanonicalCodepoint": "U+179C",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "Y",
@@ -2279,7 +2353,11 @@
           "U+1799"
         ],
         "sourceImage": "archaic_50.png",
-        "advanceUnits": 887
+        "advanceUnits": 887,
+        "canonicalLatinKey": "Y",
+        "modernCanonicalUnicode": "យ",
+        "modernCanonicalCodepoint": "U+1799",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "Z",
@@ -2288,7 +2366,11 @@
           "U+1787"
         ],
         "sourceImage": "archaic_19.png",
-        "advanceUnits": 771
+        "advanceUnits": 771,
+        "canonicalLatinKey": "Z",
+        "modernCanonicalUnicode": "ឝ",
+        "modernCanonicalCodepoint": "U+179D",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "F",
@@ -2297,7 +2379,9 @@
           "U+1795"
         ],
         "sourceImage": "archaic_7.png",
-        "familyVariant": true
+        "familyVariant": true,
+        "modernMergeFamily": "B",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "V",
@@ -2306,7 +2390,9 @@
           "U+179C"
         ],
         "sourceImage": "archaic_18.png",
-        "familyVariant": true
+        "familyVariant": true,
+        "modernMergeFamily": "B",
+        "preserveHistoricalFontEncoding": true
       }
     ],
     "Classical": [
@@ -2317,7 +2403,11 @@
           "U+17AF"
         ],
         "sourceImage": "classical_34.png",
-        "advanceUnits": 723
+        "advanceUnits": 723,
+        "canonicalLatinKey": "A",
+        "modernCanonicalUnicode": "អ",
+        "modernCanonicalCodepoint": "U+17A2",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "B",
@@ -2326,7 +2416,11 @@
           "U+1794"
         ],
         "sourceImage": "classical_18.png",
-        "advanceUnits": 665
+        "advanceUnits": 665,
+        "canonicalLatinKey": "B",
+        "modernCanonicalUnicode": "ប",
+        "modernCanonicalCodepoint": "U+1794",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "D",
@@ -2335,7 +2429,11 @@
           "U+178A"
         ],
         "sourceImage": "classical_6.png",
-        "advanceUnits": 636
+        "advanceUnits": 636,
+        "canonicalLatinKey": "D",
+        "modernCanonicalUnicode": "ដ",
+        "modernCanonicalCodepoint": "U+178A",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "E",
@@ -2344,7 +2442,11 @@
           "U+17A5"
         ],
         "sourceImage": "classical_36.png",
-        "advanceUnits": 868
+        "advanceUnits": 868,
+        "canonicalLatinKey": "E",
+        "modernCanonicalUnicode": "ឆ",
+        "modernCanonicalCodepoint": "U+1786",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "G",
@@ -2353,7 +2455,11 @@
           "U+1781"
         ],
         "sourceImage": "classical_8.png",
-        "advanceUnits": 563
+        "advanceUnits": 563,
+        "canonicalLatinKey": "G",
+        "modernCanonicalUnicode": "គ",
+        "modernCanonicalCodepoint": "U+1782",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "H",
@@ -2362,7 +2468,11 @@
           "U+17A0"
         ],
         "sourceImage": "classical_22.png",
-        "advanceUnits": 858
+        "advanceUnits": 858,
+        "canonicalLatinKey": "H",
+        "modernCanonicalUnicode": "ហ",
+        "modernCanonicalCodepoint": "U+17A0",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "I",
@@ -2371,7 +2481,11 @@
           "U+17B0"
         ],
         "sourceImage": "classical_35.png",
-        "advanceUnits": 844
+        "advanceUnits": 844,
+        "canonicalLatinKey": "I",
+        "modernCanonicalUnicode": "ញ",
+        "modernCanonicalCodepoint": "U+1789",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "J",
@@ -2380,7 +2494,11 @@
           "U+1785"
         ],
         "sourceImage": "classical_9.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "canonicalLatinKey": "J",
+        "modernCanonicalUnicode": "ជ",
+        "modernCanonicalCodepoint": "U+1787",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "K",
@@ -2389,7 +2507,11 @@
           "U+1782"
         ],
         "sourceImage": "classical_24.png",
-        "advanceUnits": 590
+        "advanceUnits": 590,
+        "canonicalLatinKey": "K",
+        "modernCanonicalUnicode": "ក",
+        "modernCanonicalCodepoint": "U+1780",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "L",
@@ -2398,7 +2520,11 @@
           "U+17A1"
         ],
         "sourceImage": "classical_23.png",
-        "advanceUnits": 557
+        "advanceUnits": 557,
+        "canonicalLatinKey": "L",
+        "modernCanonicalUnicode": "ល",
+        "modernCanonicalCodepoint": "U+179B",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "M",
@@ -2407,7 +2533,11 @@
           "U+1798"
         ],
         "sourceImage": "classical_11.png",
-        "advanceUnits": 832
+        "advanceUnits": 832,
+        "canonicalLatinKey": "M",
+        "modernCanonicalUnicode": "ម",
+        "modernCanonicalCodepoint": "U+1798",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "N",
@@ -2416,7 +2546,11 @@
           "U+1793"
         ],
         "sourceImage": "classical_20.png",
-        "advanceUnits": 587
+        "advanceUnits": 587,
+        "canonicalLatinKey": "N",
+        "modernCanonicalUnicode": "ន",
+        "modernCanonicalCodepoint": "U+1793",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "O",
@@ -2425,7 +2559,11 @@
           "U+17A7"
         ],
         "sourceImage": "classical_33.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "canonicalLatinKey": "O",
+        "modernCanonicalUnicode": "ង",
+        "modernCanonicalCodepoint": "U+1784",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "P",
@@ -2434,7 +2572,11 @@
           "U+1796"
         ],
         "sourceImage": "classical_12.png",
-        "advanceUnits": 603
+        "advanceUnits": 603,
+        "canonicalLatinKey": "P",
+        "modernCanonicalUnicode": "ព",
+        "modernCanonicalCodepoint": "U+1796",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "R",
@@ -2443,7 +2585,11 @@
           "U+179A"
         ],
         "sourceImage": "classical_14.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "canonicalLatinKey": "R",
+        "modernCanonicalUnicode": "រ",
+        "modernCanonicalCodepoint": "U+179A",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "S",
@@ -2452,7 +2598,11 @@
           "U+179F"
         ],
         "sourceImage": "classical_21.png",
-        "advanceUnits": 713
+        "advanceUnits": 713,
+        "canonicalLatinKey": "S",
+        "modernCanonicalUnicode": "ស",
+        "modernCanonicalCodepoint": "U+179F",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "T",
@@ -2461,7 +2611,11 @@
           "U+178F"
         ],
         "sourceImage": "classical_3.png",
-        "advanceUnits": 632
+        "advanceUnits": 632,
+        "canonicalLatinKey": "T",
+        "modernCanonicalUnicode": "ត",
+        "modernCanonicalCodepoint": "U+178F",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "U",
@@ -2470,7 +2624,9 @@
           "U+17A9"
         ],
         "sourceImage": "classical_37.png",
-        "advanceUnits": 727
+        "advanceUnits": 727,
+        "modernMergeFamily": "A/O",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "W",
@@ -2479,7 +2635,11 @@
           "U+1786"
         ],
         "sourceImage": "classical_44.png",
-        "advanceUnits": 758
+        "advanceUnits": 758,
+        "canonicalLatinKey": "W",
+        "modernCanonicalUnicode": "វ",
+        "modernCanonicalCodepoint": "U+179C",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "Y",
@@ -2488,7 +2648,11 @@
           "U+1799"
         ],
         "sourceImage": "classical_50.png",
-        "advanceUnits": 922
+        "advanceUnits": 922,
+        "canonicalLatinKey": "Y",
+        "modernCanonicalUnicode": "យ",
+        "modernCanonicalCodepoint": "U+1799",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "Z",
@@ -2497,7 +2661,11 @@
           "U+1787"
         ],
         "sourceImage": "classical_19.png",
-        "advanceUnits": 708
+        "advanceUnits": 708,
+        "canonicalLatinKey": "Z",
+        "modernCanonicalUnicode": "ឝ",
+        "modernCanonicalCodepoint": "U+179D",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "F",
@@ -2506,7 +2674,9 @@
           "U+1795"
         ],
         "sourceImage": "classical_7.png",
-        "familyVariant": true
+        "familyVariant": true,
+        "modernMergeFamily": "B",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "V",
@@ -2515,7 +2685,9 @@
           "U+179C"
         ],
         "sourceImage": "classical_18.png",
-        "familyVariant": true
+        "familyVariant": true,
+        "modernMergeFamily": "B",
+        "preserveHistoricalFontEncoding": true
       }
     ],
     "Traditional": [
@@ -2526,7 +2698,11 @@
           "U+17AF"
         ],
         "sourceImage": "traditional_34.png",
-        "advanceUnits": 715
+        "advanceUnits": 715,
+        "canonicalLatinKey": "A",
+        "modernCanonicalUnicode": "អ",
+        "modernCanonicalCodepoint": "U+17A2",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "B",
@@ -2535,7 +2711,11 @@
           "U+1794"
         ],
         "sourceImage": "traditional_18.png",
-        "advanceUnits": 640
+        "advanceUnits": 640,
+        "canonicalLatinKey": "B",
+        "modernCanonicalUnicode": "ប",
+        "modernCanonicalCodepoint": "U+1794",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "D",
@@ -2544,7 +2724,11 @@
           "U+178A"
         ],
         "sourceImage": "traditional_6.png",
-        "advanceUnits": 698
+        "advanceUnits": 698,
+        "canonicalLatinKey": "D",
+        "modernCanonicalUnicode": "ដ",
+        "modernCanonicalCodepoint": "U+178A",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "E",
@@ -2553,7 +2737,11 @@
           "U+17A5"
         ],
         "sourceImage": "traditional_36.png",
-        "advanceUnits": 761
+        "advanceUnits": 761,
+        "canonicalLatinKey": "E",
+        "modernCanonicalUnicode": "ឆ",
+        "modernCanonicalCodepoint": "U+1786",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "G",
@@ -2562,7 +2750,11 @@
           "U+1781"
         ],
         "sourceImage": "traditional_8.png",
-        "advanceUnits": 646
+        "advanceUnits": 646,
+        "canonicalLatinKey": "G",
+        "modernCanonicalUnicode": "គ",
+        "modernCanonicalCodepoint": "U+1782",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "H",
@@ -2571,7 +2763,11 @@
           "U+17A0"
         ],
         "sourceImage": "traditional_22.png",
-        "advanceUnits": 750
+        "advanceUnits": 750,
+        "canonicalLatinKey": "H",
+        "modernCanonicalUnicode": "ហ",
+        "modernCanonicalCodepoint": "U+17A0",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "I",
@@ -2580,7 +2776,11 @@
           "U+17B0"
         ],
         "sourceImage": "traditional_35.png",
-        "advanceUnits": 806
+        "advanceUnits": 806,
+        "canonicalLatinKey": "I",
+        "modernCanonicalUnicode": "ញ",
+        "modernCanonicalCodepoint": "U+1789",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "J",
@@ -2589,7 +2789,11 @@
           "U+1785"
         ],
         "sourceImage": "traditional_9.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "canonicalLatinKey": "J",
+        "modernCanonicalUnicode": "ជ",
+        "modernCanonicalCodepoint": "U+1787",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "K",
@@ -2598,7 +2802,11 @@
           "U+1782"
         ],
         "sourceImage": "traditional_24.png",
-        "advanceUnits": 550
+        "advanceUnits": 550,
+        "canonicalLatinKey": "K",
+        "modernCanonicalUnicode": "ក",
+        "modernCanonicalCodepoint": "U+1780",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "L",
@@ -2607,7 +2815,11 @@
           "U+17A1"
         ],
         "sourceImage": "traditional_23.png",
-        "advanceUnits": 526
+        "advanceUnits": 526,
+        "canonicalLatinKey": "L",
+        "modernCanonicalUnicode": "ល",
+        "modernCanonicalCodepoint": "U+179B",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "M",
@@ -2616,7 +2828,11 @@
           "U+1798"
         ],
         "sourceImage": "traditional_11.png",
-        "advanceUnits": 801
+        "advanceUnits": 801,
+        "canonicalLatinKey": "M",
+        "modernCanonicalUnicode": "ម",
+        "modernCanonicalCodepoint": "U+1798",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "N",
@@ -2625,7 +2841,11 @@
           "U+1793"
         ],
         "sourceImage": "traditional_20.png",
-        "advanceUnits": 596
+        "advanceUnits": 596,
+        "canonicalLatinKey": "N",
+        "modernCanonicalUnicode": "ន",
+        "modernCanonicalCodepoint": "U+1793",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "O",
@@ -2634,7 +2854,11 @@
           "U+17A7"
         ],
         "sourceImage": "traditional_33.png",
-        "advanceUnits": 919
+        "advanceUnits": 919,
+        "canonicalLatinKey": "O",
+        "modernCanonicalUnicode": "ង",
+        "modernCanonicalCodepoint": "U+1784",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "P",
@@ -2643,7 +2867,11 @@
           "U+1796"
         ],
         "sourceImage": "traditional_12.png",
-        "advanceUnits": 615
+        "advanceUnits": 615,
+        "canonicalLatinKey": "P",
+        "modernCanonicalUnicode": "ព",
+        "modernCanonicalCodepoint": "U+1796",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "R",
@@ -2652,7 +2880,11 @@
           "U+179A"
         ],
         "sourceImage": "traditional_14.png",
-        "advanceUnits": 918
+        "advanceUnits": 918,
+        "canonicalLatinKey": "R",
+        "modernCanonicalUnicode": "រ",
+        "modernCanonicalCodepoint": "U+179A",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "S",
@@ -2661,7 +2893,11 @@
           "U+179F"
         ],
         "sourceImage": "traditional_21.png",
-        "advanceUnits": 649
+        "advanceUnits": 649,
+        "canonicalLatinKey": "S",
+        "modernCanonicalUnicode": "ស",
+        "modernCanonicalCodepoint": "U+179F",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "T",
@@ -2670,7 +2906,11 @@
           "U+178F"
         ],
         "sourceImage": "traditional_3.png",
-        "advanceUnits": 593
+        "advanceUnits": 593,
+        "canonicalLatinKey": "T",
+        "modernCanonicalUnicode": "ត",
+        "modernCanonicalCodepoint": "U+178F",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "U",
@@ -2679,7 +2919,9 @@
           "U+17A9"
         ],
         "sourceImage": "traditional_37.png",
-        "advanceUnits": 669
+        "advanceUnits": 669,
+        "modernMergeFamily": "A/O",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "W",
@@ -2688,7 +2930,11 @@
           "U+1786"
         ],
         "sourceImage": "traditional_44.png",
-        "advanceUnits": 767
+        "advanceUnits": 767,
+        "canonicalLatinKey": "W",
+        "modernCanonicalUnicode": "វ",
+        "modernCanonicalCodepoint": "U+179C",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "Y",
@@ -2697,7 +2943,11 @@
           "U+1799"
         ],
         "sourceImage": "traditional_50.png",
-        "advanceUnits": 922
+        "advanceUnits": 922,
+        "canonicalLatinKey": "Y",
+        "modernCanonicalUnicode": "យ",
+        "modernCanonicalCodepoint": "U+1799",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "Z",
@@ -2706,7 +2956,11 @@
           "U+1787"
         ],
         "sourceImage": "traditional_19.png",
-        "advanceUnits": 728
+        "advanceUnits": 728,
+        "canonicalLatinKey": "Z",
+        "modernCanonicalUnicode": "ឝ",
+        "modernCanonicalCodepoint": "U+179D",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "F",
@@ -2715,7 +2969,9 @@
           "U+1795"
         ],
         "sourceImage": "traditional_18.png",
-        "familyVariant": true
+        "familyVariant": true,
+        "modernMergeFamily": "B",
+        "preserveHistoricalFontEncoding": true
       },
       {
         "key": "V",
@@ -2724,18 +2980,21 @@
           "U+179C"
         ],
         "sourceImage": "traditional_18.png",
-        "familyVariant": true
+        "familyVariant": true,
+        "modernMergeFamily": "B",
+        "preserveHistoricalFontEncoding": true
       }
     ],
     "Modern": [
       {
         "key": "A",
-        "unicode": "ឯ",
+        "unicode": "អ",
         "codepoints": [
-          "U+17AF"
+          "U+17A2"
         ],
         "sourceImage": "modern_34.png",
-        "advanceUnits": 720
+        "advanceUnits": 720,
+        "canonicalModern": true
       },
       {
         "key": "B",
@@ -2744,7 +3003,8 @@
           "U+1794"
         ],
         "sourceImage": "modern_18.png",
-        "advanceUnits": 833
+        "advanceUnits": 833,
+        "canonicalModern": true
       },
       {
         "key": "D",
@@ -2753,25 +3013,28 @@
           "U+178A"
         ],
         "sourceImage": "modern_6.png",
-        "advanceUnits": 753
+        "advanceUnits": 753,
+        "canonicalModern": true
       },
       {
         "key": "E",
-        "unicode": "ឥ",
+        "unicode": "ឆ",
         "codepoints": [
-          "U+17A5"
+          "U+1786"
         ],
         "sourceImage": "modern_36.png",
-        "advanceUnits": 820
+        "advanceUnits": 820,
+        "canonicalModern": true
       },
       {
         "key": "G",
-        "unicode": "ខ",
+        "unicode": "គ",
         "codepoints": [
-          "U+1781"
+          "U+1782"
         ],
         "sourceImage": "modern_8.png",
-        "advanceUnits": 919
+        "advanceUnits": 919,
+        "canonicalModern": true
       },
       {
         "key": "H",
@@ -2780,43 +3043,48 @@
           "U+17A0"
         ],
         "sourceImage": "modern_22.png",
-        "advanceUnits": 377
+        "advanceUnits": 377,
+        "canonicalModern": true
       },
       {
         "key": "I",
-        "unicode": "ឰ",
+        "unicode": "ញ",
         "codepoints": [
-          "U+17B0"
+          "U+1789"
         ],
         "sourceImage": "modern_35.png",
-        "advanceUnits": 749
+        "advanceUnits": 749,
+        "canonicalModern": true
       },
       {
         "key": "J",
-        "unicode": "ច",
+        "unicode": "ជ",
         "codepoints": [
-          "U+1785"
+          "U+1787"
         ],
         "sourceImage": "modern_9.png",
-        "advanceUnits": 578
+        "advanceUnits": 578,
+        "canonicalModern": true
       },
       {
         "key": "K",
-        "unicode": "គ",
+        "unicode": "ក",
         "codepoints": [
-          "U+1782"
+          "U+1780"
         ],
         "sourceImage": "modern_24.png",
-        "advanceUnits": 530
+        "advanceUnits": 530,
+        "canonicalModern": true
       },
       {
         "key": "L",
-        "unicode": "ឡ",
+        "unicode": "ល",
         "codepoints": [
-          "U+17A1"
+          "U+179B"
         ],
         "sourceImage": "modern_23.png",
-        "advanceUnits": 580
+        "advanceUnits": 580,
+        "canonicalModern": true
       },
       {
         "key": "M",
@@ -2825,7 +3093,8 @@
           "U+1798"
         ],
         "sourceImage": "modern_11.png",
-        "advanceUnits": 844
+        "advanceUnits": 844,
+        "canonicalModern": true
       },
       {
         "key": "N",
@@ -2834,16 +3103,18 @@
           "U+1793"
         ],
         "sourceImage": "modern_20.png",
-        "advanceUnits": 601
+        "advanceUnits": 601,
+        "canonicalModern": true
       },
       {
         "key": "O",
-        "unicode": "ឧ",
+        "unicode": "ង",
         "codepoints": [
-          "U+17A7"
+          "U+1784"
         ],
         "sourceImage": "modern_33.png",
-        "advanceUnits": 919
+        "advanceUnits": 919,
+        "canonicalModern": true
       },
       {
         "key": "P",
@@ -2852,7 +3123,8 @@
           "U+1796"
         ],
         "sourceImage": "modern_12.png",
-        "advanceUnits": 523
+        "advanceUnits": 523,
+        "canonicalModern": true
       },
       {
         "key": "R",
@@ -2861,7 +3133,8 @@
           "U+179A"
         ],
         "sourceImage": "modern_14.png",
-        "advanceUnits": 857
+        "advanceUnits": 857,
+        "canonicalModern": true
       },
       {
         "key": "S",
@@ -2870,7 +3143,8 @@
           "U+179F"
         ],
         "sourceImage": "modern_21.png",
-        "advanceUnits": 666
+        "advanceUnits": 666,
+        "canonicalModern": true
       },
       {
         "key": "T",
@@ -2879,25 +3153,18 @@
           "U+178F"
         ],
         "sourceImage": "modern_3.png",
-        "advanceUnits": 540
-      },
-      {
-        "key": "U",
-        "unicode": "ឩ",
-        "codepoints": [
-          "U+17A9"
-        ],
-        "sourceImage": "modern_37.png",
-        "advanceUnits": 726
+        "advanceUnits": 540,
+        "canonicalModern": true
       },
       {
         "key": "W",
-        "unicode": "ឆ",
+        "unicode": "វ",
         "codepoints": [
-          "U+1786"
+          "U+179C"
         ],
         "sourceImage": "modern_44.png",
-        "advanceUnits": 920
+        "advanceUnits": 920,
+        "canonicalModern": true
       },
       {
         "key": "Y",
@@ -2906,35 +3173,194 @@
           "U+1799"
         ],
         "sourceImage": "modern_50.png",
-        "advanceUnits": 918
+        "advanceUnits": 918,
+        "canonicalModern": true
       },
       {
         "key": "Z",
-        "unicode": "ជ",
+        "unicode": "ឝ",
         "codepoints": [
-          "U+1787"
+          "U+179D"
         ],
         "sourceImage": "modern_19.png",
-        "advanceUnits": 790
-      },
-      {
-        "key": "F",
-        "unicode": "ផ",
-        "codepoints": [
-          "U+1795"
-        ],
-        "sourceImage": "modern_18.png",
-        "familyVariant": true
-      },
-      {
-        "key": "V",
-        "unicode": "វ",
-        "codepoints": [
-          "U+179C"
-        ],
-        "sourceImage": "modern_18.png",
-        "familyVariant": true
+        "advanceUnits": 790,
+        "canonicalModern": true
       }
     ]
-  }
+  },
+  "modernPhoneticMarks": [
+    {
+      "id": "held",
+      "name": "Held Consonant",
+      "unicode": "៌",
+      "codepoints": [
+        "U+17CC"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "central",
+      "name": "Central Vowel",
+      "unicode": "ឹ",
+      "codepoints": [
+        "U+17B9"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "open",
+      "name": "Open Vowel",
+      "unicode": "ា",
+      "codepoints": [
+        "U+17B6"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "short",
+      "name": "Short Vowel",
+      "unicode": "់",
+      "codepoints": [
+        "U+17CB"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "long",
+      "name": "Long Vowel",
+      "unicode": "ី",
+      "codepoints": [
+        "U+17B8"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "unvoiced",
+      "name": "Unvoiced Sound",
+      "unicode": "៍",
+      "codepoints": [
+        "U+17CD"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "voiced",
+      "name": "Voiced Sound",
+      "unicode": "័",
+      "codepoints": [
+        "U+17D0"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "separate",
+      "name": "Separated Vowel",
+      "unicode": "ៈ",
+      "codepoints": [
+        "U+17C8"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": true
+    },
+    {
+      "id": "nasal",
+      "name": "Nasalization",
+      "unicode": "ំ",
+      "codepoints": [
+        "U+17C6"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "soft",
+      "name": "Soft Sound",
+      "unicode": "៉",
+      "codepoints": [
+        "U+17C9"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "hard",
+      "name": "Hard Sound",
+      "unicode": "៊",
+      "codepoints": [
+        "U+17CA"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    },
+    {
+      "id": "glide",
+      "name": "Glide Sound",
+      "unicode": "៎",
+      "codepoints": [
+        "U+17CE"
+      ],
+      "placement": "left-or-right; secondary attached to primary",
+      "hostOnly": false
+    }
+  ],
+  "modernDependentLetters": {
+    "a": "្អ",
+    "b": "្ប",
+    "d": "្ដ",
+    "e": "្ឆ",
+    "g": "្គ",
+    "h": "្ហ",
+    "i": "្ញ",
+    "j": "្ជ",
+    "k": "្ក",
+    "l": "្ល",
+    "m": "្ម",
+    "n": "្ន",
+    "o": "្ង",
+    "p": "្ព",
+    "r": "្រ",
+    "s": "្ស",
+    "t": "្ត",
+    "w": "្វ",
+    "y": "្យ",
+    "z": "្ឝ"
+  },
+  "modernSpecialMarkers": [
+    {
+      "id": "S01",
+      "name": "Glottal Stop",
+      "khmer": "៏",
+      "display": "'",
+      "special": true
+    },
+    {
+      "id": "S02",
+      "name": "Click Sound",
+      "khmer": "ះ",
+      "display": "¡",
+      "special": true
+    },
+    {
+      "id": "S03",
+      "name": "Emphasis before",
+      "khmer": "ិ",
+      "display": "<",
+      "special": true
+    },
+    {
+      "id": "S04",
+      "name": "Emphasis after",
+      "khmer": "ូ",
+      "display": ">",
+      "special": true
+    }
+  ],
+  "eraFontCompatibility": "Historical style files remain unchanged. For glyphs whose codepoint differs from Modern, legacy unicode remains as rendering encoding and modernCanonicalUnicode is semantic alignment metadata."
 }

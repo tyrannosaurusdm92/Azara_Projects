@@ -66,3 +66,10 @@
 @media (max-width:600px){.evolution-pane .site-top{padding:24px 15px 12px}.evolution-pane .chart-caption,.evolution-pane .detail,.evolution-pane .legend{padding-left:15px;padding-right:15px}.evolution-pane .detail-card{padding:14px}.evolution-pane .chart-frame{scrollbar-width:thin}}
 @media print{.evolution-pane body{background:white;color:black}.evolution-pane .site-top,.evolution-pane .legend,.evolution-pane .detail,.evolution-pane .chart-caption{color:black}.evolution-pane .toolbar{display:none}.evolution-pane .chart-frame{overflow:visible;transform-origin:top left;zoom:.55}.evolution-pane .chart{margin:0}.evolution-pane .detail,.evolution-pane .legend{break-inside:auto}}
 @media (max-width:600px){.evolution-pane .table-glyphs{gap:2px}.evolution-pane .table-glyph{width:29px;height:34px}.evolution-pane .table-mark{width:23px;height:29px}}
+/* Modern chart glyphs use Modern font only; no changes to earlier era artwork or layout. */
+.evolution-pane .glyph.modern .textmark {font-family:AzModern,'Noto Sans Khmer',sans-serif}
+
+/* Canonical font for Modern data cells and lineage chip only. */
+.evolution-pane .table-letter.aza-modern,.evolution-pane td.symbol-cell.aza-modern{font-family:AzModern,'Noto Sans Khmer',sans-serif}
+.evolution-pane .lineage-chip[data-stage="modern"] .mini-text{font-family:AzModern,'Noto Sans Khmer',sans-serif}
+.evolution-pane .table-letter.aza-modern small{font-family:Inter,system-ui,Arial,sans-serif}

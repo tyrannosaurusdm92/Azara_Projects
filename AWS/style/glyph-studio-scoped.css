@@ -439,3 +439,13 @@
 #aws-glyph-panel .selected-character-row{ padding: 12px 14px; }}
 @media  print {#aws-glyph-panel{ min-width: 0; }}
 #aws-glyph-panel[hidden], #aws-library-panel[hidden],#aws-tts-panel[hidden]{display:none!important}
+
+/* Modern glyph content only: preserve every Glyph Studio UI style and all other era fonts. */
+#aws-glyph-panel[data-active-era="modern"] .glyph-art,
+#aws-glyph-panel[data-active-era="modern"] .glyph-symbol,
+#aws-glyph-panel[data-active-era="modern"] .selected-glyph,
+#aws-glyph-panel[data-active-era="modern"] .preview-glyph,
+#aws-glyph-panel[data-active-era="modern"] .mark-char,
+#aws-glyph-panel[data-active-era="modern"] .composer-preview,
+#aws-glyph-panel[data-active-era="modern"] .keyboard-key-output,
+#aws-glyph-panel[data-active-era="modern"] .character-input{font-family:AzModern,'Noto Sans Khmer',sans-serif}
