@@ -88,7 +88,7 @@
         if (raw === 'SPACE') button.classList.add('space');
         if (raw === 'SHIFT') { button.classList.toggle('active', !!state.shift); button.setAttribute('aria-pressed', String(!!state.shift)); if (state.shift === 2) button.querySelector('.key-label').textContent = '⇧•'; }
         button.setAttribute('aria-label', azaLetters && window.AzaaraanBridge.isLetter(raw) ? `${raw}: ${label}, hold to choose Aza’raan sounds and accents` : aria[raw] || (raw.startsWith('AZA_') ? 'Aza’raan special sign' : `${label}${letters(raw) ? ', hold for accents' : ''}`));
-        button.title = azaLetters && window.AzaaraanBridge.isLetter(raw) ? `${raw} · hold for pronunciation and up to 3 accents` : (letters(raw) ? `${effective(raw)} · hold for accents` : aria[raw] || label);
+        button.title = azaLetters && window.AzaaraanBridge.isLetter(raw) ? `${raw} · hold for pronunciation and accents` : (letters(raw) ? `${effective(raw)} · hold for accents` : aria[raw] || label);
         row.append(button);
       }
       if (row.children.length) rows.append(row);
@@ -235,9 +235,9 @@
     if (!window.AzaaraanBridge.isLetter(base)) return;
     state.panel = { type:'azaaraan', base, view };
     const bridge=window.AzaaraanBridge, era=state.era;
-    panel(`Aza’raan · ${base} · ${era}`,view==='sounds'?'Choose a pronunciation':'Maximum 3 marks');
+    panel(`Aza’raan · ${base} · ${era}`,view==='sounds'?'Choose a pronunciation':(era==='Modern'?'Maximum 2 ordinary marks':'Maximum 3 historical marks'));
     tab('Pronunciation choices',view==='sounds',()=>showAza(base,'sounds'));
-    tab('Build 24 accents',view==='marks',()=>showAza(base,'marks',selectedMarks));
+    tab(era==='Modern'?'Build 12 diacritics':'Build 24 accents',view==='marks',()=>showAza(base,'marks',selectedMarks));
     if(view==='sounds'){
       const list=bridge.soundOptions(base,era),grid=make('div','choices-grid aza-choices');
       const simple=bridge.encode(base,[],era);
@@ -257,7 +257,7 @@
       const selections=[...selectedMarks];
       const builder=make('div','builder aza-builder');
       const preview=make('output','builder-preview aza-glyph-preview aza-'+era.toLowerCase());
-      const description=make('p','emoji-help','Select up to three different marks (including specials), with at most one vowel. Earlier eras restrict special signs.');
+      const description=make('p','emoji-help',era==='Modern'?'Select up to two Modern phonetic marks; special signs do not count. Separated Vowel requires a vowel subscript.':'Select up to three historical marks; earlier eras restrict special signs.');
       const action=make('div','builder-top');
       const undo=make('button','','⌫ Undo'),clear=make('button','','Clear'),insert=make('button','insert-accent','Insert glyph');
       const msg=make('small','aza-mark-warning');
@@ -274,8 +274,8 @@
       const marks=bridge.availableMarks(era);
       for(const mark of marks){
         const button=make('button','choice aza-mark-option');button.type='button';button.dataset.mark=mark.id;
-        const marker=make('span','aza-mark-symbol',mark.display);
-        const name=make('span','aza-mark-text',mark.name+' · '+(mark.ipa||mark.meaning||''));
+        const marker=make('span','aza-mark-symbol',mark.display||mark.khmer||mark.character||mark.name);
+        const name=make('span','aza-mark-text',(mark.name||mark.label||mark.id)+' · '+(mark.ipa||mark.meaning||''));
         button.append(marker,name);
         button.title=mark.meaning||mark.name;
         button.onclick=()=>{
