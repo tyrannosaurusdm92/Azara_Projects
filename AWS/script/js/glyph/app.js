@@ -483,6 +483,14 @@
       project.eraOrder = eraData.eras.map(era => era.id); project.rules = Object.assign({}, eraData.rules, project.rules || {});
       project.marks = project.marks.length ? project.marks : JSON.parse(JSON.stringify(aws.marks));
       project.specialMarks = project.specialMarks.length ? project.specialMarks : JSON.parse(JSON.stringify(aws.specialMarks));
+      // Current Modern semantics; preserve the previous mark inventory as historical metadata.
+      if (aws.marks?.length === 12 && project.marks.length !== 12) {
+        project.legacyMarks = JSON.parse(JSON.stringify(project.marks));
+        project.marks = JSON.parse(JSON.stringify(aws.marks));
+      }
+      if (aws.specialMarks?.length === 4) {
+        project.specialMarks = JSON.parse(JSON.stringify(aws.specialMarks));
+      }
       project.keyLabels = aws.keyLabels.slice();
       ensureUnicodeVault();
       const modern = project.eras.modern;
@@ -496,8 +504,28 @@
           else modern.glyphs.push(JSON.parse(JSON.stringify(glyph)));
         });
       } else {
-        defaultModern.filter(glyph => ['F', 'V'].includes(glyph.key)).forEach(glyph => { if (!modern.glyphs.some(item => item.key === glyph.key)) modern.glyphs.push(JSON.parse(JSON.stringify(glyph))); });
+        // Match the approved Modern Unicode and Latin keys without replacing saved artwork.
+        defaultModern.forEach(glyph => {
+          const existing = modern.glyphs.find(item => item.key === glyph.key || item.id === glyph.id);
+          if (existing) {
+            existing.character = glyph.character;
+            existing.codepoint = glyph.codepoint;
+            existing.ipa = glyph.ipa;
+            existing.transliteration = glyph.key;
+            existing.latinSubstitute = glyph.key;
+            existing.key = glyph.key;
+          } else modern.glyphs.push(JSON.parse(JSON.stringify(glyph)));
+        });
       }
+      // Retain obsolete custom artwork as historical entries, never live Modern keyboard keys.
+      modern.glyphs.forEach(glyph => {
+        if (glyph.key && !aws.baseLetters.some(base => base.key === glyph.key)) {
+          glyph.previousKey = glyph.key;
+          glyph.key = '';
+          glyph.category = 'historical-family';
+        }
+      });
+      modern.glyphs.forEach((glyph,index) => { glyph.order = index; });
 
       project.updatedAt = new Date().toISOString();
       await StudioStorage.save(project);
