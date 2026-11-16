@@ -8,6 +8,9 @@ const overlay=document.getElementById('connectors');
 const pick=document.getElementById('focus');
 const detail=document.getElementById('detail');
 const NS='http://www.w3.org/2000/svg';
+const modernSpec=window.AZA_CONFIG?.modernOrthography;
+const modernGlyph=(letter)=>modernSpec?.independentUnicode?.[letter]||((window.AZA_LETTERS||{})[letter]||letter);
+const textMark=(value,kind)=>{const el=document.createElement('span');el.className=kind;el.textContent=value;el.style.fontFamily='AzModern';return el;};
 const roots=new Map(D.roots.map(r=>[r.slot,r]));
 const families=new Map(D.families.map(f=>[f.family,f]));
 const mergeBySlot=new Map(D.mergers.map(m=>[m.slot,m]));
@@ -43,7 +46,8 @@ function drawLineageChips(slot){
  D.stages.forEach((stage,i)=>{
   const owner=resolveOwner(slot,i), r=owner===null?null:roots.get(owner), node=r&&r.stages[stage.key];
   const chip=document.createElement('span');chip.className='lineage-chip';chip.style.color=r?colorFor(r):'#aeb7c7';
-  if(node&&node.src){const m=document.createElement('img');m.className='mini-mark';setMask(m,node.src);chip.appendChild(m)}
+  if(stage.key==='modern'&&node?.text){chip.appendChild(textMark(node.text,'mini-text'));}
+   else if(node&&node.src){const m=document.createElement('img');m.className='mini-mark';setMask(m,node.src);chip.appendChild(m)}
   else if(node&&node.text){const t=document.createElement('span');t.className='mini-text';t.textContent=node.text;chip.appendChild(t)}
   else{const t=document.createElement('span');t.className='mini-text';t.textContent='—';chip.appendChild(t)}
   const label=document.createElement('small');label.textContent=owner!==null&&owner!==slot?'→ '+stage.label+' · root '+String(owner).padStart(2,'0'):stage.label;chip.appendChild(label);wrap.appendChild(chip);
@@ -82,8 +86,8 @@ function renderFamily(familyKey){
  const note=document.createElement('div');note.className='detail-note';
  const readings=(fam.readings||[]).map(x=>x.name+' '+x.unicode+(x.ipa?' '+x.ipa:'')).join(' · ');
  const origins=members.map(r=>r.origin+' ('+r.sound+')').join(' · ');
- note.textContent='Historical source roots: '+origins+'. Legacy Latin readings: '+readings+'. Current encoding uses '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' plus the revised accents in the typing tab.';
- detail.appendChild(note);detail.appendChild(copyButton((window.AZA_LETTERS||{})[fam.family]||fam.letter,'Copy Aza’raan '+fam.letter));
+ note.textContent='Historical source roots: '+origins+'. Modern readings: '+readings+'. Current Khmer encoding uses '+modernGlyph(fam.family)+' plus the revised 12 diacritics in the typing tab.';
+ detail.appendChild(note);detail.appendChild(copyButton(modernGlyph(fam.family),'Copy Aza’raan '+fam.letter));
  highlight(new Set([familyKey]),null);
 }
 function selectGlyph(stageKey,slot){
@@ -96,7 +100,7 @@ function selectGlyph(stageKey,slot){
  title.textContent=picked+' · '+r.origin+' · '+r.sound;detail.appendChild(title);
  detail.appendChild(drawLineageChips(slot));
  const note=document.createElement('div');note.className='detail-note';
- const specialRootCodes={'1':'៉','52':'្ឃ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&(window.AZA_LETTERS||{})[family.family])))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
+ const specialRootCodes={'1':'៏','52':'ះ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&modernGlyph(family.family))))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
  note.textContent=rootDesc(stage,r,node)+'. '+(node&&node.label?node.label+'. ':'')+'The modern reading is '+(family?family.letter:(node&&node.text)||r.reflex)+'.';
  detail.appendChild(note);detail.appendChild(copyButton(copyText,'Copy reading '+copyText));
  highlight(new Set([familyFor(r)]),[stageKey,slot]);pick.value='';
@@ -116,7 +120,7 @@ function renderTable(){
   const members=D.roots.filter(r=>r.family===fam.family);
   const tr=document.createElement('tr');
   const modern=document.createElement('td');modern.className='symbol-cell table-letter';modern.textContent=fam.letter;
-  const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' · 24 contemporary marks';modern.appendChild(variants);
+  const variants=document.createElement('small');variants.textContent=fam.modernRetired?'Historical U; Modern /ʌ/→A, /uː/→O':'Khmer: '+modernGlyph(fam.family)+' · 12 contemporary diacritics';modern.appendChild(variants);
   tr.appendChild(modern);
   const source=document.createElement('td');const rootsBox=document.createElement('div');rootsBox.className='source-roots';
   members.forEach(r=>{const node=r.stages.proto;const b=mark(node.src,'table-glyph',r.slot,'proto',rootDesc(D.stages[0],r,node));rootsBox.appendChild(b)});
@@ -164,7 +168,8 @@ D.stages.forEach((stage,stageNo)=>{
   b.dataset.family=familyFor(root);b.dataset.stage=stage.key;b.dataset.slot=String(root.slot);
   const d=rootDesc(stage,root,node);
   b.setAttribute('aria-label',d);b.title=d+' — click to inspect';
-  if(node.src){const m=document.createElement('img');m.className='mark';setMask(m,node.src);b.appendChild(m)}
+  if(stage.key==='modern'&&node.text){b.appendChild(textMark(node.text,'textmark'));}
+   else if(node.src){const m=document.createElement('img');m.className='mark';setMask(m,node.src);b.appendChild(m)}
   else if(node.text){const m=document.createElement('span');m.className='textmark';m.textContent=node.text;b.appendChild(m)}
   b.addEventListener('click',()=>selectGlyph(stage.key,root.slot));chart.appendChild(b);
  });
@@ -177,7 +182,7 @@ D.lines.forEach(line=>{
  addSvg('path',{class:'arrowtip',d:'M'+(x2-5.3)+' '+(y2-8)+' L'+x2+' '+y2+' L'+(x2+5.3)+' '+(y2-8)+' Z',fill:col,'data-family':line.family},overlay);
 });
 D.families.forEach(fam=>{
- const o=document.createElement('option');o.value=fam.family;o.textContent=fam.letter+' · '+fam.sound;pick.appendChild(o);
+ const o=document.createElement('option');o.value=fam.family;o.textContent=fam.modernRetired?'U · historical only, now A / O':fam.letter+' · '+fam.sound;pick.appendChild(o);
 });
 pick.addEventListener('change',()=>renderFamily(pick.value));
 document.getElementById('evo-clear').addEventListener('click',()=>{pick.value='';setDefaultDetail()});
