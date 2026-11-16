@@ -1,6 +1,6 @@
 {
   "source": "Letter Evolution Table.docx, sections A through H and consonant families; ambiguous historical alternatives share their existing code slots unless reassigned",
-  "version": "2026-10-28-sound-first",
+  "version": "2026-11-16-modern-surgical",
   "order": "ABDEFGHIJKLMNOPRSTUVWYZ",
   "sounds": [
     {
@@ -878,5 +878,548 @@
       "example": "",
       "note": ""
     }
-  ]
+  ],
+  "modernRegistry": "modern-orthography.json",
+  "modernSourceMappings": {
+    "a.apple": {
+      "host": "A",
+      "marks": [
+        "open"
+      ],
+      "ipa": "æ"
+    },
+    "a.father": {
+      "host": "A",
+      "marks": [
+        "open",
+        "long"
+      ],
+      "ipa": "ɑː"
+    },
+    "a.awe": {
+      "host": "A",
+      "marks": [
+        "open",
+        "short"
+      ],
+      "ipa": "aw"
+    },
+    "a.ay": {
+      "host": "A",
+      "marks": [
+        "long",
+        "glide"
+      ],
+      "ipa": "eɪ"
+    },
+    "a.uh": {
+      "host": "A",
+      "marks": [
+        "central"
+      ],
+      "ipa": "ʌ"
+    },
+    "b.b": {
+      "host": "B",
+      "marks": [],
+      "ipa": "b"
+    },
+    "b.soft": {
+      "host": "B",
+      "marks": [
+        "soft",
+        "hard"
+      ],
+      "ipa": "β"
+    },
+    "d.d": {
+      "host": "D",
+      "marks": [],
+      "ipa": "d"
+    },
+    "d.tap": {
+      "host": "D",
+      "marks": [
+        "soft"
+      ],
+      "ipa": "ɾ"
+    },
+    "e.eh": {
+      "host": "E",
+      "marks": [
+        "open"
+      ],
+      "ipa": "ɛ"
+    },
+    "e.ee": {
+      "host": "E",
+      "marks": [
+        "long"
+      ],
+      "ipa": "iː"
+    },
+    "f.f": {
+      "host": "B",
+      "marks": [
+        "soft",
+        "unvoiced"
+      ],
+      "ipa": "f"
+    },
+    "f.voiced": {
+      "host": "B",
+      "marks": [
+        "soft"
+      ],
+      "ipa": "v"
+    },
+    "g.g": {
+      "host": "G",
+      "marks": [],
+      "ipa": "g"
+    },
+    "g.gh": {
+      "host": "G",
+      "marks": [
+        "soft"
+      ],
+      "ipa": "ɣ"
+    },
+    "h.h": {
+      "host": "H",
+      "marks": [],
+      "ipa": "h"
+    },
+    "h.voiced": {
+      "host": "H",
+      "marks": [
+        "voiced"
+      ],
+      "ipa": "ɦ"
+    },
+    "i.eye": {
+      "host": "I",
+      "marks": [
+        "open",
+        "glide"
+      ],
+      "ipa": "aɪ"
+    },
+    "i.ih": {
+      "host": "I",
+      "marks": [
+        "short"
+      ],
+      "ipa": "ɪ"
+    },
+    "j.j": {
+      "host": "J",
+      "marks": [],
+      "ipa": "dʒ"
+    },
+    "j.zh": {
+      "host": "J",
+      "marks": [
+        "soft"
+      ],
+      "ipa": "ʒ"
+    },
+    "k.k": {
+      "host": "K",
+      "marks": [],
+      "ipa": "k"
+    },
+    "k.kh": {
+      "host": "K",
+      "marks": [
+        "hard"
+      ],
+      "ipa": "kʰ"
+    },
+    "k.kw": {
+      "host": "K",
+      "marks": [
+        "glide"
+      ],
+      "ipa": "kw"
+    },
+    "k.ks": {
+      "host": "K",
+      "marks": [
+        "hard",
+        "unvoiced"
+      ],
+      "ipa": "ks"
+    },
+    "l.l": {
+      "host": "L",
+      "marks": [],
+      "ipa": "l"
+    },
+    "l.dark": {
+      "host": "L",
+      "marks": [
+        "hard"
+      ],
+      "ipa": "ɫ"
+    },
+    "m.m": {
+      "host": "M",
+      "marks": [],
+      "ipa": "m"
+    },
+    "m.syllabic": {
+      "host": "M",
+      "marks": [
+        "central"
+      ],
+      "ipa": "m̩"
+    },
+    "n.n": {
+      "host": "N",
+      "marks": [],
+      "ipa": "n"
+    },
+    "n.ng": {
+      "host": "N",
+      "marks": [
+        "nasal"
+      ],
+      "ipa": "ŋ"
+    },
+    "n.ny": {
+      "host": "N",
+      "marks": [
+        "soft"
+      ],
+      "ipa": "ɲ"
+    },
+    "n.syllabic": {
+      "host": "N",
+      "marks": [
+        "central"
+      ],
+      "ipa": "n̩"
+    },
+    "o.oh": {
+      "host": "O",
+      "marks": [
+        "long",
+        "glide"
+      ],
+      "ipa": "oʊ"
+    },
+    "o.ow": {
+      "host": "O",
+      "marks": [
+        "short",
+        "glide"
+      ],
+      "ipa": "ow"
+    },
+    "o.oy": {
+      "host": "O",
+      "marks": [
+        "open",
+        "glide"
+      ],
+      "ipa": "ɔɪ"
+    },
+    "o.oo": {
+      "host": "O",
+      "marks": [
+        "central",
+        "long"
+      ],
+      "ipa": "uː"
+    },
+    "p.p": {
+      "host": "P",
+      "marks": [],
+      "ipa": "p"
+    },
+    "p.aspirated": {
+      "host": "P",
+      "marks": [
+        "hard"
+      ],
+      "ipa": "pʰ"
+    },
+    "r.rolled": {
+      "host": "R",
+      "marks": [
+        "held"
+      ],
+      "ipa": "r͡r"
+    },
+    "r.tap": {
+      "host": "R",
+      "marks": [
+        "soft"
+      ],
+      "ipa": "ɾ"
+    },
+    "r.r": {
+      "host": "R",
+      "marks": [],
+      "ipa": "r"
+    },
+    "s.s": {
+      "host": "S",
+      "marks": [],
+      "ipa": "s"
+    },
+    "s.sh": {
+      "host": "S",
+      "marks": [
+        "soft"
+      ],
+      "ipa": "ʃ"
+    },
+    "s.softsh": {
+      "host": "S",
+      "marks": [
+        "soft",
+        "hard"
+      ],
+      "ipa": "ɕ"
+    },
+    "t.t": {
+      "host": "T",
+      "marks": [],
+      "ipa": "t"
+    },
+    "t.th": {
+      "host": "T",
+      "marks": [
+        "soft",
+        "unvoiced"
+      ],
+      "ipa": "θ"
+    },
+    "t.tch": {
+      "host": "T",
+      "marks": [
+        "soft",
+        "hard"
+      ],
+      "ipa": "tʃ"
+    },
+    "t.taz": {
+      "host": "T",
+      "marks": [
+        "open",
+        "hard"
+      ],
+      "ipa": "tæz"
+    },
+    "t.aspirated": {
+      "host": "T",
+      "marks": [
+        "hard"
+      ],
+      "ipa": "tʰ"
+    },
+    "u.oo": {
+      "host": "O",
+      "marks": [
+        "central",
+        "long"
+      ],
+      "ipa": "uː"
+    },
+    "u.uh": {
+      "host": "A",
+      "marks": [
+        "central"
+      ],
+      "ipa": "ʌ"
+    },
+    "v.v": {
+      "host": "B",
+      "marks": [
+        "soft"
+      ],
+      "ipa": "v"
+    },
+    "v.glide": {
+      "host": "B",
+      "marks": [
+        "soft",
+        "glide"
+      ],
+      "ipa": "ʋ"
+    },
+    "w.wah": {
+      "host": "W",
+      "marks": [
+        "open"
+      ],
+      "ipa": "wɑ"
+    },
+    "w.weh": {
+      "host": "W",
+      "marks": [
+        "open",
+        "short"
+      ],
+      "ipa": "wɛ"
+    },
+    "w.wih": {
+      "host": "W",
+      "marks": [
+        "short"
+      ],
+      "ipa": "wɪ"
+    },
+    "w.woo": {
+      "host": "W",
+      "marks": [
+        "long"
+      ],
+      "ipa": "wuː"
+    },
+    "w.woe": {
+      "host": "W",
+      "marks": [
+        "long",
+        "glide"
+      ],
+      "ipa": "woʊ"
+    },
+    "w.wee": {
+      "host": "W",
+      "marks": [
+        "long",
+        "central"
+      ],
+      "ipa": "wiː"
+    },
+    "y.yah": {
+      "host": "Y",
+      "marks": [
+        "open"
+      ],
+      "ipa": "ja"
+    },
+    "y.yeh": {
+      "host": "Y",
+      "marks": [
+        "open",
+        "short"
+      ],
+      "ipa": "jɛ"
+    },
+    "y.yu": {
+      "host": "Y",
+      "marks": [
+        "long"
+      ],
+      "ipa": "juː"
+    },
+    "y.yih": {
+      "host": "Y",
+      "marks": [
+        "short"
+      ],
+      "ipa": "jɪ"
+    },
+    "y.yee": {
+      "host": "Y",
+      "marks": [
+        "long",
+        "central"
+      ],
+      "ipa": "jiː"
+    },
+    "y.yoh": {
+      "host": "Y",
+      "marks": [
+        "long",
+        "glide"
+      ],
+      "ipa": "joʊ"
+    },
+    "z.z": {
+      "host": "Z",
+      "marks": [],
+      "ipa": "z"
+    },
+    "z.zn": {
+      "host": "Z",
+      "marks": [
+        "nasal"
+      ],
+      "ipa": "zn"
+    },
+    "t.voiced-th": {
+      "host": "T",
+      "marks": [
+        "soft",
+        "voiced"
+      ],
+      "ipa": "ð"
+    },
+    "t.aspirated-tch": {
+      "host": "T",
+      "marks": [
+        "hard",
+        "unvoiced"
+      ],
+      "ipa": "tʃʰ"
+    },
+    "t.taahzi": {
+      "host": "T",
+      "marks": [
+        "long",
+        "hard"
+      ],
+      "ipa": "taːhzi"
+    },
+    "k.aspirated-kw": {
+      "host": "K",
+      "marks": [
+        "glide",
+        "hard"
+      ],
+      "ipa": "kʷʰ"
+    },
+    "k.x-fricative": {
+      "host": "K",
+      "marks": [
+        "soft",
+        "unvoiced"
+      ],
+      "ipa": "x"
+    },
+    "n.ngg": {
+      "host": "N",
+      "marks": [
+        "nasal",
+        "hard"
+      ],
+      "ipa": "ŋg"
+    },
+    "n.nj": {
+      "host": "N",
+      "marks": [
+        "soft",
+        "hard"
+      ],
+      "ipa": "nj"
+    },
+    "s.z": {
+      "host": "Z",
+      "marks": [],
+      "ipa": "z"
+    },
+    "d.j": {
+      "host": "D",
+      "marks": [
+        "soft",
+        "hard"
+      ],
+      "ipa": "dʒ"
+    }
+  }
 }
