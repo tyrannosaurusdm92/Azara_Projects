@@ -137,7 +137,8 @@ function renderTable(){
   const root=roots.get(sign.rootSlot);if(!root)continue;
   const tr=document.createElement('tr');tr.className='special-row';
   const tdSign=document.createElement('td');tdSign.className='symbol-cell';
-  if(sign.src){const wrap=document.createElement('div');wrap.className='table-glyphs';wrap.appendChild(mark(sign.src,'table-glyph',sign.rootSlot,'modern',sign.name+' · '+sign.meaning));tdSign.appendChild(wrap)}
+  if(sign.modernFontGlyph&&sign.khmer){const wrap=document.createElement('div');wrap.className='table-glyphs';const markGlyph=textMark(sign.khmer,'textmark');markGlyph.style.fontSize='27px';wrap.appendChild(markGlyph);tdSign.appendChild(wrap)}
+  else if(sign.src){const wrap=document.createElement('div');wrap.className='table-glyphs';wrap.appendChild(mark(sign.src,'table-glyph',sign.rootSlot,'modern',sign.name+' · '+sign.meaning));tdSign.appendChild(wrap)}
   else{tdSign.textContent=sign.sign}
   tr.appendChild(tdSign);
   const tdSource=document.createElement('td');tdSource.textContent='Special sign · '+sign.name+' · '+sign.meaning+' · '+sign.origin;tr.appendChild(tdSource);
