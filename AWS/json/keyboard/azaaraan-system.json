@@ -539,102 +539,102 @@
     {
       "key": "modern",
       "name": "Modern",
-      "count": 21,
-      "detail": "21 active families · 2036 CE"
+      "count": 20,
+      "detail": "20 Modern independent letters; U removed; W provisional"
     }
   ],
   "fontRoots": {
     "Archaic": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Classical": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Traditional": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Modern": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     }
   },
   "roots": [
@@ -3400,7 +3400,8 @@
     ],
     "serialization": "Khmer Unicode-only with whitespace; no Latin Aza’raan output",
     "newFontPrecedence": "TTF faces override historical SVG for the 21 surviving letter families in Archaic/Classical/Traditional/Modern.",
-    "accentCanon": "24 reassigned phonetic accents (C01–C12, K01–K12) plus 4 unchanged structural signs; maximum two normal accents per logical letter."
+    "accentCanon": "24 reassigned phonetic accents (C01–C12, K01–K12) plus 4 unchanged structural signs; maximum two normal accents per logical letter.",
+    "modernAccentCanon": "12 modern marks, max two; historical 24-mark data unchanged"
   },
   "accentPolicy": {
     "maxNormalAccentsPerLetter": 3,
@@ -3453,5 +3454,1104 @@
       "Names, functions and encodings follow the user-provided 24-accent table."
     ],
     "maxTotalAttachedMarksPerLetter": 3
+  },
+  "modern": {
+    "alphabet": "ABDEGHIJKLMNOPRSTWYZ",
+    "keys": {
+      "A": "អ",
+      "B": "ប",
+      "D": "ដ",
+      "E": "ឆ",
+      "G": "គ",
+      "H": "ហ",
+      "I": "ញ",
+      "J": "ជ",
+      "K": "ក",
+      "L": "ល",
+      "M": "ម",
+      "N": "ន",
+      "O": "ង",
+      "P": "ព",
+      "R": "រ",
+      "S": "ស",
+      "T": "ត",
+      "W": "វ",
+      "Y": "យ",
+      "Z": "ឝ"
+    },
+    "subscripts": {
+      "a": "្អ",
+      "b": "្ប",
+      "d": "្ដ",
+      "e": "្ឆ",
+      "g": "្គ",
+      "h": "្ហ",
+      "i": "្ញ",
+      "j": "្ជ",
+      "k": "្ក",
+      "l": "្ល",
+      "m": "្ម",
+      "n": "្ន",
+      "o": "្ង",
+      "p": "្ព",
+      "r": "្រ",
+      "s": "្ស",
+      "t": "្ត",
+      "w": "្វ",
+      "y": "្យ",
+      "z": "្ឝ"
+    },
+    "marks": [
+      {
+        "id": "M01",
+        "slug": "held",
+        "name": "Held Consonant",
+        "khmer": "៌",
+        "character": "៌",
+        "unicode": "៌",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "modifier",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M02",
+        "slug": "central",
+        "name": "Central Vowel",
+        "khmer": "ឹ",
+        "character": "ឹ",
+        "unicode": "ឹ",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "vowel",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M03",
+        "slug": "open",
+        "name": "Open Vowel",
+        "khmer": "ា",
+        "character": "ា",
+        "unicode": "ា",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "vowel",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M04",
+        "slug": "short",
+        "name": "Short Vowel",
+        "khmer": "់",
+        "character": "់",
+        "unicode": "់",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "vowel",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M05",
+        "slug": "long",
+        "name": "Long Vowel",
+        "khmer": "ី",
+        "character": "ី",
+        "unicode": "ី",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "vowel",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M06",
+        "slug": "unvoiced",
+        "name": "Unvoiced Sound",
+        "khmer": "៍",
+        "character": "៍",
+        "unicode": "៍",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "modifier",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M07",
+        "slug": "voiced",
+        "name": "Voiced Sound",
+        "khmer": "័",
+        "character": "័",
+        "unicode": "័",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "modifier",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M08",
+        "slug": "separate",
+        "name": "Separated Vowel",
+        "khmer": "ៈ",
+        "character": "ៈ",
+        "unicode": "ៈ",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "vowel",
+        "hostOnly": true,
+        "requiresVowelSubscript": true
+      },
+      {
+        "id": "M09",
+        "slug": "nasal",
+        "name": "Nasalization",
+        "khmer": "ំ",
+        "character": "ំ",
+        "unicode": "ំ",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "modifier",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M10",
+        "slug": "soft",
+        "name": "Soft Sound",
+        "khmer": "៉",
+        "character": "៉",
+        "unicode": "៉",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "modifier",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M11",
+        "slug": "hard",
+        "name": "Hard Sound",
+        "khmer": "៊",
+        "character": "៊",
+        "unicode": "៊",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "modifier",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      },
+      {
+        "id": "M12",
+        "slug": "glide",
+        "name": "Glide Sound",
+        "khmer": "៎",
+        "character": "៎",
+        "unicode": "៎",
+        "placement": "left_or_right_of_host",
+        "secondaryPlacement": "smaller_attached_to_primary",
+        "kind": "modifier",
+        "hostOnly": false,
+        "requiresVowelSubscript": false
+      }
+    ],
+    "specialSigns": [
+      {
+        "id": "MS01",
+        "name": "Glottal Stop",
+        "label": "Glottal Stop",
+        "khmer": "៏",
+        "character": "៏",
+        "key": "'",
+        "placement": "above_host",
+        "kind": "special"
+      },
+      {
+        "id": "MS02",
+        "name": "Click Sound",
+        "label": "Click Sound",
+        "khmer": "ះ",
+        "character": "ះ",
+        "key": "¡",
+        "placement": "above_host",
+        "kind": "special"
+      },
+      {
+        "id": "MS03",
+        "name": "Emphasis previous syllable",
+        "label": "Emphasis previous syllable",
+        "khmer": "ិ",
+        "character": "ិ",
+        "key": "<",
+        "placement": "above_host",
+        "kind": "special"
+      },
+      {
+        "id": "MS04",
+        "name": "Emphasis next syllable",
+        "label": "Emphasis next syllable",
+        "khmer": "ូ",
+        "character": "ូ",
+        "key": ">",
+        "placement": "above_host",
+        "kind": "special"
+      }
+    ],
+    "sounds": [
+      {
+        "id": "a.apple",
+        "display": "A (apple)",
+        "ipa": "æ",
+        "host": "A",
+        "marks": [
+          "M03"
+        ],
+        "unicode": "អា",
+        "status": "working"
+      },
+      {
+        "id": "a.father",
+        "display": "A (father)",
+        "ipa": "ɑː",
+        "host": "A",
+        "marks": [
+          "M03",
+          "M05"
+        ],
+        "unicode": "អាី",
+        "status": "working"
+      },
+      {
+        "id": "a.awe",
+        "display": "A (awe)",
+        "ipa": "aw",
+        "host": "A",
+        "marks": [
+          "M03",
+          "M04"
+        ],
+        "unicode": "អា់",
+        "status": "provisional"
+      },
+      {
+        "id": "a.ay",
+        "display": "A (ay)",
+        "ipa": "eɪ",
+        "host": "A",
+        "marks": [
+          "M05",
+          "M12"
+        ],
+        "unicode": "អី៎",
+        "status": "working"
+      },
+      {
+        "id": "a.uh",
+        "display": "A (uh)",
+        "ipa": "ʌ",
+        "host": "A",
+        "marks": [
+          "M02"
+        ],
+        "unicode": "អឹ",
+        "status": "working"
+      },
+      {
+        "id": "b.b",
+        "display": "B (b)",
+        "ipa": "b",
+        "host": "B",
+        "marks": [],
+        "unicode": "ប",
+        "status": "working"
+      },
+      {
+        "id": "b.soft",
+        "display": "B (soft b)",
+        "ipa": "β",
+        "host": "B",
+        "marks": [
+          "M10",
+          "M11"
+        ],
+        "unicode": "ប៉៊",
+        "status": "working"
+      },
+      {
+        "id": "d.d",
+        "display": "D (d)",
+        "ipa": "d",
+        "host": "D",
+        "marks": [],
+        "unicode": "ដ",
+        "status": "working"
+      },
+      {
+        "id": "d.tap",
+        "display": "D (tapped d)",
+        "ipa": "ɾ",
+        "host": "D",
+        "marks": [
+          "M10"
+        ],
+        "unicode": "ដ៉",
+        "status": "working"
+      },
+      {
+        "id": "e.eh",
+        "display": "E (eh)",
+        "ipa": "ɛ",
+        "host": "E",
+        "marks": [
+          "M03"
+        ],
+        "unicode": "ឆា",
+        "status": "working"
+      },
+      {
+        "id": "e.ee",
+        "display": "E (ee)",
+        "ipa": "iː",
+        "host": "E",
+        "marks": [
+          "M05"
+        ],
+        "unicode": "ឆី",
+        "status": "working"
+      },
+      {
+        "id": "f.f",
+        "display": "F (f)",
+        "ipa": "f",
+        "host": "B",
+        "marks": [
+          "M10",
+          "M06"
+        ],
+        "unicode": "ប៉៍",
+        "status": "working"
+      },
+      {
+        "id": "f.voiced",
+        "display": "F (voiced f)",
+        "ipa": "v",
+        "host": "B",
+        "marks": [
+          "M10"
+        ],
+        "unicode": "ប៉",
+        "status": "working"
+      },
+      {
+        "id": "g.g",
+        "display": "G (g)",
+        "ipa": "g",
+        "host": "G",
+        "marks": [],
+        "unicode": "គ",
+        "status": "working"
+      },
+      {
+        "id": "g.gh",
+        "display": "G (soft gh)",
+        "ipa": "ɣ",
+        "host": "G",
+        "marks": [
+          "M10"
+        ],
+        "unicode": "គ៉",
+        "status": "working"
+      },
+      {
+        "id": "h.h",
+        "display": "H (h)",
+        "ipa": "h",
+        "host": "H",
+        "marks": [],
+        "unicode": "ហ",
+        "status": "working"
+      },
+      {
+        "id": "h.voiced",
+        "display": "H (voiced h)",
+        "ipa": "ɦ",
+        "host": "H",
+        "marks": [
+          "M07"
+        ],
+        "unicode": "ហ័",
+        "status": "working"
+      },
+      {
+        "id": "i.eye",
+        "display": "I (eye)",
+        "ipa": "aɪ",
+        "host": "I",
+        "marks": [
+          "M03",
+          "M12"
+        ],
+        "unicode": "ញា៎",
+        "status": "working"
+      },
+      {
+        "id": "i.ih",
+        "display": "I (ih)",
+        "ipa": "ɪ",
+        "host": "I",
+        "marks": [
+          "M04"
+        ],
+        "unicode": "ញ់",
+        "status": "working"
+      },
+      {
+        "id": "j.j",
+        "display": "J (j)",
+        "ipa": "dʒ",
+        "host": "J",
+        "marks": [],
+        "unicode": "ជ",
+        "status": "working"
+      },
+      {
+        "id": "j.zh",
+        "display": "J (zh)",
+        "ipa": "ʒ",
+        "host": "J",
+        "marks": [
+          "M10"
+        ],
+        "unicode": "ជ៉",
+        "status": "working"
+      },
+      {
+        "id": "k.k",
+        "display": "K (k)",
+        "ipa": "k",
+        "host": "K",
+        "marks": [],
+        "unicode": "ក",
+        "status": "working"
+      },
+      {
+        "id": "k.kh",
+        "display": "K (kh / aspirated k)",
+        "ipa": "kʰ",
+        "host": "K",
+        "marks": [
+          "M11"
+        ],
+        "unicode": "ក៊",
+        "status": "working"
+      },
+      {
+        "id": "k.kw",
+        "display": "K (kw)",
+        "ipa": "kw",
+        "host": "K",
+        "marks": [
+          "M12"
+        ],
+        "unicode": "ក៎",
+        "status": "working"
+      },
+      {
+        "id": "k.ks",
+        "display": "K (ks (X sound))",
+        "ipa": "ks",
+        "host": "K",
+        "marks": [
+          "M11",
+          "M06"
+        ],
+        "unicode": "ក៊៍",
+        "status": "working"
+      },
+      {
+        "id": "l.l",
+        "display": "L (l)",
+        "ipa": "l",
+        "host": "L",
+        "marks": [],
+        "unicode": "ល",
+        "status": "working"
+      },
+      {
+        "id": "l.dark",
+        "display": "L (dark l)",
+        "ipa": "ɫ",
+        "host": "L",
+        "marks": [
+          "M11"
+        ],
+        "unicode": "ល៊",
+        "status": "working"
+      },
+      {
+        "id": "m.m",
+        "display": "M (m)",
+        "ipa": "m",
+        "host": "M",
+        "marks": [],
+        "unicode": "ម",
+        "status": "working"
+      },
+      {
+        "id": "m.syllabic",
+        "display": "M (syllabic m)",
+        "ipa": "m̩",
+        "host": "M",
+        "marks": [
+          "M02"
+        ],
+        "unicode": "មឹ",
+        "status": "working"
+      },
+      {
+        "id": "n.n",
+        "display": "N (n)",
+        "ipa": "n",
+        "host": "N",
+        "marks": [],
+        "unicode": "ន",
+        "status": "working"
+      },
+      {
+        "id": "n.ng",
+        "display": "N (ng)",
+        "ipa": "ŋ",
+        "host": "N",
+        "marks": [
+          "M09"
+        ],
+        "unicode": "នំ",
+        "status": "working"
+      },
+      {
+        "id": "n.ny",
+        "display": "N (ny)",
+        "ipa": "ɲ",
+        "host": "N",
+        "marks": [
+          "M10"
+        ],
+        "unicode": "ន៉",
+        "status": "working"
+      },
+      {
+        "id": "n.syllabic",
+        "display": "N (syllabic n)",
+        "ipa": "n̩",
+        "host": "N",
+        "marks": [
+          "M02"
+        ],
+        "unicode": "នឹ",
+        "status": "working"
+      },
+      {
+        "id": "o.oh",
+        "display": "O (oh)",
+        "ipa": "oʊ",
+        "host": "O",
+        "marks": [
+          "M05",
+          "M12"
+        ],
+        "unicode": "ងី៎",
+        "status": "working"
+      },
+      {
+        "id": "o.ow",
+        "display": "O (ow)",
+        "ipa": "ow",
+        "host": "O",
+        "marks": [
+          "M04",
+          "M12"
+        ],
+        "unicode": "ង់៎",
+        "status": "provisional"
+      },
+      {
+        "id": "o.oy",
+        "display": "O (oy)",
+        "ipa": "ɔɪ",
+        "host": "O",
+        "marks": [
+          "M03",
+          "M12"
+        ],
+        "unicode": "ងា៎",
+        "status": "working"
+      },
+      {
+        "id": "o.oo",
+        "display": "O (oo)",
+        "ipa": "uː",
+        "host": "O",
+        "marks": [
+          "M02",
+          "M05"
+        ],
+        "unicode": "ងឹី",
+        "status": "working"
+      },
+      {
+        "id": "p.p",
+        "display": "P (p)",
+        "ipa": "p",
+        "host": "P",
+        "marks": [],
+        "unicode": "ព",
+        "status": "working"
+      },
+      {
+        "id": "p.aspirated",
+        "display": "P (ph)",
+        "ipa": "pʰ",
+        "host": "P",
+        "marks": [
+          "M11"
+        ],
+        "unicode": "ព៊",
+        "status": "working"
+      },
+      {
+        "id": "r.rolled",
+        "display": "R (rolled r)",
+        "ipa": "r͡r",
+        "host": "R",
+        "marks": [
+          "M01"
+        ],
+        "unicode": "រ៌",
+        "status": "working"
+      },
+      {
+        "id": "r.tap",
+        "display": "R (tapped r)",
+        "ipa": "ɾ",
+        "host": "R",
+        "marks": [
+          "M10"
+        ],
+        "unicode": "រ៉",
+        "status": "working"
+      },
+      {
+        "id": "r.r",
+        "display": "R (r)",
+        "ipa": "r",
+        "host": "R",
+        "marks": [],
+        "unicode": "រ",
+        "status": "working"
+      },
+      {
+        "id": "s.s",
+        "display": "S (s)",
+        "ipa": "s",
+        "host": "S",
+        "marks": [],
+        "unicode": "ស",
+        "status": "working"
+      },
+      {
+        "id": "s.sh",
+        "display": "S (sh)",
+        "ipa": "ʃ",
+        "host": "S",
+        "marks": [
+          "M10"
+        ],
+        "unicode": "ស៉",
+        "status": "working"
+      },
+      {
+        "id": "s.softsh",
+        "display": "S (soft sh)",
+        "ipa": "ɕ",
+        "host": "S",
+        "marks": [
+          "M10",
+          "M11"
+        ],
+        "unicode": "ស៉៊",
+        "status": "working"
+      },
+      {
+        "id": "t.t",
+        "display": "T (t)",
+        "ipa": "t",
+        "host": "T",
+        "marks": [],
+        "unicode": "ត",
+        "status": "working"
+      },
+      {
+        "id": "t.th",
+        "display": "T (th)",
+        "ipa": "θ",
+        "host": "T",
+        "marks": [
+          "M10",
+          "M06"
+        ],
+        "unicode": "ត៉៍",
+        "status": "working"
+      },
+      {
+        "id": "t.tch",
+        "display": "T (tch)",
+        "ipa": "tʃ",
+        "host": "T",
+        "marks": [
+          "M10",
+          "M11"
+        ],
+        "unicode": "ត៉៊",
+        "status": "working"
+      },
+      {
+        "id": "t.taz",
+        "display": "T (tæz)",
+        "ipa": "tæz",
+        "host": "T",
+        "marks": [
+          "M03",
+          "M11"
+        ],
+        "unicode": "តា៊",
+        "status": "working"
+      },
+      {
+        "id": "t.aspirated",
+        "display": "T (aspirated t)",
+        "ipa": "tʰ",
+        "host": "T",
+        "marks": [
+          "M11"
+        ],
+        "unicode": "ត៊",
+        "status": "working"
+      },
+      {
+        "id": "u.oo",
+        "display": "U (oo)",
+        "ipa": "uː",
+        "host": "O",
+        "marks": [
+          "M02",
+          "M05"
+        ],
+        "unicode": "ងឹី",
+        "status": "working"
+      },
+      {
+        "id": "u.uh",
+        "display": "U (uh)",
+        "ipa": "ʌ",
+        "host": "A",
+        "marks": [
+          "M02"
+        ],
+        "unicode": "អឹ",
+        "status": "working"
+      },
+      {
+        "id": "v.v",
+        "display": "V (v)",
+        "ipa": "v",
+        "host": "B",
+        "marks": [
+          "M10"
+        ],
+        "unicode": "ប៉",
+        "status": "working"
+      },
+      {
+        "id": "v.glide",
+        "display": "V (soft glide)",
+        "ipa": "ʋ",
+        "host": "B",
+        "marks": [
+          "M10",
+          "M12"
+        ],
+        "unicode": "ប៉៎",
+        "status": "provisional"
+      },
+      {
+        "id": "w.wah",
+        "display": "W (wah)",
+        "ipa": "wɑ",
+        "host": "W",
+        "marks": [
+          "M03"
+        ],
+        "unicode": "វា",
+        "status": "working"
+      },
+      {
+        "id": "w.weh",
+        "display": "W (weh)",
+        "ipa": "wɛ",
+        "host": "W",
+        "marks": [
+          "M03",
+          "M04"
+        ],
+        "unicode": "វា់",
+        "status": "working"
+      },
+      {
+        "id": "w.wih",
+        "display": "W (wih)",
+        "ipa": "wɪ",
+        "host": "W",
+        "marks": [
+          "M04"
+        ],
+        "unicode": "វ់",
+        "status": "working"
+      },
+      {
+        "id": "w.woo",
+        "display": "W (woo)",
+        "ipa": "wuː",
+        "host": "W",
+        "marks": [
+          "M05"
+        ],
+        "unicode": "វី",
+        "status": "working"
+      },
+      {
+        "id": "w.woe",
+        "display": "W (woe)",
+        "ipa": "woʊ",
+        "host": "W",
+        "marks": [
+          "M05",
+          "M12"
+        ],
+        "unicode": "វី៎",
+        "status": "working"
+      },
+      {
+        "id": "w.wee",
+        "display": "W (wee)",
+        "ipa": "wiː",
+        "host": "W",
+        "marks": [
+          "M05",
+          "M02"
+        ],
+        "unicode": "វីឹ",
+        "status": "working"
+      },
+      {
+        "id": "y.yah",
+        "display": "Y (yah)",
+        "ipa": "ja",
+        "host": "Y",
+        "marks": [
+          "M03"
+        ],
+        "unicode": "យា",
+        "status": "working"
+      },
+      {
+        "id": "y.yeh",
+        "display": "Y (yeh)",
+        "ipa": "jɛ",
+        "host": "Y",
+        "marks": [
+          "M03",
+          "M04"
+        ],
+        "unicode": "យា់",
+        "status": "working"
+      },
+      {
+        "id": "y.yu",
+        "display": "Y (yu)",
+        "ipa": "juː",
+        "host": "Y",
+        "marks": [
+          "M05"
+        ],
+        "unicode": "យី",
+        "status": "working"
+      },
+      {
+        "id": "y.yih",
+        "display": "Y (yih)",
+        "ipa": "jɪ",
+        "host": "Y",
+        "marks": [
+          "M04"
+        ],
+        "unicode": "យ់",
+        "status": "working"
+      },
+      {
+        "id": "y.yee",
+        "display": "Y (yee)",
+        "ipa": "jiː",
+        "host": "Y",
+        "marks": [
+          "M05",
+          "M02"
+        ],
+        "unicode": "យីឹ",
+        "status": "working"
+      },
+      {
+        "id": "y.yoh",
+        "display": "Y (yoh)",
+        "ipa": "joʊ",
+        "host": "Y",
+        "marks": [
+          "M05",
+          "M12"
+        ],
+        "unicode": "យី៎",
+        "status": "working"
+      },
+      {
+        "id": "z.z",
+        "display": "Z (z)",
+        "ipa": "z",
+        "host": "Z",
+        "marks": [],
+        "unicode": "ឝ",
+        "status": "working"
+      },
+      {
+        "id": "z.zn",
+        "display": "Z (zn)",
+        "ipa": "zn",
+        "host": "Z",
+        "marks": [
+          "M09"
+        ],
+        "unicode": "ឝំ",
+        "status": "working"
+      },
+      {
+        "id": "t.voiced-th",
+        "display": "T (voiced th)",
+        "ipa": "ð",
+        "host": "T",
+        "marks": [
+          "M10",
+          "M07"
+        ],
+        "unicode": "ត៉័",
+        "status": "working"
+      },
+      {
+        "id": "t.aspirated-tch",
+        "display": "T (aspirated tch)",
+        "ipa": "tʃʰ",
+        "host": "T",
+        "marks": [
+          "M11",
+          "M06"
+        ],
+        "unicode": "ត៊៍",
+        "status": "working"
+      },
+      {
+        "id": "t.taahzi",
+        "display": "T (taahzi)",
+        "ipa": "taːhzi",
+        "host": "T",
+        "marks": [
+          "M05",
+          "M11"
+        ],
+        "unicode": "តី៊",
+        "status": "working"
+      },
+      {
+        "id": "k.aspirated-kw",
+        "display": "K (aspirated kw)",
+        "ipa": "kʷʰ",
+        "host": "K",
+        "marks": [
+          "M12",
+          "M11"
+        ],
+        "unicode": "ក៎៊",
+        "status": "working"
+      },
+      {
+        "id": "k.x-fricative",
+        "display": "K (x fricative)",
+        "ipa": "x",
+        "host": "K",
+        "marks": [
+          "M10",
+          "M06"
+        ],
+        "unicode": "ក៉៍",
+        "status": "working"
+      },
+      {
+        "id": "n.ngg",
+        "display": "N (ngg)",
+        "ipa": "ŋg",
+        "host": "N",
+        "marks": [
+          "M09",
+          "M11"
+        ],
+        "unicode": "នំ៊",
+        "status": "working"
+      },
+      {
+        "id": "n.nj",
+        "display": "N (n+y cluster)",
+        "ipa": "nj",
+        "host": "N",
+        "marks": [
+          "M10",
+          "M11"
+        ],
+        "unicode": "ន៉៊",
+        "status": "working"
+      },
+      {
+        "id": "s.z",
+        "display": "S (z)",
+        "ipa": "z",
+        "host": "Z",
+        "marks": [],
+        "unicode": "ឝ",
+        "status": "working"
+      },
+      {
+        "id": "d.j",
+        "display": "D (j)",
+        "ipa": "dʒ",
+        "host": "D",
+        "marks": [
+          "M10",
+          "M11"
+        ],
+        "unicode": "ដ៉៊",
+        "status": "working"
+      }
+    ],
+    "maxOrdinaryMarks": 2,
+    "maxSubscripts": 2
   }
 }

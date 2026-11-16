@@ -11,7 +11,14 @@
       "base": "A",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "A",
+      "modernMarks": [
+        "M03"
+      ],
+      "modernUnicode": "អា",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "a.father",
@@ -23,7 +30,17 @@
         "C05"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C05"
+      ],
+      "modernHost": "A",
+      "modernMarks": [
+        "M03",
+        "M05"
+      ],
+      "modernUnicode": "អាី",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "a.awe",
@@ -35,7 +52,17 @@
         "C09"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C09"
+      ],
+      "modernHost": "A",
+      "modernMarks": [
+        "M03",
+        "M04"
+      ],
+      "modernUnicode": "អា់",
+      "modernRecipeStatus": "provisional"
     },
     {
       "id": "a.ay",
@@ -47,7 +74,17 @@
         "C10"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C10"
+      ],
+      "modernHost": "A",
+      "modernMarks": [
+        "M05",
+        "M12"
+      ],
+      "modernUnicode": "អី៎",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "a.uh",
@@ -59,7 +96,16 @@
         "C04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C04"
+      ],
+      "modernHost": "A",
+      "modernMarks": [
+        "M02"
+      ],
+      "modernUnicode": "អឹ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "b.b",
@@ -69,7 +115,12 @@
       "base": "B",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "B",
+      "modernMarks": [],
+      "modernUnicode": "ប",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "b.soft",
@@ -79,7 +130,15 @@
       "base": "B",
       "marks": [],
       "example": "",
-      "note": "Historical alternative; shares a Khmer glyph until individually reassigned."
+      "note": "Historical alternative; shares a Khmer glyph until individually reassigned.",
+      "historicalMarks": [],
+      "modernHost": "B",
+      "modernMarks": [
+        "M10",
+        "M11"
+      ],
+      "modernUnicode": "ប៉៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "d.d",
@@ -89,7 +148,12 @@
       "base": "D",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "D",
+      "modernMarks": [],
+      "modernUnicode": "ដ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "d.tap",
@@ -99,7 +163,14 @@
       "base": "D",
       "marks": [],
       "example": "",
-      "note": "Shares a historical code slot."
+      "note": "Shares a historical code slot.",
+      "historicalMarks": [],
+      "modernHost": "D",
+      "modernMarks": [
+        "M10"
+      ],
+      "modernUnicode": "ដ៉",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "e.eh",
@@ -109,7 +180,14 @@
       "base": "E",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "E",
+      "modernMarks": [
+        "M03"
+      ],
+      "modernUnicode": "ឆា",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "e.ee",
@@ -121,7 +199,16 @@
         "C06"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C06"
+      ],
+      "modernHost": "E",
+      "modernMarks": [
+        "M05"
+      ],
+      "modernUnicode": "ឆី",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "f.f",
@@ -133,7 +220,17 @@
         "C11"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C11"
+      ],
+      "modernHost": "B",
+      "modernMarks": [
+        "M10",
+        "M06"
+      ],
+      "modernUnicode": "ប៉៍",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "f.voiced",
@@ -145,7 +242,16 @@
         "C11"
       ],
       "example": "",
-      "note": "Historical alternate of /f/; same encoded slot."
+      "note": "Historical alternate of /f/; same encoded slot.",
+      "historicalMarks": [
+        "C11"
+      ],
+      "modernHost": "B",
+      "modernMarks": [
+        "M10"
+      ],
+      "modernUnicode": "ប៉",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "g.g",
@@ -155,7 +261,12 @@
       "base": "G",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "G",
+      "modernMarks": [],
+      "modernUnicode": "គ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "g.gh",
@@ -167,7 +278,16 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "G",
+      "modernMarks": [
+        "M10"
+      ],
+      "modernUnicode": "គ៉",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "h.h",
@@ -177,7 +297,12 @@
       "base": "H",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "H",
+      "modernMarks": [],
+      "modernUnicode": "ហ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "h.voiced",
@@ -187,7 +312,14 @@
       "base": "H",
       "marks": [],
       "example": "",
-      "note": "Shares encoding until a distinct marker is assigned."
+      "note": "Shares encoding until a distinct marker is assigned.",
+      "historicalMarks": [],
+      "modernHost": "H",
+      "modernMarks": [
+        "M07"
+      ],
+      "modernUnicode": "ហ័",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "i.eye",
@@ -199,7 +331,17 @@
         "C10"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C10"
+      ],
+      "modernHost": "I",
+      "modernMarks": [
+        "M03",
+        "M12"
+      ],
+      "modernUnicode": "ញា៎",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "i.ih",
@@ -209,7 +351,14 @@
       "base": "I",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "I",
+      "modernMarks": [
+        "M04"
+      ],
+      "modernUnicode": "ញ់",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "j.j",
@@ -219,7 +368,12 @@
       "base": "J",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "J",
+      "modernMarks": [],
+      "modernUnicode": "ជ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "j.zh",
@@ -229,7 +383,14 @@
       "base": "J",
       "marks": [],
       "example": "",
-      "note": "Historical variant; current Khmer encoding is shared."
+      "note": "Historical variant; current Khmer encoding is shared.",
+      "historicalMarks": [],
+      "modernHost": "J",
+      "modernMarks": [
+        "M10"
+      ],
+      "modernUnicode": "ជ៉",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "k.k",
@@ -239,7 +400,12 @@
       "base": "K",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "K",
+      "modernMarks": [],
+      "modernUnicode": "ក",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "k.kh",
@@ -251,7 +417,16 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "K",
+      "modernMarks": [
+        "M11"
+      ],
+      "modernUnicode": "ក៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "k.kw",
@@ -263,7 +438,16 @@
         "C09"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C09"
+      ],
+      "modernHost": "K",
+      "modernMarks": [
+        "M12"
+      ],
+      "modernUnicode": "ក៎",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "k.ks",
@@ -275,7 +459,17 @@
         "K02"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K02"
+      ],
+      "modernHost": "K",
+      "modernMarks": [
+        "M11",
+        "M06"
+      ],
+      "modernUnicode": "ក៊៍",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "l.l",
@@ -285,7 +479,12 @@
       "base": "L",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "L",
+      "modernMarks": [],
+      "modernUnicode": "ល",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "l.dark",
@@ -295,7 +494,14 @@
       "base": "L",
       "marks": [],
       "example": "",
-      "note": "Shared encoding; edit its mapping to distinguish it."
+      "note": "Shared encoding; edit its mapping to distinguish it.",
+      "historicalMarks": [],
+      "modernHost": "L",
+      "modernMarks": [
+        "M11"
+      ],
+      "modernUnicode": "ល៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "m.m",
@@ -305,7 +511,12 @@
       "base": "M",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "M",
+      "modernMarks": [],
+      "modernUnicode": "ម",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "m.syllabic",
@@ -315,7 +526,14 @@
       "base": "M",
       "marks": [],
       "example": "",
-      "note": "Shared encoding; edit mapping to distinguish."
+      "note": "Shared encoding; edit mapping to distinguish.",
+      "historicalMarks": [],
+      "modernHost": "M",
+      "modernMarks": [
+        "M02"
+      ],
+      "modernUnicode": "មឹ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "n.n",
@@ -325,7 +543,12 @@
       "base": "N",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "N",
+      "modernMarks": [],
+      "modernUnicode": "ន",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "n.ng",
@@ -337,7 +560,16 @@
         "C08"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C08"
+      ],
+      "modernHost": "N",
+      "modernMarks": [
+        "M09"
+      ],
+      "modernUnicode": "នំ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "n.ny",
@@ -349,7 +581,16 @@
         "C10"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C10"
+      ],
+      "modernHost": "N",
+      "modernMarks": [
+        "M10"
+      ],
+      "modernUnicode": "ន៉",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "n.syllabic",
@@ -359,7 +600,14 @@
       "base": "N",
       "marks": [],
       "example": "",
-      "note": "Shared encoding."
+      "note": "Shared encoding.",
+      "historicalMarks": [],
+      "modernHost": "N",
+      "modernMarks": [
+        "M02"
+      ],
+      "modernUnicode": "នឹ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "o.oh",
@@ -371,7 +619,17 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "O",
+      "modernMarks": [
+        "M05",
+        "M12"
+      ],
+      "modernUnicode": "ងី៎",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "o.ow",
@@ -383,7 +641,17 @@
         "C09"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C09"
+      ],
+      "modernHost": "O",
+      "modernMarks": [
+        "M04",
+        "M12"
+      ],
+      "modernUnicode": "ង់៎",
+      "modernRecipeStatus": "provisional"
     },
     {
       "id": "o.oy",
@@ -395,7 +663,17 @@
         "C10"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C10"
+      ],
+      "modernHost": "O",
+      "modernMarks": [
+        "M03",
+        "M12"
+      ],
+      "modernUnicode": "ងា៎",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "o.oo",
@@ -407,7 +685,17 @@
         "C07"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C07"
+      ],
+      "modernHost": "O",
+      "modernMarks": [
+        "M02",
+        "M05"
+      ],
+      "modernUnicode": "ងឹី",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "p.p",
@@ -417,7 +705,12 @@
       "base": "P",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "P",
+      "modernMarks": [],
+      "modernUnicode": "ព",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "p.aspirated",
@@ -429,7 +722,16 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "P",
+      "modernMarks": [
+        "M11"
+      ],
+      "modernUnicode": "ព៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "r.rolled",
@@ -441,7 +743,16 @@
         "K11"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K11"
+      ],
+      "modernHost": "R",
+      "modernMarks": [
+        "M01"
+      ],
+      "modernUnicode": "រ៌",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "r.tap",
@@ -451,7 +762,14 @@
       "base": "R",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "R",
+      "modernMarks": [
+        "M10"
+      ],
+      "modernUnicode": "រ៉",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "r.r",
@@ -461,7 +779,12 @@
       "base": "R",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "R",
+      "modernMarks": [],
+      "modernUnicode": "រ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "s.s",
@@ -471,7 +794,12 @@
       "base": "S",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "S",
+      "modernMarks": [],
+      "modernUnicode": "ស",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "s.sh",
@@ -483,7 +811,16 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "S",
+      "modernMarks": [
+        "M10"
+      ],
+      "modernUnicode": "ស៉",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "s.softsh",
@@ -495,7 +832,17 @@
         "K04"
       ],
       "example": "",
-      "note": "Same Khmer marker as sh."
+      "note": "Same Khmer marker as sh.",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "S",
+      "modernMarks": [
+        "M10",
+        "M11"
+      ],
+      "modernUnicode": "ស៉៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "t.t",
@@ -505,7 +852,12 @@
       "base": "T",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "T",
+      "modernMarks": [],
+      "modernUnicode": "ត",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "t.th",
@@ -517,7 +869,17 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "T",
+      "modernMarks": [
+        "M10",
+        "M06"
+      ],
+      "modernUnicode": "ត៉៍",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "t.tch",
@@ -529,7 +891,17 @@
         "K03"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K03"
+      ],
+      "modernHost": "T",
+      "modernMarks": [
+        "M10",
+        "M11"
+      ],
+      "modernUnicode": "ត៉៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "t.taz",
@@ -542,7 +914,18 @@
         "K01"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C01",
+        "K01"
+      ],
+      "modernHost": "T",
+      "modernMarks": [
+        "M03",
+        "M11"
+      ],
+      "modernUnicode": "តា៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "t.aspirated",
@@ -554,7 +937,16 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "T",
+      "modernMarks": [
+        "M11"
+      ],
+      "modernUnicode": "ត៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "u.oo",
@@ -566,7 +958,17 @@
         "C07"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C07"
+      ],
+      "modernHost": "O",
+      "modernMarks": [
+        "M02",
+        "M05"
+      ],
+      "modernUnicode": "ងឹី",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "u.uh",
@@ -578,7 +980,16 @@
         "C04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C04"
+      ],
+      "modernHost": "A",
+      "modernMarks": [
+        "M02"
+      ],
+      "modernUnicode": "អឹ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "v.v",
@@ -590,7 +1001,16 @@
         "C09"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C09"
+      ],
+      "modernHost": "B",
+      "modernMarks": [
+        "M10"
+      ],
+      "modernUnicode": "ប៉",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "v.glide",
@@ -602,7 +1022,17 @@
         "C09"
       ],
       "example": "",
-      "note": "Same Khmer mapping as V."
+      "note": "Same Khmer mapping as V.",
+      "historicalMarks": [
+        "C09"
+      ],
+      "modernHost": "B",
+      "modernMarks": [
+        "M10",
+        "M12"
+      ],
+      "modernUnicode": "ប៉៎",
+      "modernRecipeStatus": "provisional"
     },
     {
       "id": "w.wah",
@@ -614,7 +1044,16 @@
         "C05"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C05"
+      ],
+      "modernHost": "W",
+      "modernMarks": [
+        "M03"
+      ],
+      "modernUnicode": "វា",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "w.weh",
@@ -626,7 +1065,17 @@
         "C02"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C02"
+      ],
+      "modernHost": "W",
+      "modernMarks": [
+        "M03",
+        "M04"
+      ],
+      "modernUnicode": "វា់",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "w.wih",
@@ -638,7 +1087,16 @@
         "C03"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C03"
+      ],
+      "modernHost": "W",
+      "modernMarks": [
+        "M04"
+      ],
+      "modernUnicode": "វ់",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "w.woo",
@@ -650,7 +1108,16 @@
         "C07"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C07"
+      ],
+      "modernHost": "W",
+      "modernMarks": [
+        "M05"
+      ],
+      "modernUnicode": "វី",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "w.woe",
@@ -662,7 +1129,17 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "W",
+      "modernMarks": [
+        "M05",
+        "M12"
+      ],
+      "modernUnicode": "វី៎",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "w.wee",
@@ -674,7 +1151,17 @@
         "C06"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C06"
+      ],
+      "modernHost": "W",
+      "modernMarks": [
+        "M05",
+        "M02"
+      ],
+      "modernUnicode": "វីឹ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "y.yah",
@@ -686,7 +1173,16 @@
         "C05"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C05"
+      ],
+      "modernHost": "Y",
+      "modernMarks": [
+        "M03"
+      ],
+      "modernUnicode": "យា",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "y.yeh",
@@ -698,7 +1194,17 @@
         "C02"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C02"
+      ],
+      "modernHost": "Y",
+      "modernMarks": [
+        "M03",
+        "M04"
+      ],
+      "modernUnicode": "យា់",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "y.yu",
@@ -710,7 +1216,16 @@
         "C07"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C07"
+      ],
+      "modernHost": "Y",
+      "modernMarks": [
+        "M05"
+      ],
+      "modernUnicode": "យី",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "y.yih",
@@ -722,7 +1237,16 @@
         "C03"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C03"
+      ],
+      "modernHost": "Y",
+      "modernMarks": [
+        "M04"
+      ],
+      "modernUnicode": "យ់",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "y.yee",
@@ -734,7 +1258,17 @@
         "C06"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C06"
+      ],
+      "modernHost": "Y",
+      "modernMarks": [
+        "M05",
+        "M02"
+      ],
+      "modernUnicode": "យីឹ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "y.yoh",
@@ -746,7 +1280,17 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "Y",
+      "modernMarks": [
+        "M05",
+        "M12"
+      ],
+      "modernUnicode": "យី៎",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "z.z",
@@ -756,7 +1300,12 @@
       "base": "Z",
       "marks": [],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [],
+      "modernHost": "Z",
+      "modernMarks": [],
+      "modernUnicode": "ឝ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "z.zn",
@@ -768,7 +1317,16 @@
         "K10"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K10"
+      ],
+      "modernHost": "Z",
+      "modernMarks": [
+        "M09"
+      ],
+      "modernUnicode": "ឝំ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "t.voiced-th",
@@ -780,7 +1338,17 @@
         "K04"
       ],
       "example": "",
-      "note": "Shares TH slot until separately assigned."
+      "note": "Shares TH slot until separately assigned.",
+      "historicalMarks": [
+        "K04"
+      ],
+      "modernHost": "T",
+      "modernMarks": [
+        "M10",
+        "M07"
+      ],
+      "modernUnicode": "ត៉័",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "t.aspirated-tch",
@@ -792,7 +1360,17 @@
         "K03"
       ],
       "example": "",
-      "note": "Shares TCH slot until separately assigned."
+      "note": "Shares TCH slot until separately assigned.",
+      "historicalMarks": [
+        "K03"
+      ],
+      "modernHost": "T",
+      "modernMarks": [
+        "M11",
+        "M06"
+      ],
+      "modernUnicode": "ត៊៍",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "t.taahzi",
@@ -805,7 +1383,18 @@
         "K01"
       ],
       "example": "",
-      "note": "Historical TAZ alternative; shared marks."
+      "note": "Historical TAZ alternative; shared marks.",
+      "historicalMarks": [
+        "C01",
+        "K01"
+      ],
+      "modernHost": "T",
+      "modernMarks": [
+        "M05",
+        "M11"
+      ],
+      "modernUnicode": "តី៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "k.aspirated-kw",
@@ -818,7 +1407,18 @@
         "K04"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "C09",
+        "K04"
+      ],
+      "modernHost": "K",
+      "modernMarks": [
+        "M12",
+        "M11"
+      ],
+      "modernUnicode": "ក៎៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "k.x-fricative",
@@ -830,7 +1430,17 @@
         "K02"
       ],
       "example": "",
-      "note": "Historical variant of KS; shared marks."
+      "note": "Historical variant of KS; shared marks.",
+      "historicalMarks": [
+        "K02"
+      ],
+      "modernHost": "K",
+      "modernMarks": [
+        "M10",
+        "M06"
+      ],
+      "modernUnicode": "ក៉៍",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "n.ngg",
@@ -842,7 +1452,17 @@
         "C08"
       ],
       "example": "",
-      "note": "Historical variant of NG; shared marks."
+      "note": "Historical variant of NG; shared marks.",
+      "historicalMarks": [
+        "C08"
+      ],
+      "modernHost": "N",
+      "modernMarks": [
+        "M09",
+        "M11"
+      ],
+      "modernUnicode": "នំ៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "n.nj",
@@ -854,7 +1474,17 @@
         "C10"
       ],
       "example": "",
-      "note": "Historical variant of NY; shared marks."
+      "note": "Historical variant of NY; shared marks.",
+      "historicalMarks": [
+        "C10"
+      ],
+      "modernHost": "N",
+      "modernMarks": [
+        "M10",
+        "M11"
+      ],
+      "modernUnicode": "ន៉៊",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "s.z",
@@ -864,7 +1494,12 @@
       "base": "Z",
       "marks": [],
       "example": "",
-      "note": "S-family voiced counterpart uses existing Z letter slot."
+      "note": "S-family voiced counterpart uses existing Z letter slot.",
+      "historicalMarks": [],
+      "modernHost": "Z",
+      "modernMarks": [],
+      "modernUnicode": "ឝ",
+      "modernRecipeStatus": "working"
     },
     {
       "id": "d.j",
@@ -876,7 +1511,18 @@
         "K03"
       ],
       "example": "",
-      "note": ""
+      "note": "",
+      "historicalMarks": [
+        "K03"
+      ],
+      "modernHost": "D",
+      "modernMarks": [
+        "M10",
+        "M11"
+      ],
+      "modernUnicode": "ដ៉៊",
+      "modernRecipeStatus": "working"
     }
-  ]
+  ],
+  "modernVersion": "2026-11-16-20-letter-12-mark"
 }

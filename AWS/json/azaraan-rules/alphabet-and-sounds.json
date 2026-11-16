@@ -1,6 +1,6 @@
 {
-  "alphabet": "ABDEGHIJKLMNOPRSTYZ",
-  "count": 19,
+  "alphabet": "ABDEGHIJKLMNOPRSTWYZ",
+  "count": 20,
   "case": "Case is a Latin transliteration aid, not a claim about native glyph casing",
   "sound_source": "The IPA values in the Letter Evolution Table are preserved, including unconventional notation used by that table.",
   "independent_letters": [
@@ -24,15 +24,9 @@
         "/β/",
         "/f/",
         "/v/",
-        "/ʋ/",
-        "/wɑ/",
-        "/wɛ/",
-        "/wɪ/",
-        "/wuː/",
-        "/woʊ/",
-        "/wiː/"
+        "/ʋ/"
       ],
-      "notes": "B, F, V and W merged into one base. The W plus vowel phonemes remain representable."
+      "notes": "B independent; F and V merged via Soft+Unvoiced and Soft. New Modern W stays a working independent glyph."
     },
     {
       "letter": "D",
@@ -187,6 +181,19 @@
         "/taːhzi/"
       ],
       "notes": "T, TH, TCH and TAZ remain"
+    },
+    {
+      "letter": "W",
+      "type": "semivowel",
+      "ipa": [
+        "/wɑ/",
+        "/wɛ/",
+        "/wɪ/",
+        "/wuː/",
+        "/woʊ/",
+        "/wiː/"
+      ],
+      "notes": "Modern working glyph W independent per newer font; older 19-letter inventory merged W under B."
     },
     {
       "letter": "Y",
@@ -357,7 +364,7 @@
   "legacy_letter_mergers": {
     "F": "B accent for f",
     "V": "B accent for v",
-    "W": "B accent for w",
+    "W": "Historical B merger; Modern 20-letter W separate pending canonical font mapping",
     "Q": "K accent for kw",
     "X": "K accent or compound for ks/x",
     "C": "Use K, S or T-family reading according to historical word, not automatic C replacement",
@@ -368,5 +375,6 @@
   "standalone_consonant_default": {
     "B": "Must carry an explicit b/f/v/w selector accent",
     "A": "Must carry vowel quality accent"
-  }
+  },
+  "modernCanonicalReference": "json/keyboard/modern-orthography-2026.json"
 }

@@ -1,13 +1,13 @@
 {
   "writing_system": "Aza'raan independent plus dependent phonetic elements, inspired by Khmer and Malayalam but not an assertion of literal Khmer letters",
   "direction": "ltr",
-  "host_type": "one of 20 independent letters",
+  "host_type": "one of 20 independent Modern letters",
   "atomic_letter": {
     "fields": [
       "base",
       "accent"
     ],
-    "max_accents": 1,
+    "max_accents": 2,
     "subscript_support": true
   },
   "cluster_schema": {
@@ -22,9 +22,9 @@
       "stress_target",
       "reading_override"
     ],
-    "base_allowed": "ABDEGHIJKLMNOPRSTYZ",
+    "base_allowed": "ABDEGHIJKLMNOPRSTWYZ",
     "max_subscripts": 2,
-    "max_accents_per_atomic": 1,
+    "max_accents_per_atomic": 2,
     "subscript_order": [
       "pre",
       "vowel_or_consonant",
@@ -95,5 +95,16 @@
     "grapheme_stability": "Keep semantic character IDs separate from glyph display and Unicode mapping",
     "missing_glyph_policy": "Unassigned rather than guessing",
     "latin_transliteration": "Explanatory only"
+  },
+  "modern": {
+    "alphabet": "ABDEGHIJKLMNOPRSTWYZ",
+    "maxOrdinaryDiacritics": 2,
+    "maxSubscripts": 2,
+    "subscriptSizeRatio": 0.2,
+    "subscriptRows": "side by side to right of tail",
+    "hostPrimary": "left/right",
+    "secondary": "attached to primary smaller",
+    "separatedVowel": "vowel-bearing host plus independent second vowel subscript ONLY",
+    "glottalAndClick": "above host, outside two-ordinary-mark limit"
   }
 }
