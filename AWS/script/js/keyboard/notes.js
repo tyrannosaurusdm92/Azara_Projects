@@ -28,6 +28,64 @@ function rememberRange(){const el=current();if(!el?.isContentEditable)return;con
 document.addEventListener('focusin',e=>{if(isEditable(e.target)){target=e.target;savedRange=null;applyWritingMode(e.target);rememberRange();}},true);
 document.addEventListener('selectionchange',()=>{const sel=getSelection();if(sel?.rangeCount){const a=sel.anchorNode;const ed=a?.parentElement?.closest('[contenteditable=true]');if(ed&&isEditable(ed)){target=ed;savedRange=sel.getRangeAt(0).cloneRange();}}});
 function focus(){const e=current();if(!e)return; e.focus({preventScroll:true});if(e.isContentEditable&&savedRange){const s=getSelection();s.removeAllRanges();try{s.addRange(savedRange)}catch{}}}
+/* Optical spacing affects typed glyph runs only: never change their outlines,
+   keyboard previews, spaces, punctuation, or the historical evolution artwork.
+   Geometry comes from the approved compositor's true ink rectangles. */
+function compactModernCluster(visual){
+ try{
+  const entries=JSON.parse(visual.dataset.layout||'[]');
+  if(!entries.length||entries.some(p=>![p.x,p.w].every(Number.isFinite)))return visual;
+  const minInk=Math.min(...entries.map(p=>p.x));
+  const maxInk=Math.max(...entries.map(p=>p.x+p.w));
+  // aws-modern-core.js starts every cluster at min(0, left ink) and adds 6px.
+  const originalMin=Math.min(0,...entries.map(p=>p.x));
+  const safety=1; // half a native pixel per side, ~0.3px at manuscript zoom
+  const trim=minInk-originalMin+6-safety;
+  for(const part of visual.querySelectorAll('.packed-ink')){
+   const x=parseFloat(part.style.left);
+   if(Number.isFinite(x))part.style.left=(x-trim)+'px';
+  }
+  visual.style.width=Math.max(2,maxInk-minInk+2*safety)+'px';
+  visual.dataset.azaOpticalSpacing='ink-bounds';
+ }catch(e){console.warn('Aza’raan letter keeps its safe original advance',e)}
+ return visual;
+}
+const inkCanvas=document.createElement('canvas');
+const inkContext=inkCanvas.getContext('2d');
+const historicalFonts={Archaic:'AzArchaic',Classical:'AzClassical',Traditional:'AzTraditional',Modern:'AzModern'};
+const loadingInkFonts=new Set();
+function measureFontRun(run,text,era){
+ const font=historicalFonts[era];
+ if(!font||!inkContext||!text)return;
+ const spec='100px "'+font+'"';
+ if(document.fonts&&!document.fonts.check(spec)){
+  if(!loadingInkFonts.has(era)){
+   loadingInkFonts.add(era);
+   document.fonts.load(spec).then(()=>{
+    loadingInkFonts.delete(era);
+    for(const el of document.querySelectorAll('.aza-script-run[data-aza-optical-spacing="font-ink"]')){
+     if(el.dataset.azaEra===era&&el.dataset.azaPlainLetter){
+      applyFontInkMargins(el,el.dataset.azaPlainLetter,era);
+     }
+    }
+   },()=>loadingInkFonts.delete(era));
+  }
+  return;
+ }
+ applyFontInkMargins(run,text,era);
+}
+function applyFontInkMargins(run,text,era){
+ if(!inkContext)return;
+ inkContext.font='100px "'+historicalFonts[era]+'"';
+ const m=inkContext.measureText(text);
+ if(!Number.isFinite(m.width)||!Number.isFinite(m.actualBoundingBoxLeft)||!Number.isFinite(m.actualBoundingBoxRight))return;
+ const leftInk=-m.actualBoundingBoxLeft,rightInk=m.actualBoundingBoxRight;
+ if(rightInk<=leftInk||m.width<=0)return;
+ const safety=.7; // total adjacent-glyph gap, expressed in 100px font units
+ run.style.marginLeft=((-leftInk+safety/2)/100)+'em';
+ run.style.marginRight=(-(m.width-rightInk-safety/2)/100)+'em';
+ run.dataset.azaOpticalSpacing='font-ink';
+}
 function historicRun(run,text,token){
  const era=writingMode.era,assets=window.AZ_ASSETS,roots=window.AZA_DATA?.fontRoots?.[era]||{};
  const hidden=document.createElement('span');hidden.className='aza-logical-data';hidden.textContent=text;
@@ -47,6 +105,15 @@ function historicRun(run,text,token){
    (sub.marks||[]).forEach((id,i)=>{const m=glyph(assets?.secondary?.[id],'aza-history-sub-mark aza-history-sub-mark-'+i);if(m)subcell.append(m);});row.append(subcell);
   });cell.append(row);
  }
+ // The legacy F/V art uses a fixed 1.65em box; reserve only the portions
+ // occupied by the base, up to two marks, up to two subscripts and specials.
+ const left=token.specials?.includes('sLeft')?-.28:0;
+ let right=1.58;
+ if(token.marks?.length)right=Math.max(right,token.marks.length>1?1.79:1.68);
+ if(token.specials?.includes('sRight'))right=Math.max(right,1.94);
+ if(token.subs?.length)right=Math.max(right,.81+token.subs.length*.32+(token.subs.length-1)*.05);
+ cell.style.width=(right+.012)+'em';
+ cell.style.marginLeft=(-left+.012)+'em';
  run.classList.add('aza-historic-composite');run.append(hidden,cell);return run;
 }
 function makeAzaRun(text,token){
@@ -57,11 +124,17 @@ function makeAzaRun(text,token){
  if(writingMode.era==='Modern'&&token&&window.AZ_MK?.createCluster){
   try{
    const hidden=document.createElement('span');hidden.className='aza-logical-data';hidden.textContent=text;
-   const visual=window.AZ_MK.createCluster(token);visual.classList.add('aza-inline-composed');visual.setAttribute('aria-hidden','true');
+   const visual=compactModernCluster(window.AZ_MK.createCluster(token));visual.classList.add('aza-inline-composed');visual.setAttribute('aria-hidden','true');
    run.classList.add('aza-native-composite');run.append(hidden,visual);return run;
   }catch(err){console.warn('Using canonical Aza’raan font instead of artwork compositor',err);}
  }
- run.textContent=text;return run;
+ run.textContent=text;
+ if(token?.type==='letter'&&text&&writingMode.language==='azaaraan'){
+  run.dataset.azaOpticalSpacing='font-ink';
+  run.dataset.azaPlainLetter=text;
+  measureFontRun(run,text,writingMode.era);
+ }
+ return run;
 }
 function insert(text,token=null){const el=current();if(!el)return toast('Select a writing page or notes field first.');text=String(text);
  if(writingMode.language==='azaaraan'&&isAzaEncoded(text)){
