@@ -122,3 +122,9 @@
 .aza-script-run.era-modern{font-family:AzModern,serif!important}
 .aza-script-run{display:inline;white-space:pre-wrap;unicode-bidi:isolate;line-height:inherit;vertical-align:baseline}
 :where(input,textarea,[contenteditable="true"]).aza-writing{font-kerning:none;font-variant-ligatures:none}
+
+/* Modern's exact approved primary/secondary/subscript PNG geometry appears in
+   rich-text runs; keep the true Unicode cluster as selectable logical text. */
+.aza-native-composite{display:inline-flex;position:relative;align-items:baseline;vertical-align:baseline;white-space:nowrap;line-height:1;isolation:isolate}
+.aza-native-composite>.aza-logical-data{position:absolute;inset:0 auto auto 0;white-space:pre;opacity:0;pointer-events:none;font-size:0;line-height:0}
+.aza-native-composite>.aza-inline-composed{zoom:.30;vertical-align:baseline;flex-shrink:0}
