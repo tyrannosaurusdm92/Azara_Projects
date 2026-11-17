@@ -75,3 +75,5 @@
 .evolution-pane .modern-lineage-frame{display:block;position:relative;width:48px;height:48px;flex:0 0 48px;overflow:visible}
 .evolution-pane .modern-lineage-frame .mini-mark.modern-art{display:block;position:absolute;max-width:none;max-height:none;object-fit:fill}
 .evolution-pane .modern-table-entry{display:flex;align-items:center;gap:8px}
+/* Reserve the 24px needed for the longest Modern tails; stage positions stay fixed. */
+.evolution-pane .chart{height:990px}
