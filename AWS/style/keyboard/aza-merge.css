@@ -97,3 +97,15 @@
 
 .evo-draft-dock{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;border:1px solid #b58b4d;background:linear-gradient(120deg,#122c32,#182027);color:#f1d6a3;padding:12px 20px;border-radius:9px;margin:2px 14px 14px}
 .evo-draft-dock strong{font-size:12px;white-space:nowrap}.evo-draft-dock output{flex:1 1 230px;min-height:20px;color:#a2e2df;font-size:20px;overflow-wrap:anywhere}.evo-draft-dock small{color:#b3c8ca;font-size:11px}
+
+
+/* Modern preview only: retain exact PNG silhouettes but align on the
+   font's letter body rather than shrink long stems/tails to the key box. */
+.keyboard .aza-key.aza-modern .key-glyph-art.aza-body-aligned{
+  max-width:none;
+  max-height:none;
+  right:auto;
+  bottom:auto;
+  object-fit:fill;
+  pointer-events:none;
+}
