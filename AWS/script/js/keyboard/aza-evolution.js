@@ -8,6 +8,40 @@ const overlay=document.getElementById('connectors');
 const pick=document.getElementById('focus');
 const detail=document.getElementById('detail');
 const NS='http://www.w3.org/2000/svg';
+/* The Modern artwork preserves the original font-unit coordinates.
+   Measure the main letter body, not the tail/branch-inclusive SVG viewBox. */
+const MODERN_ART_METRICS={
+  modern_1:[176,251,12,663],modern_3:[686,920,-311,398],
+  modern_6:[492,404,-379,376],modern_8:[978,1150,14,397],
+  modern_9:[420,390,-415,370],modern_11:[430,398,-410,375],
+  modern_12:[418,436,-416,403],modern_14:[428,386,-411,369],
+  modern_18:[949,1232,15,406],modern_19:[842,1216,-312,683],
+  modern_20:[846,1239,-336,696],modern_21:[845,1263,-344,697],
+  modern_22:[906,1330,-360,734],modern_23:[911,1330,-324,733],
+  modern_24:[853,1148,-368,1067],modern_33:[1135,1227,13,402],
+  modern_34:[438,403,-408,376],modern_35:[423,389,-413,369],
+  modern_36:[493,402,-378,376],modern_44:[682,1072,-363,1009],
+  modern_50:[736,1110,-363,1020],modern_52:[270,239,13,673],
+  modern_1_U003C:[191,216,11,658],modern_1_U003E:[174,208,10,648]
+};
+function positionModernArt(img,src,context){
+  const key=/\/(modern_[^/?]+)\.svg(?:\?|$)/.exec(src)?.[1];
+  const bounds=MODERN_ART_METRICS[key];
+  if(!bounds)return false; // The former U root is an intentionally empty merger slot.
+  const [width,height,originX,originY]=bounds;
+  // Consistent main-body size; flourishes retain their full natural dimensions.
+  const pxPerUnit=(context==='chart'?35:context==='detail'?28:27)/350;
+  img.classList.add('modern-art');
+  img.style.position='absolute';
+  img.style.objectFit='fill';
+  img.style.width=(width*pxPerUnit).toFixed(2)+'px';
+  img.style.height=(height*pxPerUnit).toFixed(2)+'px';
+  // Shared pen origin and baseline, instead of independently centering each SVG.
+  img.style.left='calc(50% - '+((600+originX)*pxPerUnit).toFixed(2)+'px)';
+  img.style.top='calc(50% + '+((175-originY)*pxPerUnit).toFixed(2)+'px)';
+  return true;
+}
+
 const roots=new Map(D.roots.map(r=>[r.slot,r]));
 const families=new Map(D.families.map(f=>[f.family,f]));
 const mergeBySlot=new Map(D.mergers.map(m=>[m.slot,m]));
@@ -34,7 +68,7 @@ function resolveOwner(slot,stageNo){
 function mark(src,className,slot,stageKey,title){
  const b=document.createElement('button');b.type='button';b.className=className;b.title=title;
  const r=roots.get(slot);b.dataset.family=familyFor(r);b.dataset.slot=String(slot);b.dataset.stage=stageKey;b.style.color=colorFor(r);
- const m=document.createElement('img');m.className=className==='glyph'?'mark':'table-mark';setMask(m,src);b.appendChild(m);
+ const m=document.createElement('img');m.className=className==='glyph'?'mark':'table-mark';setMask(m,src);if(stageKey==='modern'&&positionModernArt(m,src,'table'))b.classList.add('modern-art-holder');b.appendChild(m);
  b.addEventListener('click',ev=>{ev.stopPropagation();selectGlyph(stageKey,slot);window.scrollTo({top:0,behavior:'smooth'})});
  return b;
 }
@@ -43,7 +77,7 @@ function drawLineageChips(slot){
  D.stages.forEach((stage,i)=>{
   const owner=resolveOwner(slot,i), r=owner===null?null:roots.get(owner), node=r&&r.stages[stage.key];
   const chip=document.createElement('span');chip.className='lineage-chip';chip.style.color=r?colorFor(r):'#aeb7c7';
-  if(node&&node.src){const m=document.createElement('img');m.className='mini-mark';setMask(m,node.src);chip.appendChild(m)}
+  if(node&&node.src){const m=document.createElement('img');m.className='mini-mark';setMask(m,node.src);if(stage.key==='modern'&&positionModernArt(m,node.src,'detail')){const frame=document.createElement('span');frame.className='modern-lineage-frame';frame.appendChild(m);chip.appendChild(frame)}else chip.appendChild(m)}
   else if(node&&node.text){const t=document.createElement('span');t.className='mini-text';t.textContent=node.text;chip.appendChild(t)}
   else{const t=document.createElement('span');t.className='mini-text';t.textContent='—';chip.appendChild(t)}
   const label=document.createElement('small');label.textContent=owner!==null&&owner!==slot?'→ '+stage.label+' · root '+String(owner).padStart(2,'0'):stage.label;chip.appendChild(label);wrap.appendChild(chip);
@@ -115,7 +149,10 @@ function renderTable(){
  for(const fam of D.families){
   const members=D.roots.filter(r=>r.family===fam.family);
   const tr=document.createElement('tr');
-  const modern=document.createElement('td');modern.className='symbol-cell table-letter';modern.textContent=fam.letter;
+  const modern=document.createElement('td');modern.className='symbol-cell table-letter';
+  const previewRoot=members.find(r=>r.stages.modern&&r.stages.modern.src&&!/\/modern_37\.svg/.test(r.stages.modern.src));
+  if(previewRoot){const entry=document.createElement('div');entry.className='modern-table-entry';const art=mark(previewRoot.stages.modern.src,'table-glyph',previewRoot.slot,'modern',rootDesc(D.stages[stageIndex.get('modern')],previewRoot,previewRoot.stages.modern));const name=document.createElement('span');name.textContent=fam.letter;entry.append(art,name);modern.appendChild(entry)}
+  else modern.textContent=fam.letter;
   const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' · 24 contemporary marks';modern.appendChild(variants);
   tr.appendChild(modern);
   const source=document.createElement('td');const rootsBox=document.createElement('div');rootsBox.className='source-roots';
@@ -164,7 +201,7 @@ D.stages.forEach((stage,stageNo)=>{
   b.dataset.family=familyFor(root);b.dataset.stage=stage.key;b.dataset.slot=String(root.slot);
   const d=rootDesc(stage,root,node);
   b.setAttribute('aria-label',d);b.title=d+' — click to inspect';
-  if(node.src){const m=document.createElement('img');m.className='mark';setMask(m,node.src);b.appendChild(m)}
+  if(node.src){const m=document.createElement('img');m.className='mark';setMask(m,node.src);if(stage.key==='modern')positionModernArt(m,node.src,'chart');b.appendChild(m)}
   else if(node.text){const m=document.createElement('span');m.className='textmark';m.textContent=node.text;b.appendChild(m)}
   b.addEventListener('click',()=>selectGlyph(stage.key,root.slot));chart.appendChild(b);
  });
