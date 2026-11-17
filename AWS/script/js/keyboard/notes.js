@@ -28,8 +28,32 @@ function rememberRange(){const el=current();if(!el?.isContentEditable)return;con
 document.addEventListener('focusin',e=>{if(isEditable(e.target)){target=e.target;savedRange=null;applyWritingMode(e.target);rememberRange();}},true);
 document.addEventListener('selectionchange',()=>{const sel=getSelection();if(sel?.rangeCount){const a=sel.anchorNode;const ed=a?.parentElement?.closest('[contenteditable=true]');if(ed&&isEditable(ed)){target=ed;savedRange=sel.getRangeAt(0).cloneRange();}}});
 function focus(){const e=current();if(!e)return; e.focus({preventScroll:true});if(e.isContentEditable&&savedRange){const s=getSelection();s.removeAllRanges();try{s.addRange(savedRange)}catch{}}}
+function historicRun(run,text,token){
+ const era=writingMode.era,assets=window.AZ_ASSETS,roots=window.AZA_DATA?.fontRoots?.[era]||{};
+ const hidden=document.createElement('span');hidden.className='aza-logical-data';hidden.textContent=text;
+ const cell=document.createElement('span');cell.className='aza-history-cell';cell.setAttribute('aria-hidden','true');
+ const glyph=(src,classes)=>{
+  if(!src||!/^assets\/keyboard\/(?:modern\/|svg\/evolution\/)/.test(src))return null;
+  const img=document.createElement('img');img.src=src;img.alt='';img.className=classes;img.draggable=false;return img;
+ };
+ const main=glyph(token.historicalArt,'aza-history-base');if(!main)return null;cell.append(main);
+ (token.marks||[]).forEach((id,i)=>{const img=glyph((i?assets?.secondary?.[id]:assets?.primary?.[id]),'aza-history-mark aza-history-mark-'+i);if(img)cell.append(img);});
+ (token.specials||[]).forEach(id=>{const img=glyph(assets?.primary?.[id],'aza-history-special aza-history-special-'+id);if(img)cell.append(img);});
+ if(token.subs?.length){
+  const row=document.createElement('span');row.className='aza-history-subs';
+  token.subs.forEach(sub=>{
+   const root=Object.keys(roots).find(k=>roots[k]===sub.key.toUpperCase()),src=root?'assets/keyboard/svg/evolution/'+era.toLowerCase()+'/'+era.toLowerCase()+'_'+root+'.svg':null;
+   const subcell=document.createElement('span');subcell.className='aza-history-sub',img=glyph(src,'aza-history-sub-art');if(img)subcell.append(img);
+   (sub.marks||[]).forEach((id,i)=>{const m=glyph(assets?.secondary?.[id],'aza-history-sub-mark aza-history-sub-mark-'+i);if(m)subcell.append(m);});row.append(subcell);
+  });cell.append(row);
+ }
+ run.classList.add('aza-historic-composite');run.append(hidden,cell);return run;
+}
 function makeAzaRun(text,token){
  const run=document.createElement('span');run.className='aza-script-run era-'+writingMode.era.toLowerCase();run.dataset.azaEra=writingMode.era;run.contentEditable='false';run.lang='und';
+ if(token?.historicalArt&&writingMode.era!=='Modern'){
+  const historic=historicRun(run,text,token);if(historic)return historic;
+ }
  if(writingMode.era==='Modern'&&token&&window.AZ_MK?.createCluster){
   try{
    const hidden=document.createElement('span');hidden.className='aza-logical-data';hidden.textContent=text;
