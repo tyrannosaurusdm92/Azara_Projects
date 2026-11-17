@@ -100,7 +100,7 @@ function selectGlyph(stageKey,slot){
  const note=document.createElement('div');note.className='detail-note';
  const specialRootCodes={'1':'៏','52':'ះ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&modernGlyph(family.family))))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
  note.textContent=rootDesc(stage,r,node)+'. '+(node&&node.label?node.label+'. ':'')+'The modern reading is '+(family?family.letter:(node&&node.text)||r.reflex)+'.';
- detail.appendChild(note);detail.appendChild(copyButton(copyText,'Copy reading '+copyText));
+ detail.appendChild(note);detail.appendChild(copyButton(copyText,stageKey==='modern'?'Copy Aza’raan encoded letter':'Copy reading '+copyText));
  highlight(new Set([familyFor(r)]),[stageKey,slot]);pick.value='';
 }
 function addTableGlyphs(td,items,stageKey){
@@ -147,7 +147,7 @@ function renderTable(){
    detail.replaceChildren();
    const name=document.createElement('div');name.className='detail-title';name.textContent=sign.name+' · '+sign.sign;
    const explanation=document.createElement('div');explanation.className='detail-note';explanation.textContent=sign.meaning+' · Historical ancestor '+sign.origin+'; encoding metadata is kept separately from the native artwork.';
-   detail.append(name,drawLineageChips(sign.rootSlot),explanation,copyButton(sign.khmer,'Copy Khmer '+sign.name));
+   detail.append(name,drawLineageChips(sign.rootSlot),explanation,copyButton(sign.khmer,'Copy Aza’raan '+sign.name));
    highlight(new Set([familyFor(root)]),['modern',sign.rootSlot]);pick.value='';
    document.getElementById('panel-evolution').scrollIntoView({behavior:'smooth'});
   });
