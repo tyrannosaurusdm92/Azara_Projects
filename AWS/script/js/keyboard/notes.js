@@ -4,16 +4,42 @@
 const $=id=>document.getElementById(id);let target=null, savedRange=null,clip='';
 const segmenter=typeof Intl.Segmenter==='function'?new Intl.Segmenter(undefined,{granularity:'grapheme'}):null;
 const graphemes=s=>segmenter?Array.from(segmenter.segment(s),v=>v.segment):Array.from(s);
+let writingMode={language:'qwerty',era:'Modern'};
+const ERA_NAMES=['Archaic','Classical','Traditional','Modern'];
+const isAzaEncoded=value=>/[\u1780-\u17FF]/.test(String(value));
+const escapeText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function applyWritingMode(el){
+ if(!isEditable(el))return;
+ const era=writingMode.language==='azaaraan'?writingMode.era:(el.dataset.azaContentEra||null);
+ el.classList.toggle('aza-writing',!!era);
+ for(const name of ERA_NAMES)el.classList.toggle('era-'+name.toLowerCase(),name===era);
+ el.dataset.azaInputMode=writingMode.language;
+}
+function setWritingMode(language,era){
+ writingMode={language:language==='azaaraan'?'azaaraan':'qwerty',era:ERA_NAMES.includes(era)?era:'Modern'};
+ for(const node of document.querySelectorAll('.aza-writing,[data-aza-input-mode]'))if(isEditable(node))applyWritingMode(node);
+ const el=current();if(el)applyWritingMode(el);
+}
 const eligible=e=>e && (e.matches?.('input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]):not([type=color]),textarea,[contenteditable=true]'));
 function isEditable(el){return eligible(el) && el.isConnected && !el.closest('#keyboard,#aws-keyboard-compat,#voiceSettings,#captureDialog,#guideDialog') && !el.readOnly && !el.disabled}
 function current(){if(isEditable(target))return target;const first=document.querySelector('.rich-editor')||$('channel-notes');if(isEditable(first))return target=first;return null}
 function rememberRange(){const el=current();if(!el?.isContentEditable)return;const sel=window.getSelection();if(sel?.rangeCount && el.contains(sel.anchorNode)&&el.contains(sel.focusNode))savedRange=sel.getRangeAt(0).cloneRange()}
-document.addEventListener('focusin',e=>{if(isEditable(e.target)){target=e.target;savedRange=null;rememberRange();}},true);
+document.addEventListener('focusin',e=>{if(isEditable(e.target)){target=e.target;savedRange=null;applyWritingMode(e.target);rememberRange();}},true);
 document.addEventListener('selectionchange',()=>{const sel=getSelection();if(sel?.rangeCount){const a=sel.anchorNode;const ed=a?.parentElement?.closest('[contenteditable=true]');if(ed&&isEditable(ed)){target=ed;savedRange=sel.getRangeAt(0).cloneRange();}}});
 function focus(){const e=current();if(!e)return; e.focus({preventScroll:true});if(e.isContentEditable&&savedRange){const s=getSelection();s.removeAllRanges();try{s.addRange(savedRange)}catch{}}}
 function insert(text){const el=current();if(!el)return toast('Select a writing page or notes field first.');text=String(text);
- if(el.isContentEditable){focus();let ok=false;try{ok=document.execCommand('insertText',false,text)}catch{}
-  if(!ok){const sel=getSelection(),r=sel.rangeCount?sel.getRangeAt(0):document.createRange();if(!el.contains(r.commonAncestorContainer)){r.selectNodeContents(el);r.collapse(false)}r.deleteContents();const n=document.createTextNode(text);r.insertNode(n);r.setStartAfter(n);r.collapse(true);sel.removeAllRanges();sel.addRange(r);el.dispatchEvent(new Event('input',{bubbles:true}));}rememberRange();
+ if(writingMode.language==='azaaraan'&&isAzaEncoded(text)){
+  el.dataset.azaContent='yes';el.dataset.azaContentEra=writingMode.era;applyWritingMode(el);
+ }
+ if(el.isContentEditable){focus();let ok=false;
+  const az=(writingMode.language==='azaaraan'&&isAzaEncoded(text));
+  if(az){const html='<span class="aza-script-run era-'+writingMode.era.toLowerCase()+'" data-aza-era="'+writingMode.era+'" contenteditable="false" lang="und">'+escapeText(text)+'</span>';
+    try{ok=document.execCommand('insertHTML',false,html)}catch{}
+  }else try{ok=document.execCommand('insertText',false,text)}catch{}
+  if(!ok){const sel=getSelection(),r=sel.rangeCount?sel.getRangeAt(0):document.createRange();if(!el.contains(r.commonAncestorContainer)){r.selectNodeContents(el);r.collapse(false)}r.deleteContents();let n;
+    if(az){n=document.createElement('span');n.className='aza-script-run era-'+writingMode.era.toLowerCase();n.dataset.azaEra=writingMode.era;n.contentEditable='false';n.lang='und';n.textContent=text;}
+    else n=document.createTextNode(text);
+    r.insertNode(n);r.setStartAfter(n);r.collapse(true);sel.removeAllRanges();sel.addRange(r);el.dispatchEvent(new Event('input',{bubbles:true}));}rememberRange();
  }else{const start=el.selectionStart??el.value.length,end=el.selectionEnd??start;if(el.id==='document-title')text=text.replace(/[\r\n]/g,' ');el.setRangeText(text,start,end,'end');el.dispatchEvent(new Event('input',{bubbles:true}));focus();}
  refreshMirror();}
 function backspace(){const el=current();if(!el)return;
@@ -29,6 +55,6 @@ async function copy(all=false){clip=all?read():selected()||read();if(!clip)retur
 async function paste(){try{clip=await navigator.clipboard.readText()||clip}catch{}if(!clip){toast('Clipboard is empty');return false}insert(clip);return true}
 function download(name,blob){const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),5000)}
 function selectAll(){const el=current();if(!el)return;focus();if(el.isContentEditable){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);savedRange=r.cloneRange()}else el.select()}
-window.Notes={insert,backspace,copy,paste,toast,focus,download,graphemes,getTarget:current,getText:read,getSelectedText:selected,selectAll,getClipboard:()=>clip,setClipboard:v=>clip=String(v),refreshMirror};
+window.Notes={insert,backspace,copy,paste,toast,focus,download,graphemes,getTarget:current,getText:read,getSelectedText:selected,selectAll,getClipboard:()=>clip,setClipboard:v=>clip=String(v),refreshMirror,isEditable,setWritingMode,getWritingMode:()=>({...writingMode})};
 window.addEventListener('aws:view',()=>{target=null;savedRange=null;setTimeout(refreshMirror,0)});
 })();
