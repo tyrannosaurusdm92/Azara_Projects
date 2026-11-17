@@ -29,6 +29,9 @@
 .keyboard .aza-key.aza-archaic>.key-label,.keyboard .aza-key.aza-classical>.key-label,.keyboard .aza-key.aza-traditional>.key-label{font-family:DeskSans,Arial,sans-serif}
 .keyboard .aza-key>.key-label{font-size:clamp(14px,calc(var(--key-font)*.95),35px);font-weight:normal}
 .keyboard .aza-key>.key-symbol{font-family:system-ui,sans-serif;opacity:.9;color:#efd39c}
+.keyboard .aza-key.aza-archaic>.key-symbol{font-family:AzArchaic,'Noto Sans Khmer',sans-serif}
+.keyboard .aza-key.aza-classical>.key-symbol{font-family:AzClassical,'Noto Sans Khmer',sans-serif}
+.keyboard .aza-key.aza-traditional>.key-symbol{font-family:AzTraditional,'Noto Sans Khmer',sans-serif}
 .note.aza-writing.era-archaic{font-family:AzArchaic,'Noto Sans Khmer',system-ui,sans-serif}
 .note.aza-writing.era-classical{font-family:AzClassical,'Noto Sans Khmer',system-ui,sans-serif}
 .note.aza-writing.era-traditional{font-family:AzTraditional,'Noto Sans Khmer',system-ui,sans-serif}
