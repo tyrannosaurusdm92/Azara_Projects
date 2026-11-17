@@ -1,0 +1,46 @@
+/* Modern Aza'raan only. No rules for the other historical eras. */
+@font-face{
+ font-family:"AzaaraanModernCanonical";
+ src:url("../../assets/keyboard/ttf/Azaaraan-Modern-20261116.ttf") format("truetype");
+ font-weight:400;
+ font-style:normal;
+ font-display:swap;
+}
+.aza-modern-package-loaded .azaraan-modern-font-mark{
+ font-family:"AzaaraanModernCanonical" !important;
+ font-variant-ligatures:none;
+ font-feature-settings:"liga" 0,"kern" 0;
+ font-style:normal;
+ font-weight:400;
+ white-space:nowrap;
+ font-synthesis:none;
+}
+.aza-modern-package-loaded .evolution-pane .chart .glyph.modern .azaraan-modern-font-mark{
+ display:inline-block;
+ font-size:45px;
+ line-height:1;
+ text-align:center;
+ vertical-align:baseline;
+ transform:translateY(1px);
+ color:#fff;
+}
+.aza-modern-package-loaded .evolution-pane .table-glyph .azaraan-modern-font-mark{
+ display:inline-block;
+ font-size:31px;
+ line-height:1;
+ color:inherit;
+}
+.aza-modern-package-loaded .evolution-pane .modern-lineage-frame .azaraan-modern-font-mark{
+ display:flex;
+ width:48px;
+ height:48px;
+ align-items:center;
+ justify-content:center;
+ font-size:31px;
+ line-height:1;
+}
+.aza-modern-package-loaded [class*="keyboard"] .azaraan-modern-font-mark,
+.aza-modern-package-loaded [id*="keyboard"] .azaraan-modern-font-mark{
+ font-size:inherit;
+ line-height:inherit;
+}
