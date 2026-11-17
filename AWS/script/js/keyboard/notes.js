@@ -20,8 +20,9 @@ function setWritingMode(language,era){
  for(const node of document.querySelectorAll('.aza-writing,[data-aza-input-mode]'))if(isEditable(node))applyWritingMode(node);
  const el=current();if(el)applyWritingMode(el);
 }
-const eligible=e=>e && (e.matches?.('input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]):not([type=color]),textarea,[contenteditable=true]'));
-function isEditable(el){return eligible(el) && el.isConnected && !el.closest('#keyboard,#aws-keyboard-compat,#voiceSettings,#captureDialog,#guideDialog') && !el.readOnly && !el.disabled}
+const eligible=e=>e && (e.matches?.('input:is(:not([type]),[type=text]):not([autocomplete=username]):not([role=searchbox]),textarea,[contenteditable=true]'));
+const notWriting=el=>el.closest?.('[role=search],#bridge-box,#voiceSettings,#settings-dialog,#keyboard,#aws-keyboard-compat,#captureDialog,#guideDialog')||false;
+function isEditable(el){return eligible(el) && el.isConnected && !notWriting(el) && !el.readOnly && !el.disabled}
 function current(){if(isEditable(target))return target;const first=document.querySelector('.rich-editor')||$('channel-notes');if(isEditable(first))return target=first;return null}
 function rememberRange(){const el=current();if(!el?.isContentEditable)return;const sel=window.getSelection();if(sel?.rangeCount && el.contains(sel.anchorNode)&&el.contains(sel.focusNode))savedRange=sel.getRangeAt(0).cloneRange()}
 document.addEventListener('focusin',e=>{if(isEditable(e.target)){target=e.target;savedRange=null;applyWritingMode(e.target);rememberRange();}},true);
