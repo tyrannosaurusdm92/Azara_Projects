@@ -11,7 +11,7 @@
  const specials = {AZA_GLOTTAL:'sOver',AZA_CLICK:'sUnder',AZA_PREV:'sLeft',AZA_NEXT:'sRight'};
  const preferenceKey = 'steampunk-azaaraan-keyboard-preferences-v1';
  function isLetter(key){return historical.has(key)}
- function rowsForEra(era){return rows.map(row => row.filter(key => (era!=='Modern'||!['F','U','V'].includes(key)) && (era!=='Archaic'||!['AZA_PREV','AZA_NEXT'].includes(key))));}
+ function rowsForEra(era){return rows.map(row => row.filter(key => (era!=='Modern'||!['F','U','V'].includes(key)) && (era!=='Traditional'||key!=='F') && (era!=='Archaic'||!['AZA_PREV','AZA_NEXT'].includes(key))));}
  function loadChoice(){try{const saved=JSON.parse(localStorage.getItem(preferenceKey)||'{}');return {language:saved.language==='azaaraan'?'azaaraan':'qwerty',era:['Archaic','Classical','Traditional','Modern'].includes(saved.era)?saved.era:'Modern'}}catch{return {language:'qwerty',era:'Modern'}}}
  function saveChoice(language,era){try{localStorage.setItem(preferenceKey,JSON.stringify({language,era}))}catch{}}
  function draft(base,options={}){return {type:'letter',base,marks:options.marks||[],markOrder:options.marks||[],subs:options.subs||[],specials:options.specials||[]}}
@@ -21,12 +21,18 @@
    r.host===host&&Array.isArray(r.marks)&&r.marks.length===ids.length&&
    r.marks.every((m,i)=>m===ids[i])&&/[aæɑɐɒɔɛɪiouʌəe]/u.test(r.ipa||''));
  }
+ function historicalArtwork(base,era){
+  if(base==='F'&&['Archaic','Classical'].includes(era))return 'assets/keyboard/svg/evolution/'+era.toLowerCase()+'/'+era.toLowerCase()+'_7.svg';
+  if(base==='V'&&['Archaic','Classical','Traditional'].includes(era))return 'assets/keyboard/svg/evolution/'+era.toLowerCase()+'/'+era.toLowerCase()+'_18.svg';
+  return null;
+ }
  function tryEncode(base,markIds=[],era='Modern',subs=[],specialIds=[]){
   if(!isLetter(base)||(era==='Modern'&&!independent.has(base)))return {value:null,error:'This is not an independent letter in '+era+'.'};
   const allowed=new Set(availableMarks(era).map(x=>x.id));
   // F and V were shortcut keys in the older keyboards. They still spell the
   // B family, while Modern exposes that family only through B's hold menu.
-  const aliasMarks=era==='Modern'?[]:base==='F'?['soft','unvoiced']:base==='V'?['soft']:[];
+  const historicArt=historicalArtwork(base,era);
+  const aliasMarks=(era==='Modern'||historicArt)?[]:base==='F'?['soft','unvoiced']:base==='V'?['soft']:[];
   const mainMarks=[...aliasMarks,...markIds];
   const used=[...mainMarks,...specialIds,...subs.flatMap(s=>s.marks||[])];
   if(used.some(id=>!allowed.has(id)))return {value:null,error:'This mark is unavailable in '+era+'.'};
@@ -50,9 +56,11 @@
    if(!subs.some(sub=>hasVowelNucleus(sub.key.toUpperCase(),sub.marks||[])))
      return {value:null,error:'Separated Vowel requires a true vowel-bearing subscript, not an invented subscript.'};
   }
-  const ch=canon.ind[token.base]||window.AZA_HISTORICAL_U||'ឩ',early=new Set(['soft','hard','held']);
+  const ch=historicArt?canon.ind.B:(canon.ind[token.base]||window.AZA_HISTORICAL_U||'ឩ'),early=new Set(['soft','hard','held']);
   const enc=ids=>ids.map(id=>byId.get(id).unicode).join('');
-  return {value:ch+enc(mainMarks.filter(id=>early.has(id)))+subs.map(s=>canon.coeng+(canon.ind[s.key.toUpperCase()]||window.AZA_HISTORICAL_U)+enc(s.marks||[])).join('')+enc(mainMarks.filter(id=>!early.has(id)))+enc(specialIds),token};
+  const soundIdentity=historicArt?(base==='F'?['soft','unvoiced']:['soft']):[];
+  if(historicArt)token.historicalArt=historicArt;
+  return {value:ch+enc([...soundIdentity,...mainMarks.filter(id=>early.has(id))])+subs.map(s=>canon.coeng+(canon.ind[s.key.toUpperCase()]||window.AZA_HISTORICAL_U)+enc(s.marks||[])).join('')+enc(mainMarks.filter(id=>!early.has(id)))+enc(specialIds),token};
  }
  function encode(base,marks=[],era='Modern',subs=[],specials=[]){return tryEncode(base,marks,era,subs,specials).value||''}
  function glyph(base,era){return encode(base,[],era)}
@@ -61,7 +69,7 @@
  function availableMarks(era){return era==='Archaic'?marks.filter(x=>!['sLeft','sRight'].includes(x.id)):marks}
  function availableSubscripts(era){return era==='Modern'?Object.keys(canon.subs):[...Object.keys(canon.subs),'u']}
  function markName(id){return byId.get(id)?.name||id}
- function art(base,era){return era==='Modern'&&independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null}
+ function art(base,era){return historicalArtwork(base,era)||(era==='Modern'&&independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null)}
  function symbol(raw){return canon.nums[raw]||canon.punct[raw]||null}
  function handle(raw,era,notes){
   if(isLetter(raw)){const result=tryEncode(raw,[],era);if(result.error)notes.toast(result.error);else notes.insert(result.value,result.token);return true}
