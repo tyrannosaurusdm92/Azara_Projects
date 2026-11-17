@@ -1,0 +1,1243 @@
+{
+  "schema": "azaraan.khmer-hieroglyph-origins.v1",
+  "authority": "Uploaded Modern_Azaraan_Khmer_Unicode_to_Egyptian_Hieroglyph_Mapping_2026-11-16(1).txt",
+  "scope": "Aza’raan authored encoding, NOT a historical claim about Khmer",
+  "rules": {
+    "independentModernLetters": 20,
+    "assignedScalarCount": 55,
+    "catalogOnlyScalarCount": 59,
+    "distinctKhmerScalarCount": 114,
+    "coeng": "U+17D2",
+    "subscriptRule": "U+17D2 + Unicode of the base letter; the Egyptian ancestor belongs to the letter, not COENG",
+    "unresolvedMeaning": "No Egyptian root established; do not infer an Egyptian origin",
+    "modernUMergedWithA": true,
+    "modernBFamily": "B base; V = B + Soft; F = B + Soft + Unvoiced; P remains independent",
+    "modernWIndependent": true
+  },
+  "entries": [
+    {
+      "label": "A",
+      "unicode": "អ",
+      "codepoint": "U+17A2",
+      "egyptianOrigin": "𓄣",
+      "notes": "Traditional A/æ descends from 𓄣. After the Traditional Era, the former independent U/“uh” /ʌ/ lineage (𓃚) merges INTO Modern A; the yellow lineage arrow in the evolution chart joins A before Modern. A now carries /ʌ/ with Central Vowel. This does not create a new independent U code point. Current lowercase/subscript encoding: ្អ = U+17D2 + U+17A2; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "B",
+      "unicode": "ប",
+      "codepoint": "U+1794",
+      "egyptianOrigin": "𓈌",
+      "notes": "Single modern B host for B /b/, V /v/, and F /f/. In the historical merger, the V-family ancestor 𓈌 was selected as the shared glyph, as specified by the author. V = B + Soft Sound; F = B + Soft Sound + Unvoiced Sound. Neither F nor V is a separate modern independent letter; P is independent, NOT B + Unvoiced Sound. Current lowercase/subscript encoding: ្ប = U+17D2 + U+1794; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "D",
+      "unicode": "ដ",
+      "codepoint": "U+178A",
+      "egyptianOrigin": "𓀃",
+      "notes": "Independent D. Its lineage includes historical tapped /ɾ/ and affricated variants; additional sounds do not change the direct D ancestor. Current lowercase/subscript encoding: ្ដ = U+17D2 + U+178A; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "E",
+      "unicode": "ឆ",
+      "codepoint": "U+1786",
+      "egyptianOrigin": "𓆣",
+      "notes": "Independent E. This ZIP explicitly uses ឆ (U+1786) for E; do not substitute a code point from an older AWS Khmer encoding scheme. Current lowercase/subscript encoding: ្ឆ = U+17D2 + U+1786; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "G",
+      "unicode": "គ",
+      "codepoint": "U+1782",
+      "egyptianOrigin": "𓋑",
+      "notes": "Independent G; the historical G lineage contains soft G variants. This ZIP uses គ (U+1782). Current lowercase/subscript encoding: ្គ = U+17D2 + U+1782; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "H",
+      "unicode": "ហ",
+      "codepoint": "U+17A0",
+      "egyptianOrigin": "𓊓",
+      "notes": "Independent H; Voiced Sound produces /ɦ/ where specified in the working phonetic reference. Current lowercase/subscript encoding: ្ហ = U+17D2 + U+17A0; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "I",
+      "unicode": "ញ",
+      "codepoint": "U+1789",
+      "egyptianOrigin": "𓈚",
+      "notes": "Independent I; the shared Aza’raan font artwork is distinct from the standard Khmer reading of this Unicode code point. Current lowercase/subscript encoding: ្ញ = U+17D2 + U+1789; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "J",
+      "unicode": "ជ",
+      "codepoint": "U+1787",
+      "egyptianOrigin": "𓇢",
+      "notes": "Independent J; historical J family includes /dʒ/ and /ʒ/ pronunciations. Current lowercase/subscript encoding: ្ជ = U+17D2 + U+1787; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "K",
+      "unicode": "ក",
+      "codepoint": "U+1780",
+      "egyptianOrigin": "𓇰",
+      "notes": "Independent K; Q/Kw, X/Ks are derived K-family readings, not separate modern independent letters. Current lowercase/subscript encoding: ្ក = U+17D2 + U+1780; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "L",
+      "unicode": "ល",
+      "codepoint": "U+179B",
+      "egyptianOrigin": "𓍋",
+      "notes": "Independent L; dark /ɫ/ is a family modification, not a second independent letter. Current lowercase/subscript encoding: ្ល = U+17D2 + U+179B; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "M",
+      "unicode": "ម",
+      "codepoint": "U+1798",
+      "egyptianOrigin": "𓋝",
+      "notes": "Independent M; syllabic /m̩/ uses a family modifier, not a different independent ancestor. Current lowercase/subscript encoding: ្ម = U+17D2 + U+1798; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "N",
+      "unicode": "ន",
+      "codepoint": "U+1793",
+      "egyptianOrigin": "𓋜",
+      "notes": "Independent N; /ŋ/ and /ɲ/ are N-family derivatives, not additional independent modern letters. Current lowercase/subscript encoding: ្ន = U+17D2 + U+1793; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "O",
+      "unicode": "ង",
+      "codepoint": "U+1784",
+      "egyptianOrigin": "𓊲",
+      "notes": "Independent O, from 𓊲. The removed U-family /uː/ reading is now hosted by O using Central Vowel + Long Vowel. This historical sound reassignment does not make O descend from the same /ʌ/ root as A. Current lowercase/subscript encoding: ្ង = U+17D2 + U+1784; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "P",
+      "unicode": "ព",
+      "codepoint": "U+1796",
+      "egyptianOrigin": "𓇲",
+      "notes": "Independent P, from 𓇲. It is never treated as a B-derived voiceless glyph. Current lowercase/subscript encoding: ្ព = U+17D2 + U+1796; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "R",
+      "unicode": "រ",
+      "codepoint": "U+179A",
+      "egyptianOrigin": "𓈊",
+      "notes": "Independent R. Held Consonant can mark the rolled/trilled variant. Current lowercase/subscript encoding: ្រ = U+17D2 + U+179A; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "S",
+      "unicode": "ស",
+      "codepoint": "U+179F",
+      "egyptianOrigin": "𓆇",
+      "notes": "Independent S. /ʃ/ is a modified S-family sound; modern /z/ uses independent Z. Current lowercase/subscript encoding: ្ស = U+17D2 + U+179F; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "T",
+      "unicode": "ត",
+      "codepoint": "U+178F",
+      "egyptianOrigin": "𓆠",
+      "notes": "Independent T. Tz /tæz/ and Tch /tʃ/ are fused T-family readings with diacritics, not automatic A/Z/C/H subscripts. Current lowercase/subscript encoding: ្ត = U+17D2 + U+178F; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "W",
+      "unicode": "វ",
+      "codepoint": "U+179C",
+      "egyptianOrigin": "𓋧",
+      "notes": "Working independent W in THIS 20-key ZIP, from 𓋧. Historical status differs from an older AWS 19-base model which merged W under B; this package explicitly assigns W its own Unicode base, so this entry follows the uploaded ZIP. Current lowercase/subscript encoding: ្វ = U+17D2 + U+179C; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "Y",
+      "unicode": "យ",
+      "codepoint": "U+1799",
+      "egyptianOrigin": "𓈐",
+      "notes": "Independent Y, from 𓈐. Its Latin letter name is not evidence of any other Khmer Unicode assignment. Current lowercase/subscript encoding: ្យ = U+17D2 + U+1799; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "Z",
+      "unicode": "ឝ",
+      "codepoint": "U+179D",
+      "egyptianOrigin": "𓀁",
+      "notes": "Independent Z, from 𓀁. Earlier S-family /z/ overlap does not replace the distinct modern Z key. Current lowercase/subscript encoding: ្ឝ = U+17D2 + U+179D; this subscript retains the SAME Egyptian letter-family origin.",
+      "role": "independent"
+    },
+    {
+      "label": "Held Consonant (ordinary diacritic)",
+      "unicode": "៌",
+      "codepoint": "U+17CC",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Held Consonant”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Central Vowel (ordinary diacritic)",
+      "unicode": "ឹ",
+      "codepoint": "U+17B9",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Central Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Open Vowel (ordinary diacritic)",
+      "unicode": "ា",
+      "codepoint": "U+17B6",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Open Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Short Vowel (ordinary diacritic)",
+      "unicode": "់",
+      "codepoint": "U+17CB",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Short Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Long Vowel (ordinary diacritic)",
+      "unicode": "ី",
+      "codepoint": "U+17B8",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Long Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Unvoiced Sound (ordinary diacritic)",
+      "unicode": "៍",
+      "codepoint": "U+17CD",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Unvoiced Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified. Independent P is NOT encoded from B + Unvoiced.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Voiced Sound (ordinary diacritic)",
+      "unicode": "័",
+      "codepoint": "U+17D0",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Voiced Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified. Replaces the retired Falling Inflection label; does not itself create a new independent voiced base.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Separated Vowel (ordinary diacritic)",
+      "unicode": "ៈ",
+      "codepoint": "U+17C8",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Separated Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified. Host-only: permitted only when a vowel-bearing independent host has a genuine second vowel subscript; never a standalone/subscript modifier.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Nasalization (ordinary diacritic)",
+      "unicode": "ំ",
+      "codepoint": "U+17C6",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Nasalization”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Soft Sound (ordinary diacritic)",
+      "unicode": "៉",
+      "codepoint": "U+17C9",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Soft Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Hard Sound (ordinary diacritic)",
+      "unicode": "៊",
+      "codepoint": "U+17CA",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Hard Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Glide Sound (ordinary diacritic)",
+      "unicode": "៎",
+      "codepoint": "U+17CE",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Current Aza’raan ordinary phonetic modifier “Glide Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified. Replaces the retired Rising Inflection label; denotes a family-defined glide rather than a separate letter.",
+      "role": "diacritic"
+    },
+    {
+      "label": "Click Sound /ǃ/",
+      "unicode": "ះ",
+      "codepoint": "U+17C7",
+      "egyptianOrigin": "𓐎",
+      "notes": "Above-letter click punctuation according to the newest layout instructions; the legacy source ID sUnder does not make it a below-letter subscript or independent letter. Current ZIP control ID: sUnder; Latin display trigger: ¡.",
+      "role": "special"
+    },
+    {
+      "label": "Glottal Stop /ʔ/",
+      "unicode": "៏",
+      "codepoint": "U+17CF",
+      "egyptianOrigin": "𓃪",
+      "notes": "Above-letter glottal punctuation, NOT a regular diacritic or independent Modern letter. The root 𓃪 also branches into the two historical emphasis controls. Current ZIP control ID: sOver; Latin display trigger: '.",
+      "role": "special"
+    },
+    {
+      "label": "Previous-syllable emphasis <",
+      "unicode": "ិ",
+      "codepoint": "U+17B7",
+      "egyptianOrigin": "𓃪",
+      "notes": "Left/previous-syllable emphasis. It and next-syllable emphasis share this SAME Egyptian ancestor in the evolution chart; neither is the retired Falling Inflection phonetic mark. Current ZIP control ID: sLeft; Latin display trigger: <.",
+      "role": "special"
+    },
+    {
+      "label": "Next-syllable emphasis >",
+      "unicode": "ូ",
+      "codepoint": "U+17BC",
+      "egyptianOrigin": "𓃪",
+      "notes": "Right/next-syllable emphasis. It and previous-syllable emphasis share this SAME Egyptian ancestor in the evolution chart; neither is the retired Rising Inflection phonetic mark. Current ZIP control ID: sRight; Latin display trigger: >.",
+      "role": "special"
+    },
+    {
+      "label": "Digit 0",
+      "unicode": "០",
+      "codepoint": "U+17E0",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 0 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 1",
+      "unicode": "១",
+      "codepoint": "U+17E1",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 1 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 2",
+      "unicode": "២",
+      "codepoint": "U+17E2",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 2 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 3",
+      "unicode": "៣",
+      "codepoint": "U+17E3",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 3 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 4",
+      "unicode": "៤",
+      "codepoint": "U+17E4",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 4 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 5",
+      "unicode": "៥",
+      "codepoint": "U+17E5",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 5 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 6",
+      "unicode": "៦",
+      "codepoint": "U+17E6",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 6 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 7",
+      "unicode": "៧",
+      "codepoint": "U+17E7",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 7 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 8",
+      "unicode": "៨",
+      "codepoint": "U+17E8",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 8 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Digit 9",
+      "unicode": "៩",
+      "codepoint": "U+17E9",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP explicitly assigns the numeric value 9 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.",
+      "role": "number"
+    },
+    {
+      "label": "Comma (,)",
+      "unicode": "៖",
+      "codepoint": "U+17D6",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP uses this Khmer Unicode code point as the custom Aza’raan comma symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.",
+      "role": "punctuation"
+    },
+    {
+      "label": "Period (.)",
+      "unicode": "។",
+      "codepoint": "U+17D4",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP uses this Khmer Unicode code point as the custom Aza’raan period symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.",
+      "role": "punctuation"
+    },
+    {
+      "label": "Question mark (?)",
+      "unicode": "៕",
+      "codepoint": "U+17D5",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP uses this Khmer Unicode code point as the custom Aza’raan question mark symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.",
+      "role": "punctuation"
+    },
+    {
+      "label": "Exclamation mark (!)",
+      "unicode": "៘",
+      "codepoint": "U+17D8",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP uses this Khmer Unicode code point as the custom Aza’raan exclamation mark symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.",
+      "role": "punctuation"
+    },
+    {
+      "label": "Quotation marks (\")",
+      "unicode": "៙",
+      "codepoint": "U+17D9",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP uses this Khmer Unicode code point as the custom Aza’raan quotation marks symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.",
+      "role": "punctuation"
+    },
+    {
+      "label": "Open parenthesis (()",
+      "unicode": "៚",
+      "codepoint": "U+17DA",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP uses this Khmer Unicode code point as the custom Aza’raan open parenthesis symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.",
+      "role": "punctuation"
+    },
+    {
+      "label": "Close parenthesis ())",
+      "unicode": "ៗ",
+      "codepoint": "U+17D7",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP uses this Khmer Unicode code point as the custom Aza’raan close parenthesis symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.",
+      "role": "punctuation"
+    },
+    {
+      "label": "Ampersand (&)",
+      "unicode": "ៜ",
+      "codepoint": "U+17DC",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "The ZIP uses this Khmer Unicode code point as the custom Aza’raan ampersand symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.",
+      "role": "punctuation"
+    },
+    {
+      "label": "COENG / dependent-letter introducer",
+      "unicode": "្",
+      "codepoint": "U+17D2",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "This combining Khmer sign precedes the chosen dependent letter in text (U+17D2 + base). It is a Unicode structural component rather than a spoken Aza’raan letter. The composite inherits the dependent letter’s historical ancestor; COENG alone has no assigned Egyptian origin. When viewed alone this character can appear blank or dotted.",
+      "role": "coeng"
+    },
+    {
+      "label": "Letter Kha",
+      "unicode": "ខ",
+      "codepoint": "U+1781",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER KHA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Kho",
+      "unicode": "ឃ",
+      "codepoint": "U+1783",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER KHO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Ca",
+      "unicode": "ច",
+      "codepoint": "U+1785",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER CA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Cho",
+      "unicode": "ឈ",
+      "codepoint": "U+1788",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER CHO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Ttha",
+      "unicode": "ឋ",
+      "codepoint": "U+178B",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER TTHA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Do",
+      "unicode": "ឌ",
+      "codepoint": "U+178C",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER DO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Ttho",
+      "unicode": "ឍ",
+      "codepoint": "U+178D",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER TTHO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Nno",
+      "unicode": "ណ",
+      "codepoint": "U+178E",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER NNO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Tha",
+      "unicode": "ថ",
+      "codepoint": "U+1790",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER THA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter To",
+      "unicode": "ទ",
+      "codepoint": "U+1791",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER TO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Tho",
+      "unicode": "ធ",
+      "codepoint": "U+1792",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER THO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Pha",
+      "unicode": "ផ",
+      "codepoint": "U+1795",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER PHA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point. Do not identify this as a separate Modern F; F is a modified B-family reading in the uploaded canonical encoding.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Pho",
+      "unicode": "ភ",
+      "codepoint": "U+1797",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER PHO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter Sso",
+      "unicode": "ឞ",
+      "codepoint": "U+179E",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER SSO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Letter La",
+      "unicode": "ឡ",
+      "codepoint": "U+17A1",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER LETTER LA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qaq",
+      "unicode": "ឣ",
+      "codepoint": "U+17A3",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QAQ). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qaa",
+      "unicode": "ឤ",
+      "codepoint": "U+17A4",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QAA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qi",
+      "unicode": "ឥ",
+      "codepoint": "U+17A5",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qii",
+      "unicode": "ឦ",
+      "codepoint": "U+17A6",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QII). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qu",
+      "unicode": "ឧ",
+      "codepoint": "U+17A7",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QU). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Quk",
+      "unicode": "ឨ",
+      "codepoint": "U+17A8",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QUK). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Quu",
+      "unicode": "ឩ",
+      "codepoint": "U+17A9",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QUU). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point. In particular, an old U alias is NOT evidence that this Khmer code point represents a Modern independent U; modern U has been retired.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Quuv",
+      "unicode": "ឪ",
+      "codepoint": "U+17AA",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QUUV). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Ry",
+      "unicode": "ឫ",
+      "codepoint": "U+17AB",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL RY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Ryy",
+      "unicode": "ឬ",
+      "codepoint": "U+17AC",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL RYY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Ly",
+      "unicode": "ឭ",
+      "codepoint": "U+17AD",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL LY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Lyy",
+      "unicode": "ឮ",
+      "codepoint": "U+17AE",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL LYY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qe",
+      "unicode": "ឯ",
+      "codepoint": "U+17AF",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point. Older AWS encodings may use this code point for a vowel; the current ZIP assigns independent A to U+17A2 instead.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qai",
+      "unicode": "ឰ",
+      "codepoint": "U+17B0",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QAI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qoo Type One",
+      "unicode": "ឱ",
+      "codepoint": "U+17B1",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QOO TYPE ONE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qoo Type Two",
+      "unicode": "ឲ",
+      "codepoint": "U+17B2",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QOO TYPE TWO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Independent Vowel Qau",
+      "unicode": "ឳ",
+      "codepoint": "U+17B3",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QAU). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Inherent Aq",
+      "unicode": "឴",
+      "codepoint": "U+17B4",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL INHERENT AQ). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Inherent Aa",
+      "unicode": "឵",
+      "codepoint": "U+17B5",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL INHERENT AA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Yy",
+      "unicode": "ឺ",
+      "codepoint": "U+17BA",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN YY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign U",
+      "unicode": "ុ",
+      "codepoint": "U+17BB",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN U). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Ua",
+      "unicode": "ួ",
+      "codepoint": "U+17BD",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN UA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Oe",
+      "unicode": "ើ",
+      "codepoint": "U+17BE",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN OE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Ya",
+      "unicode": "ឿ",
+      "codepoint": "U+17BF",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN YA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Ie",
+      "unicode": "ៀ",
+      "codepoint": "U+17C0",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN IE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign E",
+      "unicode": "េ",
+      "codepoint": "U+17C1",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN E). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Ae",
+      "unicode": "ែ",
+      "codepoint": "U+17C2",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN AE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Ai",
+      "unicode": "ៃ",
+      "codepoint": "U+17C3",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN AI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Oo",
+      "unicode": "ោ",
+      "codepoint": "U+17C4",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN OO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Vowel Sign Au",
+      "unicode": "ៅ",
+      "codepoint": "U+17C5",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER VOWEL SIGN AU). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Sign Viriam",
+      "unicode": "៑",
+      "codepoint": "U+17D1",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SIGN VIRIAM). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Sign Bathamasat",
+      "unicode": "៓",
+      "codepoint": "U+17D3",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SIGN BATHAMASAT). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Currency Symbol Riel",
+      "unicode": "៛",
+      "codepoint": "U+17DB",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER CURRENCY SYMBOL RIEL). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Sign Atthacan",
+      "unicode": "៝",
+      "codepoint": "U+17DD",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SIGN ATTHACAN). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Son",
+      "unicode": "៰",
+      "codepoint": "U+17F0",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK SON). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Muoy",
+      "unicode": "៱",
+      "codepoint": "U+17F1",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK MUOY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Pii",
+      "unicode": "៲",
+      "codepoint": "U+17F2",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PII). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Bei",
+      "unicode": "៳",
+      "codepoint": "U+17F3",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK BEI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Buon",
+      "unicode": "៴",
+      "codepoint": "U+17F4",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK BUON). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Pram",
+      "unicode": "៵",
+      "codepoint": "U+17F5",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Pram-Muoy",
+      "unicode": "៶",
+      "codepoint": "U+17F6",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM-MUOY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Pram-Pii",
+      "unicode": "៷",
+      "codepoint": "U+17F7",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM-PII). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Pram-Bei",
+      "unicode": "៸",
+      "codepoint": "U+17F8",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM-BEI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "Symbol Lek Attak Pram-Buon",
+      "unicode": "៹",
+      "codepoint": "U+17F9",
+      "egyptianOrigin": "UNRESOLVED",
+      "notes": "Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM-BUON). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.",
+      "role": "catalogOnly"
+    },
+    {
+      "label": "a (subscript A)",
+      "unicode": "្អ",
+      "codepoint": "U+17D2 + U+17A2",
+      "egyptianOrigin": "𓄣",
+      "notes": "Canonical dependent/subscript form for independent A, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent A preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "b (subscript B)",
+      "unicode": "្ប",
+      "codepoint": "U+17D2 + U+1794",
+      "egyptianOrigin": "𓈌",
+      "notes": "Canonical dependent/subscript form for independent B, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent B preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail. Derived sounds F and V remain B-host modifiers, not new F/V subscript characters.",
+      "role": "subscript"
+    },
+    {
+      "label": "d (subscript D)",
+      "unicode": "្ដ",
+      "codepoint": "U+17D2 + U+178A",
+      "egyptianOrigin": "𓀃",
+      "notes": "Canonical dependent/subscript form for independent D, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent D preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "e (subscript E)",
+      "unicode": "្ឆ",
+      "codepoint": "U+17D2 + U+1786",
+      "egyptianOrigin": "𓆣",
+      "notes": "Canonical dependent/subscript form for independent E, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent E preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "g (subscript G)",
+      "unicode": "្គ",
+      "codepoint": "U+17D2 + U+1782",
+      "egyptianOrigin": "𓋑",
+      "notes": "Canonical dependent/subscript form for independent G, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent G preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "h (subscript H)",
+      "unicode": "្ហ",
+      "codepoint": "U+17D2 + U+17A0",
+      "egyptianOrigin": "𓊓",
+      "notes": "Canonical dependent/subscript form for independent H, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent H preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "i (subscript I)",
+      "unicode": "្ញ",
+      "codepoint": "U+17D2 + U+1789",
+      "egyptianOrigin": "𓈚",
+      "notes": "Canonical dependent/subscript form for independent I, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent I preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "j (subscript J)",
+      "unicode": "្ជ",
+      "codepoint": "U+17D2 + U+1787",
+      "egyptianOrigin": "𓇢",
+      "notes": "Canonical dependent/subscript form for independent J, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent J preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "k (subscript K)",
+      "unicode": "្ក",
+      "codepoint": "U+17D2 + U+1780",
+      "egyptianOrigin": "𓇰",
+      "notes": "Canonical dependent/subscript form for independent K, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent K preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "l (subscript L)",
+      "unicode": "្ល",
+      "codepoint": "U+17D2 + U+179B",
+      "egyptianOrigin": "𓍋",
+      "notes": "Canonical dependent/subscript form for independent L, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent L preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "m (subscript M)",
+      "unicode": "្ម",
+      "codepoint": "U+17D2 + U+1798",
+      "egyptianOrigin": "𓋝",
+      "notes": "Canonical dependent/subscript form for independent M, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent M preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "n (subscript N)",
+      "unicode": "្ន",
+      "codepoint": "U+17D2 + U+1793",
+      "egyptianOrigin": "𓋜",
+      "notes": "Canonical dependent/subscript form for independent N, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent N preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "o (subscript O)",
+      "unicode": "្ង",
+      "codepoint": "U+17D2 + U+1784",
+      "egyptianOrigin": "𓊲",
+      "notes": "Canonical dependent/subscript form for independent O, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent O preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "p (subscript P)",
+      "unicode": "្ព",
+      "codepoint": "U+17D2 + U+1796",
+      "egyptianOrigin": "𓇲",
+      "notes": "Canonical dependent/subscript form for independent P, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent P preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "r (subscript R)",
+      "unicode": "្រ",
+      "codepoint": "U+17D2 + U+179A",
+      "egyptianOrigin": "𓈊",
+      "notes": "Canonical dependent/subscript form for independent R, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent R preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "s (subscript S)",
+      "unicode": "្ស",
+      "codepoint": "U+17D2 + U+179F",
+      "egyptianOrigin": "𓆇",
+      "notes": "Canonical dependent/subscript form for independent S, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent S preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "t (subscript T)",
+      "unicode": "្ត",
+      "codepoint": "U+17D2 + U+178F",
+      "egyptianOrigin": "𓆠",
+      "notes": "Canonical dependent/subscript form for independent T, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent T preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "w (subscript W)",
+      "unicode": "្វ",
+      "codepoint": "U+17D2 + U+179C",
+      "egyptianOrigin": "𓋧",
+      "notes": "Canonical dependent/subscript form for independent W, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent W preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail. W is independently encoded in this uploaded 20-key edition; older 19-base references differ.",
+      "role": "subscript"
+    },
+    {
+      "label": "y (subscript Y)",
+      "unicode": "្យ",
+      "codepoint": "U+17D2 + U+1799",
+      "egyptianOrigin": "𓈐",
+      "notes": "Canonical dependent/subscript form for independent Y, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent Y preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    },
+    {
+      "label": "z (subscript Z)",
+      "unicode": "្ឝ",
+      "codepoint": "U+17D2 + U+179D",
+      "egyptianOrigin": "𓀁",
+      "notes": "Canonical dependent/subscript form for independent Z, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent Z preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.",
+      "role": "subscript"
+    }
+  ],
+  "groups": {
+    "independent": [
+      "U+17A2",
+      "U+1794",
+      "U+178A",
+      "U+1786",
+      "U+1782",
+      "U+17A0",
+      "U+1789",
+      "U+1787",
+      "U+1780",
+      "U+179B",
+      "U+1798",
+      "U+1793",
+      "U+1784",
+      "U+1796",
+      "U+179A",
+      "U+179F",
+      "U+178F",
+      "U+179C",
+      "U+1799",
+      "U+179D"
+    ],
+    "diacritic": [
+      "U+17CC",
+      "U+17B9",
+      "U+17B6",
+      "U+17CB",
+      "U+17B8",
+      "U+17CD",
+      "U+17D0",
+      "U+17C8",
+      "U+17C6",
+      "U+17C9",
+      "U+17CA",
+      "U+17CE"
+    ],
+    "special": [
+      "U+17C7",
+      "U+17CF",
+      "U+17B7",
+      "U+17BC"
+    ],
+    "number": [
+      "U+17E0",
+      "U+17E1",
+      "U+17E2",
+      "U+17E3",
+      "U+17E4",
+      "U+17E5",
+      "U+17E6",
+      "U+17E7",
+      "U+17E8",
+      "U+17E9"
+    ],
+    "punctuation": [
+      "U+17D6",
+      "U+17D4",
+      "U+17D5",
+      "U+17D8",
+      "U+17D9",
+      "U+17DA",
+      "U+17D7",
+      "U+17DC"
+    ],
+    "coeng": [
+      "U+17D2"
+    ],
+    "catalogOnly": [
+      "U+1781",
+      "U+1783",
+      "U+1785",
+      "U+1788",
+      "U+178B",
+      "U+178C",
+      "U+178D",
+      "U+178E",
+      "U+1790",
+      "U+1791",
+      "U+1792",
+      "U+1795",
+      "U+1797",
+      "U+179E",
+      "U+17A1",
+      "U+17A3",
+      "U+17A4",
+      "U+17A5",
+      "U+17A6",
+      "U+17A7",
+      "U+17A8",
+      "U+17A9",
+      "U+17AA",
+      "U+17AB",
+      "U+17AC",
+      "U+17AD",
+      "U+17AE",
+      "U+17AF",
+      "U+17B0",
+      "U+17B1",
+      "U+17B2",
+      "U+17B3",
+      "U+17B4",
+      "U+17B5",
+      "U+17BA",
+      "U+17BB",
+      "U+17BD",
+      "U+17BE",
+      "U+17BF",
+      "U+17C0",
+      "U+17C1",
+      "U+17C2",
+      "U+17C3",
+      "U+17C4",
+      "U+17C5",
+      "U+17D1",
+      "U+17D3",
+      "U+17DB",
+      "U+17DD",
+      "U+17F0",
+      "U+17F1",
+      "U+17F2",
+      "U+17F3",
+      "U+17F4",
+      "U+17F5",
+      "U+17F6",
+      "U+17F7",
+      "U+17F8",
+      "U+17F9"
+    ],
+    "subscript": [
+      "U+17D2 + U+17A2",
+      "U+17D2 + U+1794",
+      "U+17D2 + U+178A",
+      "U+17D2 + U+1786",
+      "U+17D2 + U+1782",
+      "U+17D2 + U+17A0",
+      "U+17D2 + U+1789",
+      "U+17D2 + U+1787",
+      "U+17D2 + U+1780",
+      "U+17D2 + U+179B",
+      "U+17D2 + U+1798",
+      "U+17D2 + U+1793",
+      "U+17D2 + U+1784",
+      "U+17D2 + U+1796",
+      "U+17D2 + U+179A",
+      "U+17D2 + U+179F",
+      "U+17D2 + U+178F",
+      "U+17D2 + U+179C",
+      "U+17D2 + U+1799",
+      "U+17D2 + U+179D"
+    ]
+  }
+}
