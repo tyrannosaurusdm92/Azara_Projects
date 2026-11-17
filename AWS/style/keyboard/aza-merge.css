@@ -128,3 +128,23 @@
 .aza-native-composite{display:inline-block;position:relative;vertical-align:baseline;white-space:nowrap;line-height:1;isolation:isolate}
 .aza-native-composite>.aza-logical-data{display:inline-block;width:0;height:0;overflow:hidden;white-space:pre;opacity:0;pointer-events:none;font-size:0;line-height:0}
 .aza-native-composite>.aza-inline-composed{zoom:.30;vertical-align:baseline;flex-shrink:0}
+
+/* Pre-merger F/V stay their original history-chart SVGs. Their optional modern
+   mark art never replaces or redraws the historical letter itself. */
+.aza-historic-composite{display:inline-block;vertical-align:baseline;line-height:1;white-space:nowrap;isolation:isolate}
+.aza-historic-composite>.aza-logical-data{display:inline-block;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;font-size:0;line-height:0}
+.aza-history-cell{display:inline-block;position:relative;width:1.65em;height:2.15em;vertical-align:baseline}
+.aza-history-base{position:absolute;left:0;top:.20em;width:1.58em;height:1.55em;object-fit:contain}
+.aza-history-mark,.aza-history-special,.aza-history-sub-art,.aza-history-sub-mark{position:absolute;object-fit:contain}
+.aza-history-mark{width:.46em;height:.46em;top:.20em;left:1.22em}
+.aza-history-mark-1{width:.24em;height:.24em;top:.38em;left:1.55em}
+.aza-history-special{width:.36em;height:.36em}
+.aza-history-special-sOver{left:.67em;top:-.12em}
+.aza-history-special-sUnder{left:1.06em;top:-.12em}
+.aza-history-special-sLeft{left:-.28em;top:.82em}
+.aza-history-special-sRight{left:1.58em;top:.82em}
+.aza-history-subs{position:absolute;left:.81em;top:1.68em;display:flex;gap:.05em;align-items:flex-start}
+.aza-history-sub{position:relative;display:inline-block;width:.32em;height:.35em;flex:none}
+.aza-history-sub-art{left:0;top:0;width:.32em;height:.32em}
+.aza-history-sub-mark{left:-.09em;top:.08em;width:.12em;height:.12em}
+.aza-history-sub-mark-1{left:.29em}
