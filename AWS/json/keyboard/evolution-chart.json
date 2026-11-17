@@ -88,10 +88,9 @@
           "label": "Glottal stop"
         },
         "modern": {
-          "src": null,
-          "reading": "Glottal stop",
-          "label": "Modern Glottal stop · ៏",
-          "text": "៏"
+          "src": "assets/svg/evolution/modern/modern_1.svg",
+          "reading": "'",
+          "label": "Glottal stop; source of syllable emphasis signs"
         }
       }
     },
@@ -169,10 +168,9 @@
           "label": "Fully stabilized affricate"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_3.svg",
           "reading": "T",
-          "label": "Modern independent T · canonical Khmer ត",
-          "text": "ត"
+          "label": "Modern Aza'raan T · original native script artwork"
         }
       }
     },
@@ -278,10 +276,9 @@
           "label": "/dz/ strongly established but still part of D system"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_6.svg",
           "reading": "D",
-          "label": "Modern independent D · canonical Khmer ដ",
-          "text": "ដ"
+          "label": "Modern Aza'raan D · original native script artwork"
         }
       }
     },
@@ -359,10 +356,9 @@
           "label": "HARD G LINE: velar stop /g/ dominant in formal and initial positions"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_8.svg",
           "reading": "G",
-          "label": "Modern independent G · canonical Khmer គ",
-          "text": "គ"
+          "label": "Modern Aza'raan G · original native script artwork"
         }
       }
     },
@@ -404,10 +400,9 @@
           "label": "Stable affricate with secondary fricative variant"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_9.svg",
           "reading": "J",
-          "label": "Modern independent J · canonical Khmer ជ",
-          "text": "ជ"
+          "label": "Modern Aza'raan J · original native script artwork"
         }
       }
     },
@@ -481,10 +476,9 @@
           "label": "Stable"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_11.svg",
           "reading": "M",
-          "label": "Modern independent M · canonical Khmer ម",
-          "text": "ម"
+          "label": "Modern Aza'raan M · original native script artwork"
         }
       }
     },
@@ -526,10 +520,9 @@
           "label": "Stable"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_12.svg",
           "reading": "P",
-          "label": "Modern independent P · canonical Khmer ព",
-          "text": "ព"
+          "label": "Modern Aza'raan P · original native script artwork"
         }
       }
     },
@@ -599,10 +592,9 @@
           "label": "Tap dominant"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_14.svg",
           "reading": "R",
-          "label": "Modern independent R · canonical Khmer រ",
-          "text": "រ"
+          "label": "Modern Aza'raan R · original native script artwork"
         }
       }
     },
@@ -740,10 +732,9 @@
           "label": "Stable"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_18.svg",
           "reading": "B",
-          "label": "Modern independent B · canonical Khmer ប",
-          "text": "ប"
+          "label": "Modern Aza'raan B · original native script artwork"
         }
       }
     },
@@ -785,10 +776,9 @@
           "label": "/dz/ increasingly productive but still tied to D system"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_19.svg",
           "reading": "Z",
-          "label": "Modern independent Z · canonical Khmer ឝ",
-          "text": "ឝ"
+          "label": "Modern Aza'raan Z · original native script artwork"
         }
       }
     },
@@ -830,10 +820,9 @@
           "label": "Stable palatal nasal"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_20.svg",
           "reading": "N",
-          "label": "Modern independent N · canonical Khmer ន",
-          "text": "ន"
+          "label": "Modern Aza'raan N · original native script artwork"
         }
       }
     },
@@ -875,10 +864,9 @@
           "label": "Stable"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_21.svg",
           "reading": "S",
-          "label": "Modern independent S · canonical Khmer ស",
-          "text": "ស"
+          "label": "Modern Aza'raan S · original native script artwork"
         }
       }
     },
@@ -920,10 +908,9 @@
           "label": "Weakening in speech but retained orthographically"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_22.svg",
           "reading": "H",
-          "label": "Modern independent H · canonical Khmer ហ",
-          "text": "ហ"
+          "label": "Modern Aza'raan H · original native script artwork"
         }
       }
     },
@@ -965,10 +952,9 @@
           "label": "Stable"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_23.svg",
           "reading": "L",
-          "label": "Modern independent L · canonical Khmer ល",
-          "text": "ល"
+          "label": "Modern Aza'raan L · original native script artwork"
         }
       }
     },
@@ -1010,10 +996,9 @@
           "label": "Stabilizing cluster"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_24.svg",
           "reading": "K",
-          "label": "Modern independent K · canonical Khmer ក",
-          "text": "ក"
+          "label": "Modern Aza'raan K · original native script artwork"
         }
       }
     },
@@ -1347,10 +1332,9 @@
           "label": "Diphthong"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_33.svg",
           "reading": "O",
-          "label": "Modern independent O · canonical Khmer ង",
-          "text": "ង"
+          "label": "Modern Aza'raan O · original native script artwork"
         }
       }
     },
@@ -1392,10 +1376,9 @@
           "label": "Default/inherent vowel"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_34.svg",
           "reading": "A",
-          "label": "Modern independent A · canonical Khmer អ",
-          "text": "អ"
+          "label": "Modern Aza'raan A · original native script artwork"
         }
       }
     },
@@ -1437,10 +1420,9 @@
           "label": "Diphthong"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_35.svg",
           "reading": "I",
-          "label": "Modern independent I · canonical Khmer ញ",
-          "text": "ញ"
+          "label": "Modern Aza'raan I · original native script artwork"
         }
       }
     },
@@ -1482,10 +1464,9 @@
           "label": "Primary vowel; less tense"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_36.svg",
           "reading": "E",
-          "label": "Modern independent E · canonical Khmer ឆ",
-          "text": "ឆ"
+          "label": "Modern Aza'raan E · original native script artwork"
         }
       }
     },
@@ -1783,10 +1764,9 @@
           "label": "Letter lost during evolution by merging into /woʊ/"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_44.svg",
           "reading": "W",
-          "label": "Modern independent W · canonical Khmer វ",
-          "text": "វ"
+          "label": "Modern Aza'raan W · original native script artwork"
         }
       }
     },
@@ -2024,10 +2004,9 @@
           "label": "Letter lost during evolution by merging into /oʊ/"
         },
         "modern": {
-          "src": null,
+          "src": "assets/svg/evolution/modern/modern_50.svg",
           "reading": "Y",
-          "label": "Modern independent Y · canonical Khmer យ",
-          "text": "យ"
+          "label": "Modern Aza'raan Y · original native script artwork"
         }
       }
     },
@@ -2109,10 +2088,9 @@
           "label": "Click consonant"
         },
         "modern": {
-          "src": null,
-          "reading": "Click",
-          "label": "Modern Click · ះ",
-          "text": "ះ"
+          "src": "assets/svg/evolution/modern/modern_52.svg",
+          "reading": "¡",
+          "label": "Click /ǃ/; independent modern special sign"
         }
       }
     }
@@ -4656,7 +4634,7 @@
       "meaning": "Glottal stop /ʔ/; ancestor of previous/next syllable emphasis",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": null,
+      "src": "assets/svg/evolution/modern/modern_1.svg",
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
@@ -4681,8 +4659,7 @@
       },
       "historicalLatinCodepoint": "U+0027",
       "khmer": "៏",
-      "modernOnly": true,
-      "modernFontGlyph": true
+      "modernOnly": true
     },
     {
       "sign": "¡",
@@ -4691,7 +4668,7 @@
       "meaning": "Click /ǃ/; independent modern special sign",
       "origin": "𓐎",
       "rootSlot": 52,
-      "src": null,
+      "src": "assets/svg/evolution/modern/modern_52.svg",
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_52.svg",
@@ -4716,8 +4693,7 @@
       },
       "historicalLatinCodepoint": "U+00A1",
       "khmer": "ះ",
-      "modernOnly": true,
-      "modernFontGlyph": true
+      "modernOnly": true
     },
     {
       "sign": "<",
@@ -4726,7 +4702,7 @@
       "meaning": "Emphasizes the previous syllable; descended from glottal stop",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": null,
+      "src": "assets/svg/evolution/modern/modern_1_U003C.svg",
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
@@ -4751,8 +4727,7 @@
       },
       "historicalLatinCodepoint": "U+003C",
       "khmer": "ិ",
-      "modernOnly": true,
-      "modernFontGlyph": true
+      "modernOnly": true
     },
     {
       "sign": ">",
@@ -4761,7 +4736,7 @@
       "meaning": "Emphasizes the next syllable; descended from glottal stop",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": null,
+      "src": "assets/svg/evolution/modern/modern_1_U003E.svg",
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
@@ -4786,8 +4761,7 @@
       },
       "historicalLatinCodepoint": "U+003E",
       "khmer": "ូ",
-      "modernOnly": true,
-      "modernFontGlyph": true
+      "modernOnly": true
     }
   ],
   "colors": {
