@@ -76,7 +76,7 @@ function resolveOwner(slot,stageNo){
 }
 function mark(src,className,slot,stageKey,title){
  const b=document.createElement('button');b.type='button';b.className=className;b.title=title;
- const r=roots.get(slot);b.dataset.family=familyFor(r);b.dataset.slot=String(slot);b.dataset.stage=stageKey;b.style.color=colorFor(r);
+ const r=roots.get(slot);b.dataset.family=familyFor(r);b.dataset.slot=String(slot);b.dataset.stage=stageKey;b.style.color=colorFor(r);const normalized=({U:'A',V:'B',F:'B'}[r.family]||r.family);const mapped=(window.AZA_LETTERS||{})[normalized];if(mapped){b.dataset.khmer=mapped;b.dataset.modernEncoding='U+'+mapped.codePointAt(0).toString(16).toUpperCase()}if(r.origin)b.dataset.egyptianOrigin=r.origin;
  const m=document.createElement('img');m.className=className==='glyph'?'mark':'table-mark';setMask(m,src);if(stageKey==='modern'&&positionModernArt(m,src,'table'))b.classList.add('modern-art-holder');b.appendChild(m);
  b.addEventListener('click',ev=>{ev.stopPropagation();selectGlyph(stageKey,slot);window.scrollTo({top:0,behavior:'smooth'})});
  return b;
@@ -139,7 +139,7 @@ function selectGlyph(stageKey,slot){
  title.textContent=picked+' · '+r.origin+' · '+r.sound;detail.appendChild(title);
  detail.appendChild(drawLineageChips(slot));
  const note=document.createElement('div');note.className='detail-note';
- const specialRootCodes={'1':'៉','52':'្ឃ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&(window.AZA_LETTERS||{})[family.family])))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
+ const specialRootCodes={'1':'៏','52':'ះ'};const normalizedFamily=family&&({U:'A',V:'B',F:'B'}[family.family]||family.family);const encodedFamily=(window.AZA_LETTERS||{})[normalizedFamily]; const copyText=stageKey==='proto'?r.origin:(stageKey==='modern'&&specialRootCodes[slot])||encodedFamily||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin);
  note.textContent=rootDesc(stage,r,node)+'. '+(node&&node.label?node.label+'. ':'')+'The modern reading is '+(family?family.letter:(node&&node.text)||r.reflex)+'.';
  detail.appendChild(note);detail.appendChild(copyButton(copyText,'Copy reading '+copyText));
  highlight(new Set([familyFor(r)]),[stageKey,slot]);pick.value='';
@@ -162,7 +162,7 @@ function renderTable(){
   const previewRoot=members.find(r=>r.stages.modern&&r.stages.modern.src&&!/\/modern_37\.svg/.test(r.stages.modern.src));
   if(previewRoot){const entry=document.createElement('div');entry.className='modern-table-entry';const art=mark(previewRoot.stages.modern.src,'table-glyph',previewRoot.slot,'modern',rootDesc(D.stages[stageIndex.get('modern')],previewRoot,previewRoot.stages.modern));const name=document.createElement('span');name.textContent=fam.letter;entry.append(art,name);modern.appendChild(entry)}
   else modern.textContent=fam.letter;
-  const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' · 24 contemporary marks';modern.appendChild(variants);
+  const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' · 12 contemporary marks';modern.appendChild(variants);
   tr.appendChild(modern);
   const source=document.createElement('td');const rootsBox=document.createElement('div');rootsBox.className='source-roots';
   members.forEach(r=>{const node=r.stages.proto;const b=mark(node.src,'table-glyph',r.slot,'proto',rootDesc(D.stages[0],r,node));rootsBox.appendChild(b)});
@@ -207,7 +207,7 @@ D.stages.forEach((stage,stageNo)=>{
   const node=root.stages[stage.key];if(!node)return;
   const b=document.createElement('button');b.type='button';b.className='glyph '+stage.key;
   b.style.left=x(root.slot)+'px';b.style.top=stage.y+'px';b.style.color=colorFor(root);
-  b.dataset.family=familyFor(root);b.dataset.stage=stage.key;b.dataset.slot=String(root.slot);
+  b.dataset.family=familyFor(root);b.dataset.stage=stage.key;b.dataset.slot=String(root.slot); const alias=({U:'A',V:'B',F:'B'}[root.family]||root.family);const current=(window.AZA_LETTERS||{})[alias];if(current){b.dataset.khmer=current;b.dataset.modernEncoding='U+'+current.codePointAt(0).toString(16).toUpperCase()}if(root.origin)b.dataset.egyptianOrigin=root.origin;
   const d=rootDesc(stage,root,node);
   b.setAttribute('aria-label',d);b.title=d+' — click to inspect';
   if(node.src){const m=document.createElement('img');m.className='mark';setMask(m,node.src);if(stage.key==='modern')positionModernArt(m,node.src,'chart');b.appendChild(m)}
