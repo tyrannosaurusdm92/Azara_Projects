@@ -148,3 +148,28 @@
 .aza-history-sub-art{left:0;top:0;width:.32em;height:.32em}
 .aza-history-sub-mark{left:-.09em;top:.08em;width:.12em;height:.12em}
 .aza-history-sub-mark-1{left:.29em}
+
+/* Aza'raan writing ink: actual manuscripts and editor fields, not the dark keyboard. */
+/* Every era must print dark ink on AWS's paper-white writing surfaces. */
+body.aws-single-nav :is(.rich-editor,.studio-pane textarea,.studio-pane input,.paper textarea,.paper input).aza-writing,
+body.aws-single-nav :is(textarea,input,[contenteditable="true"]).aza-writing,
+:where(textarea,input,[contenteditable="true"]).aza-writing,
+.rich-editor .aza-script-run,
+.aza-writing .aza-script-run,
+.aza-script-run:is(.aza-native-composite,.aza-historic-composite){
+  color:#000!important;
+  caret-color:#000;
+}
+/* The approved transparent PNGs are already black: remove the keyboard-only ivory tint
+   from composed glyphs embedded in the manuscript. */
+:is(.rich-editor,.paper,.writing-surface,.studio-pane,[contenteditable="true"]) .aza-native-composite .az-khmer-cluster .packed-ink img,
+.aza-writing .aza-native-composite .az-khmer-cluster .packed-ink img,
+.aza-script-run.aza-native-composite .az-khmer-cluster .packed-ink img,
+.aza-script-run.aza-historic-composite img{
+  filter:brightness(0)!important;
+}
+/* Explicitly preserve light-colored preview artwork inside the dark keyboard panel. */
+#keyboard .aza-glyph-preview .az-khmer-cluster .packed-ink img,
+#keyboard .aza-choice-glyph .az-khmer-cluster .packed-ink img{
+  filter:brightness(0) invert(96%);
+}
