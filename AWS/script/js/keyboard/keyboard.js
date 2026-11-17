@@ -95,7 +95,7 @@
       const row = make('div', 'key-row' + (state.mode === 'letters' && rowIndex === 2 ? ' home-row' : ''));
       for (const raw of keys) {
         const button = make('button', 'key'); button.type = 'button'; button.dataset.key = raw;
-        let label = (azaLetters && raw === 'SPACE') ? 'Aza’raan' : (azaLetters && raw === 'AZA_GLOTTAL') ? 'ʔ' : (azaLetters && raw === 'AZA_CLICK') ? '¡' : (azaLetters && raw === 'AZA_PREV') ? '‹' : (azaLetters && raw === 'AZA_NEXT') ? '›' : (labels[raw] || effective(raw));
+        let label = (state.language === 'azaaraan' && raw === 'SPACE') ? 'Aza’raan' : (azaLetters && raw === 'AZA_GLOTTAL') ? 'ʔ' : (azaLetters && raw === 'AZA_CLICK') ? '¡' : (azaLetters && raw === 'AZA_PREV') ? '‹' : (azaLetters && raw === 'AZA_NEXT') ? '›' : (labels[raw] || effective(raw));
         if (raw === 'PAGE') label = `${state.page + 1}/2`;
         if (!azaLetters && state.mode === 'letters' && state.shift && letters(raw)) label = data.shiftMap[raw];
         if (azaLetters && window.AzaaraanBridge.isLetter(raw)) { label = raw; button.classList.add('aza-key', 'aza-'+state.era.toLowerCase()); button.dataset.roman = raw; }
@@ -133,8 +133,7 @@
     $('languageSelect').value=state.language;
     $('eraSelectWrap').hidden=state.language!=='azaaraan';
     $('eraSelect').value=state.era;
-    (notes.getTarget()||document.getElementById('note')).classList.toggle('aza-writing',state.language==='azaaraan');
-    for(const era of ['Archaic','Classical','Traditional','Modern']) (notes.getTarget()||document.getElementById('note')).classList.toggle('era-'+era.toLowerCase(),state.language==='azaaraan' && state.era===era);
+    notes.setWritingMode(state.language,state.era);
     drawFrame();
   }
   function handleKey(raw) {
@@ -150,7 +149,13 @@
     if (raw === 'BACK') { notes.backspace(); return; }
     if (raw === 'SPACE') { notes.insert(' '); return; }
     if (raw === 'ENTER') { notes.insert('\n'); return; }
-    notes.insert(state.language==='azaaraan' && state.mode==='symbols' ? (window.AzaaraanBridge.symbol(raw)||raw) : state.mode === 'letters' && state.shift && letters(raw) ? data.shiftMap[raw] : effective(raw));
+    if(state.language==='azaaraan'){
+      const result=window.AzaaraanBridge.physicalValue(raw,state.era);
+      if(result?.value!=null)notes.insert(result.value);
+      else notes.toast(result?.error||'That key is not assigned in Aza’raan.');
+      return;
+    }
+    notes.insert(state.mode === 'letters' && state.shift && letters(raw) ? data.shiftMap[raw] : effective(raw));
     if (state.shift === 1) { state.shift = 0; render(); }
   }
   function cancelPress() {
@@ -383,6 +388,40 @@
     const insert = make('button', '', 'Insert'); insert.onclick = () => { if (field.value) { notes.setClipboard(field.value); notes.insert(field.value); closePanel(); } };
     const bottom = make('div', 'clipboard-actions'); bottom.append(insert); $('panelContent').append(actions, help, field, bottom);
   }
+  // Hardware and mobile keyboards must use the same canonical encoder as the
+  // steampunk keys. QWERTY deliberately keeps the browser's native Latin input.
+  function writableTarget(node){
+    const el=node?.closest?.('input,textarea,[contenteditable=true]')||null;
+    return notes.isEditable(el)?el:null;
+  }
+  function writePhysical(value){
+    if(value?.error){notes.toast(value.error);return;}
+    if(value?.value!=null)notes.insert(value.value);
+  }
+  document.addEventListener('keydown',event=>{
+    if(state.language!=='azaaraan'||event.defaultPrevented||event.isComposing||
+       event.key==='Dead'||event.key==='Process'||event.ctrlKey||event.metaKey||event.altKey)return;
+    if(!writableTarget(event.target))return;
+    const result=window.AzaaraanBridge.physicalValue(event.key,state.era);
+    if(!result)return;
+    event.preventDefault();
+    event.stopPropagation();
+    writePhysical(result);
+  },true);
+  document.addEventListener('beforeinput',event=>{
+    if(state.language!=='azaaraan'||event.defaultPrevented||event.isComposing||
+       !['insertText','insertReplacementText','insertFromComposition'].includes(event.inputType)||!writableTarget(event.target))return;
+    if(!event.data)return;
+    const chars=[...event.data];
+    const pieces=chars.map(c=>window.AzaaraanBridge.physicalValue(c,state.era));
+    // No browser fallback to ordinary Khmer or Latin when Aza’raan is selected.
+    if(!pieces.length||pieces.every(x=>x===null))return;
+    if(!event.cancelable)return;
+    event.preventDefault();
+    const invalid=pieces.find(x=>!x||x.error);
+    if(invalid){notes.toast(invalid.error||'This input has no Aza’raan equivalent.');return;}
+    notes.insert(pieces.map(x=>x.value).join(''));
+  },true);
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && state.panel && !document.querySelector('dialog[open]')) { event.preventDefault(); closePanel(); notes.focus(); }
   });
