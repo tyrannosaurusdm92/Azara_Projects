@@ -268,14 +268,14 @@
       scroller.append(grid); builder.append(toolbar, scroller); $('panelContent').append(builder);
     }
   }
-  function showAza(base, view='sounds', saved=null) {
+  function showAza(base, view='compose', saved=null) {
     const bridge=window.AzaaraanBridge, era=state.era;
     if(!bridge.isLetter(base))return;
     const draft=saved||{marks:[],specials:[],subs:[],target:'base'};
     state.panel={type:'azaaraan',base,view};
-    panel(`Aza’raan · ${base} · ${era}`,'Two marks per letter or subscript · two subscripts');
+    panel(`Aza’raan · ${base} · ${era}`,'Hold to compose · two diacritics per target · two subscripts');
+    tab('Diacritics + subscripts',view==='compose',()=>showAza(base,'compose',draft));
     tab('Readings',view==='sounds',()=>showAza(base,'sounds',draft));
-    tab('Marks + subscripts',view==='compose',()=>showAza(base,'compose',draft));
     if(view==='sounds'){
       const grid=make('div','choices-grid aza-choices');
       const simple=bridge.tryEncode(base,[],era);
@@ -299,9 +299,11 @@
     const undo=make('button','','Undo'),clear=make('button','','Clear'),insert=make('button','insert-accent','Insert glyph');
     const target=make('select','aza-target');target.setAttribute('aria-label','Attach marks to');
     const targets=make('div','aza-target-row');targets.append(make('label','','Attach to '),target);
-    const subtitle=make('p','emoji-help','Tap a Latin subscript to add or remove it. Choose a target, then tap its diacritics. Click and glottal sit above the main letter; emphasis belongs to the main letter.');
+    const subtitle=make('p','emoji-help',era==='Modern'?'Select up to two subscripts (20% letter-body size); choose Independent or Subscript in Attach to, then add up to two primary/secondary diacritics. Click and glottal sit above the independent letter.':'Choose a historical subscript, then attach era-available marks. The independent letter, its marks, and up to two subscripts are composed together.');
     const subGrid=make('div','choices-grid aza-sub-grid');
     const markGrid=make('div','choices-grid aza-mark-grid');
+    const assets=window.AZ_ASSETS||{};
+    const assetImg=(src,css)=>{if(!src)return null;const img=make('img',css);img.src=src;img.alt='';img.draggable=false;img.setAttribute('aria-hidden','true');return img;};
     function currentMarks(){return draft.target==='base'?draft.marks:draft.subs[Number(draft.target.slice(3))]?.marks}
     function draw(){
       const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials);
@@ -313,7 +315,14 @@
         const option=make('option','',label);option.value=value;target.append(option);
       }
       if(![...target.options].some(o=>o.value===draft.target))draft.target='base';target.value=draft.target;
-      for(const button of markGrid.querySelectorAll('[data-mark]'))button.setAttribute('aria-pressed',String((button.dataset.special?draft.specials:currentMarks()||[]).includes(button.dataset.mark)));
+      for(const button of markGrid.querySelectorAll('[data-mark]')){
+        const id=button.dataset.mark,isSpecial=button.hasAttribute('data-special'),sub=draft.target!=='base';
+        const selected=(isSpecial?draft.specials:currentMarks()||[]).includes(id);
+        button.setAttribute('aria-pressed',String(selected));
+        button.disabled=(sub&&(isSpecial||id==='separate'))||(era==='Modern'&&draft.target==='base'&&id==='separate'&&!['A','E','I','O','W','Y'].includes(base));
+        const image=button.querySelector('.aza-mark-art');if(image)image.src=(sub?assets.secondary?.[id]:assets.primary?.[id])||image.src;
+        button.title=(sub?'Secondary mark on subscript: ':'Primary mark on independent letter: ')+bridge.markName(id);
+      }
       for(const button of subGrid.querySelectorAll('[data-sub]'))button.setAttribute('aria-pressed',String(draft.subs.some(s=>s.key===button.dataset.sub)));
     }
     target.onchange=()=>{draft.target=target.value;draw()};
@@ -322,13 +331,18 @@
     insert.onclick=()=>{const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials);if(result.error)return notes.toast(result.error);notes.insert(result.value,result.token);closePanel()};
     actions.append(preview,undo,clear,insert);
     for(const key of bridge.availableSubscripts(era)){
-      const button=make('button','choice aza-sub-option',key);button.type='button';button.dataset.sub=key;
+      const button=make('button','choice aza-sub-option');button.type='button';button.dataset.sub=key;
+      button.append(make('span','aza-sub-latin',key));
+      if(era==='Modern'){const img=assetImg(assets.subscripts?.[key],'aza-sub-art');if(img)button.append(img)}
+      else {const sign=make('span','aza-sub-era-glyph aza-'+era.toLowerCase(),window.AZ_CANON.subs[key]||window.AZ_CANON.coeng+window.AZA_HISTORICAL_U);button.append(sign)}
       button.title='Subscript '+key+' · '+(window.AZ_CANON.subs[key]||window.AZ_CANON.coeng+window.AZA_HISTORICAL_U);
       button.onclick=()=>{const i=draft.subs.findIndex(s=>s.key===key);if(i>=0){draft.subs.splice(i,1);draft.target='base'}else if(draft.subs.length<2){draft.subs.push({key,marks:[]});draft.target='sub'+(draft.subs.length-1)}else return notes.toast('Maximum two subscripts.');draw()};subGrid.append(button);
     }
     for(const mark of bridge.availableMarks(era)){
       const button=make('button','choice aza-mark-option');button.type='button';button.dataset.mark=mark.id;
       if(mark.special)button.dataset.special='true';
+      const thumb=assetImg(era==='Modern'?assets.primary?.[mark.id]:null,'aza-mark-art');
+      if(thumb)button.append(thumb);
       button.append(make('span','aza-mark-symbol',mark.display),make('span','aza-mark-text',mark.name+' · '+mark.codepoint));
       button.title=mark.name+' · '+mark.codepoint;
       button.onclick=()=>{
@@ -338,7 +352,7 @@
         const i=list.indexOf(mark.id);if(i>=0)list.splice(i,1);else if(list.length<(mark.special?4:2))list.push(mark.id);else return notes.toast(mark.special?'Maximum four special controls.':'Maximum two phonetic marks on this target.');draw();
       };markGrid.append(button);
     }
-    builder.append(actions,status,subtitle,targets,make('h4','','Subscripts'),subGrid,make('h4','','Diacritics and controls'),markGrid);
+    builder.append(actions,status,subtitle,targets,make('h4','','Dependent / subscript letters'),subGrid,make('h4','','Diacritics, click, glottal and emphasis'),markGrid);
     $('panelContent').append(builder);draw();
   }
 
