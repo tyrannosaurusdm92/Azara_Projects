@@ -1,0 +1,74 @@
+{
+  "verified_at": "2026-11-17T04:26:23.083Z",
+  "repository": "tyrannosaurusdm92/Azara_Projects",
+  "branch": "main",
+  "files": {
+    "canonical_origin_registry": {
+      "exists": true,
+      "path": "AWS/json/keyboard/modern-unicode-origins.json",
+      "sha": "076a2e84e8cc6107807e244e9c5286097055b49a",
+      "bytes_or_chars": 28896
+    },
+    "modern_configuration": {
+      "exists": true,
+      "path": "AWS/script/js/keyboard/aza-config.js",
+      "sha": "0074f18da19a0759d5e5d8954df713fa91aab31f",
+      "bytes_or_chars": 4197
+    },
+    "all_era_encoding": {
+      "exists": true,
+      "path": "AWS/index.html",
+      "sha": "2ef2c0e29571bad6d106a886e41940fd657773e0",
+      "bytes_or_chars": 1784
+    },
+    "evolution_renderer": {
+      "exists": true,
+      "path": "AWS/script/js/keyboard/aza-evolution.js",
+      "sha": "a4916cf128e58ebd354aecd91a5734180bff7cfb",
+      "bytes_or_chars": 16861
+    },
+    "font_adapter": {
+      "exists": true,
+      "path": "AWS/script/js/keyboard/modern-package-integration.js",
+      "sha": "6b39cbfb5f9fe9bfeb8db58bf481403de8feb778",
+      "bytes_or_chars": 5221
+    },
+    "font_css": {
+      "exists": true,
+      "path": "AWS/style/keyboard/modern-package.css",
+      "sha": "6afbbd95be544da32eefa8320e4934b3fcada6cb",
+      "bytes_or_chars": 1324
+    },
+    "uploaded_package_font": {
+      "exists": false,
+      "path": "AWS/assets/keyboard/ttf/Azaaraan-Modern-20261116.ttf",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"stat"
+    },
+    "uploaded_package_svg_A": {
+      "exists": false,
+      "path": "AWS/assets/keyboard/modern-20261116/letters/A.svg",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"stat"
+    },
+    "full_origin_document": {
+      "exists": false,
+      "path": "AWS/docs/modern-unicode-origin-mapping-20261116.txt",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"stat"
+    }
+  },
+  "registry_checks": {
+    "total": 114,
+    "active": 55,
+    "reference_only": 59,
+    "subscripts": 20
+  },
+  "config_checks": {
+    "usesModernA": true,
+    "usesModernE": true,
+    "noModernFIndependent": true
+  },
+  "available_binary_upload_methods": [
+    "mcp__GitHub__create_blob"
+  ],
+  "font_available": false,
+  "artwork_available": false
+}
