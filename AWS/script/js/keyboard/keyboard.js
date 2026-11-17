@@ -278,8 +278,8 @@
     tab('Marks + subscripts',view==='compose',()=>showAza(base,'compose',draft));
     if(view==='sounds'){
       const grid=make('div','choices-grid aza-choices');
-      const simple=bridge.encode(base,[],era);
-      grid.append(choice({value:simple,label:'Base '+base},()=>{notes.insert(simple);closePanel();}));
+      const simple=bridge.tryEncode(base,[],era);
+      grid.append(choice({value:simple.value,label:'Base '+base},()=>{notes.insert(simple.value,simple.token);closePanel();}));
       for(const option of bridge.soundOptions(base,era)){
         const result=bridge.tryEncode(option.base,option.marks,era);
         if(result.error)continue;
@@ -287,7 +287,7 @@
         const visual=make('span','aza-choice-glyph aza-'+era.toLowerCase());
         visual.append(bridge.preview(base,option.marks,era)||document.createTextNode(result.value));
         button.append(visual,make('span','aza-choice-name',option.label+' · '+option.ipa));
-        button.onclick=()=>{notes.insert(result.value);closePanel()};grid.append(button);
+        button.onclick=()=>{notes.insert(result.value,result.token);closePanel()};grid.append(button);
       }
       $('panelContent').append(make('p','emoji-help','Tap a reading to insert it, or build a letter with diacritics and up to two subscripts.'),grid);
       return;
@@ -319,7 +319,7 @@
     target.onchange=()=>{draft.target=target.value;draw()};
     undo.onclick=()=>{if(draft.target==='base'){if(draft.specials.length)draft.specials.pop();else draft.marks.pop()}else currentMarks()?.pop();draw()};
     clear.onclick=()=>{draft.marks=[];draft.specials=[];draft.subs=[];draft.target='base';draw()};
-    insert.onclick=()=>{const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials);if(result.error)return notes.toast(result.error);notes.insert(result.value);closePanel()};
+    insert.onclick=()=>{const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials);if(result.error)return notes.toast(result.error);notes.insert(result.value,result.token);closePanel()};
     actions.append(preview,undo,clear,insert);
     for(const key of bridge.availableSubscripts(era)){
       const button=make('button','choice aza-sub-option',key);button.type='button';button.dataset.sub=key;
@@ -396,7 +396,7 @@
   }
   function writePhysical(value){
     if(value?.error){notes.toast(value.error);return;}
-    if(value?.value!=null)notes.insert(value.value);
+    if(value?.value!=null)notes.insert(value.value,value.token);
   }
   document.addEventListener('keydown',event=>{
     if(state.language!=='azaaraan'||event.defaultPrevented||event.isComposing||
@@ -420,7 +420,7 @@
     event.preventDefault();
     const invalid=pieces.find(x=>!x||x.error);
     if(invalid){notes.toast(invalid.error||'This input has no Aza’raan equivalent.');return;}
-    notes.insert(pieces.map(x=>x.value).join(''));
+    for(const piece of pieces)notes.insert(piece.value,piece.token);
   },true);
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && state.panel && !document.querySelector('dialog[open]')) { event.preventDefault(); closePanel(); notes.focus(); }
