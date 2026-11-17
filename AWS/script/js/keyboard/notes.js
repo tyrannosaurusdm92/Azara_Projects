@@ -100,6 +100,6 @@ async function copy(all=false){clip=all?read():selected()||read();if(!clip)retur
 async function paste(){try{clip=await navigator.clipboard.readText()||clip}catch{}if(!clip){toast('Clipboard is empty');return false}insert(clip);return true}
 function download(name,blob){const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),5000)}
 function selectAll(){const el=current();if(!el)return;focus();if(el.isContentEditable){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);savedRange=r.cloneRange()}else el.select()}
-window.Notes={insert,backspace,copy,paste,toast,focus,download,graphemes,getTarget:current,getText:read,getSelectedText:selected,selectAll,getClipboard:()=>clip,setClipboard:v=>clip=String(v),refreshMirror,isEditable,setWritingMode,getWritingMode:()=>({...writingMode})};
+window.Notes={insert,backspace,copy,paste,toast,focus,download,graphemes,getTarget:current,getText:read,getSelectedText:selected,selectAll,getClipboard:()=>clip,setClipboard:v=>clip=String(v),refreshMirror,isEditable,setWritingMode,previewAza:makeAzaRun,getWritingMode:()=>({...writingMode})};
 window.addEventListener('aws:view',()=>{target=null;savedRange=null;setTimeout(refreshMirror,0)});
 })();
