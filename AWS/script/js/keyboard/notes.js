@@ -45,7 +45,17 @@ function insert(text,token=null){const el=current();if(!el)return toast('Select 
  }
  if(el.isContentEditable){focus();let ok=false;
   const az=(writingMode.language==='azaaraan'&&isAzaEncoded(text));
-  if(az){try{ok=document.execCommand('insertHTML',false,makeAzaRun(text,token).outerHTML)}catch{}
+  if(az){try{
+     ok=document.execCommand('insertHTML',false,makeAzaRun(text,token).outerHTML);
+     if(ok){const selection=getSelection(),node=selection.anchorNode,
+       host=node&&(node.nodeType===Node.ELEMENT_NODE?node:node.parentElement),
+       run=host?.closest?.('.aza-script-run');
+       if(run&&el.contains(run)){
+         const after=document.createRange();after.setStartAfter(run);after.collapse(true);
+         selection.removeAllRanges();selection.addRange(after);
+       }
+     }
+   }catch{}
   }else try{ok=document.execCommand('insertText',false,text)}catch{}
   if(!ok){const sel=getSelection(),r=sel.rangeCount?sel.getRangeAt(0):document.createRange();if(!el.contains(r.commonAncestorContainer)){r.selectNodeContents(el);r.collapse(false)}r.deleteContents();let n;
     if(az)n=makeAzaRun(text,token);
