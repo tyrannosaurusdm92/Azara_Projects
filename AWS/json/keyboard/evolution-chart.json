@@ -1222,13 +1222,13 @@
       "slot": 31,
       "id": "root-31",
       "origin": "𓇖",
-      "sound": "ay-eh",
-      "ipa": "/eɪ-ɛ/",
-      "protoNote": "Diphthong",
-      "family": "A",
-      "color": "#fe9e8e",
+      "sound": "wee",
+      "ipa": "/wiː/",
+      "protoNote": "Long front vowel with /w/ onset (wee)",
+      "family": "W",
+      "color": "#9bd6aa",
       "special": false,
-      "reflex": "Ǎ",
+      "reflex": "W-family /wiː/ (wee), absorbed by 𓆰 /wɛ/ in Traditional",
       "stages": {
         "proto": {
           "src": "assets/images/evolution/origins/31_131D6.png",
@@ -1237,18 +1237,18 @@
         },
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_31.svg",
-          "reading": "Ae",
-          "label": "Diphthong (layered vowel)"
+          "reading": "Wee",
+          "label": "𓇖 /wiː/ (wee) · independent before Traditional merger"
         },
         "archaic": {
           "src": "assets/svg/evolution/archaic/archaic_31.svg",
-          "reading": "Ae",
-          "label": "Supplied Archaic SVG in ancestral slot 31."
+          "reading": "Wee",
+          "label": "𓇖 /wiː/ (wee) · preserved Archaic artwork, ancestral slot 31"
         },
         "classical": {
           "src": "assets/svg/evolution/classical/classical_31.svg",
-          "reading": "Ae",
-          "label": "Diphthong (layered vowel)"
+          "reading": "Wee",
+          "label": "𓇖 /wiː/ (wee) · independent before Traditional merger"
         },
         "traditional": null,
         "modern": null
@@ -1654,9 +1654,9 @@
       "slot": 42,
       "id": "root-42",
       "origin": "𓆰",
-      "sound": "we",
+      "sound": "weh",
       "ipa": "/wɛ/",
-      "protoNote": "Glide vowel",
+      "protoNote": "W-glide /wɛ/ (weh)",
       "family": "W",
       "color": "#9bd6aa",
       "special": false,
@@ -1680,7 +1680,7 @@
         "classical": {
           "src": "assets/svg/evolution/classical/classical_42.svg",
           "reading": "Weh",
-          "label": "Glide"
+          "label": "𓆰 /wɛ/ (weh) · absorbs 𓇖 /wiː/ during Traditional"
         },
         "traditional": null,
         "modern": null
@@ -3161,8 +3161,10 @@
     },
     {
       "slot": 31,
-      "parent": 34,
-      "stage": "traditional"
+      "parent": 42,
+      "stage": "traditional",
+      "authority": "author-specified",
+      "note": "𓇖 /wiː/ (wee) → 𓆰 /wɛ/ (weh) during Traditional; receiver also merges into W family at this boundary"
     },
     {
       "slot": 32,
@@ -3419,7 +3421,7 @@
     {
       "from": 31,
       "to": 31,
-      "family": "A",
+      "family": "W",
       "stage": 0
     },
     {
@@ -3731,7 +3733,7 @@
     {
       "from": 31,
       "to": 31,
-      "family": "A",
+      "family": "W",
       "stage": 1
     },
     {
@@ -4025,7 +4027,7 @@
     {
       "from": 31,
       "to": 31,
-      "family": "A",
+      "family": "W",
       "stage": 2
     },
     {
@@ -4306,9 +4308,11 @@
     },
     {
       "from": 31,
-      "to": 34,
-      "family": "A",
-      "stage": 3
+      "to": 42,
+      "family": "W",
+      "stage": 3,
+      "mergeIntoLineOf": 42,
+      "mergerStage": "traditional"
     },
     {
       "from": 32,
