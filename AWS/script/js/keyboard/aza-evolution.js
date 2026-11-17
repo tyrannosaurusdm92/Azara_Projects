@@ -24,6 +24,15 @@ const MODERN_ART_METRICS={
   modern_50:[736,1110,-363,1020],modern_52:[270,239,13,673],
   modern_1_U003C:[191,216,11,658],modern_1_U003E:[174,208,10,648]
 };
+/* Ink centers follow each letter's main body, not its extended flourishes. */
+const MODERN_BODY_CENTERS={
+  modern_1:80,modern_3:794,modern_6:612,modern_8:700,
+  modern_9:625,modern_11:622,modern_12:602,modern_14:620,
+  modern_18:653,modern_19:736,modern_20:734,modern_21:742,
+  modern_22:751,modern_23:765,modern_24:625,modern_33:814,
+  modern_34:668,modern_35:680,modern_36:590,modern_44:619,
+  modern_50:645,modern_52:118,modern_1_U003C:89,modern_1_U003E:83
+};
 function positionModernArt(img,src,context){
   const key=/\/(modern_[^/?]+)\.svg(?:\?|$)/.exec(src)?.[1];
   const bounds=MODERN_ART_METRICS[key];
@@ -37,7 +46,7 @@ function positionModernArt(img,src,context){
   img.style.width=(width*pxPerUnit).toFixed(2)+'px';
   img.style.height=(height*pxPerUnit).toFixed(2)+'px';
   // Shared pen origin and baseline, instead of independently centering each SVG.
-  img.style.left='calc(50% - '+((600+originX)*pxPerUnit).toFixed(2)+'px)';
+  img.style.left='calc(50% - '+(((MODERN_BODY_CENTERS[key]??600)+originX)*pxPerUnit).toFixed(2)+'px)';
   img.style.top='calc(50% + '+((175-originY)*pxPerUnit).toFixed(2)+'px)';
   return true;
 }
