@@ -88,7 +88,7 @@
           "label": "Glottal stop"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_1.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_1.svg",
           "reading": "'",
           "label": "Glottal stop; source of syllable emphasis signs"
         }
@@ -168,7 +168,7 @@
           "label": "Fully stabilized affricate"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_3.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_3.svg",
           "reading": "T",
           "label": "Modern Aza'raan T · original native script artwork"
         }
@@ -276,7 +276,7 @@
           "label": "/dz/ strongly established but still part of D system"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_6.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_6.svg",
           "reading": "D",
           "label": "Modern Aza'raan D · original native script artwork"
         }
@@ -356,7 +356,7 @@
           "label": "HARD G LINE: velar stop /g/ dominant in formal and initial positions"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_8.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_8.svg",
           "reading": "G",
           "label": "Modern Aza'raan G · original native script artwork"
         }
@@ -400,7 +400,7 @@
           "label": "Stable affricate with secondary fricative variant"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_9.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_9.svg",
           "reading": "J",
           "label": "Modern Aza'raan J · original native script artwork"
         }
@@ -476,7 +476,7 @@
           "label": "Stable"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_11.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_11.svg",
           "reading": "M",
           "label": "Modern Aza'raan M · original native script artwork"
         }
@@ -520,7 +520,7 @@
           "label": "Stable"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_12.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_12.svg",
           "reading": "P",
           "label": "Modern Aza'raan P · original native script artwork"
         }
@@ -592,7 +592,7 @@
           "label": "Tap dominant"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_14.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_14.svg",
           "reading": "R",
           "label": "Modern Aza'raan R · original native script artwork"
         }
@@ -732,7 +732,7 @@
           "label": "Stable"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_18.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_18.svg",
           "reading": "B",
           "label": "Modern Aza'raan B · original native script artwork"
         }
@@ -776,7 +776,7 @@
           "label": "/dz/ increasingly productive but still tied to D system"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_19.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_19.svg",
           "reading": "Z",
           "label": "Modern Aza'raan Z · original native script artwork"
         }
@@ -820,7 +820,7 @@
           "label": "Stable palatal nasal"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_20.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_20.svg",
           "reading": "N",
           "label": "Modern Aza'raan N · original native script artwork"
         }
@@ -864,7 +864,7 @@
           "label": "Stable"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_21.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_21.svg",
           "reading": "S",
           "label": "Modern Aza'raan S · original native script artwork"
         }
@@ -908,7 +908,7 @@
           "label": "Weakening in speech but retained orthographically"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_22.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_22.svg",
           "reading": "H",
           "label": "Modern Aza'raan H · original native script artwork"
         }
@@ -952,7 +952,7 @@
           "label": "Stable"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_23.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_23.svg",
           "reading": "L",
           "label": "Modern Aza'raan L · original native script artwork"
         }
@@ -996,7 +996,7 @@
           "label": "Stabilizing cluster"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_24.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_24.svg",
           "reading": "K",
           "label": "Modern Aza'raan K · original native script artwork"
         }
@@ -1332,7 +1332,7 @@
           "label": "Diphthong"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_33.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_33.svg",
           "reading": "O",
           "label": "Modern Aza'raan O · original native script artwork"
         }
@@ -1376,7 +1376,7 @@
           "label": "Default/inherent vowel"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_34.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_34.svg",
           "reading": "A",
           "label": "Modern Aza'raan A · original native script artwork"
         }
@@ -1420,7 +1420,7 @@
           "label": "Diphthong"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_35.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_35.svg",
           "reading": "I",
           "label": "Modern Aza'raan I · original native script artwork"
         }
@@ -1464,7 +1464,7 @@
           "label": "Primary vowel; less tense"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_36.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_36.svg",
           "reading": "E",
           "label": "Modern Aza'raan E · original native script artwork"
         }
@@ -1764,7 +1764,7 @@
           "label": "Letter lost during evolution by merging into /woʊ/"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_44.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_44.svg",
           "reading": "W",
           "label": "Modern Aza'raan W · original native script artwork"
         }
@@ -2004,7 +2004,7 @@
           "label": "Letter lost during evolution by merging into /oʊ/"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_50.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_50.svg",
           "reading": "Y",
           "label": "Modern Aza'raan Y · original native script artwork"
         }
@@ -2088,7 +2088,7 @@
           "label": "Click consonant"
         },
         "modern": {
-          "src": "assets/svg/evolution/modern/modern_52.svg",
+          "src": "assets/keyboard/svg/evolution/modern/modern_52.svg",
           "reading": "¡",
           "label": "Click /ǃ/; independent modern special sign"
         }
@@ -4634,7 +4634,7 @@
       "meaning": "Glottal stop /ʔ/; ancestor of previous/next syllable emphasis",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": "assets/svg/evolution/modern/modern_1.svg",
+      "src": "assets/keyboard/svg/evolution/modern/modern_1.svg",
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
@@ -4668,7 +4668,7 @@
       "meaning": "Click /ǃ/; independent modern special sign",
       "origin": "𓐎",
       "rootSlot": 52,
-      "src": "assets/svg/evolution/modern/modern_52.svg",
+      "src": "assets/keyboard/svg/evolution/modern/modern_52.svg",
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_52.svg",
@@ -4702,7 +4702,7 @@
       "meaning": "Emphasizes the previous syllable; descended from glottal stop",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": "assets/svg/evolution/modern/modern_1_U003C.svg",
+      "src": "assets/keyboard/svg/evolution/modern/modern_1_U003C.svg",
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
@@ -4736,7 +4736,7 @@
       "meaning": "Emphasizes the next syllable; descended from glottal stop",
       "origin": "𓃪",
       "rootSlot": 1,
-      "src": "assets/svg/evolution/modern/modern_1_U003E.svg",
+      "src": "assets/keyboard/svg/evolution/modern/modern_1_U003E.svg",
       "stageVariants": {
         "ancient": {
           "src": "assets/svg/evolution/ancient/ancient_1.svg",
