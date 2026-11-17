@@ -1,0 +1,1279 @@
+{
+  "title": "Modern Aza'raan canonical Khmer Unicode → Egyptian lineage",
+  "version": "2026-11-16",
+  "authority": "User-uploaded Modern Aza'raan mapping and keyboard package; not a claim of historical Khmer genealogy",
+  "active_count": 55,
+  "catalog_only_count": 59,
+  "letter_order": "ABDEGHIJKLMNOPRSTWYZ",
+  "letters": {
+    "A": {
+      "khmer": "អ",
+      "codepoint": "U+17A2",
+      "origin": "𓄣"
+    },
+    "B": {
+      "khmer": "ប",
+      "codepoint": "U+1794",
+      "origin": "𓈌"
+    },
+    "D": {
+      "khmer": "ដ",
+      "codepoint": "U+178A",
+      "origin": "𓀃"
+    },
+    "E": {
+      "khmer": "ឆ",
+      "codepoint": "U+1786",
+      "origin": "𓆣"
+    },
+    "G": {
+      "khmer": "គ",
+      "codepoint": "U+1782",
+      "origin": "𓋑"
+    },
+    "H": {
+      "khmer": "ហ",
+      "codepoint": "U+17A0",
+      "origin": "𓊓"
+    },
+    "I": {
+      "khmer": "ញ",
+      "codepoint": "U+1789",
+      "origin": "𓈚"
+    },
+    "J": {
+      "khmer": "ជ",
+      "codepoint": "U+1787",
+      "origin": "𓇢"
+    },
+    "K": {
+      "khmer": "ក",
+      "codepoint": "U+1780",
+      "origin": "𓇰"
+    },
+    "L": {
+      "khmer": "ល",
+      "codepoint": "U+179B",
+      "origin": "𓍋"
+    },
+    "M": {
+      "khmer": "ម",
+      "codepoint": "U+1798",
+      "origin": "𓋝"
+    },
+    "N": {
+      "khmer": "ន",
+      "codepoint": "U+1793",
+      "origin": "𓋜"
+    },
+    "O": {
+      "khmer": "ង",
+      "codepoint": "U+1784",
+      "origin": "𓊲"
+    },
+    "P": {
+      "khmer": "ព",
+      "codepoint": "U+1796",
+      "origin": "𓇲"
+    },
+    "R": {
+      "khmer": "រ",
+      "codepoint": "U+179A",
+      "origin": "𓈊"
+    },
+    "S": {
+      "khmer": "ស",
+      "codepoint": "U+179F",
+      "origin": "𓆇"
+    },
+    "T": {
+      "khmer": "ត",
+      "codepoint": "U+178F",
+      "origin": "𓆠"
+    },
+    "W": {
+      "khmer": "វ",
+      "codepoint": "U+179C",
+      "origin": "𓋧"
+    },
+    "Y": {
+      "khmer": "យ",
+      "codepoint": "U+1799",
+      "origin": "𓈐"
+    },
+    "Z": {
+      "khmer": "ឝ",
+      "codepoint": "U+179D",
+      "origin": "𓀁"
+    }
+  },
+  "diacritics": {
+    "Held Consonant": "៌",
+    "Central Vowel": "ឹ",
+    "Open Vowel": "ា",
+    "Short Vowel": "់",
+    "Long Vowel": "ី",
+    "Unvoiced Sound": "៍",
+    "Voiced Sound": "័",
+    "Separated Vowel": "ៈ",
+    "Nasalization": "ំ",
+    "Soft Sound": "៉",
+    "Hard Sound": "៊",
+    "Glide Sound": "៎"
+  },
+  "specials": {
+    "Click Sound": {
+      "unicode": "ះ",
+      "origin": "𓐎"
+    },
+    "Glottal Stop": {
+      "unicode": "៏",
+      "origin": "𓃪"
+    },
+    "Previous-syllable emphasis": {
+      "unicode": "ិ",
+      "origin": "𓃪"
+    },
+    "Next-syllable emphasis": {
+      "unicode": "ូ",
+      "origin": "𓃪"
+    }
+  },
+  "digits": {
+    "0": "០",
+    "1": "១",
+    "2": "២",
+    "3": "៣",
+    "4": "៤",
+    "5": "៥",
+    "6": "៦",
+    "7": "៧",
+    "8": "៨",
+    "9": "៩"
+  },
+  "punctuation": {
+    ",": "៖",
+    ".": "។",
+    "?": "៕",
+    "!": "៘",
+    "\"": "៙",
+    "(": "៚",
+    ")": "ៗ",
+    "&": "ៜ"
+  },
+  "coeng": "្",
+  "subscripts": [
+    {
+      "letter": "A",
+      "sequence": "្អ",
+      "codepoints": [
+        "U+17D2",
+        "U+17A2"
+      ],
+      "origin_hieroglyph": "𓄣"
+    },
+    {
+      "letter": "B",
+      "sequence": "្ប",
+      "codepoints": [
+        "U+17D2",
+        "U+1794"
+      ],
+      "origin_hieroglyph": "𓈌"
+    },
+    {
+      "letter": "D",
+      "sequence": "្ដ",
+      "codepoints": [
+        "U+17D2",
+        "U+178A"
+      ],
+      "origin_hieroglyph": "𓀃"
+    },
+    {
+      "letter": "E",
+      "sequence": "្ឆ",
+      "codepoints": [
+        "U+17D2",
+        "U+1786"
+      ],
+      "origin_hieroglyph": "𓆣"
+    },
+    {
+      "letter": "G",
+      "sequence": "្គ",
+      "codepoints": [
+        "U+17D2",
+        "U+1782"
+      ],
+      "origin_hieroglyph": "𓋑"
+    },
+    {
+      "letter": "H",
+      "sequence": "្ហ",
+      "codepoints": [
+        "U+17D2",
+        "U+17A0"
+      ],
+      "origin_hieroglyph": "𓊓"
+    },
+    {
+      "letter": "I",
+      "sequence": "្ញ",
+      "codepoints": [
+        "U+17D2",
+        "U+1789"
+      ],
+      "origin_hieroglyph": "𓈚"
+    },
+    {
+      "letter": "J",
+      "sequence": "្ជ",
+      "codepoints": [
+        "U+17D2",
+        "U+1787"
+      ],
+      "origin_hieroglyph": "𓇢"
+    },
+    {
+      "letter": "K",
+      "sequence": "្ក",
+      "codepoints": [
+        "U+17D2",
+        "U+1780"
+      ],
+      "origin_hieroglyph": "𓇰"
+    },
+    {
+      "letter": "L",
+      "sequence": "្ល",
+      "codepoints": [
+        "U+17D2",
+        "U+179B"
+      ],
+      "origin_hieroglyph": "𓍋"
+    },
+    {
+      "letter": "M",
+      "sequence": "្ម",
+      "codepoints": [
+        "U+17D2",
+        "U+1798"
+      ],
+      "origin_hieroglyph": "𓋝"
+    },
+    {
+      "letter": "N",
+      "sequence": "្ន",
+      "codepoints": [
+        "U+17D2",
+        "U+1793"
+      ],
+      "origin_hieroglyph": "𓋜"
+    },
+    {
+      "letter": "O",
+      "sequence": "្ង",
+      "codepoints": [
+        "U+17D2",
+        "U+1784"
+      ],
+      "origin_hieroglyph": "𓊲"
+    },
+    {
+      "letter": "P",
+      "sequence": "្ព",
+      "codepoints": [
+        "U+17D2",
+        "U+1796"
+      ],
+      "origin_hieroglyph": "𓇲"
+    },
+    {
+      "letter": "R",
+      "sequence": "្រ",
+      "codepoints": [
+        "U+17D2",
+        "U+179A"
+      ],
+      "origin_hieroglyph": "𓈊"
+    },
+    {
+      "letter": "S",
+      "sequence": "្ស",
+      "codepoints": [
+        "U+17D2",
+        "U+179F"
+      ],
+      "origin_hieroglyph": "𓆇"
+    },
+    {
+      "letter": "T",
+      "sequence": "្ត",
+      "codepoints": [
+        "U+17D2",
+        "U+178F"
+      ],
+      "origin_hieroglyph": "𓆠"
+    },
+    {
+      "letter": "W",
+      "sequence": "្វ",
+      "codepoints": [
+        "U+17D2",
+        "U+179C"
+      ],
+      "origin_hieroglyph": "𓋧"
+    },
+    {
+      "letter": "Y",
+      "sequence": "្យ",
+      "codepoints": [
+        "U+17D2",
+        "U+1799"
+      ],
+      "origin_hieroglyph": "𓈐"
+    },
+    {
+      "letter": "Z",
+      "sequence": "្ឝ",
+      "codepoints": [
+        "U+17D2",
+        "U+179D"
+      ],
+      "origin_hieroglyph": "𓀁"
+    }
+  ],
+  "characters": [
+    {
+      "name": "A",
+      "character": "អ",
+      "codepoint": "U+17A2",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓄣",
+      "status": "assigned"
+    },
+    {
+      "name": "B",
+      "character": "ប",
+      "codepoint": "U+1794",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓈌",
+      "status": "assigned"
+    },
+    {
+      "name": "D",
+      "character": "ដ",
+      "codepoint": "U+178A",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓀃",
+      "status": "assigned"
+    },
+    {
+      "name": "E",
+      "character": "ឆ",
+      "codepoint": "U+1786",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓆣",
+      "status": "assigned"
+    },
+    {
+      "name": "G",
+      "character": "គ",
+      "codepoint": "U+1782",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓋑",
+      "status": "assigned"
+    },
+    {
+      "name": "H",
+      "character": "ហ",
+      "codepoint": "U+17A0",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓊓",
+      "status": "assigned"
+    },
+    {
+      "name": "I",
+      "character": "ញ",
+      "codepoint": "U+1789",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓈚",
+      "status": "assigned"
+    },
+    {
+      "name": "J",
+      "character": "ជ",
+      "codepoint": "U+1787",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓇢",
+      "status": "assigned"
+    },
+    {
+      "name": "K",
+      "character": "ក",
+      "codepoint": "U+1780",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓇰",
+      "status": "assigned"
+    },
+    {
+      "name": "L",
+      "character": "ល",
+      "codepoint": "U+179B",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓍋",
+      "status": "assigned"
+    },
+    {
+      "name": "M",
+      "character": "ម",
+      "codepoint": "U+1798",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓋝",
+      "status": "assigned"
+    },
+    {
+      "name": "N",
+      "character": "ន",
+      "codepoint": "U+1793",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓋜",
+      "status": "assigned"
+    },
+    {
+      "name": "O",
+      "character": "ង",
+      "codepoint": "U+1784",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓊲",
+      "status": "assigned"
+    },
+    {
+      "name": "P",
+      "character": "ព",
+      "codepoint": "U+1796",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓇲",
+      "status": "assigned"
+    },
+    {
+      "name": "R",
+      "character": "រ",
+      "codepoint": "U+179A",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓈊",
+      "status": "assigned"
+    },
+    {
+      "name": "S",
+      "character": "ស",
+      "codepoint": "U+179F",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓆇",
+      "status": "assigned"
+    },
+    {
+      "name": "T",
+      "character": "ត",
+      "codepoint": "U+178F",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓆠",
+      "status": "assigned"
+    },
+    {
+      "name": "W",
+      "character": "វ",
+      "codepoint": "U+179C",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓋧",
+      "status": "assigned"
+    },
+    {
+      "name": "Y",
+      "character": "យ",
+      "codepoint": "U+1799",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓈐",
+      "status": "assigned"
+    },
+    {
+      "name": "Z",
+      "character": "ឝ",
+      "codepoint": "U+179D",
+      "category": "independent-letter",
+      "origin_hieroglyph": "𓀁",
+      "status": "assigned"
+    },
+    {
+      "name": "Held Consonant",
+      "character": "៌",
+      "codepoint": "U+17CC",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Central Vowel",
+      "character": "ឹ",
+      "codepoint": "U+17B9",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Open Vowel",
+      "character": "ា",
+      "codepoint": "U+17B6",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Short Vowel",
+      "character": "់",
+      "codepoint": "U+17CB",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Long Vowel",
+      "character": "ី",
+      "codepoint": "U+17B8",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Unvoiced Sound",
+      "character": "៍",
+      "codepoint": "U+17CD",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Voiced Sound",
+      "character": "័",
+      "codepoint": "U+17D0",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Separated Vowel",
+      "character": "ៈ",
+      "codepoint": "U+17C8",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Nasalization",
+      "character": "ំ",
+      "codepoint": "U+17C6",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Soft Sound",
+      "character": "៉",
+      "codepoint": "U+17C9",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Hard Sound",
+      "character": "៊",
+      "codepoint": "U+17CA",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Glide Sound",
+      "character": "៎",
+      "codepoint": "U+17CE",
+      "category": "diacritic",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Click Sound",
+      "character": "ះ",
+      "codepoint": "U+17C7",
+      "category": "special-control",
+      "origin_hieroglyph": "𓐎",
+      "status": "assigned"
+    },
+    {
+      "name": "Glottal Stop",
+      "character": "៏",
+      "codepoint": "U+17CF",
+      "category": "special-control",
+      "origin_hieroglyph": "𓃪",
+      "status": "assigned"
+    },
+    {
+      "name": "Previous-syllable emphasis",
+      "character": "ិ",
+      "codepoint": "U+17B7",
+      "category": "special-control",
+      "origin_hieroglyph": "𓃪",
+      "status": "assigned"
+    },
+    {
+      "name": "Next-syllable emphasis",
+      "character": "ូ",
+      "codepoint": "U+17BC",
+      "category": "special-control",
+      "origin_hieroglyph": "𓃪",
+      "status": "assigned"
+    },
+    {
+      "name": "Digit 0",
+      "character": "០",
+      "codepoint": "U+17E0",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "0"
+    },
+    {
+      "name": "Digit 1",
+      "character": "១",
+      "codepoint": "U+17E1",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "1"
+    },
+    {
+      "name": "Digit 2",
+      "character": "២",
+      "codepoint": "U+17E2",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "2"
+    },
+    {
+      "name": "Digit 3",
+      "character": "៣",
+      "codepoint": "U+17E3",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "3"
+    },
+    {
+      "name": "Digit 4",
+      "character": "៤",
+      "codepoint": "U+17E4",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "4"
+    },
+    {
+      "name": "Digit 5",
+      "character": "៥",
+      "codepoint": "U+17E5",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "5"
+    },
+    {
+      "name": "Digit 6",
+      "character": "៦",
+      "codepoint": "U+17E6",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "6"
+    },
+    {
+      "name": "Digit 7",
+      "character": "៧",
+      "codepoint": "U+17E7",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "7"
+    },
+    {
+      "name": "Digit 8",
+      "character": "៨",
+      "codepoint": "U+17E8",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "8"
+    },
+    {
+      "name": "Digit 9",
+      "character": "៩",
+      "codepoint": "U+17E9",
+      "category": "digit",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "9"
+    },
+    {
+      "name": "Comma",
+      "character": "៖",
+      "codepoint": "U+17D6",
+      "category": "punctuation",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": ","
+    },
+    {
+      "name": "Period",
+      "character": "។",
+      "codepoint": "U+17D4",
+      "category": "punctuation",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "."
+    },
+    {
+      "name": "Question mark",
+      "character": "៕",
+      "codepoint": "U+17D5",
+      "category": "punctuation",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "?"
+    },
+    {
+      "name": "Exclamation mark",
+      "character": "៘",
+      "codepoint": "U+17D8",
+      "category": "punctuation",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "!"
+    },
+    {
+      "name": "Quotation marks",
+      "character": "៙",
+      "codepoint": "U+17D9",
+      "category": "punctuation",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "\""
+    },
+    {
+      "name": "Open parenthesis",
+      "character": "៚",
+      "codepoint": "U+17DA",
+      "category": "punctuation",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "("
+    },
+    {
+      "name": "Close parenthesis",
+      "character": "ៗ",
+      "codepoint": "U+17D7",
+      "category": "punctuation",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": ")"
+    },
+    {
+      "name": "Ampersand",
+      "character": "ៜ",
+      "codepoint": "U+17DC",
+      "category": "punctuation",
+      "origin_hieroglyph": null,
+      "status": "assigned",
+      "latin": "&"
+    },
+    {
+      "name": "COENG",
+      "character": "្",
+      "codepoint": "U+17D2",
+      "category": "subscript-introducer",
+      "origin_hieroglyph": null,
+      "status": "assigned"
+    },
+    {
+      "name": "Catalog-only Khmer 1781",
+      "character": "ខ",
+      "codepoint": "U+1781",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 1783",
+      "character": "ឃ",
+      "codepoint": "U+1783",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 1785",
+      "character": "ច",
+      "codepoint": "U+1785",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 1788",
+      "character": "ឈ",
+      "codepoint": "U+1788",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 178B",
+      "character": "ឋ",
+      "codepoint": "U+178B",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 178C",
+      "character": "ឌ",
+      "codepoint": "U+178C",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 178D",
+      "character": "ឍ",
+      "codepoint": "U+178D",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 178E",
+      "character": "ណ",
+      "codepoint": "U+178E",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 1790",
+      "character": "ថ",
+      "codepoint": "U+1790",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 1791",
+      "character": "ទ",
+      "codepoint": "U+1791",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 1792",
+      "character": "ធ",
+      "codepoint": "U+1792",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 1795",
+      "character": "ផ",
+      "codepoint": "U+1795",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 1797",
+      "character": "ភ",
+      "codepoint": "U+1797",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 179E",
+      "character": "ឞ",
+      "codepoint": "U+179E",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17A1",
+      "character": "ឡ",
+      "codepoint": "U+17A1",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17A3",
+      "character": "ឣ",
+      "codepoint": "U+17A3",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17A4",
+      "character": "ឤ",
+      "codepoint": "U+17A4",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17A5",
+      "character": "ឥ",
+      "codepoint": "U+17A5",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17A6",
+      "character": "ឦ",
+      "codepoint": "U+17A6",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17A7",
+      "character": "ឧ",
+      "codepoint": "U+17A7",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17A8",
+      "character": "ឨ",
+      "codepoint": "U+17A8",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17A9",
+      "character": "ឩ",
+      "codepoint": "U+17A9",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17AA",
+      "character": "ឪ",
+      "codepoint": "U+17AA",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17AB",
+      "character": "ឫ",
+      "codepoint": "U+17AB",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17AC",
+      "character": "ឬ",
+      "codepoint": "U+17AC",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17AD",
+      "character": "ឭ",
+      "codepoint": "U+17AD",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17AE",
+      "character": "ឮ",
+      "codepoint": "U+17AE",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17AF",
+      "character": "ឯ",
+      "codepoint": "U+17AF",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17B0",
+      "character": "ឰ",
+      "codepoint": "U+17B0",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17B1",
+      "character": "ឱ",
+      "codepoint": "U+17B1",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17B2",
+      "character": "ឲ",
+      "codepoint": "U+17B2",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17B3",
+      "character": "ឳ",
+      "codepoint": "U+17B3",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17B4",
+      "character": "឴",
+      "codepoint": "U+17B4",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17B5",
+      "character": "឵",
+      "codepoint": "U+17B5",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17BA",
+      "character": "ឺ",
+      "codepoint": "U+17BA",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17BB",
+      "character": "ុ",
+      "codepoint": "U+17BB",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17BD",
+      "character": "ួ",
+      "codepoint": "U+17BD",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17BE",
+      "character": "ើ",
+      "codepoint": "U+17BE",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17BF",
+      "character": "ឿ",
+      "codepoint": "U+17BF",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17C0",
+      "character": "ៀ",
+      "codepoint": "U+17C0",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17C1",
+      "character": "េ",
+      "codepoint": "U+17C1",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17C2",
+      "character": "ែ",
+      "codepoint": "U+17C2",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17C3",
+      "character": "ៃ",
+      "codepoint": "U+17C3",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17C4",
+      "character": "ោ",
+      "codepoint": "U+17C4",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17C5",
+      "character": "ៅ",
+      "codepoint": "U+17C5",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17D1",
+      "character": "៑",
+      "codepoint": "U+17D1",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17D3",
+      "character": "៓",
+      "codepoint": "U+17D3",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17DB",
+      "character": "៛",
+      "codepoint": "U+17DB",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17DD",
+      "character": "៝",
+      "codepoint": "U+17DD",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F0",
+      "character": "៰",
+      "codepoint": "U+17F0",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F1",
+      "character": "៱",
+      "codepoint": "U+17F1",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F2",
+      "character": "៲",
+      "codepoint": "U+17F2",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F3",
+      "character": "៳",
+      "codepoint": "U+17F3",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F4",
+      "character": "៴",
+      "codepoint": "U+17F4",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F5",
+      "character": "៵",
+      "codepoint": "U+17F5",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F6",
+      "character": "៶",
+      "codepoint": "U+17F6",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F7",
+      "character": "៷",
+      "codepoint": "U+17F7",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F8",
+      "character": "៸",
+      "codepoint": "U+17F8",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    },
+    {
+      "name": "Catalog-only Khmer 17F9",
+      "character": "៹",
+      "codepoint": "U+17F9",
+      "category": "reference-only",
+      "origin_hieroglyph": null,
+      "status": "unresolved"
+    }
+  ]
+}
