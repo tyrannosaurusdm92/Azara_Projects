@@ -193,3 +193,11 @@ body.aws-single-nav :is(textarea,input,[contenteditable="true"]).aza-writing,
 #keyboard .aza-mark-option[aria-pressed="true"],#keyboard .aza-sub-option[aria-pressed="true"]{outline:2px solid #f7c773;outline-offset:-2px}
 #keyboard .aza-target-row{position:sticky;top:0;z-index:2;background:#0c2025;padding:4px 2px;border-radius:5px}
 #keyboard .aza-builder .aza-glyph-preview{color:#f4ddbd}
+
+/* Ink-tight Aza’raan manuscript runs; no change to QWERTY, punctuation,
+   symbol widths, existing glyph outlines, or the keyboard key previews. */
+:is(.rich-editor,.writing-surface,.paper,[contenteditable="true"]) .aza-script-run,
+.aza-writing .aza-script-run{
+  letter-spacing:0!important;
+  font-kerning:none;
+}
