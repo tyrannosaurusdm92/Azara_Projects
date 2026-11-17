@@ -77,3 +77,6 @@
 .evolution-pane .modern-table-entry{display:flex;align-items:center;gap:8px}
 /* Reserve the 24px needed for the longest Modern tails; stage positions stay fixed. */
 .evolution-pane .chart{height:990px}
+
+/* Yellow Traditional 𓃚 -> A/æ merger; other historical connections unchanged. */
+.evolution-pane .chart .lineage.uh-merge{stroke-width:3.4;stroke-dasharray:4 4;opacity:1}
