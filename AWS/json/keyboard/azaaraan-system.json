@@ -545,96 +545,96 @@
   ],
   "fontRoots": {
     "Archaic": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Classical": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Traditional": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Modern": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     }
   },
   "roots": [
@@ -2184,12 +2184,12 @@
       "slot": 31,
       "origin": "𓇖",
       "originArt": "assets/images/evolution/origins/31_131D6.png",
-      "ipa": "/eɪ-ɛ/",
-      "sound": "ay-eh",
-      "family": "A",
-      "parent": "𓄣",
+      "ipa": "/wiː/",
+      "sound": "wee",
+      "family": "W",
+      "parent": "𓆰",
       "mergesAt": "traditional",
-      "mergerStatus": "editorial_proposal_to_meet_era_counts",
+      "mergerStatus": "author_specified_2026-11-17",
       "special": false,
       "stages": [
         {
@@ -2198,7 +2198,7 @@
           "art": [
             "assets/svg/evolution/ancient/ancient_31.svg"
           ],
-          "note": "Diphthong (layered vowel)"
+          "note": "𓇖 /wiː/ (wee): long W-glide vowel, still independent"
         },
         {
           "era": "archaic",
@@ -2206,7 +2206,7 @@
           "art": [
             "assets/svg/evolution/archaic/archaic_31.svg"
           ],
-          "note": "Supplied Archaic SVG in ancestral slot 31."
+          "note": "𓇖 /wiː/ (wee): original Archaic glyph preserved in ancestral slot 31"
         },
         {
           "era": "classical",
@@ -2214,13 +2214,13 @@
           "art": [
             "assets/svg/evolution/classical/classical_31.svg"
           ],
-          "note": "Diphthong (layered vowel)"
+          "note": "𓇖 /wiː/ (wee): independent through Classical; merges into 𓆰 at Traditional transition"
         },
         {
           "era": "traditional",
           "active": false,
           "art": [],
-          "note": "Letter lost during evolution by merging into other letters"
+          "note": "𓇖 /wiː/ (wee) merges into 𓆰 /wɛ/ (weh) in Traditional; 𓆰 simultaneously joins 𓋧 W family"
         },
         {
           "era": "modern",
@@ -2755,7 +2755,7 @@
       "origin": "𓆰",
       "originArt": "assets/images/evolution/origins/42_131B0.png",
       "ipa": "/wɛ/",
-      "sound": "we",
+      "sound": "weh",
       "family": "W",
       "parent": "𓋧",
       "mergesAt": "traditional",
@@ -2790,7 +2790,7 @@
           "era": "traditional",
           "active": false,
           "art": [],
-          "note": "Letter lost during evolution by merging into /wɪ/"
+          "note": "𓆰 /wɛ/ (weh) receives 𓇖 /wiː/ (wee), then merges into 𓋧 W family during Traditional"
         },
         {
           "era": "modern",
@@ -3366,7 +3366,7 @@
         42,
         49
       ],
-      "editorial_status": "proposal except root 02"
+      "editorial_status": "Author-specified: root 31 → root 42; other mergers retain existing provisional status"
     },
     {
       "stage": "modern",
