@@ -157,6 +157,8 @@ function selectGlyph(stageKey,slot){
  const note=document.createElement('div');note.className='detail-note';
  const specialRootCodes={'1':'៏','52':'ះ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&window.AZ_CANON?.ind?.[family.family])))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
  note.textContent=rootDesc(stage,r,node)+'. '+(node&&node.label?node.label+'. ':'')+'The modern reading is '+(family?family.letter:(node&&node.text)||r.reflex)+'.';
+ if(slot===31)note.textContent+=' Traditional merger: 𓇖 /wiː/ (wee) → 𓆰 /wɛ/ (weh), with 𓆰 entering the 𓋧 W lineage during the same era transition.';
+ if(slot===42)note.textContent+=' During Traditional, 𓆰 /wɛ/ (weh) receives 𓇖 /wiː/ (wee) before joining the 𓋧 W lineage.';
  detail.appendChild(note);detail.appendChild(copyButton(copyText,'Copy reading '+copyText));
  highlight(new Set([familyFor(r)]),[stageKey,slot]);pick.value='';
 }
@@ -235,6 +237,22 @@ D.lines.forEach(line=>{
  const y1=D.stages[line.stage].y+25,y2=D.stages[line.stage+1].y-29;
  const x1=x(line.from),x2=x(line.to),mid=(y1+y2)/2,dx=x2-x1;
  const c1=x1+dx*.34,c2=x2-dx*.34,col=D.colors[line.family]||'#d0d0d0';
+ // 𓇖 /wiː/ (wee) merges into 𓆰 /wɛ/ (weh) at the Traditional boundary.
+ // Both lineages also enter the wider 𓋧 W family during this transition.
+ // Draw the 31 arrow into the live 42→44 connector, rather than an empty
+ // Traditional slot 42; no era glyph, stage count, or artwork is altered.
+ if(line.mergeIntoLineOf===42 && line.stage===3){
+  const recipient=D.lines.find(l=>l.stage===line.stage&&l.from===42);
+  if(recipient){
+   const rx=x(recipient.from),tx=x(recipient.to),rdx=tx-rx;
+   const joinX=(rx+3*(rx+rdx*.34)+3*(tx-rdx*.34)+tx)/8;
+   const joinY=mid;
+   const path=addSvg('path',{class:'lineage',d:'M'+x1+' '+y1+' C '+(x1+155)+' '+(y1+25)+', '+(joinX-120)+' '+(joinY-24)+', '+joinX+' '+joinY,stroke:col,'data-family':line.family},overlay);
+   addSvg('title',{},path).textContent='𓇖 /wiː/ (wee) joins 𓆰 /wɛ/ (weh) during Traditional; their lineage continues through 𓋧.';
+   addSvg('path',{class:'arrowtip',d:'M'+(joinX-9)+' '+(joinY-5)+' L'+joinX+' '+joinY+' L'+(joinX-9)+' '+(joinY+5)+' Z',fill:col,'data-family':line.family},overlay);
+   return;
+  }
+ }
  // The yellow 𓃚 /ʌ/ line loops into 𓄣 /æ/ between Traditional and
  // Modern. The arrow meets the A stem *before* the Modern glyph row.
  if(line.mergeBeforeModern && line.stage===4 && line.from===37 && line.to===34){
