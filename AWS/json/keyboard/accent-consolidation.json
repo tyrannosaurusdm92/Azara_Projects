@@ -1,0 +1,312 @@
+{
+  "schema": "azaraan.modern-accent-consolidation.v1",
+  "source": "2026-11-17 AWS 24→12 era consolidation",
+  "status": "canonical supplemental semantic lineage; preserves all older era forms, modern marks and modern pronunciation rules",
+  "source_historical_eras": [
+    "Archaic",
+    "Classical",
+    "Traditional"
+  ],
+  "target_era": "Modern",
+  "historic_inventory": "AWS/json/keyboard/active-accent-meanings.json",
+  "modern_authority": "AWS/json/keyboard/modern-unicode-origins.json",
+  "warnings": [
+    "The 24 legacy functions are preserved as contextual readings/lineage, not as 24 new Modern signs.",
+    "Secondary meanings require a compatible base or subscript and may not be read as unconditional phoneme insertions.",
+    "Do not modify Modern mark shapes, Khmer encodings, glyphs, diacritic placement, or earlier-era artwork.",
+    "P remains independent; F = B + Soft Sound + Unvoiced Sound; V = B + Soft Sound.",
+    "Separated Vowel requires an actual second vowel subscript on the host."
+  ],
+  "historical_source_count": 24,
+  "modern_mark_count": 12,
+  "marks": [
+    {
+      "id": "held",
+      "name": "Held Consonant",
+      "unicode": "៌",
+      "primary": "Lengthens or sustains the host consonant (gemination/held articulation).",
+      "secondary": "Inherited liquid and stop-coda retention: historical /l/, rolled /r/, /d/, and /t/ can be held or recovered from the host/subscript consonant family.",
+      "legacy": [
+        "K06",
+        "K08",
+        "K11",
+        "K12"
+      ],
+      "context": "Apply to the actual consonant or subscript being held; it does not insert L, R, D, or T by itself.",
+      "historical_sources": [
+        {
+          "id": "K06",
+          "name": "D",
+          "ipa": "/d/"
+        },
+        {
+          "id": "K08",
+          "name": "L",
+          "ipa": "/l/"
+        },
+        {
+          "id": "K11",
+          "name": "R",
+          "ipa": "rolled /r/"
+        },
+        {
+          "id": "K12",
+          "name": "T",
+          "ipa": "/t/"
+        }
+      ]
+    },
+    {
+      "id": "central",
+      "name": "Central Vowel",
+      "unicode": "ឹ",
+      "primary": "Centralizes the host vowel within its letter family.",
+      "secondary": "Retains the historical Short U /ʌ/ ('uh') reading, now housed in Modern A rather than an independent U.",
+      "legacy": [
+        "C04"
+      ],
+      "context": "A + Central Vowel gives the former U-family /ʌ/; do not restore an independent Modern U.",
+      "historical_sources": [
+        {
+          "id": "C04",
+          "name": "Short U",
+          "ipa": "/ʌ/"
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "name": "Open Vowel",
+      "unicode": "ា",
+      "primary": "Opens or lowers the host vowel quality.",
+      "secondary": "Unifies the historical open-A contrast: Short A /æ/ and Long A /ɑː/, distinguished by host vowel and Short/Long Vowel as applicable.",
+      "legacy": [
+        "C01",
+        "C05"
+      ],
+      "context": "The open mark denotes vowel quality; duration remains a separate Modern Short/Long Vowel feature.",
+      "historical_sources": [
+        {
+          "id": "C01",
+          "name": "Short A",
+          "ipa": "/æ/"
+        },
+        {
+          "id": "C05",
+          "name": "Long A",
+          "ipa": "/ɑː/"
+        }
+      ]
+    },
+    {
+      "id": "short",
+      "name": "Short Vowel",
+      "unicode": "់",
+      "primary": "Shortens the vowel nucleus.",
+      "secondary": "Retains the historical short lax front-vowel readings, E /ɛ/ and I /ɪ/, when applied to the corresponding vowel families.",
+      "legacy": [
+        "C02",
+        "C03"
+      ],
+      "context": "Use with E/I-family vowels; it does not independently insert an E or I.",
+      "historical_sources": [
+        {
+          "id": "C02",
+          "name": "Short E",
+          "ipa": "/ɛ/"
+        },
+        {
+          "id": "C03",
+          "name": "Short I",
+          "ipa": "/ɪ/"
+        }
+      ]
+    },
+    {
+      "id": "long",
+      "name": "Long Vowel",
+      "unicode": "ី",
+      "primary": "Lengthens the vowel nucleus (/ː/).",
+      "secondary": "Consolidates the historical Long E /iː/ and Long U /uː/ readings under one duration mark; vowel identity comes from the host and other marks.",
+      "legacy": [
+        "C06",
+        "C07"
+      ],
+      "context": "Modern /uː/ is hosted by O with Central Vowel + Long Vowel, not independent U.",
+      "historical_sources": [
+        {
+          "id": "C06",
+          "name": "Long E",
+          "ipa": "/iː/"
+        },
+        {
+          "id": "C07",
+          "name": "Long U",
+          "ipa": "/uː/"
+        }
+      ]
+    },
+    {
+      "id": "unvoiced",
+      "name": "Unvoiced Sound",
+      "unicode": "៍",
+      "primary": "Devoices an eligible consonant; does not replace its independent base letter.",
+      "secondary": "Preserves the old voiceless F /f/, S /s/, and K /k/ consonant-class contrasts through Modern base/subscript and voicing recipes.",
+      "legacy": [
+        "C11",
+        "K02",
+        "K07"
+      ],
+      "context": "F = B + Soft Sound + Unvoiced Sound. P stays an independent letter; do not read B + Unvoiced Sound as P.",
+      "historical_sources": [
+        {
+          "id": "C11",
+          "name": "F",
+          "ipa": "/f/"
+        },
+        {
+          "id": "K02",
+          "name": "S",
+          "ipa": "/s/"
+        },
+        {
+          "id": "K07",
+          "name": "K",
+          "ipa": "/k/"
+        }
+      ]
+    },
+    {
+      "id": "voiced",
+      "name": "Voiced Sound",
+      "unicode": "័",
+      "primary": "Adds or preserves voicing on an eligible consonant.",
+      "secondary": "Retains historical voiced G /g/, B /b/, and Z /z/ readings as contextual consonant-family values, without adding independent Modern letters.",
+      "legacy": [
+        "C08",
+        "C12",
+        "K01"
+      ],
+      "context": "B is already /b/ without a mark; historical N+G /ŋ/ belongs to nasal assimilation, not automatic G insertion.",
+      "historical_sources": [
+        {
+          "id": "C08",
+          "name": "G",
+          "ipa": "/g/; N+G /ŋ/"
+        },
+        {
+          "id": "C12",
+          "name": "B",
+          "ipa": "/b/"
+        },
+        {
+          "id": "K01",
+          "name": "Z",
+          "ipa": "/z/"
+        }
+      ]
+    },
+    {
+      "id": "separate",
+      "name": "Separated Vowel",
+      "unicode": "ៈ",
+      "primary": "Maintains hiatus: a host vowel and a genuine second vowel subscript are pronounced as separate nuclei (/V.V/).",
+      "secondary": "Carries forward the historical Base mark's explicit preservation of an unmodified, individually articulated vowel unit rather than fusing it into a glide.",
+      "legacy": [
+        "K05"
+      ],
+      "context": "Host-only and valid only when a true second vowel subscript is present; not available on a subscript alone.",
+      "historical_sources": [
+        {
+          "id": "K05",
+          "name": "Base",
+          "ipa": "unmodified base"
+        }
+      ]
+    },
+    {
+      "id": "nasal",
+      "name": "Nasalization",
+      "unicode": "ំ",
+      "primary": "Adds nasal resonance to the eligible sound.",
+      "secondary": "Retains the historical M /m/ and N /n/ nasal-coda families as place-dependent nasal readings; /ŋ/ remains possible via contextual nasal assimilation.",
+      "legacy": [
+        "K09",
+        "K10"
+      ],
+      "context": "The mark does not insert arbitrary M/N consonant letters; use their independent/subscript forms when they are pronounced as segments.",
+      "historical_sources": [
+        {
+          "id": "K09",
+          "name": "M",
+          "ipa": "/m/"
+        },
+        {
+          "id": "K10",
+          "name": "N",
+          "ipa": "/n/"
+        }
+      ]
+    },
+    {
+      "id": "soft",
+      "name": "Soft Sound",
+      "unicode": "៉",
+      "primary": "Softens or lenites the host consonant; e.g., Modern B + Soft Sound = /v/.",
+      "secondary": "Retains the historical CH affricate family /tʃ/ and /dʒ/ as a contextual palatal/soft-articulation heritage reading.",
+      "legacy": [
+        "K03"
+      ],
+      "context": "A CH reading depends on the appropriate T/D-family sound recipe, not Soft Sound alone.",
+      "historical_sources": [
+        {
+          "id": "K03",
+          "name": "CH",
+          "ipa": "/tʃ/, /dʒ/"
+        }
+      ]
+    },
+    {
+      "id": "hard",
+      "name": "Hard Sound",
+      "unicode": "៊",
+      "primary": "Hardens or fortifies an eligible consonant articulation.",
+      "secondary": "Retains the historical Hard H family of contextual frication and aspiration (/h/, /θ/, /ʃ/, /ɣ/) where the host consonant calls for it.",
+      "legacy": [
+        "K04"
+      ],
+      "context": "The same mark's exact IPA depends on the host; it does not turn every consonant into H.",
+      "historical_sources": [
+        {
+          "id": "K04",
+          "name": "Hard H",
+          "ipa": "/h/; context /θ/, /ʃ/, /ɣ/"
+        }
+      ]
+    },
+    {
+      "id": "glide",
+      "name": "Glide Sound",
+      "unicode": "៎",
+      "primary": "Introduces a family-defined transition glide without an independent extra letter.",
+      "secondary": "Consolidates the historical W /w/ and Y /j/ semivowel and vowel-glide readings, including inherited diphthong transitions.",
+      "legacy": [
+        "C09",
+        "C10"
+      ],
+      "context": "W and Y remain independent Modern letters when pronounced as full segments; a glide mark is not a substitute for them in every position.",
+      "historical_sources": [
+        {
+          "id": "C09",
+          "name": "W",
+          "ipa": "/w/; glide"
+        },
+        {
+          "id": "C10",
+          "name": "Y",
+          "ipa": "/j/; vowel glide"
+        }
+      ]
+    }
+  ]
+}
