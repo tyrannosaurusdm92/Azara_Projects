@@ -1,0 +1,934 @@
+MODERN AZA’RAAN — KHMER UNICODE → EGYPTIAN HIEROGLYPH ORIGIN REFERENCE
+UTF-8 plain text | Compiled 16 November 2026 | Read-only source comparison
+========================================================================================
+PURPOSE AND READING RULES
+• This is a mapping of the AUTHOR’S AZA’RAAN ENCODING, not a claim that real Khmer
+  characters historically evolved from Egyptian hieroglyphs. The Khmer code points
+  act as encoding slots for custom Aza’raan artwork and composition.
+• Current encoding source: uploaded ZIP, especially json/khmer-canonical.json,
+  json/unicode-map.json and assets/ttf/Azaaraan_Modern_20_Letter_Compiled_Proof.ttf.
+• Origin source: the 22 author-specified sound-to-hieroglyph correspondences,
+  cross-checked against the existing public AWS “Language Evolution Breakdown”
+  (AWS/index.html) without making any GitHub edits.
+• Phonetic/merger source: uploaded Modern_Azaraan_Letter_Families_Voiced_
+  Glide_Revised_2026-11-15(6).txt and the ZIP’s canonical working specification.
+• THIS ZIP is authoritative for Khmer code points. The existing website includes
+  some older, different Khmer Unicode allocations; a matching glyph/sound NAME
+  alone is not sufficient to transfer that older code point to this ZIP.
+• Exactly 114 distinct Khmer-block Unicode scalars (U+1780–U+17FF) appear
+  literally in readable ZIP files and are covered once each below.
+  Of these, 55 are CURRENTLY ASSIGNED by the ZIP: 20 independent letters,
+  12 ordinary diacritics, 4 special controls, 10 digits, 8 punctuation signs,
+  and 1 COENG joiner. The 55 also exactly match Khmer Unicode scalars in the
+  ZIP’s compiled modern proof TTF. The other 59 are CATALOG-ONLY CHARACTERS.
+• “UNRESOLVED” means that the supplied origin table does not establish a
+  defensible Egyptian ancestor for that character; it does not mean it
+  has an Egyptian origin that simply has not yet been discovered.
+• Subscripts are sequences U+17D2 (COENG) + the base letter. They are NOT new
+  independent Unicode scalars. A supplementary section lists all 20 exact
+  two-scalar sequences so future programs can reconstruct them accurately.
+• Private-use Aza’raan code points and ASCII/Latin marks in the ZIP are not
+  Khmer Unicode characters and are outside this character-specific inventory.
+
+HISTORICAL MERGER SUMMARY
+• 𓃚 (old independent Uh /ʌ/) → 𓄣 (A /æ/) AFTER Traditional, BEFORE Modern.
+  A now hosts /ʌ/ with Central Vowel; no Modern independent U exists.
+• 𓈌 was the V ancestral root chosen for the merged B/V/F glyph. In Modern
+  spelling B is the independent host; V = B + Soft; F = B + Soft + Unvoiced.
+  Independent P always remains separate.
+• Both < (previous syllable) and > (next syllable) emphasis marks trace to
+  the SAME root 𓃪, shared with the glottal-stop lineage in the chart.
+• Click originates from 𓐎. Neither click nor glottal is an independent
+  Modern letter; both function as above-letter special controls.
+
+========================================================================================
+A. CURRENT INDEPENDENT LETTER CODE POINTS — 20 DISTINCT CHARACTERS
+========================================================================================
+
+SOUND / LETTER: A
+KHMER UNICODE CHARACTER: អ
+UNICODE CODE POINT: U+17A2
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓄣
+HISTORICAL NOTES: Traditional A/æ descends from 𓄣. After the Traditional Era, the former independent U/“uh” /ʌ/ lineage (𓃚) merges INTO Modern A; the yellow lineage arrow in the evolution chart joins A before Modern. A now carries /ʌ/ with Central Vowel. This does not create a new independent U code point. Current lowercase/subscript encoding: ្អ = U+17D2 + U+17A2; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: B
+KHMER UNICODE CHARACTER: ប
+UNICODE CODE POINT: U+1794
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓈌
+HISTORICAL NOTES: Single modern B host for B /b/, V /v/, and F /f/. In the historical merger, the V-family ancestor 𓈌 was selected as the shared glyph, as specified by the author. V = B + Soft Sound; F = B + Soft Sound + Unvoiced Sound. Neither F nor V is a separate modern independent letter; P is independent, NOT B + Unvoiced Sound. Current lowercase/subscript encoding: ្ប = U+17D2 + U+1794; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: D
+KHMER UNICODE CHARACTER: ដ
+UNICODE CODE POINT: U+178A
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓀃
+HISTORICAL NOTES: Independent D. Its lineage includes historical tapped /ɾ/ and affricated variants; additional sounds do not change the direct D ancestor. Current lowercase/subscript encoding: ្ដ = U+17D2 + U+178A; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: E
+KHMER UNICODE CHARACTER: ឆ
+UNICODE CODE POINT: U+1786
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓆣
+HISTORICAL NOTES: Independent E. This ZIP explicitly uses ឆ (U+1786) for E; do not substitute a code point from an older AWS Khmer encoding scheme. Current lowercase/subscript encoding: ្ឆ = U+17D2 + U+1786; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: G
+KHMER UNICODE CHARACTER: គ
+UNICODE CODE POINT: U+1782
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓋑
+HISTORICAL NOTES: Independent G; the historical G lineage contains soft G variants. This ZIP uses គ (U+1782). Current lowercase/subscript encoding: ្គ = U+17D2 + U+1782; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: H
+KHMER UNICODE CHARACTER: ហ
+UNICODE CODE POINT: U+17A0
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓊓
+HISTORICAL NOTES: Independent H; Voiced Sound produces /ɦ/ where specified in the working phonetic reference. Current lowercase/subscript encoding: ្ហ = U+17D2 + U+17A0; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: I
+KHMER UNICODE CHARACTER: ញ
+UNICODE CODE POINT: U+1789
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓈚
+HISTORICAL NOTES: Independent I; the shared Aza’raan font artwork is distinct from the standard Khmer reading of this Unicode code point. Current lowercase/subscript encoding: ្ញ = U+17D2 + U+1789; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: J
+KHMER UNICODE CHARACTER: ជ
+UNICODE CODE POINT: U+1787
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓇢
+HISTORICAL NOTES: Independent J; historical J family includes /dʒ/ and /ʒ/ pronunciations. Current lowercase/subscript encoding: ្ជ = U+17D2 + U+1787; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: K
+KHMER UNICODE CHARACTER: ក
+UNICODE CODE POINT: U+1780
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓇰
+HISTORICAL NOTES: Independent K; Q/Kw, X/Ks are derived K-family readings, not separate modern independent letters. Current lowercase/subscript encoding: ្ក = U+17D2 + U+1780; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: L
+KHMER UNICODE CHARACTER: ល
+UNICODE CODE POINT: U+179B
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓍋
+HISTORICAL NOTES: Independent L; dark /ɫ/ is a family modification, not a second independent letter. Current lowercase/subscript encoding: ្ល = U+17D2 + U+179B; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: M
+KHMER UNICODE CHARACTER: ម
+UNICODE CODE POINT: U+1798
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓋝
+HISTORICAL NOTES: Independent M; syllabic /m̩/ uses a family modifier, not a different independent ancestor. Current lowercase/subscript encoding: ្ម = U+17D2 + U+1798; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: N
+KHMER UNICODE CHARACTER: ន
+UNICODE CODE POINT: U+1793
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓋜
+HISTORICAL NOTES: Independent N; /ŋ/ and /ɲ/ are N-family derivatives, not additional independent modern letters. Current lowercase/subscript encoding: ្ន = U+17D2 + U+1793; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: O
+KHMER UNICODE CHARACTER: ង
+UNICODE CODE POINT: U+1784
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓊲
+HISTORICAL NOTES: Independent O, from 𓊲. The removed U-family /uː/ reading is now hosted by O using Central Vowel + Long Vowel. This historical sound reassignment does not make O descend from the same /ʌ/ root as A. Current lowercase/subscript encoding: ្ង = U+17D2 + U+1784; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: P
+KHMER UNICODE CHARACTER: ព
+UNICODE CODE POINT: U+1796
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓇲
+HISTORICAL NOTES: Independent P, from 𓇲. It is never treated as a B-derived voiceless glyph. Current lowercase/subscript encoding: ្ព = U+17D2 + U+1796; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: R
+KHMER UNICODE CHARACTER: រ
+UNICODE CODE POINT: U+179A
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓈊
+HISTORICAL NOTES: Independent R. Held Consonant can mark the rolled/trilled variant. Current lowercase/subscript encoding: ្រ = U+17D2 + U+179A; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: S
+KHMER UNICODE CHARACTER: ស
+UNICODE CODE POINT: U+179F
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓆇
+HISTORICAL NOTES: Independent S. /ʃ/ is a modified S-family sound; modern /z/ uses independent Z. Current lowercase/subscript encoding: ្ស = U+17D2 + U+179F; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: T
+KHMER UNICODE CHARACTER: ត
+UNICODE CODE POINT: U+178F
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓆠
+HISTORICAL NOTES: Independent T. Tz /tæz/ and Tch /tʃ/ are fused T-family readings with diacritics, not automatic A/Z/C/H subscripts. Current lowercase/subscript encoding: ្ត = U+17D2 + U+178F; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: W
+KHMER UNICODE CHARACTER: វ
+UNICODE CODE POINT: U+179C
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓋧
+HISTORICAL NOTES: Working independent W in THIS 20-key ZIP, from 𓋧. Historical status differs from an older AWS 19-base model which merged W under B; this package explicitly assigns W its own Unicode base, so this entry follows the uploaded ZIP. Current lowercase/subscript encoding: ្វ = U+17D2 + U+179C; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: Y
+KHMER UNICODE CHARACTER: យ
+UNICODE CODE POINT: U+1799
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓈐
+HISTORICAL NOTES: Independent Y, from 𓈐. Its Latin letter name is not evidence of any other Khmer Unicode assignment. Current lowercase/subscript encoding: ្យ = U+17D2 + U+1799; this subscript retains the SAME Egyptian letter-family origin.
+
+SOUND / LETTER: Z
+KHMER UNICODE CHARACTER: ឝ
+UNICODE CODE POINT: U+179D
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓀁
+HISTORICAL NOTES: Independent Z, from 𓀁. Earlier S-family /z/ overlap does not replace the distinct modern Z key. Current lowercase/subscript encoding: ្ឝ = U+17D2 + U+179D; this subscript retains the SAME Egyptian letter-family origin.
+
+
+========================================================================================
+B. CURRENT ORDINARY DIACRITICS — 12 DISTINCT CHARACTERS
+========================================================================================
+
+SOUND / LETTER: Held Consonant (ordinary diacritic)
+KHMER UNICODE CHARACTER: ៌
+UNICODE CODE POINT: U+17CC
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Held Consonant”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.
+
+SOUND / LETTER: Central Vowel (ordinary diacritic)
+KHMER UNICODE CHARACTER: ឹ
+UNICODE CODE POINT: U+17B9
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Central Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.
+
+SOUND / LETTER: Open Vowel (ordinary diacritic)
+KHMER UNICODE CHARACTER: ា
+UNICODE CODE POINT: U+17B6
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Open Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.
+
+SOUND / LETTER: Short Vowel (ordinary diacritic)
+KHMER UNICODE CHARACTER: ់
+UNICODE CODE POINT: U+17CB
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Short Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.
+
+SOUND / LETTER: Long Vowel (ordinary diacritic)
+KHMER UNICODE CHARACTER: ី
+UNICODE CODE POINT: U+17B8
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Long Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.
+
+SOUND / LETTER: Unvoiced Sound (ordinary diacritic)
+KHMER UNICODE CHARACTER: ៍
+UNICODE CODE POINT: U+17CD
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Unvoiced Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified. Independent P is NOT encoded from B + Unvoiced.
+
+SOUND / LETTER: Voiced Sound (ordinary diacritic)
+KHMER UNICODE CHARACTER: ័
+UNICODE CODE POINT: U+17D0
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Voiced Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified. Replaces the retired Falling Inflection label; does not itself create a new independent voiced base.
+
+SOUND / LETTER: Separated Vowel (ordinary diacritic)
+KHMER UNICODE CHARACTER: ៈ
+UNICODE CODE POINT: U+17C8
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Separated Vowel”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified. Host-only: permitted only when a vowel-bearing independent host has a genuine second vowel subscript; never a standalone/subscript modifier.
+
+SOUND / LETTER: Nasalization (ordinary diacritic)
+KHMER UNICODE CHARACTER: ំ
+UNICODE CODE POINT: U+17C6
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Nasalization”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.
+
+SOUND / LETTER: Soft Sound (ordinary diacritic)
+KHMER UNICODE CHARACTER: ៉
+UNICODE CODE POINT: U+17C9
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Soft Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.
+
+SOUND / LETTER: Hard Sound (ordinary diacritic)
+KHMER UNICODE CHARACTER: ៊
+UNICODE CODE POINT: U+17CA
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Hard Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified.
+
+SOUND / LETTER: Glide Sound (ordinary diacritic)
+KHMER UNICODE CHARACTER: ៎
+UNICODE CODE POINT: U+17CE
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Current Aza’raan ordinary phonetic modifier “Glide Sound”; not an independent historical letter. This mark inherits the HOST letter’s lineage when applied, and no standalone Egyptian ancestor is specified. Replaces the retired Rising Inflection label; denotes a family-defined glide rather than a separate letter.
+
+
+========================================================================================
+C. SPECIAL PHONETIC / EMPHASIS CONTROLS — 4 DISTINCT CHARACTERS
+========================================================================================
+
+SOUND / LETTER: Click Sound /ǃ/
+KHMER UNICODE CHARACTER: ះ
+UNICODE CODE POINT: U+17C7
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓐎
+HISTORICAL NOTES: Above-letter click punctuation according to the newest layout instructions; the legacy source ID sUnder does not make it a below-letter subscript or independent letter. Current ZIP control ID: sUnder; Latin display trigger: ¡.
+
+SOUND / LETTER: Glottal Stop /ʔ/
+KHMER UNICODE CHARACTER: ៏
+UNICODE CODE POINT: U+17CF
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓃪
+HISTORICAL NOTES: Above-letter glottal punctuation, NOT a regular diacritic or independent Modern letter. The root 𓃪 also branches into the two historical emphasis controls. Current ZIP control ID: sOver; Latin display trigger: '.
+
+SOUND / LETTER: Previous-syllable emphasis <
+KHMER UNICODE CHARACTER: ិ
+UNICODE CODE POINT: U+17B7
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓃪
+HISTORICAL NOTES: Left/previous-syllable emphasis. It and next-syllable emphasis share this SAME Egyptian ancestor in the evolution chart; neither is the retired Falling Inflection phonetic mark. Current ZIP control ID: sLeft; Latin display trigger: <.
+
+SOUND / LETTER: Next-syllable emphasis >
+KHMER UNICODE CHARACTER: ូ
+UNICODE CODE POINT: U+17BC
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓃪
+HISTORICAL NOTES: Right/next-syllable emphasis. It and previous-syllable emphasis share this SAME Egyptian ancestor in the evolution chart; neither is the retired Rising Inflection phonetic mark. Current ZIP control ID: sRight; Latin display trigger: >.
+
+
+========================================================================================
+D. CURRENT KHMER-ENCODED DIGITS — 10 DISTINCT CHARACTERS
+========================================================================================
+
+SOUND / LETTER: Digit 0
+KHMER UNICODE CHARACTER: ០
+UNICODE CODE POINT: U+17E0
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 0 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 1
+KHMER UNICODE CHARACTER: ១
+UNICODE CODE POINT: U+17E1
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 1 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 2
+KHMER UNICODE CHARACTER: ២
+UNICODE CODE POINT: U+17E2
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 2 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 3
+KHMER UNICODE CHARACTER: ៣
+UNICODE CODE POINT: U+17E3
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 3 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 4
+KHMER UNICODE CHARACTER: ៤
+UNICODE CODE POINT: U+17E4
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 4 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 5
+KHMER UNICODE CHARACTER: ៥
+UNICODE CODE POINT: U+17E5
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 5 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 6
+KHMER UNICODE CHARACTER: ៦
+UNICODE CODE POINT: U+17E6
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 6 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 7
+KHMER UNICODE CHARACTER: ៧
+UNICODE CODE POINT: U+17E7
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 7 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 8
+KHMER UNICODE CHARACTER: ៨
+UNICODE CODE POINT: U+17E8
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 8 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+SOUND / LETTER: Digit 9
+KHMER UNICODE CHARACTER: ៩
+UNICODE CODE POINT: U+17E9
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP explicitly assigns the numeric value 9 to this Khmer Unicode slot and draws its own numeral artwork. No letter-specific Egyptian hieroglyph origin or Egyptian-numeral genealogy was provided for the Aza’raan digit.
+
+
+========================================================================================
+E. CURRENT KHMER-ENCODED PUNCTUATION — 8 DISTINCT CHARACTERS
+========================================================================================
+
+SOUND / LETTER: Comma (,)
+KHMER UNICODE CHARACTER: ៖
+UNICODE CODE POINT: U+17D6
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP uses this Khmer Unicode code point as the custom Aza’raan comma symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.
+
+SOUND / LETTER: Period (.)
+KHMER UNICODE CHARACTER: ។
+UNICODE CODE POINT: U+17D4
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP uses this Khmer Unicode code point as the custom Aza’raan period symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.
+
+SOUND / LETTER: Question mark (?)
+KHMER UNICODE CHARACTER: ៕
+UNICODE CODE POINT: U+17D5
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP uses this Khmer Unicode code point as the custom Aza’raan question mark symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.
+
+SOUND / LETTER: Exclamation mark (!)
+KHMER UNICODE CHARACTER: ៘
+UNICODE CODE POINT: U+17D8
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP uses this Khmer Unicode code point as the custom Aza’raan exclamation mark symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.
+
+SOUND / LETTER: Quotation marks (")
+KHMER UNICODE CHARACTER: ៙
+UNICODE CODE POINT: U+17D9
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP uses this Khmer Unicode code point as the custom Aza’raan quotation marks symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.
+
+SOUND / LETTER: Open parenthesis (()
+KHMER UNICODE CHARACTER: ៚
+UNICODE CODE POINT: U+17DA
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP uses this Khmer Unicode code point as the custom Aza’raan open parenthesis symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.
+
+SOUND / LETTER: Close parenthesis ())
+KHMER UNICODE CHARACTER: ៗ
+UNICODE CODE POINT: U+17D7
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP uses this Khmer Unicode code point as the custom Aza’raan close parenthesis symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.
+
+SOUND / LETTER: Ampersand (&)
+KHMER UNICODE CHARACTER: ៜ
+UNICODE CODE POINT: U+17DC
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: The ZIP uses this Khmer Unicode code point as the custom Aza’raan ampersand symbol. It is punctuation, not a letter lineage. No separate Egyptian ancestor was specified. Its rendered custom shape may not resemble the standard Khmer character.
+
+
+========================================================================================
+F. KHMER SUBSCRIPT INTRODUCER — 1 DISTINCT CHARACTER
+========================================================================================
+
+SOUND / LETTER: COENG / dependent-letter introducer
+KHMER UNICODE CHARACTER: ្
+UNICODE CODE POINT: U+17D2
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: This combining Khmer sign precedes the chosen dependent letter in text (U+17D2 + base). It is a Unicode structural component rather than a spoken Aza’raan letter. The composite inherits the dependent letter’s historical ancestor; COENG alone has no assigned Egyptian origin. When viewed alone this character can appear blank or dotted.
+
+
+========================================================================================
+G. OTHER KHMER-BLOCK CHARACTERS FOUND IN ZIP REFERENCE CATALOG — 59
+========================================================================================
+
+These 59 characters occur in the bundled general Unicode reference material,
+principally json/catalog.json and script/js/data.js (and font repertoire).
+They are NOT entries in the 55-codepoint active modern mapping. An older AWS
+keyboard sometimes assigns different Khmer slots to similarly named sounds;
+that separate historical implementation is not sufficient to invent a new
+mapping for generic catalog characters in this ZIP. Each is UNRESOLVED.
+
+SOUND / LETTER: Letter Kha
+KHMER UNICODE CHARACTER: ខ
+UNICODE CODE POINT: U+1781
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER KHA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Kho
+KHMER UNICODE CHARACTER: ឃ
+UNICODE CODE POINT: U+1783
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER KHO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Ca
+KHMER UNICODE CHARACTER: ច
+UNICODE CODE POINT: U+1785
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER CA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Cho
+KHMER UNICODE CHARACTER: ឈ
+UNICODE CODE POINT: U+1788
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER CHO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Ttha
+KHMER UNICODE CHARACTER: ឋ
+UNICODE CODE POINT: U+178B
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER TTHA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Do
+KHMER UNICODE CHARACTER: ឌ
+UNICODE CODE POINT: U+178C
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER DO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Ttho
+KHMER UNICODE CHARACTER: ឍ
+UNICODE CODE POINT: U+178D
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER TTHO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Nno
+KHMER UNICODE CHARACTER: ណ
+UNICODE CODE POINT: U+178E
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER NNO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Tha
+KHMER UNICODE CHARACTER: ថ
+UNICODE CODE POINT: U+1790
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER THA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter To
+KHMER UNICODE CHARACTER: ទ
+UNICODE CODE POINT: U+1791
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER TO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Tho
+KHMER UNICODE CHARACTER: ធ
+UNICODE CODE POINT: U+1792
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER THO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Pha
+KHMER UNICODE CHARACTER: ផ
+UNICODE CODE POINT: U+1795
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER PHA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point. Do not identify this as a separate Modern F; F is a modified B-family reading in the uploaded canonical encoding.
+
+SOUND / LETTER: Letter Pho
+KHMER UNICODE CHARACTER: ភ
+UNICODE CODE POINT: U+1797
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER PHO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter Sso
+KHMER UNICODE CHARACTER: ឞ
+UNICODE CODE POINT: U+179E
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER SSO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Letter La
+KHMER UNICODE CHARACTER: ឡ
+UNICODE CODE POINT: U+17A1
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER LETTER LA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qaq
+KHMER UNICODE CHARACTER: ឣ
+UNICODE CODE POINT: U+17A3
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QAQ). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qaa
+KHMER UNICODE CHARACTER: ឤ
+UNICODE CODE POINT: U+17A4
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QAA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qi
+KHMER UNICODE CHARACTER: ឥ
+UNICODE CODE POINT: U+17A5
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qii
+KHMER UNICODE CHARACTER: ឦ
+UNICODE CODE POINT: U+17A6
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QII). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qu
+KHMER UNICODE CHARACTER: ឧ
+UNICODE CODE POINT: U+17A7
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QU). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Quk
+KHMER UNICODE CHARACTER: ឨ
+UNICODE CODE POINT: U+17A8
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QUK). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Quu
+KHMER UNICODE CHARACTER: ឩ
+UNICODE CODE POINT: U+17A9
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QUU). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point. In particular, an old U alias is NOT evidence that this Khmer code point represents a Modern independent U; modern U has been retired.
+
+SOUND / LETTER: Independent Vowel Quuv
+KHMER UNICODE CHARACTER: ឪ
+UNICODE CODE POINT: U+17AA
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QUUV). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Ry
+KHMER UNICODE CHARACTER: ឫ
+UNICODE CODE POINT: U+17AB
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL RY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Ryy
+KHMER UNICODE CHARACTER: ឬ
+UNICODE CODE POINT: U+17AC
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL RYY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Ly
+KHMER UNICODE CHARACTER: ឭ
+UNICODE CODE POINT: U+17AD
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL LY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Lyy
+KHMER UNICODE CHARACTER: ឮ
+UNICODE CODE POINT: U+17AE
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL LYY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qe
+KHMER UNICODE CHARACTER: ឯ
+UNICODE CODE POINT: U+17AF
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point. Older AWS encodings may use this code point for a vowel; the current ZIP assigns independent A to U+17A2 instead.
+
+SOUND / LETTER: Independent Vowel Qai
+KHMER UNICODE CHARACTER: ឰ
+UNICODE CODE POINT: U+17B0
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QAI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qoo Type One
+KHMER UNICODE CHARACTER: ឱ
+UNICODE CODE POINT: U+17B1
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QOO TYPE ONE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qoo Type Two
+KHMER UNICODE CHARACTER: ឲ
+UNICODE CODE POINT: U+17B2
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QOO TYPE TWO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Independent Vowel Qau
+KHMER UNICODE CHARACTER: ឳ
+UNICODE CODE POINT: U+17B3
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER INDEPENDENT VOWEL QAU). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Inherent Aq
+KHMER UNICODE CHARACTER: ឴
+UNICODE CODE POINT: U+17B4
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL INHERENT AQ). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Inherent Aa
+KHMER UNICODE CHARACTER: ឵
+UNICODE CODE POINT: U+17B5
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL INHERENT AA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Yy
+KHMER UNICODE CHARACTER: ឺ
+UNICODE CODE POINT: U+17BA
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN YY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign U
+KHMER UNICODE CHARACTER: ុ
+UNICODE CODE POINT: U+17BB
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN U). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Ua
+KHMER UNICODE CHARACTER: ួ
+UNICODE CODE POINT: U+17BD
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN UA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Oe
+KHMER UNICODE CHARACTER: ើ
+UNICODE CODE POINT: U+17BE
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN OE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Ya
+KHMER UNICODE CHARACTER: ឿ
+UNICODE CODE POINT: U+17BF
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN YA). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Ie
+KHMER UNICODE CHARACTER: ៀ
+UNICODE CODE POINT: U+17C0
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN IE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign E
+KHMER UNICODE CHARACTER: េ
+UNICODE CODE POINT: U+17C1
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN E). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Ae
+KHMER UNICODE CHARACTER: ែ
+UNICODE CODE POINT: U+17C2
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN AE). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Ai
+KHMER UNICODE CHARACTER: ៃ
+UNICODE CODE POINT: U+17C3
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN AI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Oo
+KHMER UNICODE CHARACTER: ោ
+UNICODE CODE POINT: U+17C4
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN OO). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Vowel Sign Au
+KHMER UNICODE CHARACTER: ៅ
+UNICODE CODE POINT: U+17C5
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER VOWEL SIGN AU). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Sign Viriam
+KHMER UNICODE CHARACTER: ៑
+UNICODE CODE POINT: U+17D1
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SIGN VIRIAM). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Sign Bathamasat
+KHMER UNICODE CHARACTER: ៓
+UNICODE CODE POINT: U+17D3
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SIGN BATHAMASAT). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Currency Symbol Riel
+KHMER UNICODE CHARACTER: ៛
+UNICODE CODE POINT: U+17DB
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER CURRENCY SYMBOL RIEL). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Sign Atthacan
+KHMER UNICODE CHARACTER: ៝
+UNICODE CODE POINT: U+17DD
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SIGN ATTHACAN). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Son
+KHMER UNICODE CHARACTER: ៰
+UNICODE CODE POINT: U+17F0
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK SON). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Muoy
+KHMER UNICODE CHARACTER: ៱
+UNICODE CODE POINT: U+17F1
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK MUOY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Pii
+KHMER UNICODE CHARACTER: ៲
+UNICODE CODE POINT: U+17F2
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PII). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Bei
+KHMER UNICODE CHARACTER: ៳
+UNICODE CODE POINT: U+17F3
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK BEI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Buon
+KHMER UNICODE CHARACTER: ៴
+UNICODE CODE POINT: U+17F4
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK BUON). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Pram
+KHMER UNICODE CHARACTER: ៵
+UNICODE CODE POINT: U+17F5
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Pram-Muoy
+KHMER UNICODE CHARACTER: ៶
+UNICODE CODE POINT: U+17F6
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM-MUOY). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Pram-Pii
+KHMER UNICODE CHARACTER: ៷
+UNICODE CODE POINT: U+17F7
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM-PII). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Pram-Bei
+KHMER UNICODE CHARACTER: ៸
+UNICODE CODE POINT: U+17F8
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM-BEI). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+SOUND / LETTER: Symbol Lek Attak Pram-Buon
+KHMER UNICODE CHARACTER: ៹
+UNICODE CODE POINT: U+17F9
+ORIGINAL EGYPTIAN HIEROGLYPH: UNRESOLVED
+HISTORICAL NOTES: Catalog-only Khmer Unicode character (KHMER SYMBOL LEK ATTAK PRAM-BUON). Found as a reference character in the ZIP, but not among the active 20-letter / mark / punctuation / digit / COENG assignments. No reliable specific Aza’raan-to-Egyptian lineage has been established for this separate code point.
+
+
+========================================================================================
+H. EXACT SUBSCRIPT SEQUENCES — 20 COMPOSITES (NO NEW UNICODE SCALARS)
+========================================================================================
+
+This is a supplemental encoding inventory. Each item uses TWO already-counted
+Unicode characters; they are not independent extra code points. The origin
+belongs to the selected dependent letter, not to the COENG introducer.
+
+SOUND / LETTER: a (subscript A)
+KHMER UNICODE CHARACTER: ្អ
+UNICODE CODE POINT: U+17D2 + U+17A2
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓄣
+HISTORICAL NOTES: Canonical dependent/subscript form for independent A, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent A preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: b (subscript B)
+KHMER UNICODE CHARACTER: ្ប
+UNICODE CODE POINT: U+17D2 + U+1794
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓈌
+HISTORICAL NOTES: Canonical dependent/subscript form for independent B, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent B preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail. Derived sounds F and V remain B-host modifiers, not new F/V subscript characters.
+
+SOUND / LETTER: d (subscript D)
+KHMER UNICODE CHARACTER: ្ដ
+UNICODE CODE POINT: U+17D2 + U+178A
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓀃
+HISTORICAL NOTES: Canonical dependent/subscript form for independent D, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent D preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: e (subscript E)
+KHMER UNICODE CHARACTER: ្ឆ
+UNICODE CODE POINT: U+17D2 + U+1786
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓆣
+HISTORICAL NOTES: Canonical dependent/subscript form for independent E, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent E preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: g (subscript G)
+KHMER UNICODE CHARACTER: ្គ
+UNICODE CODE POINT: U+17D2 + U+1782
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓋑
+HISTORICAL NOTES: Canonical dependent/subscript form for independent G, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent G preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: h (subscript H)
+KHMER UNICODE CHARACTER: ្ហ
+UNICODE CODE POINT: U+17D2 + U+17A0
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓊓
+HISTORICAL NOTES: Canonical dependent/subscript form for independent H, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent H preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: i (subscript I)
+KHMER UNICODE CHARACTER: ្ញ
+UNICODE CODE POINT: U+17D2 + U+1789
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓈚
+HISTORICAL NOTES: Canonical dependent/subscript form for independent I, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent I preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: j (subscript J)
+KHMER UNICODE CHARACTER: ្ជ
+UNICODE CODE POINT: U+17D2 + U+1787
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓇢
+HISTORICAL NOTES: Canonical dependent/subscript form for independent J, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent J preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: k (subscript K)
+KHMER UNICODE CHARACTER: ្ក
+UNICODE CODE POINT: U+17D2 + U+1780
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓇰
+HISTORICAL NOTES: Canonical dependent/subscript form for independent K, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent K preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: l (subscript L)
+KHMER UNICODE CHARACTER: ្ល
+UNICODE CODE POINT: U+17D2 + U+179B
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓍋
+HISTORICAL NOTES: Canonical dependent/subscript form for independent L, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent L preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: m (subscript M)
+KHMER UNICODE CHARACTER: ្ម
+UNICODE CODE POINT: U+17D2 + U+1798
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓋝
+HISTORICAL NOTES: Canonical dependent/subscript form for independent M, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent M preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: n (subscript N)
+KHMER UNICODE CHARACTER: ្ន
+UNICODE CODE POINT: U+17D2 + U+1793
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓋜
+HISTORICAL NOTES: Canonical dependent/subscript form for independent N, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent N preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: o (subscript O)
+KHMER UNICODE CHARACTER: ្ង
+UNICODE CODE POINT: U+17D2 + U+1784
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓊲
+HISTORICAL NOTES: Canonical dependent/subscript form for independent O, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent O preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: p (subscript P)
+KHMER UNICODE CHARACTER: ្ព
+UNICODE CODE POINT: U+17D2 + U+1796
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓇲
+HISTORICAL NOTES: Canonical dependent/subscript form for independent P, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent P preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: r (subscript R)
+KHMER UNICODE CHARACTER: ្រ
+UNICODE CODE POINT: U+17D2 + U+179A
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓈊
+HISTORICAL NOTES: Canonical dependent/subscript form for independent R, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent R preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: s (subscript S)
+KHMER UNICODE CHARACTER: ្ស
+UNICODE CODE POINT: U+17D2 + U+179F
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓆇
+HISTORICAL NOTES: Canonical dependent/subscript form for independent S, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent S preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: t (subscript T)
+KHMER UNICODE CHARACTER: ្ត
+UNICODE CODE POINT: U+17D2 + U+178F
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓆠
+HISTORICAL NOTES: Canonical dependent/subscript form for independent T, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent T preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: w (subscript W)
+KHMER UNICODE CHARACTER: ្វ
+UNICODE CODE POINT: U+17D2 + U+179C
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓋧
+HISTORICAL NOTES: Canonical dependent/subscript form for independent W, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent W preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail. W is independently encoded in this uploaded 20-key edition; older 19-base references differ.
+
+SOUND / LETTER: y (subscript Y)
+KHMER UNICODE CHARACTER: ្យ
+UNICODE CODE POINT: U+17D2 + U+1799
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓈐
+HISTORICAL NOTES: Canonical dependent/subscript form for independent Y, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent Y preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+SOUND / LETTER: z (subscript Z)
+KHMER UNICODE CHARACTER: ្ឝ
+UNICODE CODE POINT: U+17D2 + U+179D
+ORIGINAL EGYPTIAN HIEROGLYPH: 𓀁
+HISTORICAL NOTES: Canonical dependent/subscript form for independent Z, used when a separately selected dependent letter is written. The COENG (U+17D2) has no separate Egyptian ancestor; the dependent Z preserves its letter-family origin. In the keyboard it renders at 20% of the independent letter body, positioned below and to the right of any tail.
+
+
+========================================================================================
+I. VALIDATION AND SOURCE PROVENANCE
+========================================================================================
+
+CHARACTER COVERAGE:
+  Distinct literal Khmer-block Unicode characters in ZIP: 114
+  Active canonical character scalars (also in compiled proof TTF): 55
+  Additional reference-catalog scalars: 59
+  Active independent letters: 20
+  Active ordinary diacritics: 12
+  Active special signs: 4
+  Active numerals: 10
+  Active punctuation characters: 8
+  Active COENG structural sign: 1
+  Dependent two-scalar sequences in supplemental section: 20
+  Unique codepoints with an assigned Egyptian ancestry: 24 (20 letters + 4 special controls)
+  Unique codepoints marked UNRESOLVED: 90 (31 current nonletters + 59 catalog-only)
+  All modern letter/mark/digit/punctuation/COENG codepoints were cross-checked
+  against the ZIP’s 55-Khmer-codepoint compiled TTF cmap: EXACT MATCH.
+
+SOURCE FILES (read-only):
+  ZIP: Modern_Azaraan_Keyboard_Glyph_Studio_Punctuation_Aligned_2026-11-16(4).zip
+    json/khmer-canonical.json (primary active encoding)
+    json/unicode-map.json (codepoint arrays and subscript combinations)
+    assets/ttf/Azaaraan_Modern_20_Letter_Compiled_Proof.ttf (compiled cmap audit)
+    json/catalog.json and script/js/data.js (full generic Khmer catalog)
+    docs/UNICODE-MAPPING.md (historical codepoint and semantics changes)
+    docs/Modern-Azaraan-Canonical-Working-Spec.txt (modern 20-key rules)
+  Companion note: Modern_Azaraan_Letter_Families_Voiced_Glide_Revised_2026-11-15(6).txt
+  Evolution reference:
+    https://tyrannosaurusdm92.github.io/Azara_Projects/AWS/index.html
+    section “Language Evolution Breakdown” — read-only comparison of roots
+    1, 3, 6, 8, 9, 11, 12, 14, 18, 19, 20, 21, 22, 23, 24, 33, 34,
+    35, 36, 37, 44, 50 and 52, including the U→A merger after Traditional.
+
+No source ZIP, image, font, or GitHub file was changed to create this reference.
