@@ -52,7 +52,7 @@
  function art(base,era){return era==='Modern'&&independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null}
  function symbol(raw){return canon.nums[raw]||canon.punct[raw]||null}
  function handle(raw,era,notes){
-  if(isLetter(raw)){const result=tryEncode(raw,[],era);if(result.error)notes.toast(result.error);else notes.insert(result.value);return true}
+  if(isLetter(raw)){const result=tryEncode(raw,[],era);if(result.error)notes.toast(result.error);else notes.insert(result.value,result.token);return true}
   if(specials[raw]){if(era==='Archaic'&&['AZA_PREV','AZA_NEXT'].includes(raw))return true;notes.insert(byId.get(specials[raw]).unicode);return true}
   return false;
  }
