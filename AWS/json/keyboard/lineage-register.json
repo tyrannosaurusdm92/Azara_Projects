@@ -92,16 +92,6 @@
           ]
         },
         {
-          "name": "AY-EH",
-          "unicode": "Ǎ",
-          "ipa": "/eɪ.ɛ/",
-          "mark": "caron",
-          "codepoints": [
-            "U+0041",
-            "U+030C"
-          ]
-        },
-        {
           "name": "AH",
           "unicode": "Ā",
           "ipa": "/ɑː/",
@@ -188,23 +178,13 @@
           "modern_unicode": "Â",
           "merge_stage": "modern",
           "historical_preservation": "Visible in every independent pre-merge era; no later independent glyph"
-        },
-        {
-          "origin": "𓇖",
-          "source_row": 36,
-          "historical_sound": "ay-eh",
-          "modern_reading": "Ǎ",
-          "modern_unicode": "Ǎ",
-          "merge_stage": "traditional",
-          "historical_preservation": "Visible in every independent pre-merge era; no later independent glyph"
         }
       ],
       "explanation": "Æ /æ/ becomes the unaccented A family (AE).",
       "source_notes": [
         "Short vowel; default/inherent",
         "Short vowel; inherent/default",
-        "Default/inherent vowel",
-        "Default/inherent vowel • From Thaerakl (“Hope”)"
+        "Default/inherent vowel"
       ],
       "original_ipa": "/æ/",
       "legacy_reading": [
@@ -213,7 +193,7 @@
         "Ă",
         "Ă or Ae"
       ],
-      "unique_historical_drawings": 5,
+      "unique_historical_drawings": 4,
       "parent_slot": 34
     },
     {
@@ -2187,6 +2167,16 @@
           "modern_unicode": "Ẃ",
           "merge_stage": "modern",
           "historical_preservation": "Visible in every independent pre-merge era; no later independent glyph"
+        },
+        {
+          "origin": "𓇖",
+          "source_row": 36,
+          "historical_sound": "wee /wiː/",
+          "modern_reading": "WEE /wiː/",
+          "modern_unicode": "Ẅ",
+          "merge_stage": "traditional",
+          "merges_into": "𓆰 /wɛ/ (weh)",
+          "historical_preservation": "Independent through Classical; merges into 𓆰 /wɛ/ during Traditional; parent 𓆰 then joins 𓋧 W family"
         }
       ],
       "explanation": "Source-register pictograph and historical shapes are retained as the provisional family lineage.",
@@ -2194,7 +2184,8 @@
         "Glide; variant of Wi",
         "Glide",
         "Letter lost during evolution by merging into /woʊ/",
-        ""
+        "",
+        "𓇖 /wiː/ (wee) → 𓆰 /wɛ/ (weh) at Traditional boundary"
       ],
       "original_ipa": "/wuː/",
       "legacy_reading": [
@@ -2203,7 +2194,7 @@
         "",
         ""
       ],
-      "unique_historical_drawings": 5,
+      "unique_historical_drawings": 6,
       "parent_slot": 44
     },
     {
@@ -5504,15 +5495,15 @@
       "source_table_row": 36,
       "origin": "𓇖",
       "origin_image": "images/origins/31_131D6.png",
-      "original_ipa": "/eɪ-ɛ/",
-      "original_sound": "ay-eh",
+      "original_ipa": "/wiː/",
+      "original_sound": "wee",
       "proto_glyph": "𓇖",
-      "proto_note": "Diphthong",
+      "proto_note": "Long W-glide vowel /wiː/ (wee)",
       "priority": false,
-      "modern_family": "A",
-      "modern_reflex": "Ǎ",
+      "modern_family": "W",
+      "modern_reflex": "WEE /wiː/ (historical W lineage)",
       "reflex_confirmed": false,
-      "modern_alignment_status": "provisional mapping for review",
+      "modern_alignment_status": "author-specified W-family reassignment; 𓇖 merges into 𓆰 in Traditional",
       "special": false,
       "historical_stages": [
         {
@@ -5522,8 +5513,8 @@
           ],
           "original_image_count": 1,
           "missing_files": [],
-          "legacy_latin": "Ae",
-          "original_note": "Diphthong (layered vowel)",
+          "legacy_latin": "Wee",
+          "original_note": "Independent 𓇖 /wiː/ (wee), long W-glide vowel",
           "independent_letter": true,
           "glyph_slot": 31,
           "artwork_source": "user-supplied individual SVG, same contact-sheet position as origin root"
@@ -5535,8 +5526,8 @@
           ],
           "original_image_count": 1,
           "missing_files": [],
-          "legacy_latin": "Ae",
-          "original_note": "Supplied Archaic SVG in ancestral slot 31.",
+          "legacy_latin": "Wee",
+          "original_note": "𓇖 /wiː/ (wee); user-supplied Archaic SVG preserved, ancestral slot 31",
           "independent_letter": true,
           "glyph_slot": 31,
           "artwork_source": "user-supplied individual SVG, same contact-sheet position as origin root"
@@ -5548,8 +5539,8 @@
           ],
           "original_image_count": 1,
           "missing_files": [],
-          "legacy_latin": "Ae",
-          "original_note": "Diphthong (layered vowel)",
+          "legacy_latin": "Wee",
+          "original_note": "𓇖 /wiː/ (wee) persists independently through Classical",
           "independent_letter": true,
           "glyph_slot": 31,
           "artwork_source": "user-supplied individual SVG, same contact-sheet position as origin root"
@@ -5560,7 +5551,7 @@
           "original_image_count": 0,
           "missing_files": [],
           "legacy_latin": "",
-          "original_note": "Letter lost during evolution by merging into other letters",
+          "original_note": "𓇖 /wiː/ merges into 𓆰 /wɛ/ (weh) during Traditional",
           "independent_letter": false,
           "glyph_slot": null,
           "artwork_source": "no separate era glyph after merger or special-sign reclassification"
@@ -5578,9 +5569,9 @@
         }
       ],
       "is_family_parent": false,
-      "parent_hieroglyph": "𓄣",
+      "parent_hieroglyph": "𓆰",
       "merges_at": "traditional",
-      "merger_evidence": "User-specified stage totals; allocation across individual roots is a reversible working reconstruction, except 𓎱 → 𓆠 before Traditional, which is user-specified.",
+      "merger_evidence": "Author-specified 2026-11-17: 𓇖 /wiː/ (wee) merges into 𓆰 /wɛ/ (weh) during Traditional; 𓆰 also joins 𓋧 W-family at the same era boundary.",
       "stage_art_preserved": true,
       "prior_merges_at": "modern",
       "merger_kind": "assimilated_into_parent_family",
@@ -5591,7 +5582,7 @@
         "modern": false,
         "ancient": true
       },
-      "merger_assignment_status": "editorial_proposal_to_meet_era_counts",
+      "merger_assignment_status": "author_specified",
       "slot": 31
     },
     {
@@ -6576,7 +6567,7 @@
       "origin": "𓆰",
       "origin_image": "images/origins/42_131B0.png",
       "original_ipa": "/wɛ/",
-      "original_sound": "we",
+      "original_sound": "weh",
       "proto_glyph": "𓆰",
       "proto_note": "Glide vowel",
       "priority": false,
@@ -6631,7 +6622,7 @@
           "original_image_count": 0,
           "missing_files": [],
           "legacy_latin": "",
-          "original_note": "Letter lost during evolution by merging into /wɪ/",
+          "original_note": "𓆰 /wɛ/ (weh) absorbs 𓇖 /wiː/ (wee), then joins 𓋧 W family in the same Traditional transition",
           "independent_letter": false,
           "glyph_slot": null,
           "artwork_source": "no separate era glyph after merger or special-sign reclassification"
@@ -7691,7 +7682,7 @@
         42,
         49
       ],
-      "editorial_status": "proposal except root 02"
+      "editorial_status": "Author-specified root 31→42; other Traditional mergers retain prior provisional status"
     },
     {
       "stage": "modern",
