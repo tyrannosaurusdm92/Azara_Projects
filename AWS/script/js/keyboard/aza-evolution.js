@@ -34,6 +34,22 @@ const MODERN_BODY_CENTERS={
   modern_50:645,modern_52:118,modern_1_U003C:89,modern_1_U003E:83
 };
 function positionModernArt(img,src,context){
+  const modernLetter=/\/modern\/independent\/([A-Z])-font\.png(?:\?|$)/.exec(src)?.[1];
+  if(modernLetter){
+    const registration=window.AZ_FONT_REGISTRATION?.letters?.[modernLetter];
+    if(!registration)return false;
+    const [xMin,yMin,xMax,yMax]=registration.bbox;
+    const [bodyXMin,bodyYMin,bodyXMax,bodyYMax]=registration.bodyBBox;
+    const pxPerUnit=(context==='chart'?35:context==='detail'?28:27)/350;
+    const xOffset=((bodyXMin+bodyXMax)/2-xMin)*pxPerUnit;
+    const yOffset=(yMax-(bodyYMin+bodyYMax)/2)*pxPerUnit;
+    img.classList.add('modern-art');img.style.position='absolute';img.style.objectFit='fill';
+    img.style.width=((xMax-xMin)*pxPerUnit).toFixed(2)+'px';
+    img.style.height=((yMax-yMin)*pxPerUnit).toFixed(2)+'px';
+    img.style.left='calc(50% - '+xOffset.toFixed(2)+'px)';
+    img.style.top='calc(50% - '+yOffset.toFixed(2)+'px)';
+    return true;
+  }
   const key=/\/(modern_[^/?]+)\.svg(?:\?|$)/.exec(src)?.[1];
   const bounds=MODERN_ART_METRICS[key];
   if(!bounds)return false; // The former U root is an intentionally empty merger slot.
@@ -76,7 +92,7 @@ function resolveOwner(slot,stageNo){
 }
 function mark(src,className,slot,stageKey,title){
  const b=document.createElement('button');b.type='button';b.className=className;b.title=title;
- const r=roots.get(slot);b.dataset.family=familyFor(r);b.dataset.slot=String(slot);b.dataset.stage=stageKey;b.style.color=colorFor(r);const normalized=({U:'A',V:'B',F:'B'}[r.family]||r.family);const mapped=(window.AZA_LETTERS||{})[normalized];if(mapped){b.dataset.khmer=mapped;b.dataset.modernEncoding='U+'+mapped.codePointAt(0).toString(16).toUpperCase()}if(r.origin)b.dataset.egyptianOrigin=r.origin;
+ const r=roots.get(slot);b.dataset.family=familyFor(r);b.dataset.slot=String(slot);b.dataset.stage=stageKey;b.style.color=colorFor(r);
  const m=document.createElement('img');m.className=className==='glyph'?'mark':'table-mark';setMask(m,src);if(stageKey==='modern'&&positionModernArt(m,src,'table'))b.classList.add('modern-art-holder');b.appendChild(m);
  b.addEventListener('click',ev=>{ev.stopPropagation();selectGlyph(stageKey,slot);window.scrollTo({top:0,behavior:'smooth'})});
  return b;
@@ -125,8 +141,8 @@ function renderFamily(familyKey){
  const note=document.createElement('div');note.className='detail-note';
  const readings=(fam.readings||[]).map(x=>x.name+' '+x.unicode+(x.ipa?' '+x.ipa:'')).join(' · ');
  const origins=members.map(r=>r.origin+' ('+r.sound+')').join(' · ');
- note.textContent='Historical source roots: '+origins+'. Legacy Latin readings: '+readings+'. Current encoding uses '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' plus the revised accents in the typing tab.';
- detail.appendChild(note);detail.appendChild(copyButton((window.AZA_LETTERS||{})[fam.family]||fam.letter,'Copy Aza’raan '+fam.letter));
+ note.textContent='Historical source roots: '+origins+'. Modern readings: '+readings+'. Current encoding uses '+(window.AZ_CANON?.ind?.[fam.family]||fam.letter)+' plus the supplied Modern marks and subscripts.';
+ detail.appendChild(note);detail.appendChild(copyButton(window.AZ_CANON?.ind?.[fam.family]||fam.letter,'Copy Aza’raan '+fam.letter));
  highlight(new Set([familyKey]),null);
 }
 function selectGlyph(stageKey,slot){
@@ -139,7 +155,7 @@ function selectGlyph(stageKey,slot){
  title.textContent=picked+' · '+r.origin+' · '+r.sound;detail.appendChild(title);
  detail.appendChild(drawLineageChips(slot));
  const note=document.createElement('div');note.className='detail-note';
- const specialRootCodes={'1':'៏','52':'ះ'};const normalizedFamily=family&&({U:'A',V:'B',F:'B'}[family.family]||family.family);const encodedFamily=(window.AZA_LETTERS||{})[normalizedFamily]; const copyText=stageKey==='proto'?r.origin:(stageKey==='modern'&&specialRootCodes[slot])||encodedFamily||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin);
+ const specialRootCodes={'1':'៏','52':'ះ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&window.AZ_CANON?.ind?.[family.family])))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
  note.textContent=rootDesc(stage,r,node)+'. '+(node&&node.label?node.label+'. ':'')+'The modern reading is '+(family?family.letter:(node&&node.text)||r.reflex)+'.';
  detail.appendChild(note);detail.appendChild(copyButton(copyText,'Copy reading '+copyText));
  highlight(new Set([familyFor(r)]),[stageKey,slot]);pick.value='';
@@ -162,7 +178,7 @@ function renderTable(){
   const previewRoot=members.find(r=>r.stages.modern&&r.stages.modern.src&&!/\/modern_37\.svg/.test(r.stages.modern.src));
   if(previewRoot){const entry=document.createElement('div');entry.className='modern-table-entry';const art=mark(previewRoot.stages.modern.src,'table-glyph',previewRoot.slot,'modern',rootDesc(D.stages[stageIndex.get('modern')],previewRoot,previewRoot.stages.modern));const name=document.createElement('span');name.textContent=fam.letter;entry.append(art,name);modern.appendChild(entry)}
   else modern.textContent=fam.letter;
-  const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' · 12 contemporary marks';modern.appendChild(variants);
+  const variants=document.createElement('small');variants.textContent='Khmer: '+(window.AZ_CANON?.ind?.[fam.family]||fam.letter)+' · 12 marks, 20 subscripts';modern.appendChild(variants);
   tr.appendChild(modern);
   const source=document.createElement('td');const rootsBox=document.createElement('div');rootsBox.className='source-roots';
   members.forEach(r=>{const node=r.stages.proto;const b=mark(node.src,'table-glyph',r.slot,'proto',rootDesc(D.stages[0],r,node));rootsBox.appendChild(b)});
@@ -207,7 +223,7 @@ D.stages.forEach((stage,stageNo)=>{
   const node=root.stages[stage.key];if(!node)return;
   const b=document.createElement('button');b.type='button';b.className='glyph '+stage.key;
   b.style.left=x(root.slot)+'px';b.style.top=stage.y+'px';b.style.color=colorFor(root);
-  b.dataset.family=familyFor(root);b.dataset.stage=stage.key;b.dataset.slot=String(root.slot); const alias=({U:'A',V:'B',F:'B'}[root.family]||root.family);const current=(window.AZA_LETTERS||{})[alias];if(current){b.dataset.khmer=current;b.dataset.modernEncoding='U+'+current.codePointAt(0).toString(16).toUpperCase()}if(root.origin)b.dataset.egyptianOrigin=root.origin;
+  b.dataset.family=familyFor(root);b.dataset.stage=stage.key;b.dataset.slot=String(root.slot);
   const d=rootDesc(stage,root,node);
   b.setAttribute('aria-label',d);b.title=d+' — click to inspect';
   if(node.src){const m=document.createElement('img');m.className='mark';setMask(m,node.src);if(stage.key==='modern')positionModernArt(m,node.src,'chart');b.appendChild(m)}
@@ -239,6 +255,32 @@ D.families.forEach(fam=>{
 });
 pick.addEventListener('change',()=>renderFamily(pick.value));
 document.getElementById('evo-clear').addEventListener('click',()=>{pick.value='';setDefaultDetail()});
+async function renderOriginInventory(){
+ const table=document.getElementById('originRows'),search=document.getElementById('originSearch');
+ if(!table||!search)return;
+ try{
+  const response=await fetch('json/keyboard/modern-khmer-hieroglyph-mapping.json?v=modern-canon-20261116');
+  if(!response.ok)throw new Error('The origin inventory could not be loaded.');
+  const inventory=await response.json();
+  const expected=inventory.rules;
+  if(inventory.entries.length!==expected.distinctKhmerScalarCount+expected.independentModernLetters)throw new Error('The inventory count did not match its declared Unicode coverage.');
+  function paint(){
+   const term=search.value.trim().toLocaleLowerCase();table.replaceChildren();
+   for(const entry of inventory.entries){
+    const haystack=[entry.role,entry.label,entry.unicode,entry.codepoint,entry.egyptianOrigin].join(' ').toLocaleLowerCase();
+    if(term&&!haystack.includes(term))continue;
+    const tr=document.createElement('tr');
+    for(const value of [entry.role,entry.label,entry.unicode,entry.codepoint,entry.egyptianOrigin]){
+     const td=document.createElement('td');td.textContent=value;tr.appendChild(td);
+    }
+    tr.title=entry.notes||'';table.appendChild(tr);
+   }
+   if(!table.children.length){const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=5;cell.textContent='No matching code points.';row.append(cell);table.append(row)}
+  }
+  search.addEventListener('input',paint);paint();
+ }catch(error){table.replaceChildren();const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=5;cell.textContent=error.message;row.append(cell);table.append(row)}
+}
 renderTable();setDefaultDetail();
+renderOriginInventory();
 })();
 

@@ -69,6 +69,8 @@
               character: letter.character,
               name: `Modern ${letter.key}`,
               ipa: letter.ipa,
+              origin: letter.origin || '',
+              artwork: letter.artwork || '',
               sound: letter.key,
               transliteration: letter.key,
               latinSubstitute: letter.key,
@@ -92,11 +94,25 @@
               order: index
             }));
           });
+          (data.aws.auxiliaryGlyphs || []).forEach((item, index) => {
+            glyphs.push(this.createGlyph('modern', glyphs.length, {
+              id: `modern-${item.id}`,
+              character: item.character,
+              codepoint: item.character.codePointAt(0),
+              name: item.name,
+              category: item.category,
+              origin: item.origin || '',
+              artwork: item.artwork,
+              key: '',
+              order: data.aws.baseLetters.length + index
+            }));
+          });
         }
         eras[definition.id] = Object.assign({}, definition, { glyphs });
       });
       return {
         schemaVersion: 2,
+        modernCanonVersion: '2026-11-16-source-package',
         projectId: this.createId('aza'),
         name: "Aza'raan Glyph Studio",
         language: "Aza'raan",
@@ -152,7 +168,7 @@
     normalizeGlyph(source, eraId, index) {
       const character = String(source.character || '');
       const codepoint = Number.isInteger(source.codepoint) ? source.codepoint : (character ? character.codePointAt(0) : null);
-      const validArtwork = value => typeof value === 'string' && /^data:image\/(?:png|jpeg|webp|gif);base64,[A-Za-z0-9+/=]+$/.test(value) ? value : '';
+      const validArtwork = value => typeof value === 'string' && (/^data:image\/(?:png|jpeg|webp|gif);base64,[A-Za-z0-9+/=]+$/.test(value) || /^assets\/keyboard\/modern\/(?:independent|subscript|diacritic|numbers|punctuation)\/[A-Za-z0-9_-]+\.png$/.test(value)) ? value : '';
       const validChar = !character || (Array.from(character).length <= 3 && character.codePointAt(0) <= 0x10ffff);
       const layers = Array.isArray(source.layers) ? source.layers.slice(0, 32).map((layer, layerIndex) => ({
         id: String(layer.id || `layer-${layerIndex + 1}`),
@@ -237,6 +253,7 @@
       });
       return {
         schemaVersion: 2,
+        modernCanonVersion: String(input.modernCanonVersion || ''),
         projectId: String(input.projectId || this.createId('aza')),
         name: String(input.name || "Aza'raan Glyph Studio").slice(0, 100),
         language: String(input.language || "Aza'raan").slice(0, 100),

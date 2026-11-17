@@ -1,8 +1,8 @@
 /* Consolidated steampunk workbench: the same bubble in either language and on both pages. */
-@font-face{font-family:AzArchaic;src:url('../../assets/keyboard/ttf/Azaaraan-Archaic.ttf') format('truetype');font-display:swap}
-@font-face{font-family:AzClassical;src:url('../../assets/keyboard/ttf/Azaaraan-Classical.ttf') format('truetype');font-display:swap}
-@font-face{font-family:AzTraditional;src:url('../../assets/keyboard/ttf/Azaaraan-Traditional.ttf') format('truetype');font-display:swap}
-@font-face{font-family:AzModern;src:url('../../assets/keyboard/ttf/Azaaraan-Modern.ttf') format('truetype');font-display:swap}
+@font-face{font-family:AzArchaic;src:url('../../assets/keyboard/ttf/Azaaraan-Archaic.ttf?v=modern-canon-20261116') format('truetype');font-display:swap}
+@font-face{font-family:AzClassical;src:url('../../assets/keyboard/ttf/Azaaraan-Classical.ttf?v=modern-canon-20261116') format('truetype');font-display:swap}
+@font-face{font-family:AzTraditional;src:url('../../assets/keyboard/ttf/Azaaraan-Traditional.ttf?v=modern-canon-20261116') format('truetype');font-display:swap}
+@font-face{font-family:AzModern;src:url('../../assets/keyboard/ttf/Azaaraan-Modern.ttf?v=modern-canon-20261116') format('truetype');font-display:swap}
 [hidden]{display:none!important}
 .main-pages{display:flex;justify-content:center;gap:10px;padding:16px 16px 0;position:relative;z-index:2}
 .main-page{padding:10px 19px;border:1px solid #98682e;box-shadow:inset 0 1px #fff4,0 2px 6px #0007;border-radius:10px;background:#11262d;color:#e7d2a2;font-weight:700;cursor:pointer}
@@ -18,10 +18,15 @@
 #eraSelect{width:clamp(77px,10vw,112px)}
 .keyboard-toolbar .round-tool{flex-shrink:0}
 .keyboard .aza-key>.key-label,.aza-choice-glyph,.aza-glyph-preview{font-family:AzModern,'Noto Sans Khmer',sans-serif;line-height:1.3}
+.keyboard .aza-key>.key-label{font-family:DeskSans,Arial,sans-serif;font-weight:700;color:#f8e3b5}
+.keyboard .aza-key{position:relative}
+.keyboard .aza-key .key-glyph-art,.keyboard .key-glyph-art{position:absolute;right:3px;bottom:2px;max-width:34%;max-height:53%;object-fit:contain;filter:brightness(0) invert(93%);pointer-events:none}
 .keyboard .aza-key.aza-archaic>.key-label,.aza-archaic{font-family:AzArchaic,'Noto Sans Khmer',sans-serif}
 .keyboard .aza-key.aza-classical>.key-label,.aza-classical{font-family:AzClassical,'Noto Sans Khmer',sans-serif}
 .keyboard .aza-key.aza-traditional>.key-label,.aza-traditional{font-family:AzTraditional,'Noto Sans Khmer',sans-serif}
 .keyboard .aza-key.aza-modern>.key-label,.aza-modern{font-family:AzModern,'Noto Sans Khmer',sans-serif}
+.keyboard .aza-key.aza-modern>.key-label{font-family:DeskSans,Arial,sans-serif}
+.keyboard .aza-key.aza-archaic>.key-label,.keyboard .aza-key.aza-classical>.key-label,.keyboard .aza-key.aza-traditional>.key-label{font-family:DeskSans,Arial,sans-serif}
 .keyboard .aza-key>.key-label{font-size:clamp(14px,calc(var(--key-font)*.95),35px);font-weight:normal}
 .keyboard .aza-key>.key-symbol{font-family:system-ui,sans-serif;opacity:.9;color:#efd39c}
 .note.aza-writing.era-archaic{font-family:AzArchaic,'Noto Sans Khmer',system-ui,sans-serif}
@@ -40,6 +45,20 @@
 .aza-mark-text{font-size:10px;text-align:center;color:#a5ccd0}
 .aza-builder .builder-top{flex-wrap:wrap;gap:4px}
 .aza-builder .builder-preview{min-width:62px;max-width:130px;word-break:break-all;font-size:26px}
+.aza-builder .builder-preview{display:flex;align-items:center;min-height:130px;max-width:100%;width:100%;overflow:auto;word-break:normal}
+.aza-target-row{display:flex;align-items:center;gap:8px;margin:5px 2px;color:#edcf91;font-size:11px}
+.aza-target{background:#102d31;color:#fff0ce;border:1px solid #aa824d;border-radius:6px;padding:5px;max-width:75%}
+.aza-builder h4{font-size:11px;color:#edcf91;margin:12px 2px 6px}
+.aza-sub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:4px}
+.aza-sub-option{padding:6px;min-height:32px;font-weight:700}
+.aza-sub-option[aria-pressed=true],.aza-mark-option[aria-pressed=true]{background:#256670!important;border-color:#f7c773!important}
+.aza-choice-glyph{display:block;min-height:45px;max-width:100%;overflow:hidden}
+.aza-choice-glyph .az-khmer-cluster{zoom:.43}
+.az-khmer-cluster{display:inline-block;position:relative;min-width:0;min-height:0;padding:0;margin:0;vertical-align:baseline;line-height:0;white-space:nowrap;overflow:visible}
+.az-khmer-cluster .packed-ink{position:absolute;display:block;overflow:hidden;pointer-events:none}
+.az-khmer-cluster .packed-ink img{position:absolute;display:block;max-width:none;max-height:none;object-fit:fill;pointer-events:none;filter:brightness(0) invert(96%)}
+.az-khmer-cluster .packed-baseline{display:inline-block;width:0;height:0;vertical-align:baseline;line-height:0;font-size:0}
+.keyboard-bubble .bubble-resize-handle{position:absolute;right:8px;bottom:7px;width:22px;height:22px;display:grid;place-items:center;border:1px solid #edce8b;border-radius:50%;background:#113037;color:#f7e3b3;font:15px/1 Arial,sans-serif;cursor:nwse-resize;touch-action:none}
 .aza-mark-warning{display:block;color:#e5bc80;line-height:1.4;margin:4px}
 .voice-tool{font-size:calc(var(--tool-size)*.58)!important}
 .aza-settings{width:min(460px,95vw);max-height:88dvh;overflow:auto}

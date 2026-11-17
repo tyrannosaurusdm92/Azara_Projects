@@ -1,6 +1,6 @@
 {
   "schema": "azaraan.khmer-hieroglyph-origins.v1",
-  "authority": "Uploaded Modern_Azaraan_Khmer_Unicode_to_Egyptian_Hieroglyph_Mapping_2026-11-16(1).txt",
+  "authority": "Uploaded Modern_Azaraan_Khmer_Unicode_to_Egyptian_Hieroglyph_Mapping_2026-11-16(2).txt; verified against the supplied canonical JSON and compiled proof font",
   "scope": "Aza’raan authored encoding, NOT a historical claim about Khmer",
   "rules": {
     "independentModernLetters": 20,

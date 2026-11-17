@@ -3453,5 +3453,173 @@
       "Names, functions and encodings follow the user-provided 24-accent table."
     ],
     "maxTotalAttachedMarksPerLetter": 3
-  }
+  },
+  "modernCanonicalEncoding": {
+    "source": "Supplied Modern package; active in AWS floating keyboard",
+    "independent": {
+      "A": "អ",
+      "B": "ប",
+      "D": "ដ",
+      "E": "ឆ",
+      "G": "គ",
+      "H": "ហ",
+      "I": "ញ",
+      "J": "ជ",
+      "K": "ក",
+      "L": "ល",
+      "M": "ម",
+      "N": "ន",
+      "O": "ង",
+      "P": "ព",
+      "R": "រ",
+      "S": "ស",
+      "T": "ត",
+      "W": "វ",
+      "Y": "យ",
+      "Z": "ឝ"
+    },
+    "subscripts": {
+      "a": "្អ",
+      "b": "្ប",
+      "d": "្ដ",
+      "e": "្ឆ",
+      "g": "្គ",
+      "h": "្ហ",
+      "i": "្ញ",
+      "j": "្ជ",
+      "k": "្ក",
+      "l": "្ល",
+      "m": "្ម",
+      "n": "្ន",
+      "o": "្ង",
+      "p": "្ព",
+      "r": "្រ",
+      "s": "្ស",
+      "t": "្ត",
+      "w": "្វ",
+      "y": "្យ",
+      "z": "្ឝ"
+    },
+    "marks": [
+      {
+        "id": "held",
+        "name": "Held Consonant",
+        "unicode": "៌",
+        "codepoint": "U+17CC"
+      },
+      {
+        "id": "central",
+        "name": "Central Vowel",
+        "unicode": "ឹ",
+        "codepoint": "U+17B9"
+      },
+      {
+        "id": "open",
+        "name": "Open Vowel",
+        "unicode": "ា",
+        "codepoint": "U+17B6"
+      },
+      {
+        "id": "short",
+        "name": "Short Vowel",
+        "unicode": "់",
+        "codepoint": "U+17CB"
+      },
+      {
+        "id": "long",
+        "name": "Long Vowel",
+        "unicode": "ី",
+        "codepoint": "U+17B8"
+      },
+      {
+        "id": "unvoiced",
+        "name": "Unvoiced Sound",
+        "unicode": "៍",
+        "codepoint": "U+17CD"
+      },
+      {
+        "id": "voiced",
+        "name": "Voiced Sound",
+        "unicode": "័",
+        "codepoint": "U+17D0"
+      },
+      {
+        "id": "separate",
+        "name": "Separated Vowel",
+        "unicode": "ៈ",
+        "codepoint": "U+17C8"
+      },
+      {
+        "id": "nasal",
+        "name": "Nasalization",
+        "unicode": "ំ",
+        "codepoint": "U+17C6"
+      },
+      {
+        "id": "soft",
+        "name": "Soft Sound",
+        "unicode": "៉",
+        "codepoint": "U+17C9"
+      },
+      {
+        "id": "hard",
+        "name": "Hard Sound",
+        "unicode": "៊",
+        "codepoint": "U+17CA"
+      },
+      {
+        "id": "glide",
+        "name": "Glide Sound",
+        "unicode": "៎",
+        "codepoint": "U+17CE"
+      },
+      {
+        "id": "sUnder",
+        "name": "Click Sound",
+        "unicode": "ះ",
+        "codepoint": "U+17C7"
+      },
+      {
+        "id": "sOver",
+        "name": "Glottal Stop",
+        "unicode": "៏",
+        "codepoint": "U+17CF"
+      },
+      {
+        "id": "sLeft",
+        "name": "Special <",
+        "unicode": "ិ",
+        "codepoint": "U+17B7"
+      },
+      {
+        "id": "sRight",
+        "name": "Special >",
+        "unicode": "ូ",
+        "codepoint": "U+17BC"
+      }
+    ],
+    "numbers": {
+      "0": "០",
+      "1": "១",
+      "2": "២",
+      "3": "៣",
+      "4": "៤",
+      "5": "៥",
+      "6": "៦",
+      "7": "៧",
+      "8": "៨",
+      "9": "៩"
+    },
+    "punctuation": {
+      ",": "៖",
+      ".": "។",
+      "?": "៕",
+      "!": "៘",
+      "\"": "៙",
+      "(": "៚",
+      ")": "ៗ",
+      "&": "ៜ"
+    }
+  },
+  "legacy24MarkNote": "The original 24-mark sound recipe table is preserved as a historical reference. Active Modern composition uses modernCanonicalEncoding."
 }

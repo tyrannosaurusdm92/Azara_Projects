@@ -7,31 +7,31 @@
     "Traditional",
     "Modern"
   ],
-  "keyOrder": "ABDEGHIJKLMNOPRSTUWYZ",
+  "keyOrder": "ABDEFGHIJKLMNOPRSTUVWYZ",
   "letterMap": {
-    "A": "ឯ",
+    "A": "អ",
     "B": "ប",
     "D": "ដ",
-    "E": "ឥ",
-    "G": "ខ",
+    "E": "ឆ",
+    "G": "គ",
     "H": "ហ",
-    "I": "ឰ",
-    "J": "ច",
-    "K": "គ",
-    "L": "ឡ",
+    "I": "ញ",
+    "J": "ជ",
+    "K": "ក",
+    "L": "ល",
     "M": "ម",
     "N": "ន",
-    "O": "ឧ",
+    "O": "ង",
     "P": "ព",
     "R": "រ",
     "S": "ស",
     "T": "ត",
-    "U": "ឩ",
-    "W": "ឆ",
+    "W": "វ",
     "Y": "យ",
-    "Z": "ជ",
-    "F": "ផ",
-    "V": "វ"
+    "Z": "ឝ",
+    "U": "ឩ",
+    "V": "ប៉",
+    "F": "ប៉៍"
   },
   "familyVariants": {
     "B": [
@@ -95,8 +95,8 @@
       "display": "◌̌",
       "khmer": "័",
       "name": "Central A (uh)",
-      "meaning": "/ʌ/ is from the A family, not a separate U letter",
-      "example": "R + Short U → /rʌ/",
+      "meaning": "Adds /ʌ/ (uh), a member of the A sound family, not a separate U letter.",
+      "example": "Accented A -> /ʌ/",
       "ipa": "ʌ",
       "kind": "vowel",
       "placement": "top",
@@ -448,27 +448,26 @@
   "archaicStandalone": {
     "ʔ": {
       "khmer": "៉",
-      "glyph": "assets/svg/evolution/archaic/archaic_1.svg",
+      "glyph": "assets/keyboard/svg/evolution/archaic/archaic_1.svg",
       "meaning": "Glottal stop /ʔ/"
     },
     "¡": {
       "khmer": "្ឃ",
-      "glyph": "assets/svg/evolution/archaic/archaic_52.svg",
+      "glyph": "assets/keyboard/svg/evolution/archaic/archaic_52.svg",
       "meaning": "Click /ǃ/"
     }
   },
   "fontSources": {
-    "Archaic": "assets/ttf/Azaaraan-Archaic.ttf",
-    "Classical": "assets/ttf/Azaaraan-Classical.ttf",
-    "Traditional": "assets/ttf/Azaaraan-Traditional.ttf",
-    "Modern": "assets/ttf/Azaaraan-Modern.ttf"
+    "Archaic": "assets/keyboard/ttf/Azaaraan-Archaic.ttf",
+    "Classical": "assets/keyboard/ttf/Azaaraan-Classical.ttf",
+    "Traditional": "assets/keyboard/ttf/Azaaraan-Traditional.ttf",
+    "Modern": "assets/keyboard/ttf/Azaaraan-Modern.ttf"
   },
-  "modernIndependentAlphabet": "ABDEGHIJKLMNOPRSTYZ",
+  "modernIndependentAlphabet": "ABDEGHIJKLMNOPRSTWYZ",
   "modernFamilyMergers": {
-    "F": "B",
-    "V": "B",
-    "W": "B",
-    "U": "A for uh, O for oo"
-  },
-  "historicalKeyOrder": "ABDEGHIJKLMNOPRSTUWYZ"
+    "U": "A with Central Vowel",
+    "V": "B with Soft Sound",
+    "F": "B with Soft Sound + Unvoiced Sound",
+    "W": "independent W"
+  }
 }

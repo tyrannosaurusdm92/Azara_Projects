@@ -77,6 +77,12 @@
 .evolution-pane .modern-table-entry{display:flex;align-items:center;gap:8px}
 /* Reserve the 24px needed for the longest Modern tails; stage positions stay fixed. */
 .evolution-pane .chart{height:990px}
+.evolution-pane img[src*="assets/keyboard/modern/"]{filter:brightness(0) invert(96%)}
+.evolution-pane .origin-inventory{margin:28px 0;padding:16px;border:1px solid #7e633b;border-radius:10px;background:linear-gradient(140deg,#13282e,#10181e)}
+.evolution-pane .origin-inventory h2{margin:4px 0 12px}
+.evolution-pane #originSearch{width:min(100%,310px);padding:8px;border:1px solid #ae8d55;border-radius:7px;background:#0c222a;color:#f9eaca}
+.evolution-pane .origin-inventory tbody tr:hover{background:#244248}
+.evolution-pane .origin-inventory td:nth-child(3),.evolution-pane .origin-inventory td:nth-child(5){font-size:1.3em}
 
 /* Yellow Traditional 𓃚 -> A/æ merger; other historical connections unchanged. */
 .evolution-pane .chart .lineage.uh-merge{stroke-width:3.4;stroke-dasharray:4 4;opacity:1}

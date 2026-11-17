@@ -47,19 +47,15 @@
       "fontFile": "fonts/Azaaraan-Modern.ttf",
       "subfamily": "Modern",
       "weightClass": 400,
-      "baseGlyphCount": 21,
-      "accentCount": 24,
+      "baseGlyphCount": 20,
+      "accentCount": 12,
       "specialMarkerCount": 4,
-      "codepointCount": 58,
-      "features": [
-        "ccmp",
-        "rlig",
-        "mark"
-      ]
+      "codepointCount": 55,
+      "features": []
     }
   },
-  "keyOrder": "ABDEGHIJKLMNOPRSTUWYZ",
-  "unicodePolicy": "All language letters and marks use Khmer assignments from the attached keyboard HTML. Latin-mark filenames are artwork labels only and are not font encodings.",
+  "keyOrder": "ABDEGHIJKLMNOPRSTWYZ",
+  "unicodePolicy": "Shared letter identities use the supplied Modern Khmer canon in every keyboard era. Historical U remains U+17A9 until its merger into A. Historical outlines and accent artwork remain intact; Modern uses the supplied compiled proof TTF.",
   "latinLettersEncoded": false,
   "baseLetters": [],
   "vowelCarriers": {
@@ -71,9 +67,9 @@
       "sameGlyphAs": "A"
     },
     "E": {
-      "unicode": "ង",
+      "unicode": "ឆ",
       "codepoints": [
-        "U+1784"
+        "U+1786"
       ],
       "sameGlyphAs": "E"
     },
@@ -85,18 +81,11 @@
       "sameGlyphAs": "I"
     },
     "O": {
-      "unicode": "ឋ",
+      "unicode": "ង",
       "codepoints": [
-        "U+178B"
+        "U+1784"
       ],
       "sameGlyphAs": "O"
-    },
-    "U": {
-      "unicode": "ឌ",
-      "codepoints": [
-        "U+178C"
-      ],
-      "sameGlyphAs": "U"
     }
   },
   "coreAccents": [
@@ -2103,9 +2092,9 @@
     "Archaic": [
       {
         "key": "A",
-        "unicode": "ឯ",
+        "unicode": "អ",
         "codepoints": [
-          "U+17AF"
+          "U+17A2"
         ],
         "sourceImage": "archaic_34.png",
         "advanceUnits": 737
@@ -2130,18 +2119,18 @@
       },
       {
         "key": "E",
-        "unicode": "ឥ",
+        "unicode": "ឆ",
         "codepoints": [
-          "U+17A5"
+          "U+1786"
         ],
         "sourceImage": "archaic_36.png",
         "advanceUnits": 870
       },
       {
         "key": "G",
-        "unicode": "ខ",
+        "unicode": "គ",
         "codepoints": [
-          "U+1781"
+          "U+1782"
         ],
         "sourceImage": "archaic_8.png",
         "advanceUnits": 602
@@ -2157,36 +2146,36 @@
       },
       {
         "key": "I",
-        "unicode": "ឰ",
+        "unicode": "ញ",
         "codepoints": [
-          "U+17B0"
+          "U+1789"
         ],
         "sourceImage": "archaic_35.png",
         "advanceUnits": 920
       },
       {
         "key": "J",
-        "unicode": "ច",
+        "unicode": "ជ",
         "codepoints": [
-          "U+1785"
+          "U+1787"
         ],
         "sourceImage": "archaic_9.png",
         "advanceUnits": 920
       },
       {
         "key": "K",
-        "unicode": "គ",
+        "unicode": "ក",
         "codepoints": [
-          "U+1782"
+          "U+1780"
         ],
         "sourceImage": "archaic_24.png",
         "advanceUnits": 759
       },
       {
         "key": "L",
-        "unicode": "ឡ",
+        "unicode": "ល",
         "codepoints": [
-          "U+17A1"
+          "U+179B"
         ],
         "sourceImage": "archaic_23.png",
         "advanceUnits": 579
@@ -2211,9 +2200,9 @@
       },
       {
         "key": "O",
-        "unicode": "ឧ",
+        "unicode": "ង",
         "codepoints": [
-          "U+17A7"
+          "U+1784"
         ],
         "sourceImage": "archaic_33.png",
         "advanceUnits": 920
@@ -2265,9 +2254,9 @@
       },
       {
         "key": "W",
-        "unicode": "ឆ",
+        "unicode": "វ",
         "codepoints": [
-          "U+1786"
+          "U+179C"
         ],
         "sourceImage": "archaic_44.png",
         "advanceUnits": 801
@@ -2283,38 +2272,20 @@
       },
       {
         "key": "Z",
-        "unicode": "ជ",
+        "unicode": "ឝ",
         "codepoints": [
-          "U+1787"
+          "U+179D"
         ],
         "sourceImage": "archaic_19.png",
         "advanceUnits": 771
-      },
-      {
-        "key": "F",
-        "unicode": "ផ",
-        "codepoints": [
-          "U+1795"
-        ],
-        "sourceImage": "archaic_7.png",
-        "familyVariant": true
-      },
-      {
-        "key": "V",
-        "unicode": "វ",
-        "codepoints": [
-          "U+179C"
-        ],
-        "sourceImage": "archaic_18.png",
-        "familyVariant": true
       }
     ],
     "Classical": [
       {
         "key": "A",
-        "unicode": "ឯ",
+        "unicode": "អ",
         "codepoints": [
-          "U+17AF"
+          "U+17A2"
         ],
         "sourceImage": "classical_34.png",
         "advanceUnits": 723
@@ -2339,18 +2310,18 @@
       },
       {
         "key": "E",
-        "unicode": "ឥ",
+        "unicode": "ឆ",
         "codepoints": [
-          "U+17A5"
+          "U+1786"
         ],
         "sourceImage": "classical_36.png",
         "advanceUnits": 868
       },
       {
         "key": "G",
-        "unicode": "ខ",
+        "unicode": "គ",
         "codepoints": [
-          "U+1781"
+          "U+1782"
         ],
         "sourceImage": "classical_8.png",
         "advanceUnits": 563
@@ -2366,36 +2337,36 @@
       },
       {
         "key": "I",
-        "unicode": "ឰ",
+        "unicode": "ញ",
         "codepoints": [
-          "U+17B0"
+          "U+1789"
         ],
         "sourceImage": "classical_35.png",
         "advanceUnits": 844
       },
       {
         "key": "J",
-        "unicode": "ច",
+        "unicode": "ជ",
         "codepoints": [
-          "U+1785"
+          "U+1787"
         ],
         "sourceImage": "classical_9.png",
         "advanceUnits": 920
       },
       {
         "key": "K",
-        "unicode": "គ",
+        "unicode": "ក",
         "codepoints": [
-          "U+1782"
+          "U+1780"
         ],
         "sourceImage": "classical_24.png",
         "advanceUnits": 590
       },
       {
         "key": "L",
-        "unicode": "ឡ",
+        "unicode": "ល",
         "codepoints": [
-          "U+17A1"
+          "U+179B"
         ],
         "sourceImage": "classical_23.png",
         "advanceUnits": 557
@@ -2420,9 +2391,9 @@
       },
       {
         "key": "O",
-        "unicode": "ឧ",
+        "unicode": "ង",
         "codepoints": [
-          "U+17A7"
+          "U+1784"
         ],
         "sourceImage": "classical_33.png",
         "advanceUnits": 920
@@ -2474,9 +2445,9 @@
       },
       {
         "key": "W",
-        "unicode": "ឆ",
+        "unicode": "វ",
         "codepoints": [
-          "U+1786"
+          "U+179C"
         ],
         "sourceImage": "classical_44.png",
         "advanceUnits": 758
@@ -2492,38 +2463,20 @@
       },
       {
         "key": "Z",
-        "unicode": "ជ",
+        "unicode": "ឝ",
         "codepoints": [
-          "U+1787"
+          "U+179D"
         ],
         "sourceImage": "classical_19.png",
         "advanceUnits": 708
-      },
-      {
-        "key": "F",
-        "unicode": "ផ",
-        "codepoints": [
-          "U+1795"
-        ],
-        "sourceImage": "classical_7.png",
-        "familyVariant": true
-      },
-      {
-        "key": "V",
-        "unicode": "វ",
-        "codepoints": [
-          "U+179C"
-        ],
-        "sourceImage": "classical_18.png",
-        "familyVariant": true
       }
     ],
     "Traditional": [
       {
         "key": "A",
-        "unicode": "ឯ",
+        "unicode": "អ",
         "codepoints": [
-          "U+17AF"
+          "U+17A2"
         ],
         "sourceImage": "traditional_34.png",
         "advanceUnits": 715
@@ -2548,18 +2501,18 @@
       },
       {
         "key": "E",
-        "unicode": "ឥ",
+        "unicode": "ឆ",
         "codepoints": [
-          "U+17A5"
+          "U+1786"
         ],
         "sourceImage": "traditional_36.png",
         "advanceUnits": 761
       },
       {
         "key": "G",
-        "unicode": "ខ",
+        "unicode": "គ",
         "codepoints": [
-          "U+1781"
+          "U+1782"
         ],
         "sourceImage": "traditional_8.png",
         "advanceUnits": 646
@@ -2575,36 +2528,36 @@
       },
       {
         "key": "I",
-        "unicode": "ឰ",
+        "unicode": "ញ",
         "codepoints": [
-          "U+17B0"
+          "U+1789"
         ],
         "sourceImage": "traditional_35.png",
         "advanceUnits": 806
       },
       {
         "key": "J",
-        "unicode": "ច",
+        "unicode": "ជ",
         "codepoints": [
-          "U+1785"
+          "U+1787"
         ],
         "sourceImage": "traditional_9.png",
         "advanceUnits": 920
       },
       {
         "key": "K",
-        "unicode": "គ",
+        "unicode": "ក",
         "codepoints": [
-          "U+1782"
+          "U+1780"
         ],
         "sourceImage": "traditional_24.png",
         "advanceUnits": 550
       },
       {
         "key": "L",
-        "unicode": "ឡ",
+        "unicode": "ល",
         "codepoints": [
-          "U+17A1"
+          "U+179B"
         ],
         "sourceImage": "traditional_23.png",
         "advanceUnits": 526
@@ -2629,9 +2582,9 @@
       },
       {
         "key": "O",
-        "unicode": "ឧ",
+        "unicode": "ង",
         "codepoints": [
-          "U+17A7"
+          "U+1784"
         ],
         "sourceImage": "traditional_33.png",
         "advanceUnits": 919
@@ -2683,9 +2636,9 @@
       },
       {
         "key": "W",
-        "unicode": "ឆ",
+        "unicode": "វ",
         "codepoints": [
-          "U+1786"
+          "U+179C"
         ],
         "sourceImage": "traditional_44.png",
         "advanceUnits": 767
@@ -2701,38 +2654,20 @@
       },
       {
         "key": "Z",
-        "unicode": "ជ",
+        "unicode": "ឝ",
         "codepoints": [
-          "U+1787"
+          "U+179D"
         ],
         "sourceImage": "traditional_19.png",
         "advanceUnits": 728
-      },
-      {
-        "key": "F",
-        "unicode": "ផ",
-        "codepoints": [
-          "U+1795"
-        ],
-        "sourceImage": "traditional_18.png",
-        "familyVariant": true
-      },
-      {
-        "key": "V",
-        "unicode": "វ",
-        "codepoints": [
-          "U+179C"
-        ],
-        "sourceImage": "traditional_18.png",
-        "familyVariant": true
       }
     ],
     "Modern": [
       {
         "key": "A",
-        "unicode": "ឯ",
+        "unicode": "អ",
         "codepoints": [
-          "U+17AF"
+          "U+17A2"
         ],
         "sourceImage": "modern_34.png",
         "advanceUnits": 720
@@ -2757,18 +2692,18 @@
       },
       {
         "key": "E",
-        "unicode": "ឥ",
+        "unicode": "ឆ",
         "codepoints": [
-          "U+17A5"
+          "U+1786"
         ],
         "sourceImage": "modern_36.png",
         "advanceUnits": 820
       },
       {
         "key": "G",
-        "unicode": "ខ",
+        "unicode": "គ",
         "codepoints": [
-          "U+1781"
+          "U+1782"
         ],
         "sourceImage": "modern_8.png",
         "advanceUnits": 919
@@ -2784,36 +2719,36 @@
       },
       {
         "key": "I",
-        "unicode": "ឰ",
+        "unicode": "ញ",
         "codepoints": [
-          "U+17B0"
+          "U+1789"
         ],
         "sourceImage": "modern_35.png",
         "advanceUnits": 749
       },
       {
         "key": "J",
-        "unicode": "ច",
+        "unicode": "ជ",
         "codepoints": [
-          "U+1785"
+          "U+1787"
         ],
         "sourceImage": "modern_9.png",
         "advanceUnits": 578
       },
       {
         "key": "K",
-        "unicode": "គ",
+        "unicode": "ក",
         "codepoints": [
-          "U+1782"
+          "U+1780"
         ],
         "sourceImage": "modern_24.png",
         "advanceUnits": 530
       },
       {
         "key": "L",
-        "unicode": "ឡ",
+        "unicode": "ល",
         "codepoints": [
-          "U+17A1"
+          "U+179B"
         ],
         "sourceImage": "modern_23.png",
         "advanceUnits": 580
@@ -2838,9 +2773,9 @@
       },
       {
         "key": "O",
-        "unicode": "ឧ",
+        "unicode": "ង",
         "codepoints": [
-          "U+17A7"
+          "U+1784"
         ],
         "sourceImage": "modern_33.png",
         "advanceUnits": 919
@@ -2882,19 +2817,10 @@
         "advanceUnits": 540
       },
       {
-        "key": "U",
-        "unicode": "ឩ",
-        "codepoints": [
-          "U+17A9"
-        ],
-        "sourceImage": "modern_37.png",
-        "advanceUnits": 726
-      },
-      {
         "key": "W",
-        "unicode": "ឆ",
+        "unicode": "វ",
         "codepoints": [
-          "U+1786"
+          "U+179C"
         ],
         "sourceImage": "modern_44.png",
         "advanceUnits": 920
@@ -2910,31 +2836,203 @@
       },
       {
         "key": "Z",
-        "unicode": "ជ",
+        "unicode": "ឝ",
         "codepoints": [
-          "U+1787"
+          "U+179D"
         ],
         "sourceImage": "modern_19.png",
         "advanceUnits": 790
-      },
-      {
-        "key": "F",
-        "unicode": "ផ",
-        "codepoints": [
-          "U+1795"
-        ],
-        "sourceImage": "modern_18.png",
-        "familyVariant": true
-      },
-      {
-        "key": "V",
-        "unicode": "វ",
-        "codepoints": [
-          "U+179C"
-        ],
-        "sourceImage": "modern_18.png",
-        "familyVariant": true
       }
     ]
+  },
+  "historicalAccentNote": "The 24 older accent artwork and font anchors remain preserved in Archaic, Classical and Traditional. The active cross-era keyboard uses the supplied Modern Unicode assignments for the 12 phonetic marks and four controls; older names are archival reference.",
+  "modernAssignments": {
+    "independent": {
+      "A": "អ",
+      "B": "ប",
+      "D": "ដ",
+      "E": "ឆ",
+      "G": "គ",
+      "H": "ហ",
+      "I": "ញ",
+      "J": "ជ",
+      "K": "ក",
+      "L": "ល",
+      "M": "ម",
+      "N": "ន",
+      "O": "ង",
+      "P": "ព",
+      "R": "រ",
+      "S": "ស",
+      "T": "ត",
+      "W": "វ",
+      "Y": "យ",
+      "Z": "ឝ"
+    },
+    "subscripts": {
+      "a": "្អ",
+      "b": "្ប",
+      "d": "្ដ",
+      "e": "្ឆ",
+      "g": "្គ",
+      "h": "្ហ",
+      "i": "្ញ",
+      "j": "្ជ",
+      "k": "្ក",
+      "l": "្ល",
+      "m": "្ម",
+      "n": "្ន",
+      "o": "្ង",
+      "p": "្ព",
+      "r": "្រ",
+      "s": "្ស",
+      "t": "្ត",
+      "w": "្វ",
+      "y": "្យ",
+      "z": "្ឝ"
+    },
+    "marks": [
+      {
+        "id": "held",
+        "name": "Held Consonant",
+        "unicode": "៌",
+        "codepoint": "U+17CC"
+      },
+      {
+        "id": "central",
+        "name": "Central Vowel",
+        "unicode": "ឹ",
+        "codepoint": "U+17B9"
+      },
+      {
+        "id": "open",
+        "name": "Open Vowel",
+        "unicode": "ា",
+        "codepoint": "U+17B6"
+      },
+      {
+        "id": "short",
+        "name": "Short Vowel",
+        "unicode": "់",
+        "codepoint": "U+17CB"
+      },
+      {
+        "id": "long",
+        "name": "Long Vowel",
+        "unicode": "ី",
+        "codepoint": "U+17B8"
+      },
+      {
+        "id": "unvoiced",
+        "name": "Unvoiced Sound",
+        "unicode": "៍",
+        "codepoint": "U+17CD"
+      },
+      {
+        "id": "voiced",
+        "name": "Voiced Sound",
+        "unicode": "័",
+        "codepoint": "U+17D0"
+      },
+      {
+        "id": "separate",
+        "name": "Separated Vowel",
+        "unicode": "ៈ",
+        "codepoint": "U+17C8"
+      },
+      {
+        "id": "nasal",
+        "name": "Nasalization",
+        "unicode": "ំ",
+        "codepoint": "U+17C6"
+      },
+      {
+        "id": "soft",
+        "name": "Soft Sound",
+        "unicode": "៉",
+        "codepoint": "U+17C9"
+      },
+      {
+        "id": "hard",
+        "name": "Hard Sound",
+        "unicode": "៊",
+        "codepoint": "U+17CA"
+      },
+      {
+        "id": "glide",
+        "name": "Glide Sound",
+        "unicode": "៎",
+        "codepoint": "U+17CE"
+      },
+      {
+        "id": "sUnder",
+        "name": "Click Sound",
+        "unicode": "ះ",
+        "codepoint": "U+17C7"
+      },
+      {
+        "id": "sOver",
+        "name": "Glottal Stop",
+        "unicode": "៏",
+        "codepoint": "U+17CF"
+      },
+      {
+        "id": "sLeft",
+        "name": "Special <",
+        "unicode": "ិ",
+        "codepoint": "U+17B7"
+      },
+      {
+        "id": "sRight",
+        "name": "Special >",
+        "unicode": "ូ",
+        "codepoint": "U+17BC"
+      }
+    ],
+    "numbers": {
+      "0": "០",
+      "1": "១",
+      "2": "២",
+      "3": "៣",
+      "4": "៤",
+      "5": "៥",
+      "6": "៦",
+      "7": "៧",
+      "8": "៨",
+      "9": "៩"
+    },
+    "punctuation": {
+      ",": "៖",
+      ".": "។",
+      "?": "៕",
+      "!": "៘",
+      "\"": "៙",
+      "(": "៚",
+      ")": "ៗ",
+      "&": "ៜ"
+    },
+    "coeng": "្",
+    "egyptianLetterOrigins": {
+      "A": "𓄣",
+      "B": "𓈌",
+      "D": "𓀃",
+      "E": "𓆣",
+      "G": "𓋑",
+      "H": "𓊓",
+      "I": "𓈚",
+      "J": "𓇢",
+      "K": "𓇰",
+      "L": "𓍋",
+      "M": "𓋝",
+      "N": "𓋜",
+      "O": "𓊲",
+      "P": "𓇲",
+      "R": "𓈊",
+      "S": "𓆇",
+      "T": "𓆠",
+      "W": "𓋧",
+      "Y": "𓈐",
+      "Z": "𓀁"
+    }
   }
 }

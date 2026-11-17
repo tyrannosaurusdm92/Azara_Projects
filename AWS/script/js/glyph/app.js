@@ -228,9 +228,9 @@
     $('ordinary-mark-count').textContent = project.marks.length; $('special-mark-count').textContent = project.specialMarks.length;
     const entries = markGroup === 'ordinary' ? project.marks.map(mark => ({ ...mark, special: false })) : project.specialMarks.map(mark => ({ ...mark, special: true }));
     const selectedBaseId = $('mark-base-select').value;
-    $('mark-grid').innerHTML = entries.map(mark => `<button type="button" class="mark-card${selectedMarks.includes(mark.id) ? ' selected' : ''}" data-mark-id="${html(mark.id)}" data-mark-special="${mark.special}"><span class="mark-char">${html(mark.character)}</span><strong>${html(mark.name)}</strong><small>${html(mark.ipa || mark.kind)} · ${html(mark.kind)}</small></button>`).join('');
+    $('mark-grid').innerHTML = entries.map(mark => `<button type="button" class="mark-card${selectedMarks.includes(mark.id) ? ' selected' : ''}" data-mark-id="${html(mark.id)}" data-mark-special="${mark.special}"><span class="mark-char">${currentEra().id==='modern'&&mark.artwork?`<img src="${html(mark.artwork)}" alt=""/>`:html(mark.character)}</span><strong>${html(mark.name)}</strong><small>${html(mark.ipa || mark.kind)} · ${html(mark.kind)}</small></button>`).join('');
     $('mark-grid').querySelectorAll('[data-mark-id]').forEach(button => button.addEventListener('click', () => toggleMark(button.dataset.markId, button.dataset.markSpecial === 'true')));
-    const bases = orderedGlyphs().filter(g => g.character); $('mark-base-select').innerHTML = `<option value="">Choose a base glyph</option>${bases.map(g => `<option value="${html(g.id)}">${html(g.character)} · ${html(g.name)}</option>`).join('')}`; $('mark-base-select').value = selectedBaseId;
+    const bases = orderedGlyphs().filter(g => g.character && (currentEra().id!=='modern'||g.key)); $('mark-base-select').innerHTML = `<option value="">Choose a base glyph</option>${bases.map(g => `<option value="${html(g.id)}">${html(g.character)} · ${html(g.name)}</option>`).join('')}`; $('mark-base-select').value = selectedBaseId;
     updateMarkPreview();
   }
   function toggleMark(id, isSpecial) {
@@ -472,7 +472,7 @@
   });
   async function initialize() {
     try {
-      const [template, eraData, aws] = await Promise.all(['assets/glyph/azaraan-character-set.json', 'assets/glyph/era-data.json', 'assets/glyph/aws-language-data.json'].map(path => fetch(path).then(response => { if (!response.ok) throw new Error(`Could not load ${path}`); return response.json(); })));
+      const [template, eraData, aws] = await Promise.all(['assets/glyph/azaraan-character-set.json', 'assets/glyph/era-data.json?v=modern-canon-20261116', 'assets/glyph/aws-language-data.json?v=modern-canon-20261116'].map(path => fetch(path).then(response => { if (!response.ok) throw new Error(`Could not load ${path}`); return response.json(); })));
       const stored = await StudioStorage.load();
       project = stored ? StudioModel.normalizeProject(stored) : StudioModel.createProject({ template, eraData, aws });
       const seeded = StudioModel.createProject({ template, eraData, aws });
@@ -481,23 +481,25 @@
         else Object.assign(project.eras[definition.id], { label: definition.label, backendEra: definition.backendEra, targetCount: definition.targetCount, description: definition.description });
       });
       project.eraOrder = eraData.eras.map(era => era.id); project.rules = Object.assign({}, eraData.rules, project.rules || {});
-      project.marks = project.marks.length ? project.marks : JSON.parse(JSON.stringify(aws.marks));
-      project.specialMarks = project.specialMarks.length ? project.specialMarks : JSON.parse(JSON.stringify(aws.specialMarks));
-      project.keyLabels = aws.keyLabels.slice();
-      ensureUnicodeVault();
       const modern = project.eras.modern;
       const defaultModern = seeded.eras.modern.glyphs;
-      if (!modern.glyphs.some(glyph => glyph.key)) {
-        const hasUserArtOrIdentity = modern.glyphs.some(glyph => glyph.character || glyph.artwork || glyph.meaning || glyph.notes);
-        if (!hasUserArtOrIdentity) modern.glyphs = JSON.parse(JSON.stringify(defaultModern));
-        else defaultModern.forEach(glyph => {
-          const existing = modern.glyphs.find(item => item.character === glyph.character || item.key === glyph.key);
-          if (existing) { existing.key = existing.key || glyph.key; existing.ipa = existing.ipa || glyph.ipa; existing.sound = existing.sound || glyph.sound; existing.transliteration = existing.transliteration || glyph.transliteration; existing.latinSubstitute = existing.latinSubstitute || glyph.latinSubstitute; }
-          else modern.glyphs.push(JSON.parse(JSON.stringify(glyph)));
+      if(project.modernCanonVersion!=='2026-11-16-source-package'){
+        // Migrate only Modern. Proto, Ancient, Pre-Classical, Classical and
+        // Traditional glyph objects, artwork and parent links are untouched.
+        const previous=new Map(modern.glyphs.map(g=>[g.id,g]));
+        modern.glyphs=defaultModern.map(g=>{
+          const old=previous.get(g.id);
+          return old ? {...g,meaning:old.meaning||g.meaning,notes:old.notes||g.notes,parents:old.parents||g.parents} : JSON.parse(JSON.stringify(g));
         });
-      } else {
-        defaultModern.filter(glyph => ['F', 'V'].includes(glyph.key)).forEach(glyph => { if (!modern.glyphs.some(item => item.key === glyph.key)) modern.glyphs.push(JSON.parse(JSON.stringify(glyph))); });
+        modern.targetCount=20;
+        project.marks=JSON.parse(JSON.stringify(aws.marks));
+        project.specialMarks=JSON.parse(JSON.stringify(aws.specialMarks));
+        project.rules.maxStackedMarks=2;
+        project.modernCanonVersion='2026-11-16-source-package';
       }
+      project.keyLabels=aws.keyLabels.slice();
+      project.keyboard=StudioModel.defaultKeyboard(aws.baseLetters);
+      ensureUnicodeVault();
 
       project.updatedAt = new Date().toISOString();
       await StudioStorage.save(project);

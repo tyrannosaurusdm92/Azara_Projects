@@ -5,6 +5,7 @@
   const keyboard = $('keyboard'), bubble = $('keyboardBubble'), rows = $('keyRows');
   const state = { open: false, mode: 'letters', page: 0, caps: false, shift: 0, panel: null, language: 'qwerty', era: 'Modern' };
   let frame = { x: 0, y: 0, width: 860, height: 410 }, bubblePosition = { x: 0, y: 0 };
+  let bubbleSize=150;try{bubbleSize=Number(localStorage.getItem('azaaraan-bubble-size'))||150}catch{}
   let gesture = null, press = null, lastShift = 0, bubbleClickSuppressed = false, ignoredClickPointer = null;
   const clamp = (value, min, max) => Math.max(min, Math.min(value, Math.max(min, max)));
   const letters = key => /^[a-z]$/i.test(key);
@@ -44,7 +45,7 @@
     keyboard.classList.toggle('very-short', frame.height < 240);
   }
   function drawBubble() {
-    const b = bounds(), size = Math.min(150, b.width, b.height);
+    const b = bounds(), size = bubbleSize=clamp(bubbleSize,Math.min(56,b.width,b.height),Math.min(240,b.width,b.height));
     bubblePosition.x = clamp(bubblePosition.x, b.x, b.x + b.width - size);
     bubblePosition.y = clamp(bubblePosition.y, b.y, b.y + b.height - size);
     Object.assign(bubble.style, { left: bubblePosition.x + 'px', top: bubblePosition.y + 'px', width: size + 'px', height: size + 'px' });
@@ -57,12 +58,12 @@
   function open() {
     if (state.open) return;
     const size = defaultSize();
-    frame = { ...size, x: bubblePosition.x + 75 - size.width / 2, y: bubblePosition.y + 75 - size.height / 2 };
+    frame = { ...size, x: bubblePosition.x + bubbleSize / 2 - size.width / 2, y: bubblePosition.y + bubbleSize / 2 - size.height / 2 };
     state.open = true; bubble.hidden = true; keyboard.hidden = false; drawFrame();
   }
   function collapse() {
     cancelPress(); gesture = null;
-    bubblePosition = { x: frame.x + frame.width - 150, y: frame.y + frame.height - 150 };
+    bubblePosition = { x: frame.x + frame.width - bubbleSize, y: frame.y + frame.height - bubbleSize };
     state.open = false; reset(); keyboard.hidden = true; bubble.hidden = false; drawBubble(); bubble.focus({ preventScroll: true });
   }
   const labels = { SHIFT: '⇧', BACK: '⌫', SPACE: 'English (US)', ENTER: '↵', SYMBOLS: '123', ABC: 'ABC' };
@@ -78,17 +79,29 @@
         let label = (azaLetters && raw === 'SPACE') ? 'Aza’raan' : (azaLetters && raw === 'AZA_GLOTTAL') ? 'ʔ' : (azaLetters && raw === 'AZA_CLICK') ? '¡' : (azaLetters && raw === 'AZA_PREV') ? '‹' : (azaLetters && raw === 'AZA_NEXT') ? '›' : (labels[raw] || effective(raw));
         if (raw === 'PAGE') label = `${state.page + 1}/2`;
         if (!azaLetters && state.mode === 'letters' && state.shift && letters(raw)) label = data.shiftMap[raw];
-        if (azaLetters && window.AzaaraanBridge.isLetter(raw)) { label = window.AzaaraanBridge.glyph(raw, state.era); button.classList.add('aza-key', 'aza-'+state.era.toLowerCase()); button.dataset.roman = raw; }
+        if (azaLetters && window.AzaaraanBridge.isLetter(raw)) { label = raw; button.classList.add('aza-key', 'aza-'+state.era.toLowerCase()); button.dataset.roman = raw; }
         button.append(make('span', 'key-label', label));
-        if (azaLetters && window.AzaaraanBridge.isLetter(raw)) button.append(make('span', 'key-symbol', raw));
+        if (azaLetters && window.AzaaraanBridge.isLetter(raw)) {
+          const art=window.AzaaraanBridge.art(raw,state.era);
+          if(art){const img=make('img','key-glyph-art');img.src=art;img.alt='';img.setAttribute('aria-hidden','true');button.append(img)}
+          else button.append(make('span', 'key-symbol', window.AzaaraanBridge.glyph(raw,state.era)));
+        }
+        if (state.language==='azaaraan' && state.mode==='symbols' && window.AzaaraanBridge.symbol(raw)) {
+          const value=window.AzaaraanBridge.symbol(raw);button.title=`${raw} → ${value}`;
+          if(state.era==='Modern'){
+            const names={',':'comma','.':'period','?':'question','!':'exclamation','"':'quotes','(':'open-parenthesis',')':'close-parenthesis','&':'ampersand'};
+            const folder=/^[0-9]$/.test(raw)?'numbers':'punctuation',file=folder==='numbers'?raw:names[raw];
+            if(file){const img=make('img','key-glyph-art');img.src=`assets/keyboard/modern/${folder}/${file}.png`;img.alt='';img.setAttribute('aria-hidden','true');button.append(img)}
+          }
+        }
         if (!azaLetters && state.mode === 'letters' && letters(raw) && !state.shift) {
           button.classList.add('has-hint'); button.append(make('span', 'key-symbol', data.shiftMap[raw]));
         }
         if (['SHIFT', 'BACK', 'ENTER', 'SYMBOLS', 'ABC', 'PAGE', 'AZA_GLOTTAL', 'AZA_CLICK', 'AZA_PREV', 'AZA_NEXT'].includes(raw)) button.classList.add('wide');
         if (raw === 'SPACE') button.classList.add('space');
         if (raw === 'SHIFT') { button.classList.toggle('active', !!state.shift); button.setAttribute('aria-pressed', String(!!state.shift)); if (state.shift === 2) button.querySelector('.key-label').textContent = '⇧•'; }
-        button.setAttribute('aria-label', azaLetters && window.AzaaraanBridge.isLetter(raw) ? `${raw}: ${label}, hold to choose Aza’raan sounds and accents` : aria[raw] || (raw.startsWith('AZA_') ? 'Aza’raan special sign' : `${label}${letters(raw) ? ', hold for accents' : ''}`));
-        button.title = azaLetters && window.AzaaraanBridge.isLetter(raw) ? `${raw} · hold for pronunciation and up to 3 accents` : (letters(raw) ? `${effective(raw)} · hold for accents` : aria[raw] || label);
+        button.setAttribute('aria-label', azaLetters && window.AzaaraanBridge.isLetter(raw) ? `${raw}, hold for diacritics and subscripts` : aria[raw] || (raw.startsWith('AZA_') ? 'Aza’raan special sign' : `${label}${letters(raw) ? ', hold for accents' : ''}`));
+        if(azaLetters && window.AzaaraanBridge.isLetter(raw))button.title=`${raw} · hold for diacritics and subscripts`;
         row.append(button);
       }
       if (row.children.length) rows.append(row);
@@ -96,7 +109,7 @@
     if (!rows.children.length) rows.append(make('div', 'key empty-message', 'No keys in this layout.'));
     keyboard.querySelector('[data-tool="case"]').hidden = state.language === 'azaaraan';
     keyboard.querySelector('[data-tool="case"]').setAttribute('aria-pressed', String(state.caps));
-    $('keyHint').textContent = state.language === 'azaaraan' ? 'Hold for Aza’raan sounds' : state.shift === 2 ? 'Symbols locked' : 'Hold for accents';
+    $('keyHint').textContent = state.language === 'azaaraan' ? 'Hold for marks and subscripts' : state.shift === 2 ? 'Symbols locked' : 'Hold for accents';
     $('footerMode').textContent = state.language === 'azaaraan' ? 'Aza’raan · '+state.era : 'QWERTY · English (US)';
     $('languageSelect').value=state.language;
     $('eraSelectWrap').hidden=state.language!=='azaaraan';
@@ -118,7 +131,7 @@
     if (raw === 'BACK') { notes.backspace(); return; }
     if (raw === 'SPACE') { notes.insert(' '); return; }
     if (raw === 'ENTER') { notes.insert('\n'); return; }
-    notes.insert(state.mode === 'letters' && state.shift && letters(raw) ? data.shiftMap[raw] : effective(raw));
+    notes.insert(state.language==='azaaraan' && state.mode==='symbols' ? (window.AzaaraanBridge.symbol(raw)||raw) : state.mode === 'letters' && state.shift && letters(raw) ? data.shiftMap[raw] : effective(raw));
     if (state.shift === 1) { state.shift = 0; render(); }
   }
   function cancelPress() {
@@ -231,61 +244,78 @@
       scroller.append(grid); builder.append(toolbar, scroller); $('panelContent').append(builder);
     }
   }
-  function showAza(base, view='sounds', selectedMarks=[]) {
-    if (!window.AzaaraanBridge.isLetter(base)) return;
-    state.panel = { type:'azaaraan', base, view };
+  function showAza(base, view='sounds', saved=null) {
     const bridge=window.AzaaraanBridge, era=state.era;
-    panel(`Aza’raan · ${base} · ${era}`,view==='sounds'?'Choose a pronunciation':'Maximum 3 marks');
-    tab('Pronunciation choices',view==='sounds',()=>showAza(base,'sounds'));
-    tab('Build 24 accents',view==='marks',()=>showAza(base,'marks',selectedMarks));
+    if(!bridge.isLetter(base))return;
+    const draft=saved||{marks:[],specials:[],subs:[],target:'base'};
+    state.panel={type:'azaaraan',base,view};
+    panel(`Aza’raan · ${base} · ${era}`,'Two marks per letter or subscript · two subscripts');
+    tab('Readings',view==='sounds',()=>showAza(base,'sounds',draft));
+    tab('Marks + subscripts',view==='compose',()=>showAza(base,'compose',draft));
     if(view==='sounds'){
-      const list=bridge.soundOptions(base,era),grid=make('div','choices-grid aza-choices');
+      const grid=make('div','choices-grid aza-choices');
       const simple=bridge.encode(base,[],era);
-      grid.append(choice({value:simple,label:bridge.glyph(base,era)+' · Base '+base},()=>{notes.insert(simple);closePanel();}));
-      for(const option of list){
-        const glyph=bridge.encode(option.base,option.marks,era);
+      grid.append(choice({value:simple,label:'Base '+base},()=>{notes.insert(simple);closePanel();}));
+      for(const option of bridge.soundOptions(base,era)){
+        const result=bridge.tryEncode(option.base,option.marks,era);
+        if(result.error)continue;
         const button=make('button','choice aza-choice');button.type='button';
-        const g=make('span','aza-choice-glyph aza-'+era.toLowerCase(),glyph);
-        const name=make('span','aza-choice-name',option.label+' · /'+option.ipa+'/');
-        button.append(g,name);
-        button.addEventListener('click',()=>{notes.insert(glyph);closePanel();});
-        grid.append(button);
+        const visual=make('span','aza-choice-glyph aza-'+era.toLowerCase());
+        visual.append(bridge.preview(base,option.marks,era)||document.createTextNode(result.value));
+        button.append(visual,make('span','aza-choice-name',option.label+' · '+option.ipa));
+        button.onclick=()=>{notes.insert(result.value);closePanel()};grid.append(button);
       }
-      const info=make('p','emoji-help','The displayed letter is drawn with the selected era font. Inserted characters use the source Khmer Unicode encoding; historically shared glyphs can have multiple sound names.');
-      $('panelContent').append(info,grid);
-    } else {
-      const selections=[...selectedMarks];
-      const builder=make('div','builder aza-builder');
-      const preview=make('output','builder-preview aza-glyph-preview aza-'+era.toLowerCase());
-      const description=make('p','emoji-help','Select up to three different marks (including specials), with at most one vowel. Earlier eras restrict special signs.');
-      const action=make('div','builder-top');
-      const undo=make('button','','⌫ Undo'),clear=make('button','','Clear'),insert=make('button','insert-accent','Insert glyph');
-      const msg=make('small','aza-mark-warning');
-      const grid=make('div','choices-grid aza-mark-grid');
-      function update(){
-        const checked=bridge.tryEncode(base,selections,era); preview.textContent=checked.value||'—';
-        msg.textContent=checked.error||selections.map(id=>bridge.markName(id)).join(' + ')||'Base letter';
-        insert.disabled=!!checked.error;
-        for(const b of grid.querySelectorAll('[data-mark]'))b.setAttribute('aria-pressed',String(selections.includes(b.dataset.mark)));
-      }
-      undo.onclick=()=>{selections.pop();update()};clear.onclick=()=>{selections.length=0;update()};
-      insert.onclick=()=>{const composed=bridge.tryEncode(base,selections,era);if(composed.error){notes.toast(composed.error);return;}notes.insert(composed.value);closePanel();};
-      action.append(preview,undo,clear,insert);
-      const marks=bridge.availableMarks(era);
-      for(const mark of marks){
-        const button=make('button','choice aza-mark-option');button.type='button';button.dataset.mark=mark.id;
-        const marker=make('span','aza-mark-symbol',mark.display);
-        const name=make('span','aza-mark-text',mark.name+' · '+(mark.ipa||mark.meaning||''));
-        button.append(marker,name);
-        button.title=mark.meaning||mark.name;
-        button.onclick=()=>{
-          const n=selections.indexOf(mark.id);if(n>=0)selections.splice(n,1);else selections.push(mark.id);
-          update();
-        };grid.append(button);
-      }
-      if (era==='Modern'&&window.AWSExtraAccents?.length){for(const extra of window.AWSExtraAccents){const b=make('button','choice',extra.value);b.type='button';b.title=extra.name+' · '+(extra.ipa||'');b.onclick=()=>{notes.insert(extra.value);closePanel()};grid.append(b);}}
-      builder.append(action,msg,description,grid);$('panelContent').append(builder);update();
+      $('panelContent').append(make('p','emoji-help','Tap a reading to insert it, or build a letter with diacritics and up to two subscripts.'),grid);
+      return;
     }
+    const builder=make('div','builder aza-builder');
+    const preview=make('output','builder-preview aza-glyph-preview aza-'+era.toLowerCase());
+    const status=make('small','aza-mark-warning');
+    const actions=make('div','builder-top');
+    const undo=make('button','','Undo'),clear=make('button','','Clear'),insert=make('button','insert-accent','Insert glyph');
+    const target=make('select','aza-target');target.setAttribute('aria-label','Attach marks to');
+    const targets=make('div','aza-target-row');targets.append(make('label','','Attach to '),target);
+    const subtitle=make('p','emoji-help','Tap a Latin subscript to add or remove it. Choose a target, then tap its diacritics. Click and glottal sit above the main letter; emphasis belongs to the main letter.');
+    const subGrid=make('div','choices-grid aza-sub-grid');
+    const markGrid=make('div','choices-grid aza-mark-grid');
+    function currentMarks(){return draft.target==='base'?draft.marks:draft.subs[Number(draft.target.slice(3))]?.marks}
+    function draw(){
+      const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials);
+      preview.replaceChildren(result.value?(bridge.preview(base,draft.marks,era,draft.subs,draft.specials)||document.createTextNode(result.value)):document.createTextNode('—'));
+      status.textContent=result.error||`${result.value} · ${draft.marks.length}/2 main marks · ${draft.subs.length}/2 subscripts`;
+      insert.disabled=!!result.error;
+      target.replaceChildren();
+      for(const [value,label] of [['base','Independent '+base],...draft.subs.map((s,i)=>['sub'+i,'Subscript '+(i+1)+' · '+s.key])]){
+        const option=make('option','',label);option.value=value;target.append(option);
+      }
+      if(![...target.options].some(o=>o.value===draft.target))draft.target='base';target.value=draft.target;
+      for(const button of markGrid.querySelectorAll('[data-mark]'))button.setAttribute('aria-pressed',String((button.dataset.special?draft.specials:currentMarks()||[]).includes(button.dataset.mark)));
+      for(const button of subGrid.querySelectorAll('[data-sub]'))button.setAttribute('aria-pressed',String(draft.subs.some(s=>s.key===button.dataset.sub)));
+    }
+    target.onchange=()=>{draft.target=target.value;draw()};
+    undo.onclick=()=>{if(draft.target==='base'){if(draft.specials.length)draft.specials.pop();else draft.marks.pop()}else currentMarks()?.pop();draw()};
+    clear.onclick=()=>{draft.marks=[];draft.specials=[];draft.subs=[];draft.target='base';draw()};
+    insert.onclick=()=>{const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials);if(result.error)return notes.toast(result.error);notes.insert(result.value);closePanel()};
+    actions.append(preview,undo,clear,insert);
+    for(const key of bridge.availableSubscripts(era)){
+      const button=make('button','choice aza-sub-option',key);button.type='button';button.dataset.sub=key;
+      button.title='Subscript '+key+' · '+(window.AZ_CANON.subs[key]||window.AZ_CANON.coeng+window.AZA_HISTORICAL_U);
+      button.onclick=()=>{const i=draft.subs.findIndex(s=>s.key===key);if(i>=0){draft.subs.splice(i,1);draft.target='base'}else if(draft.subs.length<2){draft.subs.push({key,marks:[]});draft.target='sub'+(draft.subs.length-1)}else return notes.toast('Maximum two subscripts.');draw()};subGrid.append(button);
+    }
+    for(const mark of bridge.availableMarks(era)){
+      const button=make('button','choice aza-mark-option');button.type='button';button.dataset.mark=mark.id;
+      if(mark.special)button.dataset.special='true';
+      button.append(make('span','aza-mark-symbol',mark.display),make('span','aza-mark-text',mark.name+' · '+mark.codepoint));
+      button.title=mark.name+' · '+mark.codepoint;
+      button.onclick=()=>{
+        if(mark.special&&draft.target!=='base')return notes.toast('Special controls attach to the independent letter.');
+        if(mark.id==='separate'&&draft.target!=='base')return notes.toast('Separated Vowel attaches to the independent letter.');
+        const list=mark.special?draft.specials:currentMarks();if(!list)return;
+        const i=list.indexOf(mark.id);if(i>=0)list.splice(i,1);else if(list.length<(mark.special?4:2))list.push(mark.id);else return notes.toast(mark.special?'Maximum four special controls.':'Maximum two phonetic marks on this target.');draw();
+      };markGrid.append(button);
+    }
+    builder.append(actions,status,subtitle,targets,make('h4','','Subscripts'),subGrid,make('h4','','Diacritics and controls'),markGrid);
+    $('panelContent').append(builder);draw();
   }
 
   function showEmoji(category = Object.keys(data.emoji)[0], initialQuery = '') {
@@ -353,20 +383,22 @@
     if (direction.includes('s')) bottom = clamp(origin.y + origin.height + dy, top + minH, b.y + b.height);
     frame = { x: left, y: top, width: right - left, height: bottom - top }; drawFrame();
   }
+  function resizeBubble(size){bubbleSize=clamp(size,56,Math.min(240,bounds().width,bounds().height));drawBubble();try{localStorage.setItem('azaaraan-bubble-size',String(bubbleSize))}catch{}}
   document.addEventListener('pointermove', event => {
     if (!gesture || gesture.id !== event.pointerId) return;
     event.preventDefault();
     const dx = event.clientX - gesture.x, dy = event.clientY - gesture.y;
     if (Math.hypot(dx, dy) > 5) gesture.moved = true;
     if (gesture.type === 'bubble') { bubblePosition = { x: gesture.bubble.x + dx, y: gesture.bubble.y + dy }; drawBubble(); }
+    if (gesture.type === 'bubble-resize') resizeBubble(gesture.size+Math.max(dx,dy));
     if (gesture.type === 'move') { frame.x = gesture.frame.x + dx; frame.y = gesture.frame.y + dy; drawFrame(); }
     if (gesture.type === 'resize') resizeFrom(gesture.frame, gesture.direction, dx, dy);
   }, { passive: false });
   function endGesture(event) {
     if (!gesture || gesture.id !== event.pointerId) return;
     const previous = gesture; gesture = null; previous.node.classList.remove('is-dragging');
-    if (previous.type === 'bubble') {
-      bubbleClickSuppressed = previous.moved || event.type !== 'pointerup';
+    if (previous.type === 'bubble'||previous.type === 'bubble-resize') {
+      bubbleClickSuppressed = previous.type === 'bubble-resize' || previous.moved || event.type !== 'pointerup';
       // Expand on click, after the browser has fixed its event target. Expanding
       // on pointerup can retarget a phone's follow-up click to a key underneath.
       if (bubbleClickSuppressed) setTimeout(() => { bubbleClickSuppressed = false; }, 450);
@@ -375,8 +407,11 @@
   document.addEventListener('pointerup', endGesture);
   document.addEventListener('pointercancel', endGesture);
   bubble.addEventListener('pointerdown', event => startGesture(event, 'bubble'));
+  const bubbleHandle=make('span','bubble-resize-handle','⤡');bubbleHandle.setAttribute('aria-hidden','true');bubble.append(bubbleHandle);
+  bubbleHandle.addEventListener('pointerdown',event=>{event.stopPropagation();startGesture(event,'bubble-resize');if(gesture)gesture.size=bubbleSize});
   bubble.addEventListener('contextmenu', event => event.preventDefault());
   bubble.addEventListener('click', () => { if (!bubbleClickSuppressed) open(); });
+  bubble.addEventListener('wheel',event=>{if(!event.altKey)return;event.preventDefault();resizeBubble(bubbleSize+(event.deltaY<0?10:-10))},{passive:false});
   $('dragBar').addEventListener('pointerdown', event => startGesture(event, 'move'));
   keyboard.querySelectorAll('[data-resize]').forEach(handle => {
     handle.addEventListener('pointerdown', event => startGesture(event, 'resize', handle.dataset.resize));
@@ -391,7 +426,7 @@
     const dy = event.key === 'ArrowUp' ? -delta : event.key === 'ArrowDown' ? delta : 0;
     if (!dx && !dy) return;
     event.preventDefault();
-    if (node === bubble) { bubblePosition.x += dx; bubblePosition.y += dy; drawBubble(); }
+    if (node === bubble) {if(event.altKey)resizeBubble(bubbleSize+(dx||dy));else{bubblePosition.x += dx; bubblePosition.y += dy; drawBubble();}}
     else { frame.x += dx; frame.y += dy; drawFrame(); }
   });
   function viewportChanged() { if (state.open) drawFrame(); else drawBubble(); }
