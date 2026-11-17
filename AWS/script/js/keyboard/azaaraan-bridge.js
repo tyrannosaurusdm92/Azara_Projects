@@ -15,6 +15,12 @@
  function loadChoice(){try{const saved=JSON.parse(localStorage.getItem(preferenceKey)||'{}');return {language:saved.language==='azaaraan'?'azaaraan':'qwerty',era:['Archaic','Classical','Traditional','Modern'].includes(saved.era)?saved.era:'Modern'}}catch{return {language:'qwerty',era:'Modern'}}}
  function saveChoice(language,era){try{localStorage.setItem(preferenceKey,JSON.stringify({language,era}))}catch{}}
  function draft(base,options={}){return {type:'letter',base,marks:options.marks||[],markOrder:options.marks||[],subs:options.subs||[],specials:options.specials||[]}}
+ function hasVowelNucleus(host,ids){
+  if(host==='U')return true; // Pre-merger independent U has its own vowel.
+  return (window.AZ_MODERN_SOUNDS?.entries||[]).some(r=>
+   r.host===host&&Array.isArray(r.marks)&&r.marks.length===ids.length&&
+   r.marks.every((m,i)=>m===ids[i])&&/[aæɑɐɒɔɛɪiouʌəe]/u.test(r.ipa||''));
+ }
  function tryEncode(base,markIds=[],era='Modern',subs=[],specialIds=[]){
   if(!isLetter(base)||(era==='Modern'&&!independent.has(base)))return {value:null,error:'This is not an independent letter in '+era+'.'};
   const allowed=new Set(availableMarks(era).map(x=>x.id));
@@ -24,7 +30,7 @@
   const mainMarks=[...aliasMarks,...markIds];
   const used=[...mainMarks,...specialIds,...subs.flatMap(s=>s.marks||[])];
   if(used.some(id=>!allowed.has(id)))return {value:null,error:'This mark is unavailable in '+era+'.'};
-  if(mainMarks.length>2||subs.length>2||subs.some(s=>(s.marks||[]).length>2))return {value:null,error:'Two phonetic marks per letter or subscript; two subscripts per host.'};
+  if(mainMarks.length>2||subs.length>2||specialIds.length>4||subs.some(s=>(s.marks||[]).length>2))return {value:null,error:'Two phonetic marks per letter or subscript; two subscripts per host; four special controls.'};
   if(subs.some(s=>!canon.subs[s.key]&&!(era!=='Modern'&&s.key==='u')))return {value:null,error:'Unknown subscript.'};
   if(specialIds.some(id=>!byId.get(id)?.special))return {value:null,error:'Special controls attach to the main letter only.'};
   const token=draft(aliasMarks.length?'B':base,{marks:mainMarks,subs,specials:specialIds});
@@ -38,6 +44,12 @@
   if(mainMarks.includes('voiced')&&mainMarks.includes('unvoiced'))return {value:null,error:'Voiced and Unvoiced cannot modify the same letter.'};
   if(subs.some(s=>(s.marks||[]).includes('voiced')&&(s.marks||[]).includes('unvoiced')))return {value:null,error:'Voiced and Unvoiced cannot modify the same subscript.'};
   if(subs.some(s=>(s.marks||[]).includes('separate')))return {value:null,error:'Separated Vowel attaches only to the independent letter.'};
+  if(mainMarks.includes('separate')){
+   const hostMarks=mainMarks.filter(id=>id!=='separate');
+   if(!hasVowelNucleus(token.base,hostMarks))return {value:null,error:'Separated Vowel requires a vowel-bearing independent host.'};
+   if(!subs.some(sub=>hasVowelNucleus(sub.key.toUpperCase(),sub.marks||[])))
+     return {value:null,error:'Separated Vowel requires a true vowel-bearing subscript, not an invented subscript.'};
+  }
   const ch=canon.ind[token.base]||window.AZA_HISTORICAL_U||'ឩ',early=new Set(['soft','hard','held']);
   const enc=ids=>ids.map(id=>byId.get(id).unicode).join('');
   return {value:ch+enc(mainMarks.filter(id=>early.has(id)))+subs.map(s=>canon.coeng+(canon.ind[s.key.toUpperCase()]||window.AZA_HISTORICAL_U)+enc(s.marks||[])).join('')+enc(mainMarks.filter(id=>!early.has(id)))+enc(specialIds),token};
