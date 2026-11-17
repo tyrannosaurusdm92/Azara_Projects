@@ -10,7 +10,6 @@ const detail=document.getElementById('detail');
 const NS='http://www.w3.org/2000/svg';
 const modernSpec=window.AZA_CONFIG?.modernOrthography;
 const modernGlyph=(letter)=>modernSpec?.independentUnicode?.[letter]||((window.AZA_LETTERS||{})[letter]||letter);
-const textMark=(value,kind)=>{const el=document.createElement('span');el.className=kind;el.textContent=value;el.style.fontFamily='AzModern';return el;};
 const roots=new Map(D.roots.map(r=>[r.slot,r]));
 const families=new Map(D.families.map(f=>[f.family,f]));
 const mergeBySlot=new Map(D.mergers.map(m=>[m.slot,m]));
@@ -46,8 +45,7 @@ function drawLineageChips(slot){
  D.stages.forEach((stage,i)=>{
   const owner=resolveOwner(slot,i), r=owner===null?null:roots.get(owner), node=r&&r.stages[stage.key];
   const chip=document.createElement('span');chip.className='lineage-chip';chip.style.color=r?colorFor(r):'#aeb7c7';
-  if(stage.key==='modern'&&node?.text){chip.appendChild(textMark(node.text,'mini-text'));}
-   else if(node&&node.src){const m=document.createElement('img');m.className='mini-mark';setMask(m,node.src);chip.appendChild(m)}
+  if(node&&node.src){const m=document.createElement('img');m.className='mini-mark';setMask(m,node.src);chip.appendChild(m)}
   else if(node&&node.text){const t=document.createElement('span');t.className='mini-text';t.textContent=node.text;chip.appendChild(t)}
   else{const t=document.createElement('span');t.className='mini-text';t.textContent='—';chip.appendChild(t)}
   const label=document.createElement('small');label.textContent=owner!==null&&owner!==slot?'→ '+stage.label+' · root '+String(owner).padStart(2,'0'):stage.label;chip.appendChild(label);wrap.appendChild(chip);
@@ -84,9 +82,9 @@ function renderFamily(familyKey){
  const t=document.createElement('div');t.className='detail-title';t.textContent=fam.letter+' · '+fam.sound;
  detail.appendChild(t);detail.appendChild(drawLineageChips(fam.rootSlot));
  const note=document.createElement('div');note.className='detail-note';
- const readings=(fam.readings||[]).map(x=>x.name+' '+x.unicode+(x.ipa?' '+x.ipa:'')).join(' · ');
+ const readings=(fam.readings||[]).map(x=>x.name+(x.ipa?' '+x.ipa:'')).join(' · ');
  const origins=members.map(r=>r.origin+' ('+r.sound+')').join(' · ');
- note.textContent='Historical source roots: '+origins+'. Modern readings: '+readings+'. Current Khmer encoding uses '+modernGlyph(fam.family)+' plus the revised 12 diacritics in the typing tab.';
+ note.textContent='Historical source roots: '+origins+'. Modern readings: '+readings+'. The original Aza’raan script artwork is shown in the chart; the keyboard stores its phonetic Unicode encoding separately.';
  detail.appendChild(note);detail.appendChild(copyButton(modernGlyph(fam.family),'Copy Aza’raan '+fam.letter));
  highlight(new Set([familyKey]),null);
 }
@@ -120,7 +118,7 @@ function renderTable(){
   const members=D.roots.filter(r=>r.family===fam.family);
   const tr=document.createElement('tr');
   const modern=document.createElement('td');modern.className='symbol-cell table-letter';modern.textContent=fam.letter;
-  const variants=document.createElement('small');variants.textContent=fam.modernRetired?'Historical U; Modern /ʌ/→A, /uː/→O':'Khmer: '+modernGlyph(fam.family)+' · 12 contemporary diacritics';modern.appendChild(variants);
+  const variants=document.createElement('small');variants.textContent=fam.modernRetired?'Historical U; Modern /ʌ/ → A, /uː/ → O':'20-letter Modern alphabet · 12 diacritics';modern.appendChild(variants);
   tr.appendChild(modern);
   const source=document.createElement('td');const rootsBox=document.createElement('div');rootsBox.className='source-roots';
   members.forEach(r=>{const node=r.stages.proto;const b=mark(node.src,'table-glyph',r.slot,'proto',rootDesc(D.stages[0],r,node));rootsBox.appendChild(b)});
@@ -137,8 +135,7 @@ function renderTable(){
   const root=roots.get(sign.rootSlot);if(!root)continue;
   const tr=document.createElement('tr');tr.className='special-row';
   const tdSign=document.createElement('td');tdSign.className='symbol-cell';
-  if(sign.modernFontGlyph&&sign.khmer){const wrap=document.createElement('div');wrap.className='table-glyphs';const markGlyph=textMark(sign.khmer,'textmark');markGlyph.style.fontSize='27px';wrap.appendChild(markGlyph);tdSign.appendChild(wrap)}
-  else if(sign.src){const wrap=document.createElement('div');wrap.className='table-glyphs';wrap.appendChild(mark(sign.src,'table-glyph',sign.rootSlot,'modern',sign.name+' · '+sign.meaning));tdSign.appendChild(wrap)}
+  if(sign.src){const wrap=document.createElement('div');wrap.className='table-glyphs';wrap.appendChild(mark(sign.src,'table-glyph',sign.rootSlot,'modern',sign.name+' · '+sign.meaning));tdSign.appendChild(wrap)}
   else{tdSign.textContent=sign.sign}
   tr.appendChild(tdSign);
   const tdSource=document.createElement('td');tdSource.textContent='Special sign · '+sign.name+' · '+sign.meaning+' · '+sign.origin;tr.appendChild(tdSource);
@@ -149,7 +146,7 @@ function renderTable(){
   tr.addEventListener('click',()=>{
    detail.replaceChildren();
    const name=document.createElement('div');name.className='detail-title';name.textContent=sign.name+' · '+sign.sign;
-   const explanation=document.createElement('div');explanation.className='detail-note';explanation.textContent=sign.meaning+' · Historical ancestor '+sign.origin+'; current storage uses Khmer '+sign.codepoint+'.';
+   const explanation=document.createElement('div');explanation.className='detail-note';explanation.textContent=sign.meaning+' · Historical ancestor '+sign.origin+'; encoding metadata is kept separately from the native artwork.';
    detail.append(name,drawLineageChips(sign.rootSlot),explanation,copyButton(sign.khmer,'Copy Khmer '+sign.name));
    highlight(new Set([familyFor(root)]),['modern',sign.rootSlot]);pick.value='';
    document.getElementById('panel-evolution').scrollIntoView({behavior:'smooth'});
@@ -169,8 +166,7 @@ D.stages.forEach((stage,stageNo)=>{
   b.dataset.family=familyFor(root);b.dataset.stage=stage.key;b.dataset.slot=String(root.slot);
   const d=rootDesc(stage,root,node);
   b.setAttribute('aria-label',d);b.title=d+' — click to inspect';
-  if(stage.key==='modern'&&node.text){b.appendChild(textMark(node.text,'textmark'));}
-   else if(node.src){const m=document.createElement('img');m.className='mark';setMask(m,node.src);b.appendChild(m)}
+  if(node.src){const m=document.createElement('img');m.className='mark';setMask(m,node.src);b.appendChild(m)}
   else if(node.text){const m=document.createElement('span');m.className='textmark';m.textContent=node.text;b.appendChild(m)}
   b.addEventListener('click',()=>selectGlyph(stage.key,root.slot));chart.appendChild(b);
  });
