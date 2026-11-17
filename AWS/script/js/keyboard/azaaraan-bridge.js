@@ -56,10 +56,40 @@
   if(specials[raw]){if(era==='Archaic'&&['AZA_PREV','AZA_NEXT'].includes(raw))return true;notes.insert(byId.get(specials[raw]).unicode);return true}
   return false;
  }
+
+ // Aza’raan is a distinct input mode. Khmer scalars here are internal glyph slots,
+ // not a request for the browser to print the ordinary Khmer alphabet.
+ const mergedPhysical={F:['B',['soft','unvoiced']],V:['B',['soft']],U:['A',['central']],Q:['K',['glide']],X:['K',['hard','unvoiced']]};
+ const specialPhysical={"'":'sOver','’':'sOver','¡':'sUnder','<':'sLeft','>':'sRight'};
+ function physicalValue(key,era='Modern'){
+  if(typeof key!=='string'||!key)return null;
+  if(key===' ')return {value:' '};
+  if(key==='\n')return {value:'\n'};
+  if(Object.prototype.hasOwnProperty.call(specialPhysical,key)){
+   const id=specialPhysical[key];
+   if(era==='Archaic'&&(id==='sLeft'||id==='sRight'))
+    return {error:'Syllable emphasis is unavailable in Archaic.'};
+   return {value:byId.get(id).unicode};
+  }
+  if(Object.prototype.hasOwnProperty.call(canon.nums,key)||Object.prototype.hasOwnProperty.call(canon.punct,key))
+   return {value:symbol(key)};
+  if(/^[a-z]$/i.test(key)){
+   const latin=key.toUpperCase();
+   if(era==='Modern'&&mergedPhysical[latin]){
+    const [base,ids]=mergedPhysical[latin];
+    return tryEncode(base,ids,era);
+   }
+   if(isLetter(latin))return tryEncode(latin,[],era);
+   return {error:'No independent '+latin+' in '+era+'. Use an available letter or its hold-menu sound.'};
+  }
+  if(key.length===1&&/^[\x20-\x7e]$/.test(key))
+   return {error:'This punctuation mark is not assigned in the Aza’raan encoding.'};
+  return null;
+ }
  function textToRead(){return window.Notes.getSelectedText()?.trim()||window.Notes.getText()?.trim()||''}
  function updateSelectionPreview(){const input=textToRead(),field=$('speechText');if(field)field.value=input;const engine=window.AzaaraanTTS;if(!engine)return;const result=engine.previewText(input);$('speechIpa').textContent=result.ipa;$('speechPreview').textContent=result.speech||'No pronunciation available';$('speechWarning').textContent=(result.warnings||[]).join(' · ')}
  async function speakSelection(){const value=textToRead();if(!value)return window.Notes.toast('Choose text to pronounce.');updateSelectionPreview();return window.AzaaraanTTS?.readText(value)}
  function openSettings(){updateSelectionPreview();$('voiceSettings').showModal()}
  function showPage(which){if(which==='evolution')window.LiteraryFriendApp?.goToRole('language-evolution')}
- window.AzaaraanBridge={rows,rowsForEra,isLetter,handle,encode,tryEncode,glyph,preview,art,symbol,soundOptions,availableMarks,availableSubscripts,markName,loadChoice,saveChoice,speakSelection,openSettings,textToRead,showPage};
+ window.AzaaraanBridge={rows,rowsForEra,isLetter,handle,physicalValue,encode,tryEncode,glyph,preview,art,symbol,soundOptions,availableMarks,availableSubscripts,markName,loadChoice,saveChoice,speakSelection,openSettings,textToRead,showPage};
 })();
