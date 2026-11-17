@@ -27,17 +27,27 @@ function rememberRange(){const el=current();if(!el?.isContentEditable)return;con
 document.addEventListener('focusin',e=>{if(isEditable(e.target)){target=e.target;savedRange=null;applyWritingMode(e.target);rememberRange();}},true);
 document.addEventListener('selectionchange',()=>{const sel=getSelection();if(sel?.rangeCount){const a=sel.anchorNode;const ed=a?.parentElement?.closest('[contenteditable=true]');if(ed&&isEditable(ed)){target=ed;savedRange=sel.getRangeAt(0).cloneRange();}}});
 function focus(){const e=current();if(!e)return; e.focus({preventScroll:true});if(e.isContentEditable&&savedRange){const s=getSelection();s.removeAllRanges();try{s.addRange(savedRange)}catch{}}}
-function insert(text){const el=current();if(!el)return toast('Select a writing page or notes field first.');text=String(text);
+function makeAzaRun(text,token){
+ const run=document.createElement('span');run.className='aza-script-run era-'+writingMode.era.toLowerCase();run.dataset.azaEra=writingMode.era;run.contentEditable='false';run.lang='und';
+ if(writingMode.era==='Modern'&&token&&window.AZ_MK?.createCluster){
+  try{
+   const hidden=document.createElement('span');hidden.className='aza-logical-data';hidden.textContent=text;
+   const visual=window.AZ_MK.createCluster(token);visual.classList.add('aza-inline-composed');visual.setAttribute('aria-hidden','true');
+   run.classList.add('aza-native-composite');run.append(hidden,visual);return run;
+  }catch(err){console.warn('Using canonical Aza’raan font instead of artwork compositor',err);}
+ }
+ run.textContent=text;return run;
+}
+function insert(text,token=null){const el=current();if(!el)return toast('Select a writing page or notes field first.');text=String(text);
  if(writingMode.language==='azaaraan'&&isAzaEncoded(text)){
   el.dataset.azaContent='yes';el.dataset.azaContentEra=writingMode.era;applyWritingMode(el);
  }
  if(el.isContentEditable){focus();let ok=false;
   const az=(writingMode.language==='azaaraan'&&isAzaEncoded(text));
-  if(az){const html='<span class="aza-script-run era-'+writingMode.era.toLowerCase()+'" data-aza-era="'+writingMode.era+'" contenteditable="false" lang="und">'+escapeText(text)+'</span>';
-    try{ok=document.execCommand('insertHTML',false,html)}catch{}
+  if(az){try{ok=document.execCommand('insertHTML',false,makeAzaRun(text,token).outerHTML)}catch{}
   }else try{ok=document.execCommand('insertText',false,text)}catch{}
   if(!ok){const sel=getSelection(),r=sel.rangeCount?sel.getRangeAt(0):document.createRange();if(!el.contains(r.commonAncestorContainer)){r.selectNodeContents(el);r.collapse(false)}r.deleteContents();let n;
-    if(az){n=document.createElement('span');n.className='aza-script-run era-'+writingMode.era.toLowerCase();n.dataset.azaEra=writingMode.era;n.contentEditable='false';n.lang='und';n.textContent=text;}
+    if(az)n=makeAzaRun(text,token);
     else n=document.createTextNode(text);
     r.insertNode(n);r.setStartAfter(n);r.collapse(true);sel.removeAllRanges();sel.addRange(r);el.dispatchEvent(new Event('input',{bubbles:true}));}rememberRange();
  }else{const start=el.selectionStart??el.value.length,end=el.selectionEnd??start;if(el.id==='document-title')text=text.replace(/[\r\n]/g,' ');el.setRangeText(text,start,end,'end');el.dispatchEvent(new Event('input',{bubbles:true}));focus();}
