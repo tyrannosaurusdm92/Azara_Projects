@@ -113,11 +113,11 @@
 /* Scoped Aza’raan text runs and hardware-keyboard output: Unicode codepoints are
    internal encoding slots. Never let the host's Khmer font draw these runs. */
 :where(input,textarea,[contenteditable="true"]).aza-writing.era-archaic,
-.aza-script-run.era-archaic{font-family:AzArchaic,serif!important}
+.aza-script-run.era-archaic{font-family:AzArchaic,AzModern,serif!important}
 :where(input,textarea,[contenteditable="true"]).aza-writing.era-classical,
-.aza-script-run.era-classical{font-family:AzClassical,serif!important}
+.aza-script-run.era-classical{font-family:AzClassical,AzModern,serif!important}
 :where(input,textarea,[contenteditable="true"]).aza-writing.era-traditional,
-.aza-script-run.era-traditional{font-family:AzTraditional,serif!important}
+.aza-script-run.era-traditional{font-family:AzTraditional,AzModern,serif!important}
 :where(input,textarea,[contenteditable="true"]).aza-writing.era-modern,
 .aza-script-run.era-modern{font-family:AzModern,serif!important}
 .aza-script-run{display:inline;white-space:pre-wrap;unicode-bidi:isolate;line-height:inherit;vertical-align:baseline}
