@@ -66,3 +66,12 @@
 @media (max-width:600px){.evolution-pane .site-top{padding:24px 15px 12px}.evolution-pane .chart-caption,.evolution-pane .detail,.evolution-pane .legend{padding-left:15px;padding-right:15px}.evolution-pane .detail-card{padding:14px}.evolution-pane .chart-frame{scrollbar-width:thin}}
 @media print{.evolution-pane body{background:white;color:black}.evolution-pane .site-top,.evolution-pane .legend,.evolution-pane .detail,.evolution-pane .chart-caption{color:black}.evolution-pane .toolbar{display:none}.evolution-pane .chart-frame{overflow:visible;transform-origin:top left;zoom:.55}.evolution-pane .chart{margin:0}.evolution-pane .detail,.evolution-pane .legend{break-inside:auto}}
 @media (max-width:600px){.evolution-pane .table-glyphs{gap:2px}.evolution-pane .table-glyph{width:29px;height:34px}.evolution-pane .table-mark{width:23px;height:29px}}
+/* Modern era only: use fixed font-coordinate scale, not contain-fit of flourishes.
+   All historical chart artwork, keyboard and Glyph Studio keep their existing CSS. */
+.evolution-pane .chart .glyph.modern{overflow:visible}
+.evolution-pane .chart .glyph.modern .mark.modern-art{display:block;position:absolute;max-width:none;max-height:none;object-fit:fill;flex:none;pointer-events:none}
+.evolution-pane .table-glyph.modern-art-holder{position:relative;overflow:visible}
+.evolution-pane .table-glyph.modern-art-holder .table-mark.modern-art{display:block;position:absolute;max-width:none;max-height:none;object-fit:fill;pointer-events:none}
+.evolution-pane .modern-lineage-frame{display:block;position:relative;width:48px;height:48px;flex:0 0 48px;overflow:visible}
+.evolution-pane .modern-lineage-frame .mini-mark.modern-art{display:block;position:absolute;max-width:none;max-height:none;object-fit:fill}
+.evolution-pane .modern-table-entry{display:flex;align-items:center;gap:8px}
