@@ -415,7 +415,12 @@
     const chars=[...event.data];
     const pieces=chars.map(c=>window.AzaaraanBridge.physicalValue(c,state.era));
     // No browser fallback to ordinary Khmer or Latin when Aza’raan is selected.
-    if(!pieces.length||pieces.every(x=>x===null))return;
+    if(!pieces.length)return;
+    if(pieces.every(x=>x===null)){
+      if(!/[\u1780-\u17FF]/u.test(event.data))return;
+      if(event.cancelable){event.preventDefault();notes.toast('Khmer input is blocked in Aza’raan mode. Use Latin keys to type Aza’raan glyphs.');}
+      return;
+    }
     if(!event.cancelable)return;
     event.preventDefault();
     const invalid=pieces.find(x=>!x||x.error);
