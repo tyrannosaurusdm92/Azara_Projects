@@ -1,6 +1,6 @@
 {
   "title": "Aza’raan Letter Evolution Atlas · Correct Era Slots",
-  "system": "52 ancestral Uxrowo roots → Ancient 52 → Archaic 49 → Classical 44 → Traditional 32 → Modern 20; 55 modern readings",
+  "system": "52 ancestral Uxrowo roots → Ancient 52 → Archaic 49 → Classical 44 → Traditional 32 → Modern 21; 55 modern readings",
   "stages": [
     {
       "key": "origin",
@@ -47,9 +47,9 @@
     {
       "key": "modern",
       "name": "Modern",
-      "sub": "20 modern independent letters · 2036 CE",
+      "sub": "21 active families · 2036 CE",
       "status": "User-supplied SVG, contact-sheet slot matched to ancestral root",
-      "letter_count": 20
+      "letter_count": 21
     }
   ],
   "families": [
@@ -63,56 +63,52 @@
       "origin_image": "images/origins/34_13123.png",
       "modern_readings": [
         {
-          "name": "A (apple)",
-          "unicode": "អា",
+          "name": "AE",
+          "unicode": "A",
           "ipa": "/æ/",
-          "mark": "open",
+          "mark": "base",
           "codepoints": [
-            "U+17A2",
-            "U+17B6"
+            "U+0041"
           ]
         },
         {
-          "name": "A (father)",
-          "unicode": "អាី",
-          "ipa": "/ɑː/",
-          "mark": "open + long",
-          "codepoints": [
-            "U+17A2",
-            "U+17B6",
-            "U+17B8"
-          ]
-        },
-        {
-          "name": "A (awe)",
-          "unicode": "អា់",
-          "ipa": "/aw/",
-          "mark": "open + short",
-          "codepoints": [
-            "U+17A2",
-            "U+17B6",
-            "U+17CB"
-          ]
-        },
-        {
-          "name": "A (ay)",
-          "unicode": "អី៎",
+          "name": "AY",
+          "unicode": "Á",
           "ipa": "/eɪ/",
-          "mark": "long + glide",
+          "mark": "acute",
           "codepoints": [
-            "U+17A2",
-            "U+17B8",
-            "U+17CE"
+            "U+0041",
+            "U+0301"
           ]
         },
         {
-          "name": "A (uh)",
-          "unicode": "អឹ",
-          "ipa": "/ʌ/",
-          "mark": "central",
+          "name": "AW",
+          "unicode": "Â",
+          "ipa": "/ɑu̯/",
+          "mark": "circumflex",
           "codepoints": [
-            "U+17A2",
-            "U+17B9"
+            "U+0041",
+            "U+0302"
+          ]
+        },
+        {
+          "name": "AY-EH",
+          "unicode": "Ǎ",
+          "ipa": "/eɪ.ɛ/",
+          "mark": "caron",
+          "codepoints": [
+            "U+0041",
+            "U+030C"
+          ]
+        },
+        {
+          "name": "AH",
+          "unicode": "Ā",
+          "ipa": "/ɑː/",
+          "mark": "macron",
+          "codepoints": [
+            "U+0041",
+            "U+0304"
           ]
         }
       ],
@@ -218,8 +214,7 @@
         "Ă or Ae"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 34,
-      "modern_base_unicode": "អ"
+      "parent_slot": 34
     },
     {
       "family": "B",
@@ -231,65 +226,42 @@
       "origin_image": "images/origins/18_1320C.png",
       "modern_readings": [
         {
-          "name": "B (b)",
-          "unicode": "ប",
+          "name": "B",
+          "unicode": "B",
           "ipa": "/b/",
           "mark": "base",
           "codepoints": [
-            "U+1794"
+            "U+0042"
           ]
         },
         {
-          "name": "B (soft b)",
-          "unicode": "ប៉៊",
-          "ipa": "/β/",
-          "mark": "soft + hard",
+          "name": "V",
+          "unicode": "Ḃ",
+          "ipa": "/v/",
+          "mark": "dot_above",
           "codepoints": [
-            "U+1794",
-            "U+17C9",
-            "U+17CA"
+            "U+0042",
+            "U+0307"
           ]
         },
         {
-          "name": "F (f)",
-          "unicode": "ប៉៍",
+          "name": "F",
+          "unicode": "B̵",
           "ipa": "/f/",
-          "mark": "soft + unvoiced",
+          "mark": "stroke",
           "codepoints": [
-            "U+1794",
-            "U+17C9",
-            "U+17CD"
+            "U+0042",
+            "U+0335"
           ]
         },
         {
-          "name": "F (voiced f)",
-          "unicode": "ប៉",
-          "ipa": "/v/",
-          "mark": "soft",
+          "name": "WH",
+          "unicode": "B̆",
+          "ipa": "/wʰ/",
+          "mark": "breve",
           "codepoints": [
-            "U+1794",
-            "U+17C9"
-          ]
-        },
-        {
-          "name": "V (v)",
-          "unicode": "ប៉",
-          "ipa": "/v/",
-          "mark": "soft",
-          "codepoints": [
-            "U+1794",
-            "U+17C9"
-          ]
-        },
-        {
-          "name": "V (soft glide)",
-          "unicode": "ប៉៎",
-          "ipa": "/ʋ/",
-          "mark": "soft + glide",
-          "codepoints": [
-            "U+1794",
-            "U+17C9",
-            "U+17CE"
+            "U+0042",
+            "U+0306"
           ]
         }
       ],
@@ -377,8 +349,7 @@
         "V"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 18,
-      "modern_base_unicode": "ប"
+      "parent_slot": 18
     },
     {
       "family": "D",
@@ -390,33 +361,22 @@
       "origin_image": "images/origins/06_13003.png",
       "modern_readings": [
         {
-          "name": "D (d)",
-          "unicode": "ដ",
+          "name": "D",
+          "unicode": "D",
           "ipa": "/d/",
           "mark": "base",
           "codepoints": [
-            "U+178A"
+            "U+0044"
           ]
         },
         {
-          "name": "D (tapped d)",
-          "unicode": "ដ៉",
-          "ipa": "/ɾ/",
-          "mark": "soft",
+          "name": "DZ",
+          "unicode": "Ď",
+          "ipa": "/d͡z/",
+          "mark": "caron",
           "codepoints": [
-            "U+178A",
-            "U+17C9"
-          ]
-        },
-        {
-          "name": "D (j)",
-          "unicode": "ដ៉៊",
-          "ipa": "/dʒ/",
-          "mark": "soft + hard",
-          "codepoints": [
-            "U+178A",
-            "U+17C9",
-            "U+17CA"
+            "U+0044",
+            "U+030C"
           ]
         }
       ],
@@ -485,8 +445,7 @@
         "D"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 6,
-      "modern_base_unicode": "ដ"
+      "parent_slot": 6
     },
     {
       "family": "E",
@@ -498,23 +457,22 @@
       "origin_image": "images/origins/36_131A3.png",
       "modern_readings": [
         {
-          "name": "E (eh)",
-          "unicode": "ឆា",
+          "name": "EH",
+          "unicode": "E",
           "ipa": "/ɛ/",
-          "mark": "open",
+          "mark": "base",
           "codepoints": [
-            "U+1786",
-            "U+17B6"
+            "U+0045"
           ]
         },
         {
-          "name": "E (ee)",
-          "unicode": "ឆី",
+          "name": "EE",
+          "unicode": "Ē",
           "ipa": "/iː/",
-          "mark": "long",
+          "mark": "macron",
           "codepoints": [
-            "U+1786",
-            "U+17B8"
+            "U+0045",
+            "U+0304"
           ]
         }
       ],
@@ -593,8 +551,7 @@
         "Ē or Ee"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 36,
-      "modern_base_unicode": "ឆ"
+      "parent_slot": 36
     },
     {
       "family": "G",
@@ -606,22 +563,22 @@
       "origin_image": "images/origins/08_132D1.png",
       "modern_readings": [
         {
-          "name": "G (g)",
-          "unicode": "គ",
+          "name": "G",
+          "unicode": "G",
           "ipa": "/g/",
           "mark": "base",
           "codepoints": [
-            "U+1782"
+            "U+0047"
           ]
         },
         {
-          "name": "G (soft gh)",
-          "unicode": "គ៉",
+          "name": "GH",
+          "unicode": "G̀",
           "ipa": "/ɣ/",
-          "mark": "soft",
+          "mark": "grave",
           "codepoints": [
-            "U+1782",
-            "U+17C9"
+            "U+0047",
+            "U+0300"
           ]
         }
       ],
@@ -690,8 +647,7 @@
         "Ğ or Gu"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 8,
-      "modern_base_unicode": "គ"
+      "parent_slot": 8
     },
     {
       "family": "H",
@@ -703,22 +659,12 @@
       "origin_image": "images/origins/22_13293.png",
       "modern_readings": [
         {
-          "name": "H (h)",
-          "unicode": "ហ",
+          "name": "H",
+          "unicode": "H",
           "ipa": "/h/",
           "mark": "base",
           "codepoints": [
-            "U+17A0"
-          ]
-        },
-        {
-          "name": "H (voiced h)",
-          "unicode": "ហ័",
-          "ipa": "/ɦ/",
-          "mark": "voiced",
-          "codepoints": [
-            "U+17A0",
-            "U+17D0"
+            "U+0048"
           ]
         }
       ],
@@ -787,8 +733,7 @@
         "H"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 22,
-      "modern_base_unicode": "ហ"
+      "parent_slot": 22
     },
     {
       "family": "I",
@@ -800,24 +745,22 @@
       "origin_image": "images/origins/35_1321A.png",
       "modern_readings": [
         {
-          "name": "I (eye)",
-          "unicode": "ញា៎",
-          "ipa": "/aɪ/",
-          "mark": "open + glide",
+          "name": "IH",
+          "unicode": "I",
+          "ipa": "/ɪ/",
+          "mark": "base",
           "codepoints": [
-            "U+1789",
-            "U+17B6",
-            "U+17CE"
+            "U+0049"
           ]
         },
         {
-          "name": "I (ih)",
-          "unicode": "ញ់",
-          "ipa": "/ɪ/",
-          "mark": "short",
+          "name": "EYE",
+          "unicode": "Î",
+          "ipa": "/aɪ/",
+          "mark": "circumflex",
           "codepoints": [
-            "U+1789",
-            "U+17CB"
+            "U+0049",
+            "U+0302"
           ]
         }
       ],
@@ -896,8 +839,7 @@
         "Ī or Ai"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 35,
-      "modern_base_unicode": "ញ"
+      "parent_slot": 35
     },
     {
       "family": "J",
@@ -909,22 +851,22 @@
       "origin_image": "images/origins/09_131E2.png",
       "modern_readings": [
         {
-          "name": "J (j)",
-          "unicode": "ជ",
-          "ipa": "/dʒ/",
+          "name": "J",
+          "unicode": "J",
+          "ipa": "/d͡ʒ/",
           "mark": "base",
           "codepoints": [
-            "U+1787"
+            "U+004A"
           ]
         },
         {
-          "name": "J (zh)",
-          "unicode": "ជ៉",
+          "name": "ZH",
+          "unicode": "J̧",
           "ipa": "/ʒ/",
-          "mark": "soft",
+          "mark": "cedilla",
           "codepoints": [
-            "U+1787",
-            "U+17C9"
+            "U+004A",
+            "U+0327"
           ]
         }
       ],
@@ -993,8 +935,7 @@
         "J"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 9,
-      "modern_base_unicode": "ជ"
+      "parent_slot": 9
     },
     {
       "family": "K",
@@ -1006,65 +947,42 @@
       "origin_image": "images/origins/24_131F0.png",
       "modern_readings": [
         {
-          "name": "K (k)",
-          "unicode": "ក",
+          "name": "K",
+          "unicode": "K",
           "ipa": "/k/",
           "mark": "base",
           "codepoints": [
-            "U+1780"
+            "U+004B"
           ]
         },
         {
-          "name": "K (kh / aspirated k)",
-          "unicode": "ក៊",
-          "ipa": "/kʰ/",
-          "mark": "hard",
+          "name": "KW",
+          "unicode": "K̈",
+          "ipa": "/kʷ/",
+          "mark": "diaeresis",
           "codepoints": [
-            "U+1780",
-            "U+17CA"
+            "U+004B",
+            "U+0308"
           ]
         },
         {
-          "name": "K (kw)",
-          "unicode": "ក៎",
-          "ipa": "/kw/",
-          "mark": "glide",
+          "name": "KEY",
+          "unicode": "Ḱ",
+          "ipa": "/kiː/",
+          "mark": "acute",
           "codepoints": [
-            "U+1780",
-            "U+17CE"
+            "U+004B",
+            "U+0301"
           ]
         },
         {
-          "name": "K (ks (X sound))",
-          "unicode": "ក៊៍",
+          "name": "KS",
+          "unicode": "Ǩ",
           "ipa": "/ks/",
-          "mark": "hard + unvoiced",
+          "mark": "caron",
           "codepoints": [
-            "U+1780",
-            "U+17CA",
-            "U+17CD"
-          ]
-        },
-        {
-          "name": "K (aspirated kw)",
-          "unicode": "ក៎៊",
-          "ipa": "/kʷʰ/",
-          "mark": "glide + hard",
-          "codepoints": [
-            "U+1780",
-            "U+17CE",
-            "U+17CA"
-          ]
-        },
-        {
-          "name": "K (x fricative)",
-          "unicode": "ក៉៍",
-          "ipa": "/x/",
-          "mark": "soft + unvoiced",
-          "codepoints": [
-            "U+1780",
-            "U+17C9",
-            "U+17CD"
+            "U+004B",
+            "U+030C"
           ]
         }
       ],
@@ -1152,8 +1070,7 @@
         "Q"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 24,
-      "modern_base_unicode": "ក"
+      "parent_slot": 24
     },
     {
       "family": "L",
@@ -1165,22 +1082,12 @@
       "origin_image": "images/origins/23_1334B.png",
       "modern_readings": [
         {
-          "name": "L (l)",
-          "unicode": "ល",
+          "name": "L",
+          "unicode": "L",
           "ipa": "/l/",
           "mark": "base",
           "codepoints": [
-            "U+179B"
-          ]
-        },
-        {
-          "name": "L (dark l)",
-          "unicode": "ល៊",
-          "ipa": "/ɫ/",
-          "mark": "hard",
-          "codepoints": [
-            "U+179B",
-            "U+17CA"
+            "U+004C"
           ]
         }
       ],
@@ -1249,8 +1156,7 @@
         "L"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 23,
-      "modern_base_unicode": "ល"
+      "parent_slot": 23
     },
     {
       "family": "M",
@@ -1262,22 +1168,22 @@
       "origin_image": "images/origins/11_132DD.png",
       "modern_readings": [
         {
-          "name": "M (m)",
-          "unicode": "ម",
+          "name": "M",
+          "unicode": "M",
           "ipa": "/m/",
           "mark": "base",
           "codepoints": [
-            "U+1798"
+            "U+004D"
           ]
         },
         {
-          "name": "M (syllabic m)",
-          "unicode": "មឹ",
-          "ipa": "/m̩/",
-          "mark": "central",
+          "name": "MN",
+          "unicode": "M̌",
+          "ipa": "/mn/",
+          "mark": "caron",
           "codepoints": [
-            "U+1798",
-            "U+17B9"
+            "U+004D",
+            "U+030C"
           ]
         }
       ],
@@ -1346,8 +1252,7 @@
         "M"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 11,
-      "modern_base_unicode": "ម"
+      "parent_slot": 11
     },
     {
       "family": "N",
@@ -1359,64 +1264,32 @@
       "origin_image": "images/origins/20_132DC.png",
       "modern_readings": [
         {
-          "name": "N (n)",
-          "unicode": "ន",
+          "name": "N",
+          "unicode": "N",
           "ipa": "/n/",
           "mark": "base",
           "codepoints": [
-            "U+1793"
+            "U+004E"
           ]
         },
         {
-          "name": "N (ng)",
-          "unicode": "នំ",
+          "name": "NG",
+          "unicode": "Ñ",
           "ipa": "/ŋ/",
-          "mark": "nasal",
+          "mark": "tilde",
           "codepoints": [
-            "U+1793",
-            "U+17C6"
+            "U+004E",
+            "U+0303"
           ]
         },
         {
-          "name": "N (ny)",
-          "unicode": "ន៉",
+          "name": "NY",
+          "unicode": "Ņ",
           "ipa": "/ɲ/",
-          "mark": "soft",
+          "mark": "cedilla",
           "codepoints": [
-            "U+1793",
-            "U+17C9"
-          ]
-        },
-        {
-          "name": "N (syllabic n)",
-          "unicode": "នឹ",
-          "ipa": "/n̩/",
-          "mark": "central",
-          "codepoints": [
-            "U+1793",
-            "U+17B9"
-          ]
-        },
-        {
-          "name": "N (ngg)",
-          "unicode": "នំ៊",
-          "ipa": "/ŋg/",
-          "mark": "nasal + hard",
-          "codepoints": [
-            "U+1793",
-            "U+17C6",
-            "U+17CA"
-          ]
-        },
-        {
-          "name": "N (n+y cluster)",
-          "unicode": "ន៉៊",
-          "ipa": "/nj/",
-          "mark": "soft + hard",
-          "codepoints": [
-            "U+1793",
-            "U+17C9",
-            "U+17CA"
+            "U+004E",
+            "U+0327"
           ]
         }
       ],
@@ -1504,8 +1377,7 @@
         "Ɲ or Ny"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 20,
-      "modern_base_unicode": "ន"
+      "parent_slot": 20
     },
     {
       "family": "O",
@@ -1517,47 +1389,43 @@
       "origin_image": "images/origins/33_132B2.png",
       "modern_readings": [
         {
-          "name": "O (oh)",
-          "unicode": "ងី៎",
-          "ipa": "/oʊ/",
-          "mark": "long + glide",
-          "codepoints": [
-            "U+1784",
-            "U+17B8",
-            "U+17CE"
-          ]
-        },
-        {
-          "name": "O (ow)",
-          "unicode": "ង់៎",
-          "ipa": "/ow/",
-          "mark": "short + glide",
-          "codepoints": [
-            "U+1784",
-            "U+17CB",
-            "U+17CE"
-          ]
-        },
-        {
-          "name": "O (oy)",
-          "unicode": "ងា៎",
-          "ipa": "/ɔɪ/",
-          "mark": "open + glide",
-          "codepoints": [
-            "U+1784",
-            "U+17B6",
-            "U+17CE"
-          ]
-        },
-        {
-          "name": "O (oo)",
-          "unicode": "ងឹី",
+          "name": "OO",
+          "unicode": "Ō",
           "ipa": "/uː/",
-          "mark": "central + long",
+          "mark": "macron",
           "codepoints": [
-            "U+1784",
-            "U+17B9",
-            "U+17B8"
+            "U+004F",
+            "U+0304"
+          ]
+        },
+        {
+          "name": "OH",
+          "unicode": "Ó",
+          "ipa": "/oʊ/",
+          "mark": "acute",
+          "codepoints": [
+            "U+004F",
+            "U+0301"
+          ]
+        },
+        {
+          "name": "OW",
+          "unicode": "Ô",
+          "ipa": "/aʊ/",
+          "mark": "circumflex",
+          "codepoints": [
+            "U+004F",
+            "U+0302"
+          ]
+        },
+        {
+          "name": "OY",
+          "unicode": "Ǒ",
+          "ipa": "/ɔɪ/",
+          "mark": "caron",
+          "codepoints": [
+            "U+004F",
+            "U+030C"
           ]
         }
       ],
@@ -1654,8 +1522,7 @@
         "Ö or Oy"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 33,
-      "modern_base_unicode": "ង"
+      "parent_slot": 33
     },
     {
       "family": "P",
@@ -1667,22 +1534,12 @@
       "origin_image": "images/origins/12_131F2.png",
       "modern_readings": [
         {
-          "name": "P (p)",
-          "unicode": "ព",
+          "name": "P",
+          "unicode": "P",
           "ipa": "/p/",
           "mark": "base",
           "codepoints": [
-            "U+1796"
-          ]
-        },
-        {
-          "name": "P (ph)",
-          "unicode": "ព៊",
-          "ipa": "/pʰ/",
-          "mark": "hard",
-          "codepoints": [
-            "U+1796",
-            "U+17CA"
+            "U+0050"
           ]
         }
       ],
@@ -1751,8 +1608,7 @@
         "P"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 12,
-      "modern_base_unicode": "ព"
+      "parent_slot": 12
     },
     {
       "family": "R",
@@ -1764,32 +1620,23 @@
       "origin_image": "images/origins/14_1320A.png",
       "modern_readings": [
         {
-          "name": "R (rolled r)",
-          "unicode": "រ៌",
+          "name": "RR",
+          "unicode": "R̄",
           "ipa": "/r͡r/",
-          "mark": "held",
+          "mark": "macron",
           "codepoints": [
-            "U+179A",
-            "U+17CC"
+            "U+0052",
+            "U+0304"
           ]
         },
         {
-          "name": "R (tapped r)",
-          "unicode": "រ៉",
-          "ipa": "/ɾ/",
-          "mark": "soft",
+          "name": "ER",
+          "unicode": "R̆",
+          "ipa": "/ɚ/",
+          "mark": "breve",
           "codepoints": [
-            "U+179A",
-            "U+17C9"
-          ]
-        },
-        {
-          "name": "R (r)",
-          "unicode": "រ",
-          "ipa": "/r/",
-          "mark": "base",
-          "codepoints": [
-            "U+179A"
+            "U+0052",
+            "U+0306"
           ]
         }
       ],
@@ -1858,8 +1705,7 @@
         "Ȑ Or Rr"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 14,
-      "modern_base_unicode": "រ"
+      "parent_slot": 14
     },
     {
       "family": "S",
@@ -1871,33 +1717,22 @@
       "origin_image": "images/origins/21_13187.png",
       "modern_readings": [
         {
-          "name": "S (s)",
-          "unicode": "ស",
+          "name": "S",
+          "unicode": "S",
           "ipa": "/s/",
           "mark": "base",
           "codepoints": [
-            "U+179F"
+            "U+0053"
           ]
         },
         {
-          "name": "S (sh)",
-          "unicode": "ស៉",
+          "name": "SH",
+          "unicode": "Ş",
           "ipa": "/ʃ/",
-          "mark": "soft",
+          "mark": "cedilla",
           "codepoints": [
-            "U+179F",
-            "U+17C9"
-          ]
-        },
-        {
-          "name": "S (soft sh)",
-          "unicode": "ស៉៊",
-          "ipa": "/ɕ/",
-          "mark": "soft + hard",
-          "codepoints": [
-            "U+179F",
-            "U+17C9",
-            "U+17CA"
+            "U+0053",
+            "U+0327"
           ]
         }
       ],
@@ -1976,8 +1811,7 @@
         "Š or Sh"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 21,
-      "modern_base_unicode": "ស"
+      "parent_slot": 21
     },
     {
       "family": "T",
@@ -1989,88 +1823,42 @@
       "origin_image": "images/origins/03_131A0.png",
       "modern_readings": [
         {
-          "name": "T (t)",
-          "unicode": "ត",
+          "name": "T",
+          "unicode": "T",
           "ipa": "/t/",
           "mark": "base",
           "codepoints": [
-            "U+178F"
+            "U+0054"
           ]
         },
         {
-          "name": "T (th)",
-          "unicode": "ត៉៍",
+          "name": "TH",
+          "unicode": "T̵",
           "ipa": "/θ/",
-          "mark": "soft + unvoiced",
+          "mark": "stroke",
           "codepoints": [
-            "U+178F",
-            "U+17C9",
-            "U+17CD"
+            "U+0054",
+            "U+0335"
           ]
         },
         {
-          "name": "T (tch)",
-          "unicode": "ត៉៊",
-          "ipa": "/tʃ/",
-          "mark": "soft + hard",
+          "name": "TCH",
+          "unicode": "Ť",
+          "ipa": "/t͡ʃ/",
+          "mark": "caron",
           "codepoints": [
-            "U+178F",
-            "U+17C9",
-            "U+17CA"
+            "U+0054",
+            "U+030C"
           ]
         },
         {
-          "name": "T (tæz)",
-          "unicode": "តា៊",
+          "name": "TAZ",
+          "unicode": "T́",
           "ipa": "/tæz/",
-          "mark": "open + hard",
+          "mark": "acute",
           "codepoints": [
-            "U+178F",
-            "U+17B6",
-            "U+17CA"
-          ]
-        },
-        {
-          "name": "T (aspirated t)",
-          "unicode": "ត៊",
-          "ipa": "/tʰ/",
-          "mark": "hard",
-          "codepoints": [
-            "U+178F",
-            "U+17CA"
-          ]
-        },
-        {
-          "name": "T (voiced th)",
-          "unicode": "ត៉័",
-          "ipa": "/ð/",
-          "mark": "soft + voiced",
-          "codepoints": [
-            "U+178F",
-            "U+17C9",
-            "U+17D0"
-          ]
-        },
-        {
-          "name": "T (aspirated tch)",
-          "unicode": "ត៊៍",
-          "ipa": "/tʃʰ/",
-          "mark": "hard + unvoiced",
-          "codepoints": [
-            "U+178F",
-            "U+17CA",
-            "U+17CD"
-          ]
-        },
-        {
-          "name": "T (taahzi)",
-          "unicode": "តី៊",
-          "ipa": "/taːhzi/",
-          "mark": "long + hard",
-          "codepoints": [
-            "U+178F",
-            "U+17B8",
-            "U+17CA"
+            "U+0054",
+            "U+0301"
           ]
         }
       ],
@@ -2167,8 +1955,7 @@
         "Ç or Ch"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 3,
-      "modern_base_unicode": "ត"
+      "parent_slot": 3
     },
     {
       "family": "U",
@@ -2178,7 +1965,17 @@
       "root_sound": "uh",
       "source_row": 40,
       "origin_image": "images/origins/37_130DA.png",
-      "modern_readings": [],
+      "modern_readings": [
+        {
+          "name": "UH",
+          "unicode": "U",
+          "ipa": "/ʌ/",
+          "mark": "base",
+          "codepoints": [
+            "U+0055"
+          ]
+        }
+      ],
       "main_lineage": [
         "images/ancient/ancient_37.svg",
         "images/archaic/archaic_37.svg",
@@ -2244,12 +2041,7 @@
         "Ã Or Uh"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 37,
-      "modern_retired": true,
-      "modern_reassigned_to": [
-        "A",
-        "O"
-      ]
+      "parent_slot": 37
     },
     {
       "family": "W",
@@ -2261,66 +2053,52 @@
       "origin_image": "images/origins/44_132E7.png",
       "modern_readings": [
         {
-          "name": "W (wah)",
-          "unicode": "វា",
-          "ipa": "/wɑ/",
-          "mark": "open",
-          "codepoints": [
-            "U+179C",
-            "U+17B6"
-          ]
-        },
-        {
-          "name": "W (weh)",
-          "unicode": "វា់",
-          "ipa": "/wɛ/",
-          "mark": "open + short",
-          "codepoints": [
-            "U+179C",
-            "U+17B6",
-            "U+17CB"
-          ]
-        },
-        {
-          "name": "W (wih)",
-          "unicode": "វ់",
-          "ipa": "/wɪ/",
-          "mark": "short",
-          "codepoints": [
-            "U+179C",
-            "U+17CB"
-          ]
-        },
-        {
-          "name": "W (woo)",
-          "unicode": "វី",
+          "name": "WOO",
+          "unicode": "W",
           "ipa": "/wuː/",
-          "mark": "long",
+          "mark": "base",
           "codepoints": [
-            "U+179C",
-            "U+17B8"
+            "U+0057"
           ]
         },
         {
-          "name": "W (woe)",
-          "unicode": "វី៎",
+          "name": "WOE",
+          "unicode": "Ẃ",
           "ipa": "/woʊ/",
-          "mark": "long + glide",
+          "mark": "acute",
           "codepoints": [
-            "U+179C",
-            "U+17B8",
-            "U+17CE"
+            "U+0057",
+            "U+0301"
           ]
         },
         {
-          "name": "W (wee)",
-          "unicode": "វីឹ",
-          "ipa": "/wiː/",
-          "mark": "long + central",
+          "name": "WIH",
+          "unicode": "W̆",
+          "ipa": "/wɪ/",
+          "mark": "breve",
           "codepoints": [
-            "U+179C",
-            "U+17B8",
-            "U+17B9"
+            "U+0057",
+            "U+0306"
+          ]
+        },
+        {
+          "name": "WAH",
+          "unicode": "Ẁ",
+          "ipa": "/wɑ/",
+          "mark": "grave",
+          "codepoints": [
+            "U+0057",
+            "U+0300"
+          ]
+        },
+        {
+          "name": "WEE",
+          "unicode": "Ẅ",
+          "ipa": "/wiː/",
+          "mark": "diaeresis",
+          "codepoints": [
+            "U+0057",
+            "U+0308"
           ]
         }
       ],
@@ -2426,8 +2204,7 @@
         ""
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 44,
-      "modern_base_unicode": "វ"
+      "parent_slot": 44
     },
     {
       "family": "Y",
@@ -2439,66 +2216,52 @@
       "origin_image": "images/origins/50_13210.png",
       "modern_readings": [
         {
-          "name": "Y (yah)",
-          "unicode": "យា",
-          "ipa": "/ja/",
-          "mark": "open",
-          "codepoints": [
-            "U+1799",
-            "U+17B6"
-          ]
-        },
-        {
-          "name": "Y (yeh)",
-          "unicode": "យា់",
-          "ipa": "/jɛ/",
-          "mark": "open + short",
-          "codepoints": [
-            "U+1799",
-            "U+17B6",
-            "U+17CB"
-          ]
-        },
-        {
-          "name": "Y (yu)",
-          "unicode": "យី",
+          "name": "YOO",
+          "unicode": "Y",
           "ipa": "/juː/",
-          "mark": "long",
+          "mark": "base",
           "codepoints": [
-            "U+1799",
-            "U+17B8"
+            "U+0059"
           ]
         },
         {
-          "name": "Y (yih)",
-          "unicode": "យ់",
-          "ipa": "/jɪ/",
-          "mark": "short",
-          "codepoints": [
-            "U+1799",
-            "U+17CB"
-          ]
-        },
-        {
-          "name": "Y (yee)",
-          "unicode": "យីឹ",
-          "ipa": "/jiː/",
-          "mark": "long + central",
-          "codepoints": [
-            "U+1799",
-            "U+17B8",
-            "U+17B9"
-          ]
-        },
-        {
-          "name": "Y (yoh)",
-          "unicode": "យី៎",
+          "name": "YO",
+          "unicode": "Ý",
           "ipa": "/joʊ/",
-          "mark": "long + glide",
+          "mark": "acute",
           "codepoints": [
-            "U+1799",
-            "U+17B8",
-            "U+17CE"
+            "U+0059",
+            "U+0301"
+          ]
+        },
+        {
+          "name": "YIH",
+          "unicode": "Y̆",
+          "ipa": "/jɪ/",
+          "mark": "breve",
+          "codepoints": [
+            "U+0059",
+            "U+0306"
+          ]
+        },
+        {
+          "name": "YA",
+          "unicode": "Ỳ",
+          "ipa": "/ja/",
+          "mark": "grave",
+          "codepoints": [
+            "U+0059",
+            "U+0300"
+          ]
+        },
+        {
+          "name": "YE",
+          "unicode": "Y̨",
+          "ipa": "/jɛ/",
+          "mark": "ogonek",
+          "codepoints": [
+            "U+0059",
+            "U+0328"
           ]
         }
       ],
@@ -2622,8 +2385,7 @@
         ""
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 50,
-      "modern_base_unicode": "យ"
+      "parent_slot": 50
     },
     {
       "family": "Z",
@@ -2635,31 +2397,12 @@
       "origin_image": "images/origins/19_13001.png",
       "modern_readings": [
         {
-          "name": "Z (z)",
-          "unicode": "ឝ",
+          "name": "Z",
+          "unicode": "Z",
           "ipa": "/z/",
           "mark": "base",
           "codepoints": [
-            "U+179D"
-          ]
-        },
-        {
-          "name": "Z (zn)",
-          "unicode": "ឝំ",
-          "ipa": "/zn/",
-          "mark": "nasal",
-          "codepoints": [
-            "U+179D",
-            "U+17C6"
-          ]
-        },
-        {
-          "name": "S (z)",
-          "unicode": "ឝ",
-          "ipa": "/z/",
-          "mark": "base",
-          "codepoints": [
-            "U+179D"
+            "U+005A"
           ]
         }
       ],
@@ -2728,8 +2471,7 @@
         "Z"
       ],
       "unique_historical_drawings": 5,
-      "parent_slot": 19,
-      "modern_base_unicode": "ឝ"
+      "parent_slot": 19
     }
   ],
   "special_signs": [
@@ -2740,9 +2482,7 @@
       "meaning": "Glottal stop /ʔ/; ancestor of previous/next syllable emphasis",
       "keyboard": "'",
       "origin": "𓃪",
-      "ancestry_role": "parent",
-      "modern_unicode": "៏",
-      "modern_codepoint": "U+17CF"
+      "ancestry_role": "parent"
     },
     {
       "sign": "¡",
@@ -2750,9 +2490,7 @@
       "codepoint": "U+00A1",
       "meaning": "Click /ǃ/; independent modern special sign",
       "keyboard": "¡",
-      "origin": "𓐎",
-      "modern_unicode": "ះ",
-      "modern_codepoint": "U+17C7"
+      "origin": "𓐎"
     },
     {
       "sign": "<",
@@ -2762,9 +2500,7 @@
       "keyboard": "<",
       "origin": "𓃪",
       "ancestry_role": "descendant",
-      "descends_from": "'",
-      "modern_unicode": "ិ",
-      "modern_codepoint": "U+17B7"
+      "descends_from": "'"
     },
     {
       "sign": ">",
@@ -2774,9 +2510,7 @@
       "keyboard": ">",
       "origin": "𓃪",
       "ancestry_role": "descendant",
-      "descends_from": "'",
-      "modern_unicode": "ូ",
-      "modern_codepoint": "U+17BC"
+      "descends_from": "'"
     }
   ],
   "combining_marks": [
@@ -7980,13 +7714,13 @@
     }
   ],
   "historical_stage_policy": {
-    "counting_rule": "An era count includes only independent letter lineages. Merged roots keep earlier artwork and appear as a merger label in later cells. Modern glottal and click are special signs outside the 20 letters.",
+    "counting_rule": "An era count includes only independent letter lineages. Merged roots keep earlier artwork and appear as a merger label in later cells. Modern glottal and click are special signs outside the 21 letters.",
     "stage_totals": {
       "ancient": 52,
       "archaic": 49,
       "classical": 44,
       "traditional": 32,
-      "modern": 20
+      "modern": 21
     },
     "merger_dates": "Only 𓎱 → 𓆠 at the Traditional transition was specified; all other assignments remain proposals from the supplied chart."
   },
@@ -8007,104 +7741,5 @@
     "click_unicode": "¡",
     "click_codepoint": "U+00A1"
   },
-  "artwork_policy": "Each active era cell uses the matching numbered SVG from the supplied 52-glyph era collection. Number N maps to ancestral root N. No post-merger SVGs are packaged or displayed.",
-  "modernOrthographyFile": "modern-orthography.json",
-  "modern_combining_marks": [
-    {
-      "id": "held",
-      "name": "Held Consonant",
-      "unicode": "៌",
-      "codepoint": "U+17CC",
-      "latin": "◌̎",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "central",
-      "name": "Central Vowel",
-      "unicode": "ឹ",
-      "codepoint": "U+17B9",
-      "latin": "◌̽",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "open",
-      "name": "Open Vowel",
-      "unicode": "ា",
-      "codepoint": "U+17B6",
-      "latin": "◌̞",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "short",
-      "name": "Short Vowel",
-      "unicode": "់",
-      "codepoint": "U+17CB",
-      "latin": "◌̆",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "long",
-      "name": "Long Vowel",
-      "unicode": "ី",
-      "codepoint": "U+17B8",
-      "latin": "◌̄",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "unvoiced",
-      "name": "Unvoiced Sound",
-      "unicode": "៍",
-      "codepoint": "U+17CD",
-      "latin": "◌̥",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "voiced",
-      "name": "Voiced Sound",
-      "unicode": "័",
-      "codepoint": "U+17D0",
-      "latin": "◌̬",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "separate",
-      "name": "Separated Vowel",
-      "unicode": "ៈ",
-      "codepoint": "U+17C8",
-      "latin": "◌̈",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "nasal",
-      "name": "Nasalization",
-      "unicode": "ំ",
-      "codepoint": "U+17C6",
-      "latin": "◌̃",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "soft",
-      "name": "Soft Sound",
-      "unicode": "៉",
-      "codepoint": "U+17C9",
-      "latin": "◌̡",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "hard",
-      "name": "Hard Sound",
-      "unicode": "៊",
-      "codepoint": "U+17CA",
-      "latin": "◌̣",
-      "placement": "left or right, primary/secondary"
-    },
-    {
-      "id": "glide",
-      "name": "Glide Sound",
-      "unicode": "៎",
-      "codepoint": "U+17CE",
-      "latin": "◌̯",
-      "placement": "left or right, primary/secondary"
-    }
-  ]
+  "artwork_policy": "Each active era cell uses the matching numbered SVG from the supplied 52-glyph era collection. Number N maps to ancestral root N. No post-merger SVGs are packaged or displayed."
 }

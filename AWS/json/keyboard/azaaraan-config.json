@@ -1,6 +1,6 @@
 {
   "title": "Aza'raan Language Studio",
-  "version": "2026.11.16-modern-orthography",
+  "version": "2026.10.27-best-of-both",
   "eras": [
     "Archaic",
     "Classical",
@@ -463,29 +463,12 @@
     "Traditional": "assets/ttf/Azaaraan-Traditional.ttf",
     "Modern": "assets/ttf/Azaaraan-Modern.ttf"
   },
-  "modernIndependentAlphabet": "ABDEGHIJKLMNOPRSTWYZ",
+  "modernIndependentAlphabet": "ABDEGHIJKLMNOPRSTYZ",
   "modernFamilyMergers": {
     "F": "B",
     "V": "B",
-    "U": "A (uh) / O (oo)",
-    "Q": "K",
-    "X": "K",
-    "C": "K / S / T"
+    "W": "B",
+    "U": "A for uh, O for oo"
   },
-  "historicalKeyOrder": "ABDEGHIJKLMNOPRSTUWYZ",
-  "modernOrthographyFile": "json/keyboard/modern-orthography.json",
-  "modernMarkNames": [
-    "Held Consonant",
-    "Central Vowel",
-    "Open Vowel",
-    "Short Vowel",
-    "Long Vowel",
-    "Unvoiced Sound",
-    "Voiced Sound",
-    "Separated Vowel",
-    "Nasalization",
-    "Soft Sound",
-    "Hard Sound",
-    "Glide Sound"
-  ]
+  "historicalKeyOrder": "ABDEGHIJKLMNOPRSTUWYZ"
 }

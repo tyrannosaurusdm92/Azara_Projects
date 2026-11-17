@@ -8,8 +8,6 @@ const overlay=document.getElementById('connectors');
 const pick=document.getElementById('focus');
 const detail=document.getElementById('detail');
 const NS='http://www.w3.org/2000/svg';
-const modernSpec=window.AZA_CONFIG?.modernOrthography;
-const modernGlyph=(letter)=>modernSpec?.independentUnicode?.[letter]||((window.AZA_LETTERS||{})[letter]||letter);
 const roots=new Map(D.roots.map(r=>[r.slot,r]));
 const families=new Map(D.families.map(f=>[f.family,f]));
 const mergeBySlot=new Map(D.mergers.map(m=>[m.slot,m]));
@@ -82,10 +80,10 @@ function renderFamily(familyKey){
  const t=document.createElement('div');t.className='detail-title';t.textContent=fam.letter+' · '+fam.sound;
  detail.appendChild(t);detail.appendChild(drawLineageChips(fam.rootSlot));
  const note=document.createElement('div');note.className='detail-note';
- const readings=(fam.readings||[]).map(x=>x.name+(x.ipa?' '+x.ipa:'')).join(' · ');
+ const readings=(fam.readings||[]).map(x=>x.name+' '+x.unicode+(x.ipa?' '+x.ipa:'')).join(' · ');
  const origins=members.map(r=>r.origin+' ('+r.sound+')').join(' · ');
- note.textContent='Historical source roots: '+origins+'. Modern readings: '+readings+'. The original Aza’raan script artwork is shown in the chart; the keyboard stores its phonetic Unicode encoding separately.';
- detail.appendChild(note);detail.appendChild(copyButton(modernGlyph(fam.family),'Copy Aza’raan '+fam.letter));
+ note.textContent='Historical source roots: '+origins+'. Legacy Latin readings: '+readings+'. Current encoding uses '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' plus the revised accents in the typing tab.';
+ detail.appendChild(note);detail.appendChild(copyButton((window.AZA_LETTERS||{})[fam.family]||fam.letter,'Copy Aza’raan '+fam.letter));
  highlight(new Set([familyKey]),null);
 }
 function selectGlyph(stageKey,slot){
@@ -98,9 +96,9 @@ function selectGlyph(stageKey,slot){
  title.textContent=picked+' · '+r.origin+' · '+r.sound;detail.appendChild(title);
  detail.appendChild(drawLineageChips(slot));
  const note=document.createElement('div');note.className='detail-note';
- const specialRootCodes={'1':'៏','52':'ះ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&modernGlyph(family.family))))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
+ const specialRootCodes={'1':'៉','52':'្ឃ'};const copyText=(stageKey==='proto')?r.origin:((stageKey==='modern'&&(specialRootCodes[slot]||(family&&(window.AZA_LETTERS||{})[family.family])))||((node&&node.reading)||(family&&family.letter)||r.reflex||r.origin));
  note.textContent=rootDesc(stage,r,node)+'. '+(node&&node.label?node.label+'. ':'')+'The modern reading is '+(family?family.letter:(node&&node.text)||r.reflex)+'.';
- detail.appendChild(note);detail.appendChild(copyButton(copyText,stageKey==='modern'?'Copy Aza’raan encoded letter':'Copy reading '+copyText));
+ detail.appendChild(note);detail.appendChild(copyButton(copyText,'Copy reading '+copyText));
  highlight(new Set([familyFor(r)]),[stageKey,slot]);pick.value='';
 }
 function addTableGlyphs(td,items,stageKey){
@@ -118,7 +116,7 @@ function renderTable(){
   const members=D.roots.filter(r=>r.family===fam.family);
   const tr=document.createElement('tr');
   const modern=document.createElement('td');modern.className='symbol-cell table-letter';modern.textContent=fam.letter;
-  const variants=document.createElement('small');variants.textContent=fam.modernRetired?'Historical U; Modern /ʌ/ → A, /uː/ → O':'20-letter Modern alphabet · 12 diacritics';modern.appendChild(variants);
+  const variants=document.createElement('small');variants.textContent='Khmer: '+((window.AZA_LETTERS||{})[fam.family]||fam.letter)+' · 24 contemporary marks';modern.appendChild(variants);
   tr.appendChild(modern);
   const source=document.createElement('td');const rootsBox=document.createElement('div');rootsBox.className='source-roots';
   members.forEach(r=>{const node=r.stages.proto;const b=mark(node.src,'table-glyph',r.slot,'proto',rootDesc(D.stages[0],r,node));rootsBox.appendChild(b)});
@@ -146,8 +144,8 @@ function renderTable(){
   tr.addEventListener('click',()=>{
    detail.replaceChildren();
    const name=document.createElement('div');name.className='detail-title';name.textContent=sign.name+' · '+sign.sign;
-   const explanation=document.createElement('div');explanation.className='detail-note';explanation.textContent=sign.meaning+' · Historical ancestor '+sign.origin+'; encoding metadata is kept separately from the native artwork.';
-   detail.append(name,drawLineageChips(sign.rootSlot),explanation,copyButton(sign.khmer,'Copy Aza’raan '+sign.name));
+   const explanation=document.createElement('div');explanation.className='detail-note';explanation.textContent=sign.meaning+' · Historical ancestor '+sign.origin+'; current storage uses Khmer '+sign.codepoint+'.';
+   detail.append(name,drawLineageChips(sign.rootSlot),explanation,copyButton(sign.khmer,'Copy Khmer '+sign.name));
    highlight(new Set([familyFor(root)]),['modern',sign.rootSlot]);pick.value='';
    document.getElementById('panel-evolution').scrollIntoView({behavior:'smooth'});
   });
@@ -179,7 +177,7 @@ D.lines.forEach(line=>{
  addSvg('path',{class:'arrowtip',d:'M'+(x2-5.3)+' '+(y2-8)+' L'+x2+' '+y2+' L'+(x2+5.3)+' '+(y2-8)+' Z',fill:col,'data-family':line.family},overlay);
 });
 D.families.forEach(fam=>{
- const o=document.createElement('option');o.value=fam.family;o.textContent=fam.modernRetired?'U · historical only, now A / O':fam.letter+' · '+fam.sound;pick.appendChild(o);
+ const o=document.createElement('option');o.value=fam.family;o.textContent=fam.letter+' · '+fam.sound;pick.appendChild(o);
 });
 pick.addEventListener('change',()=>renderFamily(pick.value));
 document.getElementById('evo-clear').addEventListener('click',()=>{pick.value='';setDefaultDetail()});

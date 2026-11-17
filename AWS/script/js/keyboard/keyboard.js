@@ -235,9 +235,9 @@
     if (!window.AzaaraanBridge.isLetter(base)) return;
     state.panel = { type:'azaaraan', base, view };
     const bridge=window.AzaaraanBridge, era=state.era;
-    panel(`Aza’raan · ${base} · ${era}`,view==='sounds'?'Choose a pronunciation':(state.era==='Modern'?'Maximum 2 marks':'Maximum 3 marks'));
+    panel(`Aza’raan · ${base} · ${era}`,view==='sounds'?'Choose a pronunciation':'Maximum 3 marks');
     tab('Pronunciation choices',view==='sounds',()=>showAza(base,'sounds'));
-    tab(state.era==='Modern'?'Build 12 diacritics':'Build 24 accents',view==='marks',()=>showAza(base,'marks',selectedMarks));
+    tab('Build 24 accents',view==='marks',()=>showAza(base,'marks',selectedMarks));
     if(view==='sounds'){
       const list=bridge.soundOptions(base,era),grid=make('div','choices-grid aza-choices');
       const simple=bridge.encode(base,[],era);
@@ -257,7 +257,7 @@
       const selections=[...selectedMarks];
       const builder=make('div','builder aza-builder');
       const preview=make('output','builder-preview aza-glyph-preview aza-'+era.toLowerCase());
-      const description=make('p','emoji-help',era==='Modern'?'Choose up to two phonetic diacritics. Separated Vowel requires a vowel-bearing host and a vowel subscript.':'Select up to three different marks (including specials), with at most one vowel. Earlier eras restrict special signs.');
+      const description=make('p','emoji-help','Select up to three different marks (including specials), with at most one vowel. Earlier eras restrict special signs.');
       const action=make('div','builder-top');
       const undo=make('button','','⌫ Undo'),clear=make('button','','Clear'),insert=make('button','insert-accent','Insert glyph');
       const msg=make('small','aza-mark-warning');

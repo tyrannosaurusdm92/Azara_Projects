@@ -47,10 +47,10 @@
       "fontFile": "fonts/Azaaraan-Modern.ttf",
       "subfamily": "Modern",
       "weightClass": 400,
-      "baseGlyphCount": 20,
-      "accentCount": 12,
+      "baseGlyphCount": 21,
+      "accentCount": 24,
       "specialMarkerCount": 4,
-      "codepointCount": 93,
+      "codepointCount": 58,
       "features": [
         "ccmp",
         "rlig",
@@ -753,219 +753,220 @@
     },
     {
       "era": "Modern",
-      "id": "M01",
-      "name": "Held Consonant",
-      "unicode": "៌",
+      "id": "C01",
+      "name": "Short A",
+      "unicode": "៊",
       "codepoints": [
-        "U+17CC"
+        "U+17CA"
       ],
-      "fontGlyph": "uni17CC",
-      "sourceImage": null,
-      "sourceLabel": "U+17CC",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Held Consonant",
-      "azaaraanMeaning": "Held Consonant",
+      "fontGlyph": "mark_C01",
+      "sourceImage": "U+0301.png",
+      "sourceLabel": "U+0301",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Acute",
+      "azaaraanMeaning": "Adds /æ/",
       "azaaraanExample": "T + Short A → /tæ/",
-      "display": "◌̎"
+      "display": "◌́"
     },
     {
       "era": "Modern",
-      "id": "M02",
-      "name": "Central Vowel",
-      "unicode": "ឹ",
+      "id": "C02",
+      "name": "Short E",
+      "unicode": "៎",
       "codepoints": [
-        "U+17B9"
+        "U+17CE"
       ],
-      "fontGlyph": "uni17B9",
-      "sourceImage": null,
-      "sourceLabel": "U+17B9",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Central Vowel",
-      "azaaraanMeaning": "Central Vowel",
+      "fontGlyph": "mark_C02",
+      "sourceImage": "U+0300.png",
+      "sourceLabel": "U+0300",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Grave",
+      "azaaraanMeaning": "Adds /ɛ/",
       "azaaraanExample": "B + Short E → /bɛ/",
-      "display": "◌̽"
+      "display": "◌̀"
     },
     {
       "era": "Modern",
-      "id": "M03",
-      "name": "Open Vowel",
-      "unicode": "ា",
+      "id": "C03",
+      "name": "Short I",
+      "unicode": "៏",
       "codepoints": [
-        "U+17B6"
+        "U+17CF"
       ],
-      "fontGlyph": "uni17B6",
-      "sourceImage": null,
-      "sourceLabel": "U+17B6",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Open Vowel",
-      "azaaraanMeaning": "Open Vowel",
+      "fontGlyph": "mark_C03",
+      "sourceImage": "U+0302.png",
+      "sourceLabel": "U+0302",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Circumflex",
+      "azaaraanMeaning": "Adds /ɪ/",
       "azaaraanExample": "P + Short I → /pɪ/",
-      "display": "◌̞"
+      "display": "◌̂"
     },
     {
       "era": "Modern",
-      "id": "M04",
-      "name": "Short Vowel",
-      "unicode": "់",
+      "id": "C04",
+      "name": "Short U",
+      "unicode": "័",
       "codepoints": [
-        "U+17CB"
+        "U+17D0"
       ],
-      "fontGlyph": "uni17CB",
-      "sourceImage": null,
-      "sourceLabel": "U+17CB",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Short Vowel",
-      "azaaraanMeaning": "Short Vowel",
+      "fontGlyph": "mark_C04",
+      "sourceImage": "U+030C.png",
+      "sourceLabel": "U+030C",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Caron",
+      "azaaraanMeaning": "Adds /ʌ/",
       "azaaraanExample": "R + Short U → /rʌ/",
-      "display": "◌̆"
+      "display": "◌̌"
     },
     {
       "era": "Modern",
-      "id": "M05",
-      "name": "Long Vowel",
-      "unicode": "ី",
+      "id": "C05",
+      "name": "Long A",
+      "unicode": "៍",
       "codepoints": [
-        "U+17B8"
+        "U+17CD"
       ],
-      "fontGlyph": "uni17B8",
-      "sourceImage": null,
-      "sourceLabel": "U+17B8",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Long Vowel",
-      "azaaraanMeaning": "Long Vowel",
+      "fontGlyph": "mark_C05",
+      "sourceImage": "U+0304.png",
+      "sourceLabel": "U+0304",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Macron",
+      "azaaraanMeaning": "Adds /ɑː/",
       "azaaraanExample": "K + Long A → /kɑː/",
       "display": "◌̄"
     },
     {
       "era": "Modern",
-      "id": "M06",
-      "name": "Unvoiced Sound",
-      "unicode": "៍",
+      "id": "C06",
+      "name": "Long E",
+      "unicode": "៝",
       "codepoints": [
-        "U+17CD"
+        "U+17DD"
       ],
-      "fontGlyph": "uni17CD",
-      "sourceImage": null,
-      "sourceLabel": "U+17CD",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Unvoiced Sound",
-      "azaaraanMeaning": "Unvoiced Sound",
+      "fontGlyph": "mark_C06",
+      "sourceImage": "U+0306.png",
+      "sourceLabel": "U+0306",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Breve",
+      "azaaraanMeaning": "Adds /iː/",
       "azaaraanExample": "S + Long E → /siː/",
-      "display": "◌̥"
+      "display": "◌̆"
     },
     {
       "era": "Modern",
-      "id": "M07",
-      "name": "Voiced Sound",
-      "unicode": "័",
-      "codepoints": [
-        "U+17D0"
-      ],
-      "fontGlyph": "uni17D0",
-      "sourceImage": null,
-      "sourceLabel": "U+17D0",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Voiced Sound",
-      "azaaraanMeaning": "Voiced Sound",
-      "azaaraanExample": "N + Long U → /nuː/",
-      "display": "◌̬"
-    },
-    {
-      "era": "Modern",
-      "id": "M08",
-      "name": "Separated Vowel",
+      "id": "C07",
+      "name": "Long U",
       "unicode": "ៈ",
       "codepoints": [
         "U+17C8"
       ],
-      "fontGlyph": "uni17C8",
-      "sourceImage": null,
-      "sourceLabel": "U+17C8",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Separated Vowel",
-      "azaaraanMeaning": "Separated Vowel",
-      "azaaraanExample": "N + G → /ŋ/",
+      "fontGlyph": "mark_C07",
+      "sourceImage": "U+0308.png",
+      "sourceLabel": "U+0308",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Diaeresis",
+      "azaaraanMeaning": "Adds /uː/",
+      "azaaraanExample": "N + Long U → /nuː/",
       "display": "◌̈"
     },
     {
       "era": "Modern",
-      "id": "M09",
-      "name": "Nasalization",
-      "unicode": "ំ",
+      "id": "C08",
+      "name": "G",
+      "unicode": "ឹ",
       "codepoints": [
-        "U+17C6"
+        "U+17B9"
       ],
-      "fontGlyph": "uni17C6",
-      "sourceImage": null,
-      "sourceLabel": "U+17C6",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Nasalization",
-      "azaaraanMeaning": "Nasalization",
-      "azaaraanExample": "K + W → /kw/; B + W → /v/",
+      "fontGlyph": "mark_C08",
+      "sourceImage": "U+0303.png",
+      "sourceLabel": "U+0303",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Tilde",
+      "azaaraanMeaning": "Adds /g/; nasal modification with N",
+      "azaaraanExample": "N + G → /ŋ/",
       "display": "◌̃"
     },
     {
       "era": "Modern",
-      "id": "M10",
-      "name": "Soft Sound",
-      "unicode": "៉",
+      "id": "C09",
+      "name": "W",
+      "unicode": "ឺ",
       "codepoints": [
-        "U+17C9"
+        "U+17BA"
       ],
-      "fontGlyph": "uni17C9",
-      "sourceImage": null,
-      "sourceLabel": "U+17C9",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Soft Sound",
-      "azaaraanMeaning": "Soft Sound",
+      "fontGlyph": "mark_C09",
+      "sourceImage": "U+0328.png",
+      "sourceLabel": "U+0328",
+      "category": "core accent",
+      "placement": "bottom",
+      "sourceTypefaceLabel": "Ogonek",
+      "azaaraanMeaning": "Adds /w/ or forms a glide",
+      "azaaraanExample": "K + W → /kw/; B + W → /v/",
+      "display": "◌̨"
+    },
+    {
+      "era": "Modern",
+      "id": "C10",
+      "name": "Y",
+      "unicode": "ើ",
+      "codepoints": [
+        "U+17BE"
+      ],
+      "fontGlyph": "mark_C10",
+      "sourceImage": "U+0327.png",
+      "sourceLabel": "U+0327",
+      "category": "core accent",
+      "placement": "bottom",
+      "sourceTypefaceLabel": "Cedilla",
+      "azaaraanMeaning": "Adds /j/ or a vowel glide",
       "azaaraanExample": "N + Y → /ɲ/; O + Y → /ɔɪ/",
-      "display": "◌̡"
+      "display": "◌̧"
     },
     {
       "era": "Modern",
-      "id": "M11",
-      "name": "Hard Sound",
-      "unicode": "៊",
+      "id": "C11",
+      "name": "F",
+      "unicode": "ៃ",
       "codepoints": [
-        "U+17CA"
+        "U+17C3"
       ],
-      "fontGlyph": "uni17CA",
-      "sourceImage": null,
-      "sourceLabel": "U+17CA",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Hard Sound",
-      "azaaraanMeaning": "Hard Sound",
+      "fontGlyph": "mark_C11",
+      "sourceImage": "U+0307.png",
+      "sourceLabel": "U+0307",
+      "category": "core accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "Dot above",
+      "azaaraanMeaning": "Adds /f/",
       "azaaraanExample": "B + F → /f/",
-      "display": "◌̣"
+      "display": "◌̇"
     },
     {
       "era": "Modern",
-      "id": "M12",
-      "name": "Glide Sound",
-      "unicode": "៎",
+      "id": "C12",
+      "name": "B",
+      "unicode": "្ក",
       "codepoints": [
-        "U+17CE"
+        "U+17D2",
+        "U+1780"
       ],
-      "fontGlyph": "uni17CE",
-      "sourceImage": null,
-      "sourceLabel": "U+17CE",
-      "category": "Modern phonetic diacritic",
-      "placement": "attached left/right; primary or secondary",
-      "sourceTypefaceLabel": "Modern approved mark Glide Sound",
-      "azaaraanMeaning": "Glide Sound",
+      "fontGlyph": "mark_C12",
+      "sourceImage": "U+0335.png",
+      "sourceLabel": "U+0335",
+      "category": "core accent",
+      "placement": "top_far",
+      "sourceTypefaceLabel": "Stroke overlay",
+      "azaaraanMeaning": "Adds /b/",
       "azaaraanExample": "W + B → /b/",
-      "display": "◌̯"
+      "display": "◌̵"
     }
   ],
   "khmerAccents": [
@@ -1616,6 +1617,222 @@
       "azaaraanMeaning": "Adds /t/",
       "azaaraanExample": "K + Short A + T → /kæt/",
       "display": "◌់"
+    },
+    {
+      "era": "Modern",
+      "id": "K01",
+      "name": "Z",
+      "unicode": "ា",
+      "codepoints": [
+        "U+17B6"
+      ],
+      "fontGlyph": "mark_K01",
+      "sourceImage": "U+17B6.png",
+      "sourceLabel": "U+17B6",
+      "category": "Khmer accent",
+      "placement": "right",
+      "sourceTypefaceLabel": "AA",
+      "azaaraanMeaning": "Adds /z/",
+      "azaaraanExample": "T + Short A + Z → /tæz/",
+      "display": "◌ា"
+    },
+    {
+      "era": "Modern",
+      "id": "K02",
+      "name": "S",
+      "unicode": "ិ",
+      "codepoints": [
+        "U+17B7"
+      ],
+      "fontGlyph": "mark_K02",
+      "sourceImage": "U+17B7.png",
+      "sourceLabel": "U+17B7",
+      "category": "Khmer accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "I",
+      "azaaraanMeaning": "Adds /s/",
+      "azaaraanExample": "K + S → /ks/",
+      "display": "◌ិ"
+    },
+    {
+      "era": "Modern",
+      "id": "K03",
+      "name": "CH",
+      "unicode": "ី",
+      "codepoints": [
+        "U+17B8"
+      ],
+      "fontGlyph": "mark_K03",
+      "sourceImage": "U+17B8.png",
+      "sourceLabel": "U+17B8",
+      "category": "Khmer accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "II",
+      "azaaraanMeaning": "Adds /tʃ/ or /dʒ/",
+      "azaaraanExample": "T + CH → /tʃ/; D + CH → /dʒ/",
+      "display": "◌ី"
+    },
+    {
+      "era": "Modern",
+      "id": "K04",
+      "name": "Hard H",
+      "unicode": "ុ",
+      "codepoints": [
+        "U+17BB"
+      ],
+      "fontGlyph": "mark_K04",
+      "sourceImage": "U+17BB.png",
+      "sourceLabel": "U+17BB",
+      "category": "Khmer accent",
+      "placement": "bottom",
+      "sourceTypefaceLabel": "U",
+      "azaaraanMeaning": "Modifies a consonant or vowel",
+      "azaaraanExample": "T + H → /θ/; S + H → /ʃ/; O + H → /oʊ/",
+      "display": "◌ុ"
+    },
+    {
+      "era": "Modern",
+      "id": "K05",
+      "name": "Base",
+      "unicode": "ូ",
+      "codepoints": [
+        "U+17BC"
+      ],
+      "fontGlyph": "mark_K05",
+      "sourceImage": "U+17BC.png",
+      "sourceLabel": "U+17BC",
+      "category": "Khmer accent",
+      "placement": "bottom",
+      "sourceTypefaceLabel": "UU",
+      "azaaraanMeaning": "Explicitly preserves the unmodified base sound",
+      "azaaraanExample": "T + Base → /t/",
+      "display": "◌ូ"
+    },
+    {
+      "era": "Modern",
+      "id": "K06",
+      "name": "D",
+      "unicode": "ួ",
+      "codepoints": [
+        "U+17BD"
+      ],
+      "fontGlyph": "mark_K06",
+      "sourceImage": "U+17BD.png",
+      "sourceLabel": "U+17BD",
+      "category": "Khmer accent",
+      "placement": "bottom",
+      "sourceTypefaceLabel": "UA",
+      "azaaraanMeaning": "Adds /d/",
+      "azaaraanExample": "B + Short E + D → /bɛd/",
+      "display": "◌ួ"
+    },
+    {
+      "era": "Modern",
+      "id": "K07",
+      "name": "K",
+      "unicode": "េ",
+      "codepoints": [
+        "U+17C1"
+      ],
+      "fontGlyph": "mark_K07",
+      "sourceImage": "U+17C1.png",
+      "sourceLabel": "U+17C1",
+      "category": "Khmer accent",
+      "placement": "left_high",
+      "sourceTypefaceLabel": "E",
+      "azaaraanMeaning": "Adds /k/",
+      "azaaraanExample": "B + Short A + K → /bæk/",
+      "display": "◌េ"
+    },
+    {
+      "era": "Modern",
+      "id": "K08",
+      "name": "L",
+      "unicode": "ែ",
+      "codepoints": [
+        "U+17C2"
+      ],
+      "fontGlyph": "mark_K08",
+      "sourceImage": "U+17C2.png",
+      "sourceLabel": "U+17C2",
+      "category": "Khmer accent",
+      "placement": "left_low",
+      "sourceTypefaceLabel": "AE",
+      "azaaraanMeaning": "Adds /l/",
+      "azaaraanExample": "B + Short E + L → /bɛl/",
+      "display": "◌ែ"
+    },
+    {
+      "era": "Modern",
+      "id": "K09",
+      "name": "M",
+      "unicode": "ោ",
+      "codepoints": [
+        "U+17C4"
+      ],
+      "fontGlyph": "mark_K09",
+      "sourceImage": "U+17C4.png",
+      "sourceLabel": "U+17C4",
+      "category": "Khmer accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "OO",
+      "azaaraanMeaning": "Adds /m/",
+      "azaaraanExample": "S + Short A + M → /sæm/",
+      "display": "◌ោ"
+    },
+    {
+      "era": "Modern",
+      "id": "K10",
+      "name": "N",
+      "unicode": "ំ",
+      "codepoints": [
+        "U+17C6"
+      ],
+      "fontGlyph": "mark_K10",
+      "sourceImage": "U+17C6.png",
+      "sourceLabel": "U+17C6",
+      "category": "Khmer accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "NIKAHIT",
+      "azaaraanMeaning": "Adds /n/",
+      "azaaraanExample": "P + Short I + N → /pɪn/",
+      "display": "◌ំ"
+    },
+    {
+      "era": "Modern",
+      "id": "K11",
+      "name": "R",
+      "unicode": "ះ",
+      "codepoints": [
+        "U+17C7"
+      ],
+      "fontGlyph": "mark_K11",
+      "sourceImage": "U+17C7.png",
+      "sourceLabel": "U+17C7",
+      "category": "Khmer accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "REAHMUK",
+      "azaaraanMeaning": "Adds rolled /r/",
+      "azaaraanExample": "K + Short A + R → /kær/",
+      "display": "◌ះ"
+    },
+    {
+      "era": "Modern",
+      "id": "K12",
+      "name": "T",
+      "unicode": "់",
+      "codepoints": [
+        "U+17CB"
+      ],
+      "fontGlyph": "mark_K12",
+      "sourceImage": "U+17CB.png",
+      "sourceLabel": "U+17CB",
+      "category": "Khmer accent",
+      "placement": "top",
+      "sourceTypefaceLabel": "BANTOC",
+      "azaaraanMeaning": "Adds /t/",
+      "azaaraanExample": "K + Short A + T → /kæt/",
+      "display": "◌់"
     }
   ],
   "specialMarkers": [
@@ -1818,15 +2035,15 @@
       "era": "Modern",
       "id": "S01",
       "name": "Glottal",
-      "unicode": "៏",
+      "unicode": "៉",
       "codepoints": [
-        "U+17CF"
+        "U+17C9"
       ],
-      "fontGlyph": "uni17CF",
-      "sourceImage": null,
-      "sourceLabel": "U+17CF",
+      "fontGlyph": "mark_S01",
+      "sourceImage": "glottal.png",
+      "sourceLabel": "U+17C9",
       "category": "special marker",
-      "placement": "above letter",
+      "placement": "top",
       "sourceTypefaceLabel": "Glottal stop",
       "azaaraanMeaning": "Glottal stop /ʔ/"
     },
@@ -1834,15 +2051,16 @@
       "era": "Modern",
       "id": "S02",
       "name": "Click",
-      "unicode": "ះ",
+      "unicode": "្ឃ",
       "codepoints": [
-        "U+17C7"
+        "U+17D2",
+        "U+1783"
       ],
-      "fontGlyph": "uni17C7",
-      "sourceImage": null,
-      "sourceLabel": "U+17C7",
+      "fontGlyph": "mark_S02",
+      "sourceImage": "click.png",
+      "sourceLabel": "U+17D2 + U+1783",
       "category": "special marker",
-      "placement": "above letter",
+      "placement": "bottom",
       "sourceTypefaceLabel": "Click",
       "azaaraanMeaning": "Click consonant /ǃ/"
     },
@@ -1850,15 +2068,15 @@
       "era": "Modern",
       "id": "S03",
       "name": "Previous syllable",
-      "unicode": "ិ",
+      "unicode": "៌",
       "codepoints": [
-        "U+17B7"
+        "U+17CC"
       ],
-      "fontGlyph": "uni17B7",
-      "sourceImage": null,
-      "sourceLabel": "U+17B7",
+      "fontGlyph": "mark_S03",
+      "sourceImage": "syllable_emphasis_previous.png",
+      "sourceLabel": "U+17CC",
       "category": "special marker",
-      "placement": "external syllable-emphasis sign",
+      "placement": "top",
       "sourceTypefaceLabel": "Previous syllable",
       "azaaraanMeaning": "Emphasizes previous syllable"
     },
@@ -1866,15 +2084,15 @@
       "era": "Modern",
       "id": "S04",
       "name": "Next syllable",
-      "unicode": "ូ",
+      "unicode": "៑",
       "codepoints": [
-        "U+17BC"
+        "U+17D1"
       ],
-      "fontGlyph": "uni17BC",
-      "sourceImage": null,
-      "sourceLabel": "U+17BC",
+      "fontGlyph": "mark_S04",
+      "sourceImage": "syllable_emphasis_next.png",
+      "sourceLabel": "U+17D1",
       "category": "special marker",
-      "placement": "external syllable-emphasis sign",
+      "placement": "top",
       "sourceTypefaceLabel": "Next syllable",
       "azaaraanMeaning": "Emphasizes next syllable"
     }
@@ -2512,14 +2730,12 @@
     "Modern": [
       {
         "key": "A",
-        "unicode": "អ",
+        "unicode": "ឯ",
         "codepoints": [
-          "U+17A2"
+          "U+17AF"
         ],
-        "sourceImage": null,
-        "advanceUnits": 720,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni17A2"
+        "sourceImage": "modern_34.png",
+        "advanceUnits": 720
       },
       {
         "key": "B",
@@ -2527,10 +2743,8 @@
         "codepoints": [
           "U+1794"
         ],
-        "sourceImage": null,
-        "advanceUnits": 833,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1794"
+        "sourceImage": "modern_18.png",
+        "advanceUnits": 833
       },
       {
         "key": "D",
@@ -2538,32 +2752,26 @@
         "codepoints": [
           "U+178A"
         ],
-        "sourceImage": null,
-        "advanceUnits": 753,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni178A"
+        "sourceImage": "modern_6.png",
+        "advanceUnits": 753
       },
       {
         "key": "E",
-        "unicode": "ឆ",
+        "unicode": "ឥ",
         "codepoints": [
-          "U+1786"
+          "U+17A5"
         ],
-        "sourceImage": null,
-        "advanceUnits": 820,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1786"
+        "sourceImage": "modern_36.png",
+        "advanceUnits": 820
       },
       {
         "key": "G",
-        "unicode": "គ",
+        "unicode": "ខ",
         "codepoints": [
-          "U+1782"
+          "U+1781"
         ],
-        "sourceImage": null,
-        "advanceUnits": 919,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1782"
+        "sourceImage": "modern_8.png",
+        "advanceUnits": 919
       },
       {
         "key": "H",
@@ -2571,54 +2779,44 @@
         "codepoints": [
           "U+17A0"
         ],
-        "sourceImage": null,
-        "advanceUnits": 377,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni17A0"
+        "sourceImage": "modern_22.png",
+        "advanceUnits": 377
       },
       {
         "key": "I",
-        "unicode": "ញ",
+        "unicode": "ឰ",
         "codepoints": [
-          "U+1789"
+          "U+17B0"
         ],
-        "sourceImage": null,
-        "advanceUnits": 749,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1789"
+        "sourceImage": "modern_35.png",
+        "advanceUnits": 749
       },
       {
         "key": "J",
-        "unicode": "ជ",
+        "unicode": "ច",
         "codepoints": [
-          "U+1787"
+          "U+1785"
         ],
-        "sourceImage": null,
-        "advanceUnits": 578,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1787"
+        "sourceImage": "modern_9.png",
+        "advanceUnits": 578
       },
       {
         "key": "K",
-        "unicode": "ក",
+        "unicode": "គ",
         "codepoints": [
-          "U+1780"
+          "U+1782"
         ],
-        "sourceImage": null,
-        "advanceUnits": 530,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1780"
+        "sourceImage": "modern_24.png",
+        "advanceUnits": 530
       },
       {
         "key": "L",
-        "unicode": "ល",
+        "unicode": "ឡ",
         "codepoints": [
-          "U+179B"
+          "U+17A1"
         ],
-        "sourceImage": null,
-        "advanceUnits": 580,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni179B"
+        "sourceImage": "modern_23.png",
+        "advanceUnits": 580
       },
       {
         "key": "M",
@@ -2626,10 +2824,8 @@
         "codepoints": [
           "U+1798"
         ],
-        "sourceImage": null,
-        "advanceUnits": 844,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1798"
+        "sourceImage": "modern_11.png",
+        "advanceUnits": 844
       },
       {
         "key": "N",
@@ -2637,21 +2833,17 @@
         "codepoints": [
           "U+1793"
         ],
-        "sourceImage": null,
-        "advanceUnits": 601,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1793"
+        "sourceImage": "modern_20.png",
+        "advanceUnits": 601
       },
       {
         "key": "O",
-        "unicode": "ង",
+        "unicode": "ឧ",
         "codepoints": [
-          "U+1784"
+          "U+17A7"
         ],
-        "sourceImage": null,
-        "advanceUnits": 919,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1784"
+        "sourceImage": "modern_33.png",
+        "advanceUnits": 919
       },
       {
         "key": "P",
@@ -2659,10 +2851,8 @@
         "codepoints": [
           "U+1796"
         ],
-        "sourceImage": null,
-        "advanceUnits": 523,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1796"
+        "sourceImage": "modern_12.png",
+        "advanceUnits": 523
       },
       {
         "key": "R",
@@ -2670,10 +2860,8 @@
         "codepoints": [
           "U+179A"
         ],
-        "sourceImage": null,
-        "advanceUnits": 857,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni179A"
+        "sourceImage": "modern_14.png",
+        "advanceUnits": 857
       },
       {
         "key": "S",
@@ -2681,10 +2869,8 @@
         "codepoints": [
           "U+179F"
         ],
-        "sourceImage": null,
-        "advanceUnits": 666,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni179F"
+        "sourceImage": "modern_21.png",
+        "advanceUnits": 666
       },
       {
         "key": "T",
@@ -2692,21 +2878,26 @@
         "codepoints": [
           "U+178F"
         ],
-        "sourceImage": null,
-        "advanceUnits": 540,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni178F"
+        "sourceImage": "modern_3.png",
+        "advanceUnits": 540
+      },
+      {
+        "key": "U",
+        "unicode": "ឩ",
+        "codepoints": [
+          "U+17A9"
+        ],
+        "sourceImage": "modern_37.png",
+        "advanceUnits": 726
       },
       {
         "key": "W",
-        "unicode": "វ",
+        "unicode": "ឆ",
         "codepoints": [
-          "U+179C"
+          "U+1786"
         ],
-        "sourceImage": null,
-        "advanceUnits": 920,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni179C"
+        "sourceImage": "modern_44.png",
+        "advanceUnits": 920
       },
       {
         "key": "Y",
@@ -2714,181 +2905,36 @@
         "codepoints": [
           "U+1799"
         ],
-        "sourceImage": null,
-        "advanceUnits": 918,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni1799"
+        "sourceImage": "modern_50.png",
+        "advanceUnits": 918
       },
       {
         "key": "Z",
-        "unicode": "ឝ",
+        "unicode": "ជ",
         "codepoints": [
-          "U+179D"
+          "U+1787"
         ],
-        "sourceImage": null,
-        "advanceUnits": 790,
-        "sourceFont": "Azaaraan-Modern.ttf",
-        "sourceFontGlyph": "uni179D"
+        "sourceImage": "modern_19.png",
+        "advanceUnits": 790
+      },
+      {
+        "key": "F",
+        "unicode": "ផ",
+        "codepoints": [
+          "U+1795"
+        ],
+        "sourceImage": "modern_18.png",
+        "familyVariant": true
+      },
+      {
+        "key": "V",
+        "unicode": "វ",
+        "codepoints": [
+          "U+179C"
+        ],
+        "sourceImage": "modern_18.png",
+        "familyVariant": true
       }
     ]
-  },
-  "modernKeyOrder": "ABDEGHIJKLMNOPRSTWYZ",
-  "modernDiacritics": [
-    {
-      "id": "held",
-      "name": "Held Consonant",
-      "khmer": "៌",
-      "display": "◌̎",
-      "codepoint": "U+17CC",
-      "number": 1,
-      "codepoints": [
-        "U+17CC"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17CC"
-    },
-    {
-      "id": "central",
-      "name": "Central Vowel",
-      "khmer": "ឹ",
-      "display": "◌̽",
-      "codepoint": "U+17B9",
-      "number": 2,
-      "codepoints": [
-        "U+17B9"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17B9"
-    },
-    {
-      "id": "open",
-      "name": "Open Vowel",
-      "khmer": "ា",
-      "display": "◌̞",
-      "codepoint": "U+17B6",
-      "number": 3,
-      "codepoints": [
-        "U+17B6"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17B6"
-    },
-    {
-      "id": "short",
-      "name": "Short Vowel",
-      "khmer": "់",
-      "display": "◌̆",
-      "codepoint": "U+17CB",
-      "number": 4,
-      "codepoints": [
-        "U+17CB"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17CB"
-    },
-    {
-      "id": "long",
-      "name": "Long Vowel",
-      "khmer": "ី",
-      "display": "◌̄",
-      "codepoint": "U+17B8",
-      "number": 5,
-      "codepoints": [
-        "U+17B8"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17B8"
-    },
-    {
-      "id": "unvoiced",
-      "name": "Unvoiced Sound",
-      "khmer": "៍",
-      "display": "◌̥",
-      "codepoint": "U+17CD",
-      "number": 6,
-      "codepoints": [
-        "U+17CD"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17CD"
-    },
-    {
-      "id": "voiced",
-      "name": "Voiced Sound",
-      "khmer": "័",
-      "display": "◌̬",
-      "codepoint": "U+17D0",
-      "number": 7,
-      "codepoints": [
-        "U+17D0"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17D0"
-    },
-    {
-      "id": "separate",
-      "name": "Separated Vowel",
-      "khmer": "ៈ",
-      "display": "◌̈",
-      "codepoint": "U+17C8",
-      "number": 8,
-      "codepoints": [
-        "U+17C8"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17C8"
-    },
-    {
-      "id": "nasal",
-      "name": "Nasalization",
-      "khmer": "ំ",
-      "display": "◌̃",
-      "codepoint": "U+17C6",
-      "number": 9,
-      "codepoints": [
-        "U+17C6"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17C6"
-    },
-    {
-      "id": "soft",
-      "name": "Soft Sound",
-      "khmer": "៉",
-      "display": "◌̡",
-      "codepoint": "U+17C9",
-      "number": 10,
-      "codepoints": [
-        "U+17C9"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17C9"
-    },
-    {
-      "id": "hard",
-      "name": "Hard Sound",
-      "khmer": "៊",
-      "display": "◌̣",
-      "codepoint": "U+17CA",
-      "number": 11,
-      "codepoints": [
-        "U+17CA"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17CA"
-    },
-    {
-      "id": "glide",
-      "name": "Glide Sound",
-      "khmer": "៎",
-      "display": "◌̯",
-      "codepoint": "U+17CE",
-      "number": 12,
-      "codepoints": [
-        "U+17CE"
-      ],
-      "placement": "primary / secondary (glyph-anchored)",
-      "fontGlyph": "uni17CE"
-    }
-  ]
+  }
 }
