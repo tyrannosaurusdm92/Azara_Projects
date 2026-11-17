@@ -4,6 +4,25 @@
   const $ = id => document.getElementById(id), data = window.KeyboardData, notes = window.Notes;
   const keyboard = $('keyboard'), bubble = $('keyboardBubble'), rows = $('keyRows');
   const state = { open: false, mode: 'letters', page: 0, caps: false, shift: 0, panel: null, language: 'qwerty', era: 'Modern' };
+
+  // Modern key art uses the uploaded font's body bounding boxes, not the
+  // tail-inclusive PNG bounds. Historical key artwork is left untouched.
+  function alignModernKeyArt(img, latin) {
+    const reg = window.AZ_FONT_REGISTRATION?.letters?.[latin];
+    if (!reg?.bbox || !reg?.bodyBBox) return;
+    const [xMin,yMin,xMax,yMax] = reg.bbox;
+    const [bxMin,byMin,bxMax,byMax] = reg.bodyBBox;
+    const scale = n => 'calc(var(--key-font) * ' + (n / 350 * .55).toFixed(6) + ')';
+    img.classList.add('aza-body-aligned');
+    img.style.width = scale(xMax-xMin);
+    img.style.height = scale(yMax-yMin);
+    img.style.left = 'calc(72% - ' + scale((bxMin+bxMax)/2-xMin) + ')';
+    img.style.top = 'calc(52% - ' + scale(yMax-(byMin+byMax)/2) + ')';
+    img.style.right = 'auto';
+    img.style.bottom = 'auto';
+    img.style.objectFit = 'fill';
+  }
+
   let frame = { x: 0, y: 0, width: 860, height: 410 }, bubblePosition = { x: 0, y: 0 };
   let bubbleSize=150;try{bubbleSize=Number(localStorage.getItem('azaaraan-bubble-size'))||150}catch{}
   let gesture = null, press = null, lastShift = 0, bubbleClickSuppressed = false, ignoredClickPointer = null;
@@ -83,7 +102,7 @@
         button.append(make('span', 'key-label', label));
         if (azaLetters && window.AzaaraanBridge.isLetter(raw)) {
           const art=window.AzaaraanBridge.art(raw,state.era);
-          if(art){const img=make('img','key-glyph-art');img.src=art;img.alt='';img.setAttribute('aria-hidden','true');button.append(img)}
+          if(art){const img=make('img','key-glyph-art');img.src=art;img.alt='';img.setAttribute('aria-hidden','true');if(state.era==='Modern')alignModernKeyArt(img,raw);button.append(img)}
           else button.append(make('span', 'key-symbol', window.AzaaraanBridge.glyph(raw,state.era)));
         }
         if (state.language==='azaaraan' && state.mode==='symbols' && window.AzaaraanBridge.symbol(raw)) {
