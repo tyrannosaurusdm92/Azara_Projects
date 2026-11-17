@@ -219,6 +219,18 @@ D.lines.forEach(line=>{
  const y1=D.stages[line.stage].y+25,y2=D.stages[line.stage+1].y-29;
  const x1=x(line.from),x2=x(line.to),mid=(y1+y2)/2,dx=x2-x1;
  const c1=x1+dx*.34,c2=x2-dx*.34,col=D.colors[line.family]||'#d0d0d0';
+ // The yellow 𓃚 /ʌ/ line loops into 𓄣 /æ/ between Traditional and
+ // Modern. The arrow meets the A stem *before* the Modern glyph row.
+ if(line.mergeBeforeModern && line.stage===4 && line.from===37 && line.to===34){
+  const joinY=D.stages[line.stage].y+73;
+  const bendY=D.stages[line.stage].y+85;
+  const path='M'+x1+' '+y1+
+   ' C'+(x1+8)+' '+(y1+27)+', '+(x1+20)+' '+(bendY+6)+', '+(x1-8)+' '+(bendY+15)+
+   ' C'+(x1-47)+' '+(bendY+25)+', '+(x2+63)+' '+(joinY+14)+', '+x2+' '+joinY;
+  addSvg('path',{class:'lineage uh-merge',d:path,stroke:col,'data-family':line.family},overlay);
+  addSvg('path',{class:'arrowtip uh-merge-tip',d:'M'+(x2+10)+' '+(joinY-6)+' L'+x2+' '+joinY+' L'+(x2+10)+' '+(joinY+6)+' Z',fill:col,'data-family':line.family},overlay);
+  return;
+ }
  addSvg('path',{class:'lineage',d:'M'+x1+' '+y1+' C '+c1+' '+mid+', '+c2+' '+mid+', '+x2+' '+y2,stroke:col,'data-family':line.family},overlay);
  addSvg('path',{class:'arrowtip',d:'M'+(x2-5.3)+' '+(y2-8)+' L'+x2+' '+y2+' L'+(x2+5.3)+' '+(y2-8)+' Z',fill:col,'data-family':line.family},overlay);
 });
