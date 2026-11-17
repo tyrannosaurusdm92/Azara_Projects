@@ -64,7 +64,7 @@
  }
  function encode(base,marks=[],era='Modern',subs=[],specials=[]){return tryEncode(base,marks,era,subs,specials).value||''}
  function glyph(base,era){return encode(base,[],era)}
- function preview(base,markIds,era,subs=[],specialIds=[]){const result=tryEncode(base,markIds,era,subs,specialIds);return result.value&&era==='Modern'?modern.createCluster(result.token):null}
+ function preview(base,markIds,era,subs=[],specialIds=[]){const result=tryEncode(base,markIds,era,subs,specialIds);return result.value?(era==='Modern'?modern.createCluster(result.token):result.token?.historicalArt?window.Notes?.previewAza(result.value,result.token):null):null}
  function soundOptions(base,era){return era==='Modern'?(window.AZ_MODERN_SOUNDS?.entries||[]).filter(x=>x.host===base && x.marks.length<=2).map(x=>({base:x.host,marks:x.marks,label:x.display,ipa:x.ipa})):[]}
  function availableMarks(era){return era==='Archaic'?marks.filter(x=>!['sLeft','sRight'].includes(x.id)):marks}
  function availableSubscripts(era){return era==='Modern'?Object.keys(canon.subs):[...Object.keys(canon.subs),'u']}
