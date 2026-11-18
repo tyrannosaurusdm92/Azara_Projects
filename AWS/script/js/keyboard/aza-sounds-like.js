@@ -42,7 +42,7 @@
   'ɪ':'ih (as in sit)','ɪs':'iss (as in hiss)','ɪn':'in','ɪt':'it','ɪm':'im (as in him)',
   'ɑː':'ah (as in father)','aw':'aw (as in awesome)','aɪ':'eye',
   'eɪ':'ay (as in day)','iː':'ee (as in see)','uː':'oo (as in moon)',
-  'oʊ':'oh (as in go)','ow':'ow (as in cow; archival notation)',
+  'oʊ':'oh (as in go)','ow':'ow (archival notation; exact pronunciation unconfirmed)',
   'ɔɪ':'oy (as in boy)','wɑ':'wah','wɛ':'weh','wɪ':'wih',
   'wuː':'woo','woʊ':'woe','wiː':'wee',
   'ja':'yah','jɛ':'yeh','jɪ':'yih','juː':'you','jiː':'yee','joʊ':'yoh',
@@ -158,7 +158,7 @@
   const word=WORDS[ipa]||say(ipa);
   const approximate=uncertain||!!missing.length;
   const qualification=missing.length?' (exact combination not defined; includes '+[...new Set(missing)].join(', ')+')':
-   approximate?' (approximate historical composition)':'';
+   approximate?(era==='Modern'?' (approximate; no exact modern reading documented)':' (approximate historical composition)'):'';
   const suffix=emphasis?' · syllable emphasis changes stress, not the letters’ sounds':'';
   return {text:'Sounds like '+word+qualification+suffix,ipa:ipa?'/'+ipa+'/':null,approximate};
  }
