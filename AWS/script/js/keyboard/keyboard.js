@@ -355,7 +355,7 @@
       status.textContent=result.error||`${result.value} · ${draft.marks.length}/2 main marks · ${draft.subs.length}/2 subscripts`;
       insert.disabled=!!result.error;
       target.replaceChildren();
-      for(const [value,label] of [['base','Independent '+base],...draft.subs.map((s,i)=>['sub'+i,'Subscript '+(i+1)+' · '+s.key])]){
+      for(const [value,label] of [['base','Independent '+base],...draft.subs.map((s,i)=>['sub'+i,'Subscript '+(i+1)+' · '+(s.ipa?'/'+s.ipa+'/':s.key)])]){
         const option=make('option','',label);option.value=value;target.append(option);
       }
       if(![...target.options].some(o=>o.value===draft.target))draft.target='base';target.value=draft.target;
@@ -364,28 +364,34 @@
         const selected=(isSpecial?draft.specials:currentMarks()||[]).includes(id);
         button.setAttribute('aria-pressed',String(selected));
         button.disabled=(sub&&(isSpecial||id==='separate'))||(era==='Modern'&&draft.target==='base'&&id==='separate'&&!['A','E','I','O','W','Y'].includes(base));
-        const image=button.querySelector('.aza-mark-art');if(image&&era==='Modern')image.src=(sub?assets.secondary?.[id]:assets.primary?.[id])||image.src;
+        const image=button.querySelector('.aza-mark-art');if(image&&era==='Modern')image.src=modernMarkPreview(id,sub&&!isSpecial);
         button.title=(sub?'Secondary mark on subscript: ':'Primary mark on independent letter: ')+bridge.markName(id);
       }
-      for(const button of subGrid.querySelectorAll('[data-sub]'))button.setAttribute('aria-pressed',String(draft.subs.some(s=>s.key===button.dataset.sub)));
+      for(const button of subGrid.querySelectorAll('[data-sub]'))button.setAttribute('aria-pressed',String(draft.subs.some(s=>s.key===button.dataset.sub&&(s.origin||'')===(button.dataset.origin||''))));
     }
     target.onchange=()=>{draft.target=target.value;draw()};
     undo.onclick=()=>{if(draft.target==='base'){if(draft.specials.length)draft.specials.pop();else draft.marks.pop()}else currentMarks()?.pop();draw()};
     clear.onclick=()=>{draft.marks=[];draft.specials=[];draft.subs=[];draft.target='base';draw()};
     insert.onclick=()=>{const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials,draft.origin||null);if(result.error)return notes.toast(result.error);notes.insert(result.value,result.token);closePanel()};
     actions.append(preview,undo,clear,insert);
-    for(const key of bridge.availableSubscripts(era)){
+    function modernMarkPreview(id,sub){return 'assets/keyboard/modern/preview/'+(sub?'Secondary_':'Primary_')+id+'.png'}
+    for(const option of bridge.subscriptOptions(era)){
+      const key=option.key;
       const button=make('button','choice aza-sub-option');button.type='button';button.dataset.sub=key;
+      if(option.origin)button.dataset.origin=option.origin;
+      if(era!=='Modern')button.append(make('span','aza-sub-ipa',option.label));
       button.append(make('span','aza-sub-latin',key));
       if(era==='Modern'){const img=assetImg(assets.subscripts?.[key],'aza-sub-art');if(img)button.append(img)}
-      else {const art=window.AZ_HISTORICAL_COMPOSER?.art(key,era);const image=assetImg(art,'aza-sub-art');if(image)button.append(image);else button.append(make('span','aza-sub-era-glyph aza-'+era.toLowerCase(),window.AZ_CANON.subs[key]||window.AZ_CANON.coeng+window.AZA_HISTORICAL_U))}
-      button.title='Subscript '+key+' · '+(era==='Modern'?(window.AZ_CANON.subs[key]||''):('independent '+key.toUpperCase()+' reduced to 20% in '+era));
-      button.onclick=()=>{const i=draft.subs.findIndex(s=>s.key===key);if(i>=0){draft.subs.splice(i,1);draft.target='base'}else if(draft.subs.length<2){draft.subs.push({key,marks:[]});draft.target='sub'+(draft.subs.length-1)}else return notes.toast('Maximum two subscripts.');draw()};subGrid.append(button);
+      else {const art=window.AZ_HISTORICAL_COMPOSER?.art(key,era,option.origin);const image=assetImg(art,'aza-sub-art');if(image)button.append(image)}
+      button.title=era==='Modern'?'Subscript '+key+' · '+(window.AZ_CANON.subs[key]||''):
+        'Subscript '+option.label+' · '+key.toUpperCase()+' family · original '+era+' independent artwork at 20%';
+      button.setAttribute('aria-label',button.title);
+      button.onclick=()=>{const i=draft.subs.findIndex(s=>s.key===key&&(s.origin||'')===(option.origin||''));if(i>=0){draft.subs.splice(i,1);draft.target='base'}else if(draft.subs.length<2){draft.subs.push({key,origin:option.origin||null,ipa:option.ipa||null,marks:[]});draft.target='sub'+(draft.subs.length-1)}else return notes.toast('Maximum two subscripts.');draw()};subGrid.append(button);
     }
     for(const mark of bridge.availableMarks(era)){
       const button=make('button','choice aza-mark-option');button.type='button';button.dataset.mark=mark.id;
       if(mark.special)button.dataset.special='true';
-      const thumb=assetImg(era==='Modern'?assets.primary?.[mark.id]:window.AZ_HISTORICAL_COMPOSER?.markArt(mark.id,era),'aza-mark-art');
+      const thumb=assetImg(era==='Modern'?modernMarkPreview(mark.id,false):window.AZ_HISTORICAL_COMPOSER?.markArt(mark.id,era),'aza-mark-art');
       if(thumb)button.append(thumb);
       button.append(make('span','aza-mark-symbol',mark.display),make('span','aza-mark-text',mark.name+' · '+mark.codepoint));
       button.title=mark.name+' · '+mark.codepoint;

@@ -94,27 +94,35 @@ function partsFor(input,era){
  const descending=new Set(['B','G','H','L','N','O','S','T','Z']);
  let start=body.x+(body.w-total)/2;
  if(descending.has(base))start=Math.max(start,body.x+body.w*.55);
- const underY=body.y+body.h+10;
+ const underY=Math.max(body.y+body.h+10,...parts.filter(p=>p.target==='base').map(p=>p.y+p.h+5));
+ let nextSubX=start;
  subs.forEach((sub,i)=>{
-  const key=String(sub.key||'').toUpperCase(),src=art(key,era);
+  const key=String(sub.key||'').toUpperCase(),src=art(key,era,sub.origin);
   if(!src)throw Error('Unavailable '+era+' dependent '+key);
-  const host={x:start+i*(subW+gap),y:underY,w:subW,h:subH};
-  add(src,'subscript',host.x,host.y,host.w,host.h,{letter:key,target:'sub'+i});
+  const previousRight=i?Math.max(...parts.filter(p=>p.target==='sub'+(i-1)).map(p=>p.x+p.w)):null;
+  const host={x:nextSubX,y:underY,w:subW,h:subH};
+  add(src,'subscript',host.x,host.y,host.w,host.h,{letter:key,origin:sub.origin||null,target:'sub'+i});
   placeMarks(sub.marks||[],host,'sub'+i,.2);
+  const own=parts.filter(p=>p.target==='sub'+i);
+  const shift=i?Math.max(0,previousRight+3-Math.min(...own.map(p=>p.x))):0;
+  if(shift)own.forEach(p=>p.x+=shift);
+  nextSubX=Math.max(host.x+host.w,...parts.filter(p=>p.target==='sub'+i).map(p=>p.x+p.w))+4;
  });
  return parts;
 }
 function createCluster(input,era){
  const parts=partsFor(input,era);
- const minX=Math.min(0,...parts.map(p=>p.x)),minY=Math.min(0,...parts.map(p=>p.y));
+ // Reserve the actual composed outline, including marks to the left/right.
+ // The old zero-origin strip left a full 48px of blank advance per letter.
+ const minX=Math.min(...parts.map(p=>p.x)),minY=Math.min(...parts.map(p=>p.y));
  const maxX=Math.max(...parts.map(p=>p.x+p.w));
  const maxY=Math.max(...parts.map(p=>p.y+p.h));
- const pad=7;
+ const pad=2;
  const root=document.createElement('span');
  root.className='aza-historical-cluster';
  root.dataset.azaEra=era.toLowerCase();
  root.dataset.azaBase=String(input.base||'');
- root.dataset.layout=JSON.stringify(parts.map(({kind,x,y,w,h,id,letter,target,parent})=>({kind,x,y,w,h,id,letter,target,parent})));
+ root.dataset.layout=JSON.stringify(parts.map(({kind,x,y,w,h,id,letter,origin,target,parent})=>({kind,x,y,w,h,id,letter,origin,target,parent})));
  root.style.cssText='position:relative;display:inline-block;vertical-align:baseline;line-height:0;white-space:nowrap;overflow:visible;';
  root.style.width=(maxX-minX+2*pad)+'px';root.style.height=(maxY-minY+2*pad)+'px';
  // An in-flow zero-width marker anchors inline writing at the bottom of the

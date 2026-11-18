@@ -87,22 +87,23 @@ function applyFontInkMargins(run,text,era){
  run.dataset.azaOpticalSpacing='font-ink';
 }
 function historicRun(run,text,token){
- const era=writingMode.era,assets=window.AZ_ASSETS,roots=window.AZA_DATA?.fontRoots?.[era]||{};
+ const era=writingMode.era,roots=window.AZA_DATA?.fontRoots?.[era]||{};
  const hidden=document.createElement('span');hidden.className='aza-logical-data';hidden.textContent=text;
  const cell=document.createElement('span');cell.className='aza-history-cell';cell.setAttribute('aria-hidden','true');
  const glyph=(src,classes)=>{
-  if(!src||!/^assets\/keyboard\/(?:modern\/|svg\/evolution\/)/.test(src))return null;
+  if(!src||!/^assets\/keyboard\/(?:modern\/|svg\/(?:evolution|marks)\/)/.test(src))return null;
   const img=document.createElement('img');img.src=src;img.alt='';img.className=classes;img.draggable=false;return img;
  };
  const main=glyph(token.historicalArt,'aza-history-base');if(!main)return null;cell.append(main);
- (token.marks||[]).forEach((id,i)=>{const img=glyph((i?assets?.secondary?.[id]:assets?.primary?.[id]),'aza-history-mark aza-history-mark-'+i);if(img)cell.append(img);});
- (token.specials||[]).forEach(id=>{const img=glyph(assets?.primary?.[id],'aza-history-special aza-history-special-'+id);if(img)cell.append(img);});
+ (token.marks||[]).forEach((id,i)=>{const img=glyph(window.AZ_HISTORICAL_COMPOSER?.markArt(id,era),'aza-history-mark aza-history-mark-'+i);if(img)cell.append(img);});
+ (token.specials||[]).forEach(id=>{const img=glyph(window.AZ_HISTORICAL_COMPOSER?.markArt(id,era),'aza-history-special aza-history-special-'+id);if(img)cell.append(img);});
  if(token.subs?.length){
   const row=document.createElement('span');row.className='aza-history-subs';
   token.subs.forEach(sub=>{
-   const root=Object.keys(roots).find(k=>roots[k]===sub.key.toUpperCase()),src=root?'assets/keyboard/svg/evolution/'+era.toLowerCase()+'/'+era.toLowerCase()+'_'+root+'.svg':null;
+   const root=Object.keys(roots).find(k=>roots[k]===sub.key.toUpperCase()),src=window.AZ_HISTORICAL_COMPOSER?.art(sub.key,era,sub.origin)||
+    (root?'assets/keyboard/svg/evolution/'+era.toLowerCase()+'/'+era.toLowerCase()+'_'+root+'.svg':null);
    const subcell=document.createElement('span');subcell.className='aza-history-sub',img=glyph(src,'aza-history-sub-art');if(img)subcell.append(img);
-   (sub.marks||[]).forEach((id,i)=>{const m=glyph(assets?.secondary?.[id],'aza-history-sub-mark aza-history-sub-mark-'+i);if(m)subcell.append(m);});row.append(subcell);
+   (sub.marks||[]).forEach((id,i)=>{const m=glyph(window.AZ_HISTORICAL_COMPOSER?.markArt(id,era),'aza-history-sub-mark aza-history-sub-mark-'+i);if(m)subcell.append(m);});row.append(subcell);
   });cell.append(row);
  }
  // The legacy F/V art uses a fixed 1.65em box; reserve only the portions

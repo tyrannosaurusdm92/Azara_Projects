@@ -175,20 +175,23 @@ body.aws-single-nav :is(textarea,input,[contenteditable="true"]).aza-writing,
 }
 
 /* Long-hold Aza'raan builder shows the actual available mark and subscript artwork. */
-#keyboard .aza-sub-grid{grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:5px}
+#keyboard .aza-sub-grid{grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
 #keyboard .aza-sub-option{
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
-  min-height:64px;padding:5px;overflow:hidden;
+  height:auto;min-height:84px;padding:5px;overflow:visible;
 }
+#keyboard .aza-sub-ipa{font:700 13px/1.15 "Noto Sans",Arial,sans-serif;color:#fff0ce;max-width:100%;overflow-wrap:anywhere;text-align:center}
 #keyboard .aza-sub-latin{font:700 14px/1.1 DeskSans,Arial,sans-serif;color:#f2d7a8}
-#keyboard .aza-sub-art{display:block;width:42px;height:33px;object-fit:contain;filter:brightness(0) invert(93%);pointer-events:none}
+#keyboard .aza-sub-art{display:block;width:50px;height:35px;flex:none;object-fit:contain;filter:brightness(0) invert(93%);pointer-events:none}
 #keyboard .aza-sub-era-glyph{display:block;font-size:24px;line-height:1.3;color:#f2d7a8}
 #keyboard .aza-sub-era-glyph.aza-archaic{font-family:AzArchaic,serif}
 #keyboard .aza-sub-era-glyph.aza-classical{font-family:AzClassical,serif}
 #keyboard .aza-sub-era-glyph.aza-traditional{font-family:AzTraditional,serif}
-#keyboard .aza-mark-option{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:80px;padding:4px}
-#keyboard .aza-mark-art{display:block;width:55px;height:44px;object-fit:contain;filter:brightness(0) invert(94%);pointer-events:none}
+#keyboard .aza-mark-grid{grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:6px}
+#keyboard .aza-mark-option{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:auto;min-height:105px;padding:7px 5px;overflow:visible}
+#keyboard .aza-mark-art{display:block;width:min(80px,100%);height:54px;flex:none;object-fit:contain;filter:brightness(0) invert(94%);pointer-events:none}
 #keyboard .aza-mark-option:has(.aza-mark-art) .aza-mark-symbol{font-size:14px;line-height:1.05}
+#keyboard .aza-mark-text{overflow-wrap:anywhere;line-height:1.2}
 #keyboard .aza-mark-option:disabled{opacity:.33;cursor:not-allowed}
 #keyboard .aza-mark-option[aria-pressed="true"],#keyboard .aza-sub-option[aria-pressed="true"]{outline:2px solid #f7c773;outline-offset:-2px}
 #keyboard .aza-target-row{position:sticky;top:0;z-index:2;background:#0c2025;padding:4px 2px;border-radius:5px}

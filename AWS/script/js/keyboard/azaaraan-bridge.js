@@ -72,6 +72,8 @@
   if(used.some(id=>!allowed.has(id)))return {value:null,error:'This mark is unavailable in '+era+'.'};
   if(mainMarks.length>2||subs.length>2||specialIds.length>4||subs.some(s=>(s.marks||[]).length>2))return {value:null,error:'Two phonetic marks per letter or subscript; two subscripts per host; four special controls.'};
   if(subs.some(s=>!availableSubscripts(era).includes(String(s.key).toLowerCase())))return {value:null,error:'This dependent letter is unavailable in '+era+'.'};
+  if(era!=='Modern'&&subs.some(s=>s.origin&&!historicalKeys(era).some(k=>k.origin===s.origin&&k.base.toLowerCase()===String(s.key).toLowerCase())))
+   return {value:null,error:'This historical subscript pronunciation is unavailable in '+era+'.'};
   if(specialIds.some(id=>!byId.get(id)?.special))return {value:null,error:'Special controls attach to the main letter only.'};
   const token=draft(aliasMarks.length?'B':base,{marks:mainMarks,subs,specials:specialIds});
   if(era!=='Modern')token.historicalEra=era;
@@ -126,7 +128,8 @@
   const seen=new Set();return [...doc,...legacy].filter(x=>{const k=x.base+':'+x.marks.join(',')+':'+x.ipa;if(seen.has(k))return false;seen.add(k);return true});
  }
  function availableMarks(era){return era==='Modern'?marks:[...historicMarks,...marks.filter(x=>x.special&&(era!=='Archaic'||!['sLeft','sRight'].includes(x.id)))]}
- function availableSubscripts(era){return era==='Modern'?Object.keys(canon.subs):rowsForEra(era).flat().filter(isLetter).map(ch=>ch.toLowerCase())}
+ function availableSubscripts(era){return era==='Modern'?Object.keys(canon.subs):[...new Set(historicalKeys(era).map(k=>k.base.toLowerCase()))]}
+ function subscriptOptions(era){return era==='Modern'?availableSubscripts(era).map(key=>({key,label:key})):historicalKeys(era).map(k=>({key:k.base.toLowerCase(),origin:k.origin,slot:k.slot,ipa:k.ipa,label:'/'+k.ipa+'/'}))}
  function markName(id){return byId.get(id)?.name||id}
  function art(base,era,origin=null){return era==='Modern'?(independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null):window.AZ_HISTORICAL_COMPOSER?.art(base,era,origin)||historicalArtwork(base,era)}
  function symbol(raw){return canon.nums[raw]||canon.punct[raw]||null}
@@ -172,5 +175,5 @@
  async function speakSelection(){const value=textToRead();if(!value)return window.Notes.toast('Choose text to pronounce.');updateSelectionPreview();return window.AzaaraanTTS?.readText(value)}
  function openSettings(){updateSelectionPreview();$('voiceSettings').showModal()}
  function showPage(which){if(which==='evolution')window.LiteraryFriendApp?.goToRole('language-evolution')}
- window.AzaaraanBridge={rows,rowsForEra,isLetter,historicalKeys,historicalKey,historicalGroups,handle,physicalValue,encode,tryEncode,glyph,preview,art,symbol,soundOptions,availableMarks,availableSubscripts,markName,loadChoice,saveChoice,speakSelection,openSettings,textToRead,showPage};
+ window.AzaaraanBridge={rows,rowsForEra,isLetter,historicalKeys,historicalKey,historicalGroups,handle,physicalValue,encode,tryEncode,glyph,preview,art,symbol,soundOptions,availableMarks,availableSubscripts,subscriptOptions,markName,loadChoice,saveChoice,speakSelection,openSettings,textToRead,showPage};
 })();
