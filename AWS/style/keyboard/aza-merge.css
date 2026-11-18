@@ -201,3 +201,15 @@ body.aws-single-nav :is(textarea,input,[contenteditable="true"]).aza-writing,
   letter-spacing:0!important;
   font-kerning:none;
 }
+
+/* 2026-11-17: Historical writers use the same host + two subscripts + two marks
+   composition structure as Modern. Existing SVG outlines and proportional
+   vector stroke weights are preserved; no synthetic stroke or outline added. */
+.aza-historical-cluster{position:relative;display:inline-block;line-height:0;white-space:nowrap;isolation:isolate}
+.aza-historical-cluster .aza-historical-layer{position:absolute;display:block;overflow:visible}
+.aza-historical-cluster .aza-historical-layer img{display:block;object-fit:contain;image-rendering:auto}
+#keyboard .aza-historical-cluster .aza-historical-layer img,
+#keyboard .aza-sub-art[src*="/svg/evolution/"],
+#keyboard .aza-mark-art[src*="/svg/marks/"]{filter:brightness(0) invert(94%)}
+.aza-script-run.aza-native-composite .aza-historical-cluster .aza-historical-layer img,
+.aza-writing .aza-historical-cluster .aza-historical-layer img{filter:brightness(0)!important}

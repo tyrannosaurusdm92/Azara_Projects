@@ -40,9 +40,10 @@
   const used=[...mainMarks,...specialIds,...subs.flatMap(s=>s.marks||[])];
   if(used.some(id=>!allowed.has(id)))return {value:null,error:'This mark is unavailable in '+era+'.'};
   if(mainMarks.length>2||subs.length>2||specialIds.length>4||subs.some(s=>(s.marks||[]).length>2))return {value:null,error:'Two phonetic marks per letter or subscript; two subscripts per host; four special controls.'};
-  if(subs.some(s=>!canon.subs[s.key]&&!(era!=='Modern'&&s.key==='u')))return {value:null,error:'Unknown subscript.'};
+  if(subs.some(s=>!availableSubscripts(era).includes(String(s.key).toLowerCase())))return {value:null,error:'This dependent letter is unavailable in '+era+'.'};
   if(specialIds.some(id=>!byId.get(id)?.special))return {value:null,error:'Special controls attach to the main letter only.'};
   const token=draft(aliasMarks.length?'B':base,{marks:mainMarks,subs,specials:specialIds});
+  if(era!=='Modern')token.historicalEra=era;
   if(era==='Modern'){
    const normalized=modern.normalizeLetter(token),error=modern.validateLetterRules(normalized);
    if(error)return {value:null,error};
@@ -50,6 +51,15 @@
   }
   // Pre-Modern letter drawings stay in their original era fonts. Historical U
   // is independently writable and can also be written as a dependent letter.
+  // Historical 24-accent rules: Base (K05) is exclusive and only one
+  // short/long vowel selector C01–C07 is permitted on each atomic letter.
+  function historicalMarkError(ids){
+   if(ids.includes('K05')&&ids.length>1)return 'Historical Base accent K05 must remain uncombined.';
+   if(ids.filter(id=>/^C0[1-7]$/.test(id)).length>1)return 'Choose only one historical vowel-length/quality accent per target.';
+   return null;
+  }
+  const oldError=historicalMarkError(mainMarks)||subs.map(s=>historicalMarkError(s.marks||[])).find(Boolean);
+  if(oldError)return {value:null,error:oldError};
   if(mainMarks.includes('voiced')&&mainMarks.includes('unvoiced'))return {value:null,error:'Voiced and Unvoiced cannot modify the same letter.'};
   if(subs.some(s=>(s.marks||[]).includes('voiced')&&(s.marks||[]).includes('unvoiced')))return {value:null,error:'Voiced and Unvoiced cannot modify the same subscript.'};
   if(subs.some(s=>(s.marks||[]).includes('separate')))return {value:null,error:'Separated Vowel attaches only to the independent letter.'};
@@ -60,14 +70,17 @@
      return {value:null,error:'Separated Vowel requires a true vowel-bearing subscript, not an invented subscript.'};
   }
   const ch=(base==='F'||base==='V')?canon.ind.B:(canon.ind[token.base]||window.AZA_HISTORICAL_U||'ឩ'),early=new Set(['soft','hard','held']);
+  // F/V are independent historical glyph IDs; do not mistake their dependent
+  // forms for historical U merely because Modern no longer encodes F or V.
+  const historicalSub=key=>(key==='f'||key==='v')?canon.ind.B:(canon.ind[key.toUpperCase()]||window.AZA_HISTORICAL_U);
   const enc=ids=>ids.map(id=>byId.get(id).unicode).join('');
   if(historicArt)token.historicalArt=historicArt;
   if(historicReading){token.historicalOrigin=historicReading.origin;token.historicalIpa=historicReading.ipa;}
-  return {value:ch+enc(mainMarks.filter(id=>early.has(id)))+subs.map(s=>canon.coeng+(canon.ind[s.key.toUpperCase()]||window.AZA_HISTORICAL_U)+enc(s.marks||[])).join('')+enc(mainMarks.filter(id=>!early.has(id)))+enc(specialIds),token};
+  return {value:ch+enc(mainMarks.filter(id=>early.has(id)))+subs.map(s=>canon.coeng+historicalSub(s.key)+enc(s.marks||[])).join('')+enc(mainMarks.filter(id=>!early.has(id)))+enc(specialIds),token};
  }
  function encode(base,marks=[],era='Modern',subs=[],specials=[]){return tryEncode(base,marks,era,subs,specials).value||''}
  function glyph(base,era){return encode(base,[],era)}
- function preview(base,markIds,era,subs=[],specialIds=[],origin=null){const result=tryEncode(base,markIds,era,subs,specialIds,origin);return result.value?(era==='Modern'?modern.createCluster(result.token):result.token?.historicalArt?window.Notes?.previewAza(result.value,result.token):null):null}
+ function preview(base,markIds,era,subs=[],specialIds=[],origin=null){const result=tryEncode(base,markIds,era,subs,specialIds,origin);return result.value?(era==='Modern'?modern.createCluster(result.token):window.AZ_HISTORICAL_COMPOSER?.createCluster(result.token,era)||null):null}
  function soundOptions(base,era){
   const ref=window.AZA_DOC_ERA_REFERENCE?.readings||[];
   if(era!=='Modern'){
@@ -82,9 +95,9 @@
   const seen=new Set();return [...doc,...legacy].filter(x=>{const k=x.base+':'+x.marks.join(',')+':'+x.ipa;if(seen.has(k))return false;seen.add(k);return true});
  }
  function availableMarks(era){return era==='Modern'?marks:[...historicMarks,...marks.filter(x=>x.special&&(era!=='Archaic'||!['sLeft','sRight'].includes(x.id)))]}
- function availableSubscripts(era){return era==='Modern'?Object.keys(canon.subs):[...Object.keys(canon.subs),'u']}
+ function availableSubscripts(era){return era==='Modern'?Object.keys(canon.subs):rowsForEra(era).flat().filter(isLetter).map(ch=>ch.toLowerCase())}
  function markName(id){return byId.get(id)?.name||id}
- function art(base,era){return historicalArtwork(base,era)||(era==='Modern'&&independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null)}
+ function art(base,era){return era==='Modern'?(independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null):window.AZ_HISTORICAL_COMPOSER?.art(base,era)||historicalArtwork(base,era)}
  function symbol(raw){return canon.nums[raw]||canon.punct[raw]||null}
  function handle(raw,era,notes){
   if(isLetter(raw)){const result=tryEncode(raw,[],era);if(result.error)notes.toast(result.error);else notes.insert(result.value,result.token);return true}

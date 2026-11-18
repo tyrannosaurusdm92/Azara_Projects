@@ -118,6 +118,15 @@ function historicRun(run,text,token){
 }
 function makeAzaRun(text,token){
  const run=document.createElement('span');run.className='aza-script-run era-'+writingMode.era.toLowerCase();run.dataset.azaEra=writingMode.era;run.contentEditable='false';run.lang='und';
+ if(writingMode.era!=='Modern'&&token?.type==='letter'&&window.AZ_HISTORICAL_COMPOSER?.createCluster){
+  try{
+   const hidden=document.createElement('span');hidden.className='aza-logical-data';hidden.textContent=text;
+   const visual=window.AZ_HISTORICAL_COMPOSER.createCluster(token,writingMode.era);
+   visual.classList.add('aza-inline-composed');visual.setAttribute('aria-hidden','true');
+   run.classList.add('aza-native-composite');run.dataset.azaBase=token.base;
+   run.append(hidden,visual);return run;
+  }catch(error){console.warn('Historical SVG composition fallback',error);}
+ }
  if(token?.historicalArt&&writingMode.era!=='Modern'){
   const historic=historicRun(run,text,token);if(historic)return historic;
  }
