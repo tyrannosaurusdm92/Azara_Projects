@@ -221,3 +221,50 @@ body.aws-single-nav :is(textarea,input,[contenteditable="true"]).aza-writing,
 #keyboard .aza-choice-glyph .aza-historical-cluster{zoom:.38}
 #keyboard .aza-choice-glyph:has(.aza-historical-cluster){min-height:68px;max-height:94px;overflow:visible}
 .aza-historical-cluster .aza-historical-baseline{pointer-events:none;opacity:0}
+
+/* IPA-keyed independent historical letter grid. Modern and QWERTY unaffected. */
+.keyboard .key-rows.aza-historical-ipa-layout{
+ overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;
+ scrollbar-color:#acbba3 #10282d;gap:7px;
+}
+.keyboard .aza-historical-ipa-layout>.aza-ipa-family{
+ flex:0 0 auto;min-height:69px;max-height:87px;justify-content:flex-start;
+ gap:6px;padding:0 4px 0 1px;overflow-x:auto;overflow-y:hidden;
+ scrollbar-width:thin;scrollbar-color:#5d918e transparent;
+}
+.keyboard .aza-historical-ipa-layout .aza-ipa-group-name{
+ flex:0 0 39px;display:flex;align-items:center;justify-content:center;
+ font:700 17px/1.1 DeskSans,Arial,sans-serif;color:#f6d9a8;
+ background:#103238;border:1px solid #c49f6e70;border-radius:7px;
+ position:sticky;left:0;z-index:2;
+}
+.keyboard .aza-historical-ipa-layout .aza-ipa-key{
+ flex:1 0 70px;min-width:70px;max-width:140px;min-height:64px;
+ display:flex;flex-direction:column;justify-content:flex-start;align-items:center;
+ padding:5px 2px 1px;position:relative;overflow:hidden;
+}
+.keyboard .aza-historical-ipa-layout .aza-ipa-key>.aza-ipa-label{
+ color:#f6e5c9!important;font-family:"Noto Sans",Arial,sans-serif!important;
+ font-size:clamp(12px,2.2vw,17px);line-height:1.1;font-weight:700;text-align:center;
+ max-width:100%;white-space:nowrap;
+}
+.keyboard .aza-historical-ipa-layout .aza-ipa-key>.aza-ipa-art{
+ position:static!important;display:block;max-width:42px!important;
+ max-height:38px!important;width:auto;height:auto;margin:4px auto 1px;
+ object-fit:contain;filter:brightness(0) invert(92%);pointer-events:none;
+}
+.keyboard .aza-historical-ipa-layout .aza-ipa-key>.aza-ipa-latin{
+ position:absolute;bottom:2px;right:3px;opacity:.65;
+ font:700 9px/1 DeskSans,Arial,sans-serif;color:#97cbd0;
+}
+.keyboard .aza-historical-ipa-layout>.aza-ipa-controls{
+ flex:0 0 44px;min-height:44px;position:sticky;bottom:0;z-index:4;
+ padding:2px 3px;background:#0a242c;border-top:1px solid #d7aa635c;gap:3px;
+}
+.keyboard .aza-historical-ipa-layout>.aza-ipa-controls>.key{min-width:26px}
+.keyboard .aza-historical-ipa-layout>.aza-ipa-controls>.key.space{
+ flex:3.2;min-width:45px;font-size:11px;
+}
+.keyboard .aza-historical-ipa-layout .aza-ipa-key:focus-visible{
+ outline:2px solid #00ffff;outline-offset:-2px;
+}

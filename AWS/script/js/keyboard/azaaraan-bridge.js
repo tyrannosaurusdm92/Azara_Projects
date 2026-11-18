@@ -12,6 +12,37 @@
  const specials = {AZA_GLOTTAL:'sOver',AZA_CLICK:'sUnder',AZA_PREV:'sLeft',AZA_NEXT:'sRight'};
  const preferenceKey = 'steampunk-azaaraan-keyboard-preferences-v1';
  function isLetter(key){return historical.has(key)}
+ const independentIPAOrder=['A','B','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','V','W','Y','Z'];
+ const azaAVowels=['ɑː','æ','ʌ','eɪ','aw'];
+ function historicalKeys(era){
+  if(era==='Modern')return [];
+  return (window.AZA_DOC_ERA_REFERENCE?.readings||[]).filter(r=>
+   r.era===era&&r.independent&&r.family!=='extra'&&r.slot
+  ).map(r=>{
+   const base=r.slot===7?'F':r.slot===18?'V':r.family;
+   const family=r.family==='U'?'A':r.slot===7?'F':r.slot===18?'V':r.family;
+   const ipaMatch=String(r.ipa||'').match(/\/([^/]+)\//);
+   const ipa=ipaMatch?ipaMatch[1]:r.ipa||r.sound||'';
+   return {key:'AZA_IPA_'+r.slot,slot:r.slot,era,origin:r.origin,
+     base,family,ipa,sound:r.sound,notes:r.notes};
+  });
+ }
+ function historicalKey(key,era){
+  if(!/^AZA_IPA_\d+$/.test(String(key)))return null;
+  return historicalKeys(era).find(k=>k.key===key)||null;
+ }
+ function historicalGroups(era){
+  const grouped=new Map();
+  for(const key of historicalKeys(era)){
+   if(!grouped.has(key.family))grouped.set(key.family,[]);
+   grouped.get(key.family).push(key);
+  }
+  return [...grouped].sort(([a],[b])=>independentIPAOrder.indexOf(a)-independentIPAOrder.indexOf(b))
+   .map(([family,keys])=>({family,keys:family==='A'?keys.sort((a,b)=>
+     (azaAVowels.indexOf(a.ipa)<0?99:azaAVowels.indexOf(a.ipa))-
+     (azaAVowels.indexOf(b.ipa)<0?99:azaAVowels.indexOf(b.ipa))):keys}));
+ }
+
  function rowsForEra(era){return rows.map(row => row.filter(key => (era!=='Modern'||!['F','U','V'].includes(key)) && (era!=='Traditional'||key!=='F') && (era!=='Archaic'||!['AZA_PREV','AZA_NEXT'].includes(key))));}
  function loadChoice(){try{const saved=JSON.parse(localStorage.getItem(preferenceKey)||'{}');return {language:saved.language==='azaaraan'?'azaaraan':'qwerty',era:['Archaic','Classical','Traditional','Modern'].includes(saved.era)?saved.era:'Modern'}}catch{return {language:'qwerty',era:'Modern'}}}
  function saveChoice(language,era){try{localStorage.setItem(preferenceKey,JSON.stringify({language,era}))}catch{}}
@@ -97,9 +128,11 @@
  function availableMarks(era){return era==='Modern'?marks:[...historicMarks,...marks.filter(x=>x.special&&(era!=='Archaic'||!['sLeft','sRight'].includes(x.id)))]}
  function availableSubscripts(era){return era==='Modern'?Object.keys(canon.subs):rowsForEra(era).flat().filter(isLetter).map(ch=>ch.toLowerCase())}
  function markName(id){return byId.get(id)?.name||id}
- function art(base,era){return era==='Modern'?(independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null):window.AZ_HISTORICAL_COMPOSER?.art(base,era)||historicalArtwork(base,era)}
+ function art(base,era,origin=null){return era==='Modern'?(independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null):window.AZ_HISTORICAL_COMPOSER?.art(base,era,origin)||historicalArtwork(base,era)}
  function symbol(raw){return canon.nums[raw]||canon.punct[raw]||null}
  function handle(raw,era,notes){
+  const sourceKey=historicalKey(raw,era);
+  if(sourceKey){const result=tryEncode(sourceKey.base,[],era,[],[],sourceKey.origin);if(result.error)notes.toast(result.error);else notes.insert(result.value,result.token);return true;}
   if(isLetter(raw)){const result=tryEncode(raw,[],era);if(result.error)notes.toast(result.error);else notes.insert(result.value,result.token);return true}
   if(specials[raw]){if(era==='Archaic'&&['AZA_PREV','AZA_NEXT'].includes(raw))return true;notes.insert(byId.get(specials[raw]).unicode);return true}
   return false;
@@ -139,5 +172,5 @@
  async function speakSelection(){const value=textToRead();if(!value)return window.Notes.toast('Choose text to pronounce.');updateSelectionPreview();return window.AzaaraanTTS?.readText(value)}
  function openSettings(){updateSelectionPreview();$('voiceSettings').showModal()}
  function showPage(which){if(which==='evolution')window.LiteraryFriendApp?.goToRole('language-evolution')}
- window.AzaaraanBridge={rows,rowsForEra,isLetter,handle,physicalValue,encode,tryEncode,glyph,preview,art,symbol,soundOptions,availableMarks,availableSubscripts,markName,loadChoice,saveChoice,speakSelection,openSettings,textToRead,showPage};
+ window.AzaaraanBridge={rows,rowsForEra,isLetter,historicalKeys,historicalKey,historicalGroups,handle,physicalValue,encode,tryEncode,glyph,preview,art,symbol,soundOptions,availableMarks,availableSubscripts,markName,loadChoice,saveChoice,speakSelection,openSettings,textToRead,showPage};
 })();

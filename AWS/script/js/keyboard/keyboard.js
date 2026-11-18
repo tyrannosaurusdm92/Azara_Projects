@@ -87,11 +87,51 @@
   }
   const labels = { SHIFT: '⇧', BACK: '⌫', SPACE: 'English (US)', ENTER: '↵', SYMBOLS: '123', ABC: 'ABC' };
   const aria = { SHIFT: 'Shift: reveal symbols; double tap to lock', BACK: 'Backspace', SPACE: 'Space', ENTER: 'Enter', SYMBOLS: 'Symbol keyboard', ABC: 'Letter keyboard', PAGE: 'Next symbol page' };
+  // One genuine original SVG glyph per independent IPA sound, rather than a
+  // single Latin key representing several unrelated ancestral letters.
+  function renderHistoricalIPAKeys(){
+    const bridge=window.AzaaraanBridge;
+    for(const group of bridge.historicalGroups(state.era)){
+      const row=make('div','key-row aza-ipa-family');
+      row.dataset.family=group.family;
+      const heading=make('span','aza-ipa-group-name',group.family);
+      heading.title=group.family+' historical independent family';
+      row.append(heading);
+      for(const entry of group.keys){
+        const button=make('button','key aza-key aza-ipa-key aza-'+state.era.toLowerCase());
+        button.type='button';button.dataset.key=entry.key;
+        button.dataset.origin=entry.origin;button.dataset.ipa=entry.ipa;button.dataset.base=entry.base;
+        button.append(make('span','key-label aza-ipa-label',entry.ipa));
+        const src=bridge.art(entry.base,state.era,entry.origin);
+        if(src){const img=make('img','key-glyph-art aza-ipa-art');img.src=src;img.alt='';img.draggable=false;img.setAttribute('aria-hidden','true');button.append(img);}
+        const keyHint=make('span','aza-ipa-latin',entry.base);
+        keyHint.setAttribute('aria-hidden','true');button.append(keyHint);
+        button.title='/'+entry.ipa+'/ · '+entry.sound+' · independent '+entry.base+' · hold for marks/subscripts';
+        button.setAttribute('aria-label',state.era+' independent /'+entry.ipa+'/ '+entry.sound+', hold for diacritics and subscripts');
+        row.append(button);
+      }
+      rows.append(row);
+    }
+    const controls=make('div','key-row aza-ipa-controls');
+    for(const raw of bridge.rowsForEra(state.era).at(-1).filter(key=>!bridge.isLetter(key))){
+      const button=make('button','key');button.type='button';button.dataset.key=raw;
+      const label=raw==='SPACE'?'Aza’raan':raw==='AZA_GLOTTAL'?'ʔ':raw==='AZA_CLICK'?'¡':raw==='AZA_PREV'?'‹':raw==='AZA_NEXT'?'›':labels[raw]||raw;
+      button.append(make('span','key-label',label));
+      if(['BACK','ENTER','SYMBOLS','AZA_GLOTTAL','AZA_CLICK','AZA_PREV','AZA_NEXT'].includes(raw))button.classList.add('wide');
+      if(raw==='SPACE')button.classList.add('space');
+      button.setAttribute('aria-label',aria[raw]||'Aza’raan '+raw);
+      controls.append(button);
+    }
+    rows.append(controls);
+  }
   function render() {
     rows.replaceChildren();
+    const historicalIPA=state.language==='azaaraan'&&state.mode==='letters'&&state.era!=='Modern';
+    rows.classList.toggle('aza-historical-ipa-layout',historicalIPA);
     const azaLetters = state.language === 'azaaraan' && state.mode === 'letters';
     const layout = state.mode === 'letters' ? (azaLetters ? window.AzaaraanBridge.rowsForEra(state.era) : data.alphaRows) : data.symbolPages[state.page];
-    layout.forEach((keys, rowIndex) => {
+    if(historicalIPA)renderHistoricalIPAKeys();
+    else layout.forEach((keys, rowIndex) => {
       const row = make('div', 'key-row' + (state.mode === 'letters' && rowIndex === 2 ? ' home-row' : ''));
       for (const raw of keys) {
         const button = make('button', 'key'); button.type = 'button'; button.dataset.key = raw;
@@ -128,7 +168,7 @@
     if (!rows.children.length) rows.append(make('div', 'key empty-message', 'No keys in this layout.'));
     keyboard.querySelector('[data-tool="case"]').hidden = state.language === 'azaaraan';
     keyboard.querySelector('[data-tool="case"]').setAttribute('aria-pressed', String(state.caps));
-    $('keyHint').textContent = state.language === 'azaaraan' ? 'Hold for marks and subscripts' : state.shift === 2 ? 'Symbols locked' : 'Hold for accents';
+    $('keyHint').textContent = historicalIPA ? 'Every IPA key is independent · hold to attach marks/subscripts' : state.language === 'azaaraan' ? 'Hold for marks and subscripts' : state.shift === 2 ? 'Symbols locked' : 'Hold for accents';
     $('footerMode').textContent = state.language === 'azaaraan' ? 'Aza’raan · '+state.era : 'QWERTY · English (US)';
     $('languageSelect').value=state.language;
     $('eraSelectWrap').hidden=state.language!=='azaaraan';
@@ -168,9 +208,10 @@
     event.preventDefault(); cancelPress();
     const raw = button.dataset.key, key = effective(raw);
     const current = { button, raw, id: event.pointerId, x: event.clientX, y: event.clientY, held: false };
+    const ipa=state.language==='azaaraan'&&state.mode==='letters'?window.AzaaraanBridge.historicalKey(raw,state.era):null;
     press = current; button.classList.add('is-held');
     if (raw === 'BACK') current.timer = setTimeout(() => { if (press !== current) return; current.held = true; notes.backspace(); current.repeat = setInterval(() => notes.backspace(), 70); }, 480);
-    else if ((state.language === 'azaaraan' && state.mode === 'letters' && window.AzaaraanBridge.isLetter(raw)) || letters(raw) || data.symbols[key]) current.timer = setTimeout(() => { if (press !== current) return; current.held = true; button.classList.remove('is-held'); state.language === 'azaaraan' && state.mode === 'letters' ? showAza(raw) : showAccents(key); }, 480);
+    else if (ipa || (state.language === 'azaaraan' && state.mode === 'letters' && window.AzaaraanBridge.isLetter(raw)) || letters(raw) || data.symbols[key]) current.timer = setTimeout(() => { if (press !== current) return; current.held = true; button.classList.remove('is-held'); if(ipa)showAza(ipa.base,'compose',{marks:[],subs:[],specials:[],target:'base',origin:ipa.origin});else state.language === 'azaaraan' && state.mode === 'letters' ? showAza(raw) : showAccents(key); }, 480);
   });
   document.addEventListener('pointermove', event => {
     if (!press || event.pointerId !== press.id) return;
@@ -196,14 +237,16 @@
   });
   rows.addEventListener('keydown', event => {
     const button = event.target.closest('[data-key]');
-    if (button && event.key === 'ArrowDown' && (letters(button.dataset.key) || data.symbols[button.dataset.key])) { event.preventDefault(); state.language === 'azaaraan' && state.mode === 'letters' ? showAza(button.dataset.key) : showAccents(effective(button.dataset.key)); }
+    if (button && event.key === 'ArrowDown' && (letters(button.dataset.key) || data.symbols[button.dataset.key] || window.AzaaraanBridge.historicalKey(button.dataset.key,state.era))) { event.preventDefault(); const ipa=window.AzaaraanBridge.historicalKey(button.dataset.key,state.era);if(ipa)showAza(ipa.base,'compose',{marks:[],subs:[],specials:[],target:'base',origin:ipa.origin});else state.language === 'azaaraan' && state.mode === 'letters' ? showAza(button.dataset.key) : showAccents(effective(button.dataset.key)); }
   });
   keyboard.addEventListener('contextmenu', event => {
     event.preventDefault();
     const button = event.target.closest('[data-key]');
     if (!button) return;
     const raw = button.dataset.key;
-    if (state.language === 'azaaraan' && state.mode === 'letters' && window.AzaaraanBridge.isLetter(raw)) showAza(raw);
+    const ipa=state.language==='azaaraan'&&state.mode==='letters'?window.AzaaraanBridge.historicalKey(raw,state.era):null;
+    if(ipa)showAza(ipa.base,'compose',{marks:[],subs:[],specials:[],target:'base',origin:ipa.origin});
+    else if (state.language === 'azaaraan' && state.mode === 'letters' && window.AzaaraanBridge.isLetter(raw)) showAza(raw);
     else if (letters(raw)) showAccents(effective(raw));
   });
   keyboard.addEventListener('pointerdown', event => {
@@ -273,14 +316,15 @@
     if(!bridge.isLetter(base))return;
     const draft=saved||{marks:[],specials:[],subs:[],target:'base'};
     state.panel={type:'azaaraan',base,view};
-    panel(`Aza’raan · ${base} · ${era}`,(era==='Modern'?'12 Modern marks':'24 historical marks')+' · two per target · two subscripts');
+    const sourceKey=draft.origin?bridge.historicalKeys(era).find(k=>k.origin===draft.origin):null;
+    panel(`Aza’raan · ${sourceKey?'/'+sourceKey.ipa+'/':base} · ${era}`,(era==='Modern'?'12 Modern marks':'24 historical marks')+' · two per target · two subscripts');
     tab('Diacritics + subscripts',view==='compose',()=>showAza(base,'compose',draft));
     tab('Readings',view==='sounds',()=>showAza(base,'sounds',draft));
     if(view==='sounds'){
       const grid=make('div','choices-grid aza-choices');
-      const simple=bridge.tryEncode(base,[],era);
+      const simple=bridge.tryEncode(base,[],era,[],[],draft.origin||null);
       grid.append(choice({value:simple.value,label:'Base '+base},()=>{notes.insert(simple.value,simple.token);closePanel();}));
-      for(const option of bridge.soundOptions(base,era)){
+      for(const option of bridge.soundOptions(base,era).filter(option=>!draft.origin||option.origin===draft.origin)){
         const result=bridge.tryEncode(option.base,option.marks,era,[],[],option.origin||null);
         if(result.error)continue;
         const button=make('button','choice aza-choice');button.type='button';
@@ -306,8 +350,8 @@
     const assetImg=(src,css)=>{if(!src)return null;const img=make('img',css);img.src=src;img.alt='';img.draggable=false;img.setAttribute('aria-hidden','true');return img;};
     function currentMarks(){return draft.target==='base'?draft.marks:draft.subs[Number(draft.target.slice(3))]?.marks}
     function draw(){
-      const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials);
-      preview.replaceChildren(result.value?(bridge.preview(base,draft.marks,era,draft.subs,draft.specials)||document.createTextNode(result.value)):document.createTextNode('—'));
+      const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials,draft.origin||null);
+      preview.replaceChildren(result.value?(bridge.preview(base,draft.marks,era,draft.subs,draft.specials,draft.origin||null)||document.createTextNode(result.value)):document.createTextNode('—'));
       status.textContent=result.error||`${result.value} · ${draft.marks.length}/2 main marks · ${draft.subs.length}/2 subscripts`;
       insert.disabled=!!result.error;
       target.replaceChildren();
@@ -328,7 +372,7 @@
     target.onchange=()=>{draft.target=target.value;draw()};
     undo.onclick=()=>{if(draft.target==='base'){if(draft.specials.length)draft.specials.pop();else draft.marks.pop()}else currentMarks()?.pop();draw()};
     clear.onclick=()=>{draft.marks=[];draft.specials=[];draft.subs=[];draft.target='base';draw()};
-    insert.onclick=()=>{const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials);if(result.error)return notes.toast(result.error);notes.insert(result.value,result.token);closePanel()};
+    insert.onclick=()=>{const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials,draft.origin||null);if(result.error)return notes.toast(result.error);notes.insert(result.value,result.token);closePanel()};
     actions.append(preview,undo,clear,insert);
     for(const key of bridge.availableSubscripts(era)){
       const button=make('button','choice aza-sub-option');button.type='button';button.dataset.sub=key;
