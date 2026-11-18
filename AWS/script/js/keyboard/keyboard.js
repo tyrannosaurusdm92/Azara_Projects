@@ -339,6 +339,9 @@
     const builder=make('div','builder aza-builder');
     const preview=make('output','builder-preview aza-glyph-preview aza-'+era.toLowerCase());
     const status=make('small','aza-mark-warning');
+    const soundHelp=make('div','aza-sound-hover');
+    soundHelp.setAttribute('role','status');
+    soundHelp.setAttribute('aria-live','polite');
     const actions=make('div','builder-top');
     const undo=make('button','','Undo'),clear=make('button','','Clear'),insert=make('button','insert-accent','Insert glyph');
     const target=make('select','aza-target');target.setAttribute('aria-label','Attach marks to');
@@ -349,6 +352,69 @@
     const assets=window.AZ_ASSETS||{};
     const assetImg=(src,css)=>{if(!src)return null;const img=make('img',css);img.src=src;img.alt='';img.draggable=false;img.setAttribute('aria-hidden','true');return img;};
     function currentMarks(){return draft.target==='base'?draft.marks:draft.subs[Number(draft.target.slice(3))]?.marks}
+    // Hover and keyboard focus simulate the exact next click, without mutating
+    // the composer draft or inserting any text into the writing editor.
+    let hoveredSoundOption=null;
+    function projected(button){
+      const next={...draft,marks:[...draft.marks],specials:[...draft.specials],
+        subs:draft.subs.map(s=>({...s,marks:[...(s.marks||[])]}))};
+      if(button?.hasAttribute('data-sub')){
+        const key=button.dataset.sub,origin=button.dataset.origin||null;
+        const index=next.subs.findIndex(s=>s.key===key&&(s.origin||null)===origin);
+        if(index>=0)next.subs.splice(index,1);
+        else if(next.subs.length>=2)return {error:'Maximum two subscripts per independent letter.'};
+        else next.subs.push({key,origin,ipa:button.dataset.ipa||null,marks:[]});
+      }else if(button?.hasAttribute('data-mark')){
+        const id=button.dataset.mark,isSpecial=button.hasAttribute('data-special');
+        if(next.target!=='base'&&(isSpecial||id==='separate'))
+          return {error:'This mark attaches only to the independent letter.'};
+        const index=next.target==='base'?-1:Number(next.target.slice(3));
+        const list=isSpecial?next.specials:index<0?next.marks:next.subs[index]?.marks;
+        if(!list)return {error:'Select an independent letter or subscript first.'};
+        const pos=list.indexOf(id);
+        if(pos>=0)list.splice(pos,1);
+        else if(list.length<(isSpecial?4:2))list.push(id);
+        else return {error:isSpecial?'Maximum four special controls.':'Maximum two diacritics on this letter or subscript.'};
+      }
+      const result=bridge.tryEncode(base,next.marks,era,next.subs,next.specials,next.origin||null);
+      if(result.error)return {error:result.error};
+      return {sound:window.AZA_SOUNDS_LIKE?.describe({era,base,marks:next.marks,
+        subs:next.subs,specials:next.specials,origin:next.origin||null})};
+    }
+    function pronounceAfter(button=null){
+      const projectedReading=projected(button);
+      const optionName=button?(button.hasAttribute('data-sub')?
+        'Subscript '+(button.dataset.ipa?'/'+button.dataset.ipa+'/':button.dataset.sub.toUpperCase()):
+        bridge.markName(button.dataset.mark)):'Current glyph';
+      if(projectedReading.error){
+        soundHelp.textContent=optionName+' → Cannot apply: '+projectedReading.error;
+        return;
+      }
+      const spoken=projectedReading.sound;
+      soundHelp.textContent=optionName+' → '+(spoken?
+        spoken.text+(spoken.ipa?' · IPA '+spoken.ipa:''):
+        'Pronunciation data is unavailable');
+    }
+    function refreshSoundTitles(){
+      for(const button of [...markGrid.querySelectorAll('[data-mark]'),...subGrid.querySelectorAll('[data-sub]')]){
+        const result=projected(button);
+        const name=button.hasAttribute('data-sub')?
+          'Subscript '+(button.dataset.ipa?'/'+button.dataset.ipa+'/':button.dataset.sub.toUpperCase()):
+          bridge.markName(button.dataset.mark);
+        const description=result.error?'Cannot apply: '+result.error:result.sound?
+          result.sound.text+(result.sound.ipa?' · IPA '+result.sound.ipa:''):
+          'Pronunciation data unavailable';
+        button.title=name+' — '+description;
+        button.setAttribute('aria-label',name+'. '+description);
+        button.setAttribute('aria-description',description);
+      }
+    }
+    function listenForSound(button){
+      button.addEventListener('mouseenter',()=>{hoveredSoundOption=button;pronounceAfter(button)});
+      button.addEventListener('mouseleave',()=>{if(hoveredSoundOption===button){hoveredSoundOption=null;pronounceAfter()}});
+      button.addEventListener('focus',()=>{hoveredSoundOption=button;pronounceAfter(button)});
+      button.addEventListener('blur',()=>{if(hoveredSoundOption===button){hoveredSoundOption=null;pronounceAfter()}});
+    }
     function draw(){
       const result=bridge.tryEncode(base,draft.marks,era,draft.subs,draft.specials,draft.origin||null);
       preview.replaceChildren(result.value?(bridge.preview(base,draft.marks,era,draft.subs,draft.specials,draft.origin||null)||document.createTextNode(result.value)):document.createTextNode('—'));
@@ -368,6 +434,8 @@
         button.title=(sub?'Secondary mark on subscript: ':'Primary mark on independent letter: ')+bridge.markName(id);
       }
       for(const button of subGrid.querySelectorAll('[data-sub]'))button.setAttribute('aria-pressed',String(draft.subs.some(s=>s.key===button.dataset.sub&&(s.origin||'')===(button.dataset.origin||''))));
+      refreshSoundTitles();
+      pronounceAfter(hoveredSoundOption);
     }
     target.onchange=()=>{draft.target=target.value;draw()};
     undo.onclick=()=>{if(draft.target==='base'){if(draft.specials.length)draft.specials.pop();else draft.marks.pop()}else currentMarks()?.pop();draw()};
@@ -379,6 +447,7 @@
       const key=option.key;
       const button=make('button','choice aza-sub-option');button.type='button';button.dataset.sub=key;
       if(option.origin)button.dataset.origin=option.origin;
+      if(option.ipa)button.dataset.ipa=option.ipa;
       if(era!=='Modern')button.append(make('span','aza-sub-ipa',option.label));
       button.append(make('span','aza-sub-latin',key));
       if(era==='Modern'){const img=assetImg(assets.subscripts?.[key],'aza-sub-art');if(img)button.append(img)}
@@ -386,7 +455,7 @@
       button.title=era==='Modern'?'Subscript '+key+' · '+(window.AZ_CANON.subs[key]||''):
         'Subscript '+option.label+' · '+key.toUpperCase()+' family · original '+era+' independent artwork at 20%';
       button.setAttribute('aria-label',button.title);
-      button.onclick=()=>{const i=draft.subs.findIndex(s=>s.key===key&&(s.origin||'')===(option.origin||''));if(i>=0){draft.subs.splice(i,1);draft.target='base'}else if(draft.subs.length<2){draft.subs.push({key,origin:option.origin||null,ipa:option.ipa||null,marks:[]});draft.target='sub'+(draft.subs.length-1)}else return notes.toast('Maximum two subscripts.');draw()};subGrid.append(button);
+      button.onclick=()=>{const i=draft.subs.findIndex(s=>s.key===key&&(s.origin||'')===(option.origin||''));if(i>=0){draft.subs.splice(i,1);draft.target='base'}else if(draft.subs.length<2){draft.subs.push({key,origin:option.origin||null,ipa:option.ipa||null,marks:[]});draft.target='sub'+(draft.subs.length-1)}else return notes.toast('Maximum two subscripts.');draw()};listenForSound(button);subGrid.append(button);
     }
     for(const mark of bridge.availableMarks(era)){
       const button=make('button','choice aza-mark-option');button.type='button';button.dataset.mark=mark.id;
@@ -400,9 +469,9 @@
         if(mark.id==='separate'&&draft.target!=='base')return notes.toast('Separated Vowel attaches to the independent letter.');
         const list=mark.special?draft.specials:currentMarks();if(!list)return;
         const i=list.indexOf(mark.id);if(i>=0)list.splice(i,1);else if(list.length<(mark.special?4:2))list.push(mark.id);else return notes.toast(mark.special?'Maximum four special controls.':'Maximum two phonetic marks on this target.');draw();
-      };markGrid.append(button);
+      };listenForSound(button);markGrid.append(button);
     }
-    builder.append(actions,status,subtitle,targets,make('h4','','Dependent / subscript letters'),subGrid,make('h4','','Diacritics, click, glottal and emphasis'),markGrid);
+    builder.append(actions,status,soundHelp,subtitle,targets,make('h4','','Dependent / subscript letters'),subGrid,make('h4','','Diacritics, click, glottal and emphasis'),markGrid);
     $('panelContent').append(builder);draw();
   }
 
