@@ -271,3 +271,14 @@ body.aws-single-nav :is(textarea,input,[contenteditable="true"]).aza-writing,
 .keyboard .aza-historical-ipa-layout .aza-ipa-key:focus-visible{
  outline:2px solid #00ffff;outline-offset:-2px;
 }
+
+/* Live phonetic hover/focus readout in the existing glyph composer. */
+#keyboard .aza-builder .aza-sound-hover{
+ display:block;box-sizing:border-box;width:100%;max-width:100%;min-height:36px;
+ padding:8px 10px;margin:6px 0 8px;line-height:1.4;overflow-wrap:anywhere;
+ color:#fff2d5;background:#102a32;border:1px solid #b99e68a6;
+ border-radius:7px;font:600 clamp(12px,1.65vw,14px)/1.4 DeskSans,Arial,sans-serif;
+}
+#keyboard .aza-mark-option:focus-visible,#keyboard .aza-sub-option:focus-visible{
+ outline:2px solid #00ffff;outline-offset:2px;
+}
