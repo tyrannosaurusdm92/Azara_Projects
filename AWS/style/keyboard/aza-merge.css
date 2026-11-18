@@ -213,3 +213,11 @@ body.aws-single-nav :is(textarea,input,[contenteditable="true"]).aza-writing,
 #keyboard .aza-mark-art[src*="/svg/marks/"]{filter:brightness(0) invert(94%)}
 .aza-script-run.aza-native-composite .aza-historical-cluster .aza-historical-layer img,
 .aza-writing .aza-historical-cluster .aza-historical-layer img{filter:brightness(0)!important}
+
+/* Independent-letter ink stays readable at native keyboard preview sizes;
+   manuscript scaling matches the Modern compositor without using raster
+   re-stroking. Secondary/subscript strokes scale from original vector paths. */
+#keyboard .aza-glyph-preview .aza-historical-cluster{zoom:.53}
+#keyboard .aza-choice-glyph .aza-historical-cluster{zoom:.38}
+#keyboard .aza-choice-glyph:has(.aza-historical-cluster){min-height:68px;max-height:94px;overflow:visible}
+.aza-historical-cluster .aza-historical-baseline{pointer-events:none;opacity:0}

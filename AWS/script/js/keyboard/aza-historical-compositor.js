@@ -117,6 +117,14 @@ function createCluster(input,era){
  root.dataset.layout=JSON.stringify(parts.map(({kind,x,y,w,h,id,letter,target,parent})=>({kind,x,y,w,h,id,letter,target,parent})));
  root.style.cssText='position:relative;display:inline-block;vertical-align:baseline;line-height:0;white-space:nowrap;overflow:visible;';
  root.style.width=(maxX-minX+2*pad)+'px';root.style.height=(maxY-minY+2*pad)+'px';
+ // An in-flow zero-width marker anchors inline writing at the bottom of the
+ // independent body, not at the last dependent mark. This matches the
+ // composed-text baseline behavior in the Modern writing editor.
+ const body=parts.find(p=>p.kind==='base');
+ const baseline=document.createElement('span');baseline.className='aza-historical-baseline';
+ baseline.style.cssText='display:inline-block;width:0;line-height:0;font-size:0;vertical-align:baseline;';
+ baseline.style.height=(body.y+body.h-minY+pad)+'px';
+ root.append(baseline);
  for(const p of parts){
   const shell=document.createElement('span');shell.className='aza-historical-layer aza-historical-'+p.kind;
   shell.dataset.kind=p.kind;shell.dataset.target=p.target||'base';if(p.id)shell.dataset.mark=p.id;
