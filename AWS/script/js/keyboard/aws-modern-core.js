@@ -163,9 +163,22 @@ function pickMark(group,id,frame,positions,kind,target,avoid=[]){
  // rectangles (the original used pixel masks for outline collision).
  return atInk(group,id,...positions[0],frame,kind,target);
 }
+/* Exact historic tail profile, sampled in original TTF rows 10 units apart.
+   Do not place tiny subscripts or their accents over the descending stems. */
+const ORIGINAL_DESCENT_RIGHT={"B":"547 544 541 537 533 529 525 521 516 511 506 502 497 492 487 482 476 470 465 459 453 448 442 436 431 425 418 412 405 399 393 386 380 373 367 361 354 347 340 333 326 319 311 304 297 290 283 276 268 260 252 245 237 229 221 213 205 197 189 181 172 163 155 146 137 129 120 111 102 92 83 74 64","G":"574 568 563 557 552 547 541 536 530 525 519 513 507 501 495 489 483 476 470 463 457 451 444 438 430 423 416 408 401 394 386 379 372 364 356 348 340 332 323 315 307 299 291 283 274 265 255 246 237 228 219 210 201 192 182 172 162 152 142 131 120 109 97 86 75 63","H":"850 845 839 832 826 820 814 807 801 794 787 780 773 765 758 751 744 736 729 721 713 705 697 689 681 673 665 656 647 638 630 621 612 604 594 584 574 564 554 544 534 524 514 504 494 483 472 461 450","L":"821 815 809 803 797 791 785 778 771 765 758 751 744 736 729 722 714 707 699 692 684 676 668 660 652 644 636 627 618 609 601 592 583 574 565 557 547 537 527 518 508 498 488 477 466 454 441 428 416 401","N":"782 776 769 763 757 751 745 739 732 726 719 713 706 699 692 684 677 669 662 654 646 638 630 622 613 605 596 587 579 570 561 551 541 531 521 511 501 491 480 470 458 446 434 422 410","O":"617 612 607 601 596 592 587 582 577 572 567 563 558 553 548 543 538 533 527 522 516 511 506 500 493 487 481 475 469 463 456 450 443 435 428 421 413 406 399 392 384 376 368 360 351 343 335 327 318 310 301 292 282 273 263 253 244 234 225 215 205 194 184 173 162 151 141 129 117 106 94 81 68","S":"807 802 796 791 785 779 773 767 760 754 747 741 734 727 720 713 706 699 691 684 676 668 660 652 644 635 626 617 609 600 591 582 572 563 554 544 534 524 514 503 492 481 471 459 448 436 425","T":"732 727 721 715 709 703 697 691 685 678 671 665 658 651 643 636 629 621 614 606 598 590 583 574 566 557 549 540 531 522 513 504 494 484 474 464 454 444 434 423 412 400 388 377","Z":"748 742 736 730 724 718 712 706 699 692 686 679 672 664 657 650 642 634 626 618 609 601 593 584 576 567 559 550 540 531 521 512 502 492 482 472 462 452 442 431 420 409 398 387"};
+const DESCENT_SCAN=Object.fromEntries(Object.entries(ORIGINAL_DESCENT_RIGHT).map(([key,str])=>[key,str.split(' ').map(Number)]));
+function tailRightAt(key,top,bottom){
+ const scan=DESCENT_SCAN[key];if(!scan)return -Infinity;
+ let xmax=-Infinity;
+ for(let i=0;i<scan.length;i++){
+  const fontTop=-40-10*i,rowTop=-fontTop/FONT_UNITS_PER_PIXEL,rowBottom=-(fontTop-10)/FONT_UNITS_PER_PIXEL;
+  if(rowBottom>=top&&rowTop<=bottom)xmax=Math.max(xmax,scan[i]/FONT_UNITS_PER_PIXEL);
+ }
+ return xmax;
+}
 function modernParts(input){
  const t=normalizeLetter(input),reg=FONT_REG[t.base],body=boundsFor(reg[1]),base=headlessBase(t.base);
- const pieces=[base];
+ const pieces=[];
  let primary=null;
  if(t.marks.length){
   const id=t.marks[0],idx=MARK_ORDER.indexOf(id),frame=(t.base==='O'&&id==='long')?260:NATIVE_PRIMARY_SIZE;
@@ -173,6 +186,8 @@ function modernParts(input){
   primary=rectPart('primary',id,primaryPos[0],primaryPos[1],frame,'primary','base');
   pieces.push(primary);
  }
+ // Original layering: primary enclosure is behind the independent glyph.
+ pieces.push(base);
  if(t.marks.length>1){
   const id=t.marks[1],d=inkInfo('secondary',id,NATIVE_SECONDARY_SIZE);
   const p=primary.rect;
@@ -216,16 +231,8 @@ function modernParts(input){
   let x=body.x+(body.w-total)/2;
   const priorPrimary=(primary&&primary.rect)||null;
   let y=Math.max(body.y+body.h+11,priorPrimary?priorPrimary.y+priorPrimary.h+5:-Infinity);
-  // The archived layout places subscripts below the body and to the RIGHT of
-  // any descending tail, never over a tail or above each other.
-  const bbox=reg[0],bodyBox=reg[1];
-  const descending=bbox[1]<bodyBox[1]-100;
-  if(descending){
-   const tailLeft=bbox[0]/FONT_UNITS_PER_PIXEL;
-   const tailWidth=Math.max(9,(bodyBox[0]-bbox[0])/FONT_UNITS_PER_PIXEL);
-   const tailRight=tailLeft+Math.min(tailWidth,body.w*0.50);
-   if(x<tailRight+4&&x+total>tailLeft)x=tailRight+4;
-  }
+  const tail=tailRightAt(t.base,y-4,y+NATIVE_SUB_SIZE+4);
+  if(Number.isFinite(tail)&&x<tail+4&&x+total>tail-4)x=tail+4;
   const hosts=[];
   blocks.forEach((s,i)=>{
    const host=rectPart('subscripts',s.key,x+s.left,y,frame,'sub','sub'+i);
