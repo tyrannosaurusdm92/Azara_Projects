@@ -7,7 +7,8 @@
  const historical = new Set([...alphabet, 'F', 'U', 'V']);
  const rows = [['A','B','D','E','F','G','H','I'],['J','K','L','M','N','O','P','R'],['S','T','U','V','W','Y','Z'],['SYMBOLS','AZA_GLOTTAL','AZA_CLICK','AZA_PREV','AZA_NEXT','SPACE','BACK','ENTER']];
  const marks = canon.marks.map(mark => ({...mark, display:mark.latin, khmer:mark.unicode, meaning:mark.name}));
- const byId = new Map(marks.map(mark => [mark.id, mark]));
+ const historicMarks=(window.AZA_DOC_ERA_REFERENCE?.historicalMarks||[]).map(mark=>({...mark,unicode:mark.khmer,codepoint:(mark.codepoints||[]).join(' + '),special:false}));
+ const byId = new Map([...marks,...historicMarks].map(mark => [mark.id, mark]));
  const specials = {AZA_GLOTTAL:'sOver',AZA_CLICK:'sUnder',AZA_PREV:'sLeft',AZA_NEXT:'sRight'};
  const preferenceKey = 'steampunk-azaaraan-keyboard-preferences-v1';
  function isLetter(key){return historical.has(key)}
@@ -26,12 +27,14 @@
   if(base==='V'&&['Archaic','Classical','Traditional'].includes(era))return 'assets/keyboard/svg/evolution/'+era.toLowerCase()+'/'+era.toLowerCase()+'_18.svg';
   return null;
  }
- function tryEncode(base,markIds=[],era='Modern',subs=[],specialIds=[]){
-  if(!isLetter(base)||(era==='Modern'&&!independent.has(base)))return {value:null,error:'This is not an independent letter in '+era+'.'};
+ function tryEncode(base,markIds=[],era='Modern',subs=[],specialIds=[],origin=null){
+  if(!isLetter(base)||(era==='Modern'&&!independent.has(base))||(era==='Traditional'&&base==='F'))return {value:null,error:'This is not an independent letter in '+era+'.'};
   const allowed=new Set(availableMarks(era).map(x=>x.id));
   // F and V were shortcut keys in the older keyboards. They still spell the
   // B family, while Modern exposes that family only through B's hold menu.
-  const historicArt=historicalArtwork(base,era);
+  const historicReading=origin&&era!=='Modern'?(window.AZA_DOC_ERA_REFERENCE?.readings||[]).find(x=>x.origin===origin&&x.era===era&&x.independent):null;
+  if(origin&&era!=='Modern'&&!historicReading)return {value:null,error:'This ancestor is not an independent glyph in '+era+'.'};
+  const historicArt=historicReading?'assets/keyboard/svg/evolution/'+era.toLowerCase()+'/'+era.toLowerCase()+'_'+historicReading.slot+'.svg':historicalArtwork(base,era);
   const aliasMarks=(era==='Modern'||historicArt)?[]:base==='F'?['soft','unvoiced']:base==='V'?['soft']:[];
   const mainMarks=[...aliasMarks,...markIds];
   const used=[...mainMarks,...specialIds,...subs.flatMap(s=>s.marks||[])];
@@ -56,17 +59,29 @@
    if(!subs.some(sub=>hasVowelNucleus(sub.key.toUpperCase(),sub.marks||[])))
      return {value:null,error:'Separated Vowel requires a true vowel-bearing subscript, not an invented subscript.'};
   }
-  const ch=historicArt?canon.ind.B:(canon.ind[token.base]||window.AZA_HISTORICAL_U||'ឩ'),early=new Set(['soft','hard','held']);
+  const ch=(base==='F'||base==='V')?canon.ind.B:(canon.ind[token.base]||window.AZA_HISTORICAL_U||'ឩ'),early=new Set(['soft','hard','held']);
   const enc=ids=>ids.map(id=>byId.get(id).unicode).join('');
-  const soundIdentity=historicArt?(base==='F'?['soft','unvoiced']:['soft']):[];
   if(historicArt)token.historicalArt=historicArt;
-  return {value:ch+enc([...soundIdentity,...mainMarks.filter(id=>early.has(id))])+subs.map(s=>canon.coeng+(canon.ind[s.key.toUpperCase()]||window.AZA_HISTORICAL_U)+enc(s.marks||[])).join('')+enc(mainMarks.filter(id=>!early.has(id)))+enc(specialIds),token};
+  if(historicReading){token.historicalOrigin=historicReading.origin;token.historicalIpa=historicReading.ipa;}
+  return {value:ch+enc(mainMarks.filter(id=>early.has(id)))+subs.map(s=>canon.coeng+(canon.ind[s.key.toUpperCase()]||window.AZA_HISTORICAL_U)+enc(s.marks||[])).join('')+enc(mainMarks.filter(id=>!early.has(id)))+enc(specialIds),token};
  }
  function encode(base,marks=[],era='Modern',subs=[],specials=[]){return tryEncode(base,marks,era,subs,specials).value||''}
  function glyph(base,era){return encode(base,[],era)}
- function preview(base,markIds,era,subs=[],specialIds=[]){const result=tryEncode(base,markIds,era,subs,specialIds);return result.value?(era==='Modern'?modern.createCluster(result.token):result.token?.historicalArt?window.Notes?.previewAza(result.value,result.token):null):null}
- function soundOptions(base,era){return era==='Modern'?(window.AZ_MODERN_SOUNDS?.entries||[]).filter(x=>x.host===base && x.marks.length<=2).map(x=>({base:x.host,marks:x.marks,label:x.display,ipa:x.ipa})):[]}
- function availableMarks(era){return era==='Archaic'?marks.filter(x=>!['sLeft','sRight'].includes(x.id)):marks}
+ function preview(base,markIds,era,subs=[],specialIds=[],origin=null){const result=tryEncode(base,markIds,era,subs,specialIds,origin);return result.value?(era==='Modern'?modern.createCluster(result.token):result.token?.historicalArt?window.Notes?.previewAza(result.value,result.token):null):null}
+ function soundOptions(base,era){
+  const ref=window.AZA_DOC_ERA_REFERENCE?.readings||[];
+  if(era!=='Modern'){
+   const specific=base==='F'?7:base==='V'?18:null;
+   return ref.filter(x=>x.era===era&&x.independent&&(specific?x.slot===specific:x.family===base))
+     .map(x=>({base,marks:[],origin:x.origin,label:x.origin+' · '+(x.sound||'historical reading'),ipa:x.ipa,note:x.notes}));
+  }
+  const doc=ref.filter(x=>x.era==='Modern').flatMap(x=>(x.recipes||[]).map(r=>({...r,note:x.notes})))
+    .filter(x=>x.base===base&&x.marks.length<=2);
+  const legacy=(window.AZ_MODERN_SOUNDS?.entries||[]).filter(x=>x.host===base&&x.marks.length<=2)
+    .map(x=>({base:x.host,marks:x.marks,label:x.display,ipa:x.ipa}));
+  const seen=new Set();return [...doc,...legacy].filter(x=>{const k=x.base+':'+x.marks.join(',')+':'+x.ipa;if(seen.has(k))return false;seen.add(k);return true});
+ }
+ function availableMarks(era){return era==='Modern'?marks:[...historicMarks,...marks.filter(x=>x.special&&(era!=='Archaic'||!['sLeft','sRight'].includes(x.id)))]}
  function availableSubscripts(era){return era==='Modern'?Object.keys(canon.subs):[...Object.keys(canon.subs),'u']}
  function markName(id){return byId.get(id)?.name||id}
  function art(base,era){return historicalArtwork(base,era)||(era==='Modern'&&independent.has(base)?`assets/keyboard/modern/independent/${base}-font.png`:null)}

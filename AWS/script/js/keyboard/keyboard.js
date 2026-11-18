@@ -273,7 +273,7 @@
     if(!bridge.isLetter(base))return;
     const draft=saved||{marks:[],specials:[],subs:[],target:'base'};
     state.panel={type:'azaaraan',base,view};
-    panel(`Aza’raan · ${base} · ${era}`,'Hold to compose · two diacritics per target · two subscripts');
+    panel(`Aza’raan · ${base} · ${era}`,(era==='Modern'?'12 Modern marks':'24 historical marks')+' · two per target · two subscripts');
     tab('Diacritics + subscripts',view==='compose',()=>showAza(base,'compose',draft));
     tab('Readings',view==='sounds',()=>showAza(base,'sounds',draft));
     if(view==='sounds'){
@@ -281,15 +281,15 @@
       const simple=bridge.tryEncode(base,[],era);
       grid.append(choice({value:simple.value,label:'Base '+base},()=>{notes.insert(simple.value,simple.token);closePanel();}));
       for(const option of bridge.soundOptions(base,era)){
-        const result=bridge.tryEncode(option.base,option.marks,era);
+        const result=bridge.tryEncode(option.base,option.marks,era,[],[],option.origin||null);
         if(result.error)continue;
         const button=make('button','choice aza-choice');button.type='button';
         const visual=make('span','aza-choice-glyph aza-'+era.toLowerCase());
-        visual.append(bridge.preview(base,option.marks,era)||document.createTextNode(result.value));
-        button.append(visual,make('span','aza-choice-name',option.label+' · '+option.ipa));
+        visual.append(bridge.preview(option.base,option.marks,era,[],[],option.origin||null)||document.createTextNode(result.value));
+        button.append(visual,make('span','aza-choice-name',option.label+' · '+option.ipa));if(option.note){button.title=option.note;button.setAttribute('aria-description',option.note)}
         button.onclick=()=>{notes.insert(result.value,result.token);closePanel()};grid.append(button);
       }
-      $('panelContent').append(make('p','emoji-help','Tap a reading to insert it, or build a letter with diacritics and up to two subscripts.'),grid);
+      $('panelContent').append(make('p','emoji-help',era==='Modern'?'Modern readings use 12 accents; hover or focus for the Google Doc notes.':'Independent historical readings have distinct original artwork; use the 24-mark composer for historical combinations.'),grid);
       return;
     }
     const builder=make('div','builder aza-builder');
@@ -299,7 +299,7 @@
     const undo=make('button','','Undo'),clear=make('button','','Clear'),insert=make('button','insert-accent','Insert glyph');
     const target=make('select','aza-target');target.setAttribute('aria-label','Attach marks to');
     const targets=make('div','aza-target-row');targets.append(make('label','','Attach to '),target);
-    const subtitle=make('p','emoji-help',era==='Modern'?'Select up to two subscripts (20% letter-body size); choose Independent or Subscript in Attach to, then add up to two primary/secondary diacritics. Click and glottal sit above the independent letter.':'Choose a historical subscript, then attach era-available marks. The independent letter, its marks, and up to two subscripts are composed together.');
+    const subtitle=make('p','emoji-help',era==='Modern'?'Select up to two subscripts (20% letter-body size); choose Independent or Subscript in Attach to, then add up to two primary/secondary diacritics. Click and glottal sit above the independent letter.':'Historical system: 24 original marks (C01–C12 and K01–K12). Add up to two accents on the independent letter or each of up to two subscripts.');
     const subGrid=make('div','choices-grid aza-sub-grid');
     const markGrid=make('div','choices-grid aza-mark-grid');
     const assets=window.AZ_ASSETS||{};
