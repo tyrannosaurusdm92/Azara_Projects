@@ -76,7 +76,7 @@ docs/                     examples, reference chart, merge history and test note
 - Choose Short E after Short A; the new vowel replaces the old one, and no second vowel is stacked.
 - Preview `T+SHORT_A+Z`, insert it, and confirm the Unicode output contains `ត` plus the two assigned Khmer marks (order controlled by Khmer serialization rules).
 - Preview `Pix`, use Insert, and confirm two logical letters (P+Short I and K+S).
-- Switch to the Evolution tab and trace a modern family back to its 52 roots.
+- Switch to the Evolution tab and trace a modern family back to its 51 roots.
 
 ## Source priority
 

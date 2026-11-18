@@ -7,7 +7,7 @@
 
 ## Chosen foundation
 
-The **Merged Complete** edition supplied the visible tab architecture, original evolution diagram (including its six historical stages and 52 roots), working era-font typing desk, Khmer-aware custom glyph renderer, 21-key B/W keyboard families, 3-mark composition palette, Unicode export/import, the 24-row accent reference, and original white-ink glyph artwork in the historical chart. This was used as the foundation because it has the richer interactive evolution experience and original artwork for each visible accent.
+The **Merged Complete** edition supplied the visible tab architecture, original evolution diagram (including its six historical stages and 51 roots), working era-font typing desk, Khmer-aware custom glyph renderer, 21-key B/W keyboard families, 3-mark composition palette, Unicode export/import, the 24-row accent reference, and original white-ink glyph artwork in the historical chart. This was used as the foundation because it has the richer interactive evolution experience and original artwork for each visible accent.
 
 The **Canonical 24 Accents** edition supplied the current *semantics* and its spelling-to-phoneme converter, exact recipes, proper-name pronunciation examples, saved per-name pronunciation overrides, phonetic aliases, additional archived source maps, and comparison documentation.
 

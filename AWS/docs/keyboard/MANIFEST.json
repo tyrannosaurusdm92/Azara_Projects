@@ -3,8 +3,8 @@
   "html_files": [
     "index.html"
   ],
-  "file_count_without_manifest": 557,
-  "total_uncompressed_bytes_without_manifest": 9715213,
+  "file_count_without_manifest": 552,
+  "total_uncompressed_bytes_without_manifest": 9660999,
   "files": [
     {
       "path": "assets/DejaVuSans.ttf",
@@ -210,11 +210,6 @@
       "path": "assets/images/evolution/origins/31_131D6.png",
       "bytes": 5935,
       "sha256": "a460ff8d5cf298efd08449180913c956a198c251ec1a4654fb0f98f8173338b4"
-    },
-    {
-      "path": "assets/images/evolution/origins/32_13114.png",
-      "bytes": 2490,
-      "sha256": "2d567303365625d50ed648b7e367376b7be50db3d235c9dd20a80eadc36b982a"
     },
     {
       "path": "assets/images/evolution/origins/33_132B2.png",
@@ -505,11 +500,6 @@
       "path": "assets/svg/evolution/ancient/ancient_31.svg",
       "bytes": 10787,
       "sha256": "1589df40178a661140ce33911d0a473cd93c34205dc22a3cc6d0f9d019a1e2a9"
-    },
-    {
-      "path": "assets/svg/evolution/ancient/ancient_32.svg",
-      "bytes": 12551,
-      "sha256": "399d5969eed4ee67faeb28de5fd57301f5740bae94679d97da88702c4bfc0dc9"
     },
     {
       "path": "assets/svg/evolution/ancient/ancient_33.svg",
@@ -827,11 +817,6 @@
       "sha256": "dc511726e633f3ee9af8b98ae9f0fa04be4df7c976f044325b92c558d3100fde"
     },
     {
-      "path": "assets/svg/evolution/archaic/archaic_32.svg",
-      "bytes": 12588,
-      "sha256": "8ee06b2ff662e848e8ac5b25c2df5418ce7d4668fcd775f1f78913e2301c3973"
-    },
-    {
       "path": "assets/svg/evolution/archaic/archaic_33.svg",
       "bytes": 10624,
       "sha256": "f6a753d354e3626b3e9a9d09ea8bac3c98ef526e1f60eaea03ae9935e6277709"
@@ -1125,11 +1110,6 @@
       "path": "assets/svg/evolution/classical/classical_31.svg",
       "bytes": 16309,
       "sha256": "d220d0e4ef0ae9e64a8e7595f9008b4fdce50f575edb4fc3e130b619abb8c980"
-    },
-    {
-      "path": "assets/svg/evolution/classical/classical_32.svg",
-      "bytes": 13211,
-      "sha256": "ba6e15788d19781995cc379d7b52ef1101dc83472d8a1d25138dc5ad9c32876d"
     },
     {
       "path": "assets/svg/evolution/classical/classical_33.svg",
@@ -1565,11 +1545,6 @@
       "path": "assets/svg/evolution/traditional/traditional_3.svg",
       "bytes": 11572,
       "sha256": "328d6ae5f4eaadd31fb02aac4034d7375c502de8f19ed095c334055ecafad342"
-    },
-    {
-      "path": "assets/svg/evolution/traditional/traditional_32.svg",
-      "bytes": 13374,
-      "sha256": "400ba725b42ee9df2c11991d640913ce951e12a58234cf419046779d5377fded"
     },
     {
       "path": "assets/svg/evolution/traditional/traditional_33.svg",
