@@ -530,37 +530,37 @@
     {
       "key": "origin",
       "name": "Uxrowo",
-      "count": 52,
+      "count": 51,
       "detail": "Egyptian picture roots · before 1351 BCE"
     },
     {
       "key": "proto",
       "name": "Proto-Aza’raan",
-      "count": 52,
+      "count": 51,
       "detail": "Convergence · from 1351 BCE"
     },
     {
       "key": "ancient",
       "name": "Ancient",
-      "count": 52,
+      "count": 51,
       "detail": "Almost-letters · post-convergence"
     },
     {
       "key": "archaic",
       "name": "Archaic",
-      "count": 49,
-      "detail": "49 independent letters · original SVG artwork"
+      "count": 48,
+      "detail": "48 independent letters · original SVG artwork"
     },
     {
       "key": "classical",
       "name": "Classical",
-      "count": 44,
+      "count": 43,
       "detail": "Formal alphabet · period undated"
     },
     {
       "key": "traditional",
       "name": "Traditional",
-      "count": 32,
+      "count": 31,
       "detail": "Connected cursive · period undated"
     },
     {
@@ -572,96 +572,96 @@
   ],
   "fontRoots": {
     "Archaic": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Classical": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Traditional": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     },
     "Modern": {
-      "34": "A",
-      "18": "B",
+      "3": "T",
       "6": "D",
-      "36": "E",
       "8": "G",
-      "22": "H",
-      "35": "I",
       "9": "J",
-      "24": "K",
-      "23": "L",
       "11": "M",
-      "20": "N",
-      "33": "O",
       "12": "P",
       "14": "R",
+      "18": "B",
+      "19": "Z",
+      "20": "N",
       "21": "S",
-      "3": "T",
+      "22": "H",
+      "23": "L",
+      "24": "K",
+      "33": "O",
+      "34": "A",
+      "35": "I",
+      "36": "E",
       "37": "U",
       "44": "W",
-      "50": "Y",
-      "19": "Z"
+      "50": "Y"
     }
   },
   "roots": [
@@ -2258,58 +2258,6 @@
       ]
     },
     {
-      "slot": 32,
-      "origin": "𓄔",
-      "originArt": "assets/images/evolution/origins/32_13114.png",
-      "ipa": "/juː/",
-      "sound": "Eu like Fued",
-      "family": "Y",
-      "parent": "𓈐",
-      "mergesAt": "modern",
-      "mergerStatus": "editorial_proposal_to_meet_era_counts",
-      "special": false,
-      "stages": [
-        {
-          "era": "ancient",
-          "active": true,
-          "art": [
-            "assets/svg/evolution/ancient/ancient_32.svg"
-          ],
-          "note": "Diphthong"
-        },
-        {
-          "era": "archaic",
-          "active": true,
-          "art": [
-            "assets/svg/evolution/archaic/archaic_32.svg"
-          ],
-          "note": "Supplied Archaic SVG in ancestral slot 32."
-        },
-        {
-          "era": "classical",
-          "active": true,
-          "art": [
-            "assets/svg/evolution/classical/classical_32.svg"
-          ],
-          "note": "Diphthong"
-        },
-        {
-          "era": "traditional",
-          "active": true,
-          "art": [
-            "assets/svg/evolution/traditional/traditional_32.svg"
-          ],
-          "note": "Diphthong; fronted variant"
-        },
-        {
-          "era": "modern",
-          "active": false,
-          "art": [],
-          "note": "Diphthong • From Euglohbe (“Listening”)"
-        }
-      ]
-    },
-    {
       "slot": 33,
       "origin": "𓊲",
       "originArt": "assets/images/evolution/origins/33_132B2.png",
@@ -3353,8 +3301,8 @@
   "mergerSchedule": [
     {
       "stage": "archaic",
-      "count_before": 52,
-      "count_after": 49,
+      "count_before": 51,
+      "count_after": 48,
       "root_ids": [
         5,
         13,
@@ -3364,8 +3312,8 @@
     },
     {
       "stage": "classical",
-      "count_before": 49,
-      "count_after": 44,
+      "count_before": 48,
+      "count_after": 43,
       "root_ids": [
         10,
         17,
@@ -3377,8 +3325,8 @@
     },
     {
       "stage": "traditional",
-      "count_before": 44,
-      "count_after": 32,
+      "count_before": 43,
+      "count_after": 31,
       "root_ids": [
         2,
         4,
@@ -3397,12 +3345,11 @@
     },
     {
       "stage": "modern",
-      "count_before": 32,
+      "count_before": 31,
       "count_after": 21,
       "root_ids": [
         1,
         28,
-        32,
         41,
         43,
         45,

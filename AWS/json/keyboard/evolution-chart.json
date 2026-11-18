@@ -1,6 +1,6 @@
 {
   "chart": {
-    "width": 2630,
+    "width": 2583,
     "height": 960,
     "startX": 193,
     "gap": 47
@@ -9,37 +9,37 @@
     {
       "key": "proto",
       "label": "Proto-Aza’raan",
-      "date": "52 hieroglyph roots · 1351 BCE",
+      "date": "51 hieroglyph roots · 1351 BCE",
       "y": 155,
-      "count": 52
+      "count": 51
     },
     {
       "key": "ancient",
       "label": "Ancient Aza’raan",
-      "date": "52 independent letters",
+      "date": "51 independent letters",
       "y": 297,
-      "count": 52
+      "count": 51
     },
     {
       "key": "archaic",
       "label": "Archaic Aza’raan",
-      "date": "49 independent letters",
+      "date": "48 independent letters",
       "y": 442,
-      "count": 49
+      "count": 48
     },
     {
       "key": "classical",
       "label": "Classical Aza’raan",
-      "date": "44 independent letters",
+      "date": "43 independent letters",
       "y": 588,
-      "count": 44
+      "count": 43
     },
     {
       "key": "traditional",
       "label": "Traditional Aza’raan",
-      "date": "32 independent letters",
+      "date": "31 independent letters",
       "y": 732,
-      "count": 32
+      "count": 31
     },
     {
       "key": "modern",
@@ -1251,46 +1251,6 @@
           "label": "𓇖 /wiː/ (wee) · independent before Traditional merger"
         },
         "traditional": null,
-        "modern": null
-      }
-    },
-    {
-      "slot": 32,
-      "id": "root-32",
-      "origin": "𓄔",
-      "sound": "Eu like Fued",
-      "ipa": "/juː/",
-      "protoNote": "Diphthong",
-      "family": "Y",
-      "color": "#8bdacb",
-      "special": false,
-      "reflex": "Y",
-      "stages": {
-        "proto": {
-          "src": "assets/images/evolution/origins/32_13114.png",
-          "reading": "𓄔",
-          "label": "Proto-Aza’raan root"
-        },
-        "ancient": {
-          "src": "assets/svg/evolution/ancient/ancient_32.svg",
-          "reading": "Eu",
-          "label": "Diphthong"
-        },
-        "archaic": {
-          "src": "assets/svg/evolution/archaic/archaic_32.svg",
-          "reading": "Eu",
-          "label": "Supplied Archaic SVG in ancestral slot 32."
-        },
-        "classical": {
-          "src": "assets/svg/evolution/classical/classical_32.svg",
-          "reading": "Eu",
-          "label": "Diphthong"
-        },
-        "traditional": {
-          "src": "assets/svg/evolution/traditional/traditional_32.svg",
-          "reading": "Eu",
-          "label": "Diphthong; fronted variant"
-        },
         "modern": null
       }
     },
@@ -3167,11 +3127,6 @@
       "note": "𓇖 /wiː/ (wee) → 𓆰 /wɛ/ (weh) during Traditional; receiver also merges into W family at this boundary"
     },
     {
-      "slot": 32,
-      "parent": 50,
-      "stage": "modern"
-    },
-    {
       "slot": 37,
       "parent": 34,
       "stage": "modern"
@@ -3425,12 +3380,6 @@
       "stage": 0
     },
     {
-      "from": 32,
-      "to": 32,
-      "family": "Y",
-      "stage": 0
-    },
-    {
       "from": 33,
       "to": 33,
       "family": "O",
@@ -3737,12 +3686,6 @@
       "stage": 1
     },
     {
-      "from": 32,
-      "to": 32,
-      "family": "Y",
-      "stage": 1
-    },
-    {
       "from": 33,
       "to": 33,
       "family": "O",
@@ -4028,12 +3971,6 @@
       "from": 31,
       "to": 31,
       "family": "W",
-      "stage": 2
-    },
-    {
-      "from": 32,
-      "to": 32,
-      "family": "Y",
       "stage": 2
     },
     {
@@ -4315,12 +4252,6 @@
       "mergerStage": "traditional"
     },
     {
-      "from": 32,
-      "to": 32,
-      "family": "Y",
-      "stage": 3
-    },
-    {
       "from": 33,
       "to": 33,
       "family": "O",
@@ -4534,12 +4465,6 @@
       "from": 36,
       "to": 36,
       "family": "E",
-      "stage": 4
-    },
-    {
-      "from": 32,
-      "to": 50,
-      "family": "Y",
       "stage": 4
     },
     {

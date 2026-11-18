@@ -1,48 +1,48 @@
 {
   "title": "Aza’raan Letter Evolution Atlas · Correct Era Slots",
-  "system": "52 ancestral Uxrowo roots → Ancient 52 → Archaic 49 → Classical 44 → Traditional 32 → Modern 21; 55 modern readings",
+  "system": "51 ancestral Uxrowo roots → Ancient 51 → Archaic 48 → Classical 43 → Traditional 31 → Modern 21; 55 modern readings",
   "stages": [
     {
       "key": "origin",
       "name": "Uxrowo",
       "sub": "Egyptian picture roots · before 1351 BCE",
       "status": "Source assignment",
-      "letter_count": 52
+      "letter_count": 51
     },
     {
       "key": "proto",
       "name": "Proto-Aza’raan",
       "sub": "Convergence · from 1351 BCE",
       "status": "Pictorial phase (no modern marks)",
-      "letter_count": 52
+      "letter_count": 51
     },
     {
       "key": "ancient",
       "name": "Ancient",
       "sub": "Almost-letters · post-convergence",
       "status": "User-supplied SVG, contact-sheet slot matched to ancestral root",
-      "letter_count": 52
+      "letter_count": 51
     },
     {
       "key": "archaic",
       "name": "Archaic",
-      "sub": "49 independent letters · original SVG artwork",
+      "sub": "48 independent letters · original SVG artwork",
       "status": "User-supplied SVG, contact-sheet slot matched to ancestral root",
-      "letter_count": 49
+      "letter_count": 48
     },
     {
       "key": "classical",
       "name": "Classical",
       "sub": "Formal alphabet · period undated",
       "status": "User-supplied SVG, contact-sheet slot matched to ancestral root",
-      "letter_count": 44
+      "letter_count": 43
     },
     {
       "key": "traditional",
       "name": "Traditional",
       "sub": "Connected cursive · period undated",
       "status": "User-supplied SVG, contact-sheet slot matched to ancestral root",
-      "letter_count": 32
+      "letter_count": 31
     },
     {
       "key": "modern",
@@ -2315,15 +2315,6 @@
         }
       ],
       "secondary_roots": [
-        {
-          "origin": "𓄔",
-          "source_row": 37,
-          "historical_sound": "Eu like Fued",
-          "modern_reading": "Y",
-          "modern_unicode": "Y",
-          "merge_stage": "modern",
-          "historical_preservation": "Visible in every independent pre-merge era; no later independent glyph"
-        },
         {
           "origin": "𓃿",
           "source_row": 51,
@@ -5713,104 +5704,6 @@
       "slot": 31
     },
     {
-      "id": "root-32",
-      "original_order": 32,
-      "source_table_row": 37,
-      "origin": "𓄔",
-      "origin_image": "images/origins/32_13114.png",
-      "original_ipa": "/juː/",
-      "original_sound": "Eu like Fued",
-      "proto_glyph": "𓄔",
-      "proto_note": "Diphthong",
-      "priority": false,
-      "modern_family": "Y",
-      "modern_reflex": "Y",
-      "reflex_confirmed": false,
-      "modern_alignment_status": "provisional mapping for review",
-      "special": false,
-      "historical_stages": [
-        {
-          "era": "ancient",
-          "images": [
-            "images/ancient/ancient_32.svg"
-          ],
-          "original_image_count": 1,
-          "missing_files": [],
-          "legacy_latin": "Eu",
-          "original_note": "Diphthong",
-          "independent_letter": true,
-          "glyph_slot": 32,
-          "artwork_source": "user-supplied individual SVG, same contact-sheet position as origin root"
-        },
-        {
-          "era": "archaic",
-          "images": [
-            "images/archaic/archaic_32.svg"
-          ],
-          "original_image_count": 1,
-          "missing_files": [],
-          "legacy_latin": "Eu",
-          "original_note": "Supplied Archaic SVG in ancestral slot 32.",
-          "independent_letter": true,
-          "glyph_slot": 32,
-          "artwork_source": "user-supplied individual SVG, same contact-sheet position as origin root"
-        },
-        {
-          "era": "classical",
-          "images": [
-            "images/classical/classical_32.svg"
-          ],
-          "original_image_count": 1,
-          "missing_files": [],
-          "legacy_latin": "Eu",
-          "original_note": "Diphthong",
-          "independent_letter": true,
-          "glyph_slot": 32,
-          "artwork_source": "user-supplied individual SVG, same contact-sheet position as origin root"
-        },
-        {
-          "era": "traditional",
-          "images": [
-            "images/traditional/traditional_32.svg"
-          ],
-          "original_image_count": 1,
-          "missing_files": [],
-          "legacy_latin": "Eu",
-          "original_note": "Diphthong; fronted variant",
-          "independent_letter": true,
-          "glyph_slot": 32,
-          "artwork_source": "user-supplied individual SVG, same contact-sheet position as origin root"
-        },
-        {
-          "era": "modern",
-          "images": [],
-          "original_image_count": 0,
-          "missing_files": [],
-          "legacy_latin": "Ü or Eu",
-          "original_note": "Diphthong • From Euglohbe (“Listening”)",
-          "independent_letter": false,
-          "glyph_slot": null,
-          "artwork_source": "no separate era glyph after merger or special-sign reclassification"
-        }
-      ],
-      "is_family_parent": false,
-      "parent_hieroglyph": "𓈐",
-      "merges_at": "modern",
-      "merger_evidence": "User-specified stage totals; allocation across individual roots is a reversible working reconstruction, except 𓎱 → 𓆠 before Traditional, which is user-specified.",
-      "stage_art_preserved": true,
-      "prior_merges_at": "modern",
-      "merger_kind": "assimilated_into_parent_family",
-      "historical_inventory": {
-        "archaic": true,
-        "classical": true,
-        "traditional": true,
-        "modern": false,
-        "ancient": true
-      },
-      "merger_assignment_status": "editorial_proposal_to_meet_era_counts",
-      "slot": 32
-    },
-    {
       "id": "root-33",
       "original_order": 33,
       "source_table_row": 38,
@@ -7769,8 +7662,8 @@
   "stage_merger_schedule": [
     {
       "stage": "archaic",
-      "count_before": 52,
-      "count_after": 49,
+      "count_before": 51,
+      "count_after": 48,
       "root_ids": [
         5,
         13,
@@ -7780,8 +7673,8 @@
     },
     {
       "stage": "classical",
-      "count_before": 49,
-      "count_after": 44,
+      "count_before": 48,
+      "count_after": 43,
       "root_ids": [
         10,
         17,
@@ -7793,8 +7686,8 @@
     },
     {
       "stage": "traditional",
-      "count_before": 44,
-      "count_after": 32,
+      "count_before": 43,
+      "count_after": 31,
       "root_ids": [
         2,
         4,
@@ -7813,12 +7706,11 @@
     },
     {
       "stage": "modern",
-      "count_before": 32,
+      "count_before": 31,
       "count_after": 21,
       "root_ids": [
         1,
         28,
-        32,
         41,
         43,
         45,
@@ -7834,10 +7726,10 @@
   "historical_stage_policy": {
     "counting_rule": "An era count includes only independent letter lineages. Merged roots keep earlier artwork and appear as a merger label in later cells. Modern glottal and click are special signs outside the 21 letters.",
     "stage_totals": {
-      "ancient": 52,
-      "archaic": 49,
-      "classical": 44,
-      "traditional": 32,
+      "ancient": 51,
+      "archaic": 48,
+      "classical": 43,
+      "traditional": 31,
       "modern": 21
     },
     "merger_dates": "Only 𓎱 → 𓆠 at the Traditional transition was specified; all other assignments remain proposals from the supplied chart."

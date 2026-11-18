@@ -9,8 +9,8 @@
 .evolution-pane .tool{background:#151821;border:1px solid #373b4b;color:#f0f0f5;border-radius:9px;padding:10px 12px;min-height:43px;font:inherit;font-size:.85rem}
 .evolution-pane .tool:hover,.evolution-pane .tool:focus-visible{border-color:#bdc7ed}
 .evolution-pane .chart-frame{width:100%;margin:12px auto 0;overflow-x:auto;overflow-y:hidden;border-block:1px solid #292c36;background:#000;scrollbar-color:#596079 #08090b}
-.evolution-pane .chart{height:960px;width:2630px;position:relative;margin:0 auto;background:#000;isolation:isolate;user-select:text}
-.evolution-pane .chart svg.connectors{position:absolute;inset:0;width:2630px;height:960px;overflow:visible;pointer-events:none;z-index:0}
+.evolution-pane .chart{height:960px;width:2583px;position:relative;margin:0 auto;background:#000;isolation:isolate;user-select:text}
+.evolution-pane .chart svg.connectors{position:absolute;inset:0;width:2583px;height:960px;overflow:visible;pointer-events:none;z-index:0}
 .evolution-pane .chart .lineage{fill:none;stroke-width:2.4;stroke-dasharray:2 4;stroke-linejoin:round;opacity:.9;transition:opacity .2s}
 .evolution-pane .chart .arrowtip{transition:opacity .2s}
 .evolution-pane .chart .headline{position:absolute;left:0;top:22px;width:100%;text-align:center;font-size:48px;line-height:1;font-weight:700;letter-spacing:.003em;color:white}
