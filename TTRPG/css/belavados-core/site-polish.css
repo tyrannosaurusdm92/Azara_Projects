@@ -178,3 +178,13 @@
 .aza-dom-local{margin:10px 0;padding:9px 11px;border:1px solid #506a6b;border-radius:9px;background:rgba(12,31,39,.5)}
 .aza-dom-local p{line-height:1.45;margin:7px 0 0}
 @media(max-width:560px){.aza-dom-events{grid-template-columns:1fr}.aza-dom-events article{grid-template-columns:66px minmax(0,1fr)}}
+
+/* Compact editorial controls for individual deities and regional community institutions. */
+.aza-culture-ethos,.aza-canon-editor{margin:9px 0;padding:8px;border:1px solid #426b6d;border-radius:8px}
+.aza-culture-ethos>summary,.aza-canon-editor>summary{cursor:pointer;font-weight:700;color:#d7b782}
+.aza-canon-editor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,155px),1fr));gap:7px}
+.aza-canon-editor-grid label{display:grid;gap:2px}
+.aza-canon-editor-grid label>span{font-size:12px;font-weight:700}
+.aza-canon-editor-grid label input{min-width:0;width:100%;box-sizing:border-box;padding:7px;background:#0c1e26;color:#f3e9db;border:1px solid #3d9fa0;border-radius:5px}
+.aza-canon-editor-grid label small{font-size:10px;color:#d7b782}
+.aza-canon-editor button[data-aza-save]{margin-top:9px;background:#3d9fa0;color:#09151b;border:1px solid #8de0dc;border-radius:6px;padding:7px 10px}
