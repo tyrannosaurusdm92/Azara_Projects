@@ -24,7 +24,7 @@ const people=[...new Set([...b.residentNpcIds,...b.employeeNpcIds,...b.visitorNp
 return `<h4>${esc(b.name)} <small>· Map #${b.id}</small></h4>
 <p><b>${esc(b.address)}</b></p><p>${esc(b.description)}</p>
 <p><b>Type:</b> ${esc(b.type.toLowerCase())} · <b>Construction:</b> ${esc(b.material.toLowerCase().replaceAll('_',' '))}</p>
-<p><b>Access:</b> ${esc(b.hours)}</p><p><b>Features:</b> ${esc(b.features.join(' · '))}</p>
+<p><b>Access:</b> ${esc(b.hours)}</p><p><b>Features:</b> ${esc(b.features.join(' · '))}</p>${window.BelavadosDominionHistory?.locationContext({id:'aelvanyr-elarvess',name:'Elarvess'},b)||''}
 <div class="elf-statline"><span>${b.residentNpcIds.length} residents</span><span>${b.employeeNpcIds.length} employees / students</span><span>${b.visitorNpcIds.length} weekly visitors</span><span>${here.length} present Day ${weekDay()} at ${esc(cal?.getState()?.time||'00:00')}</span></div>
 <details open><summary>People here now (${here.length})</summary>${sliceList(here,'Currently present',30)}</details>
 <details><summary>Residents (${b.residentNpcIds.length})</summary>${sliceList(b.residentNpcIds,'Lives here',45)}</details>
