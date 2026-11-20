@@ -491,7 +491,23 @@
     return out;
   }
 
+  /* Canonical alignment is evidence-driven; class, ancestry and danger do not assign morality. */
+  function canonicalResult(input) {
+    const engine=globalScope.AzaraCovenant;
+    if(!engine)return null;
+    const id=String(input?.npcId||input?.id||input?.name||'new-npc');
+    const record=engine.get('npc',id,input);
+    return {alignmentName:record.profileName,profileName:record.profileName,profileId:record.profileId,
+      scores:record.scores,axes:Object.fromEntries(engine.axes.map(k=>[k,{label:record.phases[k],phase:record.phases[k]}])),
+      axisPhases:record.phases,axisIntensities:Object.fromEntries(engine.axes.map(k=>[k,record.phases[k]])),
+      fullAlignmentLabel:engine.axes.map(k=>record.phases[k]).join(' / '),
+      phaseSignature:engine.axes.map(k=>record.phases[k]).join('|'),
+      detailedSignature:engine.axes.map(k=>k+':'+record.phases[k]).join('|'),
+      scoreSignature:engine.axes.map(k=>k+':'+record.scores[k]).join('|'),
+      inputInfluence:{policy:'history-and-actions',source:record.origin}};
+  }
   function generateAlignment(input, options) {
+    const canonical=canonicalResult(input);if(canonical)return canonical;
     const opts = mergeOptions(options);
     const npcIdentity = input && (input.npcId || input.id || input.name || input.seed || "npc");
     const seedParts = [opts.seed, npcIdentity, input && input.race, JSON.stringify(input && input.classes), input && input.settlementDangerLevel].join("::");
@@ -572,6 +588,7 @@
   }
 
   function randomizeNPC(npc, options) {
+    const canonical=canonicalResult(npc);if(canonical)return Object.assign({},npc,{alignmentName:canonical.alignmentName,alignment:canonical});
     const opts = mergeOptions(options);
     const registry = opts.registry || new Set();
     const seedParts = [opts.seed, npc && (npc.id || npc.npcId || npc.name || JSON.stringify(npc).slice(0, 120)), "repair"].join("::");
@@ -590,6 +607,7 @@
   }
 
   function randomizeNPCBatch(npcs, options) {
+    if(globalScope.AzaraCovenant)return (Array.isArray(npcs)?npcs:[]).map(n=>randomizeNPC(n,options));
     const registry = new Set();
     const opts = Object.assign({}, mergeOptions(options), { registry });
     return (Array.isArray(npcs) ? npcs : []).map((npc, index) => randomizeNPC(Object.assign({ npcId: index }, npc), opts));
