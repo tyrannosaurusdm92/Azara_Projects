@@ -147,3 +147,23 @@
 @media(prefers-reduced-motion:reduce){
  #belavados-unified-app *{scroll-behavior:auto}
 }
+
+/* Eight-Axis Covenant and real-time location inventory — responsive within existing layouts. */
+.aza-covenant-card{max-width:100%;margin:10px 0;padding:10px;border:1px solid #416f70;border-radius:10px;background:rgba(9,22,28,.72);color:#f3e9db}
+.aza-covenant-card header,.aza-axis-profile{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;margin:0 0 8px}
+.aza-covenant-card header small,.aza-axis-profile small{color:#d7b782}
+.aza-covenant-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,185px),1fr));gap:8px}
+.aza-covenant-axis{border:1px solid #345055;border-radius:7px;padding:7px 8px;min-width:0}
+.aza-covenant-axis>div:first-child{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px;font-size:12px}
+.aza-covenant-axis meter{display:block;width:100%;height:13px;margin:4px 0}
+.aza-covenant-ends,.aza-axis-ends{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:#dcc7a7}
+.aza-axis-profile{grid-column:1/-1;padding:5px 8px;border-bottom:1px solid #3d9fa0}
+.aza-axis-slider{min-width:0}.aza-axis-slider input[type="range"]{width:100%;accent-color:#3d9fa0}
+.aza-location-people{display:flex;flex-wrap:wrap;gap:5px;margin:7px 0}
+.aza-location-people button{min-height:32px;border:1px solid #416f70;border-radius:6px;background:#17363e;color:#f3e9db;padding:5px 9px}
+.aza-price-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:6px;max-height:min(380px,55vh);overflow:auto}
+.aza-price-list>div{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:8px;border:1px solid #345055;border-radius:7px}
+.aza-price-list span{font-variant-numeric:tabular-nums;color:#ffcd83}.aza-price-list small{grid-column:1/-1;color:#c9c4b7}
+.aza-location-catalog{margin:12px 0}.aza-location-catalog summary{cursor:pointer;font-weight:700}
+@media(max-width:560px){.aza-covenant-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.aza-covenant-axis{padding:6px}.aza-price-list{grid-template-columns:1fr}}
+@media(max-width:340px){.aza-covenant-grid{grid-template-columns:1fr}}

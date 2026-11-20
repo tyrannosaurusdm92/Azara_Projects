@@ -30,7 +30,7 @@ return `<h4>${esc(b.name)} <small>· Map #${b.id}</small></h4>
 <details><summary>Residents (${b.residentNpcIds.length})</summary>${sliceList(b.residentNpcIds,'Lives here',45)}</details>
 <details><summary>Workers and students (${b.employeeNpcIds.length})</summary>${sliceList(b.employeeNpcIds,'Works or attends here',45)}</details>
 <details><summary>Unique weekly visitors (${b.visitorNpcIds.length})</summary>${sliceList(b.visitorNpcIds,'Visits during week',45)}</details>
-<details><summary>Goods and services (${b.goodsAndServices.length})</summary>${b.goodsAndServices.length?b.goodsAndServices.map(g=>`<div class="elf-good"><span>${esc(g.item)}<small>${esc(g.category)}</small></span><b>${esc(g.price||'Price unspecified')}</b></div>`).join(''):'<p>This residence has no public goods catalogue.</p>'}</details>
+<details open><summary>Goods and services and pricing (${b.goodsAndServices.length})</summary>${b.goodsAndServices.length?b.goodsAndServices.map(g=>`<div class="elf-good"><span>${esc(g.item)}<small>${esc(g.category)}</small></span><b>${esc(g.price||'Price unspecified')}</b></div>`).join(''):'<p>This residence has no public goods catalogue.</p>'}</details>
 <p class="elf-muted">Building address, occupants, and business details are generated scenario information. The original GeoJSON image position and hit polygon have not changed.</p>`;}
 function renderSchedule(n){return `<div class="elf-day-select">${[1,2,3,4,5,6].map(d=>`<button type="button" data-ep-day="${d}" aria-pressed="${day===d}">Day ${d}</button>`).join('')}</div>`+
 (daySlots(n,day)).map(slot=>`<div class="elf-schedule"><b>${esc(slot.start)}–${esc(slot.end)}</b><span>${esc(slot.activity)}</span>${bbtn(slot.buildingId,null,'Go to scheduled location')}</div>`).join('');}
@@ -38,7 +38,7 @@ function renderNpc(n){if(!n)return '<p>Select an NPC to view their life and sche
 const cat=['familial','romantic','personal','professional'], allSites=[...new Set([n.homeBuildingId,n.workBuildingId,...n.regularVisits])];const current=currentPlace(n);
 return `<h4>${esc(n.name)} <small>· ${esc(n.race?.name)} · Age ${n.age} · ${esc(n.genderIdentity||'Identity not recorded')} · ${esc(n.pronouns)} · ${esc(n.preferredHonorific==='none'?'No honorific':n.preferredHonorific||'')}</small></h4>
 <p class="elf-muted"><b>Address and endearment suggestions:</b> ${esc(n.formalHonorific||n.preferredHonorific||'None')} · ${esc(n.respectfulAddress||'')} · ${esc(n.everydayTitle||'')} · ${esc(n.platonicEndearment||'')}${n.romanticEndearment?' · '+esc(n.romanticEndearment):''}</p><details><summary>Pronoun forms and family-language options</summary><p>${esc(Object.values(n.pronounForms||{}).join(' / '))}</p><p>${esc(Object.entries(n.kinshipTerms||{}).map(([k,v])=>k+': '+v).join(' · '))}</p><p class="elf-muted">Suggested terms; each NPC's chosen forms may be edited independently. Romantic endearments are off by default.</p></details>
-<p><b>Deity affiliation:</b> ${esc((n.deityAffiliations||[]).join(', ')||'None recorded')}</p><p><b>${esc(n.job.title)}</b> · ${esc(n.aspiration||'')}</p><p>${esc((n.traits||[]).join(' · '))}</p>
+<p><b>Deity affiliation:</b> ${esc((n.deityAffiliations||[]).join(', ')||'None recorded')}</p>${window.AzaraCovenant?.render('npc',n.id,n)||''}<p><b>${esc(n.job.title)}</b> · ${esc(n.aspiration||'')}</p><p>${esc((n.traits||[]).join(' · '))}</p>
 <p><b>Residence:</b> ${esc(n.homeAddress)} · <b>Work/school:</b> ${esc(n.workAddress)}</p>
 <div class="elf-actions">${bbtn(n.homeBuildingId,null,'Residence')}${bbtn(n.workBuildingId,null,n.job.title)}${current?bbtn(current.buildingId,null,'Current scheduled location'):''}</div>
 <p><b>Work or school days:</b> ${n.workDays.map(x=>'Day '+x).join(' · ')}</p>
@@ -80,7 +80,7 @@ if(el.dataset.epExport){download(el.dataset.epExport==='npcs'?'elarvess_2016_npc
 });
 panel.addEventListener('input',e=>{if(e.target.id==='bvs-ev-search'){searchTerm=e.target.value;page=0;$('bvs-ev-search-results').innerHTML=results();}});
 document.addEventListener('elarvess:building-selected',e=>{selectedBuilding=Number(e.detail?.id||0);render();});
-let lastClock='';document.addEventListener('aza-calendar:change',()=>{const s=cal?.getState();const t=s?.day+'-'+s?.hour;if(t===lastClock)return;lastClock=t;day=weekDay();if(document.activeElement?.id!=='bvs-ev-search')render();});
+let lastClock='';document.addEventListener('aza-calendar:change',()=>{const s=cal?.getState();const t=s?.day+'-'+s?.hour+'-'+s?.minute;if(t===lastClock)return;lastClock=t;day=weekDay();if(document.activeElement?.id!=='bvs-ev-search')render();});
 $('bvs-worldNpcSelect')?.addEventListener('change',e=>{if(byNpc.has(e.target.value) && selectedNpc!==e.target.value){selectedNpc=e.target.value;render();}});
 window.ElarvessLiving={focusBuilding,focusNpc,linkedLocationId:name=>roleMap[name],roster:population.npcs,sourcePlaceNames:Object.keys(roleMap),getBuilding:id=>byBuilding.get(Number(id)),getNpc:id=>byNpc.get(id),getPresent:(id,d=weekDay(),hour=cal?.getState()?.hour||0)=>{const b=byBuilding.get(Number(id));return b?[...new Set([...b.residentNpcIds,...b.employeeNpcIds,...b.visitorNpcIds])].filter(pid=>byNpc.get(pid)?.weeklySchedule[d-1].some(s=>s.buildingId===b.id && Number(s.start.slice(0,2))<=hour&&hour<Number(s.end.slice(0,2)))):[];}};
 render();
