@@ -519,5 +519,14 @@
     "sharedSchoolRankCap": 20,
     "roleRankCap": 20,
     "accessByTrainingNotCompulsoryWorship": true
+  },
+  "classRosterStatus": "Fourteen 2026 game-design archetypes (not identical to the 64 provisional character-sheet suggestions). Each supports all five independently ranked class-role paths.",
+  "editionRules": {
+    "singlePlayer": true,
+    "pvp": false,
+    "books": false,
+    "maxSchoolRank": 20,
+    "maxPathRank": 20,
+    "multiclass": true
   }
 }

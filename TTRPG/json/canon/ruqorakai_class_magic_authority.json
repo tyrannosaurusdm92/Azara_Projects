@@ -71,7 +71,10 @@
         "necroticResist": "temporary",
         "notForcedRevival": true
       }
-    }
+    },
+    "riseNoBookProgression": true,
+    "riseSoloPlayer": true,
+    "riseNoPvP": true
   },
   "roles": [
     {
@@ -2420,5 +2423,13 @@
       "riseAction": "Only in later Classical history, interpret a dream while deciding how to respond to waking threats.",
       "continuity": "Distinct from Raeshkul; no automatic prophetic certainty or mental violation."
     }
-  ]
+  ],
+  "authoritativeSource": {
+    "file": "🔁 School-Based Magic Disciplines(3).txt",
+    "version": "20 November 2026",
+    "classes": "Section 8: 14 deity-linked archetypes with 70 independent role paths",
+    "schools": "Sections 1–2: Eleven Schools and +25% / -25% interactions",
+    "editionRules": "Section 4: Rise of Ruqorakai single-player text game; no books or PvP",
+    "sourceStatus": "Author-provided gameplay specification; class titles are game design rather than historical orders"
+  }
 }
