@@ -4,7 +4,7 @@ if(!source||!world||!Array.isArray(world.provinces))throw Error('Missing provinc
 const byName=new Map(world.provinces.map(p=>[p.name,p]));const ss=new Map(world.provinces.flatMap(p=>(p.settlements||[]).map(s=>[s.id,s])));
 const pr=new Map(source.provinces.map(p=>[p.id,p]));const grouped=new Map(source.provinces.map(p=>[p.id,[]]));
 for(const r of source.provinces){const p=byName.get(r.name);if(!p)throw Error('Missing province '+r.name);const legacy=p.id;
-p.legacyProvinceId=legacy===r.id?(p.legacyProvinceId||null):legacy;p.id=r.id;p.governmentType=r.government;
+p.legacyProvinceId=legacy===r.id?(p.legacyProvinceId||null):legacy;p.originalGovernmentType=p.originalGovernmentType||p.governmentType;p.id=r.id;p.governmentType=r.government;
 p.capitalSettlementId=r.capitalSettlementId;p.capitalName=r.capitalName;p.settlementCount=r.settlementCount;p.townAvailable=r.townAvailable;}
 for(const r of source.settlements){const s=ss.get(r.id),p=pr.get(r.provinceId);if(!s||!p)throw Error('Missing settlement '+r.id);
 const legacy=s.provinceId;if(r.relocated&&s.coordinates&&!s.originalCoordinates)s.originalCoordinates={...s.coordinates};

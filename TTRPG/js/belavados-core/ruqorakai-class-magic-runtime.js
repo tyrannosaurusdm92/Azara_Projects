@@ -35,7 +35,7 @@ function canUse({archetype,role,school,yearCE=121,flags={},ability='',rank=0}={}
   if(record&&rank<record.rank)return {allowed:false,reason:'This technique requires '+record.rank+' in the '+role+' role path.'};
  }
  if(cls?.id==='thorned-reclaimer'&&flags.anubriosh_classical_fall_confirmed!==true&&
-  (s?.id==='necromancy'||/necromanc|black tearbrand|thornveil|soul shatter|tears of the exiled|resurrect|reclamation|gravebloom|thornward renewal/i.test(String(ability)))){
+  (s?.id==='necromancy'||cls.roles.some(r=>r.abilities.some(a=>norm(a.name)===norm(ability)))||/necromanc|black tearbrand|thornveil|soul shatter|tears of the exiled|resurrect|reclamation|gravebloom|thornward renewal/i.test(String(ability)))){
    return {allowed:false,reason:'This Anubriosh technique requires the confirmed Classical fall event.'};
  }
  return {allowed:true,reason:'Training is gained through mentorship, practice, a trial, or meaningful experience.'};
@@ -49,7 +49,7 @@ function trialFor(archetype,{yearCE=121,flags={}}={}){
 }
 function emptyState(){return {version:2,edition:'Rise of Ruqorakai',yearCE:121,characterLevel:1,
  classPaths:{},schoolRanks:Object.fromEntries(data.schools.map(s=>[s.id,0])),
- unspentPerks:3,retiredPaths:{},flags:{},bookInventory:null,pvp:false};}
+ unspentPerks:3,retiredPaths:{},flags:{},pvp:false};}
 function validateState(state){
  if(!state||state.edition!=='Rise of Ruqorakai'||state.pvp===true)throw TypeError('Incorrect single-player character state');
  if(state.yearCE!=null&&(!Number.isInteger(state.yearCE)||state.yearCE>=276))throw RangeError('Invalid pre-destruction campaign year');
