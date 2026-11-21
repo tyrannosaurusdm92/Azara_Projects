@@ -1,0 +1,874 @@
+🔁 School-Based Magic Disciplines
+Each of the ELEVEN schools below has domain-linked deities, training challenges and two different game implementations. Skill Books and all named Books below apply ONLY to the MMORPG; Rise of Ruqorakai uses no books or book-gated progression.
+* Focus: Core magical themes
+
+* Skill Books: For level ranges 0 - 5, 6 - 10, 11 - 15
+
+* Training Objects: Practice tools tied to lore
+
+* Combat Interactions: Influenced by the Strong/Weak/Neutral chart
+
+* Trait Synergies: Best Traits to pair with the magic type
+
+✨ Holy Magic
+ Domain links (not automatic endorsements): Ruqore (just law), Sokhivar (healing), Hathruna (renewal), Ishtanora (sanctuary), Oskar'enlil (ethical protection), Nefarokir (funerary rites only), Valsera (compassion), Selkhanis (restoration)
+Focus: Restoration, banishment, sacred or moonlit radiance, Healing
+ Strong Against: Infernal, Blood
+Weak Against: Necromancy, Chaos
+Books:
+• Light’s Foundation (0 - 5)
+• Radiance Unleashed (6 - 10)
+• Beacon of Judgment (11 - 15)
+Objects:
+• Light Wells: Pulse-based AoE healing challenges
+• Sanctified Rings: Cleanse curse zones under pressure
+• Demon-Simulacrums: Purge waves of corrupted beings
+Best Traits: Radiant Healer, Mana Reservoir
+
+
+🌬 Spirit Magic
+ Domain links (not automatic endorsements): Nefarokir (rightful passage), Sokhivar (breath and vitality), Valsera (compassionate transition), Eirzunet-Eirna (death/chaos), Thalunesh (thresholds), Nephthysra (empathy), Anubriosh (contested threshold rites)
+Focus: Soul-binding, life resonance, purity and transcendence, Mystic Arts (Warding, Spirit)
+Strong Against: Chaos, Dream
+Weak Against: Blood, Arcane
+Books:
+• Echoes of the Soul (0 - 5)
+• Binding Winds (6 - 10)
+• Ascendant Form (11 - 15)
+Objects:
+• Spirit Mirrors: Reflect curses and control essence
+• Astral Tethers: Sustain soul-based rituals
+• Resonance Fields: Maintain purity in cursed zones
+Best Traits: Mana Reservoir, Telekinetic Touch
+
+
+🌫 Illusion Magic
+ Domain links (not automatic endorsements): Thalunesh (fey trickery), Thalunesh-Lyeuth (identity and shape), Sigrananna (concealment), Raeshkul-Elysh (dream perception), Nephthysra (emotional glamours), Oskar'enlil-Tyrom (subterfuge), Setrimir (mechanical simulation)
+Focus: Deception, false forms, perception shifts, bounded mental effects, Psionics
+Strong Against: Arcane, Necromancy
+Weak Against: Nature, Elemental
+Books:
+• Mirage Weaving (0 - 5)
+• Shadow of Truth (6 - 10)
+• Web of Falsehoods (11 - 15)
+Objects:
+• Perception Mazes: Navigate complex deceptions
+• Illusory Battlefields: Outwit or confuse enemies
+• Doppel Trials: Defeat your mirrored self
+Best Traits: Hex Weaver, Whispering Rune
+
+
+🌿 Nature Magic
+ Domain links (not automatic endorsements): Hathruna (roots, fungus, regrowth), Bastveig (living waters), Sigrananna (wilderness), Ishtanora (cultivation), Iskareth (animal kinship), Thoryn-Rahek (disease/ecological limits, not benevolent healing)
+Focus: Plant manipulation, bestial summoning, growth or decay, Conjuring
+ Strong Against: Arcane, Blood
+Weak Against: Infernal, Illusion
+Books:
+• Rooted Power (0 - 5)
+• Wildbinding (6 - 10)
+• Verdant Ascension (11 - 15)
+Objects:
+• Growth Circles: Accelerate natural processes
+• Beast Trials: Tame summoned creatures
+• Pestilence Wards: Resist corrupted spores
+Best Traits: Elemental Affinity, Telekinetic Touch
+
+
+🌪 Elemental Magic
+ Domain links (not automatic endorsements): Bastveig (water and storms), Ruqore (thunder), Sokhivar (wind and breath), Marduthor (fire and metalwork), Enkirael (battlefire), Horundar (weather/navigation), Valkhamesh (storm-born heroic force)
+Focus: Fire, water, air, and earth manipulation, Psionics
+Strong Against: Blood, Necromancy
+Weak Against: Spirit, Chaos
+Books:
+• Flame and Frost (0 - 5)
+• Elemental Torrent (6 - 10)
+• Primordial Overload (11 - 15)
+Objects:
+• Elemental Rifts: Channel unstable elements
+• Overcharge Fields: Sustain in chaotic surge zones
+• Terraforms: Adapt terrain for advantage
+Best Traits: Elemental Affinity, Mana Reservoir
+
+
+🔮 Arcane Magic
+ Domain links (not automatic endorsements): Marduthor (creation and measurement), Setrimir (devices and artificial life), Wenaskozid (enchanted tools), Raeshkul (psionic calculation), Selkhanis (time/destiny), Nebyrr (written binding), Anubaldir (protective foresight)
+Focus: Pure mana, control, magical force, Enchantment, Psionics, Divination
+ Strong Against: Infernal, Illusion
+Weak Against: Dream, Spirit
+Books:
+• Arcane Foundations (0 - 5)
+• Mana Formulas (6 - 10)
+• Stormbinder’s Grimoire (11 - 15)
+Objects:
+• Force Nodes: Maximize magical constructs
+• Mana Flux Chambers: Adapt to unstable energies
+• Arcane Gauntlets: Apply raw power tests
+Best Traits: Runespeaker, Chronomancer
+
+
+🔥 Chaos Magic
+ Domain links (not automatic endorsements): Eirzunet-Eirna (first true wild-magic), Anubriosh (pre-fall chaos), Vulkiris (insurgent change), Thalunesh (unpredictable trickery), Asethyr (chance), Oskar'enlil-Tyrom (subversion), Freyseth (consequential crossroads)
+Focus: Randomized effects, entropy, magical disruption, Mystic Arts (Time Magic)
+Strong Against: Holy, Elemental
+Weak Against: Spirit, Blood
+Books:
+• Seeds of Chaos (0 - 5)
+• Anarchy Arcana (6 - 10)
+• Cataclysm Codex (11 - 15)
+Objects:
+• Random Flux Engines: Cast unpredictable spells
+• Chaos Grids: Survive shifting environments
+• Curse Forges: Weaponize instability
+Best Traits: Hex Weaver, Mana Reservoir
+
+
+🩸 Blood Magic
+ Domain links (not automatic endorsements): Sokhivar (ethical vitality work), Hathruna (renewal), Iskareth (embodied life), Thoryn-Rahek (mutation/disease), Freyseth (blood-bound pacts), Eirzunet (forbidden cursecraft), Anubriosh (contested post-fall rites)
+Focus: Vitality drain, sacrificial power, parasitic energy, Healing
+ Strong Against: Spirit, Illusion
+Weak Against: Holy, Nature
+Books:
+• Blood Price (0 - 5)
+• Veinbinders (6 - 10)
+• Crimson Covenant (11 - 15)
+Objects:
+• Blood Altars: Exchange health for power
+• Hemorrhage Trials: Survive continuous drain
+• Parasite Pools: Infect and leech life
+Best Traits: Hex Weaver, Telekinetic Touch
+☠️ Necromancy
+ Domain links (not automatic endorsements): Eirzunet (necromantic craft), Anubriosh (post-fall soul reclamation), Eirzunet-Eirna (death/chaos, not undead ownership), Thoryn-Rahek (decay), Nefarokir (protective funerary opposition; never coerced undead)
+Focus: Undead control, decay, death magic, Conjuring
+ Strong Against: Holy, Arcane
+Weak Against: Infernal, Elemental
+Books:
+• Death’s Door (0 - 5)
+• Flesh and Bone (6 - 10)
+• Soul Reclaimer (11 - 15)
+Objects:
+• Bone Pits: Animate and sustain the dead
+• Rot Fields: Spread decay under pressure
+• Undead Swarms: Control and reposition mobs
+Best Traits: Hex Weaver, Arcane Architect
+
+
+🌙 Dream Magic
+ Domain links (not automatic endorsements): Raeshkul-Elysh (dreams/nightmares), Raeshkul (psionic insight), Sokhivar (prophecy), Valsera (inspiration), Selkhanis (fated vision), Nephthysra (emotional resonance), Thalunesh-Lyeuth (altered consciousness)
+Focus: Sleep, vision, psyche alteration, Psionics, Divination
+ Strong Against: Necromancy, Infernal
+Weak Against: Arcane, Chaos
+Books:
+• Dreamwalker’s Guide (0 - 5)
+• Sleep and Sight (6 - 10)
+• Realmshaper’s Tome (11 - 15)
+Objects:
+• Nightmare Loops: Trap and escape mental prisons
+• Illusory Sleep Trials: Balance deception and empathy
+• Astral Doors: Enter deeper dreams
+Best Traits: Whispering Rune, Chronomancer
+
+
+🔥 Infernal Magic
+ Domain links (not automatic endorsements): Freyseth (forbidden pacts), Eirzunet (curses), Anubriosh (post-fall soul reclamation), Nebyrr (punitive binding clauses), Thoryn-Rahek (plague/biological corruption); no listed deity is inherently infernal merely by being Exiled
+Focus: Corruption, torment, fire and destruction, Enchantment
+ Strong Against: Nature, Chaos
+Weak Against: Holy, Dream
+Books:
+• Ashes and Fire (0 - 5)
+• Abyssal Binding (6 - 10)
+• Hellmouth Codex (11 - 15)
+Objects:
+• Flame Cages: Sustain pain spells under stress
+• Demonic Vats: Bind infernal entities
+• Sin Trials: Resist temptation and unleash wrath
+Best Traits: Mana Reservoir, Arcane Architect
+
+
+🧭 Magic School System  -  Full Ruleset
+🔹 1. School Overview
+Each magic discipline belongs to one of the ELEVEN schools of magic:
+   * Holy, Spirit, Illusion, Nature, Elemental, Arcane, Chaos, Blood, Necromancy, Dream, Infernal
+School Determines:
+   * Spell behavior and thematic flavor
+   * Strengths and weaknesses in combat encounters
+   * MMORPG-only skill books, shared training objects, and version-specific advancement paths
+   * Trait synergies for spellcasters
+   * No School Lock - players may freely mix magic types, creating hybrid casting styles
+Magic Skill Progression:
+   * Each school functions as an independent skill tree, tracked separately
+   * Magic skills level independently from adventuring level, capping at 20
+   * School Affinity increases with use, granting passive bonuses such as faster casting speed, critical spell chance, or unique resistances
+Corruption Meter & Soul Imprint (Endgame Tier IX+)
+   * Certain unsafe or coercive cross-school experiments may build corruption through concrete risks; using multiple schools alone does not automatically create corruption
+   * High Corruption can cause instability effects (hallucinations, backlash)
+   * Corruption also affects mutation paths, particularly for Chaos/Necromancy casters
+   * At high mastery (Tier IX+), players may bind a magic school to their soul
+   * Grants permanent traits and exclusive abilities
+   * Defines a character’s magical legacy, persisting across reincarnations and lineage systems
+🔹 2. Strength & Weakness Chart (Eleven-School Matchup Matrix)
+Each magic school interacts uniquely in combat, with strengths and vulnerabilities:
+Combat Effectiveness Modifiers
+   * Strong Against → Gains +25% effectiveness (damage, healing, debuff success)
+   * Weak Against → Suffers −25% effectiveness
+   * Neutral → No modifier
+School Matchups
+Each school has natural advantages and vulnerabilities:
+Magic School
+	Strong Against (+25%)
+	Weak Against (-25%)
+	Holy
+	Infernal, Blood
+	Necromancy, Chaos
+	Spirit
+	Chaos, Dream
+	Blood, Arcane
+	Illusion
+	Arcane, Necromancy
+	Nature, Elemental
+	Nature
+	Arcane, Blood
+	Infernal, Illusion
+	Elemental
+	Blood, Necromancy
+	Spirit, Chaos
+	Arcane
+	Infernal, Illusion
+	Dream, Spirit
+	Chaos
+	Holy, Elemental
+	Spirit, Blood
+	Blood
+	Spirit, Illusion
+	Holy, Nature
+	Necromancy
+	Holy, Arcane
+	Infernal, Elemental
+	Dream
+	Necromancy, Infernal
+	Arcane, Chaos
+	Infernal
+	Nature, Chaos
+	Holy, Dream
+	 
+CANON UPDATE — TWO GAME VERSIONS AND DOMAIN-FAITHFUL PANTHEON
+20 November 2026 | This edition specification supplements the original eleven-school descriptions above. The two versions share the magic vocabulary and pantheon, not identical gameplay, chronology or book dependencies.
+
+
+1. AUTHORITATIVE HISTORY AND PANTHEON RULES
+The Uxrowo Cataclysm is a separate event in 1351 BCE. The Ruqorakai / Iron Dominion rises during 65–213 CE; its hybrid dark-matter/antimatter bomb completely destroys Belavadós, not Tzaphaer, in 276 CE; the Iron Dominion finally collapses in 289 CE. The Classical pantheon era spans 5 BCE–827 CE, but that does NOT mean Belavadós survives past 276 CE. The Traditional era begins in 828 CE; Modern begins in 1798 CE.
+The pantheon source is “Aza’ra’s Pantheon (Book),” including its five-era roster and preserved long-form biographies. Its 32 distinct deity identities are represented in the deity atlas below, using the current names and domains. Historic divine titles in the original magic-school draft must not silently replace these identities or be treated as separate gods. In particular, Eirzunet and Eirzunet-Eirna are distinct; Nefarokir and Anubriosh have distinct claims to death; Oskar'enlil and Oskar'enlil-Tyrom are distinct; Raeshkul and Raeshkul-Elysh are distinct.
+Domain linkage is not identical to patronage, ethical endorsement or being personally available. A deity may be worshipped, opposed, researched or invoked as a boundary guardian in a school. “Exiled” means exclusion from recognized divine society or public institutions, not death or removal of all power. Ancient, Archaic and Classical deity records must use Exiled rather than Diminished for the affected early-era cases. Traditional and Modern retain their own statuses, including Diminished where the source explicitly records it. “Demigod” is a lineage/ascension category, NOT a fixed limit on influence or power.
+No deity may grant powers contrary to their domains merely to fill a spell school. Nefarokir guides rightful death, burial and protection of souls; he does not approve forced undeath or slaughter. Anubriosh's pre-fall Chaos/Death role must not be confused with his later necromantic fall. Eirzunet-Eirna is the source of the FIRST TRUE WILD-MAGIC and surpasses Anubriosh in Chaos and Death despite demigod status. Ruqore's justice is not automatic validation of the Dominion's decrees. Divine magic access must be era-gated, especially for later-born or later-ascended beings. The sources date Nephthysra's birth to 140 CE; Asethyr and other descendants cannot precede their parents. Valsera begins the Ancient and Archaic eras as NOT YET DIVINE and ascends only during Classical; Eirzunet-Eirna is born afterward. Never retcon all of these deities into the start of 65 CE.
+Canonical domain sources: https://docs.google.com/document/d/1DY9G6KN637-K7T6hNBCuawaUGYUuh-hjE59JNX6dOHY/edit
+History reference: https://docs.google.com/document/d/1W3eBIc7L2MAYYH12nTEUBc-voQtpS7ANbAuiGyWdx0E/edit
+
+
+2. SHARED ELEVEN-SCHOOL ENGINE
+Schools: Holy, Spirit, Illusion, Nature, Elemental, Arcane, Chaos, Blood, Necromancy, Dream and Infernal. This is ELEVEN schools; “Twelve Schools” in legacy headings was a counting error. Each school has independent proficiency, the existing skill cap of 20, distinct practice actions, contextual costs, and compatibility with school mixing. No forced one-school class lock.
+The strength/weakness chart in this document governs any +25%/−25% school matchup modifiers if that balance system is enabled. The introductory lists have been reconciled to it; neutral matchups receive no modifier. These percentages remain design parameters to test, especially for competitive play, and are not claims that an objective cosmology literally makes one god superior to another. Effects must resolve by school and spell, not by indiscriminately making all healing or defense deal 25% more damage.
+Technique data should include: school ID, spell/ability ID, level gate, learned source, physical or magical target, casting intent, resource cost, effect and duration, counters, environmental conditions, deity/domain context, moral consent constraints, narrative consequence, and version availability. A domain correspondence provides a quest/ritual/lore route; it never unlocks every spell for free.
+The existing Corruption Meter and Soul Imprint are retained as separately tuned systems, not a judgment that Chaos, blood-based healing or Necromancy automatically makes a person evil. Reckless coercion, soul violation, unsafe channeling or knowingly broken oaths can cause consequences; ethically performed funeral protection, healing or consensual ritual does not carry the same automatic penalty. Eight-axis Covenant alignment, public reputation, divine standing, school skill and corruption are separate values. Accessible nonverbal casting, keyboard and controller alternatives, captions, readable choice labels and a complete action log are required for both editions.
+The original school entries above describe training objects and three tiers of books. Those book titles and level bands belong ONLY to the MMORPG. “Rise of Ruqorakai” uses the same schools and objects but NO books, book UI, reading quests, book loot or book-gated learning.
+
+
+3. VERSION A — AZA’RA MMORPG (MULTIPLAYER, PVP, BOOKS)
+Identity: a persistent online role-playing world of surviving Aza’ra after the 276 CE destruction. Its accessible continents include Tzaphaer, Arzuhan, Dakaroth and other canon-supported surviving lands, with skyships, trains, ferries, submarines, caravans and multiple portals. Belavadós may exist in historical memories, preserved stories, old maps or flashback material; never as an intact explorable contemporary continent. The City of the Mourned Gods is founded after the catastrophe, not in a pre-276 zone. Traditional and Modern divine standing and technology are applied according to the chosen live-world date.
+Books have TWO different meanings here. (a) The original eight-book Aza’ra: Threads of Fate saga is supported as story material, historical lore, quests, characters and optional major narrative arcs in the MMORPG. Game experiences may reference and adapt the books without turning every player into Pix or overriding the story's established timeline. (b) Skill Books are magical advancement resources. The named school books already catalogued above cover levels 0–5, 6–10 and 11–15. Levels 16–20 require a high-mastery progression plan with appropriately authored advanced manuals, mentors and trials; names and drop rates for that additional tier remain proposed, not established canon.
+PvP IS ALLOWED. Provide both PvE and PvP rules: formal duels, faction conflict objectives, battlegrounds and designated contested regions, with clearly visible PvP flags, understandable opt-in rules, level scaling, anti-griefing protections, safe towns, spawn protection, combat logging safeguards and an accessible no-PvP gameplay route. PvP participation must not be necessary to obtain core story endings, essential mobility tools, basic training or medically relevant accessibility features. Friendly fire, theft and reputation consequences must be explicit. Combat against NPCs is PvE, not PvP.
+For PvP, resolve magic schools with server-authoritative resources, range, line-of-sight, collision, status resistances, interrupts, control immunity windows, healing caps and cooldowns. Do not allow a target-locking illusion or blood effect to remove a human player's agency indefinitely. The listed ±25% chart must be tested for uneven matchups; use PvP-specific normalized coefficients if needed without changing a school's lore. Guild politics, crafting, trade, settlement development, rescue services, player housing, public transport and faction reputation remain meaningful alternatives to combat.
+Domain-faithful deity play: a healer can serve Sokhivar through volunteer infirmaries, not by farming kills; a ferryman of Nefarokir safeguards burial, not undead enslavement; a Marduthor crafter repairs machinery but can publicly oppose its weaponization; a Ruqore knight may investigate corrupt law; a Vulkiris devotee can support collective liberation but remains accountable for harm. Exiled worship may involve secret groups, dangerous scrutiny or contested shrines. Diminished Modern cults can persist with few devotees without being portrayed as powerless.
+MMORPG use cases: cooperative Spirit cleansing in a hospital; guild-led Nature restoration on a scarred surviving continent; an Arcane engineer maintaining a moon-powered skyship; a limited PvP duel between legalist and insurgent players; a noncombatant who resolves a region-wide shortage by trading, diplomacy and harvest magic. Book-canon quests and skill-book drops are enabled only here.
+Save/state: account-bound characters; multiplayer guild and party memberships; server-recorded inventory, acquired skill books and learned techniques; character year/era; reputations and eight-axis scores; deity relations and status gates; PvP flag and penalties; trade ledger; permanent quest decisions. Offline progress, when offered, requires authorized reconciliation with the server.
+
+
+4. VERSION B — RISE OF RUQORAKAI (SINGLE-PLAYER, NO PVP, NO BOOKS)
+Identity: a single-player open-world, MMO-scale RPG with exploration, professions, NPC schedules, equipment, factions, branching quests and persistent consequences, experienced entirely through descriptive text and explicit choose-your-own-adventure decisions. Its freedom of travel, character builds, faction allegiances and radiant side quests should capture the open-ended feeling of a Skyrim-style adventure, but the interface is a text-driven story engine rather than a 3D real-time world. “MMO” describes the scale and systems, NOT a multiplayer service. There are no other player characters, no player-vs-player combat, no multiplayer matchmaking and no PvP switches.
+The primary campaign is set on living Belavadós during the Iron Dominion's 65–213 CE rise and expansion, before the fixed 276 CE catastrophe. The player may serve Dominion interests, investigate industrial abuses, join independent settlements, practice a profession, support dissidents, become a mediator, or avoid imperial politics while pursuing personal goals. None of these roles presumes a canon name or gender for the player character. NPC conflict, wildlife threats, duels against NPCs, political resistance and environmental danger are PvE/story encounters, never PvP.
+ABSOLUTELY NO BOOK SYSTEM: no skill books, spell tomes, collectible reading objects, library/codex reading quests, unlock-by-reading mechanics or adaptation of the novel series into this campaign. Knowledge travels by conversation, witnessed instruction, apprenticeships, practice, experiment, remembered oral teaching, dreams/visions, ritual observation and environmental discovery. The player's journal, quest tracker and accessibility transcript are functional interface records, not in-world books. The school book titles above never appear as items or prerequisites in Rise.
+Open-world loop: (1) choose or revisit a known location, with travel time and risks; (2) read a contextual scene of 120–350 words as appropriate; (3) choose 2–6 clearly distinguished actions, always including a safe decline/leave option where practical; (4) check skills, fatigue, tools, relationships, social authority, local time, alignment and deity/domain conditions; (5) resolve consequences with visible fairness, including success with cost; (6) update NPC memory, households, resources, faction suspicion, revealed clues and regional access; (7) surface independent follow-up leads rather than forcing the player back into a single main quest. Keyboard, screen reader, font scaling and complete non-timed choice access are mandatory.
+Proposed knowledge progression without books: at school rank 0–5, learn from a living mentor or a first observable exercise; at 6–10, complete applied training, guided field work or repeated independent practice; at 11–15, perform advanced school challenges and combine learned patterns; at 16–20, solve an ethical and technical mastery trial with relevant NPCs, deities or environments. Techniques persist as learned capabilities, not possessions. School rank still caps at 20. Every training object listed above becomes an interactive scene or physical practice apparatus, not a book reward.
+The Iron Dominion is an actor, not a mandatory alignment. Joining it may grant access to workshops, transport and power while exposing the player to repression and complicity; resisting it may earn local trust while closing official gates; reform or neutrality may succeed in a district but cannot erase the fixed historical catastrophe. Players can determine who lives, what records survive, which communities escape or reconcile, and how their own life ends, without rewriting the canon destruction of Belavadós in 276 CE. If the calendar continues beyond 213 CE, the story explicitly enters escalating pre-catastrophe years. After 276 CE, Belavadós has no intact playable surface; an epilogue can follow survivors elsewhere. The final collapse in 289 CE is fixed.
+Divine presence in Rise is period-correct. Divine contact primarily manifests as dreams, oaths, weather, moral choices, oral traditions, rituals and agents whose behavior fits the deity's recorded domains. The engine can offer a related god's aid, warning, opposition or silence; not every patron personally manifests. Later-born beings remain unavailable before their canonical origin. No deity, no matter how powerful, should simply appear to erase political consequences, grant every school or prevent the 276 CE event.
+Choice engine data model: scene_id, year_ce, region_id, location_id, character_build, learned_school_skills, attributes, fatigue, equipment, companions, local NPC memory, faction standings, eight_axis_covenant, deity_relation_state, flags, settlement_state, visible_actions and consequence_log. A choice has prereqs, success/failure branches, immediate costs, delayed changes, quest triggers and exit routes. Seeded deterministic randomization supports replay without making the fiction inconsistent. Store slots and autosaves must be reversible for accidental clicks but preserve deliberate consequence once confirmed.
+Example branching scene — Belavadós industrial riverport, 121 CE (illustrative, not a newly established canon city): the workshops have dumped residue beside a struggling neighborhood; a rail engineer asks the player to keep production running while residents report illness.
+(A) Consult Hathruna's growers and Sokhivar's healers: investigate living damage, establish a treatment plan, earn local trust, risk costly delays.
+(B) Work with Marduthor's artisans and Setrimir's mechanical methods: inspect the process, design a filter, discover whether the harm was negligent or deliberate.
+(C) Petition Ruqore's magistrates or challenge a Nebyrr-style binding decree: choose due process, gather witnesses, risk obstruction by officials.
+(D) Quietly assist Vulkiris-linked dissidents or Oskar'enlil-Tyrom's covert methods: disrupt the dumping operation, possibly endanger innocent workers and affect faction suspicion.
+(E) Seek Bastveig's waterwardens or Horundar's transporters: redirect a threatened ferry route and protect river communities.
+(F) Leave or pursue unrelated local work: the neighborhood problem persists and NPCs remember the absence.
+This example shows a choice-driven world, not six gods handing out interchangeable spells. Branches may converge at a geographic hub while retaining divergent NPC memory and consequences.
+Rise's ending is based on a personalized constellation of choices and relationships: reformer, dissident, loyalist, caretaker, maker, explorer, spiritual mediator or a mixture. The historical timeline is anchored; the player's narrative is not railroaded. No PvP; no books; no mandatory novel protagonists.
+
+
+5. EDITION FEATURE CONTRACT — DO NOT MIX THESE SYSTEMS
+Feature | Aza’ra MMORPG | Rise of Ruqorakai
+Players | Many online players; parties and guilds | Exactly one player; persistent NPC companions
+PvP | Enabled under published rules | Not present, no PvP modes
+PvE | Yes | Yes, including NPC duels and combat encounters
+Books | Eight-book saga adaptations plus skill books | No books of any kind or book-gated learning
+School mastery | Independent skill 0–20, book learning and practice | Independent skill 0–20, teaching/doing/rituals only
+Narrative | Persistent shared-world quests plus book-based arcs | Procedural and authored text CYOA, responsive open world
+Timeline | Surviving Aza’ra after 276 CE | Belavadós during 65–213 CE; optional later consequence epilogue
+Contemporary Belavadós map | Never | Allowed ONLY before the 276 CE destruction
+Deities | Five-era status appropriate to server's era | Classical-era presence, birth and fall gates
+Economy | Shared server market and player trade | Simulated NPC supply, prices, caravans and local shortages
+Save | Server-authoritative world and account | Local or account save of a solo world state
+Combat | PvP and PvE, clearly separated | PvE/choice outcomes only
+The deity atlas following this section is mandatory for BOTH editions. Its per-deity mechanics are design proposals grounded in recorded domains; current names, core domains, births and phase statuses are source-derived facts.
+
+
+6. COMPLETE 32-DEITY SCHOOL CROSSWALK — BOTH GAME VERSIONS
+Legend: Classical status is a LATE-ERA snapshot, NOT proof the deity was alive or officially worshipped at the beginning of 65 CE. Each school's link can be patronage, opposition, scholarship or domain-specific cultural practice. The per-deity MMORPG and Rise effects below are implementation proposals grounded in the pantheon, not new canonical divine powers.
+Status sequence is Ancient | Archaic | Classical | Traditional | Modern. “Not attested” means the person is not placed in that era's roster; do not invent a birth date. All six demigods are retained as distinct entities; lineage class does not determine strength.
+
+
+01. Ruqore
+Source domains: Sky authority, thunder, kingship, law enforcement, cosmic governance, justice, sovereign order, rightful rulership, sun, sacred war, celestial moonlight.
+Pantheon status — Ancient: Primary; Archaic: Primary; Classical: Primary; Traditional: Primary; Modern: Secondary
+Domain-linked schools: Holy, Elemental (thunder), Arcane (ordered governance).
+MMORPG: Run judicial oaths, investigate rigged guild trials, protect fair contest rules in PvP; tyrannical decrees must not automatically count as justice.
+Rise of Ruqorakai: Hear testimony, weigh a magistrate's duty against a Dominion command, or invoke a storm-warning oath.
+Continuity guardrail: Does not guarantee that the Dominion is just.
+
+
+02. Nefarokir
+Source domains: Death, funerary order, ancestors, spirit memory, ethical judgment, patient passage and the underworld.
+Pantheon status — Ancient: Primary; Archaic: Primary; Classical: Primary; Traditional: Primary; Modern: Primary
+Domain-linked schools: Spirit, Holy (funerary protection); Necromancy only as an opposing ward.
+MMORPG: Guide memorials, soul-safe resurrection boundaries and peaceful passage; stop coercive undead exploitation.
+Rise of Ruqorakai: Protect burial rights, search for missing dead and help an endangered soul pass when its true time comes.
+Continuity guardrail: Never harvests bomb victims or legitimizes forced undeath.
+
+
+03. Hathruna
+Source domains: Fertility, agriculture, fungi, roots, decay, seasonal continuity and rebirth.
+Pantheon status — Ancient: Primary; Archaic: Secondary; Classical: Primary; Traditional: Primary; Modern: Primary
+Domain-linked schools: Nature, Holy (renewal), Blood (consensual living vitality).
+MMORPG: Support agriculture guilds, fungal remediation, food security and soil recovery.
+Rise of Ruqorakai: Restore exhausted farmland, treat contaminated roots and choose between harvest today and long-term renewal.
+Continuity guardrail: Decay is part of ecology, not blanket approval of plaguecraft.
+
+
+04. Bastveig
+Source domains: Oceanic renewal, hydromancy, storms, tides, reefs, abyssal memory, erosion and necessary change.
+Pantheon status — Ancient: Primary; Archaic: Primary; Classical: Primary; Traditional: Primary; Modern: Secondary
+Domain-linked schools: Elemental (water/storm), Nature (aquatic life), Chaos (necessary change).
+MMORPG: Lead reef restoration, maritime rescue, hydromancy and waterway maintenance.
+Rise of Ruqorakai: Read tide and storm signs, purify a poisoned canal or redirect a threatened transport route.
+Continuity guardrail: They value living waters, not gratuitous annihilation.
+
+
+05. Marduthor
+Source domains: Creation, sacred speech, invention, metalwork, architectural craft, measurement and transformative fire.
+Pantheon status — Ancient: Secondary; Archaic: Primary; Classical: Primary; Traditional: Secondary; Modern: Secondary
+Domain-linked schools: Arcane (invention), Elemental (forge fire/metal).
+MMORPG: Create ethical engineering commissions, railway repairs and enchantment research.
+Rise of Ruqorakai: Prototype safe engines, inspect failed pressure seals or refuse military weaponization.
+Continuity guardrail: His craft does not mean he condones the Dominion bomb.
+
+
+06. Oskar'enlil
+Source domains: Protection, civic harmony, ethical mediation, adaptation, rebellion, self-determination and the stewardship of civilizations.
+Pantheon status — Ancient: Secondary; Archaic: Exiled; Classical: Tertiary; Traditional: Exiled; Modern: Tertiary
+Domain-linked schools: Holy (ethical protection), Spirit (mediation), Arcane (civic adaptation).
+MMORPG: Arbitrate disputed guild charters, protect civic autonomy and support equitable restoration.
+Rise of Ruqorakai: Broker strikes, defend threatened citizens and balance civil order against self-determination.
+Continuity guardrail: Political rebellion is neither automatically heroic nor villainous.
+
+
+07. Enkirael
+Source domains: Martial courage, competitive intensity, survival, battlefire, confrontation and hard-earned renewal.
+Pantheon status — Ancient: Secondary; Archaic: Tertiary; Classical: Secondary; Traditional: Secondary; Modern: Tertiary
+Domain-linked schools: Elemental (battlefire), Chaos (combat pressure).
+MMORPG: Offer defensive combat training, worthy competitions and post-conflict rebuilding.
+Rise of Ruqorakai: Train defenders, de-escalate a tavern challenge or confront an aggressor who targets noncombatants.
+Continuity guardrail: Courage must not become an excuse for cruelty or conquest.
+
+
+08. Sokhivar
+Source domains: Healing, vitality, sky, breath, sunlight, aetheric winds, music, prophecy and aerial freedom.
+Pantheon status — Ancient: Secondary; Archaic: Secondary; Classical: Secondary; Traditional: Primary; Modern: Primary
+Domain-linked schools: Holy (healing), Spirit (breath), Elemental (air), Dream (prophecy), Blood (vitality care).
+MMORPG: Maintain public infirmaries, evacuation skyships and shared respiratory-health support.
+Rise of Ruqorakai: Help an ill machinist breathe, offer a healing rite or follow a meaningful prophetic song.
+Continuity guardrail: No predatory life drain; sunlight language is inherited metaphor where Aza’ra has no sun.
+
+
+09. Anubriosh
+Source domains: CHAOS AND DEATH are Anubriosh's primary divine domains before the Classical fall. He rules unpredictable mortal endings, disorder at death's threshold and turbulent transitions; communication, peace during passage and travel are subordinate aspects. He is not yet a necromancer.
+Pantheon status — Ancient: Tertiary; Archaic: Tertiary; Classical: Exiled; Traditional: Diminished; Modern: Diminished
+Domain-linked schools: Chaos and Spirit before the fall; Necromancy, Blood and Infernal-style coercive rites after.
+MMORPG: Use a phase-gated divine conflict between old threshold authority and later exiled necromantic followers.
+Rise of Ruqorakai: Early in the rise, offer turbulent passage choices; only after the canonical fall permit necromantic contact, and then with significant consequences.
+Continuity guardrail: Before falling he governs Chaos and Death; after falling he cannot usurp Nefarokir's rightful-death office.
+
+
+10. Raeshkul
+Source domains: Strategy, rational warfare, psionic insight, astral memory, tactical probability and higher understanding.
+Pantheon status — Ancient: Tertiary; Archaic: Secondary; Classical: Secondary; Traditional: Tertiary; Modern: Tertiary
+Domain-linked schools: Arcane (calculation), Dream (psionic foresight), Illusion (mental counterplay).
+MMORPG: Provide tactics, ethical war games, divination puzzles and battle planning.
+Rise of Ruqorakai: Analyze troop movement, expose false intelligence or predict the cost of industrial militarization.
+Continuity guardrail: Intelligence does not imply automatic mind control or reckless war.
+
+
+11. Ishtanora
+Source domains: Households, village hearths, harvest stores, communal meals, domestic peace and fertility.
+Pantheon status — Ancient: Tertiary; Archaic: Tertiary; Classical: Tertiary; Traditional: Secondary; Modern: Tertiary
+Domain-linked schools: Holy (sanctuary), Nature (harvest/home gardens).
+MMORPG: Offer community kitchens, child and household protection and refuge management.
+Rise of Ruqorakai: Defend a family home from forced seizure, store winter provisions or organize communal meals.
+Continuity guardrail: Hearth support differs from predatory blood sacrifice.
+
+
+12. Horundar
+Source domains: Travel, opportunity, ocean crossings, weatherwise navigation, elemental storms, trade and safe passage.
+Pantheon status — Ancient: Tertiary; Archaic: Tertiary; Classical: Secondary; Traditional: Tertiary; Modern: Diminished
+Domain-linked schools: Elemental (weather), Nature (travel ecology).
+MMORPG: Provide ferry, caravan, skyship and public transit rescue quests.
+Rise of Ruqorakai: Choose a safe crossing, reroute caravans from storms or defend a public route from profiteers.
+Continuity guardrail: Safe passage is his core; do not treat him as a god of teleportation without a grounded link.
+
+
+13. Selkhanis
+Source domains: Destiny and the unfolding of time, Cooperative restoration and shared endurance.
+Pantheon status — Ancient: Tertiary; Archaic: Exiled; Classical: Tertiary; Traditional: Secondary; Modern: Tertiary
+Domain-linked schools: Arcane (time/destiny), Dream (vision), Holy (shared restoration).
+MMORPG: Coordinate calendar events, crisis recovery and collective endurance quests.
+Rise of Ruqorakai: Explore a possible future in a vision while choosing real acts of cooperation now.
+Continuity guardrail: Fate does not allow the 276 CE catastrophe to be quietly rewritten.
+
+
+14. Thalunesh
+Source domains: Threshold trickery, roaming, shapeshifting, fey mischief, opportunism and clever social maneuvering.
+Pantheon status — Ancient: Demigod; Archaic: Demigod; Classical: Demigod; Traditional: Demigod; Modern: Demigod
+Domain-linked schools: Illusion (trickery), Spirit (thresholds), Chaos (fey surprises).
+MMORPG: Provide portal riddles, disguises, nonlethal mischief and alternative access paths.
+Rise of Ruqorakai: Read the motives of a charming border trickster and choose a disguised entry, honest passage or retreat.
+Continuity guardrail: Demigod origin and actual birth/attestation take priority over generic ancient-era labels.
+
+
+15. Valkhamesh
+Source domains: Heroic competition, glory, storm-born sovereignty, ancestral prestige and aspirational leadership.
+Pantheon status — Ancient: Demigod; Archaic: Demigod; Classical: Demigod; Traditional: Demigod; Modern: Demigod
+Domain-linked schools: Elemental (storm-born glory), Holy (honorable aspiration).
+MMORPG: Run fair competitive trials and optional tournament duels with explicit PvP consent.
+Rise of Ruqorakai: Compete in an NPC tournament, accept a challenge or lead a rescue with visible courage.
+Continuity guardrail: Glory is not permission to kill civilians or impose unfair contests.
+
+
+16. Setrimir
+Source domains: Invention, silent knowledge, ingenious mechanisms, artificial life and awakened tools.
+Pantheon status — Ancient: Demigod; Archaic: Demigod; Classical: Demigod; Traditional: Demigod; Modern: Demigod
+Domain-linked schools: Arcane (mechanisms/artificial life), Illusion (simulation).
+MMORPG: Build puzzles involving autonomous constructs, repair and responsible invention.
+Rise of Ruqorakai: Investigate a self-moving machine, teach a tool to respond safely or protect an inventor's secret.
+Continuity guardrail: Artificial life deserves its own moral questions; no free mind domination.
+
+
+17. Valsera
+Source domains: Artistic inspiration, peace during life transitions, convergence of mind, heart, soul and body, compassionate emotional awakening and creative insight.
+Pantheon status — Ancient: Demigod; Archaic: Demigod; Classical: Demigod; Traditional: Demigod; Modern: Demigod
+Domain-linked schools: Holy (compassion), Spirit (life transition), Dream (inspiration).
+MMORPG: Support voluntary healing arts, grief care, creative magic and reconciliation.
+Rise of Ruqorakai: Only after her Classical ascension, offer a creative and compassionate rite that bridges grief and recovery.
+Continuity guardrail: NOT YET A DEITY in Ancient/Archaic or in any pre-ascension Classical scene.
+
+
+18. Nephthysra
+Source domains: Love, attraction, beauty, charisma, empathy, emotional influence and the union of opposing forces.
+Pantheon status — Ancient: Demigod; Archaic: Demigod; Classical: Demigod; Traditional: Demigod; Modern: Demigod
+Domain-linked schools: Holy (compassion), Spirit (empathy), Illusion (emotional perception), Dream (affection).
+MMORPG: Offer relationship and diplomacy challenges rather than compulsory charm effects.
+Rise of Ruqorakai: Beginning no earlier than birth in 140 CE, mediate loyalties and strengthen consensual bonds.
+Continuity guardrail: Never available before 140 CE; divine attraction does not excuse coercive consent loss.
+
+
+19. Eirzunet-Eirna
+Source domains: Greater divine power over DEATH AND CHAOS than Anubriosh, despite demigod status; FORBIDDEN KNOWLEDGE as a NEW domain; CREATION AND MASTERY of the FIRST TRUE WILD-MAGIC; night, secrets, unpredictable death, transitions, oaths, hidden truths and volatile magical transformation.
+Pantheon status — Ancient: Demigod; Archaic: Demigod; Classical: Demigod; Traditional: Demigod; Modern: Demigod
+Domain-linked schools: Chaos (FIRST true wild-magic), Spirit (death/threshold), Necromancy-related death studies, Arcane (forbidden knowledge).
+MMORPG: Lead unique wild-magic trials and morally constrained knowledge discovery without treating death power as routine undead control.
+Rise of Ruqorakai: Appear only after Valsera's ascension and the child's birth; offer dangerous but illuminating ways to understand Chaos and Death.
+Continuity guardrail: A separate demigod from Eirzunet; surpasses Anubriosh in Chaos and Death despite lineage rank.
+
+
+20. Eirzunet
+Source domains: Necromancy, shadow magic, controlled decay, twilight transformation, cursecraft and forbidden learning.
+Pantheon status — Ancient: Exiled; Archaic: Exiled; Classical: Exiled; Traditional: Exiled; Modern: Exiled
+Domain-linked schools: Necromancy, Blood (ritual costs), Infernal (cursecraft).
+MMORPG: Offer forbidden research, curse removal, corpse-rights dilemmas and exiled ritual factions.
+Rise of Ruqorakai: Meet a clandestine necromantic mentor, refuse predatory rites or remove a hazardous curse.
+Continuity guardrail: Exiled status does not make him powerless; his domain is not Nefarokir's rightful passage.
+
+
+21. Freyseth
+Source domains: Crossroads, curses, sworn agreements, forbidden pacts, fate and deliberate consequences.
+Pantheon status — Ancient: Exiled; Archaic: Exiled; Classical: Exiled; Traditional: Exiled; Modern: Exiled
+Domain-linked schools: Infernal (pacts), Blood (oaths), Chaos (crossroads).
+MMORPG: Create binding oath systems with explicit player-readable costs and meaningful exits.
+Rise of Ruqorakai: Face a spoken crossroads pact, bargain for power or reject a bargain with lasting consequences.
+Continuity guardrail: A cursed contract requires clearly communicated terms, not arbitrary punishment.
+
+
+22. Nebyrr
+Source domains: Written law, codified systems, civic institutions, marriage agreements, inheritance, dynastic lineage and binding contracts.
+Pantheon status — Ancient: Exiled; Archaic: Exiled; Classical: Exiled; Traditional: Exiled; Modern: Exiled
+Domain-linked schools: Arcane (written law/binding), Infernal (punitive contracts).
+MMORPG: Run courts, guild agreements, inheritance disputes and complex oath semantics.
+Rise of Ruqorakai: Challenge an imperial decree or a sworn obligation using spoken testimony and lived proof—never reading a skill book.
+Continuity guardrail: Exiled status limits public standing but does not erase his mastery of legal codes.
+
+
+23. Oskar'enlil-Tyrom
+Source domains: Subversion, hidden resistance, institutional adaptation, precise sabotage and renewal of corrupted systems.
+Pantheon status — Ancient: Exiled; Archaic: Exiled; Classical: Exiled; Traditional: Diminished; Modern: Diminished
+Domain-linked schools: Illusion (cover identities), Chaos (subversion).
+MMORPG: Enable undercover infiltration, precise sabotage and systemic reform arcs.
+Rise of Ruqorakai: Sabotage an abusive machine while deciding how to protect the workers and witnesses.
+Continuity guardrail: Distinct from Oskar'enlil; targeted sabotage must have collateral-risk evaluation.
+
+
+24. Sigrananna
+Source domains: Moonlit forests, wilderness beauty, the hunt, vigilance, hidden strength and meaningful sacrifice.
+Pantheon status — Ancient: Exiled; Archaic: Secondary; Classical: Tertiary; Traditional: Tertiary; Modern: Tertiary
+Domain-linked schools: Nature (wildlife), Illusion (forest camouflage).
+MMORPG: Run ranger paths, protected woodland routes and ethically limited hunts.
+Rise of Ruqorakai: Track displaced wildlife, hide refugees in woods or stop industrial clear-cutting.
+Continuity guardrail: Hunting includes stewardship and restraint, not mindless creature slaughter.
+
+
+25. Thoryn-Rahek
+Source domains: Famine, disease, finite resources, biological change, mutation, survival and ecological correction.
+Pantheon status — Ancient: Exiled; Archaic: Exiled; Classical: Exiled; Traditional: Diminished; Modern: Diminished
+Domain-linked schools: Nature (ecological limits), Blood (disease/mutation), Necromancy (decay), Infernal (plague conditions).
+MMORPG: Create famine prevention, quarantine and morally difficult biological-change investigations.
+Rise of Ruqorakai: Choose between hard containment, emergency food relief or unsafe experimental treatment.
+Continuity guardrail: Neither automatic evil nor a benign healer; famine and disease carry real suffering.
+
+
+26. Vulkiris
+Source domains: Rebellion, defiance, revolutionary momentum, structural challenge, insurgent change.
+Pantheon status — Ancient: Exiled; Archaic: Tertiary; Classical: Tertiary; Traditional: Exiled; Modern: Exiled
+Domain-linked schools: Chaos (revolutionary change), Arcane (counter-structures).
+MMORPG: Support insurgency, protests and faction confrontations, but separate liberation from gratuitous violence.
+Rise of Ruqorakai: Join an underground cell, negotiate concessions or reject sabotage that endangers residents.
+Continuity guardrail: Defiance has consequences; no automatic sanctification of every rebel.
+
+
+27. Wenaskozid
+Source domains: Craft mastery, enchanted tools, artisan skill, applied technique, precision work.
+Pantheon status — Ancient: Exiled; Archaic: Exiled; Classical: Tertiary; Traditional: Tertiary; Modern: Diminished
+Domain-linked schools: Arcane (enchanted tools and craft).
+MMORPG: Provide artisan mastery, precise handwork, public tool lending and infrastructure repair.
+Rise of Ruqorakai: Fix a broken craft mechanism, teach apprentices by demonstration and preserve safe tools.
+Continuity guardrail: Craft expertise is not interchangeable with unlimited invention/creative sovereignty.
+
+
+28. Anubaldir
+Source domains: Strategic knowledge, prophecy, resilience, duty, endurance, burden-sharing and protective insight.
+Pantheon status — Ancient: not attested; Archaic: not attested; Classical: Exiled; Traditional: Tertiary; Modern: Exiled
+Domain-linked schools: Arcane (strategy), Dream (prophecy/protective insight).
+MMORPG: Offer duty-driven forecasts and counterintelligence activities.
+Rise of Ruqorakai: Only when the later Classical lineage is active, share foresight to protect a caravan or prevent a tactically foreseeable injury.
+Continuity guardrail: No confirmed early-rise appearance; do not identify this deity with Anubriosh.
+
+
+29. Asethyr
+Source domains: Fortune, chance, revelry, joyful freedom, wandering, tribal ceremonies and opportune timing.
+Pantheon status — Ancient: not attested; Archaic: not attested; Classical: Exiled; Traditional: Diminished; Modern: Exiled
+Domain-linked schools: Chaos (chance), Dream (opportune possibilities), Illusion (misdirection).
+MMORPG: Offer fortune-based alternate quest outcomes, travel festivals and risk awareness.
+Rise of Ruqorakai: Only after the relevant post-140 CE ancestry becomes possible, choose a risky opportunity or a safe exit.
+Continuity guardrail: Luck affects circumstances but never forces an outcome or erases consequences.
+
+
+30. Iskareth
+Source domains: Pleasure, sensation, fertility, animal kinship, instinctive vitality and embodied joy.
+Pantheon status — Ancient: not attested; Archaic: not attested; Classical: Exiled; Traditional: Tertiary; Modern: Diminished
+Domain-linked schools: Nature (animal kinship), Blood (embodied vitality), Illusion (sensory awareness).
+MMORPG: Offer creature bonding, sensory art, compassionate care and noncombat vitality quests.
+Rise of Ruqorakai: In later Classical scenes, work with animal companions, restore wellbeing or face a temptation without obligation.
+Continuity guardrail: A deity of pleasure and instinct is not automatically an infernal patron.
+
+
+31. Thalunesh-Lyeuth
+Source domains: Shapeshifting, illusion, creative identity, altered consciousness, secret insight and reinvention.
+Pantheon status — Ancient: not attested; Archaic: not attested; Classical: Exiled; Traditional: Diminished; Modern: Exiled
+Domain-linked schools: Illusion (shape/identity), Dream (altered perception), Chaos (reinvention).
+MMORPG: Support disguise missions, identity puzzles and transformation consent safeguards.
+Rise of Ruqorakai: In later Classical scenes, choose a safe shapeshift, expose an imitation or protect someone's chosen identity.
+Continuity guardrail: Distinct from Thalunesh; do not grant coerced bodily transformation.
+
+
+32. Raeshkul-Elysh
+Source domains: Dreams, nightmares, restorative sleep, subconscious revelation, psychic insight and the transforming mind.
+Pantheon status — Ancient: not attested; Archaic: not attested; Classical: Exiled; Traditional: Diminished; Modern: Diminished
+Domain-linked schools: Dream (restful sleep/nightmares), Illusion (subconscious images), Spirit (healing dream boundaries).
+MMORPG: Offer sleep restoration, nightmare investigations and psychic recovery events.
+Rise of Ruqorakai: Only in later Classical history, interpret a dream while deciding how to respond to waking threats.
+Continuity guardrail: Distinct from Raeshkul; no automatic prophetic certainty or mental violation.
+
+
+7. CANON VALIDATION CHECKLIST
+The same 32 names must appear exactly once each in this crosswalk; all 11 school entries must use only these 32 canonical identities. No substitute deity names are inferred from the superseded patron lists. Every magic school has a coherent patron/domain link, but no deity has to inhabit every school. Temporal gates forbid the Nephthysra lineage before 140 CE, forbid Valsera's divinity before her Classical ascension, forbid Eirzunet-Eirna before birth, and forbid treating Anubriosh as a post-fall necromancer before his fall. The 276 CE destruction is of Belavadós, not Tzaphaer; the collapse occurs in 289 CE. Ancient, Archaic and Classical classifications corrected to Exiled remain unchanged; Traditional and Modern statuses in each profile remain as the pantheon specifies.
+Test the MMORPG with PvP enabled and book-based school advancement; test Rise of Ruqorakai with PvP disabled at the code/schema level and no references to book items, book interfaces or the eight-book saga. Both must preserve school skill cap 20, alignment autonomy, domain-faithful NPC decisions, readable choice outcomes and separate deity reputation.
+8. DEITY-BASED CLASS AND SUBCLASS SYSTEM — 14 ARCHETYPES, 70 PATHS
+DESIGN STATUS — NEW IMPLEMENTATION SPECIFICATION, NOVEMBER 2026
+The first 13 archetypes correspond to deities with a recorded Primary or Secondary classification in at least ONE of the five pantheon eras. A FOURTEENTH explicit exception is Anubriosh, the Exiled Thorned Reclaimer: his early-Classical Secondary influence and formidable post-fall necromantic divinity justify a distinct archetype. This does not change the pantheon's late-Classical Exiled or Traditional/Modern Diminished standing. Neither Exiled nor Diminished status means weak or powerless. These are cross-era archetype eligibility rules, NOT claims that all 14 deities are currently Primary/Secondary or were universally worshipped at one date. Deities otherwise only Tertiary, Exiled, Diminished or Demigod remain in their canon roles rather than being silently promoted; they still inform the wider school system. Pantheon: https://docs.google.com/document/d/1DY9G6KN637-K7T6hNBCuawaUGYUuh-hjE59JNX6dOHY/edit
+The names and actions of the 14 player classes below are new GAME DESIGN PROPOSALS, not claims that those class orders canonically existed. Class fantasy follows each god's actual domains and may be expressed as inspiration, philosophy, martial tradition, cultural training, ritual inheritance or optional patronage. A character does NOT need to worship a deity to train its archetype; a deity does not automatically endorse a player's actions. All 70 combinations have separate progression routes and may be freely combined. Anubriosh's post-fall necromancy is exceptionally powerful even though he is Exiled (late Classical) and Diminished in status (Traditional/Modern).
+
+
+8.1 THE FIVE UNIVERSAL SUBCLASSES — NO ROLE LOCKS
+Steelborn = melee / tank. Weapons, active guard, armor, positioning, intercepting threats; combat by stamina and practical technique. A class's domain changes its style but does NOT make every Steelborn a full spellcaster.
+Wildshot = archer / projectile specialist. Bows and era-appropriate ranged equipment, precision, line-of-sight, mobility and tactical target selection. Domain effects are tied to skill, equipment, context or explicitly learned magic, never automatically applied to every arrow.
+Spellsword = half-caster. Weapon plus ONE limited school technique or ward in the same action cycle; equal importance to melee and magic. A Spellsword may train other schools but its signature hybrid efficiency requires investing in this path.
+Psionist = psionics user. Focus-powered perception, telepathy when permitted, inference, resistance and narrowly bounded kinetic or mental effects. Not synonymous with spell magic: a Psionist can operate with low Ether but must use Focus, concentration and valid target conditions. Private thoughts and truth are not automatically accessible.
+Etherist = full / mostly magic user. Ether-intensive school casting, protective rituals, spatial or environmental influence, support or control based on the god's actual domains. Needs preparation, resource management, interruption rules and counterplay.
+All five are ways of practicing each deity archetype. A Ruqore Steelborn and a Hathruna Steelborn are both capable of defending a frontline, but one uses lawful intervention and storm discipline while the other uses roots, soil and cultivation. Likewise each god has a distinct Etherist specialization, not eleven schools granted wholesale.
+Players can progress Steelborn + Wildshot + Psionist + Etherist simultaneously; Spellsword can coexist with any combination. They can simultaneously train pathways of DIFFERENT deities. The game never forces a character to pick exactly one subclass, one deity, one school, or one damage category. Character custom names, pronouns, lineage, equipment and morality are independent of class labels.
+
+
+8.2 SKYRIM-INSPIRED PROGRESSION, ADAPTED TO AZA'RA
+The attached Skyrim systems research informs the general chain: meaningful activity raises an individual skill; increasing a skill contributes to character leveling; level-ups award a scarce perk choice; prerequisites offer specialization; weapon, defense, crafting and spell skills coexist without forced class exclusion. That is design INSPIRATION only: this is NOT Skyrim's perk list, Dragon Shouts, gods, base 18 skills or school system.
+There are three separate, persistent skill structures: (1) CLASS-SUBCLASS PATH rank, one 0–20 rank per deity and role (14 × 5 = 70 independent paths), (2) SHARED MAGIC SCHOOL mastery, 0–20 for the EXISTING ELEVEN Aza'ra schools; (3) UNIVERSAL ACTIVITY skills such as one-handed, two-handed, blocking, precision archery, stealth, healing fieldcraft, smithing, diplomacy, survival and crafting. Increasing one never silently erases another. Skill rank measures practiced proficiency; perk investment chooses named extra capabilities.
+PROPOSED starting profile: character level 1, 6 base attributes each 5 with 6 free attribute points, 3 unspent pathway perks, all skills at rank 0 until taught or attempted under safe conditions. Every level after 1 grants 2 freely assignable attribute points and 1 general perk point; every fifth character level grants an additional specialist perk. Perks may be banked. No ability tree claims ownership of the permanent attributes.
+Proposed attributes: Might (melee impact and load handling); Endurance (Health, protection and effort); Precision (ranged accuracy, safe target selection); Intellect (Ether capacity and controlled casting); Will (Focus, concentration, resistance); Presence (leadership, cooperation, social leverage). Derived starting pools, tunable: Health=80+8×Endurance+2×Will; Stamina=50+5×Endurance+3×Might; Ether=40+6×Intellect+3×Will; Focus=35+6×Will+2×Precision. These are new Aza'ra tuning proposals, not Skyrim numerical facts. Every role can gain from more than one attribute; no stat choice disables melee, archery, psionics or casting.
+Proposed rank thresholds: rank 1 = practice action; rank 5 = first modifier/perk node; rank 10 = specialist action; rank 15 = synergy node enabling cross-path combos; rank 20 = class-role capstone. A character may LEARN the rank-1 action through a trial; upgrades require matching path rank and purchased perks. Advancement at rank 20 pauses until the player elects mastery renewal: optionally reroute refunded perks at an appropriate mentor while preserving skill rank, instead of artificially resetting a rank-20 school to force more leveling.
+PROPOSED skill-XP: successful, meaningful, appropriately difficult actions grant 1–8 practice XP to the employed path, 1–5 XP to any genuinely used supporting skill and 1–4 XP to the specific magical school if a spell is cast. Next-rank threshold for path rank r is 10+6r practice XP (r from 0 through 19). Whenever a class-role path or shared school RISES by one rank, grant character XP equal to 4×new rank; character level L advances when the accrued XP reaches 20×(L+3), carrying surplus forward. The formulas are Aza'ra proposals; their purpose is to reward varied, valid gameplay. Merely firing at air, healing already-full targets or repeating a safe loop without consequences yields no XP. Design tested against mixed classes so the player does not become overleveled only by idle crafting.
+Universal skills contribute character XP at a calibrated rate but cannot double-count the same real action in several skills at once: choose one primary action track and at most two genuine secondary tracks per encounter. The path matrix remains separately available to every player; specializing deep is cheaper than mastering all 70. Account/global level has no declared mandatory final cutoff; progression after mature mastery can continue via new meaningful roles, while each path's rank remains capped at 20 until a separately approved expansion.
+Perk budget: Rank 1 practice is acquired via the class test. Rank 5 purchase costs 1 point, rank 10 purchase costs 1, rank 15 purchase costs 2, rank 20 capstone costs 2 (six points to maximize a role after unlock). Role-specific improvements and shared school perks draw from the SAME finite general pool. Purchasing one branch never spends another branch's banked points. A class can have all five roles active, but finite perk allocation balances generalist flexibility against specialist capstones.
+Class identity and divine favor are SEPARATE variables. A political event can lower a deity's public status; the character's trained melee, archery, psionics and other skills remain. The class never raises a deity's canon rank or forces worship. Relationship standing may alter a ritual, audience or special quest but cannot erase hard-earned universal ranks.
+Resources and actions: melee strikes cost Stamina, psionic concentration costs Focus, spells cost Ether; hybrid Spellsword actions pay the stated split. Suggested baseline: normal strike 0–6 Stamina, heavy strike 10–15, basic psionic technique 10 Focus, ordinary spell 10–20 Ether, specialist action 20–35 of its resource, capstone 40–55 and/or a narrative setup condition. Costs scale with capacity, cooldown, equipment and accessibility settings and must be playtested, especially against multiple encounters. A character may wield bow plus wards, shield plus mind techniques, or spell plus melee in a SINGLE BUILD; however only ONE major capstone can resolve in a single action window. Offensive cross-school effects do not multiply each other's modifiers indefinitely: resolve at most one positive school advantage and one role synergy at a time.
+Player safety and fairness: no permanent unavoidable enthrallment; no forced nonconsensual body or soul change; corpse rites respect Nefarokir's ethical limits; PvP effects are bounded and visibly telegraphed. Equal access to mobility-compatible interaction, screen readers, optional time limits and menu-only controls is a baseline, not an unlockable perk.
+
+
+8.3 THE CLASS TRIAL, MULTICLASS, TRY-BEFORE-YOU-KEEP AND REMOVAL QUEST
+At any hub with a qualified mentor, community practitioner, relevant shrine/cultural tradition or equivalent NPC teacher, select “Explore another archetype.” The interface shows every available class's identity, five role branches, domain philosophy, practical costs and timeline gates. Players are never asked to discard their current build first. Every trial is narrative-first, with noncombat alternatives where relevant; some are guild lessons rather than divine encounters.
+Stage 1 — OBSERVE: investigate an exemplar who practices the requested archetype; choose who to ask, how to assess a demonstration and what ethical problem the class would solve. No unlock or fee is required to inspect.
+Stage 2 — SAMPLE: play a safe introductory sequence with all five roles available as temporary techniques (Steelborn defense, Wildshot ranged answer, Spellsword hybrid move, Psionist perception, Etherist magic). Choose any two modes, or more if desired, and experience resource consumption and consequences. Sample state is temporary, without permanent perks, and does not overwrite the player's present class.
+Stage 3 — DECIDE: pass a domain-appropriate practical or ethical task. Results can be success, partial success with cost, or failure with a follow-up path. The player can keep the new archetype (all five role ranks begin at 0 except the practiced starter role, which opens at rank 1), keep only a selected branch active, or simply leave. Trial completion does not require swearing loyalty to or worshipping a deity. Optional reputation consequences come from actual conduct, not selecting a class name.
+Each class has its own signature trial in its profile below. A player's first archetype may start with its test/tutorial completed; a second and later archetype uses the full quest. Multi-classing is unlimited in CLASS COUNT as a design rule; perk scarcity and equipment/runtime cost provide balance rather than hard locks. All learned school masteries, universal skills, inventory, reputation and character level stay intact.
+“Try another class” should also be available from the journal of choices when a player discovers an unfamiliar action in ordinary adventures. If a branch is gated by era/birth, the UI explains it without inventing an earlier deity: a player can still study non-divine techniques of the archetype where historical tradition supports them.
+“Retire a class” is a separate QUEST, not a punitive one-click deletion. At a mentor or sanctuary select a dormant class and complete an Unbinding of Practice scene: (a) perform one last safe skill demonstration, (b) confirm which class and any role paths should go dormant, (c) review all perk refunds and disabled signature abilities, and (d) choose retire or cancel. Retiring refunds 100% of purchased perks from the selected paths and removes the class from active loadout; it does NOT remove Health/attributes, shared skills, independent school magic, inventory, overall levels or past story consequences. Its learned class-rank progress remains recorded as dormant and reactivation starts with a short return-to-practice quest, not a fresh grind. The player may also retire a SINGLE subclass path while keeping the other four.
+Reallocating attributes is not silently bundled with class retirement. A separate optional “Reconsider Training” milestone quest can redistribute all unspent and previously allocated BONUS attribute points (not mandatory starting baseline), with a preview of all derived resource changes and a cancel option. This prevents an experiment with a healer from permanently ruining an archer/psionic build while respecting consequential decisions.
+Suggested loadout distinction: “learned” paths are all retained; “active” signature class paths remain available across the whole character, with a soft limit of three equipped passive aura effects to prevent uncontrolled stacking. Active offensive/utility role techniques are NOT limited to three classes. Each action specifies the equipment and resource requirements. If the current outfit cannot wield a bow and shield simultaneously, switching actions consumes the appropriate time and may be unsafe during an encounter.
+A player can choose a Ruqore Steelborn + Sigrananna Wildshot + Raeshkul Psionist + Sokhivar Etherist + Hathruna Spellsword build; no arbitrary veto exists. Specialization gives earlier capstone access; generalization gives a broader set of tactical choices.
+For MMORPG: the class quests are account/character-bound, have server verification and use the existing SKILL BOOK system only for school training where appropriate; PvP perks use normalized separate balance coefficients. Other players may cooperate in a trial but can never cause an irreversible class retirement for someone else. For Rise of Ruqorakai: the same system is a SOLO branching textual quest with NPC mentors, spoken instruction, hands-on demonstrations, memories and visions; NO BOOKS, no other player characters and NO PVP. Trials happen at historically available pre-276 Belavadós locations, and no later-born deity is physically present before their birth. Test choice outcomes, not reaction-time button prompts.
+
+
+8.4 UNIVERSAL FIVE-ROLE TOOLKIT AND ACADEMY REFERENCE
+Role | Preferred resource | Example universal practice | Rank 5 boost | Rank 15 combo
+Steelborn | Stamina, Health | Block a credible strike, protect an ally, perform measured melee | Brace: 10% better guard when timed | Countercourse: earn a counterattack after protecting someone
+Wildshot | Stamina, Precision | Hit moving eligible threats or perform a useful signal shot | Sights: improve accuracy on obstructed shots | Coverline: safely switch into melee or psionics after suppression
+Spellsword | Stamina + Ether | Use weapon and one domain-appropriate ward/magic effect together | Balanced Grip: reduce resource waste | Twin Current: one spell may support the next melee action
+Psionist | Focus, Will | Successfully observe, infer or project in a meaningful scene | Anchored Mind: limit interruption | Clear Chain: use valid psionic intelligence for another role
+Etherist | Ether, Intellect | Cast a genuine school effect to change an encounter | Gentle Channel: improve resource efficiency | Ritual Anchor: keep a sustained effect during one role swap
+The previous five rows are universal role bonuses, not divine abilities. Each deity profile names one role-specific introductory move (rank 1), an advanced action (rank 10) and a capstone (rank 20). These are original mechanics for the two Aza'ra game editions. The rank 5 and 15 generic milestones apply to every branch; they cost perks as specified above.
+
+
+8.5 01 — Storm Magistrate (ARCHETYPE OF Ruqore)
+Primary domain focus and schools: Holy, Elemental, Arcane. This is the cultural game archetype of Ruqore, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Tribunal Without a Crown — determine whether a Dominion officer's lawful-looking demand is just; try blocking, bow cover, weapon-and-ward, mind-reading cues and a storm ward before choosing your response.
+Domain constraint: Justice cannot be equated with obedience to Ruqorakai; celestial light cannot require a literal sun.
+Steelborn — Shield Verdict: Hold a frontline and demand fair combat. Rank 10 named action, Court of Thunder: intercept a strike and mark its aggressor. Rank 20 capstone, Rightful Appeal: protect allies against an unlawful order. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Skyline Bow: Mark exposed foes from a commanding vantage. Rank 10 named action, Witness Arrow: reveal a hidden attacker at range. Rank 20 capstone, Thunder's Evidence: a chain of precision shots breaks a siege weapon. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Oathblade: Wield a weapon with measured lightning wards. Rank 10 named action, Bound Edict: parry and deliver a restrained thunder arc. Rank 20 capstone, Verdict Storm: disable hostiles while protecting bystanders. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Judgment Sight: Read conflicting testimony and pressure patterns. Rank 10 named action, Oath Resonance: detect contradictions, not perfect lies. Rank 20 capstone, Court in the Mind: expose a tactical deception to allies. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Storm Covenant: Shape thunder, warding and juridical holy magic. Rank 10 named action, Ordered Tempest: separate enemies without striking civilians. Rank 20 capstone, Law of the Sky: create a protective storm tribunal zone. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.6 02 — Passage Warden (ARCHETYPE OF Nefarokir)
+Primary domain focus and schools: Spirit, protective Holy; anti-Necromancy warding only. This is the cultural game archetype of Nefarokir, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: A Name Forgotten — escort an unidentified deceased person's kin, recover the proper remembrance, and oppose the exploitation of remains; each of five methods can aid the procession.
+Domain constraint: Nefarokir does not feast on death, command involuntary undead, or revoke someone's rightful remaining life.
+Steelborn — Pallbearer Guard: Defend the living and keep funeral processions safe. Rank 10 named action, Final Threshold: shield a vulnerable mourner. Rank 20 capstone, Unbroken Passage: become immovable while escorting the endangered. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Graveside Sentinel: Protect a procession from far threats. Rank 10 named action, Ancestral Marker: reveal threats near the rite. Rank 20 capstone, Silent Farewell: bind a hostile pursuer with a nonlethal funerary arrow. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Veilgate Blade: Pair a respectful ward with a guardian weapon. Rank 10 named action, Mercy at the Gate: parry an attempt to desecrate a soul. Rank 20 capstone, Last Rite: release an entrapped spirit without harming its host. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Memory Listener: Sense echoes of grief and ancestral remembrance. Rank 10 named action, Epitaph Echo: reconstruct a witnessed memory with limits. Rank 20 capstone, Patient Witness: uncover concealed testimony of the dead without coercion. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Soul Shepherd: Practice Spirit and protective Holy rites. Rank 10 named action, Gentle Crossing: stabilize a departing or endangered soul. Rank 20 capstone, Gatekeeper's Vigil: safeguard multiple souls from hostile binding. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.7 03 — Rootkeeper (ARCHETYPE OF Hathruna)
+Primary domain focus and schools: Nature, restorative Holy; living Blood rites with consent. This is the cultural game archetype of Hathruna, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Blighted Granary — investigate a failing harvest and defend food supplies without destroying the forest that keeps the soil alive.
+Domain constraint: Natural decay differs from purposeful plague spreading; restorative farming cannot erase ecological cost.
+Steelborn — Briar Bulwark: Anchor a shield with cultivated root defenses. Rank 10 named action, Living Berm: raise a low earthen barrier. Rank 20 capstone, Harvest Shelter: protect a field and its workers from a mass assault. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Seedflight Hunter: Loose plant-treated arrows with nonlethal snaring options. Rank 10 named action, Sporemark: track a wounded beast without poison. Rank 20 capstone, Orchard Rain: scatter restorative seeds over a threatened grove. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Mycelial Blade: Blend cutting weapons with carefully directed Nature magic. Rank 10 named action, Rootweave Strike: entangle a hostile target. Rank 20 capstone, Cycle of Return: turn spent battle ground into regrowth cover. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Earthroot Sense: Detect hidden root networks and ecosystem distress. Rank 10 named action, Fungal Map: trace contamination through soil. Rank 20 capstone, Green Communion: reveal a concealed source of habitat collapse. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Season Weaver: Cast growth, restoration, fungi and balanced decay. Rank 10 named action, Compost Renewal: cleanse a blighted patch through natural cycles. Rank 20 capstone, Spring After Ash: restore a large cultivated area over a sustained ritual. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.8 04 — Tidewarden (ARCHETYPE OF Bastveig)
+Primary domain focus and schools: Elemental, Nature. This is the cultural game archetype of Bastveig, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Harbor That Would Not Drain — choose which waterfront to rescue while balancing tides, transport, ecology and an approaching squall.
+Domain constraint: Necessary change never means celebrating purposeless destruction.
+Steelborn — Breakwater Guard: Stand firm against currents and close attacks. Rank 10 named action, Surge Brace: anchor an ally against knockback. Rank 20 capstone, Reef Bastion: shelter an entire landing from a storm wave. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Tidepath Archer: Use currents and wind to angle long shots. Rank 10 named action, Current Sight: identify a safe arc in rough weather. Rank 20 capstone, Tempest Net: pin raiders without fouling the rescue route. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Surfblade: Alternate water pressure and flowing melee techniques. Rank 10 named action, Tidal Reversal: redirect a charging enemy. Rank 20 capstone, Reef's Answer: protect an ally and counter with a water surge. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Abyss Listener: Sense submerged structures and ancestral sea impressions. Rank 10 named action, Pressure Echo: locate submerged wreckage. Rank 20 capstone, Ocean Remembrance: recover an obscured history from waves and reefs. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Stormtide Etherist: Use Elemental water, storms and Nature restoration. Rank 10 named action, Cleansing Undertow: carry taint away from reefs. Rank 20 capstone, Sea of Renewal: restore a damaged coastal habitat in stages. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.9 05 — Forge Architect (ARCHETYPE OF Marduthor)
+Primary domain focus and schools: Arcane, Elemental. This is the cultural game archetype of Marduthor, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Fault in the Pressure Works — test five approaches to a dangerous engine and decide whether a military contractor should receive the repaired design.
+Domain constraint: Invention, language and craft never canonize mass destruction or the 276 CE weapon.
+Steelborn — Ironframe Guardian: Guard workshops with precise weighted weapons. Rank 10 named action, Measured Guard: reinforce a vulnerable mechanism. Rank 20 capstone, Foundry Wall: create a safe barricade from available materials. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Rivetshot: Fire measured bolts at structural weak points. Rank 10 named action, Gauge Arrow: identify a fault at range. Rank 20 capstone, Master's Line: sever a dangerous pressure line without a large explosion. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Flameforged Spellsword: Channel controlled forge heat through tempered tools. Rank 10 named action, Temperedge: stabilize a weapon and heat its strike. Rank 20 capstone, Safe Release: dissipate dangerous arcane pressure through a blade. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Designseer: Visualize tolerances, hidden channels and mechanical sequence. Rank 10 named action, Fault Trace: detect a failed design assumption. Rank 20 capstone, Architect's Model: preview a stable repair before risking materials. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Maker Etherist: Weave Arcane constructs, heat and transformation. Rank 10 named action, Living Schematic: shape a temporary working mechanism. Rank 20 capstone, Citywork Covenant: stabilize a large civic work through collaborative casting. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.10 06 — Civic Harmonist (ARCHETYPE OF Oskar'enlil)
+Primary domain focus and schools: Holy, Spirit, Arcane. This is the cultural game archetype of Oskar'enlil, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: A City Divided — resolve a civic clash between laborers and officers, with options for defense, mediation, evacuation and dissent.
+Domain constraint: In Classical Ruqorakai times this deity is Tertiary, not officially Primary or Secondary; archetype availability does not imply current divine rank or favor.
+Steelborn — Accord Defender: Use shields and positioning to keep crowds safe. Rank 10 named action, Peace Line: separate opponents without striking either. Rank 20 capstone, Civic Bulwark: protect a gathering from indiscriminate violence. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Ward of the Commons: Cover exits and escape corridors with ranged restraint. Rank 10 named action, Signal Shot: expose a concealed route. Rank 20 capstone, Safe Passage Volley: disable pursuit while civilians evacuate. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Compact Blade: Combine protective warding and measured close strikes. Rank 10 named action, Reconciler's Parry: turn aggression into a disarm. Rank 20 capstone, Accord Circle: create temporary neutral ground for talks. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Consensus Reader: Sense fear, collective pressure and social incentives. Rank 10 named action, Grievance Thread: reveal competing needs in a dispute. Rank 20 capstone, Public Reason: surface a peaceful option in a hostile negotiation. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Harmony Etherist: Practice Spirit, Holy protection and communal restoration. Rank 10 named action, Common Shelter: ward a vulnerable district. Rank 20 capstone, Mending Assembly: repair broken trust through a cooperative rite. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.11 07 — Battlebrand (ARCHETYPE OF Enkirael)
+Primary domain focus and schools: Elemental, Chaos pressure. This is the cultural game archetype of Enkirael, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Duel That Became a Riot — prove courage by restraining a stronger foe and protecting the people caught nearby.
+Domain constraint: Glory is not bloodlust or permission for Dominion brutality.
+Steelborn — Flamefront Steelborn: Hold an honorable battle line through courage and conditioning. Rank 10 named action, Challenge Ground: draw pressure off an injured ally. Rank 20 capstone, War's Last Ember: rally exhausted defenders for one final defense. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Trialbow Wildshot: Reward patient aim under direct threat. Rank 10 named action, Courage Mark: face a stronger aggressor without haste. Rank 20 capstone, Unbroken Volley: protect a retreat through accurately timed fire. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Battlefire Spellsword: Combine a weapon with measured battlefire bursts. Rank 10 named action, Resolve Edge: convert a parry into a controlled blaze. Rank 20 capstone, Valor's Return: counterattack after protecting a vulnerable target. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Conflict Psionist: Read an enemy's commitment and predict violent feints. Rank 10 named action, Contest Insight: sense when an enemy will break formation. Rank 20 capstone, Foresight of Courage: offer an ally a timely warning. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Rekindler Etherist: Use Elemental battlefire and defensive Chaos pressure. Rank 10 named action, Courage Flame: steady panicked defenders. Rank 20 capstone, Afterfire Renewal: end a combat zone in protective warmth, not wildfire. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.12 08 — Breathkeeper (ARCHETYPE OF Sokhivar)
+Primary domain focus and schools: Holy, Spirit, Elemental, Dream. This is the cultural game archetype of Sokhivar, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: A Breath Amid Smoke — evacuate a packed workshop through five different solutions, earning skill by effective rescue rather than forced combat.
+Domain constraint: Healing is ethical and nonpredatory; references to sunlight do not overturn Aza’ra's cosmology.
+Steelborn — Windward Medic: Defend infirmaries with a mobile shield and basic first aid. Rank 10 named action, Breath Guard: absorb an attack aimed at a patient. Rank 20 capstone, Unfaltering Line: maintain an evacuation corridor under pressure. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Skyreach Rescuer: Use accurate signal shots from elevated positions. Rank 10 named action, Beacon Arrow: mark an accessible rescue route. Rank 20 capstone, Airbridge Volley: stop threats while a skyship lands. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Vitalwind Spellsword: Pair weapons with healing breath and air wards. Rank 10 named action, Recovery Cut: deflect an attack and stabilize an ally. Rank 20 capstone, Wings of Relief: restore a squad's mobility after retreat. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Breathsong Psionist: Sense distress, breath rhythms and true prophetic fragments. Rank 10 named action, Pulse Listening: detect a living being behind debris. Rank 20 capstone, Song of Tomorrow: share a limited warning without certainty. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Aether Healer: Channel Holy, Spirit and air magic into sustained care. Rank 10 named action, Clear Breath: ease respiratory distress and purify air. Rank 20 capstone, Great Infirmary: sustain protective healing over a broad refuge. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.13 09 — Astral Strategist (ARCHETYPE OF Raeshkul)
+Primary domain focus and schools: Arcane, Dream, Illusion counterplay. This is the cultural game archetype of Raeshkul, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Wrong Map — independently test five interpretations of suspicious troop movements and choose whether to expose a fabricated military threat.
+Domain constraint: Foresight is probabilistic and cannot authorize coercive mind control.
+Steelborn — Tacticshield Steelborn: Control chokepoints and defend by prediction. Rank 10 named action, Calculated Hold: intercept a likely flanking move. Rank 20 capstone, Pattern Breaker: adapt defenses after repeated enemy attacks. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Probability Wildshot: Use rangefinding and anticipation instead of luck. Rank 10 named action, Trajectory Read: expose a risky shot in advance. Rank 20 capstone, Three-Point Solution: coordinate precise suppressive arrows. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Mindblade Spellsword: Synchronize the weapon with brief psionic predictions. Rank 10 named action, Split-Second Feint: move after reading a stance. Rank 20 capstone, Astral Checkmate: interrupt a prepared ambush without sacrificing companions. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Astral Analyst Psionist: Use probability, psionic inference and memory. Rank 10 named action, Memory Trace: reconstruct a witnessed sequence. Rank 20 capstone, Forked Futures: compare credible outcomes, not guaranteed prophecy. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Tactical Etherist: Apply Arcane barriers and Dream foresight to whole encounters. Rank 10 named action, Predictive Ward: set resistance based on observed patterns. Rank 20 capstone, Field Equation: reshape a group's positions through a limited ritual. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.14 10 — Hearthwarden (ARCHETYPE OF Ishtanora)
+Primary domain focus and schools: Holy sanctuary, Nature. This is the cultural game archetype of Ishtanora, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Winter Stores — rescue a household's dwindling supplies without abandoning nearby strangers and reveal who engineered the shortfall.
+Domain constraint: Classical standing is Tertiary; class practice can remain cultural and domestic rather than a direct divine blessing.
+Steelborn — Doorstead Steelborn: Defend homes, kitchens and vulnerable households. Rank 10 named action, Threshold Hold: stop intrusion without lethal force. Rank 20 capstone, Open House: protect several families during an attack. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Larderwatch Wildshot: Guard food supplies from distant thieves and beasts. Rank 10 named action, Storehouse Signal: alert residents without harm. Rank 20 capstone, Hearthlight Cover: maintain escape cover across a narrow street. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Hearthsteel Spellsword: Blend close defense with gentle warmth and protective wards. Rank 10 named action, Shelterbrand: deflect a threat near a refuge. Rank 20 capstone, Warmth of Home: shield several evacuees against exposure. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Kinship Psionist: Understand interpersonal distress and household needs. Rank 10 named action, Household Sense: identify an unspoken but not private need. Rank 20 capstone, Circle of Trust: facilitate honest negotiation among willing kin. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Harvest Hearth Etherist: Practice Nature cultivation and protective Holy sanctuary. Rank 10 named action, Stored Summer: preserve food by benign magic. Rank 20 capstone, Communal Hearth: sustain a neighborhood through a shortage. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.15 11 — Crossing Guide (ARCHETYPE OF Horundar)
+Primary domain focus and schools: Elemental, Nature travel contexts. This is the cultural game archetype of Horundar, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Broken Bridge — get a mixed caravan across a failing route, through combat, engineering, pathfinding or aid.
+Domain constraint: Classical is Secondary; Modern is Diminished. Safe passage does not imply unlimited time or space teleportation.
+Steelborn — Bridgeguard Steelborn: Protect ferry ramps and caravan bridges. Rank 10 named action, Mooring Stand: keep a route open in a storm. Rank 20 capstone, Last Crossing: defend the final evacuee against pursuing hostiles. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Waymark Wildshot: Aim through weather and signal distant caravans. Rank 10 named action, Stormline Marker: trace a safer trail. Rank 20 capstone, Far Beacon: guide multiple travelers through dangerous visibility. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Passage Spellsword: Blend fast weapons with weather-adapted transit wards. Rank 10 named action, Slipstream Cut: redirect a strike at a crossing. Rank 20 capstone, Safe Current: protect a moving party through a hazardous ford. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Routefinder Psionist: Read wayfinding patterns and sense mounting danger. Rank 10 named action, Crossroad Intuition: compare possible safe paths. Rank 20 capstone, Traveler's Concord: coordinate parties separated by poor communication. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Weatherway Etherist: Use Elemental storms and protective route magic. Rank 10 named action, Calm Corridor: still turbulence briefly around a ferry. Rank 20 capstone, Passage of Many: ward a public transport route during evacuation. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.16 12 — Fatewright (ARCHETYPE OF Selkhanis)
+Primary domain focus and schools: Arcane time/destiny, restorative Holy, Dream. This is the cultural game archetype of Selkhanis, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Promise That Cannot Be Kept — help a divided community choose which commitments to preserve while refusing a prophecy of guaranteed success.
+Domain constraint: Classical standing is Tertiary despite later Traditional Secondary rank; no prophecy permits rewriting the fixed 276 CE catastrophe.
+Steelborn — Endurance Steelborn: Survive pressure while helping companions persist. Rank 10 named action, Unbroken Duty: hold ground for a threatened ally. Rank 20 capstone, Restorer's Stand: endure a siege long enough for cooperation. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Way of Chances Wildshot: Use careful timing and restrained distant attacks. Rank 10 named action, Second Opening: spot a recoverable missed opportunity. Rank 20 capstone, Turning Point Volley: interrupt a planned assault at the key moment. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Restoration Spellsword: Bind measured strikes to cooperative protection. Rank 10 named action, Kept Promise: defend a sworn ally. Rank 20 capstone, Shared Tomorrow: turn a protective parry into a group recovery opportunity. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Fate Sense Psionist: Compare possible futures and identify mutual resilience. Rank 10 named action, Thread of Choice: show two plausible consequences. Rank 20 capstone, Unclosed Future: perceive an overlooked third way without certainty. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Timewoven Etherist: Use Arcane time-sense and restorative Holy support. Rank 10 named action, Moment's Grace: briefly delay a hazard for rescue. Rank 20 capstone, Endurance Covenant: sustain a community through a protracted crisis. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.17 13 — Moonwood Sentinel (ARCHETYPE OF Sigrananna)
+Primary domain focus and schools: Nature, Illusion. This is the cultural game archetype of Sigrananna, not a claim that divine standing remains Primary or Secondary in every era.
+Class trial: The Hunters' Divide — choose between protecting threatened animals, feeding a village and preventing illegal logging; every approach demands tradeoffs.
+Domain constraint: Archaic Secondary, Classical Tertiary, Ancient Exiled; do not present Ruqorakai-era influence as an official Primary office.
+Steelborn — Woodwall Steelborn: Defend ancient woodland routes without needless killing. Rank 10 named action, Grove Brace: hold a chokepoint among living trees. Rank 20 capstone, Forest's Last Watch: protect wildlife and refugees from industrial clearing. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Wildshot — Lunarchase Wildshot: Track by moonlight and use skilled humane archery. Rank 10 named action, Moontrail Shot: disable a snare at range. Rank 20 capstone, Silent Hunt: remove multiple threats without harming protected animals. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Spellsword — Briarveil Spellsword: Combine stealthy blades with camouflage and woodland magic. Rank 10 named action, Hidden Thorn: reveal a concealed poacher while moving. Rank 20 capstone, Moonwood Mantle: cloak allies in a living grove for a safe exit. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Psionist — Hunter's Awareness Psionist: Sense threatened creatures and disturbed natural patterns. Rank 10 named action, Stalker Sense: identify pursuit without certain mind-reading. Rank 20 capstone, Wildwatch: foresee a dangerous movement through the ecosystem. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Etherist — Forest Etherist: Practice Nature growth and Illusion concealment. Rank 10 named action, Hush of Leaves: conceal a wounded animal. Rank 20 capstone, Silver Canopy: shield an entire forest refuge from pursuit. Rank 5 and rank 15 use the universal role milestones. Cross-role effects require training in each contributing path; no automatic full-caster access is granted to Steelborn or Wildshot.
+Class can coexist with any other archetype and with the other four role paths; retire or reactivate it only through the practice quests described above.
+
+
+8.18 14 — THORNED RECLAIMER (ARCHETYPE OF ANUBRIOSH)
+Anubriosh is the exception to the thirteen-deity Primary/Secondary roster. He is extraordinarily powerful as the GOD OF NECROMANCY despite divine exile and later diminished PUBLIC STANDING. The word “diminished” classifies his later era rank, not his raw necromantic strength or his ability to heal, decay, reclaim souls and perform difficult resurrection. Canon: before his Classical fall, Anubriosh governs CHAOS AND DEATH, with passage and communication as subordinate domains. After Valsera ascends, Eirzunet-Eirna is born and surpasses him in Chaos and Death, gains Forbidden Knowledge and creates the first TRUE wild-magic. Only then does he fall, relinquish the old portfolios and become the thorn-bearing god of NECROMANCY, soul reclamation and restorative transformation. Nefarokir alone retains rightful, inevitable death. Anubriosh's Modern/Traditional Diminished status and home in the City of the Mourned Gods must not be projected backward into Classical. His class can be practiced without worship or a divine contract.
+
+
+Domain-linked schools: Necromancy (PRIMARY SPECIALTY, including death-energy healing and reclamation), Spirit (thresholds and souls), Blood (vitality transfer and restoration), Infernal (an OPTIONAL mechanical descriptor for post-fall coercive curse rites, not proof Anubriosh is literally infernal). His BEFORE-FALL techniques are Chaos and Spirit/Death thresholds, not necromancy. Etherist and Spellsword remain the main magical expressions; Steelborn, Wildshot and Psionist apply the same domains to close protection, ranged pressure or psionic perception without becoming obligatory full casters. This archetype creates no twelfth school.
+
+
+CLASS QUEST — THE EXILE'S HOURGLASS
+Observe: find a necromantic hospice, funerary sanctuary or contested memorial community with firsthand testimony. A mentor explains that grieving, healing, reclaiming a soul and enslaving it are different acts. No deity's presence is guaranteed.
+Sample: test a protective melee stance (Steelborn), a distant thorn-shot (Wildshot), a weapon plus necrotic ward (Spellsword), the perception of residual soul-echoes without reading private thoughts (Psionist), and a carefully bounded restoration rite (Etherist). Players can sample any two or all five.
+Decision: protect someone who is alive, seek consent or a legitimate purpose before soul reclamation, and confront a practitioner who treats an unwilling soul as property. A successful, partially successful or failed attempt branches to different follow-up quests. Accept this archetype, activate chosen paths, or decline without losing existing ranks.
+Rise of Ruqorakai temporal gate: if the player is in the early Ruqorakai rise BEFORE Anubriosh's Classical fall, the trial is instead THE HOURGLASS BEFORE THORNS, covering his existing Chaos/Death threshold tradition. Black Tearbrand and all post-fall necromancy/resurrection techniques are LOCKED until the narrative's confirmed fall event flag is reached; the document does not invent a precise date of that fall. The game must not conjure a post-fall Anubriosh or his later city before history allows it. A character can still learn unrelated nondivine magical skills from ordinary mentors.
+Multiclass: Thorned Reclaimer paths can be combined with any of the existing thirteen deity archetypes and all five role styles. There is no class-role exclusivity, and the standard trial, voluntary retirement, full perk refund, dormant rank retention and reactivation rules apply.
+
+
+UNIQUE CLASS FEATURES — EXACT SIGNATURE RULES
+BLACK TEARBRAND — classwide, post-fall passive with explicit activation toggle. Dark streaks beneath the character's eyes deepen visibly as necromancy is used. While active, increase ALL applicable healing done by +10% and all necrotic damage dealt by +10%; do not multiply the +10% separately for each of the five subclass paths. Drawback: reduced resistance to divine disruption. Proposed balance value is −15% divine-disruption resistance while active (a tunable figure, not author-established canon). Healing and damage bonuses remain +10% exactly as specified. Dismissal clears the aura but does not instantly erase an in-progress divine backlash. Interface must describe effect, visual intensity, and defense tradeoff.
+INVOCATION — THORNVEIL ASCENSION — post-fall, high-mastery class invocation. Channel Anubriosh for EXACTLY 15 seconds, massively strengthening healing, necrotic decay and eligible resurrection/reclamation rituals. The exact major-boost percentage is intentionally a balance parameter; optional initial prototype is +50% healing and necrotic damage with improved decay persistence, subject to tests. For EXACTLY 30 seconds AFTER channeling ends, the caster suffers −20% healing effectiveness AND −20% damage dealt; the debuff cannot be canceled merely by swapping a class loadout. If interrupted, resolve a defined proportional cost and do not grant full benefit. Activation requires a real mastered Thorned Reclaimer path and a quest unlock; it never overrides canon deaths, soul consent, resurrection preconditions or the timeline's fixed destruction. A summoned or recalled ally is not necessarily the original deceased soul.
+TEARS OF THE EXILED — post-fall restorative ritual, with ritual tears automatically collected FOR ALLIES rather than requiring manual loot pickup. When a valid healing, reclamation or protective grief rite produces a Tear, eligible allied characters automatically receive or collect it. Consuming/triggering a Tear restores HP and provides TEMPORARY NECROTIC RESISTANCE. Suggested test values for a single Tear are 8% of the ally's maximum HP plus +15% necrotic resistance for 15 seconds, with up to three unspent Tears stored per ally and a reasonable creation cooldown; these secondary numbers are proposed implementation defaults, not user-provided fixed canon. The ally's active condition and consent-to-buff preference are respected; no dead target is auto-revived by ordinary Tears. Tears are not an inventory book or a material to be farmed from forced suffering.
+SOUL SHATTER (MELEE TOUCH) — post-fall close-range technique, NOT a ranged arrow or a remote psionic mind command. On a valid hostile enemy within genuine melee touch range, the caster rips free the enemy's soul, dealing MASSIVE NECROTIC DAMAGE and applying FRACTURED WILL. Against eligible hostile NPCs, Fractured Will FORCES that opponent to fight as the caster's THRALL for EXACTLY 60 SECONDS, after which control ends; the NPC can then recover, surrender or return to hostility according to AI and quest state. Elite or quest-protected enemies may require weakening, a successful resistance contest or special consequences, but do not silently discard the 60-second thrall duration after successful full application. Existing commands, target selection and allegiance shift are shown to the player. The effect is hostile coercion and may severely affect divine reputation, NPC trust and faction standing. It can never be used to enslave ordinary bystanders or unconsenting companions without explicit quest consequences.
+MMORPG PvP counterplay: a human PLAYER is NEVER transformed into an automated 60-second thrall or made to attack teammates against their inputs. The PvP version preserves the melee touch, heavy damage and Fractured Will name, but applies bounded, resistible short disruption with a visible defense/cleanse opportunity. The full, exactly 60-second forced-thrall effect is reserved for eligible NPC/PvE targets. Rise of Ruqorakai has no PvP at all, so hostile NPCs receive the full intended 60-second thrall mechanic. No passive perk can turn Soul Shatter into ranged mind control.
+
+
+FIVE THORNED RECLAIMER SUBCLASSES — EXACTLY ONE OF EACH
+Steelborn — Thorned Bulwark: front-line melee, defensive shrouds and soul-touch counterplay. Rank 1 “Graveguard Stance”: block a hit and turn the absorbed energy into a small self-heal, consuming Stamina. Rank 10 “Reclaimer's Hold”: physically pin a hostile threat while warding an ally from necrotic splash; costs Stamina plus a limited Ether reserve. Rank 20 “Soul Shatter — Thorned Judgment”: unlocks the exact melee-touch Soul Shatter described above after the related quest; the eligible NPC enemy becomes a thrall for 60 seconds under Fractured Will. This role specializes in closing safely to touch range, not permanent mind control.
+Wildshot — Thornspike Harrier: ranged reconnaissance and careful necrotic pressure, never a ranged Soul Shatter. Rank 1 “Gravebloom Arrow”: fire a thorn-tipped arrow that marks a hostile NPC for tracking, costing ammunition and Stamina. Rank 10 “Withering Quiver”: add a bounded post-fall necrotic decay effect to accurate shots, consuming an Ether charge if magical. Rank 20 “Funeral Volley”: loose a field of thorn projectiles against an advancing mob while leaving a clear retreat route for allies. Ranged afflictions cannot trigger forced-thrall Soul Shatter; the caster must still close to melee touch.
+Spellsword — Thornveil Reaver: close combat plus bounded necromantic recovery and vitality exchange. Rank 1 “Mourning Edge”: blend a weapon strike with a small restorative ward and pay both Stamina and Ether. Rank 10 “Tearbrand Parry”: parry to form one Tear of the Exiled for an endangered ally if the Tear ritual is learned; this does not stack the +10% Black Tearbrand bonus twice. Rank 20 “Hourglass Severance”: deliver a charged close-range necrotic cut, then transfer a portion of eligible damage dealt into healing for wounded allies, subject to a soul-integrity check.
+Psionist — Soul-Remnant Listener: insight into residual memories and the psychology of soul-fracture, without granting omniscience or permanent telepathic domination. Rank 1 “Last Echo”: use Focus to detect a nearby, unclaimed soul-imprint or mournful resonance, preserving privacy limits. Rank 10 “Fracture Reading”: identify whether a hostile target could resist the close-range Soul Shatter, revealing tactical risk rather than controlling the target at distance. Rank 20 “Witness Between Veils”: guide several willing mourners through a safe memory-sharing ceremony and reveal a concealed soul-binding hazard. Focus pays for perception, not a substitution for necromantic Ether cost.
+Etherist — Exiled Ascendant: full Necromancy casting, restorative ritual tears, soul reclamation and difficult resurrection. Rank 1 “Thornward Renewal”: spend Ether to restore HP using death-energy reclamation without requiring a fresh killing. Rank 10 “Tears of the Exiled”: unlock ally auto-collection and temporary necrotic resistance for appropriate healing rituals; an Etherist may also lend the ritual to another learned Thorned Reclaimer path through shared proficiency. Rank 20 “Thornveil Ascension”: unlock the exact 15-second massive boost and the mandatory −20% healing/damage weakness for 30 seconds afterward; the ability remains classwide when its requirements are met and can coexist with other trained classes.
+Classwide loadout access: Black Tearbrand is a toggleable post-fall archetype feature after the introductory rite, not five stackable passives. Tears require completion of the rank-10 Etherist ritual or its separately approved advanced cross-path teaching quest. Soul Shatter requires the Steelborn rank-20 mastery OR an equivalently demanding post-fall classwide advanced quest plus the necromancy prerequisites, so a trained Etherist or Spellsword who multiclasses is not arbitrarily denied melee-touch use. Thornveil Ascension requires Etherist rank 20 OR a comparably rigorous post-fall classwide invocation quest with at least one mastered rank-20 Anubriosh role and the needed Necromancy skill. All unlock routes use the shared finite perk pool; they never duplicate rank points or turn Steelborn into a full caster by default.
+
+
+BALANCE, LORE AND EDITION ACCEPTANCE TESTS
+1. Anubriosh remains late-Classical EXILED, Traditional/MODERN DIMINISHED in standing and extremely capable in necromancy; exile does not mean imprisoned or disempowered. Preserve before-fall Chaos and Death and after-fall Necromancy as distinct temporal states.
+2. The class count becomes 14 and the path count becomes 70; each class offers Steelborn, Wildshot, Spellsword, Psionist and Etherist. The eleven-school system, shared proficiencies, class-tryout and voluntary removal mechanics remain.
+3. Black Tearbrand visual darkens with use; healing +10%, necrotic damage +10%, reduced divine-disruption defense. No bonus fivefold stacking.
+4. Thornveil Ascension lasts 15 seconds; aftermath is −20% to healing AND damage for 30 seconds; changing classes does not wipe the penalty.
+5. Tears of the Exiled auto-collect for allies, heal HP and temporarily resist necrotic effects. Restorative tears are never free permanent revival.
+6. Soul Shatter requires melee touch; valid hostile NPC becomes a Fractured Will thrall for exactly 60 seconds. In the PvP-enabled MMORPG, a human player instead receives bounded, counterable PvP control, not 60 seconds of forced automated play.
+7. The MMORPG retains optional PvP and existing skill books. Rise retains no PvP and NO books and cannot teach post-fall Anubriosh necromancy in a pre-fall year. Do not retroactively change the canonical 276 CE destruction of Belavadós or the 289 CE final collapse of Ruqorakai.
+8.19 SAMPLE HYBRID BUILDS, TEST CASES AND SAVE SCHEMA
+Build A — Frontier Guard and Healer: Hathruna Steelborn rank 10, Sokhivar Etherist rank 10, Sigrananna Wildshot rank 5, optional Ruqore Psionist rank 1. Demonstrates practical tanking, ranged coverage and high-value aid; no need to become a compulsory cleric.
+Build B — Arcane Mechanist and Scout: Marduthor Etherist rank 10, Raeshkul Psionist rank 10, Bastveig Wildshot rank 5, Horundar Steelborn rank 1. Detects mechanical faults, plans routes and protects public transport.
+Build C — The Fivefold Wanderer: Oskar'enlil Steelborn 5, Sigrananna Wildshot 5, Selkhanis Spellsword 5, Raeshkul Psionist 5, Sokhivar Etherist 5. Player has tangible abilities in ALL five modalities before any path reaches 20. Unrestricted character role: negotiator, defender, archer, psychic and caster in one.
+Build D — Single Archetype, Five Disciplines: Nefarokir Steelborn 10, Wildshot 10, Spellsword 10, Psionist 10 and Etherist 10. Tests that five subclass paths can all develop under one deity without forcing non-canonical necromancy.
+Build E — Class Trial and Retirement: a player with Enkirael Steelborn 15 takes the Marduthor trial, accepts Marduthor Spellsword rank 1, learns Arcane independently to 6, then retires Enkirael Steelborn. Their refunded Enkirael perks can be spent on Marduthor as requirements are met; Arcane 6, other shared skills, character level and historical character decisions remain unchanged.
+Suggested save state (conceptual, not the engine's existing schema): character_id, version, year, character_level, character_xp, stats{might,endurance,precision,intellect,will,presence}, pools{health,stamina,ether,focus}, unspent_attribute_points, unspent_perks, deity_archetype_class_state[14]{trial_state, unlocked_role_ids, role_rank[5], purchased_nodes, active_or_dormant}, anubriosh_phase_state{before_fall,after_fall,ritual_unlocks,tearbrand_active,tear_charges,ascension_cooldown,ascension_fatigue,fractured_will_targets}, universal_skills, magic_school_ranks[11], reputation_by_deity, eight_axis_covenant, actor_memories, class_quest_flags, equipment, learned_techniques, journal_state, current_location, last_save. Do not make the same spell duplicate in inventory once per archetype; shared school progression has one canonical rank.
+Validation: exactly 14 distinct archetypes, each with EXACTLY five uniquely flavored subclasses = 70 paths. Thirteen belong to the across-era Primary/Secondary roster; Anubriosh is the single special inclusion, retaining his Exiled late-Classical and Diminished Traditional/Modern statuses while remaining a formidable god of necromancy. All roles share the 0–20 cap and may coexist. The eleven magic schools remain unchanged; no new deity or school is invented. No other deity is retroactively promoted to Primary or Secondary. Only the MMORPG has skill books and PvP. Rise has neither books nor PvP, and its pre-276 state cannot visit post-catastrophe intact Belavadós or unlock Anubriosh's post-fall necromancy before the actual fall.

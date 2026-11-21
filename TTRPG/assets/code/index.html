@@ -22,6 +22,7 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 <link rel="stylesheet" href="../../css/belavados-core/unified-settlements.css">
 <link rel="stylesheet" href="../../css/belavados-core/cartography-v10.css">
 <link rel="stylesheet" href="../../css/belavados-core/site-polish.css?v=20261030-unified-3">
+<link rel="stylesheet" href="../../css/belavados-core/ruqorakai-class-magic.css">
 <script defer src="../../js/belavados-core/unified-settlements.js"></script>
 <script defer src="../../js/cartography-v10.js"></script>
 </head>
@@ -77,7 +78,8 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
       <label><span>Aza’ra Pantheon (book canon)</span><select id="bvs-azaraPantheonEra" aria-label="Choose pantheon era"><option value="Ancient">Ancient</option><option value="Archaic">Archaic</option><option value="Classical" selected>Classical</option><option value="Traditional">Traditional</option><option value="Modern">Modern</option></select></label>
       <label><span>Deity</span><select id="bvs-azaraPantheonDeity" aria-label="Select canonical deity"></select></label>
       <div id="bvs-azaraPantheonProfile" class="file-note" aria-live="polite"></div>
-      <div class="button-row"><button type="button" id="bvs-worldLaunchNpcGenerator">NPC Generator</button><button type="button" id="bvs-worldLaunchLocationGenerator">Location Generator</button><button type="button" class="ghost" id="bvs-worldImportExisting">Load Existing Residents Into Tools</button></div>
+      <details class="ruq-class-magic-browser"><summary>Class Traditions &amp; Magic Schools · 14 classes · 11 schools</summary><div class="form-grid-2"><label><span>Class tradition</span><select id="bvs-ruqClassSelect"></select></label><label><span>Role path</span><select id="bvs-ruqRoleSelect"></select></label></div><div id="bvs-ruqClassInfo" class="ruq-class-summary" aria-live="polite"></div><label><span>Magic school</span><select id="bvs-ruqSchoolSelect"></select></label><div id="bvs-ruqSchoolInfo" class="ruq-class-summary" aria-live="polite"></div></details>
+<div class="button-row"><button type="button" id="bvs-worldLaunchNpcGenerator">NPC Generator</button><button type="button" id="bvs-worldLaunchLocationGenerator">Location Generator</button><button type="button" class="ghost" id="bvs-worldImportExisting">Load Existing Residents Into Tools</button></div>
       <p id="bvs-generatorStatus" class="file-note"></p>
     </div></section>
     <section class="window"><div class="window-header">Population &amp; Area</div><div class="window-body">
@@ -555,6 +557,8 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 <script src="../../js/belavados-core/eight-axis-covenant.js"></script>
 <script src="../../js/life-simulator/alignment_randomizer.js?v=eightaxis-1"></script>
 <script src="../../js/relationships/consensual-network.js"></script>
+<script src="../../js/belavados-core/ruqorakai-class-magic-data.js"></script>
+<script src="../../js/belavados-core/ruqorakai-class-magic-runtime.js"></script>
 <script src="../../js/life-simulator/core.js"></script>
 <script src="../../js/location_rules_bundle.js"></script>
 <script src="../../js/life-simulator/location-generator.js"></script>
@@ -563,6 +567,7 @@ body{background:linear-gradient(180deg,#0b1119 0%,#07090a 100%);}
 <script src="../../js/elarvess_population_data.js"></script>
 <script src="../../js/azara_pantheon_data.js"></script>
 <script src="../../js/azara_canon_ui.js"></script>
+<script src="../../js/belavados-core/ruqorakai-class-magic-ui.js"></script>
 <script src="../../js/template_dashboard.js"></script>
 <script src="../../js/template_pass3.js"></script>
 <script src="../../js/aza_calendar.js"></script>

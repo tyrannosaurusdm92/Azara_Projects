@@ -1030,12 +1030,21 @@
     return { className, subclass: subclass || "—" };
   }
   function chooseClass(job, faction, rng) {
-    const hints = [...(job.classHints || []), ...(faction ? (state.data.factionRules.factions.find(f => f.id === faction.id)?.classOptions || []) : [])];
-    if (!hints.length && rng() > .28) return { primaryClass:"Commoner", primarySubclass:"—", multiClass:false, secondaryClass:null, secondarySubclass:null, reason:"No adventuring class needed for ordinary work." };
-    const first = parseClassHint(pick(hints.length ? hints : ["Fighter:Champion", "Rogue:Inquisitive", "Bard:Lore", "Cleric:Knowledge", "Artificer:Alchemist"], rng));
-    const multi = rng() < .16;
-    const second = multi ? parseClassHint(pick(hints.filter(h => h !== `${first.className}:${first.subclass}`).length ? hints : ["Rogue:Scout", "Bard:Eloquence", "Wizard:Divination", "Ranger:Hunter"], rng)) : null;
-    return { primaryClass:first.className, primarySubclass:first.subclass, multiClass:multi, secondaryClass:second?.className || null, secondarySubclass:second?.subclass || null, reason: job.title };
+    const classes = state.data.classData?.classes || {};
+    const names = Object.keys(classes);
+    if(!names.length) return {primaryClass:'Untrained',primarySubclass:'—',multiClass:false,secondaryClass:null,secondarySubclass:null,reason:'No class traditions loaded.'};
+    const official=window.RuqorakaiClassMagic;
+    const hints=[...(job.classHints||[]),...(faction?(state.data.factionRules.factions.find(f=>f.id===faction.id)?.classOptions||[]):[])];
+    const recognized=hints.map(h=>String(h).split(':')).filter(([name])=>names.includes(name));
+    if(!recognized.length&&rng()>.38)return {primaryClass:'Untrained',primarySubclass:'—',multiClass:false,secondaryClass:null,secondarySubclass:null,reason:'Civilian livelihood; no assumed deity training.'};
+    function eligible(name){
+      return name!=='Thorned Reclaimer' || state.storyFlags?.anubriosh_classical_fall_confirmed===true;
+    }
+    const valid=names.filter(eligible);
+    const first=recognized.length?pick(recognized.filter(([n])=>eligible(n)),rng):null;
+    const name=first?.[0]||pick(valid,rng),role=first?.[1]&&classes[name].includes(first[1])?first[1]:pick(classes[name],rng);
+    const more=rng()<.13,secondNames=valid.filter(n=>n!==name),next=more&&secondNames.length?pick(secondNames,rng):null;
+    return {primaryClass:name,primarySubclass:role,multiClass:!!next,secondaryClass:next||null,secondarySubclass:next?pick(classes[next],rng):null,reason:'Generated game-training tradition, not presumed deity affiliation.'};
   }
 
   function makeTravelRoute(province, settlement, locations, rng) {

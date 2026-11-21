@@ -1,0 +1,12 @@
+/* Rise of Ruqorakai — compact, responsive class and school source browser. */
+.ruq-class-magic-browser{margin:12px 0;padding:8px;border:1px solid #416f70;border-radius:9px;background:rgba(12,31,39,.82)}
+.ruq-class-magic-browser>summary{cursor:pointer;font-weight:700;color:#e1c38d;padding:5px 1px}
+.ruq-class-magic-browser>div{margin-top:8px}
+.ruq-class-magic-browser label{display:grid;gap:4px}
+.ruq-class-magic-browser select{width:100%;min-width:0}
+.ruq-class-summary{padding:8px 10px;margin:8px 0;border:1px solid rgba(141,224,220,.25);border-radius:7px;overflow-wrap:anywhere;line-height:1.45;color:#f3e9db}
+.ruq-class-summary h4{margin:1px 0 6px;color:#e6bd7e;font-size:.98rem}
+.ruq-class-summary p{margin:6px 0;font-size:.82rem}
+.ruq-class-summary ul{padding-left:20px;font-size:.8rem;margin:7px 0}
+.ruq-class-summary li{margin:5px 0}
+@media(max-width:650px){.ruq-class-magic-browser{margin:8px 0;padding:7px}.ruq-class-summary{padding:7px}}

@@ -1,162 +1,523 @@
 {
-  "schema": "source_world.lifeSimulator.classSubclasses.v1",
+  "schema": "rise-of-ruqorakai.class-options.v2",
+  "source": "🔁 School-Based Magic Disciplines(3).txt",
+  "edition": "Rise of Ruqorakai",
+  "schoolCount": 11,
+  "archetypeCount": 14,
   "classes": {
-    "Barbarian": [
-      "—",
-      "Berserker",
-      "Totem Warrior",
-      "Zealot",
-      "Wild Magic",
-      "Beast",
-      "Ancestral Guardian",
-      "Storm Herald"
+    "Storm Magistrate": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Bard": [
-      "—",
-      "Lore",
-      "Valor",
-      "Glamour",
-      "Whispers",
-      "Swords",
-      "Eloquence",
-      "Spirits",
-      "Creation"
+    "Passage Warden": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Cleric": [
-      "—",
-      "Life",
-      "Light",
-      "War",
-      "Trickery",
-      "Death",
-      "Grave",
-      "Twilight",
-      "Peace",
-      "Forge",
-      "Tempest",
-      "Knowledge",
-      "Nature",
-      "Arcana"
+    "Rootkeeper": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Druid": [
-      "—",
-      "Land",
-      "Moon",
-      "Dreams",
-      "Spores",
-      "Wildfire",
-      "Stars",
-      "Shepherd"
+    "Tidewarden": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Fighter": [
-      "—",
-      "Champion",
-      "Battle Master",
-      "Eldritch Knight",
-      "Arcane Archer",
-      "Cavalier",
-      "Samurai",
-      "Rune Knight",
-      "Psi Warrior",
-      "Echo Knight"
+    "Forge Architect": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Monk": [
-      "—",
-      "Open Hand",
-      "Shadow",
-      "Mercy",
-      "Four Elements",
-      "Kensei",
-      "Astral Self",
-      "Drunken Master",
-      "Long Death"
+    "Civic Harmonist": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Paladin": [
-      "—",
-      "Devotion",
-      "Ancients",
-      "Vengeance",
-      "Redemption",
-      "Oathbreaker",
-      "Glory",
-      "Conquest",
-      "Crown",
-      "Watchers"
+    "Battlebrand": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Ranger": [
-      "—",
-      "Hunter",
-      "Beast Master",
-      "Gloom Stalker",
-      "Fey Wanderer",
-      "Horizon Walker",
-      "Swarmkeeper",
-      "Drakewarden",
-      "Monster Slayer"
+    "Breathkeeper": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Rogue": [
-      "—",
-      "Thief",
-      "Assassin",
-      "Arcane Trickster",
-      "Swashbuckler",
-      "Mastermind",
-      "Phantom",
-      "Soulknife",
-      "Inquisitive",
-      "Scout"
+    "Astral Strategist": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Sorcerer": [
-      "—",
-      "Wild Magic",
-      "Draconic",
-      "Divine Soul",
-      "Shadow",
-      "Clockwork",
-      "Aberrant Mind",
-      "Storm"
+    "Hearthwarden": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Warlock": [
-      "—",
-      "Fiend",
-      "Archfey",
-      "Great Old One",
-      "Celestial",
-      "Hexblade",
-      "Undead",
-      "Genie",
-      "Fathomless"
+    "Crossing Guide": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Wizard": [
-      "—",
-      "Abjuration",
-      "Divination",
-      "Evocation",
-      "Illusion",
-      "Necromancy",
-      "Enchantment",
-      "Chronurgy",
-      "Graviturgy",
-      "Bladesinging",
-      "Scribes",
-      "War Magic"
+    "Fatewright": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Artificer": [
-      "—",
-      "Alchemist",
-      "Armorer",
-      "Artillerist",
-      "Battle Smith"
+    "Moonwood Sentinel": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ],
-    "Blood Hunter": [
-      "—",
-      "Ghostslayer",
-      "Lycan",
-      "Mutant",
-      "Profane Soul"
-    ],
-    "Multi-Class": [
-      "—"
+    "Thorned Reclaimer": [
+      "Steelborn",
+      "Wildshot",
+      "Spellsword",
+      "Psionist",
+      "Etherist"
     ]
+  },
+  "classDetails": [
+    {
+      "id": "storm-magistrate",
+      "name": "Storm Magistrate",
+      "deity": "Ruqore",
+      "trial": "The Tribunal Without a Crown — determine whether a Dominion officer's lawful-looking demand is just; try blocking, bow cover, weapon-and-ward, mind-reading cues and a storm ward before choosing your response.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Shield Verdict"
+        },
+        {
+          "id": "wildshot",
+          "title": "Skyline Bow"
+        },
+        {
+          "id": "spellsword",
+          "title": "Oathblade"
+        },
+        {
+          "id": "psionist",
+          "title": "Judgment Sight"
+        },
+        {
+          "id": "etherist",
+          "title": "Storm Covenant"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "passage-warden",
+      "name": "Passage Warden",
+      "deity": "Nefarokir",
+      "trial": "A Name Forgotten — escort an unidentified deceased person's kin, recover the proper remembrance, and oppose the exploitation of remains; each of five methods can aid the procession.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Pallbearer Guard"
+        },
+        {
+          "id": "wildshot",
+          "title": "Graveside Sentinel"
+        },
+        {
+          "id": "spellsword",
+          "title": "Veilgate Blade"
+        },
+        {
+          "id": "psionist",
+          "title": "Memory Listener"
+        },
+        {
+          "id": "etherist",
+          "title": "Soul Shepherd"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "rootkeeper",
+      "name": "Rootkeeper",
+      "deity": "Hathruna",
+      "trial": "The Blighted Granary — investigate a failing harvest and defend food supplies without destroying the forest that keeps the soil alive.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Briar Bulwark"
+        },
+        {
+          "id": "wildshot",
+          "title": "Seedflight Hunter"
+        },
+        {
+          "id": "spellsword",
+          "title": "Mycelial Blade"
+        },
+        {
+          "id": "psionist",
+          "title": "Earthroot Sense"
+        },
+        {
+          "id": "etherist",
+          "title": "Season Weaver"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "tidewarden",
+      "name": "Tidewarden",
+      "deity": "Bastveig",
+      "trial": "The Harbor That Would Not Drain — choose which waterfront to rescue while balancing tides, transport, ecology and an approaching squall.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Breakwater Guard"
+        },
+        {
+          "id": "wildshot",
+          "title": "Tidepath Archer"
+        },
+        {
+          "id": "spellsword",
+          "title": "Surfblade"
+        },
+        {
+          "id": "psionist",
+          "title": "Abyss Listener"
+        },
+        {
+          "id": "etherist",
+          "title": "Stormtide Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "forge-architect",
+      "name": "Forge Architect",
+      "deity": "Marduthor",
+      "trial": "The Fault in the Pressure Works — test five approaches to a dangerous engine and decide whether a military contractor should receive the repaired design.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Ironframe Guardian"
+        },
+        {
+          "id": "wildshot",
+          "title": "Rivetshot"
+        },
+        {
+          "id": "spellsword",
+          "title": "Flameforged Spellsword"
+        },
+        {
+          "id": "psionist",
+          "title": "Designseer"
+        },
+        {
+          "id": "etherist",
+          "title": "Maker Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "civic-harmonist",
+      "name": "Civic Harmonist",
+      "deity": "Oskar'enlil",
+      "trial": "A City Divided — resolve a civic clash between laborers and officers, with options for defense, mediation, evacuation and dissent.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Accord Defender"
+        },
+        {
+          "id": "wildshot",
+          "title": "Ward of the Commons"
+        },
+        {
+          "id": "spellsword",
+          "title": "Compact Blade"
+        },
+        {
+          "id": "psionist",
+          "title": "Consensus Reader"
+        },
+        {
+          "id": "etherist",
+          "title": "Harmony Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "battlebrand",
+      "name": "Battlebrand",
+      "deity": "Enkirael",
+      "trial": "The Duel That Became a Riot — prove courage by restraining a stronger foe and protecting the people caught nearby.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Flamefront Steelborn"
+        },
+        {
+          "id": "wildshot",
+          "title": "Trialbow Wildshot"
+        },
+        {
+          "id": "spellsword",
+          "title": "Battlefire Spellsword"
+        },
+        {
+          "id": "psionist",
+          "title": "Conflict Psionist"
+        },
+        {
+          "id": "etherist",
+          "title": "Rekindler Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "breathkeeper",
+      "name": "Breathkeeper",
+      "deity": "Sokhivar",
+      "trial": "A Breath Amid Smoke — evacuate a packed workshop through five different solutions, earning skill by effective rescue rather than forced combat.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Windward Medic"
+        },
+        {
+          "id": "wildshot",
+          "title": "Skyreach Rescuer"
+        },
+        {
+          "id": "spellsword",
+          "title": "Vitalwind Spellsword"
+        },
+        {
+          "id": "psionist",
+          "title": "Breathsong Psionist"
+        },
+        {
+          "id": "etherist",
+          "title": "Aether Healer"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "astral-strategist",
+      "name": "Astral Strategist",
+      "deity": "Raeshkul",
+      "trial": "The Wrong Map — independently test five interpretations of suspicious troop movements and choose whether to expose a fabricated military threat.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Tacticshield Steelborn"
+        },
+        {
+          "id": "wildshot",
+          "title": "Probability Wildshot"
+        },
+        {
+          "id": "spellsword",
+          "title": "Mindblade Spellsword"
+        },
+        {
+          "id": "psionist",
+          "title": "Astral Analyst Psionist"
+        },
+        {
+          "id": "etherist",
+          "title": "Tactical Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "hearthwarden",
+      "name": "Hearthwarden",
+      "deity": "Ishtanora",
+      "trial": "The Winter Stores — rescue a household's dwindling supplies without abandoning nearby strangers and reveal who engineered the shortfall.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Doorstead Steelborn"
+        },
+        {
+          "id": "wildshot",
+          "title": "Larderwatch Wildshot"
+        },
+        {
+          "id": "spellsword",
+          "title": "Hearthsteel Spellsword"
+        },
+        {
+          "id": "psionist",
+          "title": "Kinship Psionist"
+        },
+        {
+          "id": "etherist",
+          "title": "Harvest Hearth Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "crossing-guide",
+      "name": "Crossing Guide",
+      "deity": "Horundar",
+      "trial": "The Broken Bridge — get a mixed caravan across a failing route, through combat, engineering, pathfinding or aid.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Bridgeguard Steelborn"
+        },
+        {
+          "id": "wildshot",
+          "title": "Waymark Wildshot"
+        },
+        {
+          "id": "spellsword",
+          "title": "Passage Spellsword"
+        },
+        {
+          "id": "psionist",
+          "title": "Routefinder Psionist"
+        },
+        {
+          "id": "etherist",
+          "title": "Weatherway Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "fatewright",
+      "name": "Fatewright",
+      "deity": "Selkhanis",
+      "trial": "The Promise That Cannot Be Kept — help a divided community choose which commitments to preserve while refusing a prophecy of guaranteed success.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Endurance Steelborn"
+        },
+        {
+          "id": "wildshot",
+          "title": "Way of Chances Wildshot"
+        },
+        {
+          "id": "spellsword",
+          "title": "Restoration Spellsword"
+        },
+        {
+          "id": "psionist",
+          "title": "Fate Sense Psionist"
+        },
+        {
+          "id": "etherist",
+          "title": "Timewoven Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "moonwood-sentinel",
+      "name": "Moonwood Sentinel",
+      "deity": "Sigrananna",
+      "trial": "The Hunters' Divide — choose between protecting threatened animals, feeding a village and preventing illegal logging; every approach demands tradeoffs.",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Woodwall Steelborn"
+        },
+        {
+          "id": "wildshot",
+          "title": "Lunarchase Wildshot"
+        },
+        {
+          "id": "spellsword",
+          "title": "Briarveil Spellsword"
+        },
+        {
+          "id": "psionist",
+          "title": "Hunter's Awareness Psionist"
+        },
+        {
+          "id": "etherist",
+          "title": "Forest Etherist"
+        }
+      ],
+      "temporalGate": "Deity birth, ascension, availability and domain constraints are period-gated."
+    },
+    {
+      "id": "thorned-reclaimer",
+      "name": "Thorned Reclaimer",
+      "deity": "Anubriosh",
+      "trial": "The Exile's Hourglass; before fall: The Hourglass Before Thorns",
+      "roles": [
+        {
+          "id": "steelborn",
+          "title": "Thorned Bulwark"
+        },
+        {
+          "id": "wildshot",
+          "title": "Thornspike Harrier"
+        },
+        {
+          "id": "spellsword",
+          "title": "Thornveil Reaver"
+        },
+        {
+          "id": "psionist",
+          "title": "Soul-Remnant Listener"
+        },
+        {
+          "id": "etherist",
+          "title": "Exiled Ascendant"
+        }
+      ],
+      "temporalGate": "Post-fall Necromancy, Black Tearbrand, Thornveil Ascension, Tears of the Exiled and Soul Shatter require the narrative-confirmed Classical fall. Before fall: Chaos/Spirit/Death threshold tradition only."
+    }
+  ],
+  "policies": {
+    "noBooks": true,
+    "noPvP": true,
+    "noSingleClassLock": true,
+    "sharedSchoolRankCap": 20,
+    "roleRankCap": 20,
+    "accessByTrainingNotCompulsoryWorship": true
   }
 }
