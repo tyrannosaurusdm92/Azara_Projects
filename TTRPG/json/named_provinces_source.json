@@ -111,7 +111,14 @@
       "displayUTCs": "UTC-4, UTC-3",
       "centerLongitude": -56.825,
       "centerLatitude": -27.314,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-aelvanyr",
+      "sourceProvinceId": "province-aelvanyr",
+      "government": "Participatory Democracy",
+      "capitalSettlementId": "aelvanyr-drakesylva",
+      "capitalName": "Drakesylva",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Aelwynora",
@@ -119,7 +126,14 @@
       "displayUTCs": "UTC-2, UTC-1",
       "centerLongitude": -25.982,
       "centerLatitude": 61.114,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-aelwynora",
+      "sourceProvinceId": "province-aelwynora",
+      "government": "Consensus Democracy",
+      "capitalSettlementId": "aelwynora-elarithen",
+      "capitalName": "Elarithen",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Astraevos",
@@ -127,7 +141,14 @@
       "displayUTCs": "UTC+3, UTC+4",
       "centerLongitude": 55.171,
       "centerLatitude": 24.31,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-astraevos",
+      "sourceProvinceId": "province-astraevos",
+      "government": "Noocracy",
+      "capitalSettlementId": "astraevos-vaelunthir",
+      "capitalName": "Vaelunthir",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Bravelyn",
@@ -135,7 +156,14 @@
       "displayUTCs": "UTC-3, UTC-2",
       "centerLongitude": -34.488,
       "centerLatitude": -65.17,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-bravelyn",
+      "sourceProvinceId": "province-bravelyn",
+      "government": "Federal Republic",
+      "capitalSettlementId": "bravelyn-loxvire",
+      "capitalName": "Loxvire",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Ceulrithan",
@@ -143,7 +171,14 @@
       "displayUTCs": "UTC-1, UTC",
       "centerLongitude": -3.079,
       "centerLatitude": -39.63,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-ceulrithan",
+      "sourceProvinceId": "province-ceulrithan",
+      "government": "Confessional State",
+      "capitalSettlementId": "ceulrithan-gildri",
+      "capitalName": "Gildri",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Drakmorren",
@@ -151,7 +186,14 @@
       "displayUTCs": "UTC+8, UTC+9",
       "centerLongitude": 132.232,
       "centerLatitude": 64.92,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-drakmorren",
+      "sourceProvinceId": "province-drakmorren",
+      "government": "Oligarchy",
+      "capitalSettlementId": "drakmorren-grimvald",
+      "capitalName": "Grimvald",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Earrorim",
@@ -159,7 +201,14 @@
       "displayUTCs": "UTC-7, UTC-6",
       "centerLongitude": -101.697,
       "centerLatitude": 35.305,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-earrorim",
+      "sourceProvinceId": "province-earrorim",
+      "government": "City-State League",
+      "capitalSettlementId": "earrorim-glattonica",
+      "capitalName": "Glattonica",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "El'dravire Riverrealm",
@@ -167,7 +216,14 @@
       "displayUTCs": "UTC+4, UTC+5",
       "centerLongitude": 61.119,
       "centerLatitude": -16.033,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-el-dravire-riverrealm",
+      "sourceProvinceId": "province-el-dravire-riverrealm",
+      "government": "Parliamentary Democracy",
+      "capitalSettlementId": "el-dravire-riverrealm-lorangriel",
+      "capitalName": "Lorangriel",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Eldermere",
@@ -175,7 +231,14 @@
       "displayUTCs": "UTC+8, UTC+9",
       "centerLongitude": 123.461,
       "centerLatitude": 40.833,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-eldermere",
+      "sourceProvinceId": "province-eldermere",
+      "government": "Cooperative Commonwealth",
+      "capitalSettlementId": "eldermere-sylvanreach",
+      "capitalName": "Sylvanreach",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Falthrakar",
@@ -183,7 +246,14 @@
       "displayUTCs": "UTC-1, UTC",
       "centerLongitude": -5.451,
       "centerLatitude": 32.805,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-falthrakar",
+      "sourceProvinceId": "province-falthrakar",
+      "government": "Military Regency",
+      "capitalSettlementId": "falthrakar-nellvaris",
+      "capitalName": "Nellvaris",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Gruddirynn",
@@ -191,7 +261,14 @@
       "displayUTCs": "UTC+5, UTC+6",
       "centerLongitude": 78.009,
       "centerLatitude": -62.445,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-gruddirynn",
+      "sourceProvinceId": "province-gruddirynn",
+      "government": "Council Republic",
+      "capitalSettlementId": "gruddirynn-sleakitika",
+      "capitalName": "Sleakitika",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Iazethas",
@@ -199,7 +276,14 @@
       "displayUTCs": "UTC-10, UTC-9",
       "centerLongitude": -146.861,
       "centerLatitude": -14.171,
-      "notes": "Crosses antimeridian; settlement longitude should decide exact side."
+      "notes": "Crosses antimeridian; settlement longitude should decide exact side.",
+      "provinceId": "province-iazethas",
+      "sourceProvinceId": "province-iazethas",
+      "government": "Plutocracy",
+      "capitalSettlementId": "iazethas-mostrerah",
+      "capitalName": "Mostrerah",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Jor’maelis",
@@ -207,7 +291,14 @@
       "displayUTCs": "UTC+8, UTC+9",
       "centerLongitude": 130.627,
       "centerLatitude": -46.374,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-jor-maelis",
+      "sourceProvinceId": "province-jormaelis",
+      "government": "Protectorate",
+      "capitalSettlementId": "jormaelis-mossirueth",
+      "capitalName": "Mossirueth",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Kaelvorrin",
@@ -215,7 +306,14 @@
       "displayUTCs": "UTC, UTC+1",
       "centerLongitude": 5.828,
       "centerLatitude": 6.383,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-kaelvorrin",
+      "sourceProvinceId": "province-kaelvorrin",
+      "government": "Meritocracy",
+      "capitalSettlementId": "kaelvorrin-dunvyr",
+      "capitalName": "Dunvyr",
+      "settlementCount": 5,
+      "townAvailable": true
     },
     {
       "province": "Kharvathen",
@@ -223,7 +321,14 @@
       "displayUTCs": "UTC-3, UTC-2",
       "centerLongitude": -44.077,
       "centerLatitude": -2.058,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-kharvathen",
+      "sourceProvinceId": "province-kharvathen",
+      "government": "Feudal Compact",
+      "capitalSettlementId": "kharvathen-kharzund",
+      "capitalName": "Kharzund",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Khorvaak",
@@ -231,7 +336,14 @@
       "displayUTCs": "UTC+9, UTC+10",
       "centerLongitude": 149.446,
       "centerLatitude": 21.738,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-khorvaak",
+      "sourceProvinceId": "province-khorvaak",
+      "government": "Tribal Confederation",
+      "capitalSettlementId": "khorvaak-vorathun",
+      "capitalName": "Vorathûn",
+      "settlementCount": 5,
+      "townAvailable": true
     },
     {
       "province": "Lun’tharavé",
@@ -239,7 +351,14 @@
       "displayUTCs": "UTC+1, UTC+2",
       "centerLongitude": 16.816,
       "centerLatitude": -70.778,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-lun-tharav",
+      "sourceProvinceId": "province-luntharave",
+      "government": "Diarchy",
+      "capitalSettlementId": "luntharave-auralisthra",
+      "capitalName": "Auralisthra",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Marrowynd",
@@ -247,7 +366,14 @@
       "displayUTCs": "UTC-8, UTC-7",
       "centerLongitude": -112.285,
       "centerLatitude": 61.786,
-      "notes": "Crosses antimeridian; settlement longitude should decide exact side."
+      "notes": "Crosses antimeridian; settlement longitude should decide exact side.",
+      "provinceId": "province-marrowynd",
+      "sourceProvinceId": "province-marrowynd",
+      "government": "Pirate Compact",
+      "capitalSettlementId": "marrowynd-stormharrow",
+      "capitalName": "Stormharrow",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Nalvessir",
@@ -255,7 +381,14 @@
       "displayUTCs": "UTC+7, UTC+8",
       "centerLongitude": 109.263,
       "centerLatitude": 19.376,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-nalvessir",
+      "sourceProvinceId": "province-nalvessir",
+      "government": "Parliamentary Marsh Council",
+      "capitalSettlementId": "nalvessir-greenmire",
+      "capitalName": "Greenmire",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Pelvoryn",
@@ -263,7 +396,14 @@
       "displayUTCs": "UTC, UTC+1",
       "centerLongitude": 11.487,
       "centerLatitude": -12.748,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-pelvoryn",
+      "sourceProvinceId": "province-pelvoryn",
+      "government": "Aristocracy",
+      "capitalSettlementId": "pelvoryn-belynthar",
+      "capitalName": "Belynthar",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Sylvavéryn",
@@ -271,7 +411,14 @@
       "displayUTCs": "UTC-6, UTC-5",
       "centerLongitude": -86.299,
       "centerLatitude": 8.067,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-sylvav-ryn",
+      "sourceProvinceId": "province-sylvaveryn",
+      "government": "Theocracy",
+      "capitalSettlementId": "sylvaveryn-vaelthyros",
+      "capitalName": "Vaelthyros",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Thalryss",
@@ -279,7 +426,14 @@
       "displayUTCs": "UTC-10, UTC-9",
       "centerLongitude": -138.357,
       "centerLatitude": 15.56,
-      "notes": "Crosses antimeridian; settlement longitude should decide exact side."
+      "notes": "Crosses antimeridian; settlement longitude should decide exact side.",
+      "provinceId": "province-thalryss",
+      "sourceProvinceId": "province-thalryss",
+      "government": "Maritime Regency",
+      "capitalSettlementId": "thalryss-skulltide-expanse",
+      "capitalName": "Skulltide Expanse",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Vaelmyrith",
@@ -287,7 +441,14 @@
       "displayUTCs": "UTC+2, UTC+3",
       "centerLongitude": 36.153,
       "centerLatitude": 65.988,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-vaelmyrith",
+      "sourceProvinceId": "province-vaelmyrith",
+      "government": "Noocracy",
+      "capitalSettlementId": "vaelmyrith-eldryssar",
+      "capitalName": "Eldryssar",
+      "settlementCount": 5,
+      "townAvailable": false
     },
     {
       "province": "Valerune",
@@ -295,7 +456,14 @@
       "displayUTCs": "UTC+4, UTC+5",
       "centerLongitude": 69.651,
       "centerLatitude": -33.735,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-valerune",
+      "sourceProvinceId": "province-valerune",
+      "government": null,
+      "capitalSettlementId": "marrowynd-cindervale-coast",
+      "capitalName": "Cindervale Coast",
+      "settlementCount": 5,
+      "townAvailable": true
     },
     {
       "province": "Virelport",
@@ -303,7 +471,14 @@
       "displayUTCs": "UTC+5, UTC+6",
       "centerLongitude": 82.978,
       "centerLatitude": 74.861,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-virelport",
+      "sourceProvinceId": "province-virelport",
+      "government": "Merchant Republic",
+      "capitalSettlementId": "virelport-bronzewake",
+      "capitalName": "Bronzewake",
+      "settlementCount": 5,
+      "townAvailable": false
     },
     {
       "province": "Vuelmora",
@@ -311,7 +486,14 @@
       "displayUTCs": "UTC+7, UTC+8",
       "centerLongitude": 108.95,
       "centerLatitude": -17.703,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-vuelmora",
+      "sourceProvinceId": "province-vuelmora",
+      "government": "Council Republic",
+      "capitalSettlementId": "vuelmora-hyselva",
+      "capitalName": "Hyselva",
+      "settlementCount": 6,
+      "townAvailable": true
     },
     {
       "province": "Zal’tharuun",
@@ -319,7 +501,14 @@
       "displayUTCs": "UTC-7, UTC-6",
       "centerLongitude": -104.774,
       "centerLatitude": -60.995,
-      "notes": "Crosses antimeridian; settlement longitude should decide exact side."
+      "notes": "Crosses antimeridian; settlement longitude should decide exact side.",
+      "provinceId": "province-zal-tharuun",
+      "sourceProvinceId": "province-zaltharuun",
+      "government": "Oligarchy",
+      "capitalSettlementId": "zaltharuun-sszaruun",
+      "capitalName": "Sszaruun",
+      "settlementCount": 6,
+      "townAvailable": false
     },
     {
       "province": "Zharvokh",
@@ -327,7 +516,14 @@
       "displayUTCs": "UTC-5, UTC-4",
       "centerLongitude": -60.833,
       "centerLatitude": 73.588,
-      "notes": "Use secondary UTC only for settlements near that side of the province."
+      "notes": "Use secondary UTC only for settlements near that side of the province.",
+      "provinceId": "province-zharvokh",
+      "sourceProvinceId": "province-zharvokh",
+      "government": "Military Regency",
+      "capitalSettlementId": "zharvokh-karag-thul",
+      "capitalName": "Karag-Thûl",
+      "settlementCount": 6,
+      "townAvailable": false
     }
   ]
 }

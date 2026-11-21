@@ -104,7 +104,7 @@
       <section class="explorer-pane" style="margin-top:15px"><h2>Settlements of ${escape(p.name)}</h2><div class="settlement-map" id="bvs-settlementMap">${renderMapPins(p)}</div><p class="settlement-map-caption">Schematic placement using source coordinates where distinct; overlapping markers are separated for readability. Select a labeled marker to visit its settlement.</p></section>`;
   }
   function renderMapPins(p){
-    const points=p.settlements.map((s,i)=>({s,i,x:Number(s.coordinates?.longitude??s.centerLongitude??p.center.longitude),y:Number(s.coordinates?.latitude??s.centerLatitude??p.center.latitude)}));
+    const points=p.settlements.map((s,i)=>{const c=p.center||{longitude:0,latitude:0};const angle=i*2.3999632297,radius=1.05+.12*(i%3);return {s,i,x:s.relocated?Number(c.longitude)+Math.cos(angle)*radius:Number(s.coordinates?.longitude??s.centerLongitude??c.longitude),y:s.relocated?Number(c.latitude)+Math.sin(angle)*radius:Number(s.coordinates?.latitude??s.centerLatitude??c.latitude)};});
     let minx=Math.min(...points.map(v=>v.x)),maxx=Math.max(...points.map(v=>v.x));
     let miny=Math.min(...points.map(v=>v.y)),maxy=Math.max(...points.map(v=>v.y));
     const same=(maxx-minx)<.001 && (maxy-miny)<.001;
