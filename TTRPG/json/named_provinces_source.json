@@ -292,13 +292,14 @@
       "centerLongitude": 130.627,
       "centerLatitude": -46.374,
       "notes": "Use secondary UTC only for settlements near that side of the province.",
-      "provinceId": "province-jor-maelis",
+      "provinceId": "province-jormaelis",
       "sourceProvinceId": "province-jormaelis",
       "government": "Protectorate",
       "capitalSettlementId": "jormaelis-mossirueth",
       "capitalName": "Mossirueth",
       "settlementCount": 6,
-      "townAvailable": false
+      "townAvailable": false,
+      "legacyProvinceId": "province-jor-maelis"
     },
     {
       "province": "Kaelvorrin",
@@ -352,13 +353,14 @@
       "centerLongitude": 16.816,
       "centerLatitude": -70.778,
       "notes": "Use secondary UTC only for settlements near that side of the province.",
-      "provinceId": "province-lun-tharav",
+      "provinceId": "province-luntharave",
       "sourceProvinceId": "province-luntharave",
       "government": "Diarchy",
       "capitalSettlementId": "luntharave-auralisthra",
       "capitalName": "Auralisthra",
       "settlementCount": 6,
-      "townAvailable": true
+      "townAvailable": true,
+      "legacyProvinceId": "province-lun-tharav"
     },
     {
       "province": "Marrowynd",
@@ -412,13 +414,14 @@
       "centerLongitude": -86.299,
       "centerLatitude": 8.067,
       "notes": "Use secondary UTC only for settlements near that side of the province.",
-      "provinceId": "province-sylvav-ryn",
+      "provinceId": "province-sylvaveryn",
       "sourceProvinceId": "province-sylvaveryn",
       "government": "Theocracy",
       "capitalSettlementId": "sylvaveryn-vaelthyros",
       "capitalName": "Vaelthyros",
       "settlementCount": 6,
-      "townAvailable": false
+      "townAvailable": false,
+      "legacyProvinceId": "province-sylvav-ryn"
     },
     {
       "province": "Thalryss",
@@ -502,13 +505,14 @@
       "centerLongitude": -104.774,
       "centerLatitude": -60.995,
       "notes": "Crosses antimeridian; settlement longitude should decide exact side.",
-      "provinceId": "province-zal-tharuun",
+      "provinceId": "province-zaltharuun",
       "sourceProvinceId": "province-zaltharuun",
       "government": "Oligarchy",
       "capitalSettlementId": "zaltharuun-sszaruun",
       "capitalName": "Sszaruun",
       "settlementCount": 6,
-      "townAvailable": false
+      "townAvailable": false,
+      "legacyProvinceId": "province-zal-tharuun"
     },
     {
       "province": "Zharvokh",

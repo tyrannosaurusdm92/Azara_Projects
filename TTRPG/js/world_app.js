@@ -18,7 +18,7 @@
   const stored=(()=>{try{return JSON.parse(localStorage.getItem(viewStore)||'{}')}catch{return {}}})();
   const hash=decodeURIComponent(location.hash.slice(1));
   const match=hash.match(/^province\/([^/]+)(?:\/settlement\/([^/]+))?/);
-  ui.province=world.provinces.find(x=>x.id===(match?.[1]||stored.province))||world.provinces[0];
+  ui.province=(window.RuqorakaiProvinceAuthority?.resolveProvince(match?.[1]||stored.province)||world.provinces.find(x=>x.id===(match?.[1]||stored.province)))||world.provinces[0];
   ui.settlement=ui.province.settlements.find(x=>x.id===(match?.[2]||stored.settlement))||ui.province.settlements[0]||null;
   const orderedTabs=['overview','residents','relationships','schedules','services','tools'];
   function npcList(){

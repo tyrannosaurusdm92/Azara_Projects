@@ -9,7 +9,9 @@
     "dangerLevel": "High",
     "governmentType": "Participatory Democracy",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "Capital_City_Forest"
+    "immersiveTemplateId": "Capital_City_Forest",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-elarvess",
@@ -21,55 +23,65 @@
     "dangerLevel": "Low",
     "governmentType": "Participatory Democracy",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-everwake",
     "name": "Everwake",
     "provinceId": "province-aelvanyr",
     "provinceName": "Aelvanyr",
-    "type": "Town",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "Low",
     "governmentType": "Participatory Democracy",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "Town_Surface_Docks_Coastal"
+    "immersiveTemplateId": "Town_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-faeloryn",
     "name": "Faeloryn",
-    "provinceId": "province-aelvanyr",
-    "provinceName": "Aelvanyr",
+    "provinceId": "province-kaelvorrin",
+    "provinceName": "Kaelvorrin",
     "type": "Village",
     "biome": "Grassland Plains",
     "dangerLevel": "Moderate",
-    "governmentType": "Participatory Democracy",
+    "governmentType": "Meritocracy",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-lunawyn",
     "name": "Lunawyn",
-    "provinceId": "province-aelvanyr",
-    "provinceName": "Aelvanyr",
+    "provinceId": "province-vaelmyrith",
+    "provinceName": "Vaelmyrith",
     "type": "Village",
     "biome": "Hill Plateau",
     "dangerLevel": "Low",
-    "governmentType": "Participatory Democracy",
+    "governmentType": "Noocracy",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "Village_Hill_Plateau"
+    "immersiveTemplateId": "Village_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-mythraelyn",
     "name": "Mythraelyn",
-    "provinceId": "province-aelvanyr",
-    "provinceName": "Aelvanyr",
-    "type": "City",
+    "provinceId": "province-falthrakar",
+    "provinceName": "Falthrakar",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
-    "governmentType": "Participatory Democracy",
+    "governmentType": "Military Regency",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-rootmere",
@@ -81,19 +93,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Participatory Democracy",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "Village_Forest"
+    "immersiveTemplateId": "Village_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-sylvarielle",
     "name": "Sylvarielle",
-    "provinceId": "province-aelvanyr",
-    "provinceName": "Aelvanyr",
+    "provinceId": "province-gruddirynn",
+    "provinceName": "Gruddirynn",
     "type": "City",
     "biome": "Forest",
     "dangerLevel": "Low",
-    "governmentType": "Participatory Democracy",
+    "governmentType": "Council Republic",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-vaelithorne",
@@ -105,7 +121,9 @@
     "dangerLevel": "Low",
     "governmentType": "Participatory Democracy",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelvanyr-wildbloom",
@@ -117,7 +135,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Participatory Democracy",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelwynora-elarithen",
@@ -129,7 +149,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Consensus Democracy",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelwynora-ulwyn",
@@ -141,31 +163,37 @@
     "dangerLevel": "Low",
     "governmentType": "Consensus Democracy",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelwynora-wilsara",
     "name": "Wilsara",
     "provinceId": "province-aelwynora",
     "provinceName": "Aelwynora",
-    "type": "Town",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Consensus Democracy",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "aelwynora-yltharien",
     "name": "Yltharien",
     "provinceId": "province-aelwynora",
     "provinceName": "Aelwynora",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Moderate",
     "governmentType": "Consensus Democracy",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "astraevos-vaelunthir",
@@ -177,19 +205,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Noocracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "Capital_City_Hill_Plateau"
+    "immersiveTemplateId": "Capital_City_Hill_Plateau",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "astraevos-mythalora",
     "name": "Mythalora",
     "provinceId": "province-astraevos",
     "provinceName": "Astraevos",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
     "governmentType": "Noocracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "astraevos-aelshoreth",
@@ -201,7 +233,9 @@
     "dangerLevel": "Low",
     "governmentType": "Noocracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "astraevos-cyralune",
@@ -213,7 +247,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Noocracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "Village_Hill_Plateau"
+    "immersiveTemplateId": "Village_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "astraevos-orithalune",
@@ -225,19 +261,23 @@
     "dangerLevel": "High",
     "governmentType": "Noocracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "astraevos-caelmyros",
     "name": "Caelmyros",
     "provinceId": "province-astraevos",
     "provinceName": "Astraevos",
-    "type": "City",
+    "type": "Township",
     "biome": "Hill Plateau",
     "dangerLevel": "Low",
     "governmentType": "Noocracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "City_Hill_Plateau"
+    "immersiveTemplateId": "City_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "bravelyn-loxvire",
@@ -249,7 +289,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Federal Republic",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "bravelyn-qasvire",
@@ -261,7 +303,9 @@
     "dangerLevel": "Low",
     "governmentType": "Federal Republic",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "bravelyn-qelvandra",
@@ -273,7 +317,9 @@
     "dangerLevel": "Low",
     "governmentType": "Federal Republic",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "bravelyn-solvaryn",
@@ -285,19 +331,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Federal Republic",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "bravelyn-sundervale",
     "name": "Sundervale",
     "provinceId": "province-bravelyn",
     "provinceName": "Bravelyn",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Federal Republic",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "bravelyn-xelvoryn",
@@ -309,7 +359,9 @@
     "dangerLevel": "Low",
     "governmentType": "Federal Republic",
     "timeZone": "UTC-2",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "ceulrithan-gildri",
@@ -321,7 +373,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Confessional State",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "ceulrithan-cindrau",
@@ -333,19 +387,23 @@
     "dangerLevel": "Low",
     "governmentType": "Confessional State",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "ceulrithan-turyne",
     "name": "Turyne",
     "provinceId": "province-ceulrithan",
     "provinceName": "Ceulrithan",
-    "type": "Town",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Confessional State",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "ceulrithan-qovei",
@@ -357,19 +415,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Confessional State",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "ceulrithan-rilvays",
     "name": "Rilvays",
     "provinceId": "province-ceulrithan",
     "provinceName": "Ceulrithan",
-    "type": "Village",
+    "type": "City",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Confessional State",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "ceulrithan-faelith",
@@ -381,7 +443,9 @@
     "dangerLevel": "Low",
     "governmentType": "Confessional State",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "drakmorren-grimvald",
@@ -393,19 +457,23 @@
     "dangerLevel": "High",
     "governmentType": "Oligarchy",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "Capital_City_Mountain"
+    "immersiveTemplateId": "Capital_City_Mountain",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "drakmorren-vorakmar",
     "name": "Vorakmar",
     "provinceId": "province-drakmorren",
     "provinceName": "Drakmorren",
-    "type": "Town",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "High",
     "governmentType": "Oligarchy",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "drakmorren-fenwyrd",
@@ -417,7 +485,9 @@
     "dangerLevel": "High",
     "governmentType": "Oligarchy",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "Town_Swamp_Marsh"
+    "immersiveTemplateId": "Town_Swamp_Marsh",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "drakmorren-kharrowfen",
@@ -429,7 +499,9 @@
     "dangerLevel": "High",
     "governmentType": "Oligarchy",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "City_Swamp_Marsh"
+    "immersiveTemplateId": "City_Swamp_Marsh",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "drakmorren-morvakar",
@@ -441,7 +513,9 @@
     "dangerLevel": "High",
     "governmentType": "Oligarchy",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "earrorim-glattonica",
@@ -453,7 +527,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "City-State League",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "earrorim-iciarene",
@@ -465,7 +541,9 @@
     "dangerLevel": "Low",
     "governmentType": "City-State League",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "earrorim-wagriolyn",
@@ -477,19 +555,23 @@
     "dangerLevel": "Low",
     "governmentType": "City-State League",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "earrorim-ullunor",
     "name": "Ullunor",
     "provinceId": "province-earrorim",
     "provinceName": "Earrorim",
-    "type": "Village",
+    "type": "Township",
     "biome": "Hill Plateau",
     "dangerLevel": "Moderate",
     "governmentType": "City-State League",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "Village_Hill_Plateau"
+    "immersiveTemplateId": "Village_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "earrorim-obriasos",
@@ -501,7 +583,9 @@
     "dangerLevel": "Low",
     "governmentType": "City-State League",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "earrorim-wrasserah",
@@ -513,7 +597,9 @@
     "dangerLevel": "Low",
     "governmentType": "City-State League",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "el-dravire-riverrealm-lorangriel",
@@ -525,7 +611,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Parliamentary Democracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "el-dravire-riverrealm-merrinthal",
@@ -537,19 +625,23 @@
     "dangerLevel": "High",
     "governmentType": "Parliamentary Democracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "el-dravire-riverrealm-murethash",
     "name": "Murethash",
     "provinceId": "province-el-dravire-riverrealm",
     "provinceName": "El'dravire Riverrealm",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Parliamentary Democracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "el-dravire-riverrealm-yivanyr",
@@ -561,19 +653,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Parliamentary Democracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "el-dravire-riverrealm-veloraskkis",
     "name": "Veloraskkis",
     "provinceId": "province-el-dravire-riverrealm",
     "provinceName": "El'dravire Riverrealm",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Parliamentary Democracy",
     "timeZone": "UTC+4",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "eldermere-sylvanreach",
@@ -585,19 +681,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Cooperative Commonwealth",
     "timeZone": "UTC+8",
-    "immersiveTemplateId": "Capital_City_Forest"
+    "immersiveTemplateId": "Capital_City_Forest",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "eldermere-oakenshire",
     "name": "Oakenshire",
     "provinceId": "province-eldermere",
     "provinceName": "Eldermere",
-    "type": "City",
+    "type": "Township",
     "biome": "Forest",
     "dangerLevel": "Low",
     "governmentType": "Cooperative Commonwealth",
     "timeZone": "UTC+8",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "eldermere-riverbloom",
@@ -609,7 +709,9 @@
     "dangerLevel": "Low",
     "governmentType": "Cooperative Commonwealth",
     "timeZone": "UTC+8",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "eldermere-aelgrove",
@@ -621,7 +723,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Cooperative Commonwealth",
     "timeZone": "UTC+8",
-    "immersiveTemplateId": "Village_Forest"
+    "immersiveTemplateId": "Village_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "eldermere-cloverfen",
@@ -633,43 +737,51 @@
     "dangerLevel": "Low",
     "governmentType": "Cooperative Commonwealth",
     "timeZone": "UTC+8",
-    "immersiveTemplateId": "City_Swamp_Marsh"
+    "immersiveTemplateId": "City_Swamp_Marsh",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "eldermere-mossvale",
     "name": "Mossvale",
-    "provinceId": "province-eldermere",
-    "provinceName": "Eldermere",
+    "provinceId": "province-valerune",
+    "provinceName": "Valerune",
     "type": "Village",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
-    "governmentType": "Cooperative Commonwealth",
+    "governmentType": null,
     "timeZone": "UTC+8",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "eldermere-faelmere",
     "name": "Faelmere",
     "provinceId": "province-eldermere",
     "provinceName": "Eldermere",
-    "type": "Village",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Moderate",
     "governmentType": "Cooperative Commonwealth",
     "timeZone": "UTC+8",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "eldermere-lunebriar",
     "name": "Lunebriar",
-    "provinceId": "province-eldermere",
-    "provinceName": "Eldermere",
-    "type": "City",
+    "provinceId": "province-pelvoryn",
+    "provinceName": "Pelvoryn",
+    "type": "Township",
     "biome": "Hill Plateau",
     "dangerLevel": "Low",
-    "governmentType": "Cooperative Commonwealth",
+    "governmentType": "Aristocracy",
     "timeZone": "UTC+8",
-    "immersiveTemplateId": "City_Hill_Plateau"
+    "immersiveTemplateId": "City_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "falthrakar-nellvaris",
@@ -681,7 +793,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Military Regency",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "falthrakar-brokharn",
@@ -693,19 +807,23 @@
     "dangerLevel": "Low",
     "governmentType": "Military Regency",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Town_Mountain"
+    "immersiveTemplateId": "Town_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "falthrakar-gorathkar",
     "name": "Gorathkar",
     "provinceId": "province-falthrakar",
     "provinceName": "Falthrakar",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Military Regency",
     "timeZone": "UTC",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "falthrakar-lithvar",
@@ -717,7 +835,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Military Regency",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "gruddirynn-sleakitika",
@@ -729,7 +849,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Council Republic",
     "timeZone": "UTC+5",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "gruddirynn-umiotope",
@@ -741,19 +863,23 @@
     "dangerLevel": "Low",
     "governmentType": "Council Republic",
     "timeZone": "UTC+5",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "gruddirynn-wrobetopia",
     "name": "Wrobetopia",
     "provinceId": "province-gruddirynn",
     "provinceName": "Gruddirynn",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Council Republic",
     "timeZone": "UTC+5",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "gruddirynn-bleosianys",
@@ -765,7 +891,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Council Republic",
     "timeZone": "UTC+5",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "iazethas-mostrerah",
@@ -777,19 +905,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Plutocracy",
     "timeZone": "UTC-10",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "iazethas-bleasacia",
     "name": "Bleasacia",
     "provinceId": "province-iazethas",
     "provinceName": "Iazethas",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Plutocracy",
     "timeZone": "UTC-10",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "iazethas-streccea",
@@ -801,7 +933,9 @@
     "dangerLevel": "Low",
     "governmentType": "Plutocracy",
     "timeZone": "UTC-10",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "iazethas-leammipa",
@@ -813,79 +947,93 @@
     "dangerLevel": "Moderate",
     "governmentType": "Plutocracy",
     "timeZone": "UTC-10",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "jormaelis-mossirueth",
     "name": "Mossirueth",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "Capital City",
     "biome": "Grassland Plains",
     "dangerLevel": "Moderate",
     "governmentType": "Protectorate",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "jormaelis-utchmyrith",
     "name": "Utch’myrith",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
-    "type": "City",
+    "type": "Village",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Protectorate",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "jormaelis-yirethaulor",
     "name": "Yire’thaulor",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "City",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Protectorate",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "jormaelis-limioreimn",
     "name": "Li’mioreimn",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "City",
     "biome": "Grassland Plains",
     "dangerLevel": "Moderate",
     "governmentType": "Protectorate",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "jormaelis-rnzeuluun",
     "name": "Rnzeuluun",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "City",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Protectorate",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "jormaelis-ishvoryk",
     "name": "Ish’voryk",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Protectorate",
     "timeZone": "UTC+9",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kaelvorrin-dunvyr",
@@ -897,7 +1045,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Meritocracy",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kaelvorrin-mistval",
@@ -909,19 +1059,23 @@
     "dangerLevel": "Low",
     "governmentType": "Meritocracy",
     "timeZone": "UTC",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kaelvorrin-silverwake",
     "name": "Silverwake",
     "provinceId": "province-kaelvorrin",
     "provinceName": "Kaelvorrin",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "Low",
     "governmentType": "Meritocracy",
     "timeZone": "UTC",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-kharzund",
@@ -933,43 +1087,51 @@
     "dangerLevel": "Moderate",
     "governmentType": "Feudal Compact",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "Capital_City_Mountain"
+    "immersiveTemplateId": "Capital_City_Mountain",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-ironwood",
     "name": "Ironwood",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
+    "provinceId": "province-valerune",
+    "provinceName": "Valerune",
     "type": "Town",
     "biome": "Mountain",
     "dangerLevel": "Low",
-    "governmentType": "Feudal Compact",
+    "governmentType": null,
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "Town_Mountain"
+    "immersiveTemplateId": "Town_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-dorghalun",
     "name": "Dorghalun",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
+    "provinceId": "province-kaelvorrin",
+    "provinceName": "Kaelvorrin",
     "type": "City",
     "biome": "Mountain",
     "dangerLevel": "Low",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Meritocracy",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-greybriar",
     "name": "Greybriar",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
+    "provinceId": "province-khorvaak",
+    "provinceName": "Khorvaak",
     "type": "City",
     "biome": "Mountain",
     "dangerLevel": "Moderate",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Tribal Confederation",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-zarveng",
@@ -981,7 +1143,9 @@
     "dangerLevel": "Low",
     "governmentType": "Feudal Compact",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "Village_Mountain"
+    "immersiveTemplateId": "Village_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-thornbreak",
@@ -993,19 +1157,23 @@
     "dangerLevel": "Low",
     "governmentType": "Feudal Compact",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-draskminn",
     "name": "Draskminn",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
+    "provinceId": "province-zharvokh",
+    "provinceName": "Zharvokh",
     "type": "City",
     "biome": "Mountain",
     "dangerLevel": "Moderate",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Military Regency",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-rivenwild",
@@ -1017,19 +1185,23 @@
     "dangerLevel": "Low",
     "governmentType": "Feudal Compact",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-lorath",
     "name": "Lorath",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
+    "provinceId": "province-aelwynora",
+    "provinceName": "Aelwynora",
     "type": "Village",
     "biome": "Mountain",
     "dangerLevel": "Low",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Consensus Democracy",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "Village_Mountain"
+    "immersiveTemplateId": "Village_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-skarnfell",
@@ -1041,67 +1213,79 @@
     "dangerLevel": "Moderate",
     "governmentType": "Feudal Compact",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-bloodmire",
     "name": "Bloodmire",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
+    "provinceId": "province-drakmorren",
+    "provinceName": "Drakmorren",
     "type": "City",
     "biome": "Swamp Marsh",
     "dangerLevel": "Low",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Oligarchy",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Swamp_Marsh"
+    "immersiveTemplateId": "City_Swamp_Marsh",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-wildsunder",
     "name": "Wildsunder",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
-    "type": "City",
+    "provinceId": "province-khorvaak",
+    "provinceName": "Khorvaak",
+    "type": "Township",
     "biome": "Mountain",
     "dangerLevel": "Low",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Tribal Confederation",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-pokbith",
     "name": "Pokbith",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
+    "provinceId": "province-virelport",
+    "provinceName": "Virelport",
     "type": "Village",
     "biome": "Mountain",
     "dangerLevel": "Moderate",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Merchant Republic",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "Village_Mountain"
+    "immersiveTemplateId": "Village_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-thoyndor",
     "name": "Thoyndor",
-    "provinceId": "province-kharvathen",
-    "provinceName": "Kharvathen",
+    "provinceId": "province-khorvaak",
+    "provinceName": "Khorvaak",
     "type": "Village",
     "biome": "Mountain",
     "dangerLevel": "Low",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Tribal Confederation",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "Village_Mountain"
+    "immersiveTemplateId": "Village_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "kharvathen-hethsther",
     "name": "Heths’ther",
     "provinceId": "province-kharvathen",
     "provinceName": "Kharvathen",
-    "type": "City",
+    "type": "Township",
     "biome": "Mountain",
     "dangerLevel": "Low",
     "governmentType": "Feudal Compact",
     "timeZone": "UTC-3",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "khorvaak-vorathun",
@@ -1113,7 +1297,9 @@
     "dangerLevel": "High",
     "governmentType": "Tribal Confederation",
     "timeZone": "UTC+10",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "khorvaak-khazovar",
@@ -1125,67 +1311,79 @@
     "dangerLevel": "High",
     "governmentType": "Tribal Confederation",
     "timeZone": "UTC+10",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "luntharave-auralisthra",
     "name": "Auralisthra",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "Capital City",
     "biome": "Hill Plateau",
     "dangerLevel": "Moderate",
     "governmentType": "Diarchy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Capital_City_Hill_Plateau"
+    "immersiveTemplateId": "Capital_City_Hill_Plateau",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "luntharave-seralun",
     "name": "Seralun",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
-    "type": "Town",
+    "type": "Township",
     "biome": "Hill Plateau",
     "dangerLevel": "Low",
     "governmentType": "Diarchy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Town_Hill_Plateau"
+    "immersiveTemplateId": "Town_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "luntharave-vireluna",
     "name": "Vireluna",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "Town",
     "biome": "Hill Plateau",
     "dangerLevel": "Low",
     "governmentType": "Diarchy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Town_Hill_Plateau"
+    "immersiveTemplateId": "Town_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "luntharave-sylmaris",
     "name": "Sylmaris",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
-    "type": "Village",
+    "type": "Township",
     "biome": "Hill Plateau",
     "dangerLevel": "Moderate",
     "governmentType": "Diarchy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Village_Hill_Plateau"
+    "immersiveTemplateId": "Village_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "luntharave-neruvea",
     "name": "Neruvéa",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "Village",
     "biome": "Hill Plateau",
     "dangerLevel": "Low",
     "governmentType": "Diarchy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Village_Hill_Plateau"
+    "immersiveTemplateId": "Village_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "marrowynd-stormharrow",
@@ -1197,7 +1395,9 @@
     "dangerLevel": "High",
     "governmentType": "Pirate Compact",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "marrowynd-blacktide-reach",
@@ -1209,31 +1409,37 @@
     "dangerLevel": "High",
     "governmentType": "Pirate Compact",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "marrowynd-thalmerrow",
     "name": "Thalmerrow",
-    "provinceId": "province-marrowynd",
-    "provinceName": "Marrowynd",
+    "provinceId": "province-falthrakar",
+    "provinceName": "Falthrakar",
     "type": "City",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
-    "governmentType": "Pirate Compact",
+    "governmentType": "Military Regency",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "marrowynd-seawynd-hollow",
     "name": "Seawynd Hollow",
     "provinceId": "province-marrowynd",
     "provinceName": "Marrowynd",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
     "governmentType": "Pirate Compact",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "marrowynd-myrkwake",
@@ -1245,43 +1451,51 @@
     "dangerLevel": "High",
     "governmentType": "Pirate Compact",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "Village_Surface_Docks_Coastal"
+    "immersiveTemplateId": "Village_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "marrowynd-vaelshore",
     "name": "Vaelshore",
     "provinceId": "province-marrowynd",
     "provinceName": "Marrowynd",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
     "governmentType": "Pirate Compact",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "marrowynd-cindervale-coast",
     "name": "Cindervale Coast",
-    "provinceId": "province-marrowynd",
-    "provinceName": "Marrowynd",
-    "type": "City",
+    "provinceId": "province-valerune",
+    "provinceName": "Valerune",
+    "type": "Capital City",
     "biome": "Grassland Plains",
     "dangerLevel": "High",
-    "governmentType": "Pirate Compact",
+    "governmentType": null,
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "marrowynd-kharrowport",
     "name": "Kharrowport",
     "provinceId": "province-marrowynd",
     "provinceName": "Marrowynd",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
     "governmentType": "Pirate Compact",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "nalvessir-greenmire",
@@ -1293,31 +1507,37 @@
     "dangerLevel": "Moderate",
     "governmentType": "Parliamentary Marsh Council",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "Capital_City_Swamp_Marsh"
+    "immersiveTemplateId": "Capital_City_Swamp_Marsh",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "nalvessir-porthelis",
     "name": "Porthelis",
     "provinceId": "province-nalvessir",
     "provinceName": "Nalvessir",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "Low",
     "governmentType": "Parliamentary Marsh Council",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "nalvessir-briarwater",
     "name": "Briarwater",
-    "provinceId": "province-nalvessir",
-    "provinceName": "Nalvessir",
+    "provinceId": "province-vuelmora",
+    "provinceName": "Vuelmora",
     "type": "City",
     "biome": "Swamp Marsh",
     "dangerLevel": "Low",
-    "governmentType": "Parliamentary Marsh Council",
+    "governmentType": "Council Republic",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "City_Swamp_Marsh"
+    "immersiveTemplateId": "City_Swamp_Marsh",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "nalvessir-bentharys",
@@ -1329,7 +1549,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Parliamentary Marsh Council",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "nalvessir-palevanna",
@@ -1341,19 +1563,23 @@
     "dangerLevel": "Low",
     "governmentType": "Parliamentary Marsh Council",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "nalvessir-balmire",
     "name": "Balmire",
-    "provinceId": "province-nalvessir",
-    "provinceName": "Nalvessir",
+    "provinceId": "province-gruddirynn",
+    "provinceName": "Gruddirynn",
     "type": "Village",
     "biome": "Swamp Marsh",
     "dangerLevel": "Low",
-    "governmentType": "Parliamentary Marsh Council",
+    "governmentType": "Council Republic",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "Village_Swamp_Marsh"
+    "immersiveTemplateId": "Village_Swamp_Marsh",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "nalvessir-frostfen",
@@ -1365,19 +1591,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Parliamentary Marsh Council",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "Village_Swamp_Marsh"
+    "immersiveTemplateId": "Village_Swamp_Marsh",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "nalvessir-pellavess",
     "name": "Pellavess",
     "provinceId": "province-nalvessir",
     "provinceName": "Nalvessir",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Parliamentary Marsh Council",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "pelvoryn-belynthar",
@@ -1389,19 +1619,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Aristocracy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "pelvoryn-gavaryn",
     "name": "Gavaryn",
     "provinceId": "province-pelvoryn",
     "provinceName": "Pelvoryn",
-    "type": "Town",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Aristocracy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "pelvoryn-lysvire",
@@ -1413,7 +1647,9 @@
     "dangerLevel": "Low",
     "governmentType": "Aristocracy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "pelvoryn-fensylth",
@@ -1425,103 +1661,121 @@
     "dangerLevel": "Moderate",
     "governmentType": "Aristocracy",
     "timeZone": "UTC+1",
-    "immersiveTemplateId": "Village_Swamp_Marsh"
+    "immersiveTemplateId": "Village_Swamp_Marsh",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "sylvaveryn-vaelthyros",
     "name": "Vaelthyros",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "Capital City",
     "biome": "Forest",
     "dangerLevel": "Moderate",
     "governmentType": "Theocracy",
     "timeZone": "UTC-6",
-    "immersiveTemplateId": "Capital_City_Forest"
+    "immersiveTemplateId": "Capital_City_Forest",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "sylvaveryn-elaravosk",
     "name": "Elaravosk",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "City",
     "biome": "Forest",
     "dangerLevel": "Low",
     "governmentType": "Theocracy",
     "timeZone": "UTC-6",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "sylvaveryn-myrvaelun",
     "name": "Myrvaelûn",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "City",
     "biome": "Forest",
     "dangerLevel": "Low",
     "governmentType": "Theocracy",
     "timeZone": "UTC-6",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "sylvaveryn-sylthados",
     "name": "Sylthadös",
-    "provinceId": "province-sylvav-ryn",
-    "provinceName": "Sylvavéryn",
+    "provinceId": "province-luntharave",
+    "provinceName": "Lun’tharavé",
     "type": "City",
     "biome": "Forest",
     "dangerLevel": "Moderate",
-    "governmentType": "Theocracy",
+    "governmentType": "Diarchy",
     "timeZone": "UTC-6",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "sylvaveryn-thalavaryn",
     "name": "Thalavaryn",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
     "governmentType": "Theocracy",
     "timeZone": "UTC-6",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "sylvaveryn-vaerundell",
     "name": "Vaerundell",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
-    "type": "City",
+    "type": "Village",
     "biome": "Forest",
     "dangerLevel": "Low",
     "governmentType": "Theocracy",
     "timeZone": "UTC-6",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "sylvaveryn-lethyrvos",
     "name": "Lethyrvos",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
-    "type": "City",
+    "type": "Township",
     "biome": "Forest",
     "dangerLevel": "Moderate",
     "governmentType": "Theocracy",
     "timeZone": "UTC-6",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "sylvaveryn-aelmyrwald",
     "name": "Aelmyrwald",
-    "provinceId": "province-sylvav-ryn",
-    "provinceName": "Sylvavéryn",
-    "type": "City",
+    "provinceId": "province-iazethas",
+    "provinceName": "Iazethas",
+    "type": "Township",
     "biome": "Forest",
     "dangerLevel": "Low",
-    "governmentType": "Theocracy",
+    "governmentType": "Plutocracy",
     "timeZone": "UTC-6",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-skulltide-expanse",
@@ -1533,7 +1787,9 @@
     "dangerLevel": "High",
     "governmentType": "Maritime Regency",
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "Capital_City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "Capital_City_Surface_Docks_Coastal",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-leviamor",
@@ -1545,19 +1801,23 @@
     "dangerLevel": "High",
     "governmentType": "Maritime Regency",
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "Town_Surface_Docks_Coastal"
+    "immersiveTemplateId": "Town_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-ocevaruun",
     "name": "Ocevaruun",
-    "provinceId": "province-thalryss",
-    "provinceName": "Thalryss",
+    "provinceId": "province-el-dravire-riverrealm",
+    "provinceName": "El'dravire Riverrealm",
     "type": "City",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
-    "governmentType": "Maritime Regency",
+    "governmentType": "Parliamentary Democracy",
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-blackwake-isles",
@@ -1569,31 +1829,37 @@
     "dangerLevel": "High",
     "governmentType": "Maritime Regency",
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-thalkazuun",
     "name": "Thal’kazuun",
     "provinceId": "province-thalryss",
     "provinceName": "Thalryss",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
     "governmentType": "Maritime Regency",
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-dreadcurrent",
     "name": "Dreadcurrent",
-    "provinceId": "province-thalryss",
-    "provinceName": "Thalryss",
+    "provinceId": "province-aelwynora",
+    "provinceName": "Aelwynora",
     "type": "City",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
-    "governmentType": "Maritime Regency",
+    "governmentType": "Consensus Democracy",
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-vorthalass",
@@ -1605,7 +1871,9 @@
     "dangerLevel": "High",
     "governmentType": "Maritime Regency",
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-abyrros",
@@ -1617,19 +1885,23 @@
     "dangerLevel": "High",
     "governmentType": "Maritime Regency",
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "Village_Surface_Docks_Coastal"
+    "immersiveTemplateId": "Village_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "thalryss-grimwater-reach",
     "name": "Grimwater Reach",
-    "provinceId": "province-thalryss",
-    "provinceName": "Thalryss",
+    "provinceId": "province-valerune",
+    "provinceName": "Valerune",
     "type": "City",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
-    "governmentType": "Maritime Regency",
+    "governmentType": null,
     "timeZone": "UTC-9",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vaelmyrith-eldryssar",
@@ -1641,7 +1913,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Noocracy",
     "timeZone": "UTC+2",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vaelmyrith-lunethryl",
@@ -1653,31 +1927,37 @@
     "dangerLevel": "Low",
     "governmentType": "Noocracy",
     "timeZone": "UTC+2",
-    "immersiveTemplateId": "City_Hill_Plateau"
+    "immersiveTemplateId": "City_Hill_Plateau",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vaelmyrith-velkynwood",
     "name": "Velkynwood",
     "provinceId": "province-vaelmyrith",
     "provinceName": "Vaelmyrith",
-    "type": "City",
+    "type": "Township",
     "biome": "Forest",
     "dangerLevel": "Low",
     "governmentType": "Noocracy",
     "timeZone": "UTC+2",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vaelmyrith-whispergrove",
     "name": "Whispergrove",
     "provinceId": "province-vaelmyrith",
     "provinceName": "Vaelmyrith",
-    "type": "City",
+    "type": "Township",
     "biome": "Forest",
     "dangerLevel": "Moderate",
     "governmentType": "Noocracy",
     "timeZone": "UTC+2",
-    "immersiveTemplateId": "City_Forest"
+    "immersiveTemplateId": "City_Forest",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "virelport-bronzewake",
@@ -1689,7 +1969,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Merchant Republic",
     "timeZone": "UTC+6",
-    "immersiveTemplateId": "Capital_City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "Capital_City_Surface_Docks_Coastal",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "virelport-veilstrand",
@@ -1701,31 +1983,37 @@
     "dangerLevel": "Low",
     "governmentType": "Merchant Republic",
     "timeZone": "UTC+6",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "virelport-straithaven",
     "name": "Straithaven",
     "provinceId": "province-virelport",
     "provinceName": "Virelport",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "Low",
     "governmentType": "Merchant Republic",
     "timeZone": "UTC+6",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "virelport-stormgullet",
     "name": "Stormgullet",
     "provinceId": "province-virelport",
     "provinceName": "Virelport",
-    "type": "City",
+    "type": "Township",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "Moderate",
     "governmentType": "Merchant Republic",
     "timeZone": "UTC+6",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vuelmora-hyselva",
@@ -1737,19 +2025,23 @@
     "dangerLevel": "Moderate",
     "governmentType": "Council Republic",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vuelmora-oelnoreu",
     "name": "Oelnoreu",
     "provinceId": "province-vuelmora",
     "provinceName": "Vuelmora",
-    "type": "Town",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Council Republic",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vuelmora-mornelya",
@@ -1761,7 +2053,9 @@
     "dangerLevel": "Low",
     "governmentType": "Council Republic",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "Town_Grassland_Plains"
+    "immersiveTemplateId": "Town_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vuelmora-ithmora",
@@ -1773,7 +2067,9 @@
     "dangerLevel": "Moderate",
     "governmentType": "Council Republic",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "vuelmora-glysera",
@@ -1785,115 +2081,135 @@
     "dangerLevel": "Low",
     "governmentType": "Council Republic",
     "timeZone": "UTC+7",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-sszaruun",
     "name": "Sszaruun",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "Capital City",
     "biome": "Grassland Plains",
     "dangerLevel": "Moderate",
     "governmentType": "Oligarchy",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "Capital_City_Grassland_Plains"
+    "immersiveTemplateId": "Capital_City_Grassland_Plains",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-thalzuroth",
     "name": "Thal’zuroth",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "City",
     "biome": "Surface Docks Coastal",
     "dangerLevel": "High",
     "governmentType": "Oligarchy",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Surface_Docks_Coastal"
+    "immersiveTemplateId": "City_Surface_Docks_Coastal",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-xalvoroq",
     "name": "Xal’voroq",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Oligarchy",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-ithkazuun",
     "name": "Ithkazuun",
-    "provinceId": "province-zal-tharuun",
-    "provinceName": "Zal’tharuun",
+    "provinceId": "province-iazethas",
+    "provinceName": "Iazethas",
     "type": "City",
     "biome": "Grassland Plains",
     "dangerLevel": "Moderate",
-    "governmentType": "Oligarchy",
+    "governmentType": "Plutocracy",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-varesh-ka",
     "name": "Varesh-Ka",
-    "provinceId": "province-zal-tharuun",
-    "provinceName": "Zal’tharuun",
-    "type": "City",
+    "provinceId": "province-valerune",
+    "provinceName": "Valerune",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
-    "governmentType": "Oligarchy",
+    "governmentType": null,
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-zhurakthel",
     "name": "Zhurak’thel",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Oligarchy",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-vaelzahara",
     "name": "Vaelzahara",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
-    "type": "City",
+    "type": "Township",
     "biome": "Grassland Plains",
     "dangerLevel": "Moderate",
     "governmentType": "Oligarchy",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-amazuul",
     "name": "Amazuul",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "Village",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
     "governmentType": "Oligarchy",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "Village_Grassland_Plains"
+    "immersiveTemplateId": "Village_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zaltharuun-kethmora",
     "name": "Keth’mora",
-    "provinceId": "province-zal-tharuun",
-    "provinceName": "Zal’tharuun",
+    "provinceId": "province-pelvoryn",
+    "provinceName": "Pelvoryn",
     "type": "City",
     "biome": "Grassland Plains",
     "dangerLevel": "Low",
-    "governmentType": "Oligarchy",
+    "governmentType": "Aristocracy",
     "timeZone": "UTC-7",
-    "immersiveTemplateId": "City_Grassland_Plains"
+    "immersiveTemplateId": "City_Grassland_Plains",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zharvokh-karag-thul",
@@ -1905,7 +2221,9 @@
     "dangerLevel": "High",
     "governmentType": "Military Regency",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "Capital_City_Mountain"
+    "immersiveTemplateId": "Capital_City_Mountain",
+    "isCapital": true,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zharvokh-vulkradun",
@@ -1917,7 +2235,9 @@
     "dangerLevel": "High",
     "governmentType": "Military Regency",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zharvokh-tharvokar",
@@ -1929,19 +2249,23 @@
     "dangerLevel": "High",
     "governmentType": "Military Regency",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zharvokh-moltharok",
     "name": "Moltharok",
     "provinceId": "province-zharvokh",
     "provinceName": "Zharvokh",
-    "type": "City",
+    "type": "Township",
     "biome": "Mountain",
     "dangerLevel": "High",
     "governmentType": "Military Regency",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "City_Mountain"
+    "immersiveTemplateId": "City_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   },
   {
     "id": "zharvokh-drakzhul",
@@ -1953,6 +2277,8 @@
     "dangerLevel": "High",
     "governmentType": "Military Regency",
     "timeZone": "UTC-4",
-    "immersiveTemplateId": "Village_Mountain"
+    "immersiveTemplateId": "Village_Mountain",
+    "isCapital": false,
+    "classificationStatus": "REBALANCED_GAME_DESIGN"
   }
 ]

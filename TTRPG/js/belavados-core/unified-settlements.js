@@ -8,7 +8,7 @@ let page='generator';
 const atlasApp=()=>window.BelavadosLivingWorld||null;
 const provinces=()=>atlasApp()?.world?.provinces||window.BELAVADOS_WORLD?.provinces||[];
 const selected=()=>atlasApp()?.ui||{};
-const findProvince=id=>provinces().find(p=>p.id===id||p.name===id);
+const findProvince=id=>window.RuqorakaiProvinceAuthority?.resolveProvince(id)||provinces().find(p=>p.id===id||p.name===id||p.legacyProvinceId===id);
 function context(){const ui=selected();return {page,provinceId:ui.province?.id||null,provinceName:ui.province?.name||null,settlementId:ui.settlement?.id||null,settlementName:ui.settlement?.name||null};}
 function notify(type){try{if(parent!==window&&location.origin!=='null')parent.postMessage({source:'belavados-unified-index',type,context:context()},location.origin)}catch(error){console.warn('TTRPG context bridge unavailable',error)}}
 function refreshPickers(){

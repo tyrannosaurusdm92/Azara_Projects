@@ -31,7 +31,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-elarvess",
@@ -65,7 +65,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-everwake",
@@ -99,14 +99,14 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-faeloryn",
     "province": "Kaelvorrin",
     "settlementName": "Faeloryn",
     "settlementType": "Village",
-    "governmentType": "Participatory Democracy",
+    "governmentType": "Meritocracy",
     "tags": [
       "Grassland Plains",
       "living settlement",
@@ -133,14 +133,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-lunawyn",
     "province": "Vaelmyrith",
     "settlementName": "Lunawyn",
     "settlementType": "Village",
-    "governmentType": "Participatory Democracy",
+    "governmentType": "Noocracy",
     "tags": [
       "Hill Plateau",
       "living settlement",
@@ -167,14 +167,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-mythraelyn",
     "province": "Falthrakar",
     "settlementName": "Mythraelyn",
     "settlementType": "Township",
-    "governmentType": "Participatory Democracy",
+    "governmentType": "Military Regency",
     "tags": [
       "Grassland Plains",
       "living settlement",
@@ -201,7 +201,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-rootmere",
@@ -235,14 +235,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-sylvarielle",
     "province": "Gruddirynn",
     "settlementName": "Sylvarielle",
     "settlementType": "City",
-    "governmentType": "Participatory Democracy",
+    "governmentType": "Council Republic",
     "tags": [
       "Forest",
       "living settlement",
@@ -269,7 +269,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-vaelithorne",
@@ -303,7 +303,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelvanyr-wildbloom",
@@ -337,7 +337,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelwynora-elarithen",
@@ -371,7 +371,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelwynora-ulwyn",
@@ -405,7 +405,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelwynora-wilsara",
@@ -439,7 +439,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "aelwynora-yltharien",
@@ -473,7 +473,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "astraevos-vaelunthir",
@@ -507,7 +507,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "astraevos-mythalora",
@@ -541,7 +541,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "astraevos-aelshoreth",
@@ -575,7 +575,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "astraevos-cyralune",
@@ -609,7 +609,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "astraevos-orithalune",
@@ -643,7 +643,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "astraevos-caelmyros",
@@ -677,7 +677,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "bravelyn-loxvire",
@@ -711,7 +711,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "bravelyn-qasvire",
@@ -745,7 +745,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "bravelyn-qelvandra",
@@ -779,7 +779,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "bravelyn-solvaryn",
@@ -813,7 +813,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "bravelyn-sundervale",
@@ -847,7 +847,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "bravelyn-xelvoryn",
@@ -881,7 +881,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "ceulrithan-gildri",
@@ -915,7 +915,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "ceulrithan-cindrau",
@@ -949,7 +949,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "ceulrithan-turyne",
@@ -983,7 +983,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "ceulrithan-qovei",
@@ -1017,7 +1017,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "ceulrithan-rilvays",
@@ -1051,7 +1051,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "ceulrithan-faelith",
@@ -1085,7 +1085,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "drakmorren-grimvald",
@@ -1119,7 +1119,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "drakmorren-vorakmar",
@@ -1153,7 +1153,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "drakmorren-fenwyrd",
@@ -1187,7 +1187,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "drakmorren-kharrowfen",
@@ -1221,7 +1221,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "drakmorren-morvakar",
@@ -1255,7 +1255,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "earrorim-glattonica",
@@ -1289,7 +1289,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "earrorim-iciarene",
@@ -1323,7 +1323,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "earrorim-wagriolyn",
@@ -1357,7 +1357,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "earrorim-ullunor",
@@ -1391,7 +1391,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "earrorim-obriasos",
@@ -1425,7 +1425,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "earrorim-wrasserah",
@@ -1459,7 +1459,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "el-dravire-riverrealm-lorangriel",
@@ -1493,7 +1493,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "el-dravire-riverrealm-merrinthal",
@@ -1527,7 +1527,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "el-dravire-riverrealm-murethash",
@@ -1561,7 +1561,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "el-dravire-riverrealm-yivanyr",
@@ -1595,7 +1595,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "el-dravire-riverrealm-veloraskkis",
@@ -1629,7 +1629,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "eldermere-sylvanreach",
@@ -1663,7 +1663,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "eldermere-oakenshire",
@@ -1697,7 +1697,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "eldermere-riverbloom",
@@ -1731,7 +1731,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "eldermere-aelgrove",
@@ -1765,7 +1765,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "eldermere-cloverfen",
@@ -1799,14 +1799,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "eldermere-mossvale",
     "province": "Valerune",
     "settlementName": "Mossvale",
     "settlementType": "Village",
-    "governmentType": "Cooperative Commonwealth",
+    "governmentType": null,
     "tags": [
       "Grassland Plains",
       "living settlement",
@@ -1833,7 +1833,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "eldermere-faelmere",
@@ -1867,14 +1867,14 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "eldermere-lunebriar",
     "province": "Pelvoryn",
     "settlementName": "Lunebriar",
     "settlementType": "Township",
-    "governmentType": "Cooperative Commonwealth",
+    "governmentType": "Aristocracy",
     "tags": [
       "Hill Plateau",
       "living settlement",
@@ -1901,7 +1901,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "falthrakar-nellvaris",
@@ -1935,7 +1935,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "falthrakar-brokharn",
@@ -1969,7 +1969,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "falthrakar-gorathkar",
@@ -2003,7 +2003,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "falthrakar-lithvar",
@@ -2037,7 +2037,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "gruddirynn-sleakitika",
@@ -2071,7 +2071,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "gruddirynn-umiotope",
@@ -2105,7 +2105,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "gruddirynn-wrobetopia",
@@ -2139,7 +2139,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "gruddirynn-bleosianys",
@@ -2173,7 +2173,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "iazethas-mostrerah",
@@ -2207,7 +2207,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "iazethas-bleasacia",
@@ -2241,7 +2241,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "iazethas-streccea",
@@ -2275,7 +2275,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "iazethas-leammipa",
@@ -2309,7 +2309,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "jormaelis-mossirueth",
@@ -2331,19 +2331,20 @@
     "biome": "Grassland Plains",
     "size": "Capital City",
     "name": "Mossirueth",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "Capital City",
     "isCapital": true,
     "sourceProvinceId": "province-jormaelis",
-    "originalProvinceId": "province-jor-maelis",
+    "originalProvinceId": "province-jormaelis",
     "originalSourceProvinceId": "province-jormaelis",
     "originalType": "Capital City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-jor-maelis"
   },
   {
     "id": "jormaelis-utchmyrith",
@@ -2365,19 +2366,20 @@
     "biome": "Grassland Plains",
     "size": "Village",
     "name": "Utch’myrith",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "Village",
     "isCapital": false,
     "sourceProvinceId": "province-jormaelis",
-    "originalProvinceId": "province-jor-maelis",
+    "originalProvinceId": "province-jormaelis",
     "originalSourceProvinceId": "province-jormaelis",
     "originalType": "City",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-jor-maelis"
   },
   {
     "id": "jormaelis-yirethaulor",
@@ -2399,19 +2401,20 @@
     "biome": "Grassland Plains",
     "size": "City",
     "name": "Yire’thaulor",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-jormaelis",
-    "originalProvinceId": "province-jor-maelis",
+    "originalProvinceId": "province-jormaelis",
     "originalSourceProvinceId": "province-jormaelis",
     "originalType": "City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-jor-maelis"
   },
   {
     "id": "jormaelis-limioreimn",
@@ -2433,19 +2436,20 @@
     "biome": "Grassland Plains",
     "size": "City",
     "name": "Li’mioreimn",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-jormaelis",
-    "originalProvinceId": "province-jor-maelis",
+    "originalProvinceId": "province-jormaelis",
     "originalSourceProvinceId": "province-jormaelis",
     "originalType": "City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-jor-maelis"
   },
   {
     "id": "jormaelis-rnzeuluun",
@@ -2467,19 +2471,20 @@
     "biome": "Grassland Plains",
     "size": "City",
     "name": "Rnzeuluun",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-jormaelis",
-    "originalProvinceId": "province-jor-maelis",
+    "originalProvinceId": "province-jormaelis",
     "originalSourceProvinceId": "province-jormaelis",
     "originalType": "City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-jor-maelis"
   },
   {
     "id": "jormaelis-ishvoryk",
@@ -2501,19 +2506,20 @@
     "biome": "Grassland Plains",
     "size": "Township",
     "name": "Ish’voryk",
-    "provinceId": "province-jor-maelis",
+    "provinceId": "province-jormaelis",
     "provinceName": "Jor’maelis",
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-jormaelis",
-    "originalProvinceId": "province-jor-maelis",
+    "originalProvinceId": "province-jormaelis",
     "originalSourceProvinceId": "province-jormaelis",
     "originalType": "City",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-jor-maelis"
   },
   {
     "id": "kaelvorrin-dunvyr",
@@ -2547,7 +2553,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kaelvorrin-mistval",
@@ -2581,7 +2587,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kaelvorrin-silverwake",
@@ -2615,7 +2621,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-kharzund",
@@ -2649,14 +2655,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-ironwood",
     "province": "Valerune",
     "settlementName": "Ironwood",
     "settlementType": "Town",
-    "governmentType": "Feudal Compact",
+    "governmentType": null,
     "tags": [
       "Mountain",
       "living settlement",
@@ -2683,14 +2689,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-dorghalun",
     "province": "Kaelvorrin",
     "settlementName": "Dorghalun",
     "settlementType": "City",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Meritocracy",
     "tags": [
       "Mountain",
       "living settlement",
@@ -2717,14 +2723,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-greybriar",
     "province": "Khorvaak",
     "settlementName": "Greybriar",
     "settlementType": "City",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Tribal Confederation",
     "tags": [
       "Mountain",
       "living settlement",
@@ -2751,7 +2757,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-zarveng",
@@ -2785,7 +2791,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-thornbreak",
@@ -2819,14 +2825,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-draskminn",
     "province": "Zharvokh",
     "settlementName": "Draskminn",
     "settlementType": "City",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Military Regency",
     "tags": [
       "Mountain",
       "living settlement",
@@ -2853,7 +2859,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-rivenwild",
@@ -2887,14 +2893,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-lorath",
     "province": "Aelwynora",
     "settlementName": "Lorath",
     "settlementType": "Village",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Consensus Democracy",
     "tags": [
       "Mountain",
       "living settlement",
@@ -2921,7 +2927,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-skarnfell",
@@ -2955,14 +2961,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-bloodmire",
     "province": "Drakmorren",
     "settlementName": "Bloodmire",
     "settlementType": "City",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Oligarchy",
     "tags": [
       "Swamp Marsh",
       "living settlement",
@@ -2989,14 +2995,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-wildsunder",
     "province": "Khorvaak",
     "settlementName": "Wildsunder",
     "settlementType": "Township",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Tribal Confederation",
     "tags": [
       "Mountain",
       "living settlement",
@@ -3023,14 +3029,14 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-pokbith",
     "province": "Virelport",
     "settlementName": "Pokbith",
     "settlementType": "Village",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Merchant Republic",
     "tags": [
       "Mountain",
       "living settlement",
@@ -3057,14 +3063,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-thoyndor",
     "province": "Khorvaak",
     "settlementName": "Thoyndor",
     "settlementType": "Village",
-    "governmentType": "Feudal Compact",
+    "governmentType": "Tribal Confederation",
     "tags": [
       "Mountain",
       "living settlement",
@@ -3091,7 +3097,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "kharvathen-hethsther",
@@ -3125,7 +3131,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "khorvaak-vorathun",
@@ -3159,7 +3165,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "khorvaak-khazovar",
@@ -3193,7 +3199,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "luntharave-auralisthra",
@@ -3215,19 +3221,20 @@
     "biome": "Hill Plateau",
     "size": "Capital City",
     "name": "Auralisthra",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "Capital City",
     "isCapital": true,
     "sourceProvinceId": "province-luntharave",
-    "originalProvinceId": "province-lun-tharav",
+    "originalProvinceId": "province-luntharave",
     "originalSourceProvinceId": "province-luntharave",
     "originalType": "Capital City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-lun-tharav"
   },
   {
     "id": "luntharave-seralun",
@@ -3249,19 +3256,20 @@
     "biome": "Hill Plateau",
     "size": "Township",
     "name": "Seralun",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-luntharave",
-    "originalProvinceId": "province-lun-tharav",
+    "originalProvinceId": "province-luntharave",
     "originalSourceProvinceId": "province-luntharave",
     "originalType": "Town",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-lun-tharav"
   },
   {
     "id": "luntharave-vireluna",
@@ -3283,19 +3291,20 @@
     "biome": "Hill Plateau",
     "size": "Town",
     "name": "Vireluna",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "Town",
     "isCapital": false,
     "sourceProvinceId": "province-luntharave",
-    "originalProvinceId": "province-lun-tharav",
+    "originalProvinceId": "province-luntharave",
     "originalSourceProvinceId": "province-luntharave",
     "originalType": "Town",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-lun-tharav"
   },
   {
     "id": "luntharave-sylmaris",
@@ -3317,19 +3326,20 @@
     "biome": "Hill Plateau",
     "size": "Township",
     "name": "Sylmaris",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-luntharave",
-    "originalProvinceId": "province-lun-tharav",
+    "originalProvinceId": "province-luntharave",
     "originalSourceProvinceId": "province-luntharave",
     "originalType": "Village",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-lun-tharav"
   },
   {
     "id": "luntharave-neruvea",
@@ -3351,19 +3361,20 @@
     "biome": "Hill Plateau",
     "size": "Village",
     "name": "Neruvéa",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "Village",
     "isCapital": false,
     "sourceProvinceId": "province-luntharave",
-    "originalProvinceId": "province-lun-tharav",
+    "originalProvinceId": "province-luntharave",
     "originalSourceProvinceId": "province-luntharave",
     "originalType": "Village",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-lun-tharav"
   },
   {
     "id": "marrowynd-stormharrow",
@@ -3397,7 +3408,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "marrowynd-blacktide-reach",
@@ -3431,14 +3442,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "marrowynd-thalmerrow",
     "province": "Falthrakar",
     "settlementName": "Thalmerrow",
     "settlementType": "City",
-    "governmentType": "Pirate Compact",
+    "governmentType": "Military Regency",
     "tags": [
       "Surface Docks Coastal",
       "living settlement",
@@ -3465,7 +3476,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "marrowynd-seawynd-hollow",
@@ -3499,7 +3510,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "marrowynd-myrkwake",
@@ -3533,7 +3544,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "marrowynd-vaelshore",
@@ -3567,14 +3578,14 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "marrowynd-cindervale-coast",
     "province": "Valerune",
     "settlementName": "Cindervale Coast",
     "settlementType": "Capital City",
-    "governmentType": "Pirate Compact",
+    "governmentType": null,
     "tags": [
       "Grassland Plains",
       "living settlement",
@@ -3601,7 +3612,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "marrowynd-kharrowport",
@@ -3635,7 +3646,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "nalvessir-greenmire",
@@ -3669,7 +3680,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "nalvessir-porthelis",
@@ -3703,14 +3714,14 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "nalvessir-briarwater",
     "province": "Vuelmora",
     "settlementName": "Briarwater",
     "settlementType": "City",
-    "governmentType": "Parliamentary Marsh Council",
+    "governmentType": "Council Republic",
     "tags": [
       "Swamp Marsh",
       "living settlement",
@@ -3737,7 +3748,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "nalvessir-bentharys",
@@ -3771,7 +3782,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "nalvessir-palevanna",
@@ -3805,14 +3816,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "nalvessir-balmire",
     "province": "Gruddirynn",
     "settlementName": "Balmire",
     "settlementType": "Village",
-    "governmentType": "Parliamentary Marsh Council",
+    "governmentType": "Council Republic",
     "tags": [
       "Swamp Marsh",
       "living settlement",
@@ -3839,7 +3850,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "nalvessir-frostfen",
@@ -3873,7 +3884,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "nalvessir-pellavess",
@@ -3907,7 +3918,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "pelvoryn-belynthar",
@@ -3941,7 +3952,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "pelvoryn-gavaryn",
@@ -3975,7 +3986,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "pelvoryn-lysvire",
@@ -4009,7 +4020,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "pelvoryn-fensylth",
@@ -4043,7 +4054,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "sylvaveryn-vaelthyros",
@@ -4065,19 +4076,20 @@
     "biome": "Forest",
     "size": "Capital City",
     "name": "Vaelthyros",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "Capital City",
     "isCapital": true,
     "sourceProvinceId": "province-sylvaveryn",
-    "originalProvinceId": "province-sylvav-ryn",
+    "originalProvinceId": "province-sylvaveryn",
     "originalSourceProvinceId": "province-sylvaveryn",
     "originalType": "Capital City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-sylvav-ryn"
   },
   {
     "id": "sylvaveryn-elaravosk",
@@ -4099,19 +4111,20 @@
     "biome": "Forest",
     "size": "City",
     "name": "Elaravosk",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-sylvaveryn",
-    "originalProvinceId": "province-sylvav-ryn",
+    "originalProvinceId": "province-sylvaveryn",
     "originalSourceProvinceId": "province-sylvaveryn",
     "originalType": "City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-sylvav-ryn"
   },
   {
     "id": "sylvaveryn-myrvaelun",
@@ -4133,26 +4146,27 @@
     "biome": "Forest",
     "size": "City",
     "name": "Myrvaelûn",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-sylvaveryn",
-    "originalProvinceId": "province-sylvav-ryn",
+    "originalProvinceId": "province-sylvaveryn",
     "originalSourceProvinceId": "province-sylvaveryn",
     "originalType": "City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-sylvav-ryn"
   },
   {
     "id": "sylvaveryn-sylthados",
     "province": "Lun’tharavé",
     "settlementName": "Sylthadös",
     "settlementType": "City",
-    "governmentType": "Theocracy",
+    "governmentType": "Diarchy",
     "tags": [
       "Forest",
       "living settlement",
@@ -4167,19 +4181,20 @@
     "biome": "Forest",
     "size": "City",
     "name": "Sylthadös",
-    "provinceId": "province-lun-tharav",
+    "provinceId": "province-luntharave",
     "provinceName": "Lun’tharavé",
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-luntharave",
-    "originalProvinceId": "province-sylvav-ryn",
+    "originalProvinceId": "province-sylvaveryn",
     "originalSourceProvinceId": "province-sylvaveryn",
     "originalType": "City",
     "relocated": true,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-lun-tharav"
   },
   {
     "id": "sylvaveryn-thalavaryn",
@@ -4201,19 +4216,20 @@
     "biome": "Surface Docks Coastal",
     "size": "Township",
     "name": "Thalavaryn",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-sylvaveryn",
-    "originalProvinceId": "province-sylvav-ryn",
+    "originalProvinceId": "province-sylvaveryn",
     "originalSourceProvinceId": "province-sylvaveryn",
     "originalType": "City",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-sylvav-ryn"
   },
   {
     "id": "sylvaveryn-vaerundell",
@@ -4235,19 +4251,20 @@
     "biome": "Forest",
     "size": "Village",
     "name": "Vaerundell",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "Village",
     "isCapital": false,
     "sourceProvinceId": "province-sylvaveryn",
-    "originalProvinceId": "province-sylvav-ryn",
+    "originalProvinceId": "province-sylvaveryn",
     "originalSourceProvinceId": "province-sylvaveryn",
     "originalType": "City",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-sylvav-ryn"
   },
   {
     "id": "sylvaveryn-lethyrvos",
@@ -4269,26 +4286,27 @@
     "biome": "Forest",
     "size": "Township",
     "name": "Lethyrvos",
-    "provinceId": "province-sylvav-ryn",
+    "provinceId": "province-sylvaveryn",
     "provinceName": "Sylvavéryn",
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-sylvaveryn",
-    "originalProvinceId": "province-sylvav-ryn",
+    "originalProvinceId": "province-sylvaveryn",
     "originalSourceProvinceId": "province-sylvaveryn",
     "originalType": "City",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-sylvav-ryn"
   },
   {
     "id": "sylvaveryn-aelmyrwald",
     "province": "Iazethas",
     "settlementName": "Aelmyrwald",
     "settlementType": "Township",
-    "governmentType": "Theocracy",
+    "governmentType": "Plutocracy",
     "tags": [
       "Forest",
       "living settlement",
@@ -4308,14 +4326,14 @@
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-iazethas",
-    "originalProvinceId": "province-sylvav-ryn",
+    "originalProvinceId": "province-sylvaveryn",
     "originalSourceProvinceId": "province-sylvaveryn",
     "originalType": "City",
     "relocated": true,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-skulltide-expanse",
@@ -4349,7 +4367,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-leviamor",
@@ -4383,14 +4401,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-ocevaruun",
     "province": "El'dravire Riverrealm",
     "settlementName": "Ocevaruun",
     "settlementType": "City",
-    "governmentType": "Maritime Regency",
+    "governmentType": "Parliamentary Democracy",
     "tags": [
       "Surface Docks Coastal",
       "living settlement",
@@ -4417,7 +4435,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-blackwake-isles",
@@ -4451,7 +4469,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-thalkazuun",
@@ -4485,14 +4503,14 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-dreadcurrent",
     "province": "Aelwynora",
     "settlementName": "Dreadcurrent",
     "settlementType": "City",
-    "governmentType": "Maritime Regency",
+    "governmentType": "Consensus Democracy",
     "tags": [
       "Surface Docks Coastal",
       "living settlement",
@@ -4519,7 +4537,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-vorthalass",
@@ -4553,7 +4571,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-abyrros",
@@ -4587,14 +4605,14 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "thalryss-grimwater-reach",
     "province": "Valerune",
     "settlementName": "Grimwater Reach",
     "settlementType": "City",
-    "governmentType": "Maritime Regency",
+    "governmentType": null,
     "tags": [
       "Surface Docks Coastal",
       "living settlement",
@@ -4621,7 +4639,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vaelmyrith-eldryssar",
@@ -4655,7 +4673,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vaelmyrith-lunethryl",
@@ -4689,7 +4707,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vaelmyrith-velkynwood",
@@ -4723,7 +4741,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vaelmyrith-whispergrove",
@@ -4757,7 +4775,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "virelport-bronzewake",
@@ -4791,7 +4809,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "virelport-veilstrand",
@@ -4825,7 +4843,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "virelport-straithaven",
@@ -4859,7 +4877,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "virelport-stormgullet",
@@ -4893,7 +4911,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vuelmora-hyselva",
@@ -4927,7 +4945,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vuelmora-oelnoreu",
@@ -4961,7 +4979,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vuelmora-mornelya",
@@ -4995,7 +5013,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vuelmora-ithmora",
@@ -5029,7 +5047,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "vuelmora-glysera",
@@ -5063,7 +5081,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "zaltharuun-sszaruun",
@@ -5085,19 +5103,20 @@
     "biome": "Grassland Plains",
     "size": "Capital City",
     "name": "Sszaruun",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "Capital City",
     "isCapital": true,
     "sourceProvinceId": "province-zaltharuun",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "Capital City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-zal-tharuun"
   },
   {
     "id": "zaltharuun-thalzuroth",
@@ -5119,19 +5138,20 @@
     "biome": "Surface Docks Coastal",
     "size": "City",
     "name": "Thal’zuroth",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-zaltharuun",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "City",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-zal-tharuun"
   },
   {
     "id": "zaltharuun-xalvoroq",
@@ -5153,26 +5173,27 @@
     "biome": "Grassland Plains",
     "size": "Township",
     "name": "Xal’voroq",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-zaltharuun",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "City",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-zal-tharuun"
   },
   {
     "id": "zaltharuun-ithkazuun",
     "province": "Iazethas",
     "settlementName": "Ithkazuun",
     "settlementType": "City",
-    "governmentType": "Oligarchy",
+    "governmentType": "Plutocracy",
     "tags": [
       "Grassland Plains",
       "living settlement",
@@ -5192,21 +5213,21 @@
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-iazethas",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "City",
     "relocated": true,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "zaltharuun-varesh-ka",
     "province": "Valerune",
     "settlementName": "Varesh-Ka",
     "settlementType": "Township",
-    "governmentType": "Oligarchy",
+    "governmentType": null,
     "tags": [
       "Grassland Plains",
       "living settlement",
@@ -5226,14 +5247,14 @@
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-valerune",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "City",
     "relocated": true,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "zaltharuun-zhurakthel",
@@ -5255,19 +5276,20 @@
     "biome": "Grassland Plains",
     "size": "Township",
     "name": "Zhurak’thel",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-zaltharuun",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "City",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-zal-tharuun"
   },
   {
     "id": "zaltharuun-vaelzahara",
@@ -5289,19 +5311,20 @@
     "biome": "Grassland Plains",
     "size": "Township",
     "name": "Vaelzahara",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "Township",
     "isCapital": false,
     "sourceProvinceId": "province-zaltharuun",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "City",
     "relocated": false,
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-zal-tharuun"
   },
   {
     "id": "zaltharuun-amazuul",
@@ -5323,26 +5346,27 @@
     "biome": "Grassland Plains",
     "size": "Village",
     "name": "Amazuul",
-    "provinceId": "province-zal-tharuun",
+    "provinceId": "province-zaltharuun",
     "provinceName": "Zal’tharuun",
     "type": "Village",
     "isCapital": false,
     "sourceProvinceId": "province-zaltharuun",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "Village",
     "relocated": false,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
+    "legacyProvinceId": "province-zal-tharuun"
   },
   {
     "id": "zaltharuun-kethmora",
     "province": "Pelvoryn",
     "settlementName": "Keth’mora",
     "settlementType": "City",
-    "governmentType": "Oligarchy",
+    "governmentType": "Aristocracy",
     "tags": [
       "Grassland Plains",
       "living settlement",
@@ -5362,14 +5386,14 @@
     "type": "City",
     "isCapital": false,
     "sourceProvinceId": "province-pelvoryn",
-    "originalProvinceId": "province-zal-tharuun",
+    "originalProvinceId": "province-zaltharuun",
     "originalSourceProvinceId": "province-zaltharuun",
     "originalType": "City",
     "relocated": true,
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "zharvokh-karag-thul",
@@ -5403,7 +5427,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "zharvokh-vulkradun",
@@ -5437,7 +5461,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "zharvokh-tharvokar",
@@ -5471,7 +5495,7 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "zharvokh-moltharok",
@@ -5505,7 +5529,7 @@
     "reclassified": true,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "REBALANCED_GAME_DESIGN",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   },
   {
     "id": "zharvokh-drakzhul",
@@ -5539,6 +5563,6 @@
     "reclassified": false,
     "classificationStatus": "REBALANCED_GAME_DESIGN",
     "designationStatus": "UNCHANGED_FROM_SOURCE",
-    "sourceAuthority": "Rise of Ruqorakai rebalanced character sheet"
+    "sourceAuthority": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html"
   }
 ]

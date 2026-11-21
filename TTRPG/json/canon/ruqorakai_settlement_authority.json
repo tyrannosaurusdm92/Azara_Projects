@@ -2,7 +2,13 @@
   "source": "Rise of Ruqorakai Design Foundation (3), world_reference_index.json",
   "indexStatus": "SOURCE_NAMES_REASSIGNED_AND_RECLASSIFIED_BY_USER_REQUEST",
   "sourceFile": "Rise_of_Ruqorakai_Character_Sheet_Rebalanced_Settlements(1).html",
-  "provenance": "Author-approved Rise of Ruqorakai reassignment; original source coordinates and IDs preserved separately.",
+  "provenance": "User-provided character sheet governs all province IDs, settlements, types and capitals; existing map IDs are compatibility aliases.",
+  "provinceIdAliases": {
+    "province-jor-maelis": "province-jormaelis",
+    "province-lun-tharav": "province-luntharave",
+    "province-sylvav-ryn": "province-sylvaveryn",
+    "province-zal-tharuun": "province-zaltharuun"
+  },
   "provinces": [
     {
       "id": "province-aelvanyr",
@@ -12,8 +18,7 @@
       "capitalName": "Drakesylva",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-aelvanyr"
+      "townAvailable": true
     },
     {
       "id": "province-aelwynora",
@@ -23,8 +28,7 @@
       "capitalName": "Elarithen",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-aelwynora"
+      "townAvailable": true
     },
     {
       "id": "province-astraevos",
@@ -34,8 +38,7 @@
       "capitalName": "Vaelunthir",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": false,
-      "sourceProvinceId": "province-astraevos"
+      "townAvailable": false
     },
     {
       "id": "province-bravelyn",
@@ -45,8 +48,7 @@
       "capitalName": "Loxvire",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-bravelyn"
+      "townAvailable": true
     },
     {
       "id": "province-ceulrithan",
@@ -56,8 +58,7 @@
       "capitalName": "Gildri",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-ceulrithan"
+      "townAvailable": true
     },
     {
       "id": "province-drakmorren",
@@ -67,8 +68,7 @@
       "capitalName": "Grimvald",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-drakmorren"
+      "townAvailable": true
     },
     {
       "id": "province-earrorim",
@@ -78,8 +78,7 @@
       "capitalName": "Glattonica",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-earrorim"
+      "townAvailable": true
     },
     {
       "id": "province-el-dravire-riverrealm",
@@ -89,8 +88,7 @@
       "capitalName": "Lorangriel",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": false,
-      "sourceProvinceId": "province-el-dravire-riverrealm"
+      "townAvailable": false
     },
     {
       "id": "province-eldermere",
@@ -100,8 +98,7 @@
       "capitalName": "Sylvanreach",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": false,
-      "sourceProvinceId": "province-eldermere"
+      "townAvailable": false
     },
     {
       "id": "province-falthrakar",
@@ -111,8 +108,7 @@
       "capitalName": "Nellvaris",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-falthrakar"
+      "townAvailable": true
     },
     {
       "id": "province-gruddirynn",
@@ -122,8 +118,7 @@
       "capitalName": "Sleakitika",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-gruddirynn"
+      "townAvailable": true
     },
     {
       "id": "province-iazethas",
@@ -133,11 +128,10 @@
       "capitalName": "Mostrerah",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-iazethas"
+      "townAvailable": true
     },
     {
-      "id": "province-jor-maelis",
+      "id": "province-jormaelis",
       "name": "Jor’maelis",
       "government": "Protectorate",
       "capitalSettlementId": "jormaelis-mossirueth",
@@ -145,7 +139,7 @@
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
       "townAvailable": false,
-      "sourceProvinceId": "province-jormaelis"
+      "legacyProvinceId": "province-jor-maelis"
     },
     {
       "id": "province-kaelvorrin",
@@ -155,8 +149,7 @@
       "capitalName": "Dunvyr",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 5,
-      "townAvailable": true,
-      "sourceProvinceId": "province-kaelvorrin"
+      "townAvailable": true
     },
     {
       "id": "province-kharvathen",
@@ -166,8 +159,7 @@
       "capitalName": "Kharzund",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": false,
-      "sourceProvinceId": "province-kharvathen"
+      "townAvailable": false
     },
     {
       "id": "province-khorvaak",
@@ -177,11 +169,10 @@
       "capitalName": "Vorathûn",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 5,
-      "townAvailable": true,
-      "sourceProvinceId": "province-khorvaak"
+      "townAvailable": true
     },
     {
-      "id": "province-lun-tharav",
+      "id": "province-luntharave",
       "name": "Lun’tharavé",
       "government": "Diarchy",
       "capitalSettlementId": "luntharave-auralisthra",
@@ -189,7 +180,7 @@
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
       "townAvailable": true,
-      "sourceProvinceId": "province-luntharave"
+      "legacyProvinceId": "province-lun-tharav"
     },
     {
       "id": "province-marrowynd",
@@ -199,8 +190,7 @@
       "capitalName": "Stormharrow",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": false,
-      "sourceProvinceId": "province-marrowynd"
+      "townAvailable": false
     },
     {
       "id": "province-nalvessir",
@@ -210,8 +200,7 @@
       "capitalName": "Greenmire",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": false,
-      "sourceProvinceId": "province-nalvessir"
+      "townAvailable": false
     },
     {
       "id": "province-pelvoryn",
@@ -221,11 +210,10 @@
       "capitalName": "Belynthar",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-pelvoryn"
+      "townAvailable": true
     },
     {
-      "id": "province-sylvav-ryn",
+      "id": "province-sylvaveryn",
       "name": "Sylvavéryn",
       "government": "Theocracy",
       "capitalSettlementId": "sylvaveryn-vaelthyros",
@@ -233,7 +221,7 @@
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
       "townAvailable": false,
-      "sourceProvinceId": "province-sylvaveryn"
+      "legacyProvinceId": "province-sylvav-ryn"
     },
     {
       "id": "province-thalryss",
@@ -243,8 +231,7 @@
       "capitalName": "Skulltide Expanse",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-thalryss"
+      "townAvailable": true
     },
     {
       "id": "province-vaelmyrith",
@@ -254,8 +241,7 @@
       "capitalName": "Eldryssar",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 5,
-      "townAvailable": false,
-      "sourceProvinceId": "province-vaelmyrith"
+      "townAvailable": false
     },
     {
       "id": "province-valerune",
@@ -265,8 +251,7 @@
       "capitalName": "Cindervale Coast",
       "capitalDesignationStatus": "GAME_DESIGN_PROMOTED_EXISTING_SETTLEMENT",
       "settlementCount": 5,
-      "townAvailable": true,
-      "sourceProvinceId": "province-valerune"
+      "townAvailable": true
     },
     {
       "id": "province-virelport",
@@ -276,8 +261,7 @@
       "capitalName": "Bronzewake",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 5,
-      "townAvailable": false,
-      "sourceProvinceId": "province-virelport"
+      "townAvailable": false
     },
     {
       "id": "province-vuelmora",
@@ -287,11 +271,10 @@
       "capitalName": "Hyselva",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": true,
-      "sourceProvinceId": "province-vuelmora"
+      "townAvailable": true
     },
     {
-      "id": "province-zal-tharuun",
+      "id": "province-zaltharuun",
       "name": "Zal’tharuun",
       "government": "Oligarchy",
       "capitalSettlementId": "zaltharuun-sszaruun",
@@ -299,7 +282,7 @@
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
       "townAvailable": false,
-      "sourceProvinceId": "province-zaltharuun"
+      "legacyProvinceId": "province-zal-tharuun"
     },
     {
       "id": "province-zharvokh",
@@ -309,8 +292,7 @@
       "capitalName": "Karag-Thûl",
       "capitalDesignationStatus": "ORIGINAL_SOURCE_INDEX",
       "settlementCount": 6,
-      "townAvailable": false,
-      "sourceProvinceId": "province-zharvokh"
+      "townAvailable": false
     }
   ],
   "settlements": [
@@ -325,9 +307,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-aelvanyr",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "aelvanyr-elarvess",
@@ -340,9 +320,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-aelvanyr",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "aelvanyr-everwake",
@@ -355,9 +333,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-aelvanyr",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "aelvanyr-faeloryn",
@@ -370,9 +346,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-kaelvorrin",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "aelvanyr-lunawyn",
@@ -385,9 +359,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-vaelmyrith",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "aelvanyr-mythraelyn",
@@ -400,9 +372,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-falthrakar",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "aelvanyr-rootmere",
@@ -415,9 +385,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-aelvanyr",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "aelvanyr-sylvarielle",
@@ -430,9 +398,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-gruddirynn",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "aelvanyr-vaelithorne",
@@ -445,9 +411,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-aelvanyr",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "aelvanyr-wildbloom",
@@ -460,9 +424,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-aelvanyr",
-      "originalSourceProvinceId": "province-aelvanyr"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "aelwynora-elarithen",
@@ -475,9 +437,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-aelwynora",
-      "originalSourceProvinceId": "province-aelwynora"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "aelwynora-ulwyn",
@@ -490,9 +450,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-aelwynora",
-      "originalSourceProvinceId": "province-aelwynora"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "aelwynora-wilsara",
@@ -505,9 +463,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-aelwynora",
-      "originalSourceProvinceId": "province-aelwynora"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "aelwynora-yltharien",
@@ -520,9 +476,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-aelwynora",
-      "originalSourceProvinceId": "province-aelwynora"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "astraevos-vaelunthir",
@@ -535,9 +489,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-astraevos",
-      "originalSourceProvinceId": "province-astraevos"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "astraevos-mythalora",
@@ -550,9 +502,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-astraevos",
-      "originalSourceProvinceId": "province-astraevos"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "astraevos-aelshoreth",
@@ -565,9 +515,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-astraevos",
-      "originalSourceProvinceId": "province-astraevos"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "astraevos-cyralune",
@@ -580,9 +528,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-astraevos",
-      "originalSourceProvinceId": "province-astraevos"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "astraevos-orithalune",
@@ -595,9 +541,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-astraevos",
-      "originalSourceProvinceId": "province-astraevos"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "astraevos-caelmyros",
@@ -610,9 +554,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-astraevos",
-      "originalSourceProvinceId": "province-astraevos"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "bravelyn-loxvire",
@@ -625,9 +567,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-bravelyn",
-      "originalSourceProvinceId": "province-bravelyn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "bravelyn-qasvire",
@@ -640,9 +580,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-bravelyn",
-      "originalSourceProvinceId": "province-bravelyn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "bravelyn-qelvandra",
@@ -655,9 +593,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-bravelyn",
-      "originalSourceProvinceId": "province-bravelyn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "bravelyn-solvaryn",
@@ -670,9 +606,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-bravelyn",
-      "originalSourceProvinceId": "province-bravelyn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "bravelyn-sundervale",
@@ -685,9 +619,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-bravelyn",
-      "originalSourceProvinceId": "province-bravelyn"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "bravelyn-xelvoryn",
@@ -700,9 +632,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-bravelyn",
-      "originalSourceProvinceId": "province-bravelyn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "ceulrithan-gildri",
@@ -715,9 +645,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-ceulrithan",
-      "originalSourceProvinceId": "province-ceulrithan"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "ceulrithan-cindrau",
@@ -730,9 +658,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-ceulrithan",
-      "originalSourceProvinceId": "province-ceulrithan"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "ceulrithan-turyne",
@@ -745,9 +671,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-ceulrithan",
-      "originalSourceProvinceId": "province-ceulrithan"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "ceulrithan-qovei",
@@ -760,9 +684,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-ceulrithan",
-      "originalSourceProvinceId": "province-ceulrithan"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "ceulrithan-rilvays",
@@ -775,9 +697,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-ceulrithan",
-      "originalSourceProvinceId": "province-ceulrithan"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "ceulrithan-faelith",
@@ -790,9 +710,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-ceulrithan",
-      "originalSourceProvinceId": "province-ceulrithan"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "drakmorren-grimvald",
@@ -805,9 +723,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-drakmorren",
-      "originalSourceProvinceId": "province-drakmorren"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "drakmorren-vorakmar",
@@ -820,9 +736,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-drakmorren",
-      "originalSourceProvinceId": "province-drakmorren"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "drakmorren-fenwyrd",
@@ -835,9 +749,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-drakmorren",
-      "originalSourceProvinceId": "province-drakmorren"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "drakmorren-kharrowfen",
@@ -850,9 +762,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-drakmorren",
-      "originalSourceProvinceId": "province-drakmorren"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "drakmorren-morvakar",
@@ -865,9 +775,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-drakmorren",
-      "originalSourceProvinceId": "province-drakmorren"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "earrorim-glattonica",
@@ -880,9 +788,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-earrorim",
-      "originalSourceProvinceId": "province-earrorim"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "earrorim-iciarene",
@@ -895,9 +801,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-earrorim",
-      "originalSourceProvinceId": "province-earrorim"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "earrorim-wagriolyn",
@@ -910,9 +814,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-earrorim",
-      "originalSourceProvinceId": "province-earrorim"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "earrorim-ullunor",
@@ -925,9 +827,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-earrorim",
-      "originalSourceProvinceId": "province-earrorim"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "earrorim-obriasos",
@@ -940,9 +840,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-earrorim",
-      "originalSourceProvinceId": "province-earrorim"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "earrorim-wrasserah",
@@ -955,9 +853,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-earrorim",
-      "originalSourceProvinceId": "province-earrorim"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "el-dravire-riverrealm-lorangriel",
@@ -970,9 +866,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-el-dravire-riverrealm",
-      "originalSourceProvinceId": "province-el-dravire-riverrealm"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "el-dravire-riverrealm-merrinthal",
@@ -985,9 +879,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-el-dravire-riverrealm",
-      "originalSourceProvinceId": "province-el-dravire-riverrealm"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "el-dravire-riverrealm-murethash",
@@ -1000,9 +892,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-el-dravire-riverrealm",
-      "originalSourceProvinceId": "province-el-dravire-riverrealm"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "el-dravire-riverrealm-yivanyr",
@@ -1015,9 +905,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-el-dravire-riverrealm",
-      "originalSourceProvinceId": "province-el-dravire-riverrealm"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "el-dravire-riverrealm-veloraskkis",
@@ -1030,9 +918,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-el-dravire-riverrealm",
-      "originalSourceProvinceId": "province-el-dravire-riverrealm"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "eldermere-sylvanreach",
@@ -1045,9 +931,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-eldermere",
-      "originalSourceProvinceId": "province-eldermere"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "eldermere-oakenshire",
@@ -1060,9 +944,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-eldermere",
-      "originalSourceProvinceId": "province-eldermere"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "eldermere-riverbloom",
@@ -1075,9 +957,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-eldermere",
-      "originalSourceProvinceId": "province-eldermere"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "eldermere-aelgrove",
@@ -1090,9 +970,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-eldermere",
-      "originalSourceProvinceId": "province-eldermere"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "eldermere-cloverfen",
@@ -1105,9 +983,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-eldermere",
-      "originalSourceProvinceId": "province-eldermere"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "eldermere-mossvale",
@@ -1120,9 +996,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-valerune",
-      "originalSourceProvinceId": "province-eldermere"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "eldermere-faelmere",
@@ -1135,9 +1009,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-eldermere",
-      "originalSourceProvinceId": "province-eldermere"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "eldermere-lunebriar",
@@ -1150,9 +1022,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-pelvoryn",
-      "originalSourceProvinceId": "province-eldermere"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "falthrakar-nellvaris",
@@ -1165,9 +1035,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-falthrakar",
-      "originalSourceProvinceId": "province-falthrakar"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "falthrakar-brokharn",
@@ -1180,9 +1048,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-falthrakar",
-      "originalSourceProvinceId": "province-falthrakar"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "falthrakar-gorathkar",
@@ -1195,9 +1061,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-falthrakar",
-      "originalSourceProvinceId": "province-falthrakar"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "falthrakar-lithvar",
@@ -1210,9 +1074,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-falthrakar",
-      "originalSourceProvinceId": "province-falthrakar"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "gruddirynn-sleakitika",
@@ -1225,9 +1087,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-gruddirynn",
-      "originalSourceProvinceId": "province-gruddirynn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "gruddirynn-umiotope",
@@ -1240,9 +1100,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-gruddirynn",
-      "originalSourceProvinceId": "province-gruddirynn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "gruddirynn-wrobetopia",
@@ -1255,9 +1113,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-gruddirynn",
-      "originalSourceProvinceId": "province-gruddirynn"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "gruddirynn-bleosianys",
@@ -1270,9 +1126,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-gruddirynn",
-      "originalSourceProvinceId": "province-gruddirynn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "iazethas-mostrerah",
@@ -1285,9 +1139,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-iazethas",
-      "originalSourceProvinceId": "province-iazethas"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "iazethas-bleasacia",
@@ -1300,9 +1152,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-iazethas",
-      "originalSourceProvinceId": "province-iazethas"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "iazethas-streccea",
@@ -1315,9 +1165,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-iazethas",
-      "originalSourceProvinceId": "province-iazethas"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "iazethas-leammipa",
@@ -1330,99 +1178,85 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-iazethas",
-      "originalSourceProvinceId": "province-iazethas"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "jormaelis-mossirueth",
-      "provinceId": "province-jor-maelis",
+      "provinceId": "province-jormaelis",
       "name": "Mossirueth",
       "type": "Capital City",
-      "originalProvinceId": "province-jor-maelis",
+      "originalProvinceId": "province-jormaelis",
       "originalType": "Capital City",
       "isCapital": true,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-jormaelis",
-      "originalSourceProvinceId": "province-jormaelis"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "jormaelis-utchmyrith",
-      "provinceId": "province-jor-maelis",
+      "provinceId": "province-jormaelis",
       "name": "Utch’myrith",
       "type": "Village",
-      "originalProvinceId": "province-jor-maelis",
+      "originalProvinceId": "province-jormaelis",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-jormaelis",
-      "originalSourceProvinceId": "province-jormaelis"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "jormaelis-yirethaulor",
-      "provinceId": "province-jor-maelis",
+      "provinceId": "province-jormaelis",
       "name": "Yire’thaulor",
       "type": "City",
-      "originalProvinceId": "province-jor-maelis",
+      "originalProvinceId": "province-jormaelis",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-jormaelis",
-      "originalSourceProvinceId": "province-jormaelis"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "jormaelis-limioreimn",
-      "provinceId": "province-jor-maelis",
+      "provinceId": "province-jormaelis",
       "name": "Li’mioreimn",
       "type": "City",
-      "originalProvinceId": "province-jor-maelis",
+      "originalProvinceId": "province-jormaelis",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-jormaelis",
-      "originalSourceProvinceId": "province-jormaelis"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "jormaelis-rnzeuluun",
-      "provinceId": "province-jor-maelis",
+      "provinceId": "province-jormaelis",
       "name": "Rnzeuluun",
       "type": "City",
-      "originalProvinceId": "province-jor-maelis",
+      "originalProvinceId": "province-jormaelis",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-jormaelis",
-      "originalSourceProvinceId": "province-jormaelis"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "jormaelis-ishvoryk",
-      "provinceId": "province-jor-maelis",
+      "provinceId": "province-jormaelis",
       "name": "Ish’voryk",
       "type": "Township",
-      "originalProvinceId": "province-jor-maelis",
+      "originalProvinceId": "province-jormaelis",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-jormaelis",
-      "originalSourceProvinceId": "province-jormaelis"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kaelvorrin-dunvyr",
@@ -1435,9 +1269,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-kaelvorrin",
-      "originalSourceProvinceId": "province-kaelvorrin"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "kaelvorrin-mistval",
@@ -1450,9 +1282,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-kaelvorrin",
-      "originalSourceProvinceId": "province-kaelvorrin"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "kaelvorrin-silverwake",
@@ -1465,9 +1295,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-kaelvorrin",
-      "originalSourceProvinceId": "province-kaelvorrin"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-kharzund",
@@ -1480,9 +1308,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-kharvathen",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "kharvathen-ironwood",
@@ -1495,9 +1321,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-valerune",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-dorghalun",
@@ -1510,9 +1334,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-kaelvorrin",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-greybriar",
@@ -1525,9 +1347,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-khorvaak",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-zarveng",
@@ -1540,9 +1360,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-kharvathen",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "kharvathen-thornbreak",
@@ -1555,9 +1373,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-kharvathen",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "kharvathen-draskminn",
@@ -1570,9 +1386,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-zharvokh",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-rivenwild",
@@ -1585,9 +1399,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-kharvathen",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "kharvathen-lorath",
@@ -1600,9 +1412,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-aelwynora",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-skarnfell",
@@ -1615,9 +1425,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-kharvathen",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "kharvathen-bloodmire",
@@ -1630,9 +1438,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-drakmorren",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-wildsunder",
@@ -1645,9 +1451,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-khorvaak",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-pokbith",
@@ -1660,9 +1464,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-virelport",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-thoyndor",
@@ -1675,9 +1477,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-khorvaak",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "kharvathen-hethsther",
@@ -1690,9 +1490,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-kharvathen",
-      "originalSourceProvinceId": "province-kharvathen"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "khorvaak-vorathun",
@@ -1705,9 +1503,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-khorvaak",
-      "originalSourceProvinceId": "province-khorvaak"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "khorvaak-khazovar",
@@ -1720,84 +1516,72 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-khorvaak",
-      "originalSourceProvinceId": "province-khorvaak"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "luntharave-auralisthra",
-      "provinceId": "province-lun-tharav",
+      "provinceId": "province-luntharave",
       "name": "Auralisthra",
       "type": "Capital City",
-      "originalProvinceId": "province-lun-tharav",
+      "originalProvinceId": "province-luntharave",
       "originalType": "Capital City",
       "isCapital": true,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-luntharave",
-      "originalSourceProvinceId": "province-luntharave"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "luntharave-seralun",
-      "provinceId": "province-lun-tharav",
+      "provinceId": "province-luntharave",
       "name": "Seralun",
       "type": "Township",
-      "originalProvinceId": "province-lun-tharav",
+      "originalProvinceId": "province-luntharave",
       "originalType": "Town",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-luntharave",
-      "originalSourceProvinceId": "province-luntharave"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "luntharave-vireluna",
-      "provinceId": "province-lun-tharav",
+      "provinceId": "province-luntharave",
       "name": "Vireluna",
       "type": "Town",
-      "originalProvinceId": "province-lun-tharav",
+      "originalProvinceId": "province-luntharave",
       "originalType": "Town",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-luntharave",
-      "originalSourceProvinceId": "province-luntharave"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "luntharave-sylmaris",
-      "provinceId": "province-lun-tharav",
+      "provinceId": "province-luntharave",
       "name": "Sylmaris",
       "type": "Township",
-      "originalProvinceId": "province-lun-tharav",
+      "originalProvinceId": "province-luntharave",
       "originalType": "Village",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-luntharave",
-      "originalSourceProvinceId": "province-luntharave"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "luntharave-neruvea",
-      "provinceId": "province-lun-tharav",
+      "provinceId": "province-luntharave",
       "name": "Neruvéa",
       "type": "Village",
-      "originalProvinceId": "province-lun-tharav",
+      "originalProvinceId": "province-luntharave",
       "originalType": "Village",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-luntharave",
-      "originalSourceProvinceId": "province-luntharave"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "marrowynd-stormharrow",
@@ -1810,9 +1594,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-marrowynd",
-      "originalSourceProvinceId": "province-marrowynd"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "marrowynd-blacktide-reach",
@@ -1825,9 +1607,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-marrowynd",
-      "originalSourceProvinceId": "province-marrowynd"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "marrowynd-thalmerrow",
@@ -1840,9 +1620,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-falthrakar",
-      "originalSourceProvinceId": "province-marrowynd"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "marrowynd-seawynd-hollow",
@@ -1855,9 +1633,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-marrowynd",
-      "originalSourceProvinceId": "province-marrowynd"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "marrowynd-myrkwake",
@@ -1870,9 +1646,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-marrowynd",
-      "originalSourceProvinceId": "province-marrowynd"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "marrowynd-vaelshore",
@@ -1885,9 +1659,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-marrowynd",
-      "originalSourceProvinceId": "province-marrowynd"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "marrowynd-cindervale-coast",
@@ -1900,9 +1672,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-valerune",
-      "originalSourceProvinceId": "province-marrowynd"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "marrowynd-kharrowport",
@@ -1915,9 +1685,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-marrowynd",
-      "originalSourceProvinceId": "province-marrowynd"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "nalvessir-greenmire",
@@ -1930,9 +1698,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-nalvessir",
-      "originalSourceProvinceId": "province-nalvessir"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "nalvessir-porthelis",
@@ -1945,9 +1711,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-nalvessir",
-      "originalSourceProvinceId": "province-nalvessir"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "nalvessir-briarwater",
@@ -1960,9 +1724,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-vuelmora",
-      "originalSourceProvinceId": "province-nalvessir"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "nalvessir-bentharys",
@@ -1975,9 +1737,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-nalvessir",
-      "originalSourceProvinceId": "province-nalvessir"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "nalvessir-palevanna",
@@ -1990,9 +1750,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-nalvessir",
-      "originalSourceProvinceId": "province-nalvessir"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "nalvessir-balmire",
@@ -2005,9 +1763,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-gruddirynn",
-      "originalSourceProvinceId": "province-nalvessir"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "nalvessir-frostfen",
@@ -2020,9 +1776,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-nalvessir",
-      "originalSourceProvinceId": "province-nalvessir"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "nalvessir-pellavess",
@@ -2035,9 +1789,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-nalvessir",
-      "originalSourceProvinceId": "province-nalvessir"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "pelvoryn-belynthar",
@@ -2050,9 +1802,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-pelvoryn",
-      "originalSourceProvinceId": "province-pelvoryn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "pelvoryn-gavaryn",
@@ -2065,9 +1815,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-pelvoryn",
-      "originalSourceProvinceId": "province-pelvoryn"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "pelvoryn-lysvire",
@@ -2080,9 +1828,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-pelvoryn",
-      "originalSourceProvinceId": "province-pelvoryn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "pelvoryn-fensylth",
@@ -2095,129 +1841,111 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-pelvoryn",
-      "originalSourceProvinceId": "province-pelvoryn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "sylvaveryn-vaelthyros",
-      "provinceId": "province-sylvav-ryn",
+      "provinceId": "province-sylvaveryn",
       "name": "Vaelthyros",
       "type": "Capital City",
-      "originalProvinceId": "province-sylvav-ryn",
+      "originalProvinceId": "province-sylvaveryn",
       "originalType": "Capital City",
       "isCapital": true,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-sylvaveryn",
-      "originalSourceProvinceId": "province-sylvaveryn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "sylvaveryn-elaravosk",
-      "provinceId": "province-sylvav-ryn",
+      "provinceId": "province-sylvaveryn",
       "name": "Elaravosk",
       "type": "City",
-      "originalProvinceId": "province-sylvav-ryn",
+      "originalProvinceId": "province-sylvaveryn",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-sylvaveryn",
-      "originalSourceProvinceId": "province-sylvaveryn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "sylvaveryn-myrvaelun",
-      "provinceId": "province-sylvav-ryn",
+      "provinceId": "province-sylvaveryn",
       "name": "Myrvaelûn",
       "type": "City",
-      "originalProvinceId": "province-sylvav-ryn",
+      "originalProvinceId": "province-sylvaveryn",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-sylvaveryn",
-      "originalSourceProvinceId": "province-sylvaveryn"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "sylvaveryn-sylthados",
-      "provinceId": "province-lun-tharav",
+      "provinceId": "province-luntharave",
       "name": "Sylthadös",
       "type": "City",
-      "originalProvinceId": "province-sylvav-ryn",
+      "originalProvinceId": "province-sylvaveryn",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-luntharave",
-      "originalSourceProvinceId": "province-sylvaveryn"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "sylvaveryn-thalavaryn",
-      "provinceId": "province-sylvav-ryn",
+      "provinceId": "province-sylvaveryn",
       "name": "Thalavaryn",
       "type": "Township",
-      "originalProvinceId": "province-sylvav-ryn",
+      "originalProvinceId": "province-sylvaveryn",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-sylvaveryn",
-      "originalSourceProvinceId": "province-sylvaveryn"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "sylvaveryn-vaerundell",
-      "provinceId": "province-sylvav-ryn",
+      "provinceId": "province-sylvaveryn",
       "name": "Vaerundell",
       "type": "Village",
-      "originalProvinceId": "province-sylvav-ryn",
+      "originalProvinceId": "province-sylvaveryn",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-sylvaveryn",
-      "originalSourceProvinceId": "province-sylvaveryn"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "sylvaveryn-lethyrvos",
-      "provinceId": "province-sylvav-ryn",
+      "provinceId": "province-sylvaveryn",
       "name": "Lethyrvos",
       "type": "Township",
-      "originalProvinceId": "province-sylvav-ryn",
+      "originalProvinceId": "province-sylvaveryn",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-sylvaveryn",
-      "originalSourceProvinceId": "province-sylvaveryn"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "sylvaveryn-aelmyrwald",
       "provinceId": "province-iazethas",
       "name": "Aelmyrwald",
       "type": "Township",
-      "originalProvinceId": "province-sylvav-ryn",
+      "originalProvinceId": "province-sylvaveryn",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-iazethas",
-      "originalSourceProvinceId": "province-sylvaveryn"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "thalryss-skulltide-expanse",
@@ -2230,9 +1958,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-thalryss",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "thalryss-leviamor",
@@ -2245,9 +1971,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-thalryss",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "thalryss-ocevaruun",
@@ -2260,9 +1984,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-el-dravire-riverrealm",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "thalryss-blackwake-isles",
@@ -2275,9 +1997,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-thalryss",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "thalryss-thalkazuun",
@@ -2290,9 +2010,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-thalryss",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "thalryss-dreadcurrent",
@@ -2305,9 +2023,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-aelwynora",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "thalryss-vorthalass",
@@ -2320,9 +2036,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-thalryss",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "thalryss-abyrros",
@@ -2335,9 +2049,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-thalryss",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "thalryss-grimwater-reach",
@@ -2350,9 +2062,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-valerune",
-      "originalSourceProvinceId": "province-thalryss"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "vaelmyrith-eldryssar",
@@ -2365,9 +2075,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-vaelmyrith",
-      "originalSourceProvinceId": "province-vaelmyrith"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "vaelmyrith-lunethryl",
@@ -2380,9 +2088,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-vaelmyrith",
-      "originalSourceProvinceId": "province-vaelmyrith"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "vaelmyrith-velkynwood",
@@ -2395,9 +2101,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-vaelmyrith",
-      "originalSourceProvinceId": "province-vaelmyrith"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "vaelmyrith-whispergrove",
@@ -2410,9 +2114,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-vaelmyrith",
-      "originalSourceProvinceId": "province-vaelmyrith"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "virelport-bronzewake",
@@ -2425,9 +2127,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-virelport",
-      "originalSourceProvinceId": "province-virelport"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "virelport-veilstrand",
@@ -2440,9 +2140,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-virelport",
-      "originalSourceProvinceId": "province-virelport"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "virelport-straithaven",
@@ -2455,9 +2153,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-virelport",
-      "originalSourceProvinceId": "province-virelport"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "virelport-stormgullet",
@@ -2470,9 +2166,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-virelport",
-      "originalSourceProvinceId": "province-virelport"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "vuelmora-hyselva",
@@ -2485,9 +2179,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-vuelmora",
-      "originalSourceProvinceId": "province-vuelmora"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "vuelmora-oelnoreu",
@@ -2500,9 +2192,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-vuelmora",
-      "originalSourceProvinceId": "province-vuelmora"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "vuelmora-mornelya",
@@ -2515,9 +2205,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-vuelmora",
-      "originalSourceProvinceId": "province-vuelmora"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "vuelmora-ithmora",
@@ -2530,9 +2218,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-vuelmora",
-      "originalSourceProvinceId": "province-vuelmora"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "vuelmora-glysera",
@@ -2545,144 +2231,124 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-vuelmora",
-      "originalSourceProvinceId": "province-vuelmora"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "zaltharuun-sszaruun",
-      "provinceId": "province-zal-tharuun",
+      "provinceId": "province-zaltharuun",
       "name": "Sszaruun",
       "type": "Capital City",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "Capital City",
       "isCapital": true,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-zaltharuun",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "zaltharuun-thalzuroth",
-      "provinceId": "province-zal-tharuun",
+      "provinceId": "province-zaltharuun",
       "name": "Thal’zuroth",
       "type": "City",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-zaltharuun",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "zaltharuun-xalvoroq",
-      "provinceId": "province-zal-tharuun",
+      "provinceId": "province-zaltharuun",
       "name": "Xal’voroq",
       "type": "Township",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-zaltharuun",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "zaltharuun-ithkazuun",
       "provinceId": "province-iazethas",
       "name": "Ithkazuun",
       "type": "City",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-iazethas",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "zaltharuun-varesh-ka",
       "provinceId": "province-valerune",
       "name": "Varesh-Ka",
       "type": "Township",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-valerune",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "zaltharuun-zhurakthel",
-      "provinceId": "province-zal-tharuun",
+      "provinceId": "province-zaltharuun",
       "name": "Zhurak’thel",
       "type": "Township",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-zaltharuun",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "zaltharuun-vaelzahara",
-      "provinceId": "province-zal-tharuun",
+      "provinceId": "province-zaltharuun",
       "name": "Vaelzahara",
       "type": "Township",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-zaltharuun",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "zaltharuun-amazuul",
-      "provinceId": "province-zal-tharuun",
+      "provinceId": "province-zaltharuun",
       "name": "Amazuul",
       "type": "Village",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "Village",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-zaltharuun",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "zaltharuun-kethmora",
       "provinceId": "province-pelvoryn",
       "name": "Keth’mora",
       "type": "City",
-      "originalProvinceId": "province-zal-tharuun",
+      "originalProvinceId": "province-zaltharuun",
       "originalType": "City",
       "isCapital": false,
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": true,
       "reclassified": false,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-pelvoryn",
-      "originalSourceProvinceId": "province-zaltharuun"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "zharvokh-karag-thul",
@@ -2695,9 +2361,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-zharvokh",
-      "originalSourceProvinceId": "province-zharvokh"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "zharvokh-vulkradun",
@@ -2710,9 +2374,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-zharvokh",
-      "originalSourceProvinceId": "province-zharvokh"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "zharvokh-tharvokar",
@@ -2725,9 +2387,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-zharvokh",
-      "originalSourceProvinceId": "province-zharvokh"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     },
     {
       "id": "zharvokh-moltharok",
@@ -2740,9 +2400,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": true,
-      "designationStatus": "REBALANCED_GAME_DESIGN",
-      "sourceProvinceId": "province-zharvokh",
-      "originalSourceProvinceId": "province-zharvokh"
+      "designationStatus": "REBALANCED_GAME_DESIGN"
     },
     {
       "id": "zharvokh-drakzhul",
@@ -2755,9 +2413,7 @@
       "classificationStatus": "REBALANCED_GAME_DESIGN",
       "relocated": false,
       "reclassified": false,
-      "designationStatus": "UNCHANGED_FROM_SOURCE",
-      "sourceProvinceId": "province-zharvokh",
-      "originalSourceProvinceId": "province-zharvokh"
+      "designationStatus": "UNCHANGED_FROM_SOURCE"
     }
   ],
   "distributionPlan": {
